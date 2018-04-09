@@ -1,0 +1,78 @@
+﻿.loadingDiv
+{
+  margin: 2px;
+  font-weight: bold;
+  text-align: center;
+  background-image: url(../_images/progress_bar.gif);
+  color: #333333;
+  font-size: 12px;
+  border: 1px solid #777777;
+}
+
+.AsyncFileUpload
+{
+  width: 200px;
+}
+
+
+.ReplacementDiv
+{
+  line-height: 20px;
+  font-size: 14px;
+  margin: 5px;
+  clear: both;
+  height: 20px;
+}
+
+
+.ReplacementDiv span
+{
+  float: left;
+}
+
+.ReplacementButton
+{
+  font-size: 14px;
+  border: 1px solid black;
+  background: #BBBBBB;
+  margin-left: 5px;
+  padding: 2px 5px 2px 5px;
+  cursor: pointer;
+  line-height: 16px;
+  height: 16px;
+}
+
+.ReplacementButtonInput {
+  position: absolute;
+  opacity: 0;
+  height: 100px;
+  cursor: pointer;
+  font-size: 118px;
+  right: -10px;
+  top: -10px;
+}
+
+
+.ReplacementButton.hover.down
+{
+  background-color: #DDDDDD;
+}
+
+.ReplacementButton.hover
+{
+  background: #CCCCCC;
+}
+
+.FileNameDiv .DeleteButton
+{
+  cursor: pointer;
+  color: red;
+  padding-left: 10px;
+}
+
+
+.FileNameDiv
+{
+  padding-left: 10px;
+  font-size: 14px;
+}

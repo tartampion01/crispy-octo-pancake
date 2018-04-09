@@ -1,0 +1,46 @@
+﻿ul.MenuBar div
+{
+	font-size: 100%;
+	cursor: default;
+/*	position: absolute;*/
+	visibility: hidden;
+	display:none;
+        color: #000000;
+}
+
+ul.MenuBar div.MenuBarSubmenuVisible
+{
+	visibility: visible;
+	display:inline !important;
+}
+
+li a:hover {
+    background-color: #111;
+}
+a:hover {
+    color: #0091d6;
+}
+
+.menuCss ul li.selected a {
+    color: #fff;
+}
+
+.menuCss ul li.selected a {
+    color: #fff;
+}
+
+div.MenuBar iframe
+{
+	position: absolute;
+	background: #FFF;
+	overflow:hidden;
+	visibility:hidden;
+	
+}
+
+body {
+    color: #000;
+}
+
+élément {
+}
