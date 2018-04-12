@@ -1,0 +1,4 @@
+AuthName "reseaudynamique.com statistics"
+AuthType Basic
+AuthUserFile /home/reseaudynamique/.awstats-htpasswd
+require valid-user

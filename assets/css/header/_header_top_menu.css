@@ -12,7 +12,6 @@ body {
     height: 100%;
     margin: 0 auto -74px;    
     background: url(../../../assets/menu_images/background-truck.jpg) center bottom 74px no-repeat;
-    background: url(../../../assets/menu_images/degrade-entete.jpg)top repeat-x #016cb9;
 }
 
 ul {
@@ -85,6 +84,7 @@ ul li:hover a{
 .utilitaire {
     background: #000000;
 }
+
 .clear, .content {
     zoom: 1;
 }

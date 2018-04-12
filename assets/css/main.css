@@ -254,7 +254,7 @@ a {
   height: auto !important;
   height: 100%;
   margin: 0 auto -74px;
-  background: url(/_media/image/744/background-truck.jpg) center bottom 74px no-repeat;
+  background: url(../../../assets/menu_images/background-truck.jpg) center bottom 74px no-repeat;
 }
 
 .shrink {
@@ -293,7 +293,7 @@ a {
   position: absolute;
   left: 0px;
   top: 48%;
-  background: url(/_media/image/744/diapo-fleche-gauche.jpg) left top no-repeat;
+  background: url(../../../assets/menu_images/diapo-fleche-gauche.jpg) left top no-repeat;
   z-index: 9996;
   cursor: pointer;
 }
@@ -308,7 +308,7 @@ a {
   position: absolute;
   right: 0px;
   top: 48%;
-  background: url(/_media/image/744/diapo-fleche-droite.jpg) left top no-repeat;
+  background: url(../../../assets/menu_images/diapo-fleche-droite.jpg) left top no-repeat;
   z-index: 9996;
   cursor: pointer;
 }
@@ -404,7 +404,7 @@ a {
       position: absolute;
       right: 9px;
       top: 8px;
-      background: url(/_media/image/744/loupe.jpg) left top no-repeat;
+      background: url(../../../assets/menu_images/loupe.jpg) left top no-repeat;
     }
 
 .menuprincipal {
@@ -427,7 +427,7 @@ a {
     width: auto;
     margin: 0px;
     padding: 0px;
-    background: url(/_media/image/744/separe-menu.jpg) right no-repeat;
+    background: url(../../../assets/menu_images/separe-menu.jpg) right no-repeat;
   }
 
     .menuCss1 ul li {
@@ -439,7 +439,7 @@ a {
       width: 16.65%;
       box-sizing: border-box;
       height: 60px;
-      background: url(/_media/image/744/separe-menu.jpg) left no-repeat;
+      background: url(../../../assets/menu_images/separe-menu.jpg) left no-repeat;
     }
 
       .menuCss1 ul li a {
@@ -472,7 +472,7 @@ a {
           position: absolute;
           left: 47%;
           bottom: -7px;
-          background: url(/_media/image/744/pointe-menu-selected.png) left top no-repeat;
+          background: url(../../../assets/menu_images/pointe-menu-selected.png) left top no-repeat;
         }
 
       .menuCss1 ul li.selected div {
@@ -580,7 +580,7 @@ a {
 .banner {
   height: auto;
   padding: 0px;
-  background: url(/_media/image/744/background-diapo.jpg) top center repeat-x #e3e3e3;
+  background: url(../../../assets/menu_images/background-diapo.jpg) top center repeat-x #e3e3e3;
 }
 
   .banner .shrink2 {
@@ -603,7 +603,7 @@ a {
   top: 50%;
   width: 40px;
   height: 40px;
-  background: url(/_media/image/744/diapo-fleche-gauche.jpg) left top no-repeat;
+  background: url(../../../assets/menu_images/diapo-fleche-gauche.jpg) left top no-repeat;
 }
 
   .flechegauche:hover {
@@ -617,7 +617,7 @@ a {
   top: 50%;
   width: 40px;
   height: 40px;
-  background: url(/_media/image/744/diapo-fleche-droite.jpg) left top no-repeat;
+  background: url(../../../assets/menu_images/diapo-fleche-droite.jpg) left top no-repeat;
 }
 
   .flechedroite:hover {
@@ -772,7 +772,7 @@ a {
     margin: 0px 0px 4px 0px;
     list-style: none;
     list-style-image: none;
-    background: url(/_media/image/744/puce.png) left 9px no-repeat;
+    background: url(../../../assets/menu_images/puce.png) left 9px no-repeat;
     padding-left: 9px;
   }
 
@@ -906,7 +906,7 @@ a {
       z-index: 9996;
       left: 0px;
       top: 0px;
-      background: url(/_media/image/744/cross.png) center center no-repeat;
+      background: url(../../../assets/menu_images/cross.png) center center no-repeat;
       background-size: 50%;
     }
 
@@ -924,7 +924,7 @@ a {
 .produit .toggle {
   font: 700 1.2857em/3em 'Montserrat', Arial, Helvetica, sans-serif;
   color: #525252;
-  background: url(/_media/image/744/bg-border-bottom.jpg) bottom repeat-x;
+  background: url(../../../assets/menu_images/bg-border-bottom.jpg) bottom repeat-x;
 }
 
 .produit .specToggle {
@@ -1058,7 +1058,7 @@ a {
 }
 
 .st_sharethis_custom {
-  background: url(/_media/image/744/share.png) left no-repeat;
+  background: url(../../../assets/menu_images/share.png) left no-repeat;
   display: block;
   color: #000;
   line-height: 3em;
@@ -1071,7 +1071,7 @@ a {
 .btnPrint a {
   display: block;
   line-height: 3em;
-  background: url(/_media/image/744/print.png) left no-repeat;
+  background: url(../../../assets/menu_images/print.png) left no-repeat;
   color: #000;
   text-decoration: none;
   padding-left: 19.25%;
@@ -1089,28 +1089,28 @@ a {
     font: 400 1.1428em/2.6em 'Montserrat', Arial, Helvetica, sans-serif;
     padding: 0px 3.125%;
     box-sizing: border-box;
-    background: url(/_media/image/744/btn-blanc-fleche.png) 97% 0.8em no-repeat;
+    background: url(../../../assets/menu_images/btn-blanc-fleche.png) 97% 0.8em no-repeat;
   }
 
     .produit .options a:hover {
-      background: url(/_media/image/744/btn-blanc-fleche.png) 97% 0.8em no-repeat #ededed;
+      background: url(../../../assets/menu_images/btn-blanc-fleche.png) 97% 0.8em no-repeat #ededed;
     }
 
     .produit .options a:active {
-      background: url(/_media/image/744/btn-blanc-fleche.png) 97% 0.8em no-repeat #cecece;
+      background: url(../../../assets/menu_images/btn-blanc-fleche.png) 97% 0.8em no-repeat #cecece;
     }
 
     .produit .options a.orange {
       color: #fff;
-      background: url(/_media/image/744/btn-orange-fleche.png) 97% 0.8em no-repeat #f37121;
+      background: url(../../../assets/menu_images/btn-orange-fleche.png) 97% 0.8em no-repeat #f37121;
     }
 
       .produit .options a.orange:hover {
-        background: url(/_media/image/744/btn-orange-fleche.png) 97% 0.8em no-repeat #ef823e;
+        background: url(../../../assets/menu_images/btn-orange-fleche.png) 97% 0.8em no-repeat #ef823e;
       }
 
       .produit .options a.orange:active {
-        background: url(/_media/image/744/btn-orange-fleche.png) 97% 0.8em no-repeat #d3611a;
+        background: url(../../../assets/menu_images/btn-orange-fleche.png) 97% 0.8em no-repeat #d3611a;
       }
 .produit .options a.orange + a.orange {
     margin-top: 0.5em;
@@ -1137,7 +1137,7 @@ a {
 
 .content.accueil {
   text-align: center;
-  background: url(/_media/image/744/background-carreaux.jpg) bottom repeat-x;
+  background: url(../../../assets/menu_images/background-carreaux.jpg) bottom repeat-x;
   padding-bottom: 5px;
 }
 
@@ -1150,7 +1150,7 @@ a {
     text-transform: uppercase;
     color: #231f20;
     text-align: center;
-    background: url(/_media/image/744/mini-ligne.jpg) center bottom no-repeat;
+    background: url(../../../assets/menu_images/mini-ligne.jpg) center bottom no-repeat;
     padding: 34px 0px 19px 0px;
     margin: 0px;
   }
@@ -1190,7 +1190,7 @@ a {
     z-index: 9996;
     left: 0px;
     top: 0px;
-    background: url(/_media/image/744/cat-hover.png) center center no-repeat;
+    background: url(../../../assets/menu_images/cat-hover.png) center center no-repeat;
   }
 
   .cat .image img {
@@ -1205,7 +1205,7 @@ a {
     width: 100%;
     left: 0px;
     bottom: 0px;
-    background: url(/_media/image/744/cat-background-orange.png) left bottom no-repeat;
+    background: url(../../../assets/menu_images/cat-background-orange.png) left bottom no-repeat;
     color: #fff;
     text-transform: uppercase;
   }
@@ -1228,7 +1228,7 @@ a {
       right: 0px;
       bottom: 0px;
       font: 400 1em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
-      background: url(/_media/image/744/cat-sprite.png) left top no-repeat;
+      background: url(../../../assets/menu_images/cat-sprite.png) left top no-repeat;
     }
 
   .cat:hover .orange .voir {
@@ -1251,7 +1251,7 @@ a {
 
 .services {
   height: 266px;
-  background: url(/_media/image/744/degrade-pied-accueil.jpg) bottom repeat-x;
+  background: url(../../../assets/menu_images/degrade-pied-accueil.jpg) bottom repeat-x;
 }
 
   .services .shrink {
@@ -1284,15 +1284,15 @@ a {
     }
 
     .services .item.succursales a {
-      background: url(/_media/image/744/accueil-succursales.jpg) left top no-repeat;
+      background: url(../../../assets/menu_images/accueil-succursales.jpg) left top no-repeat;
     }
 
     .services .item.pieces a {
-      background: url(/_media/image/744/accueil-pieces.jpg) left top no-repeat;
+      background: url(../../../assets/menu_images/accueil-pieces.jpg) left top no-repeat;
     }
 
     .services .item.urgence a {
-      background: url(/_media/image/744/accueil-urgence.jpg) left top no-repeat;
+      background: url(../../../assets/menu_images/accueil-urgence.jpg) left top no-repeat;
     }
 
   .services span.titre {
@@ -1488,7 +1488,7 @@ min-height:200px;
   position: absolute;
   /*bottom: -8px;*/
 bottom:0px;
-  background-image: url(/_media/image/744/plus-map.png);
+  background-image: url(../../../assets/menu_images/plus-map.png);
   background-repeat: repeat;
   background-attachment: scroll;
   background-position: top left;
@@ -1596,7 +1596,7 @@ DIV.store .web .title {
 
     .location-search INPUT.btnsubmit {
       background-color: transparent;
-      background-image: url(/_media/image/744/degrade-pied-accueil.jpg);
+      background-image: url(../../../assets/menu_images/degrade-pied-accueil.jpg);
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-position: top left;
@@ -1644,22 +1644,22 @@ UL.store-list {
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #cfcfcf;
-  background: url(/_media/image/744/fleche-concessionaires.png) 97% no-repeat #f8f8f8;
+  background: url(../../../assets/menu_images/fleche-concessionaires.png) 97% no-repeat #f8f8f8;
 }
 
 .store-list LI.highlighted.store {
-  background: url(/_media/image/744/fleche-concessionaires.png) 97% no-repeat #e0e0e0;
+  background: url(../../../assets/menu_images/fleche-concessionaires.png) 97% no-repeat #e0e0e0;
   position: relative;
   background-size: 4%;
 }
 
   .store-list LI.highlighted.store:hover {
-    background: url(/_media/image/744/fleche-concessionaires.png) 97% no-repeat #f2f2f2;
+    background: url(../../../assets/menu_images/fleche-concessionaires.png) 97% no-repeat #f2f2f2;
     cursor: pointer;
   }
 
 .store-list LI.store:hover {
-  background: url(/_media/image/744/fleche-concessionaires.png) 97% no-repeat #cecece;
+  background: url(../../../assets/menu_images/fleche-concessionaires.png) 97% no-repeat #cecece;
   cursor: pointer;
 }
 
@@ -2003,14 +2003,14 @@ UL.store-list {
 .pied {
   height: 74px;
   width: 100%;
-  background: url(/_media/image/744/background-souspied.jpg) bottom repeat-y;
+  background: url(../../../assets/menu_images/background-souspied.jpg) bottom repeat-y;
   font-size: 0.857em;
   color: #fff;
 }
 
   .pied .shrink {
     height: 74px;
-    background: url(/_media/image/744/background-pied.jpg) center bottom no-repeat;
+    background: url(../../../assets/menu_images/background-pied.jpg) center bottom no-repeat;
   }
 
   .pied .left {
@@ -2135,7 +2135,7 @@ UL.store-list {
   position: absolute;
   right: 0px;
   top: 0px;
-  background: url(/_media/image/744/gpc-notselected2.png) 0px 49% no-repeat;
+  background: url(../../../assets/menu_images/gpc-notselected2.png) 0px 49% no-repeat;
 }
 
 .GpcMenu li.expanded:after {
@@ -2146,7 +2146,7 @@ UL.store-list {
   position: absolute;
   right: 0px;
   top: 0px;
-  background: url(/_media/image/744/gpc-selected2.png) 0px 49% no-repeat;
+  background: url(../../../assets/menu_images/gpc-selected2.png) 0px 49% no-repeat;
 }
 
 .GpcMenu li.expanded ul li:after {
@@ -2170,7 +2170,7 @@ UL.store-list {
     position: absolute;
     right: 0px;
     top: 0px;
-    background: url(/_media/image/744/gpc-product-catselected-mobile.png) 0px 59% no-repeat;
+    background: url(../../../assets/menu_images/gpc-product-catselected-mobile.png) 0px 59% no-repeat;
     background-size: 50%;
   }
 
@@ -2277,7 +2277,7 @@ UL.store-list {
   box-sizing: border-box;
   width: 100%;
   overflow: hidden;
-  background-image: url(/_media/image/744/fleche-order-gpc.png);
+  background-image: url(../../../assets/menu_images/fleche-order-gpc.png);
   background-repeat: no-repeat;
   background-position: 97% center;
   border: 1px solid #dedede;
@@ -2402,7 +2402,7 @@ li[disabled] > a, a[disabled] {
   position: absolute;
   right: 0px;
   bottom: 0px;
-  background: url(/_media/image/744/triangle-plus.png) left top no-repeat;
+  background: url(../../../assets/menu_images/triangle-plus.png) left top no-repeat;
 }
 
 .defaultFacet .FacetedResultTemplate:nth-child(3n+3) {
@@ -2456,7 +2456,7 @@ li[disabled] > a, a[disabled] {
   z-index: 9996;
   left: 0px;
   top: 0px;
-  background: url(/_media/image/744/cross.png) center center no-repeat;
+  background: url(../../../assets/menu_images/cross.png) center center no-repeat;
   background-size: 50%;
 }
 
@@ -2470,7 +2470,7 @@ li[disabled] > a, a[disabled] {
   z-index: 9994;
   right: 0px;
   top: 0px;
-  background: url(/_media/image/744/promotion.png) right top no-repeat;
+  background: url(../../../assets/menu_images/promotion.png) right top no-repeat;
   background-size: 100%;
 }
 
@@ -2696,7 +2696,7 @@ text-align: center;}
     margin-right: 0.75em;
     height: 0.92857em;
     width: 0.92857em;
-    background: url(/_media/image/744/coin-bleu.png) left bottom no-repeat;
+    background: url(../../../assets/menu_images/coin-bleu.png) left bottom no-repeat;
   }
 
   .GpcImageViewerHorizontal .GpcImageViewerItem img {
@@ -2777,7 +2777,7 @@ form .produit .bref .left > .lePrix.isUsed-True{display:block;}
 @media all and (min-width: 2000px) {
   .content {
     padding: 2em 0px 7em 10px;
-    background: url(/_media/image/744/background-truck.jpg) right bottom no-repeat;
+    background: url(../../../assets/menu_images/background-truck.jpg) right bottom no-repeat;
   }
 }
 
@@ -2893,11 +2893,20 @@ max-height: 510px }
     background: none;
   }
 
+  .wrap {
+    min-height: 100%;
+    min-width: 320px;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -74px;
+    background: url(../../../assets/menu_images/degrade-entete.jpg)center bottom 74px no-repeat;
+}
+
   .entete {
     height: auto;
     padding: 0.8em 0px 0.5em 0px;
     border-bottom: 0.3em #f37121 solid;
-    background: url(/_media/image/744/background-entete-mobile.jpg) left bottom repeat-x;
+    background: url(../../../assets/menu_images/background-entete-mobile.jpg) left bottom repeat-x;
   }
 
     .entete .mMenu {
@@ -2907,12 +2916,12 @@ max-height: 510px }
       left: 5%;
       top: 10%;
       z-index: 9999;
-      background: url(/_media/image/744/menu-mobile.png) left top no-repeat;
+      background: url(../../../assets/menu_images/menu-mobile.png) left top no-repeat;
       background-size: 100%;
     }
 
       .entete .mMenu.open {
-        background: url(/_media/image/744/menu-mobile-close.png) left top no-repeat;
+        background: url(../../../assets/menu_images/menu-mobile-close.png) left top no-repeat;
         background-size: 100%;
       }
 
@@ -2990,7 +2999,7 @@ max-height: 510px }
 
     .contenu ul li {
       margin: 0px 0px 0.5em 0px;
-      background: url(/_media/image/744/puce-mobile.png) left 0.7em no-repeat;
+      background: url(../../../assets/menu_images/puce-mobile.png) left 0.7em no-repeat;
       padding-left: 4%;
       background-size: 1.5% !important;
     }
@@ -3110,7 +3119,7 @@ max-height: 510px }
   }
 
   .st_sharethis_custom {
-    background: url(/_media/image/744/share-mobile.png) left no-repeat;
+    background: url(../../../assets/menu_images/share-mobile.png) left no-repeat;
     background-size: 13%;
     line-height: 3em;
     padding: 0px 16px 0 0;
@@ -3121,7 +3130,7 @@ max-height: 510px }
   .btnPrint a {
     display: block;
     line-height: 3em;
-    background: url(/_media/image/744/print-mobile.png) left no-repeat;
+    background: url(../../../assets/menu_images/print-mobile.png) left no-repeat;
     color: #000;
     background-size: 16%;
     text-decoration: none;
@@ -3141,33 +3150,33 @@ max-height: 510px }
       font: 400 1.1428em/2.6em 'Montserrat', Arial, Helvetica, sans-serif;
       padding: 0px 3.125%;
       box-sizing: border-box;
-      background: url(/_media/image/744/btn-blanc-fleche-mobile.png) 97% 0.8em no-repeat;
+      background: url(../../../assets/menu_images/btn-blanc-fleche-mobile.png) 97% 0.8em no-repeat;
       background-size: 4%;
     }
 
       .produit .options a:hover {
-        background: url(/_media/image/744/btn-blanc-fleche-mobile.png) 97% 0.8em no-repeat #ededed;
+        background: url(../../../assets/menu_images/btn-blanc-fleche-mobile.png) 97% 0.8em no-repeat #ededed;
         background-size: 4%;
       }
 
       .produit .options a:active {
-        background: url(/_media/image/744/btn-blanc-fleche-mobile.png) 97% 0.8em no-repeat #cecece;
+        background: url(../../../assets/menu_images/btn-blanc-fleche-mobile.png) 97% 0.8em no-repeat #cecece;
         background-size: 4%;
       }
 
       .produit .options a.orange {
         color: #fff;
-        background: url(/_media/image/744/onglet-orange-mobile.png) 97% 0.8em no-repeat #f37121;
+        background: url(../../../assets/menu_images/onglet-orange-mobile.png) 97% 0.8em no-repeat #f37121;
         background-size: 4%;
       }
 
         .produit .options a.orange:hover {
-          background: url(/_media/image/744/onglet-orange-mobile.png) 97% 0.8em no-repeat #ef823e;
+          background: url(../../../assets/menu_images/onglet-orange-mobile.png) 97% 0.8em no-repeat #ef823e;
           background-size: 4%;
         }
 
         .produit .options a.orange:active {
-          background: url(/_media/image/744/onglet-orange-mobile.png) 97% 0.8em no-repeat #d3611a;
+          background: url(../../../assets/menu_images/onglet-orange-mobile.png) 97% 0.8em no-repeat #d3611a;
           background-size: 4%;
         }
 
@@ -3233,7 +3242,7 @@ max-height: 510px }
       margin-right: 0.75em;
       height: 0.92857em;
       width: 0.92857em;
-      background: url(/_media/image/744/loupe-blanche-mobile.png) left top no-repeat;
+      background: url(../../../assets/menu_images/loupe-blanche-mobile.png) left top no-repeat;
       background-size: 100%;
     }
 
@@ -3286,12 +3295,12 @@ max-height: 510px }
       right: 3.28125%;
       height: 0.892857em;
       width: 0.535714em;
-      background: url(/_media/image/744/fleche-search-mobile.png) left top no-repeat;
+      background: url(../../../assets/menu_images/fleche-search-mobile.png) left top no-repeat;
       background-size: 100%;
     }
 
     .toggleFilters.selected .openClose {
-      background: url(/_media/image/744/gpc-product-catselected-mobile.png) left top no-repeat;
+      background: url(../../../assets/menu_images/gpc-product-catselected-mobile.png) left top no-repeat;
       background-size: 100%;
       width: 0.892857em;
       height: 0.892857em;
@@ -3363,7 +3372,7 @@ max-height: 510px }
     position: absolute;
     right: 0px;
     top: 0px;
-    background: url(/_media/image/744/gpc-notselected-mobile2.png) 0px 49% no-repeat;
+    background: url(../../../assets/menu_images/gpc-notselected-mobile2.png) 0px 49% no-repeat;
     background-size: 64%;
   }
 
@@ -3375,7 +3384,7 @@ max-height: 510px }
     position: absolute;
     right: 0px;
     top: 0px;
-    background: url(/_media/image/744/2gpc-selected-mobile.png) 0px 49% no-repeat;
+    background: url(../../../assets/menu_images/2gpc-selected-mobile.png) 0px 49% no-repeat;
     background-size: 64%;
   }
 
@@ -3405,7 +3414,7 @@ max-height: 510px }
       position: absolute;
       right: 0px;
       top: 0px;
-      background: url(/_media/image/744/gpc-product-catselected-mobile.png) 0px 59% no-repeat;
+      background: url(../../../assets/menu_images/gpc-product-catselected-mobile.png) 0px 59% no-repeat;
       background-size: 64%;
     }
 
@@ -3467,7 +3476,7 @@ max-height: 510px }
     -moz-box-sizing: initial;
     -webkit-box-sizing: initial;
     box-sizing: initial;
-    background-image: url(/_media/image/744/fleche-order-gpc-mobile.png);
+    background-image: url(../../../assets/menu_images/fleche-order-gpc-mobile.png);
     background-size: 6%;
     border: 2px solid #dedede;
     padding: 3px 13% 3px 2%;
@@ -3500,7 +3509,7 @@ max-height: 510px }
         position: absolute;
         right: 0px;
         bottom: 0px;
-        background: url(/_media/image/744/triangle-plus-mobile.png) left bottom no-repeat;
+        background: url(../../../assets/menu_images/triangle-plus-mobile.png) left bottom no-repeat;
         background-size: 100%;
       }
 
@@ -3619,12 +3628,12 @@ max-height: 510px }
   }
 
   .store-list LI.store {
-    background: url(/_media/image/744/fleche-consessionnaires.png) 97% no-repeat #f8f8f8;
+    background: url(../../../assets/menu_images/fleche-consessionnaires.png) 97% no-repeat #f8f8f8;
     position: relative;
   }
 
     .store-list LI.store:hover {
-      background: url(/_media/image/744/fleche-consessionnaires.png) 97% no-repeat #cecece;
+      background: url(../../../assets/menu_images/fleche-consessionnaires.png) 97% no-repeat #cecece;
     }
 
   .wrapper_map + .contenu {
@@ -3642,7 +3651,7 @@ max-height: 510px }
 
   .services {
     height: auto;
-    background: url(/_media/image/744/degrade-pied-accueil.jpg) bottom repeat-x;
+    background: url(../../../assets/menu_images/degrade-pied-accueil.jpg) bottom repeat-x;
   }
 
     .services .shrink {
@@ -3812,7 +3821,7 @@ max-height: 510px }
       position: absolute;
       right: 0px;
       top: 1em;
-      background: url(/_media/image/744/loupe-mobile.jpg) 49% 45% no-repeat #fff;
+      background: url(../../../assets/menu_images/loupe-mobile.jpg) 49% 45% no-repeat #fff;
       background-size: 50%;
     }
 
@@ -3829,7 +3838,7 @@ max-height: 510px }
       list-style-image: none;
       margin: 0px;
       padding: 0px;
-      background: url(/_media/image/744/ombre-menu-mobile.png) right repeat-y;
+      background: url(../../../assets/menu_images/ombre-menu-mobile.png) right repeat-y;
     }
 
       .menuCss5 ul li a {
@@ -3844,7 +3853,7 @@ max-height: 510px }
       }
 
       .menuCss5 ul li.parent > a:after {
-        background: url(/_media/image/744/fleche-menu-mobile.png) left top no-repeat;
+        background: url(../../../assets/menu_images/fleche-menu-mobile.png) left top no-repeat;
         background-size: 100%;
         content: "";
         display: inline-block;
@@ -3863,7 +3872,7 @@ max-height: 510px }
       }
 
       .menuCss5 ul li a:hover, .menuCss5 ul li.selected a {
-        background: url(/_media/image/744/ombre-menu-mobile.png) right repeat-y #f47121;
+        background: url(../../../assets/menu_images/ombre-menu-mobile.png) right repeat-y #f47121;
       }
 
       .menuCss5 ul li.parent div {
@@ -3986,7 +3995,7 @@ max-height: 510px }
   }
 
   .contenu ul li {
-    background: url(/_media/image/744/puce-mobile.png) left 0.7em no-repeat;
+    background: url(../../../assets/menu_images/puce-mobile.png) left 0.7em no-repeat;
   }
 
   .defaultFacet .FacetedResultTemplate {

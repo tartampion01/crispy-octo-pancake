@@ -6,7 +6,7 @@
 </head>
 <body class="body">
     <form role="form" method="POST" action="/page1.php">
-    <div class="container">
+    <div class="container" style="height: 80%">
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
@@ -15,27 +15,27 @@
                             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 if (isset($_POST['btnShowTruck'])) {
                                     
-//                                    $truckResults = getNewTruck($_POST['tbShowTruck']);
-//                                    $truckInfo = "";
-//
-//                                    if(mysqli_num_rows($truckResults) > 0){
-//                                        while($row = mysqli_fetch_assoc($truckResults)) {
-//                                            $truckInfo .= "Marque <b>" . $row['marque'] . "</b></br>";
-//                                            $truckInfo .= "Modèle <b>" . $row['Model'] . "</b></br>";
-//                                            $truckInfo .= "Année <b>" . $row['strAnnee'] . "</b></br>";
-//                                            $truckInfo .= "No inventaire <b>" . $row['stock'] . "</b></br>";
-//                                            $truckInfo .= "No Série <b>" . $row['serial'] . "</b></br>";
-//                                            $truckInfo .= "Empattement <b>" . $row['wb'] . "</b></br>";
-//                                            $truckInfo .= "Essieu avant <b>" . $row['frontaxle'] . "</b></br>";
-//                                            $truckInfo .= "Essieu arrière <b>" . $row['rearaxle'] . "</b></br>";
-//                                            $truckInfo .= "Suspension arrière <b>" . $row['rearsuspension'] . "</b></br>";
-//                                            $truckInfo .= "Transmission <b>" . $row['transtype'] . "</b></br>";
-//                                            $truckInfo .= "Moteur <b>" . $row['engine'] . "</b></br>";
-//                                            $truckInfo .= "HP <b>" . $row['hp'] . "</b></br>";
-//                                            $truckInfo .= "Ratio essieu arrière <b>" . $row['ratio'] . "</b></br>";
-//                                        }
-//                                    }
-//                                    echo $truckInfo;
+                                    $truckResults = getNewTruck($_POST['tbShowTruck']);
+                                    $truckInfo = "";
+
+                                    if(mysqli_num_rows($truckResults) > 0){
+                                        while($row = mysqli_fetch_assoc($truckResults)) {
+                                            $truckInfo .= "Marque <b>" . $row['marque'] . "</b></br>";
+                                            $truckInfo .= "Modèle <b>" . $row['Model'] . "</b></br>";
+                                            $truckInfo .= "Année <b>" . $row['strAnnee'] . "</b></br>";
+                                            $truckInfo .= "No inventaire <b>" . $row['stock'] . "</b></br>";
+                                            $truckInfo .= "No Série <b>" . $row['serial'] . "</b></br>";
+                                            $truckInfo .= "Empattement <b>" . $row['wb'] . "</b></br>";
+                                            $truckInfo .= "Essieu avant <b>" . $row['frontaxle'] . "</b></br>";
+                                            $truckInfo .= "Essieu arrière <b>" . $row['rearaxle'] . "</b></br>";
+                                            $truckInfo .= "Suspension arrière <b>" . $row['rearsuspension'] . "</b></br>";
+                                            $truckInfo .= "Transmission <b>" . $row['transtype'] . "</b></br>";
+                                            $truckInfo .= "Moteur <b>" . $row['engine'] . "</b></br>";
+                                            $truckInfo .= "HP <b>" . $row['hp'] . "</b></br>";
+                                            $truckInfo .= "Ratio essieu arrière <b>" . $row['ratio'] . "</b></br>";
+                                        }
+                                    }
+                                    echo $truckInfo;
                                 }
                                 
                                 echo 'MARQUES<br/>';
@@ -81,13 +81,8 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                </div>
-            </div>
-        </div>
     </div>
     </form>
+    <?php require_once('includes/footer/_footer.php'); ?>
 </body>
 </html>
