@@ -1,0 +1,42 @@
+<?php
+//require_once('class.phpmailer.php');
+//require_once('class.smtp.php');
+//require_once('clients.php');
+//require_once('tcpdf.php');
+//require_once('tcpdf_parser.php');
+
+/**
+ * @param int $id <p>inventory.id</p>
+ * @param string $fieldCriteria <p>inventory.[fieldCriteria]</p>
+ * @param string $value <p>where inventory.[fieldCriteria] = value</p>
+ * @return mysqli_result Retourne les camions neufs pour un champ passé en paramètre
+ */
+function getNewTruck($id, $fieldCriteria='', $value='')
+{
+    global $conn;
+    $sql = $fieldCriteria == "" ? "SELECT * FROM inventory WHERE id=".$id . " and DisplayOnWebSite=1" : "SELECT * FROM inventory WHERE $fieldCriteria='$value' and DisplayOnWebSite=1";
+
+    return mysqli_query($conn, $sql);
+}
+
+function selectNewTrucksDisctinctCriteria($field)
+{
+    global $conn;
+    //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
+    $sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY COUNT DESC";
+
+    $result = mysqli_query($conn, $sql);
+    
+    $fieldArray = array();
+    $countArray = array();
+            
+    if(mysqli_num_rows($result) > 0){
+        while($row = mysqli_fetch_assoc($result)) {
+            array_push($fieldArray, $row[$field]);
+            array_push($countArray, $row['COUNT']);
+        }
+    }
+
+    return array_combine($fieldArray, $countArray);
+                       
+}

@@ -1,6 +1,6 @@
-<?php require_once('includes/header/_header.php'); ?>
+<?php require_once('_includes/header/_header.php'); ?>
 <body class="body">
-    <form role="form" method="POST" action="/<?php echo basename($_SERVER['PHP_SELF']); ?>.php">    
+    <form role="form" method="POST" action="/<?php echo basename($_SERVER['PHP_SELF']); ?>">    
         <div class="wrap">
             <div class="content">
                 <div class="shrink">
@@ -20,6 +20,6 @@
             </div>
         </div>
     </form>
-    <?php require_once('includes/footer/_footer.php'); ?>
+    <?php require_once('_includes/footer/_footer.php'); ?>
 </body>
 </html>
