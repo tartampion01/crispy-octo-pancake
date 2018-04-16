@@ -1,3 +1,4 @@
+
 <?php require_once('_includes/header/_header.php'); ?>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo basename($_SERVER['PHP_SELF']); ?>">
@@ -5,7 +6,7 @@
         <div class="content">
             <div class="shrink">
                 <div class="titrepage">
-                    <h1>Promotions - Nouvelles</h1>
+                    <h1></h1>
                 </div>
                 <div class="contenu">
                     <div class="contenu2">

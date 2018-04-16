@@ -53,6 +53,8 @@ interface page
     const UrgenceRoutiere24H = 37;
     const InscriptionNextPartAbonnement = 38;
     const MentionsLegales = 39;
+    const DemandePieces = 40;
+    const BonDeTravail = 41;
 }
 
 class pageLink
@@ -117,6 +119,8 @@ class pageLink
             case page::UrgenceRoutiere24H:$_page = "urgence-routiere-24h";break;
             case page::InscriptionNextPartAbonnement:$_page = "confirmation-abonnement";break;
             case page::MentionsLegales:$_page = "mentions-legales";break;
+            case page::DemandePieces:$_page = "demande-pieces";break;
+            case page::BonDeTravail:$_page = "demande-bon-travail";break;
             default: $_page = "accueil";
         }
         

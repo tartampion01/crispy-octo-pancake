@@ -11,15 +11,7 @@ body {
     height: auto !important;
     height: 100%;
     margin: 0 auto -74px;    
-    background: url(../../../_assets/menu_images/background-truck.jpg) center bottom 74px no-repeat;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #000;
+    background: url(../../../_assets/images/menu_images/background-truck.jpg) center bottom 74px no-repeat;
 }
 
 li {

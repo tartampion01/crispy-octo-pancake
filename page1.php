@@ -198,6 +198,6 @@
 ID:<input type="text" id="tbShowTruck" name="tbShowTruck" value="" text="" />
 <input type="submit" id="btnShowTruck" name="btnShowTruck" text="Afficher">
     </form>
-    <?php require_once('_includes/footer/_footer.php'); ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/footer/_footer.php'); ?>
 </body>
 </html>

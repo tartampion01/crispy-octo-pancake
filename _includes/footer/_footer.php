@@ -4,7 +4,7 @@
         <div id="ctl12_c34_c35" class="shrink clear" data-staticclassnames="shrink clear" itemid="">
             <div id="ctl12_c34_c35_c36" class="left" data-staticclassnames="left" itemid="">
                 <a id="" name="hyperlien" onclick="" href="/accueil" target="_self">
-                    <img id="" name="image" title="" src="../../_assets/menu_images/reseau-dynamique-pied.png" alt="Réseau dynamique">
+                    <img id="" name="image" title="" src="../../_assets/images/menu_images/reseau-dynamique-pied.png" alt="Réseau dynamique">
                 </a>
             </div>
             <div id="ctl12_c34_c35_c39" class="right" data-staticclassnames="right" itemid="">

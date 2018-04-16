@@ -8,7 +8,7 @@
     width: auto;
     margin: 0px;
     padding: 0px;
-    background: url(../../../_assets/menu_images/separe-menu.jpg)right no-repeat;
+    background: url(../../../_assets/images/menu_images/separe-menu.jpg)right no-repeat;
 }
 
 .menuCss1 ul li {
@@ -21,7 +21,7 @@
     width: 16.65%;
     box-sizing: border-box;
     height: 60px;
-    background: url(../../../_assets/menu_images/separe-menu.jpg)left no-repeat;
+    background: url(../../../_assets/images/menu_images/separe-menu.jpg)left no-repeat;
 }
 
 .menuprincipal {

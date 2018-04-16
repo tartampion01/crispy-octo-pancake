@@ -1,7 +1,7 @@
 .entete {
     height: 155px;
     position: relative;    
-    background: url(../../../_assets/menu_images/degrade-entete.jpg)top repeat-x #016cb9;
+    background: url(../../../_assets/images/menu_images/degrade-entete.jpg)top repeat-x #016cb9;
 }
 
 a img {
@@ -38,7 +38,7 @@ button, input, select, textarea {
     position: absolute;
     right: 9px;
     top: 8px;
-    background: url(../../../_assets/menu_images/loupe.jpg)left top no-repeat;
+    background: url(../../../_assets/images/menu_images/loupe.jpg)left top no-repeat;
 }
 
 .recherche {
