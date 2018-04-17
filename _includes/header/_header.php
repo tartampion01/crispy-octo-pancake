@@ -1,22 +1,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
-    
 <?PHP
-    $nomPage = basename($_SERVER['PHP_SELF']);
+    $NOMPAGE = basename($_SERVER['PHP_SELF']);
     
     // REQUIRED BY ALL PAGES
     // COMMON INCLUDES --> DB / FUNCTIONS / OBJECTS
     require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/commonIncludes.php');
 ?>
-    
 <head>
     <title>
-        Réseau Dynamique | Concessionnaire Camions International
+        <?PHP RD_Header::getPageTitle($NOMPAGE); ?>
     </title>
 
     <script type='text/javascript' src='../../_assets/js/jquery-3.2.1.js'></script>
     <script type='text/javascript' src='../../_assets/js/ajax.js'></script>
     <script type='text/javascript' src='../../_assets/js/rotator.js'></script>
+    
     <script type="text/javascript">var ShortCultureID = 'fr'; var LongCultureID = 'fr-CA';</script>
     <script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','../www.google-analytics.com/analytics.js','ga');ga('create', 'UA-3192388-1');ga('require','displayfeatures');ga('send', 'pageview');</script>
 
@@ -24,12 +23,11 @@
     <link rel="stylesheet" type="text/css" href="../../_assets/css/HighLightSelector.css" media="All" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/main.css" />
     
-    <link rel='canonical' href='<?PHP echo $nomPage ?>' />
-    <meta content="<?PHP getMetaContent($nomPage); ?>" name="description" />
+    <link rel='canonical' href='<?PHP echo $NOMPAGE ?>' />
+    <meta content="<?PHP RD_Header::getMetaContent($NOMPAGE); ?>" name="description" />
     <meta  http-equiv="Content-type"  content="text/html;charset=UTF-8" />
 </head>
-    
-<?PHP    
+<?PHP
     // TOP MENU
     require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header_top_menu.php');
     // SUB HEADER LOGO + RECHERCHE

@@ -1,14 +1,24 @@
-<link href="../../_assets/css/header/_header_top_menu.css" rel="stylesheet" type="text/css"/>
-<div id="div" class="shrink">
-    <div id="div" class="utilitaire clear">
-        <div id="div" class="menuCss">
-            <ul id="ulmenuBar" class="MenuBar">
-                <li class="item1 first rank0" id="c9_0" expansionmode="HoverExpansion"><a href="/accueil.php" class=" first rank0" target="_self">Accueil</a></li>
-                <li class="item2 rank1" id="c9_1" expansionmode="HoverExpansion"><a href="/a-propos.php" class=" rank1" target="_self">À propos</a></li>
-                <li class="item3 rank2" id="c9_2" expansionmode="HoverExpansion"><a href="/promotions-nouvelles.php" class=" rank2" target="_self">Promotions et nouvelles</a></li>
-                <li class="item4 rank3" id="c9_3" expansionmode="HoverExpansion"><a href="/nous-joindre.php" class=" rank3" target="_self">Nous joindre</a></li>
-                <li class="item5 last rank4" id="c9_4" expansionmode="HoverExpansion"><a href="/urgence-routiere-24h.php" class=" last rank4" target="_self">Urgence routière 24h</a></li>
+<!-- TOP MENU -->
+<div class="utilitaire clear">
+    <div class="shrink">
+        <div class="menuCss2">
+            <ul class="MenuBar">
+                <li class="item4 first rank0" expansionmode="HoverExpansion">
+                    <a href="<?php RD_PageLink::getHref(folder::Root,page::Accueil) ?>" class="first rank0">Accueil</a>
+                </li>
+                <li class="item13 rank1" expansionmode="HoverExpansion">
+                    <a href="<?php RD_PageLink::getHref(folder::Root,page::Apropos) ?>" class="rank1">À propos</a>
+                </li>
+                <li class="item14 rank2" expansionmode="HoverExpansion">
+                    <a href="<?php RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromotions) ?>" class="rank2">Promotions et nouvelles</a>
+                </li>
+                <li class="item12 rank3" expansionmode="HoverExpansion">
+                    <a href="<?php RD_PageLink::getHref(folder::Root,page::NousJoindre) ?>" class="rank3">Nous joindre</a>
+                </li>
+                <li class="item49 last rank4" expansionmode="HoverExpansion">
+                    <a href="<?php RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H) ?>" class="last rank4">Urgence routière 24h</a>
+                </li>
             </ul>
         </div>
     </div>
-</div>    
+</div>

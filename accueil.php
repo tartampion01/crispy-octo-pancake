@@ -1,26 +1,25 @@
-<?php require_once('_includes/header/_header.php'); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header.php'); ?>
 <body class="body">
-    <form role="form" method="POST" action="/<?php echo basename($_SERVER['PHP_SELF']); ?>">
+    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
         <div class="wrap" data-staticClassNames="wrap">
-
-        <div id="c5_c22" class="banner" data-staticClassNames="banner">
-            <div id="" class="shrink2 clear" data-staticClassNames="shrink2 clear">
-                <div id="" class="rotation" data-staticClassNames="rotation">
-                    <div id="" class="leftArrow" data-staticClassNames="leftArrow"></div>
-                    <div id="" class="rightArrow" data-staticClassNames="rightArrow"></div>
-                        <div id="" class="" data-staticClassNames="">
+        <div class="banner" data-staticClassNames="banner">
+            <div class="shrink2 clear">
+                <div class="rotation">
+                    <div class="leftArrow"></div>
+                    <div class="rightArrow"></div>
+                        <div class="">
                             <div class="jshowoff jshowoff-1">
-                                <div id="" class="N8a5a20f012a84d04b74ed197d1e7feee" data-staticclassnames="N8a5a20f012a84d04b74ed197d1e7feee" itemid="N8a5a20f012a84d04b74ed197d1e7feee">
-                                    <img id="" name="image" title="" src="_assets/images/menu_images/retour-lonestar.png" alt="Retour Lonestar">
+                                <div class="N8a5a20f012a84d04b74ed197d1e7feee" data-staticclassnames="N8a5a20f012a84d04b74ed197d1e7feee" itemid="N8a5a20f012a84d04b74ed197d1e7feee">
+                                    <img name="image" title="" src="_assets/images/homeBanner/retour-lonestar.png" alt="Retour Lonestar">
                                 </div>
-                                <div id="" class="NmsZone1478708744012 NmsZone1478708744012Css" data-staticclassnames="NmsZone1478708744012 NmsZone1478708744012Css" style="visibility: visible;" itemid="NmsZone1478708744012">
-                                    <a id="" name="hyperlien" onclick="javascript:RegisterClick(this);" href="/camions-neufs/isuzu">
-                                        <img id="" name="image" title="" src="_assets/images/menu_images/isuku.jpg" alt="isuku">
+                                <div class="NmsZone1478708744012 NmsZone1478708744012Css" data-staticclassnames="NmsZone1478708744012 NmsZone1478708744012Css" style="visibility: visible;" itemid="NmsZone1478708744012">
+                                    <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="/camions-neufs/isuzu">
+                                        <img name="image" title="" src="_assets/images/homeBanner/isuzu.jpg" alt="isuzu">
                                     </a>
                                 </div>
                                 <div id="c5_c22_c23_c24_c25_c28_c34" class="NmsZone1478708826804 NmsZone1478708826804Css" data-staticclassnames="NmsZone1478708826804 NmsZone1478708826804Css" style="visibility: visible;" itemid="NmsZone1478708826804">
                                     <a id="c5_c22_c23_c24_c25_c28_c34_N9563577129fc4a968af18e0f2cbfeda6" name="hyperlien" onclick="javascript:RegisterClick(this);" href="/remorques-neuves">
-                                        <img id="c5_c22_c23_c24_c25_c28_c34_N9563577129fc4a968af18e0f2cbfeda6_N12ce4349f8c64bbe9c198f2632af9556" name="image" title="" src="_assets/images/menu_images/doepker.jpg" alt="doepker">
+                                        <img id="c5_c22_c23_c24_c25_c28_c34_N9563577129fc4a968af18e0f2cbfeda6_N12ce4349f8c64bbe9c198f2632af9556" name="image" title="" src="_assets/images/homeBanner/doepker.jpg" alt="doepker">
                                     </a>
                                 </div>
                                 <div id="c5_c22_c23_c24_c25_c28_c37" class="NmsZone1513981515062 NmsZone1513981515062Css" data-staticclassnames="NmsZone1513981515062 NmsZone1513981515062Css" style="visibility: visible;" itemid="NmsZone1513981515062"></div>
@@ -30,16 +29,16 @@
                                     <a class="jshowoff-slidelink-1 jshowoff-1-slidelink-1" href="#null">3</a>
                                 </p>
                             </div>
+                        </div>
                     </div>
-                </div>
             </div>
 	</div>
 	<div id="c5_c38" class="content accueil" data-staticClassNames="content accueil">
 		<div id="c5_c38_c39" class="shrink" data-staticClassNames="shrink">
-			<div id="" class="vehiculeDisponible" data-staticClassNames="vehiculeDisponible">
+			<div class="vehiculeDisponible" data-staticClassNames="vehiculeDisponible">
 				<h2 id="">V&#233;hicules disponibles</h2>
                         </div><img id="c5_c38_c39_c42_N960d74b17cad4e8d875d0351d7132fc8" name="image" title="" src="_assets/images/menu_images/promo-site-web.jpg" alt="promo site web" /><div id="c5_c38_c39_c42_ctl00_c44" class="Nad579b8ffd42482c906005c978ef9afa_N57722c9eed144b248e2f78f30b1246ed cat" data-staticClassNames="Nad579b8ffd42482c906005c978ef9afa_N57722c9eed144b248e2f78f30b1246ed cat">
-				<span id="c5_c38_c39_c42_ctl00_c44_c45" data-staticClassNames=""><a id="" name="hyperlien" onclick="javascript:RegisterClick(this);" href="camions-neufs/camions-lourds-neufs-international.html" target="_self"><span id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c47" class="image" data-staticClassNames="image"><img id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c47_N451252dfde0849dfbde1707f0584be5a" name="image" title="" src="_assets/images/menu_images/cat-camion-international.jpg" alt="Camion International" /></span><span id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c49" class="imageMobile" data-staticClassNames="imageMobile"><img id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c49_N008f371ad65e4a5ebda6ba33a5b8aa1f" name="image" title="" src="_assets/images/menu_images/ban-camion-international.jpg" alt="Camion International" /></span><span id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c51" class="orange" data-staticClassNames="orange"><span id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c51_c52" class="titre" data-staticClassNames="titre">Camion international</span><span id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c51_c53" class="voir" data-staticClassNames="voir">Voir</span></span></a></span>
+				<span id="c5_c38_c39_c42_ctl00_c44_c45" data-staticClassNames=""><a name="hyperlien" onclick="javascript:RegisterClick(this);" href="camions-neufs/camions-lourds-neufs-international.html" target="_self"><span id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c47" class="image" data-staticClassNames="image"><img id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c47_N451252dfde0849dfbde1707f0584be5a" name="image" title="" src="_assets/images/menu_images/cat-camion-international.jpg" alt="Camion International" /></span><span id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c49" class="imageMobile" data-staticClassNames="imageMobile"><img id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c49_N008f371ad65e4a5ebda6ba33a5b8aa1f" name="image" title="" src="_assets/images/menu_images/ban-camion-international.jpg" alt="Camion International" /></span><span id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c51" class="orange" data-staticClassNames="orange"><span id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c51_c52" class="titre" data-staticClassNames="titre">Camion international</span><span id="c5_c38_c39_c42_ctl00_c44_c45_Nbfae99567fc84bdf983cd797f4140fe6_c51_c53" class="voir" data-staticClassNames="voir">Voir</span></span></a></span>
 			</div><div id="c5_c38_c39_c42_ctl01_c44" class="cpy1495744198806_Nad579b8ffd42482c906005c978ef9afa_N57722c9eed144b248e2f78f30b1246ed cat" data-staticClassNames="cpy1495744198806_Nad579b8ffd42482c906005c978ef9afa_N57722c9eed144b248e2f78f30b1246ed cat">
 				<span id="c5_c38_c39_c42_ctl01_c44_c45" data-staticClassNames=""><a id="c5_c38_c39_c42_ctl01_c44_c45_cpy1495744198807_Nbfae99567fc84bdf983cd797f4140fe6" name="hyperlien" onclick="javascript:RegisterClick(this);" href="camions-neufs/ottawa-kalmar.html" target="_self"><span id="c5_c38_c39_c42_ctl01_c44_c45_cpy1495744198807_Nbfae99567fc84bdf983cd797f4140fe6_c55" class="image" data-staticClassNames="image"><img id="c5_c38_c39_c42_ctl01_c44_c45_cpy1495744198807_Nbfae99567fc84bdf983cd797f4140fe6_c55_cpy1495744198808_N451252dfde0849dfbde1707f0584be5a" name="image" title="" src="_assets/images/menu_images/cat-tracteur-terminal-ottawa-kalmar.jpg" alt="Tracteur Terminal Ottawa Kalmar" /></span><span id="c5_c38_c39_c42_ctl01_c44_c45_cpy1495744198807_Nbfae99567fc84bdf983cd797f4140fe6_c57" class="imageMobile" data-staticClassNames="imageMobile"><img id="c5_c38_c39_c42_ctl01_c44_c45_cpy1495744198807_Nbfae99567fc84bdf983cd797f4140fe6_c57_cpy1495744198808_N008f371ad65e4a5ebda6ba33a5b8aa1f" name="image" title="" src="_assets/images/menu_images/ban-tracteur-terminal.jpg" alt="Tracteur Terminal" /></span><span id="c5_c38_c39_c42_ctl01_c44_c45_cpy1495744198807_Nbfae99567fc84bdf983cd797f4140fe6_c59" class="orange" data-staticClassNames="orange"><span id="c5_c38_c39_c42_ctl01_c44_c45_cpy1495744198807_Nbfae99567fc84bdf983cd797f4140fe6_c59_c60" class="titre" data-staticClassNames="titre">Tracteur de Terminal Ottawa Kalmar</span><span id="c5_c38_c39_c42_ctl01_c44_c45_cpy1495744198807_Nbfae99567fc84bdf983cd797f4140fe6_c59_c61" class="voir" data-staticClassNames="voir">Voir</span></span></a></span>
 			</div><div id="c5_c38_c39_c42_ctl02_c44" class="Nf70001948dcc4a3cbf1caa12ad2a3fd0_N57722c9eed144b248e2f78f30b1246ed cat" data-staticClassNames="Nf70001948dcc4a3cbf1caa12ad2a3fd0_N57722c9eed144b248e2f78f30b1246ed cat">
@@ -63,33 +62,10 @@
 	</div><div id="c5_c68" class="Nms1408366976455 push" data-staticClassNames="Nms1408366976455 push">
 
 	</div>
-</div><div id="ctl22_c69" class="N6ca068081d994c439936942b0b7c0892_Nd7e8d565b479423fa3ac0815bd866b07 pied" data-staticClassNames="N6ca068081d994c439936942b0b7c0892_Nd7e8d565b479423fa3ac0815bd866b07 pied">
-	<div id="ctl22_c69_c70" class="N6ca068081d994c439936942b0b7c0892_Nms1408372126742 shrink clear" data-staticClassNames="N6ca068081d994c439936942b0b7c0892_Nms1408372126742 shrink clear">
-		<div id="ctl22_c69_c70_c71" class="N6ca068081d994c439936942b0b7c0892_Nms1408372126743 left" data-staticClassNames="N6ca068081d994c439936942b0b7c0892_Nms1408372126743 left">
-			<a id="ctl22_c69_c70_c71_Na36d172648fb4d12a38284719307c88f" name="hyperlien" onclick="javascript:RegisterClick(this);" href="accueil.html" target="_self"><img id="ctl22_c69_c70_c71_Na36d172648fb4d12a38284719307c88f_N15cd070612cd46d8bf85d8d516429239" name="image" title="" src="_assets/images/menu_images/reseau-dynamique-pied.png" alt="Réseau dynamique" /></a>
-		</div><div id="ctl22_c69_c70_c74" class="N6ca068081d994c439936942b0b7c0892_Nms1408372126744 right" data-staticClassNames="N6ca068081d994c439936942b0b7c0892_Nms1408372126744 right">
-			<p  id="p91feeb98dace4bc7b9c59dd00eb91a4d">&#169; R&#233;seau Dynamique, 2014</p><p  id="p0922a3b87d7249c8a21b5f12654a6111" brokerpersistance="0">R&#233;alis&#233; par <a id="ctl22_c69_c70_c74_N45fbca9625b94a0c87acf24c0741330e" name="hyperlien" onclick="javascript:RegisterClick(this);" href="http://www.nmedia.ca/accueil" target="_blank">Nm&#233;dia</a></p><p  id="p24cbb0ef72f341cdab8badd4bdf4b98a"><a id="ctl22_c69_c70_c74_N18d6ef5f2bf3483aa9dd37e4dec2bcb1" name="hyperlien" onclick="javascript:RegisterClick(this);" href="mentions-legales.html" target="_self">Mentions l&#233;gales</a>&#160;| <a id="ctl22_c69_c70_c74_N51f3c1ae5b7148938e2954fd20d1fad6" name="hyperlien" onclick="javascript:RegisterClick(this);" href="plan-site.html" target="_self">Plan du site</a></p>
-		</div>
-	</div>
-</div><div id="ctl24_c78" class="N549e1a5b6f6f4a4d9bc7f62739bfc8ad_Ne394fb4275c44f1da5ddc6c65a3d1a3b menuMobile" data-staticClassNames="N549e1a5b6f6f4a4d9bc7f62739bfc8ad_Ne394fb4275c44f1da5ddc6c65a3d1a3b menuMobile">
-	<div id="ctl24_c78_c79" class="N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N2d686881d1954ca1adbb2fa95aa02f31 bgblack" data-staticClassNames="N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N2d686881d1954ca1adbb2fa95aa02f31 bgblack">
-		<div id="ctl24_c78_c79_ctl00_c17" class="N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N384f9cf8833f44379cabc7ac83eba510_N776781fa500d4e4aa792bae6f1cb5678 recherche" data-staticClassNames="N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N384f9cf8833f44379cabc7ac83eba510_N776781fa500d4e4aa792bae6f1cb5678 recherche">
-			<div id="ctl24_c78_c79_ctl00_c17_Na32e333ddb924e728779b52566acc13f" class="SearchMainDiv4fe851ec94e9431fb7ceba32177f8eba">
-				<input name="ctl00$ctl24$c78$c79$ctl00$c17$_txtSearchNa32e333ddb924e728779b52566acc13f" type="text" id="ctl24_c78_c79_ctl00_c17__txtSearchNa32e333ddb924e728779b52566acc13f" title="Rechercher" class="SearchTextBox4fe851ec94e9431fb7ceba32177f8eba" /><img id="ctl24_c78_c79_ctl00_c17_ctl00" class="SearchImage4fe851ec94e9431fb7ceba32177f8eba" src="_assets/images/menu_images/spacer.png" alt="Rechercher" style="cursor:pointer;" />
-			</div>
-		</div>
-	</div><div id="ctl24_c78_ctl00_c80" class="menuCss5">
-		<ul id="ctl24_c78_ctl00_c80Ul" class="MenuBar"><li class="item4 selected first rank0" id="c80_0" expansionmode="HoverExpansion"><a href="accueil.html" class="selected first rank0" target="_self">Accueil</a></li><li class="item13 rank1" id="c80_1" expansionmode="HoverExpansion"><a href="a-propos.html" class=" rank1" target="_self">&#192; propos</a></li><li class="item14 rank2 parent" id="c80_2" expansionmode="ClickExpansion"><a href="promotions-nouvelles/promotions.html" class=" rank2" target="_self">Promotions et nouvelles</a><div class="itemChildDiv14"><ul class="itemChild14"><li class="item46 first rank0" id="c80_2_0" expansionmode="HoverExpansion"><a href="promotions-nouvelles/promotions.html" class=" first rank0" target="_self">Promotions</a></li><li class="item47 rank1" id="c80_2_1" expansionmode="HoverExpansion"><a href="promotions-nouvelles/nouvelles.html" class=" rank1" target="_self">Nouvelles</a></li><li class="item79 rank2" id="c80_2_2" expansionmode="HoverExpansion"><a href="promotions-nouvelles/concours.html" class=" rank2" target="_self">Concours</a></li><li class="item93 last rank3" id="c80_2_3" expansionmode="HoverExpansion"><a href="promotions-nouvelles/promo-pieces.html" class=" last rank3" target="_self">Promo pi&#232;ces</a></li></ul></div></li><li class="item49 rank3" id="c80_3" expansionmode="HoverExpansion"><a href="urgence-routiere-24h.html" class=" rank3" target="_self">Urgence routi&#232;re 24h</a></li><li class="item5 rank4 parent" id="c80_4" expansionmode="ClickExpansion">
-                    <a href="camions-neufs/camions-lourds-neufs-international.html" class=" rank4" target="_self">Camions neufs</a><div class="itemChildDiv5"><ul class="itemChild5"><li class="item59 first rank0" id="c80_4_0" expansionmode="HoverExpansion"><a href="camions-neufs/inventaire-camion-neufs.html" class=" first rank0" target="_self">Inventaire complet</a></li><li class="item34 rank1" id="c80_4_1" expansionmode="HoverExpansion"><a href="camions-neufs/camions-lourds-neufs-international.html" class=" rank1" target="_self">Camions International</a></li><li class="item35 rank2" id="c80_4_2" expansionmode="HoverExpansion"><a href="camions-neufs/ottawa-kalmar.html" class=" rank2" target="_self">Camions Ottawa Kalmar</a></li><li class="item36 last rank3" id="c80_4_3" expansionmode="HoverExpansion"><a href="camions-neufs/isuzu.html" class=" last rank3" target="_self">Camions Isuzu</a></li></ul></div></li><li class="item62 rank5" id="c80_5" expansionmode="HoverExpansion"><a href="camions-occasion.html" class=" rank5" target="_self">Camions d&#39;occasion</a></li><li class="item63 rank6" id="c80_6" expansionmode="NoExpansion"><a href="remorques-neuves.html" class=" rank6" target="_self">Remorques neuves</a></li><li class="item9 rank7 parent" id="c80_7" expansionmode="ClickExpansion"><a href="vehicules-utilitaires/mini-excavatrices.html" class=" rank7" target="_self">V&#233;hicules utilitaires</a><div class="itemChildDiv9"><ul class="itemChild9"><li class="item37 first rank0" id="c80_7_0" expansionmode="HoverExpansion"><a href="vehicules-utilitaires/mini-excavatrices.html" class=" first rank0" target="_self">Mini-excavatrices</a></li><li class="item38 rank1" id="c80_7_1" expansionmode="HoverExpansion"><a href="vehicules-utilitaires/transporteurs-tout-terrain.html" class=" rank1" target="_self">Transporteurs tout-terrain</a></li><li class="item39 rank2" id="c80_7_2" expansionmode="HoverExpansion"><a href="vehicules-utilitaires/skid-steer-chargeur-chenilles.html" class=" rank2" target="_self">Skid Steer et chargeur &#224; chenilles</a></li><li class="item40 last rank3" id="c80_7_3" expansionmode="HoverExpansion"><a href="vehicules-utilitaires/chargeuses-yanmar-v3-v4.html" class=" last rank3" target="_self">Chargeuse V3 et V4</a></li></ul></div></li><li class="item10 rank8" id="c80_8" expansionmode="HoverExpansion"><a href="location-camions.html" class=" rank8" target="_self">Location de camions</a></li><li class="item11 rank9 parent" id="c80_9" expansionmode="ClickExpansion"><a href="pieces-services/financement.html" class=" rank9" target="_self">Pi&#232;ces et services</a><div class="itemChildDiv11"><ul class="itemChild11"><li class="item41 first rank0" id="c80_9_0" expansionmode="HoverExpansion"><a href="pieces-services/pieces-accessoires.html" class=" first rank0" target="_self">Pi&#232;ces et accessoires</a></li><li class="item42 rank1" id="c80_9_1" expansionmode="HoverExpansion"><a href="pieces-services/service-routier.html" class=" rank1" target="_self">Service routier</a></li><li class="item43 rank2" id="c80_9_2" expansionmode="HoverExpansion"><a href="pieces-services/apres-vente.html" class=" rank2" target="_self">Service apr&#232;s-vente</a></li><li class="item44 rank3" id="c80_9_3" expansionmode="HoverExpansion"><a href="pieces-services/financement.html" class=" rank3" target="_self">Financement</a></li><li class="item94 last rank4" id="c80_9_4" expansionmode="HoverExpansion"><a href="http://www.reseaudynamique.com/pieces-services/promo-pieces" class=" last rank4" target="_self">Promo pi&#232;ces</a></li></ul></div></li><li class="item12 last rank10" id="c80_10" expansionmode="NoExpansion"><a href="nous-joindre.html" class=" last rank10" target="_self">Nous joindre</a></li></ul>
-	</div>
-</div><div id="ctl00_Nms_Designer_Web_UI_Widget_Zone_NmsLiteral61055d76e8bf4f1196d74c7b77f05a3b">	<script type="text/javascript">    //<![CDATA[
-
-
-
-
-
-
-
+</div>
+        
+        
+<script type="text/javascript">    //<![CDATA[
 $(document).ready(function () {
 
   $("body").attr("ontouchstart", "");
@@ -176,16 +152,9 @@ $(window).resize(function () {
     }
   }, 100);
 });
-    //]]>  </script></div><img alt="" src="#" style="position:absolute;left:-10px;top:-10px;width:1px;height:1px;" />
+    //]]>  </script><img alt="" src="#" style="position:absolute;left:-10px;top:-10px;width:1px;height:1px;" />
 
-<script type="text/javascript">
-//<![CDATA[
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','../www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-55593676-1', 'auto', {'name': 'nms'});
-ga('nms.send', 'pageview');$("img[src$='.png']").ready(function() {  if ($(this).height() > 0) { $(this).ifixpng(); }});$(document.body).bind('mouseover', function() { setTimeout(function() { $("img[src$='.png']").ifixpng(); }, 10); });$(document).HighlightSelector({QueryHashKeyName : 'qa',HighlightClass : 'qaHighlight'});$(document).ready(function(){});//]]>
-</script>
-</form></body>
+</form>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/footer/_footer.php'); ?>
+</body>
 </html>

@@ -1,3 +1,7 @@
+.utilitaire {
+    background: #181818;
+}
+
 body {
   margin: 0;
   color: #000000;
@@ -384,7 +388,7 @@ a {
     margin-top: 60px;
   }
 
-    .entete .recherche .SearchTextBox4fe851ec94e9431fb7ceba32177f8eba {
+    .entete .recherche .SearchTextBox {
       width: 100%;
       box-sizing: border-box;
       padding: 0px 38px 0px 11px;
@@ -394,7 +398,7 @@ a {
       border: 0px;
     }
 
-    .entete .recherche .SearchImage4fe851ec94e9431fb7ceba32177f8eba {
+    .entete .recherche .SearchImage {
       width: 18px;
       height: 18px;
       position: absolute;
@@ -1991,7 +1995,7 @@ UL.store-list {
 }
 
 .push {
-  height: 74px;
+  height: 0px;
   clear: both;
   position: relative;
 }

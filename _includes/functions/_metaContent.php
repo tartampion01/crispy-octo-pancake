@@ -1,5 +1,5 @@
 <?php
-function getMetaContent($pageName = '')
+function _getMetaContent($pageName = '')
 {
     $metaContent = "Réseau Dynamique est concessionnaire panquébécois de camions International et détaillant de camions et véhicules routiers Ottawa Kalmar, Isuzu et Yanmar.";
 

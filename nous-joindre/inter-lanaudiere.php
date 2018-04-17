@@ -1,7 +1,7 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header.php'); ?>
 <?php $suc = new Succursales(); $suc->load(nomSuccursale::Joliette); ?>
 <body class="body">
-    <form role="form" method="POST" action="/<?php echo basename($_SERVER['PHP_SELF']); ?>">
+    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
         <div class="content">
             <div class="shrink">
@@ -61,7 +61,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Dimanche :</td>
-                                                <td><?php echo $suc->heureOuvertureVendredi; ?></td>
+                                                <td><?php echo $suc->heureOuvertureDimanche; ?></td>
                                             </tr>
                                         </tbody>
                                         </table>
@@ -103,17 +103,12 @@
                             <?php foreach($suc->remorquageInfo as $remInfo): ?>
                                 <?php echo $remInfo; ?></br>
                             <?php endforeach;?>
-                        </p>
-                        <p>
-                            <?php foreach($suc->remorquageTelephones as $telephone): ?>
-                                <?php echo $telephone; ?></br>
-                            <?php endforeach;?>
-                        </p>
+                        </p>                       
                         <div class="btnBon" style="display:block;">
-                            <h2><a class="buttonBon" name="hyperlien" href="/<?php pageLink::getHref(folder::Root,page::BonDeTravail); echo "?succursale=" . $suc->parametreBonTravailNomSuccursale; ?>" target="_self">Ouvrez un bon de travail</a></h2>
+                            <h2><a class="buttonBon" name="hyperlien" href="/<?php RD_PageLink::getHref(folder::Root,page::BonDeTravail); echo "?succursale=" . $suc->parametreBonTravailNomSuccursale; ?>" target="_self">Ouvrez un bon de travail</a></h2>
                         </div>
                         <div class="btnPieces" style="display:block;">
-                            <h2><a class="buttonBon" name="hyperlien" href="/<?php pageLink::getHref(folder::Root,page::DemandePieces); echo "?succursale=" . $suc->parametreDemandePiecesNomSuccursale; ?>" target="_self">Faites une demande de pièces</a></h2>
+                            <h2><a class="buttonBon" name="hyperlien" href="/<?php RD_PageLink::getHref(folder::Root,page::DemandePieces); echo "?succursale=" . $suc->parametreDemandePiecesNomSuccursale; ?>" target="_self">Faites une demande de pièces</a></h2>
                         </div>
                     </div>
                 </div>

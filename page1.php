@@ -1,4 +1,4 @@
-<?php require_once('_includes/header/_header.php'); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header.php'); ?>
 <body class="body">
     <form role="form" method="POST" action="/page1.php">
     <div class="content" style="height: 80%">

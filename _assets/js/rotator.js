@@ -37,14 +37,16 @@ $(document).ready(function(){
     $(".N549e1a5b6f6f4a4d9bc7f62739bfc8ad_Ne394fb4275c44f1da5ddc6c65a3d1a3b").attr("ItemID","N549e1a5b6f6f4a4d9bc7f62739bfc8ad_Ne394fb4275c44f1da5ddc6c65a3d1a3b");
     $(".N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N2d686881d1954ca1adbb2fa95aa02f31").attr("ItemID","N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N2d686881d1954ca1adbb2fa95aa02f31");
     $(".N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N384f9cf8833f44379cabc7ac83eba510_N776781fa500d4e4aa792bae6f1cb5678").attr("ItemID","N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N384f9cf8833f44379cabc7ac83eba510_N776781fa500d4e4aa792bae6f1cb5678");
-    $(document).ready(function() {}); $('form').submit (function() { return false; });var c5_ctl00_c7_c8_ctl00_c9 = new Menu('c5_ctl00_c7_c8_ctl00_c9Ul');
+    $(document).ready(function() {}); $('form').submit (function() { return false; });
+    var c5_ctl00_c7_c8_ctl00_c9 = new Menu('c5_ctl00_c7_c8_ctl00_c9Ul');
     $('#c5_ctl01_c10_c11_ctl00_c17_ctl00').click(function(){ 
         $.cookie('JSONSearch',JSON.stringify({pages:[], forms:[]}),{expires:1});
         window.location='/resultats-recherche#keyword=' + encodeURIComponent($(this).siblings('input:text').val());
             if ('/resultats-recherche' == window.location.href.substring(0, window.location.href.indexOf('#')).replace('http://', '').replace(window.location.host, ''))
                 {window.location.reload();}});
     $('#c5_ctl01_c10_c11_ctl00_c17__txtSearchNa32e333ddb924e728779b52566acc13f').watermark('Rechercher').bind('keydown',function(evt){if (evt.keyCode==13){evt.preventDefault();
-    $(this).siblings().click();return false;}});var divMenuCss1 = new Menu('ulNiveau1');
+    $(this).siblings().click();return false;}});
+    var divMenuCss1 = new Menu('ulNiveau1');
     $("#c5_c22_c23_c24_c25_c28").attr("ItemID","N8a5a20f012a84d04b74ed197d1e7feee");
     $("#c5_c22_c23_c24_c25_c28_c29").attr("ItemID","NmsZone1504788309657");
     $("#c5_c22_c23_c24_c25_c28_c31").attr("ItemID","NmsZone1478708744012");

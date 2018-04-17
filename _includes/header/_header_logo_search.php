@@ -1,17 +1,18 @@
-<link href="../../_assets/css/header/_header_logo_search.css" rel="stylesheet" type="text/css"/>
-<div id="" class="entete clear">
-    <div id="" class="shrink clear">
-        <div id="" class=" mMenu icoMenuMobile" data-staticclassnames="mMenu icoMenuMobile" itemid="">
-            <img id="" name="image" title="" src="../../_assets/images/menu_images/spacer.png" alt="image">
+<!-- LOGO AND SEARCH -->
+<div class="entete clear">
+    <div class="shrink clear">
+        <div class="mMenu icoMenuMobile">
+            <img name="image" title="" src="../../_assets/images/menu_images/spacer.png" alt="image">
         </div>
-        <div id="" class=" logo" data-staticclassnames=" logo" >
-            <a id="" class="" name="hyperlien" onclick="javascript:RegisterClick(this);" href="/accueil" target="_self">
-                <img id="" class="" name="image" title="" src="../../_assets/images/menu_images/reseau-dynamique.png" alt="Camions, Remorques et Véhicules"></a>
+        <div class="logo">
+            <a class="" name="hyperlien" onclick="javascript:RegisterClick(this);" href="/accueil" target="_self">
+                <img class="" name="image" title="" src="../../_assets/images/menu_images/reseau-dynamique.png" alt="Camions, Remorques et Véhicules">
+            </a>
         </div>
-        <div id="" class="recherche" data-staticclassnames=" recherche">
-            <div id="" class="SearchMain">
-                <input name="" id="" title="Rechercher" class="SearchTextBox" placeholder="Rechercher" type="text">
-                <img id="" class="SearchImage" src="../../_assets/images/menu_images/spacer.png" alt="Rechercher" style="cursor:pointer;">
+        <div class="recherche">
+            <div class="SearchMainDiv">
+                <input title="Rechercher" class="SearchTextBox" placeholder="Rechercher" type="text">
+                    <img class="SearchImage" src="../../_assets/images/menu_images/spacer.png" alt="Rechercher" style="cursor:pointer;">
             </div>
         </div>
     </div>

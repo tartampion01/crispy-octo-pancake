@@ -1,12 +1,11 @@
-
-<?php require_once('_includes/header/_header.php'); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header.php'); ?>
 <body class="body">
-    <form role="form" method="POST" action="/<?php echo basename($_SERVER['PHP_SELF']); ?>">
+    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
         <div class="content">
             <div class="shrink">
                 <div class="titrepage">
-                    <h1></h1>
+                    <h1><?php echo $NOMPAGE; ?></h1>
                 </div>
                 <div class="contenu">
                     <div class="contenu2">
