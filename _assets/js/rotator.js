@@ -1,3 +1,13 @@
+function showHide(id)
+{
+    var x = document.getElementById(id);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
 $(document).ready(function(){
     $(".Nms1408366976445").attr("ItemID","Nms1408366976445");
     $(".N116f7f7607df44ee914a4188131bc78a_N5bf9d4b4401640e8a9388d2f910e7043").attr("ItemID","N116f7f7607df44ee914a4188131bc78a_N5bf9d4b4401640e8a9388d2f910e7043");
@@ -37,7 +47,10 @@ $(document).ready(function(){
     $(".N549e1a5b6f6f4a4d9bc7f62739bfc8ad_Ne394fb4275c44f1da5ddc6c65a3d1a3b").attr("ItemID","N549e1a5b6f6f4a4d9bc7f62739bfc8ad_Ne394fb4275c44f1da5ddc6c65a3d1a3b");
     $(".N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N2d686881d1954ca1adbb2fa95aa02f31").attr("ItemID","N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N2d686881d1954ca1adbb2fa95aa02f31");
     $(".N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N384f9cf8833f44379cabc7ac83eba510_N776781fa500d4e4aa792bae6f1cb5678").attr("ItemID","N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N384f9cf8833f44379cabc7ac83eba510_N776781fa500d4e4aa792bae6f1cb5678");
-    $(document).ready(function() {}); $('form').submit (function() { return false; });
+    $(document).ready(function() {}); 
+    //$('form').submit (function()
+    //{ return false; });
+    
     var c5_ctl00_c7_c8_ctl00_c9 = new Menu('c5_ctl00_c7_c8_ctl00_c9Ul');
     $('#c5_ctl01_c10_c11_ctl00_c17_ctl00').click(function(){ 
         $.cookie('JSONSearch',JSON.stringify({pages:[], forms:[]}),{expires:1});

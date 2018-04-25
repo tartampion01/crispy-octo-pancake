@@ -9,5 +9,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/objects/RD_Camions.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/objects/RD_Succursales.php');
 // PAGE UTILS getPageLink, getMetaContent, getTitle...
 require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/objects/RD_PageLink.php');
+// Utils
+require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/objects/RD_Utils.php');
 
+// "GLOBALES"
+$G_RD_Utils = new RD_Utils();
 ?>

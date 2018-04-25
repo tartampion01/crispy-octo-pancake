@@ -695,6 +695,85 @@ a {
   padding: 0 10px;
 }
 
+.toggle {
+  margin: 2em 0px;
+}
+
+.btnToggle {
+  color: rgb(255, 255, 255);
+}
+
+  .btnToggle a {
+    background: rgb(0, 145, 214);
+    font: 700 1.8em/3em 'Montserrat', Arial, Helvetica, sans-serif;
+    padding: 0px 22px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    position: relative;
+    font-size-adjust: none;
+    font-stretch: normal;
+  }
+
+    .btnToggle a:hover {
+      background: rgb(4, 137, 200);
+    }
+
+    .btnToggle a::before {
+      background: rgb(9, 125, 180);
+      top: 0px;
+      width: 70px;
+      height: 100%;
+      right: 0px;
+      display: inline-block;
+      position: absolute;
+      content: '';
+    }
+
+    .btnToggle a::after {
+      background: url(../../../_assets/images/menu_images/fermer.png) no-repeat center;
+      top: 0px;
+      width: 70px;
+      height: 100%;
+      right: 0px;
+      display: inline-block;
+      position: absolute;
+      content: '';
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+  .btnToggle a.open:after {
+    background: url(../../../_assets/images/menu_images/fermer.png) no-repeat center;
+    top: 0px;
+    width: 70px;
+    height: 100%;
+    right: 0px;
+    display: inline-block;
+    position: absolute;
+    content: '';
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+.showedZone {
+  background: rgb(238, 238, 238);
+  padding: 38px;
+}
+
+  .showedZone h2 {
+    margin-top: 0px;
+  }
+
+.FacetedExplorer {
+  position: relative !important;
+}
+
+.GpcFacetedResults {
+  position: static !important;
+margin-top: 36px;
+}
+
 .content {
   padding-bottom: 7em;
 }
@@ -4077,3 +4156,4 @@ div{}
 
 /* StyleSheet File : ~/fr-CA/_css/4.css */
 div {  } 
+.dropDownBonTravailDemandePieces  {  padding: 1.5%;  width: 78.5%;   }

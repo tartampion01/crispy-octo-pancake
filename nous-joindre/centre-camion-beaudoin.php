@@ -9,8 +9,8 @@
                     <div class="titrepage">
                         <h1><span><?php echo $suc->nomLong; ?></span></h1>
                     </div>
-                    <div class="contenu">
-                        <div class="contenu2">
+                    <div class="blocCoordonnees">
+                        <div class="contenu">
                             <h2>Coordonnées</h2>
                             <p>
                                 <?php echo $suc->adresse; ?></br>
@@ -23,11 +23,11 @@
                                 <?php endforeach;?>
                             </p>
 
-                            <div class="gm-style-pbc">
-                            <p class="gm-style-pbt">GOOGLE MAP</p>
+                           <div class="blocMap contenu">
+                                <div><iframe src="<?php echo $suc->GoogleMapSRC; ?>" width="455" height="300" frameborder="0" style="border:0"></iframe></div>
                             </div>
 
-                            <div class="content">
+                            <div class="blocHeuresDouverture contenu">
                                 <div class="titre">
                                     <h2>Heures d'ouverture</h2>
                                     <div class="heures">
@@ -110,10 +110,10 @@
                             <?php endforeach;?>
                         </p>
                         <div class="btnBon" style="display:block;">
-                            <h2><a class="buttonBon" name="hyperlien" href="/<?php RD_PageLink::getHref(folder::Root,page::BonDeTravail); echo "?succursale=" . $suc->parametreBonTravailNomSuccursale; ?>" target="_self">Ouvrez un bon de travail</a></h2>
+                            <h2><a class="buttonBon" name="hyperlien" href="<?php RD_PageLink::getHref(folder::Root,page::BonDeTravail); echo "?succursale=" . $suc->getSuccursaleBonTravail(); ?>" target="_self">Ouvrez un bon de travail</a></h2>
                         </div>
                         <div class="btnPieces" style="display:block;">
-                            <h2><a class="buttonBon" name="hyperlien" href="/<?php RD_PageLink::getHref(folder::Root,page::DemandePieces); echo "?succursale=" . $suc->parametreDemandePiecesNomSuccursale; ?>" target="_self">Faites une demande de pièces</a></h2>
+                            <h2><a class="buttonBon" name="hyperlien" href="<?php RD_PageLink::getHref(folder::Root,page::DemandePieces); echo "?succursale=" . $suc->getSuccursaleDemandePieces(); ?>" target="_self">Faites une demande de pièces</a></h2>
                         </div>
                     </div>
                 </div>

@@ -90,8 +90,19 @@ class Succursales{
     public $remorquageTitre = "";
     public $remorquageInfo = "";
     public $remorquageTelephones = "";
-    public $parametreBonTravailNomSuccursale = "";
-    public $parametreDemandePiecesNomSuccursale = "";
+    private $parametreBonTravailNomSuccursale = "";
+    private $parametreDemandePiecesNomSuccursale = "";
+    public $GoogleMapSRC = "";
+    
+    public function getSuccursaleBonTravail()
+    {
+        return urlencode($this->parametreBonTravailNomSuccursale);
+    }
+    
+    public function getSuccursaleDemandePieces()
+    {
+        return urlencode($this->parametreDemandePiecesNomSuccursale);
+    }
     
     public function load($succursale){
         
@@ -147,8 +158,8 @@ class Succursales{
                 $this->remorquageTelephones[] = "Pagette : 819 472-8784";
                 $this->remorquageTelephones[] = "Cellulaire : 819 472-9498";
                 $this->remorquageTelephones[] = "Cellulaire : 819 314-2152";
-                $this->parametreBonTravailNomSuccursale = "Centre%20du%20Camion%20Beaudoin%20-%20Drummondville";
-                $this->parametreDemandePiecesNomSuccursale = "Centre%20du%20Camion%20Beaudoin%20-%20Drummondville";
+                $this->parametreBonTravailNomSuccursale = "Centre%20du%20Camion%20Beaudoin";
+                $this->parametreDemandePiecesNomSuccursale = "Centre%20du%20Camion%20Beaudoin";
                 break;
             case nomSuccursale::Joliette:
                 $this->isSuccursale = 1;
@@ -196,8 +207,9 @@ class Succursales{
                 $this->remorquageTitre = "Remorquage";
                 $this->remorquageInfo[] = "<b>Remorquage Rondeau</b>";
                 $this->remorquageInfo[] = "450 887-2970";
-                $this->parametreBonTravailNomSuccursale = "Camions%20Inter-Lanaudi%C3%A8re%20-%20Joliette";
-                $this->parametreDemandePiecesNomSuccursale = "Camions%20Inter-Lanaudi%C3%A8re%20-%20Joliette";
+                $this->parametreBonTravailNomSuccursale = "Camions%20Inter-Lanaudi%C3%A8re";
+                $this->parametreDemandePiecesNomSuccursale = "Camions%20Inter-Lanaudi%C3%A8re%";
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22163.018849870517!2d-73.40596211499049!3d46.02361877120809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc8bd890a98260f%3A0xbf44a24df56dd942!2s791+Rue+Samuel-Racine%2C+Joliette%2C+QC+J6E+0E8%2C+Canada!5e0!3m2!1sfr!2sfr!4v1408893246410";
                 break;
             case nomSuccursale::Anjou:
                 $this->isSuccursale = 1;
@@ -239,8 +251,8 @@ class Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->parametreBonTravailNomSuccursale = "Camions%20Inter-Anjou%20-%20Anjou%C2%A0";
-                $this->parametreDemandePiecesNomSuccursale = "Camions%20Inter-Anjou%20-%20Anjou%C2%A0";
+                $this->parametreBonTravailNomSuccursale = "Camions%20Inter-Anjou";
+                $this->parametreDemandePiecesNomSuccursale = "Camions%20Inter-Anjou";
                 break;case nomSuccursale::Boucherville:
                 $this->isSuccursale = 1;
                 $this->isPointService = 0;
@@ -283,8 +295,8 @@ class Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->parametreBonTravailNomSuccursale = "Inter-Boucherville%20-%20Boucherville";
-                $this->parametreDemandePiecesNomSuccursale = "Inter-Boucherville%20-%20Boucherville";
+                $this->parametreBonTravailNomSuccursale = "Inter-Boucherville";
+                $this->parametreDemandePiecesNomSuccursale = "Inter-Boucherville";
                 break;
             case nomSuccursale::SaintHyacinthe:
                 $this->isSuccursale = 1;
@@ -329,8 +341,8 @@ class Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->parametreBonTravailNomSuccursale = "Les%20Camions%20Beaudoin%20-%20Saint-Hyacinthe";
-                $this->parametreDemandePiecesNomSuccursale = "Les%20Camions%20Beaudoin%20-%20Saint-Hyacinthe";
+                $this->parametreBonTravailNomSuccursale = "Les%20Camions%20Beaudoin";
+                $this->parametreDemandePiecesNomSuccursale = "Les%20Camions%20Beaudoin";
                 break;
             case nomSuccursale::Victoriaville:
                 $this->isSuccursale = 1;
@@ -377,7 +389,7 @@ class Succursales{
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "";
-                $this->parametreDemandePiecesNomSuccursale = "Charest%20International%20-%20Victoriaville";
+                $this->parametreDemandePiecesNomSuccursale = "Charest%20International";
                 break;
             case nomSuccursale::TroisRivieres:
                 $this->isSuccursale = 1;
@@ -419,7 +431,7 @@ class Succursales{
                 $this->remorquageInfo[] = "Téléphone : 819 472-9498";
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "";
-                $this->parametreDemandePiecesNomSuccursale = "Garage%20Charest%20et%20Fr%C3%A8res%20-%20Trois-Rivi%C3%A8res";
+                $this->parametreDemandePiecesNomSuccursale = "Garage%20Charest%20et%20Fr%C3%A8res";
                 break;
             case nomSuccursale::ThetfordMines:
                 $this->isSuccursale = 1;
@@ -462,8 +474,8 @@ class Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->parametreBonTravailNomSuccursale = "Le%20Centre%20du%20Camion%20(Amiante)%20-%20Thetford%20Mines";
-                $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20du%20Camion%20(Amiante)%20-%20Thetford%20Mines";
+                $this->parametreBonTravailNomSuccursale = "Le%20Centre%20du%20Camion%20(Amiante)";
+                $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20du%20Camion%20(Amiante)";
                 break;
             case nomSuccursale::SaintGeorges:
                 $this->isSuccursale = 1;
@@ -504,8 +516,8 @@ class Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->parametreBonTravailNomSuccursale = "Le%20Centre%20du%20Camion%20(Beauce)%20-%20Saint-Georges";
-                $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20du%20Camion%20(Beauce)%20-%20Saint-Georges";
+                $this->parametreBonTravailNomSuccursale = "Le%20Centre%20du%20Camion%20(Beauce)";
+                $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20du%20Camion%20(Beauce)";
                 break;
             case nomSuccursale::RiviereDuLoup:
                 $this->isSuccursale = 1;
@@ -558,8 +570,8 @@ class Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->parametreBonTravailNomSuccursale = "Le%20Centre%20Routier%201994%20-%20Rivi%C3%A8re-du-Loup";
-                $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20Routier%201994%20-%20Rivi%C3%A8re-du-Loup";
+                $this->parametreBonTravailNomSuccursale = "Le%20Centre%20Routier%201994";
+                $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20Routier%201994";
                 break;
             case nomSuccursale::Quebec:
                 $this->isSuccursale = 1;
@@ -611,8 +623,8 @@ class Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->parametreBonTravailNomSuccursale = "Camions%20International%20%C3%89lite%20-%20Qu%C3%A9bec";
-                $this->parametreDemandePiecesNomSuccursale = "Camions%20International%20%C3%89lite%20-%20Qu%C3%A9bec";
+                $this->parametreBonTravailNomSuccursale = "Camions%20International%20%C3%89lite";
+                $this->parametreDemandePiecesNomSuccursale = "Camions%20International%20%C3%89lite";
                 break;
             case nomSuccursale::Shawinigan:
                 $this->isSuccursale = 1;
@@ -653,8 +665,9 @@ class Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->parametreBonTravailNomSuccursale = "Garage%20Robert%20-%20";
-                $this->parametreDemandePiecesNomSuccursale = "Garage%20Robert%20-%20";
+                $this->parametreBonTravailNomSuccursale = "Garage Robert";
+                $this->parametreDemandePiecesNomSuccursale = "Garage Robert";
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2741.5253671513356!2d-72.71138334836269!3d46.596619579028236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc64df0b295b3d9%3A0xf26322fa98abd028!2sGarage+Robert+Inc!5e0!3m2!1sfr!2sca!4v1487884811377";
                 break;
 //            case nomSuccursale::Joliette:
 //                $this->isSuccursale = 1;

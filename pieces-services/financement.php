@@ -5,15 +5,14 @@
         <div class="content">
             <div class="shrink">
                 <div class="titrepage">
-                    <h1><?php echo $NOMPAGE; ?></h1>
+                    <h1>FINANCEMENT</h1>
                 </div>
                 <div class="contenu">
                     <div class="contenu2">
-                        <p></p>
-                        <h2></h2>
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p>Chez Réseau Dynamique, notre objectif est de vous satisfaire et de vous supporter dans l'atteinte de vos <strong>objectifs d'affaires</strong>. Nous sommes persuadés qu'en choisissant un camion de Réseau Dynamique et en optant pour un service après-vente hors pair vous aurez tout en main pour réussir.</p>
+                        <h2>Financement concurrentiel</h2>
+                        <p>Que vous vous dotiez d'un camion neuf ou d'occasion ou encore d'un lot de camions, vous trouverez satisfaction parmi notre vaste gamme de produits de financement concurrentiels. Nous travaillons avec les meilleurs fournisseurs de services financiers afin de dénicher avec vous le plan de financement qui fera progresser votre entreprise.</p>
+                        <p>Nous sommes persuadés que vous faites le meilleur choix pour le futur de votre entreprise en choisissant un camion de Réseau Dynamique.</p>
                     </div>
                 </div>
             </div>

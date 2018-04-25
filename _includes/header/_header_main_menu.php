@@ -80,10 +80,10 @@
                                 <a href="<?php RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesFinancement) ?>" class="rank3" target="_self">Financement</a>
                             </li>
                             <li class="item92 rank4" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref("",page::PiecesEtServicesFinancement) ?>" class="rank4" target="_blank">Commande en ligne</a>
+                                <a href="<?php RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_nextPartLogin) ?>" class="rank4" target="_blank">Commande en ligne</a>
                             </li>
                             <li class="item94 last rank5" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::PiecesService,page::PromotionsEtNouvellesPromoPieces) ?>" class=" last rank5" target="_self">Promo pièces</a>
+                                <a href="<?php RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces) ?>" class=" last rank5" target="_self">Promo pièces</a>
                             </li>
                         </ul>
                     </div>

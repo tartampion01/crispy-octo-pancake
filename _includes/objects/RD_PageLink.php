@@ -16,61 +16,78 @@ interface folder
 interface page
 {
     const Accueil = 1;
-    const CamionsInventaireComplet = 2;
-    const CamionsInternational = 3;
-    const CamionsOttawaKalmar = 4;
-    const CamionsIsuzu = 5;
-    const CamionsOccasion = 6;
-    const RemorqesNeuvesInventaireComplet = 7;
-    const RemorquesDiMond = 8;
-    const RemorquesDoepker = 9;
-    const VehiculesUtilitairesMiniExcavatrices = 10;
-    const VehiculesUtilitairesTransporteursToutTerrain = 11;
-    const VehiculesUtilitairesSkidSteerEtChargeurAChenilles = 12;
-    const VehiculesUtilitairesChargeuseV3EtV4 = 13;
-    const LocationsDeCamions = 14;
-    const PiecesEtServicesPiecesEtAsccessoires = 15;
-    const PiecesEtServicesServiceRoutier = 16;
-    const PiecesEtServicesServiceApresVente = 17;
-    const PiecesEtServicesFinancement = 18;
-    const PiecesEtServicesPromoPieces = 19;
-    const NousJoindre = 20;
-    const NousJoindreCamionsInterLanaudiere = 21;
-    const NousJoindreCamionsInterAnjou = 22;
-    const NousJoindreInterBoucherville = 23;
-    const NousJoindreLesCamionsBeaudoin = 24;
-    const NousJoindreCentreduCamionBeaudoin = 25;
-    const NousJoindreCharestInternational = 26;
-    const NousJoindreGarageCharestetFreres = 27;
-    const NousJoindreLeCentreduCamionAmiante = 28;
-    const NousJoindreLeCentreduCamionBeauce = 29;
-    const NousJoindreLeCentreRoutier1994 = 30;
-    const NousJoindreCamionsInternationalElite = 31;
-    const NousJoindreGarageRobert = 32;
-    const Apropos = 33;
-    const PromotionsEtNouvellesPromotions = 34;
-    const PromotionsEtNouvellesNouvelles = 35;
-    const PromotionsEtNouvellesConcours = 36;
-    const PromotionsEtNouvellesPromoPieces = 37;
-    const UrgenceRoutiere24H = 38;
-    const InscriptionNextPart = 39;
-    const InscriptionNextPartAbonnement = 40;
-    const MentionsLegales = 41;
-    const DemandePieces = 42;
-    const BonDeTravail = 43;
-    const Fournisseurs = 44;
-    const PlanSite = 45;
-    const EXTERNAL_nextPartLogin = 46;
+    const LocationsDeCamions = 2;
+    const Apropos = 3;
+    const UrgenceRoutiere24H = 4;
+    const MentionsLegales = 5;
+    const DemandePieces = 6;
+    const BonDeTravail = 7;
+    const Fournisseurs = 8;
+    const PlanSite = 9;
+    const DemandeInformation = 10;
+    const PlanifierEssaiRoutier = 11;
+    const ObtenirPrix = 12;
+    const DemandeFinancement = 13;
+    const EvaluerEchange = 14;
+    const NousJoindre = 15;
+    
+    const CamionsInventaireComplet = 100;
+    const CamionsInternational = 101;
+    const CamionsOttawaKalmar = 102;
+    const CamionsIsuzu = 103;
+    const CamionsOccasion = 104;
+    const RemorqesNeuvesInventaireComplet = 105;
+    const RemorquesDiMond = 106;
+    const RemorquesDoepker = 107;
+    
+    const VehiculesUtilitairesMiniExcavatrices = 200;
+    const VehiculesUtilitairesTransporteursToutTerrain = 201;
+    const VehiculesUtilitairesSkidSteerEtChargeurAChenilles = 202;
+    const VehiculesUtilitairesChargeuseV3EtV4 = 203;
+    
+    const PiecesEtServicesPiecesEtAsccessoires = 300;
+    const PiecesEtServicesServiceRoutier = 301;
+    const PiecesEtServicesServiceApresVente = 302;
+    const PiecesEtServicesFinancement = 303;
+    const PiecesEtServicesPromoPieces = 304;
+        
+    const NousJoindreCamionsInterLanaudiere = 401;
+    const NousJoindreCamionsInterAnjou = 402;
+    const NousJoindreInterBoucherville = 403;
+    const NousJoindreLesCamionsBeaudoin = 404;
+    const NousJoindreCentreduCamionBeaudoin = 405;
+    const NousJoindreCharestInternational = 406;
+    const NousJoindreGarageCharestetFreres = 407;
+    const NousJoindreLeCentreduCamionAmiante = 408;
+    const NousJoindreLeCentreduCamionBeauce = 409;
+    const NousJoindreLeCentreRoutier1994 = 410;
+    const NousJoindreCamionsInternationalElite = 411;
+    const NousJoindreGarageRobert = 412;
+    
+    const PromotionsEtNouvellesPromotions = 500;
+    const PromotionsEtNouvellesNouvelles = 501;
+    const PromotionsEtNouvellesConcours = 502;
+    const PromotionsEtNouvellesPromoPieces = 503;
+        
+    const InscriptionNextPart = 600;
+    const InscriptionNextPartAbonnement = 601;
+    
+    const EXTERNAL_nextPartLogin = 700;
+    const EXTERNAL_nextPart = 701;
+    const EXTERNAL_fleetrite = 702;
 }
 
 class RD_PageLink
 {
-    private $_folder = "";
     private $_page = "";
-    
+    private $_folder = "";
+    private $_wholeURL = false;
+        
     //public static function getLink(folder $folder, page $page)
     public static function getHref($folder, $page)
     {
+        $_wholeURL = false;
+        
         switch($folder){
             case folder::CamionsNeufs:$_folder = "/camions-neufs/";break;
             case folder::Nextpart:$_folder = "/nextpart/";break;
@@ -81,6 +98,7 @@ class RD_PageLink
             case folder::Service:$_folder = "/service/";break;
             case folder::VehiculesUtilitaires:$_folder = "/vehicules-utilitaires/";break;
             case folder::Root:$_folder = "/";break;
+            case folder::EXTERNAL:$_folder = "";break;
             default:$_folder = "";break;
         }
         
@@ -129,12 +147,20 @@ class RD_PageLink
             case page::DemandePieces:$_page = "demande-pieces";break;
             case page::BonDeTravail:$_page = "demande-bon-travail";break;
             case page::Fournisseurs:$_page = "fournisseurs";break;
-            case page::PlanSite:$_page = "plan-site";break;
-            case page::EXTERNAL_nextPartLogin: $_page = "https://www.nexpart.com/login.php";
-            default: $_page = "accueil";
+            case page::PlanSite:$_page = "plan-site";break;            
+            case page::DemandeInformation: $_page = "demande-information";break;
+            case page::PlanifierEssaiRoutier: $_page = "planifier-essai-routier";break;
+            case page::ObtenirPrix: $_page = "obtenir-prix";break;
+            case page::DemandeFinancement: $_page = "demande-financement";break;
+            case page::EvaluerEchange: $_page = "evaluer-echange";break;
+            
+            case page::EXTERNAL_nextPartLogin: $_page = "http://www.nexpart.com/login.php";$_wholeURL = true;break;
+            case page::EXTERNAL_fleetrite: $_page = "http://www.fleetrite.com";$_wholeURL = true;break;
+            
+            default: $_page = "accueil";break;
         }
-        
-        echo $_folder . $_page . ".php";
+
+        echo $_wholeURL ? $_page : $_folder . $_page . ".php";
     }
 }
 
@@ -174,9 +200,9 @@ class RD_Header{
             case "financement.php":$metaContent = "Pour un camion neuf ou d&#39;occasion ou encore un lot de camions, vous trouverez satisfaction parmi notre gamme de produits de financement concurrentiels.";break;
             case "apres-vente.php":$metaContent = "Profitez d&#39;un service après-vente incomparable sur votre camion lourd avec Réseau Dynamique grâce à un réseau composé de 19 points de service au Québec.";break;
             case "promotions.php":$metaContent = "Profitez de promotions avantageuses à l&#39;achat d&#39;un ou plusieurs camions lourds International chez votre concessionnaire Réseau Dynamique.";break;
-            case "promo-pieces.php":$metaContent = "";break;
+            //case "promo-pieces.php":$metaContent = "";break;
             case "nouvelles.php":$metaContent = "Consultez les nouvelles et découvrez les événements à venir du Réseau Dynamique.";break;
-            case "concours.php":$metaContent = "";break;
+            //case "concours.php":$metaContent = "";break;
             case "remorques-doepker.php":$metaContent = "Découvrez nos modèles haute performance de remorques agricoles, ponts plats, remorques-citernes, remorques pour bois d&#39;oeuvre et remorques à gravier Doepker.";break;
             case "remorques-di-mond.php":$metaContent = "";break;
             case "inventaire-remorques.php":$metaContent = "Réseau Dynamique possède une grande flotte de remorques et ponts plats. Consultez notre inventaire en ligne pour voir nos modèles.";break;
@@ -191,8 +217,13 @@ class RD_Header{
             case "demande-pieces.php":$metaContent = "";break;
             case "demande-bon-travail.php":$metaContent = "";break;
             case "camions-occasion.php":$metaContent = "Trouvez un grand inventaire de camions lourds d&#39;occasion dans les divisions de Réseau Dynamique. Plus de 11 concessionnaires présents partout au Québec.";break;
+            //case "demande-information.php":$title = "";break;
+            //case "planifier-essai-routier.php":$title = "";break;
+            //case "obtenir-prix.php":$title = "";break;
+            //case "demande-financement.php":$title = "";break;
+            //case "evaluer-echange.php":$title = "";break;
             //case "":$metaContent = "";
-            default:;
+            default:"Le Réseau Dynamique est le plus important réseau de concessionnaires International au Québec. Plus de 19 points de service répartis sur le territoire québécois.";break;
         }
         
         echo $metaContent == "" ? "Réseau Dynamique est concessionnaire panquébécois de camions International et détaillant de camions et véhicules routiers Ottawa Kalmar, Isuzu et Yanmar." : $metaContent;
@@ -250,7 +281,12 @@ class RD_Header{
             case "demande-pieces.php":$title = "Demande de pièces | Réseau dynamique";break;
             case "demande-bon-travail.php":$title = "Demande de bon de travail | Réseau dynamique";break;
             case "camions-occasion.php":$title = "Camions Lourds d'Occasion | Réseau Dynamique";break;
-            //case "":$title = "";
+            case "demande-information.php":$title = "Demande d'information | Réseau Dynamique";break;
+            case "planifier-essai-routier.php":$title = "Planifier un essai routier | Réseau Dynamique";break;
+            case "obtenir-prix.php":$title = "Obtenir un prix | Réseau Dynamique";break;
+            case "demande-financement.php":$title = "Demande de financement | Réseau Dynamique";break;
+            case "evaluer-echange.php":$title = "Évaluer mon échange | Réseau Dynamique";break;
+            //case "":$title = "";break;
             default:;
         }
         
