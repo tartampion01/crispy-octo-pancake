@@ -160,6 +160,7 @@ class Succursales{
                 $this->remorquageTelephones[] = "Cellulaire : 819 314-2152";
                 $this->parametreBonTravailNomSuccursale = "Centre%20du%20Camion%20Beaudoin";
                 $this->parametreDemandePiecesNomSuccursale = "Centre%20du%20Camion%20Beaudoin";
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11106.822165113635!2d-72.53330098323865!3d45.89720200737321!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc813b0527f597b%3A0x1be13eca5cb42f3e!2s5360+Rue+Saint+Roch+Sud%2C+Drummondville%2C+QC%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326316710";
                 break;
             case nomSuccursale::Joliette:
                 $this->isSuccursale = 1;
@@ -253,7 +254,9 @@ class Succursales{
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "Camions%20Inter-Anjou";
                 $this->parametreDemandePiecesNomSuccursale = "Camions%20Inter-Anjou";
-                break;case nomSuccursale::Boucherville:
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d11163.844011680309!2d-73.564711!3d45.611426!3m2!1i1024!2i768!4f13.1!2m1!1s8300,+rue+Edison,+Anjou,,+H1J+1S8!6i15!3m1!1sfr";
+                break;
+            case nomSuccursale::Boucherville:
                 $this->isSuccursale = 1;
                 $this->isPointService = 0;
                 $this->nomLong = "Inter-Boucherville";
@@ -297,6 +300,7 @@ class Succursales{
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "Inter-Boucherville";
                 $this->parametreDemandePiecesNomSuccursale = "Inter-Boucherville";
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.664724181342!2d-73.43226168421735!3d45.557069735262516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc90313cf5751b1%3A0x467f2a404e4b0b50!2sLe+R%C3%A9seau+Dynamique+-+Inter-Boucherville!5e0!3m2!1sen!2sca!4v1450368469108";
                 break;
             case nomSuccursale::SaintHyacinthe:
                 $this->isSuccursale = 1;
@@ -343,6 +347,7 @@ class Succursales{
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "Les%20Camions%20Beaudoin";
                 $this->parametreDemandePiecesNomSuccursale = "Les%20Camions%20Beaudoin";
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11158.484498255408!2d-72.972822!3d45.638347!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc84e18d82e8d13%3A0x6052de6f5ffc43d6!2s3255+Rue+Picard%2C+Saint-Hyacinthe%2C+QC+J2S%2C+Canada!5e0!3m2!1sfr!2s!4v1409326228145";
                 break;
             case nomSuccursale::Victoriaville:
                 $this->isSuccursale = 1;
@@ -390,6 +395,7 @@ class Succursales{
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "";
                 $this->parametreDemandePiecesNomSuccursale = "Charest%20International";
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11072.196225602798!2d-71.966232!3d46.070062999999934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb80140b34d77f7%3A0x5ffda7dc99d7f478!2s275+Boulevard+Pierre-Roux+Est%2C+Victoriaville%2C+QC+G6T%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326486269";
                 break;
             case nomSuccursale::TroisRivieres:
                 $this->isSuccursale = 1;
@@ -432,6 +438,7 @@ class Succursales{
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "";
                 $this->parametreDemandePiecesNomSuccursale = "Garage%20Charest%20et%20Fr%C3%A8res";
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d22040.283407664505!2d-72.54211346996249!3d46.32899089635898!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc7c5ff023d1761%3A0xf01c688e04d66dfb!2s2250+Rue+Royale%2C+Trois-Rivi%C3%A8res%2C+QC+G9A+4L5%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326570152";
                 break;
             case nomSuccursale::ThetfordMines:
                 $this->isSuccursale = 1;
@@ -476,6 +483,7 @@ class Succursales{
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "Le%20Centre%20du%20Camion%20(Amiante)";
                 $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20du%20Camion%20(Amiante)";
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d44248.510441026425!2d-71.21615704602989!3d46.120233668091934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb836afcbac657b%3A0xf1391e007d68512!2s4680+Boulevard+Frontenac+Est%2C+Thetford+Mines%2C+QC+G6H+4G5%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326651313";
                 break;
             case nomSuccursale::SaintGeorges:
                 $this->isSuccursale = 1;
@@ -518,6 +526,7 @@ class Succursales{
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "Le%20Centre%20du%20Camion%20(Beauce)";
                 $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20du%20Camion%20(Beauce)";
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d44234.28546235947!2d-70.66052790789594!3d46.13794390165895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb9bfb2d0bb2569%3A0xe16a57df5a27951b!2s8900+25e+Avenue%2C+Saint-Georges%2C+QC+G6A+1M8%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326747414";
                 break;
             case nomSuccursale::RiviereDuLoup:
                 $this->isSuccursale = 1;
@@ -572,6 +581,7 @@ class Succursales{
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "Le%20Centre%20Routier%201994";
                 $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20Routier%201994";
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d42861.92243504292!2d-69.50780766765017!3d47.82273376675654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbe409656ae6dbd%3A0xa4becb558dca0615!2s375+Rue+T%C3%A9miscouata%2C+Rivi%C3%A8re-du-Loup%2C+QC+G5R+2Y9%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326819559";
                 break;
             case nomSuccursale::Quebec:
                 $this->isSuccursale = 1;
@@ -625,6 +635,7 @@ class Succursales{
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "Camions%20International%20%C3%89lite";
                 $this->parametreDemandePiecesNomSuccursale = "Camions%20International%20%C3%89lite";
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d43677.303696618874!2d-71.25924050704916!3d46.82731947110966!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb897c9b2487949%3A0xf512afa9a00fc899!2s265+Rue+%C3%89tienne+Dubreuil%2C+Qu%C3%A9bec%2C+QC+G1M+4A6%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326911563";
                 break;
             case nomSuccursale::Shawinigan:
                 $this->isSuccursale = 1;
