@@ -85,7 +85,7 @@
                         <?PHP if( $truckResults && (mysqli_num_rows($truckResults) > 0)){
                             while($row = mysqli_fetch_assoc($truckResults)) { ?>
                                 <div class="FacetedResultTemplate DefaultResultContainer" >
-                                    <a data-link="product link" href="http://www.reseaudynamique.com/camions/2018-international-4300/n-4705">
+                                    <a data-link="product link" href="<?php echo RD_PageLink::getHref(folder::Root, page::Details) . "?k=" . urlencode($row['id']); ?>">TROCK</a>
                                     <div class="ResultImage">
                                         <img src="" title="" alt="TODO">
                                         <div class="imgPromo" style="display: none;"></div>

@@ -17,7 +17,7 @@
                         </div>	
                         <div class="toggle">
                             <div class="btnToggle">
-                                <a name="hyperlien" onclick="showHide('divToggle');" href="javascript:void(0);">Informations supplémentaires</a>
+                                <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" href="javascript:void(0);">Informations supplémentaires</a>
                             </div>
                             <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="">
                                 <span>

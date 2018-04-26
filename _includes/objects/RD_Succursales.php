@@ -24,9 +24,9 @@ interface nomSuccursale
 }
 
 class Contact{
-    private $nom = '';
-    private $email = '';
-    private $titre = '';
+    private $nom = "";
+    private $email = "";
+    private $titre = "";
     
     private $contacts = array();
 
@@ -671,7 +671,7 @@ class Succursales{
                 $this->servicesOfferts[] = "Service routier"; 
                 $this->servicesOfferts[] = "Service de carrosserie complet";
                 $this->servicesOfferts[] = "Réparation boite de camion";
-                $this->serviceRoutierTitre = "Service Routier";
+                $this->serviceRoutierTitre = "";
                 $this->serviceRoutierTelephone[] = "";
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
@@ -710,6 +710,9 @@ class Succursales{
 //                $this->remorquageTelephones[] = "";
 //                $this->parametreBonTravailNomSuccursale = "";
 //                $this->parametreDemandePiecesNomSuccursale = "";
+//                $this->parametreBonTravailNomSuccursale = "";
+//                $this->parametreDemandePiecesNomSuccursale = "";
+//                $this->GoogleMapSRC = "";
                 break;
             
             default:;

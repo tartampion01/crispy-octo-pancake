@@ -1,5 +1,5 @@
 <?php
-class Camions{
+class RD_Camions{
      // Nom Champ Objet // Nom dans DB en commentaire
     public $id = 0; // id
     public $marque = ''; // marque
@@ -24,7 +24,7 @@ class Camions{
         }
         elseif($serial != ''){
             $serial = mysqli_real_escape_string($conn, $serial);
-            $sql = "SELECT * FROM inventory WHERE serial='$hash_key'";
+            $sql = "SELECT * FROM inventory WHERE serial='$serial'";
         }       
         else
             return false;

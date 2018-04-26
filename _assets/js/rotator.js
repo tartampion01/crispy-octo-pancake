@@ -1,4 +1,4 @@
-function showHide(id)
+function toggleInformationSupplementaire(id)
 {
     var x = document.getElementById(id);
     if (x.style.display === "none") {
@@ -6,6 +6,15 @@ function showHide(id)
     } else {
         x.style.display = "none";
     }
+}
+
+function alternateDivDetailsPage(idToShow, idToHide)
+{
+    var show = document.getElementById(idToShow);
+    var hide = document.getElementById(idToHide);
+
+    show.style.display = "inline";
+    hide.style.display = "none";
 }
 
 $(document).ready(function(){
