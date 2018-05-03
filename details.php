@@ -1,14 +1,19 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header.php'); ?>
 <?php
-    $camion = new RD_Camions();
-    $camion->load(urldecode($_GET["k"]));
+    $camion = new RD_Camion();
+    $camion->load_new(urldecode($_GET["k"]));
 ?>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
         <div id="" class="content produit">
             <div id="" class="shrink">
                 <div id="" class="titrepage">
-                    <h1 id=""><span>International</span> - <span>4300</span><span>4 x 2</span></h1>
+                    <h1 id="">
+                        <!-- Titre camion/ remorque = Marque modele & empattement -->
+                        <span><?php echo $camion->marque;?></span> - 
+                        <span><?php echo $camion->modele;?></span>
+                        &nbsp;<span><?php echo $camion->wb;?></span>
+                    </h1>
                 </div>
                 <div id="" class="contenu">
                     <div id="" class="left">
