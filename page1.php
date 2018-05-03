@@ -195,6 +195,13 @@
             </div>           
         </div>
     </div>
+        exemples REST
+        <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>
+        <a href="_includes/objects/read.php?field=Model&value=4300">4300</a></br>
+        <a href="_includes/objects/read.php?field=transtype&value=AISIN A460">AISIN A460</a></br>
+        <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>
+        <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>
+        <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>
 ID:<input type="text" id="tbShowTruck" name="tbShowTruck" value="" text="" />
 <input type="submit" id="btnShowTruck" name="btnShowTruck" text="Afficher">
     </form>
