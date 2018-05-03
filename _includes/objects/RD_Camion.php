@@ -205,7 +205,7 @@ class RD_Camion{
     
     function readTest($FieldToCompare, $value){
         // select all query
-        $query = "SELECT * FROM inventory WHERE $FieldToCompare = $value";
+        $query = "SELECT * FROM inventory WHERE $FieldToCompare = '$value'";
  
         // prepare query statement
         $stmt = $this->conn->prepare($query);

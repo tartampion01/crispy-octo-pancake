@@ -16,7 +16,8 @@ $db = $database->getConnection();
 $camion = new RD_Camion($db);
  
 // query Camions
-$stmt = $camion->readTest('Model','4300');
+//$stmt = $camion->readTest('Model','4300');
+$stmt = $camion->readTest($_GET['field'],$_GET['value']);
 $num = $stmt->rowCount();
  
 // check if more than 0 record found
