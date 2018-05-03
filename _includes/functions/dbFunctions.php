@@ -13,7 +13,7 @@
  */
 function getNewTruck($id, $fieldCriteria='', $value='')
 {
-    global $conn;
+    global $conn; 
     $sql = $fieldCriteria == "" ? "SELECT * FROM inventory WHERE id=".$id . " and DisplayOnWebSite=1" : "SELECT * FROM inventory WHERE $fieldCriteria='$value' and DisplayOnWebSite=1";
 
     return mysqli_query($conn, $sql);
