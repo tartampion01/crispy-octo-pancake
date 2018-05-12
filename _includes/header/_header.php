@@ -15,6 +15,7 @@
     <script type='text/javascript' src='../../_assets/js/jquery-3.2.1.js'></script>
     <script type='text/javascript' src='../../_assets/js/ajax.js'></script>
     <script type='text/javascript' src='../../_assets/js/rotator.js'></script>
+    <script type='text/javascript' src='../../_assets/js/utilities.js'></script>
     
     <script type="text/javascript">var ShortCultureID = 'fr'; var LongCultureID = 'fr-CA';</script>
     <script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','../www.google-analytics.com/analytics.js','ga');ga('create', 'UA-3192388-1');ga('require','displayfeatures');ga('send', 'pageview');</script>
