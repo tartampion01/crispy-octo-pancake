@@ -148,7 +148,7 @@
                     <ul class="GpcMenu FacetedNavigation">
                         <!-- MARQUE -->
                         <li class="GpcMenuCategory expanded">
-                            <a class="GpcMenuCategoryTitle">Marque</a>
+                            <a class="GpcMenuCategoryTitle" tabindex="">Marque</a>
                             <ul style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('marque'); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
@@ -159,7 +159,7 @@
                         </li>
                         <!-- MODÈLE -->
                         <li class="GpcMenuCategory expanded">
-                            <a class="GpcMenuCategoryTitle">Modèle</a>
+                            <a class="GpcMenuCategoryTitle" tabindex="">Modèle</a>
                             <ul style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('Model'); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
@@ -170,7 +170,7 @@
                         </li>
                         <!-- TRANSMISSION -->
                         <li class="GpcMenuCategory expanded">
-                            <a class="GpcMenuCategoryTitle">Transmission</a>
+                            <a class="GpcMenuCategoryTitle" tabindex="">Transmission</a>
                             <ul style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('transtype'); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
@@ -181,7 +181,7 @@
                         </li>
                         <!-- MOTEUR -->
                         <li class="GpcMenuCategory expanded">
-                            <a class="GpcMenuCategoryTitle">Moteur</a>
+                            <a class="GpcMenuCategoryTitle" tabindex="">Moteur</a>
                             <ul style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('engine'); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
