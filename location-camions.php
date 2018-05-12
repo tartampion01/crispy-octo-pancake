@@ -91,7 +91,8 @@
             </div>
         </div>
     </div>
-    </form>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/footer/_footer.php'); ?>
+    </form>
+    
 </body>
 </html>

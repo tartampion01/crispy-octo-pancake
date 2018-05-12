@@ -271,8 +271,9 @@
                 </div>
             </div>
         </div>
+        <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/footer/_footer.php'); ?>
     </form>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/footer/_footer.php'); ?>
+    
     <!--<div id="stcpDiv" style="position: absolute; top: -1999px; left: -1988px;">ShareThis Copy and Paste</div>
     <div id="stwrapper" class="stwrapper stwrapper4x" style="display: block;">
         <iframe allowtransparency="true" id="stLframe" class="stLframe" name="stLframe" frameborder="0" scrolling="no" src="http://edge.sharethis.com/share4x/index.21388f3e693a1d91adb0b6241698348f.html"></iframe>

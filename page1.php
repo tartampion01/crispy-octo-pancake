@@ -147,7 +147,7 @@
                 <div class="GpcMenuWrapper">
                     <ul class="GpcMenu FacetedNavigation">
                         <!-- MARQUE -->
-                        <li class="GpcMenuCategory">
+                        <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle">Marque</a>
                             <ul style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('marque'); ?>
@@ -158,7 +158,7 @@
                             </ul>
                         </li>
                         <!-- MODÈLE -->
-                        <li class="GpcMenuCategory">
+                        <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle">Modèle</a>
                             <ul style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('Model'); ?>
@@ -169,7 +169,7 @@
                             </ul>
                         </li>
                         <!-- TRANSMISSION -->
-                        <li class="GpcMenuCategory">
+                        <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle">Transmission</a>
                             <ul style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('transtype'); ?>
@@ -180,7 +180,7 @@
                             </ul>
                         </li>
                         <!-- MOTEUR -->
-                        <li class="GpcMenuCategory">
+                        <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle">Moteur</a>
                             <ul style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('engine'); ?>

@@ -206,7 +206,8 @@ $(window).resize(function () {
 });
     //]]>  </script><img alt="" src="#" style="position:absolute;left:-10px;top:-10px;width:1px;height:1px;" />
 
-</form>
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/footer/_footer.php'); ?>
+</form>
+
 </body>
 </html>
