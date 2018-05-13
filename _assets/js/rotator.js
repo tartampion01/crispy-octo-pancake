@@ -85,5 +85,8 @@ $(document).ready(function(){
         $(".NmsZone1478708744012").css('visibility','visible');
         $(".NmsZone1478708826804").css('visibility','visible');
         $(".NmsZone1513981515062").css('visibility','visible');
-    $(".N8a5a20f012a84d04b74ed197d1e7feee").jshowoff({hoverPause:false, controls:false, changeSpeed:300, links:true, effect:'fade', autoPlay:true, speed:5000,controlText:{play:'Jouer',pause:'Pause',previous:'PrÃ©cÃ©dent',next:'Suivant'}, controlZone:{ PlayPauseItemID:'', PreviousItemID:'N8eb03005ee7e49a8b0764fc6289410aa',NextItemID:'N20656c1a63f34571ba33191048e3879a' }  });});
- 
+        
+    if($(".jshowoff").length > 0) {
+        $(".jshowoff").jshowoff({hoverPause:false, controls:false, changeSpeed:300, links:true, effect:'fade', autoPlay:true, speed:5000,controlText:{play:'Jouer',pause:'Pause',previous:'PrÃ©cÃ©dent',next:'Suivant'}, controlZone:{ PlayPauseItemID:'', PreviousItemID:'previous-slide',NextItemID:'next-slide' }  });
+    }
+ });

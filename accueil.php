@@ -1,33 +1,31 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header.php'); ?>
+<script type='text/javascript' src='../../_assets/js/jquery.jshowoff.js'></script>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap" data-staticClassNames="wrap">
         <div class="banner" data-staticClassNames="banner">
             <div class="shrink2 clear">
                 <div class="rotation">
-                    <div class="leftArrow"></div>
-                    <div class="rightArrow"></div>
+                    <div class="leftArrow" itemid="previous-slide"></div>
+                    <div class="rightArrow" itemid="next-slide"></div>
                         <div class="">
                             <div class="jshowoff jshowoff-1">
-                                <div class="N8a5a20f012a84d04b74ed197d1e7feee" data-staticclassnames="N8a5a20f012a84d04b74ed197d1e7feee" itemid="N8a5a20f012a84d04b74ed197d1e7feee">
+                                <div>
                                     <img name="image" title="" src="_assets/images/homeBanner/retour-lonestar.png" alt="Retour Lonestar">
                                 </div>
-                                <div class="NmsZone1478708744012 NmsZone1478708744012Css" data-staticclassnames="NmsZone1478708744012 NmsZone1478708744012Css" style="visibility: visible;" itemid="NmsZone1478708744012">
+                                <div>
                                     <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="/camions-neufs/isuzu">
                                         <img name="image" title="" src="_assets/images/homeBanner/isuzu.jpg" alt="isuzu">
                                     </a>
                                 </div>
-                                <div class="NmsZone1478708826804 NmsZone1478708826804Css" data-staticclassnames="NmsZone1478708826804 NmsZone1478708826804Css" style="visibility: visible;" itemid="NmsZone1478708826804">
+                                <div>
                                     <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="/remorques-neuves">
                                         <img name="image" title="" src="_assets/images/homeBanner/doepker.jpg" alt="doepker">
                                     </a>
                                 </div>
-                                <div class="NmsZone1513981515062 NmsZone1513981515062Css" data-staticclassnames="NmsZone1513981515062 NmsZone1513981515062Css" style="visibility: visible;" itemid="NmsZone1513981515062"></div>
-                                <p class="jshowoff-slidelinks jshowoff-1-slidelinks">
-                                    <a class="jshowoff-slidelink-0 jshowoff-1-slidelink-0 jshowoff-1-active jshowoff-active" href="#null">1</a>
-                                    <a class="jshowoff-slidelink-1 jshowoff-1-slidelink-1" href="#null">2</a>
-                                    <a class="jshowoff-slidelink-1 jshowoff-1-slidelink-1" href="#null">3</a>
-                                </p>
+                                <div>
+                                    <img name="image" title="" src="_assets/images/menu_images/promo-site-web.jpg" alt="promo site web" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -38,7 +36,7 @@
                 <div class="vehiculeDisponible" data-staticClassNames="vehiculeDisponible">
                     <h2 id="">V&#233;hicules disponibles</h2>
                 </div>
-                    <img name="image" title="" src="_assets/images/menu_images/promo-site-web.jpg" alt="promo site web" />
+                    <!--<img name="image" title="" src="_assets/images/menu_images/promo-site-web.jpg" alt="promo site web" />-->
                 <div class="Nad579b8ffd42482c906005c978ef9afa_N57722c9eed144b248e2f78f30b1246ed cat" data-staticClassNames="Nad579b8ffd42482c906005c978ef9afa_N57722c9eed144b248e2f78f30b1246ed cat">
                     <span data-staticClassNames="">
                     <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="camions-neufs/camions-lourds-neufs-international.html" target="_self">

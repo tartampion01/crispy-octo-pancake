@@ -687,7 +687,7 @@ a {
       background: #acacac;
     }
 
-    .jshowoff-slidelinks a.jshowoff-1-active {
+    .jshowoff-slidelinks a.jshowoff-active {
       background: #fff;
     }
 
@@ -776,7 +776,7 @@ margin-top: 36px;
 
 .content {
   padding-bottom: 7em;
-  padding-top: 2.2em;
+  /*padding-top: 2.2em;*/
 }
 
   .content h1 {
@@ -1219,6 +1219,7 @@ margin-top: 36px;
   text-align: center;
   background: url(../../../_assets/images/menu_images/background-carreaux.jpg) bottom repeat-x;
   padding-bottom: 5px;
+  padding-top: 0;
 }
 
 .vehiculeDisponible {
@@ -1288,6 +1289,7 @@ margin-top: 36px;
     background: url(../../../_assets/images/menu_images/cat-background-orange.png) left bottom no-repeat;
     color: #fff;
     text-transform: uppercase;
+    box-sizing: content-box;
   }
 
     .cat .orange .titre {
@@ -1309,6 +1311,7 @@ margin-top: 36px;
       bottom: 0px;
       font: 400 1em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
       background: url(../../../_assets/images/menu_images/cat-sprite.png) left top no-repeat;
+      box-sizing: content-box;
     }
 
   .cat:hover .orange .voir {
@@ -2075,7 +2078,8 @@ UL.store-list {
 }
 
 .push {
-  height: 0px;
+  /*height: 0px;*/
+  height: 74px;
   clear: both;
   position: relative;
 }
@@ -2337,7 +2341,7 @@ UL.store-list {
 
 .GpcPagedResultCount {
   float: left;
-  width: 30%;
+  /*width: 30%;*/ /* JP - No need I think */
   font-size: 0.857em;
   line-height: 2em;
 }
