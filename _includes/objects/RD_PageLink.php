@@ -64,6 +64,7 @@ interface page
     const NousJoindreLeCentreRoutier1994 = 410;
     const NousJoindreCamionsInternationalElite = 411;
     const NousJoindreGarageRobert = 412;
+    const NousJoindreCamionsIsuzu = 413;    
     
     const PromotionsEtNouvellesPromotions = 500;
     const PromotionsEtNouvellesNouvelles = 501;
@@ -136,6 +137,7 @@ class RD_PageLink
             case page::NousJoindreLeCentreRoutier1994:$_page = "centre-routier-1994";break;
             case page::NousJoindreCamionsInternationalElite:$_page = "camions-international-elite";break;
             case page::NousJoindreGarageRobert:$_page = "garage-robert";break;
+            case page::NousJoindreCamionsIsuzu:$_page = "camions-isuzu";break;
             case page::Apropos:$_page = "a-propos";break;
             case page::PromotionsEtNouvellesPromotions:$_page = "promotions";break;
             case page::PromotionsEtNouvellesNouvelles:$_page = "nouvelles";break;
@@ -196,6 +198,7 @@ class RD_Header{
             case "centre-routier-1994.php":$metaContent = "Le Centre Routier 1994 à Rivière-du-Loup offre un vaste choix de camions International en plus d&#39;offrir l&#39;entretien et la réparation de votre camion lourd.";break;
             case "camions-international-elite.php":$metaContent = "Camions International Élite à Québec offre un vaste choix de camions International en plus d&#39;offrir l&#39;entretien et la réparation de votre camion lourd.";break;
             case "garage-robert.php":$metaContent = "Rendez-vous à la succursale Les Camions Beaudoin pour un vaste choix de camions International et l&#39;entretien ou la réparation de votre camion lourd.";break;
+            case "camions-isuzu.php":$metaContent = "";break;
             case "confirmation-abonnement.php":$metaContent = "Merci de vous être abonné à NextPart. Nous espérons que votre expérience avec Réseau Dynamique en soit bonifiée!";break;
             case "abonnement-nextpart.php":$metaContent="Inscrivez-vous au service NextPart.";break;
             case "service-routier.php":$metaContent = "Économisez temps et coûts de remorquage grâce au service routier pour camions lourds de Réseau Dynamique. Service disponible partout au Québec.";break;
@@ -260,6 +263,7 @@ class RD_Header{
             case "centre-routier-1994.php":$title = "Camions International Rivière-du-Loup | Centre Routier 1994";break;
             case "camions-international-elite.php":$title ="Camions International Québec | Camions International Élite";break; 
             case "garage-robert.php":$title = "Garage Robert Shawinigan | Réseau Dynamique";break;
+            case "camions-isuzu.php":$title = "Camions Isuzu";break;
             case "confirmation-abonnement.php":$title = "";break;
             case "abonnement-nextpart.php":$title = "Inscription à NextPart | Réseau Dynamique";break;
             case "service-routier.php":$title = "Service Routier Mécanique Camion Lourd | Réseau Dynamique";break;

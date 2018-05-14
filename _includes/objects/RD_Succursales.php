@@ -21,6 +21,7 @@ interface nomSuccursale
     const RiviereAuRenard = 18;
     const SeptIles  = 19;
     const SainteMarieDeBeauce = 20;
+    const Isuzu = 21;
 }
 
 class Contact{
@@ -679,6 +680,41 @@ class Succursales{
                 $this->parametreBonTravailNomSuccursale = "Garage Robert";
                 $this->parametreDemandePiecesNomSuccursale = "Garage Robert";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2741.5253671513356!2d-72.71138334836269!3d46.596619579028236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc64df0b295b3d9%3A0xf26322fa98abd028!2sGarage+Robert+Inc!5e0!3m2!1sfr!2sca!4v1487884811377";
+                break;
+            case nomSuccursale::Isuzu:
+                $this->isSuccursale = 1;
+                $this->isPointService = 0;
+                $this->nomLong = "Camions Isuzu Montréal Ouest";
+                $this->adresse = "888 Montée de Liesse, Saint-Laurent";
+                $this->ville = "Saint-Laurent";
+                $this->province = "Québec";
+                $this->codePostal = "H4T 1N8";
+                $this->telephones[] = "Téléphone: (514) 737-5845";
+                $this->telephones[] = "";
+                $this->telephones[] = "";
+                 $this->heureOuvertureLundi = "7:00 - 12:00";
+                $this->heureOuvertureMardi = "7:00 - 12:00";
+                $this->heureOuvertureMercredi = "7:00 - 12:00";
+                $this->heureOuvertureJeudi = "7:00 - 12:00";
+                $this->heureOuvertureVendredi = "7:00 - 17:00";
+                $this->heureOuvertureSamedi = "Fermé";
+                $this->heureOuvertureDimanche = "Fermé";
+                $this->contacts = new Contact();
+                $this->contacts->addItem(array("", "",""));
+                $this->imageBatisse = "../../_assets/images/batisse/batisse-garage-robert.jpg";
+                $this->imageBatisseALT= "";
+                $this->servicesOfferts[] = "";
+                $this->serviceRoutierTitre = "Service Routier";
+                $this->serviceRoutierTelephone[] = "";
+                $this->remorquageTitre = "";
+                $this->remorquageInfo[] = "";
+                $this->remorquageTelephones[] = "";
+                $this->parametreBonTravailNomSuccursale = "";
+                $this->parametreDemandePiecesNomSuccursale = "";
+                $this->parametreBonTravailNomSuccursale = "";
+                $this->parametreDemandePiecesNomSuccursale = "";
+                $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2741.5253671513356!2d-72.71138334836269!3d46.596619579028236!2m3!"
+                        . "1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc64df0b295b3d9%3A0xf26322fa98abd028!2sGarage+Robert+Inc!5e0!3m2!1sfr!2sca!4v1487884811377";
                 break;
 //            case nomSuccursale::Joliette:
 //                $this->isSuccursale = 1;

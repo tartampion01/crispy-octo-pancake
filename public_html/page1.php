@@ -6,7 +6,7 @@
             <div id="" class="titrePage">
                 <h1 id=""><span>Inventaire complet</span></h1>
             </div>
-            
+<?php echo $_SERVER['DOCUMENT_ROOT']; ?>
             <?php
                 try{
                     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
