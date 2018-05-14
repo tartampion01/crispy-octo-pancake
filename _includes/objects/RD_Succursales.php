@@ -64,7 +64,7 @@ class Contact{
     }    
 }
 
-class Succursales{
+class RD_Succursales{
     public $id = 0;
     public $nom = "";
     public $nomLong = "";

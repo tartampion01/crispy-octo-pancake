@@ -1,4 +1,4 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header.php'); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body">
     <form role="form" method="POST" action="/page1.php">
     <div class="content" style="height: 80%">
@@ -6,7 +6,6 @@
             <div id="" class="titrePage">
                 <h1 id=""><span>Inventaire complet</span></h1>
             </div>
-<?php echo $_SERVER['DOCUMENT_ROOT']; ?>
             <?php
                 try{
                     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -205,6 +204,6 @@
 ID:<input type="text" id="tbShowTruck" name="tbShowTruck" value="" text="" />
 <input type="submit" id="btnShowTruck" name="btnShowTruck" text="Afficher">
     </form>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/footer/_footer.php'); ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </body>
 </html>

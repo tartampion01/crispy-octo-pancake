@@ -1,4 +1,4 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header.php'); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <script type='text/javascript' src='../../_assets/js/jquery.jshowoff.js'></script>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
@@ -204,7 +204,7 @@ $(window).resize(function () {
 });
     //]]>  </script><img alt="" src="#" style="position:absolute;left:-10px;top:-10px;width:1px;height:1px;" />
 
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/footer/_footer.php'); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </form>
 
 </body>

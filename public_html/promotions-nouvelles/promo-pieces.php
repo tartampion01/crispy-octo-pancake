@@ -1,4 +1,4 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header.php'); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
@@ -101,7 +101,7 @@
             </div>
         </div>
     </div>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/footer/_footer.php'); ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </form>
     
 </body>

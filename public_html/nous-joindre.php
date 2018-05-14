@@ -1,4 +1,4 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header.php'); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
@@ -1034,7 +1034,7 @@ ga('create', 'UA-55593676-1', 'auto', {'name': 'nms'});
 ga('nms.send', 'pageview');$("img[src$='.png']").ready(function() {  if ($(this).height() > 0) { $(this).ifixpng(); }});$(document.body).bind('mouseover', function() { setTimeout(function() { $("img[src$='.png']").ifixpng(); }, 10); });$(document).HighlightSelector({QueryHashKeyName : 'qa',HighlightClass : 'qaHighlight'});NmsWeightUnitEnum = {"None":0,"G":1,"Kg":2,"Lb":4,"Oz":8,"Ton":16}; NmsLengthUnitEnum = {"None":0,"Cm":1,"M":2,"Km":4,"Ft":8,"In":16,"Yd":32};$(document).ready(function(){});//]]>
 </script>
 
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/footer/_footer.php'); ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
     </form>
 </body>
 </html>

@@ -3,7 +3,7 @@
     <div id="menuShrinkClear" class="shrink clear">
         <div id="menuCss1" class="menuCss1">
             <ul id="ulNiveau1" class="MenuBar">
-                <li class="item5 first rank0 parent" expansionmode="ClickExpansion">
+                <li class="item1 first rank1 parent" expansionmode="ClickExpansion">
                     <a href="<?php RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet) ?>" class=" first rank0 MenuBarItemSubmenu" target="_self">Camions neufs</a>
                     <div class="itemChildDiv5">
                         <ul class="itemChild5">
@@ -19,13 +19,13 @@
                             <li class="item36 last rank3" expansionmode="HoverExpansion">
                                 <a href="<?php RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsIsuzu) ?>" class=" last rank3" target="_self">Camions Isuzu</a>
                             </li>
-                        </ul>
+                        </ul>f
                     </div>
                 </li>
-                <li class="item62 rank1" expansionmode="HoverExpansion">
+                <li class="item2 rank2" expansionmode="HoverExpansion">
                     <a href="<?php RD_PageLink::getHref(folder::Root,page::CamionsOccasion) ?>" class="rank1" target="_self">Camions d'occasion</a>
                 </li>
-                <li class="item63 rank2 parent" expansionmode="ClickExpansion">
+                <li class="item3 rank3 parent" expansionmode="ClickExpansion">
                     <a href="<?php RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet) ?>" class="rank2 MenuBarItemSubmenu" target="_self">Remorques neuves</a>
                     <div class="itemChildDiv63">
                         <ul class="itemChild63">
@@ -41,7 +41,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="item9 rank3 parent" expansionmode="ClickExpansion">
+                <li class="item4 rank3 parent" expansionmode="ClickExpansion">
                     <a href="<?php RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices) ?>" class="rank3 MenuBarItemSubmenu" target="_self">Véhicules utilitaires</a>
                     <div class="itemChildDiv9">
                         <ul class="itemChild9">
@@ -60,7 +60,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="item10 rank4" expansionmode="HoverExpansion">
+                <li class="item5 rank4" expansionmode="HoverExpansion">
                     <a href="<?php RD_PageLink::getHref(folder::Root,page::LocationsDeCamions) ?>" class="rank4" target="_self">Location de camions</a>
                 </li>
                 <li class="item11 last rank5 parent" expansionmode="ClickExpansion">
@@ -87,6 +87,9 @@
                             </li>
                         </ul>
                     </div>
+                </li>
+                <li class="item6 rank6" expansionmode="HoverExpansion">
+                    <a href="<?php RD_PageLink::getHref(folder::Root,page::Carrieres) ?>" class="rank6" target="_self">Carrières</a>
                 </li>
             </ul>
         </div>

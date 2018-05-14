@@ -31,6 +31,8 @@ interface page
     const EvaluerEchange = 14;
     const NousJoindre = 15;
     const Details = 16;
+    const Carrieres = 17;
+    const Postuler = 18;
     
     const CamionsInventaireComplet = 100;
     const CamionsInternational = 101;
@@ -157,6 +159,8 @@ class RD_PageLink
             case page::DemandeFinancement: $_page = "demande-financement";break;
             case page::EvaluerEchange: $_page = "evaluer-echange";break;
             case page::Details: $_page = "details";break;
+            case page::Carrieres: $_page = "carrieres";break;
+            case page::Postuler: $_page = "postuler";break;            
             
             case page::EXTERNAL_nextPartLogin: $_page = "http://www.nexpart.com/login.php";$_wholeURL = true;break;
             case page::EXTERNAL_fleetrite: $_page = "http://www.fleetrite.com";$_wholeURL = true;break;

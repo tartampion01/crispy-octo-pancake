@@ -1,5 +1,5 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header.php'); ?>
-<?php $suc = new Succursales(); $suc->load(nomSuccursale::TroisRivieres); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
+<?php $suc = new RD_Succursales(); $suc->load(nomSuccursale::TroisRivieres); ?>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
@@ -109,7 +109,7 @@
                                 <?php echo $telephone; ?></br>
                             <?php endforeach;?>
                         </p>
-                        <div class="btnBon" style="display:block;">
+                        <div class="btnBon" style="display:none;">
                             <h2><a class="buttonBon" name="hyperlien" href="<?php RD_PageLink::getHref(folder::Root,page::BonDeTravail); echo "?succursale=" . $suc->getSuccursaleBonTravail(); ?>" target="_self">Ouvrez un bon de travail</a></h2>
                         </div>
                         <div class="btnPieces" style="display:block;">
@@ -120,7 +120,7 @@
             </div>
         </div>
     </div>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/footer/_footer.php'); ?>    
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>    
     </form>
     
 </body>

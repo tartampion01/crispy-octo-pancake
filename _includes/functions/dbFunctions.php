@@ -5,6 +5,24 @@
 //require_once('tcpdf.php');
 //require_once('tcpdf_parser.php');
 
+function getSuccursales($arraySuccursale)
+{
+    $succ = new RD_Succursales();
+    $return_succ = array();
+    
+    foreach($arraySuccursale as $IdSuc){
+        //echo "---->>>>>" . $IdSuc . "<<<<<<<<<<<<<<";
+        $return_succ = $succ->load($IdSuc);
+    }
+    
+    return $return_succ;
+}
+
+function getExigences($emploi_id)
+{
+    
+}
+
 /**
  * @param int $id <p>inventory.id</p>
  * @param string $fieldCriteria <p>inventory.[fieldCriteria]</p>

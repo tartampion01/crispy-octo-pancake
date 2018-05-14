@@ -1,5 +1,5 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header.php'); ?>
-<?php $suc = new Succursales(); $suc->load(nomSuccursale::Isuzu); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
+<?php $suc = new RD_Succursales(); $suc->load(nomSuccursale::Isuzu); ?>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
@@ -131,6 +131,6 @@
         </div>
     </div>
     </form>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/footer/_footer.php'); ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </body>
 </html>

@@ -2,10 +2,9 @@
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
 <?PHP
     $NOMPAGE = basename($_SERVER['PHP_SELF']);
-    
     // REQUIRED BY ALL PAGES
     // COMMON INCLUDES --> DB / FUNCTIONS / OBJECTS
-    require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/commonIncludes.php');
+    require_once(dirname(__DIR__).'/commonIncludes.php');
 ?>
 <head>
     <title>
@@ -34,9 +33,9 @@
 </head>
 <?PHP
     // TOP MENU
-    require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header_top_menu.php');
+    require_once(dirname(__DIR__).'/header/_header_top_menu.php');
     // SUB HEADER LOGO + RECHERCHE
-    require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header_logo_search.php');
+    require_once(dirname(__DIR__).'/header/_header_logo_search.php');
     // SUB Header MENU PRINCIPAL
-    require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/header/_header_main_menu.php');
+    require_once(dirname(__DIR__).'/header/_header_main_menu.php');
 ?>
