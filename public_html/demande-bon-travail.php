@@ -17,7 +17,7 @@
                                     else
                                     {echo $_REQUEST["succursale"];
                                         if(isset($_REQUEST["succursale"]))
-                                            echo $G_RD_Utils::GetDropDownSuccursalesBonTravail($_REQUEST["succursale"]);
+                                            echo RD_Utils::GetDropDownSuccursalesBonTravail($_REQUEST["succursale"]);
                                     }
                                 ?>
                                 <input name="" type="text" placeholder="Nom de la compagnie *">

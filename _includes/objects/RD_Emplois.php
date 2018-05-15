@@ -104,13 +104,19 @@ class RD_Emploi{
     }
     
     /**
+     * @param l'id de la succursale (interface nomSuccursale de RD_Succursales.php)
+     * 0 = toutes les succursales
      * @return array Retourne des objets emploi avec Titre et lienEncode
      */
-    public static function getLinkEmploisCourants()
+    public static function getLinkEmploisCourants($succ_id = 0)
     {
         global $conn;
         
-        $sql = "SELECT * FROM offresEmplois WHERE displayOnWeb = 1 AND filled = 0";
+        if( $succ_id == 0 )
+            $sql = "SELECT * FROM offresEmplois WHERE displayOnWeb=1 AND filled=0";
+        else
+            $sql = "SELECT * FROM offresEmplois WHERE succursales LIKE '%$succ_id%' AND displayonWeb=1 AND filled=0";
+        
         $results = mysqli_query($conn, $sql);
         
         $emplois = array();
@@ -130,4 +136,5 @@ class RD_Emploi{
         
         return $emplois;
     }
+    
 }

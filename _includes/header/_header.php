@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
 <?PHP
-    $NOMPAGE = basename($_SERVER['PHP_SELF']);
+    $NOMPAGE = htmlspecialchars(basename($_SERVER['PHP_SELF']));
     // REQUIRED BY ALL PAGES
     // COMMON INCLUDES --> DB / FUNCTIONS / OBJECTS
     require_once(dirname(__DIR__).'/commonIncludes.php');

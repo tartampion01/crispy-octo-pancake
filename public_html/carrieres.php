@@ -10,7 +10,33 @@
                     <div class="contenu2">
                         <?php 
                             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                                
+                                if( isset($_POST['ddlSuccursales']))
+                                {
+                                    ?>
+                                    <h1>Emplois disponibles</h1>                                    
+                                    <?php
+                                    // On récupère l'index sélectionné
+                                    $succ_id = $_POST['ddlSuccursales'];
+                                    // On remet le dropdown a l'index sélectionné
+                                    echo RD_Utils::GetDropDownSuccursalesCarrieres($succ_id[0]);
+                                    echo "</br><hr>";
+                                    
+                                    // On va chercher les emplois pour cette succursale
+                                    $emplois = RD_Emploi::getLinkEmploisCourants($succ_id[0]);
+                                    
+                                    if( count($emplois) > 0){
+                                        foreach($emplois as $emploi){?>
+                                            <label>Titre :</label>
+                                            <a name="hyperlien" href="<?php RD_PageLink::getHref(folder::Root,page::Carrieres); echo '?emp=' . $emploi->lienEncode; ?>">
+                                                <?php echo $emploi->titre;?>
+                                            </a></br>
+                                    <?php }
+                                    }
+                                    else {?>
+                                            <label>Il n'y a pas d'emplois disponibles à cette succursale présentement</label>
+                                    <?php
+                                    }
+                                }
                             }
                             else
                             {
@@ -59,13 +85,16 @@
                                 }
                                 else {
                                     // Afficher tous les emplois courants
-                                    ?><h1>Emplois disponibles</h1><?php
-                                    foreach(RD_Emploi::getLinkEmploisCourants() as $emploi){?>
-                                        <p>Titre : 
+                                    ?><h1>Emplois disponibles</h1>
+                                    <?php
+                                    echo RD_Utils::GetDropDownSuccursalesCarrieres(0);
+                                    echo "</br><hr>";
+                                    foreach(RD_Emploi::getLinkEmploisCourants(0) as $emploi){?>
+                                        <label>
                                             <a name="hyperlien" href="<?php RD_PageLink::getHref(folder::Root,page::Carrieres); echo '?emp=' . $emploi->lienEncode; ?>">
                                                 <?php echo $emploi->titre;?>
-                                            </a>
-                                        </p>
+                                            </a></label>
+                                        </br>
                                 <?php }}} ?>
                     </div>
                 </div>

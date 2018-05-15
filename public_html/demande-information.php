@@ -12,20 +12,98 @@
                 <div class="contenu">
                     <div class="contenu2">
                         <div id="" class="contenu2">
-                            <div id="" class="formulaire">
+                            <?php
+                                $divVisibility = "visible";
+                                
+                                $prenomErr = $nomErr = $villeErr = $emailErr = $telErr = "";
+                                $prenom = $nom = $ville = $email = $tel = $comm = $VehiculeId = "";
+                                $hasError = true;
+                                
+                                if ($_SERVER["REQUEST_METHOD"] === "POST") {
+                                    
+                                    if (empty($_POST["tbPrenom"]))
+                                        $prenomErr = "Champ obligatoire";
+                                    else{
+                                        $prenom = RD_Utils::test_input($_POST["tbPrenom"]);
+                                        $hasError = false;}
+
+                                    if (empty($_POST["tbNom"]))
+                                        $nameErr = "Champ obligatoire";
+                                    else{
+                                        $nom = RD_Utils::test_input($_POST["tbNom"]);
+                                        $hasError = false;}
+                                    
+                                    if (empty($_POST["tbVille"]))
+                                        $villeErr = "Champ obligatoire";
+                                    else{
+                                        $ville = RD_Utils::test_input($_POST["tbVille"]);
+                                        $hasError = false;}
+
+                                    if (empty($_POST["tbCourriel"]))
+                                        $emailErr = "Champ obligatoire";
+                                    else {
+                                        $email = RD_Utils::test_input($_POST["tbCourriel"]);
+                                        if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+                                            $emailErr = "Format invalide";
+                                        else
+                                            $hasError = false;
+                                    }
+
+                                    if (empty($_POST["tbTelephone"]))
+                                        $telErr = "Champ obligatoire";
+                                    else {$tel = RD_Utils::test_input($_POST["tbTelephone"]);
+                                    $hasError = false;}
+                                    
+                                    $comm = RD_Utils::test_input($_POST["tbCommentaire"]);
+                                    
+                                    if(!empty($_POST["hidVehiculeId"]))
+                                        $VehiculeId = $_POST["hidVehiculeId"];
+                                    
+                                    // ENVOI EMAIL
+                                    if(isset($_POST['btnSendMail']) && !$hasError)
+                                    {
+                                        $RDemail = new RD_Email();
+                                        $RDemail->load(TypeEmail::DemandeInformation,$prenom,$nom,$ville,urlencode($email),$tel,$comm,'','','','','','','','','',$VehiculeId,TypeVehicule::CamionNeuf);
+                                        if($RDemail->send()){
+                                            $divVisibility = "hidden";
+                                            ?><h2>Votre demande a bien été envoyée</h2><?php
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if( isset($_REQUEST['sent']))
+                                        if( $_REQUEST['sent'] == "true" )
+                                            echo "<label>Votre demande a bien été envoyée</label>";
+                                        if( isset($_REQUEST['id']))
+                                            $VehiculeId = $_REQUEST['id'];
+                                }
+                            ?>
+                            <div id="" class="formulaire" style="visibility: <?php echo $divVisibility; ?>">
+                                <input type="hidden" id="hidVehiculeId" name="hidVehiculeId" value="<?php echo $VehiculeId; ?>">
                                 <p><font size="1">Les champs marqués d'un astérisque (*) sont obligatoires.</font></p>
                                 <h5 id="">Prénom *&nbsp;:<br>
-                                    <input name="" type="text" id="" class=""></h5>
-                                <h5 id="">Nom *&nbsp;:<br>
-                                    <input name="" type="text" id="" class=""></h5>
-                                <h5 id="">Ville *&nbsp;:<br>
-                                    <input name="" type="text" id="" class=""></h5>
-                                <h5 id="">Courriel *&nbsp;:<br>
-                                    <input name="" type="text" id="" class=""></h5>
-                                <h5 id="">Téléphone * :
-                                    <input name="" type="text" id="" class=""></h5>
-                                <h5 id="">Commentaire :<br>
-                                    <textarea name="" rows="2" cols="20" id="" style="width: 100%;height: 150px;"></textarea></h5>
+                                    <input name="tbPrenom" id="tbPrenom" type="text" class="" value="<?php echo $prenom;?>"></h5>
+                                <span class="error"><?php echo $prenomErr;?></span>
+                                
+                                <h5>Nom *&nbsp;:<br>
+                                    <input name="tbNom" name="tbNom" type="text" class="" value="<?php echo $nom;?>"></h5>
+                                <span class="error"><?php echo $nomErr;?></span>
+                                
+                                <h5>Ville *&nbsp;:<br>
+                                    <input name="tbVille" name="tbVille" type="text" class="" value="<?php echo $ville;?>"></h5>
+                                <span class="error"><?php echo $villeErr;?></span>
+                                
+                                <h5>Courriel *&nbsp;:<br>
+                                    <input name="tbCourriel" name="tbCourriel" type="text" class="" value="<?php echo $email;?>"></h5>
+                                <span class="error"><?php echo $emailErr;?></span>
+                                
+                                <h5>Téléphone * :
+                                    <input name="tbTelephone" name="tbTelephone" type="text" class="" value="<?php echo $tel;?>"></h5>
+                                <span class="error"><?php echo $telErr;?></span>
+                                
+                                <h5>Commentaire :<br>
+                                    <textarea name="tbCommentaire" name="tbCommentaire" rows="2" cols="20" id="" style="width: 100%;height: 150px;"><?php echo $comm;?></textarea></h5>
                                 <p>
                                     <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" id="" class="">
                                 </p>

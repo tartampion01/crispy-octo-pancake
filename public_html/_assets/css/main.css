@@ -4162,3 +4162,8 @@ div{}
 /* StyleSheet File : ~/fr-CA/_css/4.css */
 div {  } 
 .dropDownBonTravailDemandePieces  {  padding: 1.5%;  width: 78.5%;   }
+
+.error
+{
+    color:red;
+}
