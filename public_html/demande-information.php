@@ -17,42 +17,50 @@
                                 
                                 $prenomErr = $nomErr = $villeErr = $emailErr = $telErr = "";
                                 $prenom = $nom = $ville = $email = $tel = $comm = $VehiculeId = "";
-                                $hasError = true;
+                                $errorCount = 0;
                                 
                                 if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                     
-                                    if (empty($_POST["tbPrenom"]))
+                                    if (empty($_POST["tbPrenom"])){
                                         $prenomErr = "Champ obligatoire";
-                                    else{
+                                        $errorCount += 1;
+                                    }
+                                    else
                                         $prenom = RD_Utils::test_input($_POST["tbPrenom"]);
-                                        $hasError = false;}
 
-                                    if (empty($_POST["tbNom"]))
-                                        $nameErr = "Champ obligatoire";
-                                    else{
+                                    if (empty($_POST["tbNom"])){
+                                        $nomErr = "Champ obligatoire";
+                                        $errorCount += 1;
+                                    }
+                                    else
                                         $nom = RD_Utils::test_input($_POST["tbNom"]);
-                                        $hasError = false;}
                                     
-                                    if (empty($_POST["tbVille"]))
+                                    if (empty($_POST["tbVille"])){
                                         $villeErr = "Champ obligatoire";
-                                    else{
+                                        $errorCount += 1;
+                                    }
+                                    else
                                         $ville = RD_Utils::test_input($_POST["tbVille"]);
-                                        $hasError = false;}
 
-                                    if (empty($_POST["tbCourriel"]))
+                                    if (empty($_POST["tbCourriel"])){
                                         $emailErr = "Champ obligatoire";
+                                        $errorCount += 1;
+                                    }
                                     else {
                                         $email = RD_Utils::test_input($_POST["tbCourriel"]);
-                                        if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+                                        if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
                                             $emailErr = "Format invalide";
-                                        else
-                                            $hasError = false;
+                                            $errorCount += 1;
+                                        }
                                     }
 
-                                    if (empty($_POST["tbTelephone"]))
+                                    if (empty($_POST["tbTelephone"])){
                                         $telErr = "Champ obligatoire";
-                                    else {$tel = RD_Utils::test_input($_POST["tbTelephone"]);
-                                    $hasError = false;}
+                                        $errorCount += 1;
+                                    }
+                                    else
+                                        $tel = RD_Utils::test_input($_POST["tbTelephone"]);
+                                        
                                     
                                     $comm = RD_Utils::test_input($_POST["tbCommentaire"]);
                                     
@@ -60,7 +68,7 @@
                                         $VehiculeId = $_POST["hidVehiculeId"];
                                     
                                     // ENVOI EMAIL
-                                    if(isset($_POST['btnSendMail']) && !$hasError)
+                                    if(isset($_POST['btnSendMail']) && $errorCount == 0)
                                     {
                                         $RDemail = new RD_Email();
                                         $RDemail->load(TypeEmail::DemandeInformation,$prenom,$nom,$ville,urlencode($email),$tel,$comm,'','','','','','','','','',$VehiculeId,TypeVehicule::CamionNeuf);
