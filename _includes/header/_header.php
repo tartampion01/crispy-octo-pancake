@@ -15,6 +15,8 @@
     <script type='text/javascript' src='../../_assets/js/ajax.js'></script>
     <script type='text/javascript' src='../../_assets/js/rotator.js'></script>
     <script type='text/javascript' src='../../_assets/js/utilities.js'></script>
+    <script type='text/javascript' src='../../_assets/js/camions-rest.js'></script>
+    <script type='text/javascript' src='../../_assets/js/jquery.tmpl.js'></script>
     
     <!-- Bootstrap CDN includes -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">

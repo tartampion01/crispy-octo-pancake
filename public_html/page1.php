@@ -78,7 +78,7 @@
 //                        }
 //                        echo $truckInfo;
                         ?>
-                        <div class="GpcFacetedResults defaultFacet">
+                        <!--<div class="GpcFacetedResults defaultFacet">
                         <div class=" GpcPagedResultCount">
                         <div class="GpcResultItemWrapper">
                         <?PHP if( $truckResults && (mysqli_num_rows($truckResults) > 0)){
@@ -133,7 +133,7 @@
                         <?PHP }}?>
                         </div>
                         </div>
-                        </div>
+                        </div>-->
                         <?PHP
                     }
                 }
@@ -152,7 +152,8 @@
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('marque'); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
                                     <li class="GpcMenuItem">
-                                        <?PHP echo "<a class='GpcItemTitle' href='?marque=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";} ?>
+                                        <?PHP /*echo "<a class='GpcItemTitle' href='?marque=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
+                                        <?PHP echo "<a class='GpcItemTitle filter-link' data-field='marque' data-value='$key' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                     </li>
                             </ul>
                         </li>
@@ -163,7 +164,8 @@
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('Model'); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
                                     <li class="GpcMenuItem">
-                                        <?PHP echo "<a class='GpcItemTitle' href='?Model=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";} ?>
+                                        <?PHP /*echo "<a class='GpcItemTitle' href='?Model=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
+                                        <?PHP echo "<a class='GpcItemTitle filter-link' data-field='Model' data-value='$key' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                     </li>
                             </ul>
                         </li>
@@ -174,7 +176,8 @@
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('transtype'); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
                                     <li class="GpcMenuItem">
-                                        <?PHP echo "<a class='GpcItemTitle' href='?transtype=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";} ?>
+                                        <?PHP /*echo "<a class='GpcItemTitle' href='?transtype=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
+                                        <?PHP echo "<a class='GpcItemTitle filter-link' data-field='transtype' data-value='$key' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                     </li>
                             </ul>
                         </li>
@@ -185,14 +188,76 @@
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('engine'); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
                                     <li class="GpcMenuItem">
-                                        <?PHP echo "<a class='GpcItemTitle' href='?engine=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";} ?>
+                                        <?PHP /*echo "<a class='GpcItemTitle' href='?engine=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
+                                        <?PHP echo "<a class='GpcItemTitle filter-link' data-field='engine' data-value='$key' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                     </li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-            </div>           
+                
+                <!-- Results Content -->
+                <div class="GpcFacetedResults defaultFacet">
+                    
+                    <div class="GpcPagedResultCount">
+                        <span class="GpcCountPrefixText">Résultats</span>
+                        <span class="GpcPagedResultCurrentCount">1 - 4</span>
+                        <span class="GpcBetweenCountText">sur</span>
+                        <span class="GpcPagedResultTotalCount">4</span>
+                    </div>
+                    <div class="GpcPagerCountSelector">
+                        <span class="GpcItemsPerPageText">Afficher par page</span>
+                        <div data-value="12" class="GpcDisplayOption selected">12</div>
+                        <div data-value="24" class="GpcDisplayOption">24</div>
+                        <div data-value="48" class="GpcDisplayOption">48</div>
+                    </div>
+                    <div class="GpcResultPager">
+                        <a disabled="disabled" class="GpcPagerFirst">&lt;&lt;</a>
+                        <a disabled="disabled" class="GpcPagerPrevious">Précédent</a>
+                        <a class="selected">1</a>
+                        <a disabled="disabled" class="GpcPagerNext">Suivant</a>
+                        <a disabled="disabled" class="GpcPagerLast">&gt;&gt;</a>
+                    </div>
+                    <div class="orderBy clear">
+                        <div class="libelle">
+                            Classer par :
+                        </div>
+                        <div class="GpcResultOrderSelector">
+                            <div class="GpcWrapFakeSelectBox">
+                                <div class="GpcFakeSelectValue">Nom ascendant</div>
+                                <div class="GpcFakeSelect" style="display: none;">
+                                    <div class="GpcFakeSelectOption selected" data-value="{&quot;PropertyName&quot;:4096,&quot;IdentifierGuid&quot;:&quot;00000000-0000-0000-0000-000000000000&quot;,&quot;IsDesc&quot;:false,&quot;Text&quot;:&quot;Nom ascendant&quot;}">Nom ascendant</div>
+                                    <div class="GpcFakeSelectOption" data-value="{&quot;PropertyName&quot;:4096,&quot;IdentifierGuid&quot;:&quot;00000000-0000-0000-0000-000000000000&quot;,&quot;IsDesc&quot;:true,&quot;Text&quot;:&quot;Nom descendant&quot;}">Nom descendant</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="GpcResultItemWrapper results-container">
+                        
+                        <!-- Template product -->
+                        
+                    </div>
+                    <div class="GpcFooter clear">
+                        <div class="GpcPagedResultCount">
+                            <span class="GpcCountPrefixText">Résultats</span>
+                            <span class="GpcPagedResultCurrentCount">1 - 4</span>
+                            <span  class="GpcBetweenCountText">sur</span>
+                            <span class="GpcPagedResultTotalCount">4</span>
+                        </div>
+                        <div class="GpcResultPager">
+                            <a disabled="disabled" class="GpcPagerFirst">&lt;&lt;</a>
+                            <a disabled="disabled" class="GpcPagerPrevious">Précédent</a>
+                            <a class="selected">1</a>
+                            <a disabled="disabled" class="GpcPagerNext">Suivant</a>
+                            <a disabled="disabled" class="GpcPagerLast">&gt;&gt;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+            <div class="FacetedExplorerClear GpcClear">
+                </div>
     </div>
         exemples REST
         <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>
@@ -205,5 +270,62 @@ ID:<input type="text" id="tbShowTruck" name="tbShowTruck" value="" text="" />
 <input type="submit" id="btnShowTruck" name="btnShowTruck" text="Afficher">
     </form>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
+    
+    <div class="loading-overlay">Loading&#8230;</div>
+
+<!-- Start : Javascript template -->
+<script id="resultsTemplate" type="text/x-jquery-tmpl">
+    
+    <div class="FacetedResultTemplate DefaultResultContainer">
+        <a href="javascript:void(0);">
+            <div class="ResultImage">
+                <img src="http://www.reseaudynamique.com/gpc/_media/image/111000/N-3686_250x0.jpg" title="" alt="">
+                <div class="imgPromo" style="display: none;"></div>
+            </div>
+            <div class="ResultContent">
+                <div class="ResultContentProductName">
+                    <h2>
+                        <span class="ProductBrokerType_String">${marque}</span>
+                        <span>&nbsp;</span>
+                        <span class="ProductBrokerType_String">${Model}</span>
+                        <span>&nbsp;</span>
+                        <span>
+                            <span class="ProductBrokerType_String">6 x 4</span>
+                        </span>
+                    </h2>
+                </div>
+                <div class="customField">
+                    <div class="forBroker label zoneForBroker">
+                        <span class="forBroker label spanForBroker">No d'inventaire : </span>
+                        <span class="ProductBrokerType_String">${serial}</span>
+                    </div>
+                </div>
+                <div class="customField">
+                    <div class="forBroker">
+                        <span class="forBroker">Marque : </span>
+                            <span>${marque}</span>
+                    </div>
+                </div>
+                <div class="customField">
+                    <div class="forBroker">
+                        <span class="forBroker">Modèle : </span>
+                        <span class="ProductBrokerType_String">${Model}</span>
+                    </div>
+                </div>
+                <div class="customField">
+                    <div class="forBroker">
+                        <span class="forBroker">Moteur : </span>
+                        <span class="ProductBrokerType_String">${engine}</span>
+                    </div>
+                </div>
+                <div class="inPromo">
+                    <span class="ProductBrokerType_Boolean">False</span>
+                </div>
+                <div class="imgPlus"></div>
+            </div>
+        </a>
+    </div>
+</script>
+<!-- End : Javascript template -->
 </body>
 </html>

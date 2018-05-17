@@ -131,7 +131,7 @@
 .GpcPagedResultCount
 {
   float: left;
-  max-width: 50%;
+  /*max-width: 50%;*/ /* JP - No need I think */
 }
 
 .GpcPagedResultCurrentCount
