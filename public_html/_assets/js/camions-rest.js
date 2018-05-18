@@ -23,6 +23,7 @@ $( document ).ready(function() {
             
             $.ajax({
                 url: 'http://reseaudynamique.com/api/read.php',
+                type: "GET",
                 data: 'params='+JSON.stringify(params),
                 dataType: 'json',
                 success: function(data){
@@ -51,6 +52,9 @@ $( document ).ready(function() {
                     
                     // Hide loading spinner
                     $('.loading-overlay').hide();
+                },
+                error: function(xhr, status, error) {
+                    $('.results-container').html('ERREUR DU SERVEUR');
                 }
             });
         });

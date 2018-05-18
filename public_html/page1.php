@@ -223,17 +223,20 @@
                             Classer par :
                         </div>
                         <div class="GpcResultOrderSelector">
+                            <!--
                             <div class="GpcWrapFakeSelectBox">
                                 <div class="GpcFakeSelectValue">Nom ascendant</div>
-                                <div class="GpcFakeSelect" style="display: none;">
+                                <div class="GpcFakeSelect">
                                     <div class="GpcFakeSelectOption selected" data-value="{&quot;PropertyName&quot;:4096,&quot;IdentifierGuid&quot;:&quot;00000000-0000-0000-0000-000000000000&quot;,&quot;IsDesc&quot;:false,&quot;Text&quot;:&quot;Nom ascendant&quot;}">Nom ascendant</div>
                                     <div class="GpcFakeSelectOption" data-value="{&quot;PropertyName&quot;:4096,&quot;IdentifierGuid&quot;:&quot;00000000-0000-0000-0000-000000000000&quot;,&quot;IsDesc&quot;:true,&quot;Text&quot;:&quot;Nom descendant&quot;}">Nom descendant</div>
-                                    <select name="SearchSorting" class="search-sorting">
-                                        <option value="asc">Nom ascendant</option>
-                                        <option value="desc">Nom descendant</option>
-                                    </select>
+                                    
                                 </div>
                             </div>
+                            -->
+                            <select name="SearchSorting" class="search-sorting">
+                                <option value="asc">Nom ascendant</option>
+                                <option value="desc">Nom descendant</option>
+                            </select>
                         </div>
                     </div>
                     

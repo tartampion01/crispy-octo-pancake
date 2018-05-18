@@ -209,8 +209,9 @@ class RD_Camion{
         $params = json_decode($params);
         
         // select all query
-        $query = "SELECT * FROM inventory WHERE $params->field = '$params->value' LIMIT ". ( ( $params->actualPage - 1 ) * $params->maxPages ) . ", $params->maxPages";
- 
+        $query = "SELECT * FROM inventory WHERE $params->field = '$params->value' ORDER BY marque ASC LIMIT ". ( ( $params->actualPage - 1 ) * $params->maxPages ) . ", $params->maxPages";
+        
+ //die($query);
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
