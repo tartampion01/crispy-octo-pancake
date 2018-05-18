@@ -203,9 +203,13 @@ class RD_Camion{
         return $stmt;
     }
     
-    function readTest($FieldToCompare, $value){
+    function readTest($params){
+        
+        // decode search parameters
+        $params = json_decode($params);
+        
         // select all query
-        $query = "SELECT * FROM inventory WHERE $FieldToCompare = '$value'";
+        $query = "SELECT * FROM inventory WHERE $params->field = '$params->value' LIMIT ". ( ( $params->actualPage - 1 ) * $params->maxPages ) . ", $params->maxPages";
  
         // prepare query statement
         $stmt = $this->conn->prepare($query);

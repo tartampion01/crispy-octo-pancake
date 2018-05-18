@@ -9,9 +9,21 @@ $( document ).ready(function() {
             
             var field = $(this).data('field');
             var value = $(this).data('value');
+            
+            // Get actual page
+            var actualPage = $('.actual-page').html();
+            //var limit = $('.limit-per-page').html();
+            var limitPerPage = 12;
+            var params = {
+                'field' : field,
+                'value' : value,
+                'actualPage' : actualPage,
+                'maxPages' : limitPerPage
+            };
+            
             $.ajax({
                 url: 'http://reseaudynamique.com/api/read.php',
-                data: 'field='+field+'&value='+value,
+                data: 'params='+JSON.stringify(params),
                 dataType: 'json',
                 success: function(data){
 
@@ -20,7 +32,7 @@ $( document ).ready(function() {
                     if(data.records != null) {
                         if(data.records.length > 0) {
                             
-                            // Wmpty out the div that will hold the generated content
+                            // Empty out the div that will hold the generated content
                             $(".results-container").empty();
                             // Call the tmpl function, pass in the data and have it append to resultsTemplate
                             $("#resultsTemplate").tmpl( data.records ).appendTo(".results-container");
