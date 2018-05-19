@@ -18,6 +18,7 @@ $camion = new RD_Camion($db);
 // query Camions
 //$stmt = $camion->readTest('Model','4300');
 $stmt = $camion->readTest($_GET['params']);  // readTest($_GET['field'], $_GET['value']);
+$stmtCount = $camion->readTestCount($_GET['params']);
 $num = $stmt->rowCount();
  
 // check if more than 0 record found
@@ -26,7 +27,11 @@ if($num>0){
     // products array
     $Camions_arr=array();
     $Camions_arr["records"]=array();
- 
+    
+    // count rows
+    $countRows = $stmtCount->rowCount();
+    $Camions_arr["countRows"] = $countRows;
+    
     // retrieve our table contents
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         // extract row
@@ -50,7 +55,7 @@ if($num>0){
             "engine" => $engine,
             "hp" => $hp
         );
- 
+        
         array_push($Camions_arr["records"], $Camion_item);
     }
  

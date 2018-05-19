@@ -199,24 +199,29 @@
                 <!-- Results Content -->
                 <div class="GpcFacetedResults defaultFacet">
                     
-                    <div class="GpcPagedResultCount">
-                        <span class="GpcCountPrefixText">Résultats</span>
-                        <span class="GpcPagedResultCurrentCount">1 - 4</span>
-                        <span class="GpcBetweenCountText">sur</span>
-                        <span class="GpcPagedResultTotalCount">4</span>
-                    </div>
                     <div class="GpcPagerCountSelector">
                         <span class="GpcItemsPerPageText">Afficher par page</span>
                         <div data-value="12" class="limit-per-page GpcDisplayOption selected">12</div>
                         <div data-value="24" class="limit-per-page GpcDisplayOption">24</div>
                         <div data-value="48" class="limit-per-page GpcDisplayOption">48</div>
                     </div>
+                    <div class="GpcPagedResultCount">
+                        <span class="GpcCountPrefixText">Résultats</span>
+                        <span class="GpcPagedResultCurrentCount">1 - 4</span>
+                        <span class="GpcBetweenCountText">sur</span>
+                        <span class="GpcPagedResultTotalCount">4</span>
+                    </div>
                     <div class="GpcResultPager">
+                        <ul class="pagination" id="pagination"></ul>
+                        <!--
                         <a disabled="disabled" class="GpcPagerFirst">&lt;&lt;</a>
                         <a disabled="disabled" class="GpcPagerPrevious">Précédent</a>
                         <a class="selected">1</a>
+                        <a class="selected">1</a>
+                        <a class="selected">1</a>
                         <a disabled="disabled" class="GpcPagerNext">Suivant</a>
                         <a disabled="disabled" class="GpcPagerLast">&gt;&gt;</a>
+                        -->
                     </div>
                     <div class="orderBy clear">
                         <div class="libelle">
@@ -233,7 +238,7 @@
                                 </div>
                             </div>
                             -->
-                            <select name="SearchSorting" class="search-sorting">
+                            <select name="SearchSorting" class="search-sorting" style="font-size: .8em; line-height: 3em; padding: .15em;">
                                 <option value="asc">Nom ascendant</option>
                                 <option value="desc">Nom descendant</option>
                             </select>
@@ -253,11 +258,16 @@
                             <span class="GpcPagedResultTotalCount">4</span>
                         </div>
                         <div class="GpcResultPager">
+                            <ul class="pagination" id="pagination"></ul>
+                            <!--
                             <a disabled="disabled" class="GpcPagerFirst">&lt;&lt;</a>
                             <a disabled="disabled" class="GpcPagerPrevious">Précédent</a>
-                            <a class="selected actual-page">1</a>
+                            <div style="display: inline-block">
+                                <a class="selected actual-page">1</a>
+                            </div>
                             <a disabled="disabled" class="GpcPagerNext">Suivant</a>
                             <a disabled="disabled" class="GpcPagerLast">&gt;&gt;</a>
+                            -->
                         </div>
                     </div>
                 </div>

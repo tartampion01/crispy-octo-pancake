@@ -209,15 +209,29 @@ class RD_Camion{
         $params = json_decode($params);
         
         // select all query
-        $query = "SELECT * FROM inventory WHERE $params->field = '$params->value' ORDER BY marque ASC LIMIT ". ( ( $params->actualPage - 1 ) * $params->maxPages ) . ", $params->maxPages";
-        
- //die($query);
+        $query = "SELECT * FROM inventory WHERE $params->field = '$params->value' ORDER BY marque, Model ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+ 
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
         $stmt->execute();
- 
+        
         return $stmt;
+    }
+    function readTestCount($params){
+        
+        // decode search parameters
+        $params = json_decode($params);
+        
+        // select all query
+        $queryCount = "SELECT * FROM inventory WHERE $params->field = '$params->value' ORDER BY marque, Model ".$params->sortBy;
+        
+        // prepare query statement
+        $stmtCount = $this->conn->prepare($queryCount);
+        // execute query
+        $stmtCount->execute();
+        
+        return $stmtCount;
     }
 }
 
