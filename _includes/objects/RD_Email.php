@@ -80,8 +80,8 @@ Class RD_Email
         $this->modele = $Modele;
         $this->annee = $Annee;
         $this->km = $Km;
-        $this->etatInterieur = $EtatInterieur;
-        $this->etatExterieur = $EtatExterieur;
+        $this->etatInterieur = urldecode(base64_decode($EtatInterieur));
+        $this->etatExterieur = urldecode(base64_decode($EtatExterieur));
         $this->idVehicule = $IdVehicule;
         
         $this->mail = new PHPMailer;
@@ -124,7 +124,7 @@ Class RD_Email
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
                 break;
-            case TypeEmail::ObtenirPrix:          
+            case TypeEmail::ObtenirPrix:
                 $body = "Demande de prix de la part de: " . $this->prenom . " " . $this->nom . "</br>";
                 $body .= "Ville: " . $this->ville . "</br>";
                 $body .= "Telephone: " . $this->telephone . "</br>";
@@ -135,8 +135,37 @@ Class RD_Email
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
                 break;
-            case TypeEmail::DemandFinancement:    break;
-            case TypeEmail::EvaluerEchange:       break;
+            case TypeEmail::DemandFinancement:
+                $body = "Demande de financement de la part de: " . $this->prenom . " " . $this->nom . "</br>";
+                $body .= "Adresse: " . $this->adresse . "</br>";
+                $body .= "Ville: " . $this->ville . "</br>";
+                $body .= "Code Postal: " . $this->codePostal . "</br>";
+                $body .= "Province: " . base64_decode(urldecode($this->province)) . "</br>";
+                $body .= "Telephone: " . $this->telephone . "</br>";
+                $body .= "Courriel: " . $this->email . "</br>";
+                if( $this->commentaire != "" )
+                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                $body .= "Infos demandées au sujet de: <a href='";
+                $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
+                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
+                break;
+            case TypeEmail::EvaluerEchange:
+                $body = "Demande de financement de la part de: " . $this->prenom . " " . $this->nom . "</br>";
+                $body .= "Ville: " . $this->ville . "</br>";
+                $body .= "Telephone: " . $this->telephone . "</br>";
+                $body .= "Courriel: " . $this->email . "</br>";
+                $body .= "Marque: " . $this->marque . "</br>";
+                $body .= "Modèle: " . $this->modele . "</br>";
+                $body .= "Année: " . $this->annee . "</br>";
+                $body .= "KM: " . $this->km . "</br>";
+                $body .= "État intérieur: " . $this->etatExterieur . "</br>";
+                $body .= "État extérieur: " . $this->etatInterieur . "</br>";
+                if( $this->commentaire != "" )
+                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                $body .= "Infos demandées au sujet de: <a href='";
+                $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
+                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
+                break;
         }
         
         $this->mail->Body = $body;

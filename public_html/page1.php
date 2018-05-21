@@ -3,7 +3,7 @@
     <form role="form" method="POST" action="/page1.php">
     <div class="content" style="height: 80%">
         <div class="shrink">
-            <div id="" class="titrePage">
+            <div class="titrePage">
                 <h1 id=""><span>Inventaire complet</span></h1>
             </div>
             <?php
@@ -90,7 +90,7 @@
                                         <div class="imgPromo" style="display: none;"></div>
                                     </div>
                                     <div class="ResultContent">
-                                        <div id="" class="ResultContentProductName">
+                                        <div class="ResultContentProductName">
                                             <h2>
                                                 <span class="ProductBrokerType_String"><?PHP echo $row['marque'] ?></span>
                                                 <span>&nbsp;</span>

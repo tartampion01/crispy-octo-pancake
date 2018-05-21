@@ -11,7 +11,7 @@
                 </div>
                 <div class="contenu">
                     <div class="contenu2">
-                        <div id="" class="contenu2">
+                        <div class="contenu2">
                             <?php
                                 $divVisibility = "visible";
                                 
@@ -84,7 +84,7 @@
                                         $VehiculeId = $_GET['id'];
                                 }
                             ?>
-                            <div id="" class="formulaire" style="visibility: <?php echo $divVisibility; ?>">
+                            <div class="formulaire" style="visibility: <?php echo $divVisibility; ?>">
                                 <input type="hidden" id="hidVehiculeId" name="hidVehiculeId" value="<?php echo $VehiculeId; ?>">
                                 <p><font size="1">Les champs marqués d'un astérisque (*) sont obligatoires.</font></p>
                                 <h5 id="">Prénom *&nbsp;:<br>
@@ -113,7 +113,7 @@
                                     <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" id="" class="">
                                 </p>
                             </div>
-                            <div id="" class="nomProduit">
+                            <div class="nomProduit">
                                 <input type="hidden" name="" id="" itemid="" value=""><!-- Marque Model Config EX: INTERNATIONAL - 4300 4 X 2 -->
                                 <input type="hidden" name="" id="" itemid="" value=""><!-- SKU -->
                             </div>

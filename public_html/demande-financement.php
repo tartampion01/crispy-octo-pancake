@@ -11,19 +11,114 @@
                 </div>
                 <div class="contenu">
                     <div class="contenu2">
-                        <div id="" class="contenu2">
-                            <div id="" class="formulaire">
+                        <div class="contenu2">
+                            <div class="contenu2">
+                            <?php
+                                $divVisibility = "visible";
+                                
+                                $prenomErr = $nomErr = $adresseErr = $codePostalErr = $villeErr = $emailErr = $telErr = "";
+                                $prenom = $nom = $adresse = $codePostal = $province = $ville = $email = $tel = $VehiculeId = "";
+                                $errorCount = 0;
+                                
+                                if ($_SERVER["REQUEST_METHOD"] === "POST") {
+                                    
+                                    if (empty($_POST["tbPrenom"])){
+                                        $prenomErr = "Champ obligatoire";
+                                        $errorCount += 1;
+                                    }
+                                    else
+                                        $prenom = RD_Utils::test_input($_POST["tbPrenom"]);
+
+                                    if (empty($_POST["tbNom"])){
+                                        $nomErr = "Champ obligatoire";
+                                        $errorCount += 1;
+                                    }
+                                    else
+                                        $nom = RD_Utils::test_input($_POST["tbNom"]);
+                                    
+                                    if (empty($_POST["tbAdresse"])){
+                                        $adresseErr = "Champ obligatoire";
+                                        $errorCount += 1;
+                                    }
+                                    else
+                                        $adresse = RD_Utils::test_input($_POST["tbAdresse"]);
+                                    
+                                    if (empty($_POST["tbVille"])){
+                                        $villeErr = "Champ obligatoire";
+                                        $errorCount += 1;
+                                    }
+                                    else
+                                        $ville = RD_Utils::test_input($_POST["tbVille"]);
+
+                                    $province = $_POST['cboProvince'];
+                                    
+                                    if (empty($_POST["tbCourriel"])){
+                                        $emailErr = "Champ obligatoire";
+                                        $errorCount += 1;
+                                    }
+                                    else {
+                                        $email = RD_Utils::test_input($_POST["tbCourriel"]);
+                                        if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                                            $emailErr = "Format invalide";
+                                            $errorCount += 1;
+                                        }
+                                    }
+
+                                    if (empty($_POST["tbCodePostal"])){
+                                        $codePostalErr = "Champ obligatoire";
+                                        $errorCount += 1;
+                                    }
+                                    else
+                                        $codePostal = RD_Utils::test_input($_POST["tbCodePostal"]);
+                                    
+                                    if (empty($_POST["tbTelephone"])){
+                                        $telErr = "Champ obligatoire";
+                                        $errorCount += 1;
+                                    }
+                                    else
+                                        $tel = RD_Utils::test_input($_POST["tbTelephone"]);
+                                        
+                                    if(!empty($_POST["hidVehiculeId"]))
+                                        $VehiculeId = $_POST["hidVehiculeId"];
+                                    
+                                    // ENVOI EMAIL
+                                    if(isset($_POST['btnSendMail']) && $errorCount == 0)
+                                    {
+                                        $RDemail = new RD_Email();
+                                        $RDemail->load(TypeEmail::DemandFinancement,$prenom,$nom,$ville,urlencode($email),$tel,'',$adresse,$province,$codePostal,'','','','','','',$VehiculeId,TypeVehicule::CamionNeuf);
+                                        if($RDemail->send()){
+                                            $divVisibility = "hidden";
+                                            ?><h2>Votre demande a bien été envoyée</h2><?php
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if( isset($_GET['id']))
+                                        $VehiculeId = $_GET['id'];
+                                }
+                            ?>
+                            <div class="formulaire" style="visibility: <?php echo $divVisibility; ?>">
+                                <input type="hidden" id="hidVehiculeId" name="hidVehiculeId" value="<?php echo $VehiculeId; ?>">
                                 <p><font size="1">Les champs marqués d'un astérisque (*) sont obligatoires.</font></p>
                                 <h5 id="">Prénom *&nbsp;:<br>
-                                    <input name="" type="text" id="" class=""></h5>
-                                <h5 id="">Nom *&nbsp;:<br>
-                                    <input name="" type="text" id="" class=""></h5>
-                                <h5 id="">Adresse *&nbsp;:<br>
-                                    <input name="" type="text" id="" class=""></h5>
-                                <h5 id="">Ville *&nbsp;:<br>
-                                    <input name="" type="text" id="" class=""></h5>
-                                <h5 id="">Province *&nbsp;:<br>
-                                    <select class="valid" name="">
+                                    <input name="tbPrenom" id="tbPrenom" type="text" class="" value="<?php echo $prenom;?>"></h5>
+                                <span class="error"><?php echo $prenomErr;?></span>
+                                
+                                <h5>Nom *&nbsp;:<br>
+                                    <input name="tbNom" name="tbNom" type="text" class="" value="<?php echo $nom;?>"></h5>
+                                <span class="error"><?php echo $nomErr;?></span>
+                                
+                                <h5>Adresse *&nbsp;:<br>
+                                    <input name="tbAdresse" name="tbAdresse" type="text" class="" value="<?php echo $adresse;?>"></h5>
+                                <span class="error"><?php echo $adresseErr;?></span>
+                                
+                                <h5>Ville *&nbsp;:<br>
+                                    <input name="tbVille" name="tbVille" type="text" class="" value="<?php echo $ville;?>"></h5>
+                                <span class="error"><?php echo $villeErr;?></span>
+                                
+                                <h5>Province *&nbsp;:<br>
+                                    <select id="cboProvince" name="cboProvince" class="valid">
                                         <option selected="selected" value="UXXDqWJlYw==">Québec</option>
                                         <option value="T250YXJpbw==">Ontario</option>
                                         <option value="TWFuaXRvYmE=">Manitoba</option>
@@ -37,18 +132,26 @@
                                         <option value="WXVrb24=">Yukon</option>
                                         <option value="VGVycml0b2lyZXMgZHUgTm9yZC1PdWVzdA==">Territoires du Nord-Ouest</option>
                                         <option value="TnVuYXZ1dA==">Nunavut</option>
-                                    </select></h5>
-                                <h5 id="">Code Postal *&nbsp;:<br>
-                                    <input name="" type="text" id="" class=""></h5>
-                                <h5 id="">Courriel *&nbsp;:<br>
-                                    <input name="" type="text" id="" class=""></h5>
-                                <h5 id="">Téléphone * :
-                                    <input name="" type="text" id="" class=""></h5>
+                                    </select>
+                                </h5>
+                                
+                                <h5>Code postal *&nbsp;:<br>
+                                    <input name="tbCodePostal" name="tbCodePostal" type="text" class="" value="<?php echo $codePostal;?>"></h5>
+                                <span class="error"><?php echo $codePostalErr;?></span>
+                                
+                                <h5>Téléphone * :
+                                    <input name="tbTelephone" name="tbTelephone" type="text" class="" value="<?php echo $tel;?>"></h5>
+                                <span class="error"><?php echo $telErr;?></span>
+                                
+                                <h5>Courriel *&nbsp;:<br>
+                                    <input name="tbCourriel" name="tbCourriel" type="text" class="" value="<?php echo $email;?>"></h5>
+                                <span class="error"><?php echo $emailErr;?></span>
+                                                               
                                 <p>
                                     <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" id="" class="">
                                 </p>
                             </div>
-                            <div id="" class="nomProduit">
+                            <div class="nomProduit">
                                 <input type="hidden" name="" id="" itemid="" value=""><!-- Marque Model Config EX: INTERNATIONAL - 4300 4 X 2 -->
                                 <input type="hidden" name="" id="" itemid="" value=""><!-- SKU -->
                             </div>

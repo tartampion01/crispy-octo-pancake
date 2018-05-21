@@ -29,12 +29,12 @@
                                 <input name="km" type="text"  placeholder="Kilométrage" itemid="">
                                 <input name="boncommande" type="text"  placeholder="Bon de commande *" itemid="">
                                 
-                                <div id="" class="supPlainte" data-staticclassnames="supPlainte" itemid="" style="display: none;">
+                                <div class="supPlainte" data-staticclassnames="supPlainte" itemid="" style="display: none;">
                                     <a id="" class="" name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
                                 </div>
-                                <div id="" class="plainte clear">
-                                    <div id="" class="champ"><input name="" type="text" class="" placeholder="Description des travaux à faire" itemid=""></div>
-                                    <div id="" class="supPlainte" data-staticclassnames="supPlainte" itemid=""><a id="" name="hyperlien" onclick="javascript:RegisterClick(this);">x</a></div>
+                                <div class="plainte clear">
+                                    <div class="champ"><input name="" type="text" class="" placeholder="Description des travaux à faire" itemid=""></div>
+                                    <div class="supPlainte" data-staticclassnames="supPlainte" itemid=""><a id="" name="hyperlien" onclick="javascript:RegisterClick(this);">x</a></div>
                                 </div>
                                 <div class="addPlainte">
                                     <p>
