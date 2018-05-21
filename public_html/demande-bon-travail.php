@@ -30,11 +30,11 @@
                                 <input name="boncommande" type="text"  placeholder="Bon de commande *" itemid="">
                                 
                                 <div class="supPlainte" data-staticclassnames="supPlainte" itemid="" style="display: none;">
-                                    <a id="" class="" name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                    <a class="" name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
                                 </div>
                                 <div class="plainte clear">
                                     <div class="champ"><input name="" type="text" class="" placeholder="Description des travaux à faire" itemid=""></div>
-                                    <div class="supPlainte" data-staticclassnames="supPlainte" itemid=""><a id="" name="hyperlien" onclick="javascript:RegisterClick(this);">x</a></div>
+                                    <div class="supPlainte" data-staticclassnames="supPlainte" itemid=""><a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a></div>
                                 </div>
                                 <div class="addPlainte">
                                     <p>
@@ -45,11 +45,11 @@
                                 <div class="ReplacementDiv">
                                     <span class="UploadFileText">Inclure un document (PDF, JPG, PNG, DOC, XLS)</span>
                                     <span class="ReplacementButton" style="position: relative; overflow: hidden; cursor: pointer;">Parcourir
-                                        <input type="file" name="" id="" class="ReplacementButtonInput" title="">
+                                        <input type="file" name="" class="ReplacementButtonInput" title="">
                                     </span>
                                 </div>
                             
-                                <textarea rows="2" cols="20" id="" placeholder="Note spéciale"></textarea>
+                                <textarea rows="2" cols="20" placeholder="Note spéciale"></textarea>
 
                                 <p>&nbsp;</p>
                                 <h3>Conditions et autorisation de réparation</h3>
@@ -66,27 +66,27 @@
                                 <strong>Instructions</strong>
                                 <label class="hideDrummond"><input type="radio" name="instruction">&nbsp;Je demande un estimé écrit avant le début des travaux.</label>
                                 <input type="radio" name="instruction">&nbsp;Veuillez procéder aux réparations mais appelez-moi pour approbation avant de continuer si le prix excède $ 
-                                <span id="" class="prixSpan">
+                                <span class="prixSpan">
                                     <input name="" type="text"></span>
                                 <label class="widthError">
-                                    <input id="" type="radio" name="instruction">&nbsp;Je ne veux pas d'évaluation et vous pouvez procéder aux reparations.</label>
+                                    <input type="radio" name="instruction">&nbsp;Je ne veux pas d'évaluation et vous pouvez procéder aux reparations.</label>
                                 <p class="hideDrummond">À cause de l'espace limité de stationnement nous ne pouvons remiser un véhicule pendant des périodes prolongées. Veuillez noter qu'à compter du sixième jour suivant la fin des réparations, des frais de $20.00 par jour de remisage seront exigés jusqu'à ce que le véhicule soit récupéré.</p>
                                 <div>
-                                    <span id="" class="Captcha_Description">Veuillez entrer le code ci-dessous : </span>
+                                    <span class="Captcha_Description">Veuillez entrer le code ci-dessous : </span>
                                 </div>
                                 <div class="CaptchaRow" style="clear:both;">
                                     <div class="CaptchaFirstCell" style="width:px;float:left;">
-                                        <img id="" class="Captcha_Image" src="/CaptchaImage.ashx?Width=200&amp;Height=50&amp;RequestGuid=c3e16ceb-3407-4512-a6d7-5cef180dc58e&amp;SiteGuid=0b9658dc-44d6-4190-91f0-5c230e59f7e8"></div>
+                                        <img class="Captcha_Image" src="/CaptchaImage.ashx?Width=200&amp;Height=50&amp;RequestGuid=c3e16ceb-3407-4512-a6d7-5cef180dc58e&amp;SiteGuid=0b9658dc-44d6-4190-91f0-5c230e59f7e8"></div>
                                         <div class="CaptchaSecondCell" style="margin-left:10px;margin-top:10px;float:left;">
-                                            <span id="" class="Captcha_Help">Vous ne réussissez pas à lire le texte?<br></span>
-                                            <a id="" class="Captcha_Refresh" href="javascript:return false;" tabindex="0">Générer un nouveau code</a></div>
+                                            <span class="Captcha_Help">Vous ne réussissez pas à lire le texte?<br></span>
+                                            <a class="Captcha_Refresh" href="javascript:return false;" tabindex="0">Générer un nouveau code</a></div>
                                             <div style="clear:both;"></div>
                                 </div>
                                 <div>
-                                    <span class="Captcha_Text">Texte :</span><input name="" type="text" id="" class="Captcha_TextBox">
+                                    <span class="Captcha_Text">Texte :</span><input name="" type="text" class="Captcha_TextBox">
                                 </div>
-                            <input type="hidden" name="" id="" itemid="">
-                            <input type="submit" name="" value="Soumettre" id="" class="">
+                            <input type="hidden" name="" itemid="">
+                            <input type="submit" name="" value="Soumettre" class="">
                             </div>
                         </div>
                         <p></p>

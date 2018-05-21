@@ -87,7 +87,7 @@
                             <div class="formulaire" style="visibility: <?php echo $divVisibility; ?>">
                                 <input type="hidden" id="hidVehiculeId" name="hidVehiculeId" value="<?php echo $VehiculeId; ?>">
                                 <p><font size="1">Les champs marqués d'un astérisque (*) sont obligatoires.</font></p>
-                                <h5 id="">Prénom *&nbsp;:<br>
+                                <h5>Prénom *&nbsp;:<br>
                                     <input name="tbPrenom" id="tbPrenom" type="text" class="" value="<?php echo $prenom;?>"></h5>
                                 <span class="error"><?php echo $prenomErr;?></span>
                                 
@@ -108,14 +108,14 @@
                                 <span class="error"><?php echo $telErr;?></span>
                                 
                                 <h5>Commentaire :<br>
-                                    <textarea name="tbCommentaire" name="tbCommentaire" rows="2" cols="20" id="" style="width: 100%;height: 150px;"><?php echo $comm;?></textarea></h5>
+                                    <textarea name="tbCommentaire" name="tbCommentaire" rows="2" cols="20" style="width: 100%;height: 150px;"><?php echo $comm;?></textarea></h5>
                                 <p>
-                                    <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" id="" class="">
+                                    <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" class="">
                                 </p>
                             </div>
                             <div class="nomProduit">
-                                <input type="hidden" name="" id="" itemid="" value=""><!-- Marque Model Config EX: INTERNATIONAL - 4300 4 X 2 -->
-                                <input type="hidden" name="" id="" itemid="" value=""><!-- SKU -->
+                                <input type="hidden" name="" itemid="" value=""><!-- Marque Model Config EX: INTERNATIONAL - 4300 4 X 2 -->
+                                <input type="hidden" name="" itemid="" value=""><!-- SKU -->
                             </div>
                         </div>
                     </div>

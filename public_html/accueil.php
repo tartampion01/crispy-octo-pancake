@@ -34,7 +34,7 @@
 	<div class="content accueil" data-staticClassNames="content accueil">
             <div class="shrink" data-staticClassNames="shrink">
                 <div class="vehiculeDisponible" data-staticClassNames="vehiculeDisponible">
-                    <h2 id="">V&#233;hicules disponibles</h2>
+                    <h2>V&#233;hicules disponibles</h2>
                 </div>
                     <!--<img name="image" title="" src="_assets/images/menu_images/promo-site-web.jpg" alt="promo site web" />-->
                 <div class="Nad579b8ffd42482c906005c978ef9afa_N57722c9eed144b248e2f78f30b1246ed cat" data-staticClassNames="Nad579b8ffd42482c906005c978ef9afa_N57722c9eed144b248e2f78f30b1246ed cat">

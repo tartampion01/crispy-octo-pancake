@@ -4,7 +4,7 @@
     <div class="content" style="height: 80%">
         <div class="shrink">
             <div class="titrePage">
-                <h1 id=""><span>Inventaire complet</span></h1>
+                <h1><span>Inventaire complet</span></h1>
             </div>
             <?php
                 try{

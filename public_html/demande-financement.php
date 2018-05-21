@@ -101,7 +101,7 @@
                             <div class="formulaire" style="visibility: <?php echo $divVisibility; ?>">
                                 <input type="hidden" id="hidVehiculeId" name="hidVehiculeId" value="<?php echo $VehiculeId; ?>">
                                 <p><font size="1">Les champs marqués d'un astérisque (*) sont obligatoires.</font></p>
-                                <h5 id="">Prénom *&nbsp;:<br>
+                                <h5>Prénom *&nbsp;:<br>
                                     <input name="tbPrenom" id="tbPrenom" type="text" class="" value="<?php echo $prenom;?>"></h5>
                                 <span class="error"><?php echo $prenomErr;?></span>
                                 
@@ -148,12 +148,12 @@
                                 <span class="error"><?php echo $emailErr;?></span>
                                                                
                                 <p>
-                                    <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" id="" class="">
+                                    <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" class="">
                                 </p>
                             </div>
                             <div class="nomProduit">
-                                <input type="hidden" name="" id="" itemid="" value=""><!-- Marque Model Config EX: INTERNATIONAL - 4300 4 X 2 -->
-                                <input type="hidden" name="" id="" itemid="" value=""><!-- SKU -->
+                                <input type="hidden" name="" itemid="" value=""><!-- Marque Model Config EX: INTERNATIONAL - 4300 4 X 2 -->
+                                <input type="hidden" name="" itemid="" value=""><!-- SKU -->
                             </div>
                         </div>
                     </div>
