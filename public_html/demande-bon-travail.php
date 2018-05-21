@@ -15,7 +15,7 @@
                                     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     }
                                     else
-                                    {echo $_REQUEST["succursale"];
+                                    {
                                         if(isset($_REQUEST["succursale"]))
                                             echo RD_Utils::GetDropDownSuccursalesBonTravail($_REQUEST["succursale"]);
                                     }

@@ -19,7 +19,7 @@
                             <li class="item36 last rank3" expansionmode="HoverExpansion">
                                 <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsIsuzu); ?>" class=" last rank3" target="_self">Camions Isuzu</a>
                             </li>
-                        </ul>f
+                        </ul>
                     </div>
                 </li>
                 <li class="item2 rank2" expansionmode="HoverExpansion">

@@ -9,6 +9,7 @@ interface TypeEmail
     const ObtenirPrix = 3;
     const DemandFinancement = 4;
     const EvaluerEchange = 5;
+    const InscriptionNextPart = 6;
 }
 
 interface TypeVehicule
@@ -64,6 +65,10 @@ Class RD_Email
             case TypeEmail::EvaluerEchange:       $emailto = "ptourigny@servicesinfo.ca";
                                                   $subject = "Demande d'évaluation d'échange";
                                                   $toName  = "Philippe Tourigny";                                                  
+                                                  break;
+            case TypeEmail::InscriptionNextPart:  $emailto = "ptourigny@servicesinfo.ca";
+                                                  $subject = "Inscription NextPart";
+                                                  $toName  = "Philippe Tourigny";
                                                   break;
         }
         
@@ -166,6 +171,18 @@ Class RD_Email
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
                 break;
+            case TypeEmail::InscriptionNextPart:
+                $body = "Demande d'information de la part de: " . $this->prenom . " " . $this->nom . "</br>";
+                $body .= "Entreprise: " . $this->ville . "</br>";
+                $body .= "Telephone: " . $this->telephone . "</br>";
+                $body .= "Courriel: " . $this->email . "</br>";
+                if( $this->commentaire != "" )
+                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                $body .= "Infos demandées au sujet de: <a href='";
+                $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
+                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
+                break;
+            default:break;
         }
         
         $this->mail->Body = $body;
