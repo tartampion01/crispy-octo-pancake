@@ -4,92 +4,92 @@
         <div id="menuCss1" class="menuCss1">
             <ul id="ulNiveau1" class="MenuBar">
                 <li class="item1 first rank1 parent" expansionmode="ClickExpansion">
-                    <a href="<?php RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet) ?>" class=" first rank0 MenuBarItemSubmenu" target="_self">Camions neufs</a>
+                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>" class=" first rank0 MenuBarItemSubmenu" target="_self">Camions neufs</a>
                     <div class="itemChildDiv5">
                         <ul class="itemChild5">
                             <li class="item59 first rank0" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet) ?>" class=" first rank0" target="_self">Inventaire complet</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>" class=" first rank0" target="_self">Inventaire complet</a>
                             </li>
                             <li class="item34 rank1" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational) ?>" class="rank1" target="_self">Camions International</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>" class="rank1" target="_self">Camions International</a>
                             </li>
                             <li class="item35 rank2" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsOttawaKalmar) ?>" class="rank2" target="_self">Camions Ottawa Kalmar</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsOttawaKalmar); ?>" class="rank2" target="_self">Camions Ottawa Kalmar</a>
                             </li>
                             <li class="item36 last rank3" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsIsuzu) ?>" class=" last rank3" target="_self">Camions Isuzu</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsIsuzu); ?>" class=" last rank3" target="_self">Camions Isuzu</a>
                             </li>
                         </ul>f
                     </div>
                 </li>
                 <li class="item2 rank2" expansionmode="HoverExpansion">
-                    <a href="<?php RD_PageLink::getHref(folder::Root,page::CamionsOccasion) ?>" class="rank1" target="_self">Camions d'occasion</a>
+                    <a href="<?php echo RD_PageLink::getHref(folder::Root,page::CamionsOccasion) ?>" class="rank1" target="_self">Camions d'occasion</a>
                 </li>
                 <li class="item3 rank3 parent" expansionmode="ClickExpansion">
-                    <a href="<?php RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet) ?>" class="rank2 MenuBarItemSubmenu" target="_self">Remorques neuves</a>
+                    <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>" class="rank2 MenuBarItemSubmenu" target="_self">Remorques neuves</a>
                     <div class="itemChildDiv63">
                         <ul class="itemChild63">
                             <li class="item74 first rank0" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet) ?>" class=" first rank0" target="_self">Inventaire complet</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>" class=" first rank0" target="_self">Inventaire complet</a>
                             </li>
                             <li class="item87 rank1" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDiMond) ?>" class="rank1" target="_self">Remorques Di-Mond</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDiMond); ?>" class="rank1" target="_self">Remorques Di-Mond</a>
                             </li>
                             <li class="item86 last rank2" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDoepker) ?>" class=" last rank2" target="_self">Remorques Doepker</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDoepker); ?>" class=" last rank2" target="_self">Remorques Doepker</a>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li class="item4 rank3 parent" expansionmode="ClickExpansion">
-                    <a href="<?php RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices) ?>" class="rank3 MenuBarItemSubmenu" target="_self">Véhicules utilitaires</a>
+                    <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>" class="rank3 MenuBarItemSubmenu" target="_self">Véhicules utilitaires</a>
                     <div class="itemChildDiv9">
                         <ul class="itemChild9">
                             <li class="item37 first rank0" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices) ?>" class=" first rank0" target="_self">Mini-excavatrices</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>" class=" first rank0" target="_self">Mini-excavatrices</a>
                             </li>
                             <li class="item38 rank1" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesTransporteursToutTerrain) ?>" class="rank1" target="_self">Transporteurs tout-terrain</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesTransporteursToutTerrain); ?>" class="rank1" target="_self">Transporteurs tout-terrain</a>
                             </li>
                             <li class="item39 rank2" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesSkidSteerEtChargeurAChenilles) ?>" class="rank2" target="_self">Skid Steer et chargeur à chenilles</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesSkidSteerEtChargeurAChenilles); ?>" class="rank2" target="_self">Skid Steer et chargeur à chenilles</a>
                             </li>
                             <li class="item40 last rank3" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesChargeuseV3EtV4) ?>" class=" last rank3" target="_self">Chargeuse V3 et V4</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesChargeuseV3EtV4); ?>" class=" last rank3" target="_self">Chargeuse V3 et V4</a>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li class="item5 rank4" expansionmode="HoverExpansion">
-                    <a href="<?php RD_PageLink::getHref(folder::Root,page::LocationsDeCamions) ?>" class="rank4" target="_self">Location de camions</a>
+                    <a href="<?php echo RD_PageLink::getHref(folder::Root,page::LocationsDeCamions); ?>" class="rank4" target="_self">Location de camions</a>
                 </li>
                 <li class="item11 last rank5 parent" expansionmode="ClickExpansion">
-                    <a href="<?php RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesFinancement) ?>" class=" last rank5 MenuBarItemSubmenu" target="_self">Pièces et services</a>
+                    <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesFinancement); ?>" class=" last rank5 MenuBarItemSubmenu" target="_self">Pièces et services</a>
                     <div class="itemChildDiv11">
                         <ul class="itemChild11">
                             <li class="item41 first rank0" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires) ?>" class=" first rank0" target="_self">Pièces et accessoires</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires); ?>" class=" first rank0" target="_self">Pièces et accessoires</a>
                             </li>
                             <li class="item42 rank1" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceRoutier) ?>" class="rank1" target="_self">Service routier</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceRoutier); ?>" class="rank1" target="_self">Service routier</a>
                             </li>
                             <li class="item43 rank2" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceApresVente) ?>" class="rank2" target="_self">Service après-vente</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceApresVente); ?>" class="rank2" target="_self">Service après-vente</a>
                             </li>
                             <li class="item44 rank3" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesFinancement) ?>" class="rank3" target="_self">Financement</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesFinancement); ?>" class="rank3" target="_self">Financement</a>
                             </li>
                             <li class="item92 rank4" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_nextPartLogin) ?>" class="rank4" target="_blank">Commande en ligne</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_nextPartLogin); ?>" class="rank4" target="_blank">Commande en ligne</a>
                             </li>
                             <li class="item94 last rank5" expansionmode="HoverExpansion">
-                                <a href="<?php RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces) ?>" class=" last rank5" target="_self">Promo pièces</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" class=" last rank5" target="_self">Promo pièces</a>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li class="item6 rank6" expansionmode="HoverExpansion">
-                    <a href="<?php RD_PageLink::getHref(folder::Root,page::Carrieres) ?>" class="rank6" target="_self">Carrières</a>
+                    <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres); ?>" class="rank6" target="_self">Carrières</a>
                 </li>
             </ul>
         </div>

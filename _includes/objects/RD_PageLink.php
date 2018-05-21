@@ -79,6 +79,7 @@ interface page
     const EXTERNAL_nextPartLogin = 700;
     const EXTERNAL_nextPart = 701;
     const EXTERNAL_fleetrite = 702;
+    const EXTERNAL_details = 703;
 }
 
 class RD_PageLink
@@ -164,12 +165,13 @@ class RD_PageLink
             
             case page::EXTERNAL_nextPartLogin: $_page = "http://www.nexpart.com/login.php";$_wholeURL = true;break;
             case page::EXTERNAL_fleetrite: $_page = "http://www.fleetrite.com";$_wholeURL = true;break;
+            case page::EXTERNAL_details: $_page = "http://reseaudynamique.com/details.php";$_wholeURL = true;break;
             
             default: $_page = "accueil";break;
             //case page:: $_page = "";break;
         }
 
-        echo $_wholeURL ? $_page : $_folder . $_page . ".php";
+        return $_wholeURL ? $_page : $_folder . $_page . ".php";
     }
 }
 

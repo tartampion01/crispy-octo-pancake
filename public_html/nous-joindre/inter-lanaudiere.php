@@ -105,10 +105,10 @@
                             <?php endforeach;?>
                         </p>                       
                         <div class="btnBon" style="display:block;">
-                            <h2><a class="buttonBon" name="hyperlien" href="<?php RD_PageLink::getHref(folder::Root,page::BonDeTravail); echo "?succursale=" . $suc->getSuccursaleBonTravail(); ?>" target="_self">Ouvrez un bon de travail</a></h2>
+                            <h2><a class="buttonBon" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::BonDeTravail) . "?succursale=" . $suc->getSuccursaleBonTravail(); ?>" target="_self">Ouvrez un bon de travail</a></h2>
                         </div>
                         <div class="btnPieces" style="display:block;">
-                            <h2><a class="buttonBon" name="hyperlien" href="<?php RD_PageLink::getHref(folder::Root,page::DemandePieces); echo "?succursale=" . $suc->getSuccursaleDemandePieces(); ?>" target="_self">Faites une demande de pièces</a></h2>
+                            <h2><a class="buttonBon" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::DemandePieces) . "?succursale=" . $suc->getSuccursaleDemandePieces(); ?>" target="_self">Faites une demande de pièces</a></h2>
                         </div>
                     </div>
                 </div>

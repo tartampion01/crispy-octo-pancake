@@ -56,7 +56,7 @@
                                 <p></p>
                                 <span>
                                     <font color="#ff0000">À NOTER - Suite à l'envoi de ce formulaire, vous devrez prendre rendez-vous avec</font>
-                                        <a href="<?php RD_PageLink::getHref(folder::Root,page::NousJoindre) ?>"> votre concessionaire</a>.
+                                        <a href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>"> votre concessionaire</a>.
                                 </span>
                                 </br>
                                 <label>

@@ -82,7 +82,7 @@ Class RD_Email
         $this->km = $Km;
         $this->etatInterieur = $EtatInterieur;
         $this->etatExterieur = $EtatExterieur;
-        $this->idVehicule = base64_decode(urldecode($IdVehicule));
+        $this->idVehicule = $IdVehicule;
         
         $this->mail = new PHPMailer;
 
@@ -109,10 +109,32 @@ Class RD_Email
                 $body .= "Courriel: " . $this->email . "</br>";
                 if( $this->commentaire != "" )
                     $body .= "Commentaire: " . $this->commentaire . "</br></br>";
-                $body .= "Infos demandées au sujet de: " . $this->idVehicule;
+                $body .= "Infos demandées au sujet de: <a href='";
+                $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
+                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
                 break;
-            case TypeEmail::PlanifierEssaiRoutier:break;
-            case TypeEmail::ObtenirPrix:          break;
+            case TypeEmail::PlanifierEssaiRoutier:
+                $body = "Demande d'essai routier de la part de: " . $this->prenom . " " . $this->nom . "</br>";
+                $body .= "Ville: " . $this->ville . "</br>";
+                $body .= "Telephone: " . $this->telephone . "</br>";
+                $body .= "Courriel: " . $this->email . "</br>";
+                if( $this->commentaire != "" )
+                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                $body .= "Infos demandées au sujet de: <a href='";
+                $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
+                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
+                break;
+            case TypeEmail::ObtenirPrix:          
+                $body = "Demande de prix de la part de: " . $this->prenom . " " . $this->nom . "</br>";
+                $body .= "Ville: " . $this->ville . "</br>";
+                $body .= "Telephone: " . $this->telephone . "</br>";
+                $body .= "Courriel: " . $this->email . "</br>";
+                if( $this->commentaire != "" )
+                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                $body .= "Infos demandées au sujet de: <a href='";
+                $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
+                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
+                break;
             case TypeEmail::DemandFinancement:    break;
             case TypeEmail::EvaluerEchange:       break;
         }

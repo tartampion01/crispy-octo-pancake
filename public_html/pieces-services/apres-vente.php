@@ -20,7 +20,7 @@
                         <p>Le centre de Drummondville est mandataire SAAQ et est ainsi en mesure d'inspecter votre véhicule lourd selon les normes de la Société de l'assurance automobile du Québec (SAAQ).</p>
                         <h2>Heures d'ouvertures des départements des pièces et services</h2>
                         <p>Votre camion est vital à l'exercice de vos fonctions. Chez Réseau Dynamique tout est mis en oeuvre pour que vous repreniez la route le plus rapidement possible. Ainsi, vous profitez d'heures d'ouverture élargies dans chacun de nos 
-                            <a name="hyperlien" href="<?php RD_PageLink::getHref(folder::Root,page::NousJoindre) ?>">centres de service</a>.</p>
+                            <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">centres de service</a>.</p>
                         <p>Offrez à votre camion un soin de première qualité qui maintiendra la valeur de votre camion lourd tout au long de votre utilisation jusqu'au moment de sa revente.</p>
                     </div>
                 </div>

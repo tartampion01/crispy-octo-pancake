@@ -27,7 +27,7 @@
                                     if( count($emplois) > 0){
                                         foreach($emplois as $emploi){?>
                                             <label>Titre :</label>
-                                            <a name="hyperlien" href="<?php RD_PageLink::getHref(folder::Root,page::Carrieres); echo '?emp=' . $emploi->lienEncode; ?>">
+                                            <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres). '?emp=' . $emploi->lienEncode; ?>">
                                                 <?php echo $emploi->titre;?>
                                             </a></br>
                                     <?php }
@@ -80,7 +80,7 @@
                                         <?php echo $emploi->contact; ?>
                                     
                                     <h4>Postulez</h4>
-                                    <a name="hyperlien" href="<?php RD_PageLink::getHref(folder::Root,page::Postuler); echo '?emp=' . $emploi->lienEncode; ?>">Postulez en ligne!</a>
+                                    <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Postuler) . '?emp=' . $emploi->lienEncode; ?>">Postulez en ligne!</a>
                                 <?php
                                 }
                                 else {
@@ -91,7 +91,7 @@
                                     echo "</br><hr>";
                                     foreach(RD_Emploi::getLinkEmploisCourants(0) as $emploi){?>
                                         <label>
-                                            <a name="hyperlien" href="<?php RD_PageLink::getHref(folder::Root,page::Carrieres); echo '?emp=' . $emploi->lienEncode; ?>">
+                                            <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres) . '?emp=' . $emploi->lienEncode; ?>">
                                                 <?php echo $emploi->titre;?>
                                             </a></label>
                                         </br>

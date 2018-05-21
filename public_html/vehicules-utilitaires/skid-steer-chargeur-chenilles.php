@@ -26,7 +26,7 @@
                                     <p>Jamais plus vous n'aurez à hésiter quant au moyen à utiliser pour soulever une charge. Les moteurs au diesel aspiré des chargeurs à chenilles de Yanmar peuvent soulever des tonnes allant jusqu'à une tonne et demie en consommant peu d'essence.</p>
                                     <p><strong>Fiable dans les moments les plus difficiles.</strong>Vous ne pouvez vous permettre un maillon faible qui cessera de fonctionner au moment où vous en aurez le plus besoin. La technologie anti-décrochage de Yanmar ajuste automatiquement la pompe hydrostatique. Ainsi, même si la charge soulevée augmente, la puissance du moteur reste maintenue.</p>
                                     <p>Que dire de plus? Venez les découvrir dès maintenant à votre 
-                                        <a name="hyperlien" href="<?php RD_PageLink::getHref(folder::Root,page::NousJoindre) ?>">succursale Réseau Dynamique</a> la plus près!</p>
+                                        <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">succursale Réseau Dynamique</a> la plus près!</p>
                                     <p><a name="hyperlien" onclick="javascript:RegisterClick(this);" href="http://yanmar.com/" target="_blank">Visitez le site officiel de Yanmar</a></p>
                                 </span>
                             </div>

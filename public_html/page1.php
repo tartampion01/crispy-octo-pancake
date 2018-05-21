@@ -294,7 +294,7 @@ ID:<input type="text" id="tbShowTruck" name="tbShowTruck" value="" text="" />
 <script id="resultsTemplate" type="text/x-jquery-tmpl">
     
     <div class="FacetedResultTemplate DefaultResultContainer">
-        <a href="details.php?id=${id}">
+        <a href="details.php?id=${encodeURI(btoa(id))}">
             <div class="ResultImage">
                 <img src="http://www.reseaudynamique.com/gpc/_media/image/111000/N-3686_250x0.jpg" title="" alt="">
                 <div class="imgPromo" style="display: none;"></div>

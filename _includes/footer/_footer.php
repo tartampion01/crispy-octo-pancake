@@ -11,8 +11,8 @@
                 <p>Réseau Dynamique, 2018</p>
                 <p brokerpersistance="0">Réalisé par <a name="hyperlien" onclick="" href="#" target="_blank">sallard!</a></p>
                 <p>
-                    <a name="hyperlien" onclick="" href="<?php RD_PageLink::getHref(folder::Root,page::MentionsLegales) ?>" target="_self">Mentions légales</a>&nbsp;| 
-                    <a name="hyperlien" onclick="" href="<?php RD_PageLink::getHref(folder::Root,page::PlanSite) ?>" target="_self">Plan du site</a>
+                    <a name="hyperlien" onclick="" href="<?php echo RD_PageLink::getHref(folder::Root,page::MentionsLegales); ?>" target="_self">Mentions légales</a>&nbsp;| 
+                    <a name="hyperlien" onclick="" href="<?php echo RD_PageLink::getHref(folder::Root,page::PlanSite); ?>" target="_self">Plan du site</a>
                 </p>
             </div>
         </div>

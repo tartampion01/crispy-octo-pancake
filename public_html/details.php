@@ -1,7 +1,7 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <?php
     $camion = new RD_Camion(null);
-    $camion->load_new(urldecode($_GET["k"]));
+    $camion->load_new(base64_decode(urldecode($_GET["id"])));
 ?>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
@@ -39,7 +39,7 @@
                                     <div id="" class="forBroker">
                                         <span id="" class="icon"><img id="" name="image" title="" src="/_assets/images/menu_images/icon-annee.png" alt="Année"></span>
                                         <span id="" class="forBroker annee">Année :&nbsp;</span>
-                                        <span><?php echo $camion->annee ?></span>
+                                        <span><?php echo $camion->strAnnee ?></span>
                                     </div>
                                     <div id="" class="forBroker">
                                         <span id="" class="icon"><img id="" name="image" title="" src="/_assets/images/menu_images/icon-inventaire.png" alt="Inventaire"></span>
@@ -248,22 +248,22 @@
                         </div>
                     </div>
                     <div id="" class="options">
-                        <a id="" class="demandeDinfo" name="hyperlien" onclick="javascript:RegisterClick(this);" href="<?php RD_PageLink::getHref(folder::Root, page::DemandeInformation); echo "?id=" . urlencode(base64_encode($camion->id)); ?>" target="_self">
+                        <a id="" class="demandeDinfo" name="hyperlien" onclick="javascript:RegisterClick(this);" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeInformation) . "?id=" . $camion->id_encode; ?>" target="_self">
                             Demande d'information
                         </a>
-                        <a id="" class="essaiRoutier" name="hyperlien" onclick="javascript:RegisterClick(this);" href="<?php RD_PageLink::getHref(folder::Root, page::PlanifierEssaiRoutier) ?>" target="_self">
+                        <a id="" class="essaiRoutier" name="hyperlien" onclick="javascript:RegisterClick(this);" href="<?php echo RD_PageLink::getHref(folder::Root, page::PlanifierEssaiRoutier) . "?id=" . $camion->id_encode; ?>" target="_self">
                             Planifier un essai routier
                         </a>
-                        <a id="" class="trouverConcessionnaire" name="hyperlien" onclick="javascript:RegisterClick(this);" href="<?php RD_PageLink::getHref(folder::Root, page::NousJoindre) ?>" target="_self">
+                        <a id="" class="trouverConcessionnaire" name="hyperlien" onclick="javascript:RegisterClick(this);" href="<?php echo RD_PageLink::getHref(folder::Root, page::NousJoindre); ?>" target="_self">
                             Trouver un concessionnaire
                         </a>
-                        <a id="" class="orange" name="hyperlien" onclick="javascript:RegisterClick(this);" href="<?php RD_PageLink::getHref(folder::Root, page::ObtenirPrix) ?>" target="_self">
+                        <a id="" class="orange" name="hyperlien" onclick="javascript:RegisterClick(this);" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode; ?>" target="_self">
                             Obtenir un prix
                         </a>
-                        <a id="" class="orange" name="orange" onclick="javascript:RegisterClick(this);" href="<?php RD_PageLink::getHref(folder::Root, page::DemandeFinancement) ?>">
+                        <a id="" class="orange" name="orange" onclick="javascript:RegisterClick(this);" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeFinancement) . "?id=" . $camion->id_encode; ?>">
                             Demande de financement
                         </a>
-                        <a id="" class="orange" name="orange" onclick="javascript:RegisterClick(this);" href="<?php RD_PageLink::getHref(folder::Root, page::EvaluerEchange) ?>">
+                        <a id="" class="orange" name="orange" onclick="javascript:RegisterClick(this);" href="<?php echo RD_PageLink::getHref(folder::Root, page::EvaluerEchange) . "?id=" . $camion->id_encode; ?>">
                             Évaluer mon échange
                         </a>
                     </div>

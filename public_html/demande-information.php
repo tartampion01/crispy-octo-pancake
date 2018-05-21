@@ -62,7 +62,7 @@
                                         $tel = RD_Utils::test_input($_POST["tbTelephone"]);
                                         
                                     
-                                    $comm = RD_Utils::test_input($_POST["tbCommentaire"]);
+                                    $comm = isset($_POST["tbCommentaire"]) ? RD_Utils::test_input($_POST["tbCommentaire"]) : "";
                                     
                                     if(!empty($_POST["hidVehiculeId"]))
                                         $VehiculeId = $_POST["hidVehiculeId"];
@@ -80,11 +80,8 @@
                                 }
                                 else
                                 {
-                                    if( isset($_REQUEST['sent']))
-                                        if( $_REQUEST['sent'] == "true" )
-                                            echo "<label>Votre demande a bien été envoyée</label>";
-                                        if( isset($_REQUEST['id']))
-                                            $VehiculeId = $_REQUEST['id'];
+                                    if( isset($_GET['id']))
+                                        $VehiculeId = $_GET['id'];
                                 }
                             ?>
                             <div id="" class="formulaire" style="visibility: <?php echo $divVisibility; ?>">

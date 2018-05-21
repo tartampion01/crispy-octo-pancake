@@ -7,6 +7,8 @@ class RD_Camion{
     public $new = 1;
     /* CHAMPS INVENTORY -> Camions neufs */
     public $id = 0;
+    /** field saved as urlencode(base64_encode(id)); */
+    public $id_encode = 0;
     public $modele = '';
     public $config = '';
     public $serial = '';
@@ -134,6 +136,7 @@ class RD_Camion{
     
         $this->new = 1;
         $this->id = $r['id'];
+        $this->id_encode = urlencode(base64_encode($r['id']));
         $this->marque = $r['marque'];
         $this->modele = $r['Model'];
         $this->annee = $r['strAnnee'];
@@ -169,6 +172,7 @@ class RD_Camion{
     
         $this->new = 0;
         $this->id = $r['id'];
+        $this->id_encode = urlencode(base64_encode($r['id']));
         $this->marque = $r['marque'];
         $this->modele = $r['modele'];
         $this->annee = $r['strAnnee'];
