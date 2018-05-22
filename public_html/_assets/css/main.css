@@ -4169,6 +4169,10 @@ div {  }
 }
 
 
+/* Search result links - added by JP */
+.results-container a:hover {
+    text-decoration: none;
+}
 /* Loading overlay - added by JP */
 .loading-overlay {
   position: fixed;

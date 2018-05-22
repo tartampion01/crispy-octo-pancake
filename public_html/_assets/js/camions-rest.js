@@ -1,5 +1,6 @@
 $( document ).ready(function() {
     
+    // Bind click event on each filter link
     $('.filter-link').each(function(){
         
         $(this).on('click', function() {
@@ -113,20 +114,19 @@ function fetchRecords(field, value, resetPage) {
                             fetchRecords(field, value, false);
                         }
                     }));
-
-                    //$('.pagination').twbsPagination("changeTotalPages", 50, 40);
-
-                    $('html, body').animate({
-                        scrollTop: $(".titrePage").offset().top
-                    }, 750);
                 }
                 else {
                     $('.results-container').html('AUCUN PRODUIT');
                 }
             }
             else {
-                $('.results-container').html('PROBLÈME AVEC LES DONNÉES');
+                $('.results-container').html(data.message);
             }
+            
+            // Scroll page to top of search results
+            $('html, body').animate({
+                scrollTop: $(".titrePage").offset().top
+            }, 750);
 
             // Hide loading spinner
             $('.loading-overlay').hide();

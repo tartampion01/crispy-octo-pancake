@@ -79,7 +79,7 @@ if($num>0){
 }
 else{
     echo json_encode(
-        array("message" => "Pas de camions trouvés")
+        array("message" => "Aucun résultat n'a été trouvé pour votre recherche.")
     );
 }
 ?>
