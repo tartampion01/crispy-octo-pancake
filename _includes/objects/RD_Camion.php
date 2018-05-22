@@ -189,6 +189,7 @@ class RD_Camion{
         $this->hp = $r['hp'];
 
         $this->pictures = loadPictures();
+        
         return true;
     }
 
@@ -231,22 +232,6 @@ class RD_Camion{
         return $stmt;
     }
     
-    function readTest($params){
-        
-        // decode search parameters
-        $params = json_decode($params);
-        
-        // select all query
-        $query = "SELECT * FROM inventory WHERE $params->field = '$params->value' AND DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
- 
-        // prepare query statement
-        $stmt = $this->conn->prepare($query);
-        // execute query
-        $stmt->execute();
-        
-        return $stmt;
-    }
-    
     function readTestCount($params){
         
         // decode search parameters
@@ -262,6 +247,19 @@ class RD_Camion{
         
         return $stmtCount;
     }
+    
+    function getPictures($id)
+    {
+        $query = "SELECT base64_picture FROM inv_pictures WHERE product_id=$id ORDER BY intorder;";
+        //echo $query;
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+        // execute query
+        $stmt->execute();
+        
+        return $stmt;
+    }
+    
 }
 
 /* CHAMPS TABLE INVENTORY
