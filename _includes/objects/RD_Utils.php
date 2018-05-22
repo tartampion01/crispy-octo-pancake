@@ -11,7 +11,8 @@ class RD_Utils
     
     public static function GetDropDownSuccursalesBonTravail($succursaleToSelect)
     {
-        $ddlDebut = "<select id='ddlSuccursales' class='dropDownBonTravailDemandePieces'>";
+        //echo "----- $succursaleToSelect ------";
+        $ddlDebut = "<select id='ddlSuccursales' name='ddlSuccursales' class='dropDownBonTravailDemandePieces'>";
         $options = "<option value='Q2FtaW9ucyBJbnRlci1BbmpvdQ=='>Camions Inter-Anjou</option>";
         $options .= "<option value='Q2FtaW9ucyBJbnRlci1MYW5hdWRpw6hyZQ=='>Camions Inter-Lanaudière</option>";
         $options .= "<option value='Q2FtaW9ucyBJbnRlcm5hdGlvbmFsIMOJbGl0ZQ=='>Camions International Élite</option>";
@@ -26,7 +27,7 @@ class RD_Utils
         
         $strIndex = strrpos( $options , $succursaleToSelect );
         if( $strIndex )
-            $options = substr_replace($options, " SELECTED", $strIndex-1, 0);
+            $options = substr_replace($options, ' selected="selected"', $strIndex + strlen($succursaleToSelect) + 1, 0);
         
         echo $ddlDebut . $options . $ddlFin;
     }
@@ -34,7 +35,7 @@ class RD_Utils
     public static function GetDropDownSuccursalesDemandePiece($succursaleToSelect)
     {
         // VALUE == Emails en base64
-        $ddlDebut = "<select id='ddlSuccursales' class='dropDownBonTravailDemandePieces'>";
+        $ddlDebut = "<select id='ddlSuccursales' name='ddlSuccursales' class='dropDownBonTravailDemandePieces'>";
         $options = "<option value='cGllY2VzQGNhbWlvbnNpbnRlcmFuam91LmNvbQ=='>Camions Inter-Anjou</option>";
         $options .= "<option value='ZXJpY2JAY2FtaW9uc2ludGVybGFuYXVkaWVyZS5jb20='>Camions Inter-Lanaudière</option>";
         $options .= "<option value='cGRlc3Jvc2llcnNAaW50ZXItcXVlYmVjLmNvbQ=='>Camions International Élite</option>";
@@ -118,5 +119,32 @@ class RD_Utils
 
         return $pic;
     }
+    
+    function validateRecaptcha($captchaResponse){
+    global $applicationConfig;
+    
+    $postParams = array(
+        'secret'=>$applicationConfig['google.recaptcha.privateKey'],
+        'response'=>$captchaResponse,
+        'remoteip'=>(isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'])
+    );
+    $peer_key = version_compare(PHP_VERSION, '5.6.0', '<') ? 'CN_name' : 'peer_name';
+    $options = array(
+        'http' => array(
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($postParams, '', '&'),
+            'verify_peer' => true,
+            $peer_key => 'www.google.com',
+        ),
+    );
+    $context = stream_context_create($options);
+    
+    $results = json_decode(file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, $context));
+    if(!$results)
+        return false;
+    
+    return $results->success;
+}
 }
 ?>

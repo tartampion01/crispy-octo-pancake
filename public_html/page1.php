@@ -149,7 +149,7 @@
                         <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle" tabindex="">Marque</a>
                             <ul style="">
-                                <?PHP $results = selectNewTrucksDisctinctCriteria('marque'); ?>
+                                <?PHP $results = selectNewTrucksDisctinctCriteria('marque', 'engine <> "-" AND ' ); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
                                     <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>'>
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?marque=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
@@ -161,7 +161,7 @@
                         <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle" tabindex="">Modèle</a>
                             <ul style="">
-                                <?PHP $results = selectNewTrucksDisctinctCriteria('Model'); ?>
+                                <?PHP $results = selectNewTrucksDisctinctCriteria('Model', 'engine <> "-" AND '); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
                                     <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>'>
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?Model=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
@@ -173,7 +173,7 @@
                         <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle" tabindex="">Transmission</a>
                             <ul style="">
-                                <?PHP $results = selectNewTrucksDisctinctCriteria('transtype'); ?>
+                                <?PHP $results = selectNewTrucksDisctinctCriteria('transtype', ''); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
                                     <li class="GpcMenuItem filter-link" data-field='transtype' data-value='<?PHP echo $key ?>'>
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?transtype=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
@@ -185,7 +185,7 @@
                         <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle" tabindex="">Moteur</a>
                             <ul style="">
-                                <?PHP $results = selectNewTrucksDisctinctCriteria('engine'); ?>
+                                <?PHP $results = selectNewTrucksDisctinctCriteria('engine', ''); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
                                     <li class="GpcMenuItem filter-link" data-field='engine' data-value='<?PHP echo $key ?>'>
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?engine=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>

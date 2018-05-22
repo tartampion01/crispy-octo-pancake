@@ -1,4 +1,18 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
+<script type='text/javascript'>
+    function setOption(id, value)
+    {
+        var selectBox = document.getElementById(id),
+        options = selectBox.options;
+
+        for (var i in options) {
+            if (options[i].value == value) {
+                selectBox.selectedIndex = i;
+                return;
+            }
+        }
+    }
+</script>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
@@ -9,88 +23,217 @@
                 </div>
                 <div class="contenu">
                     <div class="contenu2">
-                        <div>
-                            <div class="demandeBon">
-                                <?php
-                                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        <?php
+                        $divVisibility = "visible";
+
+                        $nomCompagnieErr = $nomResponsableErr = $emailErr = $telErr = $vinErr = $uniteErr = $kmErr = $bonCommandeErr = $travauxErr = $noteSpecialeErr = $instructionsErr = $acceptErr = $prixMaxErr = $captchaErr = "";
+                        $succursale = $nomCompagnie = $nomResponsable = $email = $tel = $vin = $unite = $km = $bonCommande = $travaux = $noteSpeciale = $instructions = $prixMax = "";
+                        $fileList = array();
+
+                        $errorCount = 0;
+
+                        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+                            $succursale = $_POST['ddlSuccursales'];
+                            
+                            if (empty($_POST["tbNomCompagnie"])){
+                                $nomCompagnieErr = "Champ obligatoire";
+                                $errorCount += 1;
+                            }
+                            else
+                                $nomCompagnie = RD_Utils::test_input($_POST["tbNomCompagnie"]);
+
+                            if (empty($_POST["tbNomResponsable"])){
+                                $nomResponsableErr = "Champ obligatoire";
+                                $errorCount += 1;
+                            }
+                            else
+                                $nomResponsable = RD_Utils::test_input($_POST["tbNomResponsable"]);
+
+                            if (empty($_POST["tbTelephone"])){
+                                $telErr = "Champ obligatoire";
+                                $errorCount += 1;
+                            }
+                            else
+                                $tel = RD_Utils::test_input($_POST["tbTelephone"]);
+
+                            if (empty($_POST["tbCourriel"])){
+                                //$emailErr = "Champ obligatoire";
+                                //$errorCount += 1;
+                            }
+                            else {
+                                $email = RD_Utils::test_input($_POST["tbCourriel"]);
+                                if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                                    $emailErr = "Format invalide";
+                                    $errorCount += 1;
+                                }
+                            }
+
+                            if (empty($_POST["tbVin"])){
+                                $vinErr = "Champ obligatoire";
+                                $errorCount += 1;
+                            }
+                            else{
+                                $vin = RD_Utils::test_input($_POST["tbVin"]);
+                                if(strlen($vin) < 8 )
+                                {
+                                    $vinErr = "Veuillez entrer les 8 derniers caractères";
+                                    $errorCount += 1;
+                                }
+                            }
+
+                            if (empty($_POST["tbBonCommande"])){
+                                $bonCommandeErr = "Champ obligatoire";
+                                $errorCount += 1;
+                            }
+                            else
+                                $bonCommande = RD_Utils::test_input($_POST["tbBonCommande"]);
+
+                            $accept = $_POST['cbAccept'];
+                            if($accept == 0){
+                                $acceptErr = "Cette case est obligatoire";
+                                $errorCount += 1;
+                            }
+
+                            if(empty($_POST['rbInstruction'])){
+                                $instructionsErr = "Il est obligatoire de choisir une instruction";
+                                $errorCount += 1;
+                            }
+                            else{
+                                $instructions = $_POST['rbInstruction'];
+                                if( $instructions == TypeInstructionsBonTravail::ProcederMaisAppelerSiPrixExcede )
+                                {
+                                    if(empty($_POST['tbPrixReparationMax']))
+                                    {
+                                        $prixMaxErr = "Veuillez spécifier un montant";
+                                        $errorCount += 1;
                                     }
                                     else
                                     {
-                                        if(isset($_REQUEST["succursale"]))
-                                            echo RD_Utils::GetDropDownSuccursalesBonTravail($_REQUEST["succursale"]);
+                                        if( !is_numeric($_POST['tbPrixReparationMax'])){
+                                            $prixMaxErr = "Veuillez spécifier un montant";
+                                            $errorCount += 1;
+                                        }
+                                        else
+                                            $prixMax = $_POST['tbPrixReparationMax'];
                                     }
-                                ?>
-                                <input name="" type="text" placeholder="Nom de la compagnie *">
-                                <input name="fullname" type="text" placeholder="Nom du responsable *" itemx-autocompletetype="name-full" autocomplete="on">
-                                <input name="phone" type="text" placeholder="# de téléphone *" itemx-autocompletetype="phone-full" autocomplete="on">
-                                <input name="email" type="text" placeholder="Votre courriel" itemx-autocompletetype="email" autocomplete="on">
-                                <input name="vin" type="text"  placeholder="VIN (8 derniers)" itemid="">
-                                <input name="unite" type="text"  placeholder="Unité" itemid="">
-                                <input name="km" type="text"  placeholder="Kilométrage" itemid="">
-                                <input name="boncommande" type="text"  placeholder="Bon de commande *" itemid="">
-                                
-                                <div class="supPlainte" data-staticclassnames="supPlainte" itemid="" style="display: none;">
-                                    <a class="" name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
-                                </div>
-                                <div class="plainte clear">
-                                    <div class="champ"><input name="" type="text" class="" placeholder="Description des travaux à faire" itemid=""></div>
-                                    <div class="supPlainte" data-staticclassnames="supPlainte" itemid=""><a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a></div>
-                                </div>
-                                <div class="addPlainte">
-                                    <p>
-                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);" target="_self">[+] Ajouter d'autres travaux à faire</a>
-                                    </p>
-                                </div>
-                            
-                                <div class="ReplacementDiv">
-                                    <span class="UploadFileText">Inclure un document (PDF, JPG, PNG, DOC, XLS)</span>
-                                    <span class="ReplacementButton" style="position: relative; overflow: hidden; cursor: pointer;">Parcourir
-                                        <input type="file" name="" class="ReplacementButtonInput" title="">
-                                    </span>
-                                </div>
-                            
-                                <textarea rows="2" cols="20" placeholder="Note spéciale"></textarea>
+                                }
+                            }
 
-                                <p>&nbsp;</p>
-                                <h3>Conditions et autorisation de réparation</h3>
-                                <p></p>
-                                <span>
-                                    <font color="#ff0000">À NOTER - Suite à l'envoi de ce formulaire, vous devrez prendre rendez-vous avec</font>
-                                        <a href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>"> votre concessionaire</a>.
-                                </span>
-                                </br>
-                                <label>
-                                    <span class="check"><input type="checkbox" title=""></span>
-                                    J'autorise par ceci le travail de réparation ci-dessus à être effectué avec les matériaux nécessaires. Vous ne serez pas jugé responsable de la perte ou des dommages au véhicule, ou aux articles laissés dans le véhicule, en cas de feu, de vol, d'accident ou de toute autre cause indépendante de votre volonté. J'autorise par ceci vous et vos employés à opérer le véhicule ci-dessus décrit à des fin d'essais routier et ou d'inspections. Je reconnais que vous avez un lien légal sur le véhicule pour recouvrir la valeur des travaux encourue sur le véhicule.
-                                </label>
-                                <strong>Instructions</strong>
-                                <label class="hideDrummond"><input type="radio" name="instruction">&nbsp;Je demande un estimé écrit avant le début des travaux.</label>
-                                <input type="radio" name="instruction">&nbsp;Veuillez procéder aux réparations mais appelez-moi pour approbation avant de continuer si le prix excède $ 
-                                <span class="prixSpan">
-                                    <input name="" type="text"></span>
-                                <label class="widthError">
-                                    <input type="radio" name="instruction">&nbsp;Je ne veux pas d'évaluation et vous pouvez procéder aux reparations.</label>
-                                <p class="hideDrummond">À cause de l'espace limité de stationnement nous ne pouvons remiser un véhicule pendant des périodes prolongées. Veuillez noter qu'à compter du sixième jour suivant la fin des réparations, des frais de $20.00 par jour de remisage seront exigés jusqu'à ce que le véhicule soit récupéré.</p>
-                                <div>
-                                    <span class="Captcha_Description">Veuillez entrer le code ci-dessous : </span>
-                                </div>
-                                <div class="CaptchaRow" style="clear:both;">
-                                    <div class="CaptchaFirstCell" style="width:px;float:left;">
-                                        <img class="Captcha_Image" src="/CaptchaImage.ashx?Width=200&amp;Height=50&amp;RequestGuid=c3e16ceb-3407-4512-a6d7-5cef180dc58e&amp;SiteGuid=0b9658dc-44d6-4190-91f0-5c230e59f7e8"></div>
-                                        <div class="CaptchaSecondCell" style="margin-left:10px;margin-top:10px;float:left;">
-                                            <span class="Captcha_Help">Vous ne réussissez pas à lire le texte?<br></span>
-                                            <a class="Captcha_Refresh" href="javascript:return false;" tabindex="0">Générer un nouveau code</a></div>
-                                            <div style="clear:both;"></div>
-                                </div>
-                                <div>
-                                    <span class="Captcha_Text">Texte :</span><input name="" type="text" class="Captcha_TextBox">
-                                </div>
-                            <input type="hidden" name="" itemid="">
-                            <input type="submit" name="" value="Soumettre" class="">
+                            if(!RD_Utils::validateRecaptcha($_POST['g-recaptcha-response'])){
+                                $errorCount += 1;
+                                $captchaErr = 'Veuillez remplir le <i>CAPTCHA</i> correctement.';
+                            }
+
+                            $unite = $_POST['tbUnite'];
+                            $km = $_POST['tbKm'];
+                            $travaux = $_POST['tbTravaux'];
+                            $noteSpeciale = $_POST['tbNoteSpeciale'];
+
+                            // ENVOI EMAIL
+                            if(isset($_POST['btnSendMail']) && $errorCount == 0)
+                            {
+                                $RDemail = new RD_Email();
+                                $RDemail->loadBonTravail(TypeEmail::BonTravail,$succursale,$nomCompagnie,$nomResponsable,$tel,$email,$vin,$unite,$km,$bonCommande,$travaux,$noteSpeciale,$instructions,$prixMax);
+                                if($RDemail->send()){
+                                    $divVisibility = "hidden";
+                                    ?><h2>Votre demande a bien été envoyée</h2><?php
+                                }
+                            }
+                            else
+                            {
+                                echo RD_Utils::GetDropDownSuccursalesBonTravail($_POST["ddlSuccursales"]);
+                            }
+                        }
+                        else
+                        {
+                            if(isset($_REQUEST["succursale"]))
+                                echo RD_Utils::GetDropDownSuccursalesBonTravail($_REQUEST["succursale"]);
+                        }
+                        ?>
+                        <div class="demandeBon" style="visibility: <?php echo $divVisibility; ?>">
+                            <input name="tbNomCompagnie" id="tbNomCompagnie" placeholder="Nom de la compagnie *" type="text" class="" value="<?php echo $nomCompagnie;?>">
+                            <span class="error"><?php echo $nomCompagnieErr;?></span>
+
+                            <input name="tbNomResponsable" id="tbNomResponsable" type="text" placeholder="Nom du responsable *" itemx-autocompletetype="name-full" autocomplete="on" value="<?php echo $nomResponsable;?>">
+                            <span class="error"><?php echo $nomResponsableErr;?></span>
+
+                            <input name="tbTelephone" id="tbTelephone" type="text" placeholder="# de téléphone *" itemx-autocompletetype="phone-full" autocomplete="on" value="<?php echo $tel;?>">
+                            <span class="error"><?php echo $telErr;?></span>
+
+                            <input name="tbCourriel" id="tbEmail" type="text" placeholder="Votre courriel" itemx-autocompletetype="email" autocomplete="on" value="<?php echo $email;?>">
+                            <span class="error"><?php echo $emailErr;?></span>
+
+                            <input name="tbVin" id="tbVin" type="text" placeholder="VIN (8 derniers) *" value="<?php echo $vin;?>">
+                            <span class="error"><?php echo $vinErr;?></span>
+
+                            <input name="tbUnite" id="tbUnite" type="text"  placeholder="Unité *" value="<?php echo $unite;?>">
+                            <span class="error"><?php echo $uniteErr;?></span>
+
+                            <input name="tbKm" id="tbKm" type="text"  placeholder="Kilométrage" value="<?php echo $km;?>">
+                            <span class="error"><?php echo $kmErr;?></span>
+
+                            <input name="tbBonCommande" id="tbBonCommande" type="text"  placeholder="Bon de commande *" value="<?php echo $bonCommande;?>">
+                            <span class="error"><?php echo $bonCommandeErr;?></span>
+
+                            <div class="supPlainte" data-staticclassnames="supPlainte" itemid="" style="display: none;">
+                                <a class="" name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
                             </div>
-                        </div>
-                        <p></p>
+                            <div class="plainte clear">
+                                <input name="tbTravaux" id="tbTravaux" type="text" class="" placeholder="Description des travaux à faire" value="<?php echo $travaux; ?>">
+                            </div>
+                            <div class="supPlainte" data-staticclassnames="supPlainte" itemid="">
+                                <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                            </div>
+                            <div class="addPlainte">
+                                <p>
+                                    <a name="hyperlien" onclick="javascript:RegisterClick(this);" target="_self">[+] Ajouter d'autres travaux à faire</a>
+                                </p>
+                            </div>
 
+                            <div class="ReplacementDiv">
+                                <span class="UploadFileText">Inclure un document (PDF, JPG, PNG, DOC, XLS)</span></br>
+                                <span class="ReplacementButton" style="position: relative; overflow: hidden; cursor: pointer;">
+                                    <input type="file" accept=".pdf,.jpg,.png,.doc,.xls" name="FileUpload" id="FileUpload" class="ReplacementButtonInput" title="">
+                                </span>
+                            </div>
+
+                            <textarea id="tbNoteSpeciale" name="tbNoteSpeciale" rows="2" cols="20" placeholder="Note spéciale" value="<?php echo $noteSpeciale; ?>"></textarea>
+
+                            <p>&nbsp;</p>
+                            <h3>Conditions et autorisation de réparation</h3>
+                            <p></p>
+                            <span>
+                                <font color="#ff0000">À NOTER - Suite à l'envoi de ce formulaire, vous devrez prendre rendez-vous avec</font>
+                                    <a href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>"> votre concessionaire</a>.
+                            </span>
+                            </br>
+                            <label>
+                                <span class="check"><input type="hidden" id="cbAccept" name="cbAccept" value="0"><input type="checkbox" id="cbAccept" name="cbAccept" title="" value="1"></span>
+                                <span class="error"><?php echo $acceptErr;?></span>
+                                J'autorise par ceci le travail de réparation ci-dessus à être effectué avec les matériaux nécessaires. Vous ne serez pas jugé responsable de la perte ou des dommages au véhicule, ou aux articles laissés dans le véhicule, en cas de feu, de vol, d'accident ou de toute autre cause indépendante de votre volonté. J'autorise par ceci vous et vos employés à opérer le véhicule ci-dessus décrit à des fin d'essais routier et ou d'inspections. Je reconnais que vous avez un lien légal sur le véhicule pour recouvrir la valeur des travaux encourue sur le véhicule.
+                            </label>
+                            <strong>Instructions</strong>
+                            <label class="hideDrummond"><input type="radio" id="rbInstruction" name="rbInstruction" value="1">&nbsp;Je demande un estimé écrit avant le début des travaux.</label>
+                            <input type="radio" name="rbInstruction" id="rbInstruction" value="2">&nbsp;Veuillez procéder aux réparations mais appelez-moi pour approbation avant de continuer si le prix excède $ 
+                            <span class="prixSpan">
+                                <input name="tbPrixReparationMax" id="tbPrixReparationMax" type="text"></span>
+                                <?php echo $prixMaxErr;?></span>
+                            <label class="widthError">
+                                <input type="radio" name="rbInstruction" id="rbInstruction" value="3">&nbsp;Je ne veux pas d'évaluation et vous pouvez procéder aux reparations.</label>
+                                <span class="error"><?php echo $instructionsErr;?></span>
+                            <p class="hideDrummond">À cause de l'espace limité de stationnement nous ne pouvons remiser un véhicule pendant des périodes prolongées. Veuillez noter qu'à compter du sixième jour suivant la fin des réparations, des frais de $20.00 par jour de remisage seront exigés jusqu'à ce que le véhicule soit récupéré.</p>
+
+                            <div class="g-recaptcha" data-sitekey="<?php echo $applicationConfig['google.recaptcha.siteKey']; ?>"></div>
+                            <span class="error"><?php echo $captchaErr;?></span>
+                        <input type="hidden" name="" itemid="">
+                        <input type="submit" name="btnSendMail" id="btnSendMail" value="Soumettre" class="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <script type="text/javascript">  //<![CDATA[
   $(function () {
     var $vin = $(".N2287dc7c24134868b9ccf7364a871645CssClass"),
@@ -263,5 +406,6 @@
     </div>
     </form>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
+    <script src="https://www.google.com/recaptcha/api.js?hl=fr-CA" async defer></script>
 </body>
 </html>
