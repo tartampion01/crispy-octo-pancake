@@ -276,27 +276,36 @@
             <div class="FacetedExplorerClear GpcClear">
                 </div>
     </div>
+        <!--
         exemples REST
         <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>
         <a href="_includes/objects/read.php?field=Model&value=4300">4300</a></br>
         <a href="_includes/objects/read.php?field=transtype&value=AISIN A460">AISIN A460</a></br>
         <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>
         <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>
-        <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>
-ID:<input type="text" id="tbShowTruck" name="tbShowTruck" value="" text="" />
-<input type="submit" id="btnShowTruck" name="btnShowTruck" text="Afficher">
+        <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>        
+        ID:<input type="text" id="tbShowTruck" name="tbShowTruck" value="" text="" />
+        <input type="submit" id="btnShowTruck" name="btnShowTruck" text="Afficher">
+        -->
+        <?php
+            //echo '<img src="' . RD_Utils::getBase64Image() . '" />';
+            //echo '<img src="data:image/jpeg;base64,' . RD_Utils::getBinaryImage() . '" />';
+        ?>
     </form>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
     
     <div class="loading-overlay">Loading&#8230;</div>
 
 <!-- Start : Javascript template -->
+
+<img class="" name="image" title="" src="../../_assets/images/camions/noImage.png" alt="Camions, Remorques et Véhicules">
+
 <script id="resultsTemplate" type="text/x-jquery-tmpl">
     
     <div class="FacetedResultTemplate DefaultResultContainer">
         <a href="details.php?id=${encodeURI(btoa(id))}">
-            <div class="ResultImage">
-                <img src="http://www.reseaudynamique.com/gpc/_media/image/111000/N-3686_250x0.jpg" title="" alt="">
+            <div class="ResultImage">                
+                <img src="${pictures[0]}" title="" alt="">
                 <div class="imgPromo" style="display: none;"></div>
             </div>
             <div class="ResultContent">

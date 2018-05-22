@@ -39,6 +39,21 @@ if($num>0){
         // just $name only
         extract($row);
  
+        $pictures = array();
+        $stmtPictures = $camion->getPictures($id);
+        $nbPics = $stmtPictures->rowCount();
+        if($nbPics > 0){
+            while ($rowPictures = $stmtPictures->fetch(PDO::FETCH_ASSOC)){
+                extract($rowPictures);
+                array_push($pictures, $base64_picture);
+            }
+        }
+        else
+        {
+            // Pas d'images dans db on met ceci
+            array_push($pictures, "../../_assets/images/camions/noimage.png");
+        }
+        
         $Camion_item=array(
             "id" => $id,
             "marque" => $marque,
@@ -53,7 +68,8 @@ if($num>0){
             "transmission" => $transmission,
             "transtype" => $transtype,
             "engine" => $engine,
-            "hp" => $hp
+            "hp" => $hp,
+            "pictures" => $pictures
         );
         
         array_push($Camions_arr["records"], $Camion_item);
