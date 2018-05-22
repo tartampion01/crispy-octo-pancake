@@ -221,20 +221,8 @@ class RD_Camion{
         $params = json_decode($params);
         
         // select all query
-        $query = "SELECT i.id, i.Model, i.config, i.serial, i.stock, i.ordernumber, i.ordersold, i.clientsold, i.initialsold, i.invoicedate, i.receivedate, i.bonus, i.credit, i.nointerestDate, i.checkprice, i.reqspa, i.salesprogram, i.salesterm, i.dealernet, i.profit, i.profit_type, i.retailprice, i.wb, i.equipment, i.demo, i.frontaxle, i.rearaxle, i.rearsuspension, i.tiresize, i.wheel, i.transmission, i.transtype, i.ratio, i.engine, i.hp, i.sleeper, i.specialequipment, i.color, i.dealer_id, i.location, i.resuserid, i.resdatetime, i.resclient, i.special1, i.specialprice1, i.special2, i.specialprice2, i.special3, i.specialprice3, i.special4, i.specialprice4, i.special5, i.specialprice5, i.marque, i.strAnnee, i.transoption, i.DisplayOnWebSite, i.intCarburantAlt,
-            p.name 
-            FROM inventory AS i 
-            INNER JOIN pictures AS p ON i.id = p.id 
-            WHERE $params->field = '$params->value' ORDER BY marque, Model ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+        $query = "SELECT * FROM inventory WHERE $params->field = '$params->value' ORDER BY marque, Model ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
  
-        // TODO Get all images for product
-        /*  SELECT i.id, i.Model, i.config, i.serial, i.stock, i.ordernumber, i.ordersold, i.clientsold, i.initialsold, i.invoicedate, i.receivedate, i.bonus, i.credit, i.nointerestDate, i.checkprice, i.reqspa, i.salesprogram, i.salesterm, i.dealernet, i.profit, i.profit_type, i.retailprice, i.wb, i.equipment, i.demo, i.frontaxle, i.rearaxle, i.rearsuspension, i.tiresize, i.wheel, i.transmission, i.transtype, i.ratio, i.engine, i.hp, i.sleeper, i.specialequipment, i.color, i.dealer_id, i.location, i.resuserid, i.resdatetime, i.resclient, i.special1, i.specialprice1, i.special2, i.specialprice2, i.special3, i.specialprice3, i.special4, i.specialprice4, i.special5, i.specialprice5, i.marque, i.strAnnee, i.transoption, i.DisplayOnWebSite, i.intCarburantAlt,
-            p.name 
-            FROM inventory AS i 
-            INNER JOIN pictures AS p ON i.id = p.id 
-            WHERE marque = 'International' ORDER BY marque, Model asc LIMIT 0, 12
-         */
-        
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
@@ -242,13 +230,30 @@ class RD_Camion{
         
         return $stmt;
     }
+    
+    function readTest($params){
+        
+        // decode search parameters
+        $params = json_decode($params);
+        
+        // select all query
+        $query = "SELECT * FROM inventory WHERE $params->field = '$params->value' AND DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+ 
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+        // execute query
+        $stmt->execute();
+        
+        return $stmt;
+    }
+    
     function readTestCount($params){
         
         // decode search parameters
         $params = json_decode($params);
         
         // select all query
-        $queryCount = "SELECT * FROM inventory WHERE $params->field = '$params->value' ORDER BY marque, Model ".$params->sortBy;
+        $queryCount = "SELECT * FROM inventory WHERE $params->field = '$params->value' AND DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy;
         
         // prepare query statement
         $stmtCount = $this->conn->prepare($queryCount);
@@ -256,18 +261,6 @@ class RD_Camion{
         $stmtCount->execute();
         
         return $stmtCount;
-    }
-    
-    function getPictures($id)
-    {
-        $query = "SELECT base64_picture FROM inv_pictures WHERE product_id=$id ORDER BY intorder";
-        //echo $query;
-        // prepare query statement
-        $stmt = $this->conn->prepare($query);
-        // execute query
-        $stmt->execute();
-        
-        return $stmt;
     }
 }
 
