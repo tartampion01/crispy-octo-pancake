@@ -37,11 +37,11 @@ function getNewTruck($id, $fieldCriteria='', $value='')
     return mysqli_query($conn, $sql);
 }
 
-function selectNewTrucksDisctinctCriteria($field)
+function selectNewTrucksDisctinctCriteria($field, $customCriteria)
 {
     global $conn;
     //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
-    $sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY COUNT DESC";
+    $sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE $customCriteria DisplayOnWebSite=1 GROUP BY $field ORDER BY COUNT DESC";
 
     $result = mysqli_query($conn, $sql);
     

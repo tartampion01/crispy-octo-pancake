@@ -10,6 +10,7 @@ interface TypeEmail
     const DemandFinancement = 4;
     const EvaluerEchange = 5;
     const InscriptionNextPart = 6;
+    const BonTravail = 7;
 }
 
 interface TypeVehicule
@@ -17,6 +18,13 @@ interface TypeVehicule
     const CamionNeuf = 1;
     const CamionUsage = 2;
     const Remorque = 3;
+}
+
+interface TypeInstructionsBonTravail
+{
+    const EstimeAvantDebutTravaux = 1;
+    const ProcederMaisAppelerSiPrixExcede = 2;
+    const PasDevaluation = 3;
 }
 
 Class RD_Email
@@ -38,7 +46,16 @@ Class RD_Email
     public $etatExterieur = '';
     public $idVehicule = '';
     public $mail = null;
-
+    public $vin = '';
+    public $unite = '';
+    public $bonCommande = '';
+    public $travaux = '';
+    public $responsable = '';
+    public $succursale = '';
+    public $prixReparationsMax = '';
+    public $instructions = '';
+    public $compagnie = '';
+    
     public function load($TypeEmail,$Prenom,$Nom,$Ville,$Email,$Telephone,$Commentaire,$Adresse,$Province,$CodePostal,$Marque,$Modele,$Annee,$Km,$EtatInterieur,$EtatExterieur, $IdVehicule, $TypeVehicule)
     {
         global $applicationConfig;
@@ -68,6 +85,10 @@ Class RD_Email
                                                   break;
             case TypeEmail::InscriptionNextPart:  $emailto = "ptourigny@servicesinfo.ca";
                                                   $subject = "Inscription NextPart";
+                                                  $toName  = "Philippe Tourigny";
+                                                  break;
+            case TypeEmail::BonTravail:           $emailto = "ptourigny@servicesinfo.ca";
+                                                  $subject = "Bon de travail";
                                                   $toName  = "Philippe Tourigny";
                                                   break;
         }
@@ -182,6 +203,83 @@ Class RD_Email
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
                 break;
+            case TypeEmail::BonTravail:break;
+            default:break;
+        }
+        
+        $this->mail->Body = $body;
+        $this->mail->AltBody = "-alt-";
+    }
+    
+    public function loadBonTravail($TypeEmail,$Succursale,$Compagnie,$Responsable,$Telephone,$Email,$Vin, $Unite, $Km, $BonCommande,$Travaux,$NoteSpeciale, $Instructions, $PrixReparationsMax)
+    {
+        global $applicationConfig;
+        $emailto = $toName = $subject = $body = "";
+        
+        switch($TypeEmail)
+        {
+            case TypeEmail::BonTravail: $emailto = "ptourigny@servicesinfo.ca";
+                                        $subject = "Demande de Bon de travail";
+                                        $toName  = "Philippe Tourigny";
+                                        break;
+        }
+        
+        $this->succursale = $Succursale;
+        $this->compagnie = $Compagnie;
+        $this->responsable = $Responsable;
+        $this->email = urldecode($Email);
+        $this->telephone = $Telephone;
+        $this->vin = $Vin;
+        $this->unite = $Unite;
+        $this->km = $Km;
+        $this->bonCommande = $BonCommande;
+        $this->travaux = $Travaux;
+        $this->commentaire = $NoteSpeciale;
+        $this->prixReparationsMax = $PrixReparationsMax;
+        
+        switch($Instructions)
+        {
+            case TypeInstructionsBonTravail::EstimeAvantDebutTravaux:         $this->instructions = "Demande d'estimé avant d'effecture les travaux.";
+                                                                              break;
+            case TypeInstructionsBonTravail::ProcederMaisAppelerSiPrixExcede: $this->instructions = "Procédez, mais appelez si le prix excède : <b>$PrixReparationsMax</b> $";
+                                                                              break;
+            case TypeInstructionsBonTravail::PasDevaluation:                  $this->instructions = "Pas d'évaluation demandée.";
+                                                                              break;
+            default:break;
+        }
+        
+        $this->mail = new PHPMailer;
+
+        $this->mail->isSMTP();
+        $this->mail->CharSet = 'UTF-8';
+        $this->mail->Host = $applicationConfig['smtp.server.host'];
+        $this->mail->SMTPAuth = true;
+        $this->mail->Username = $applicationConfig['smtp.server.username'];
+        $this->mail->Password = $applicationConfig['smtp.server.password'];
+        $this->mail->SMTPSecure = false;
+        $this->mail->Port = $applicationConfig['smtp.server.port'];
+        $this->mail->setFrom('mailer@reseaudynamique.com', 'reseaudynamique.com');
+        $this->mail->addAddress($emailto, $toName);
+        $this->mail->addReplyTo($this->email, $this->prenom . " " . $this->nom);
+        $this->mail->Subject = $subject;
+                
+        // Le body spécifique
+        switch($TypeEmail)
+        {
+            case TypeEmail::BonTravail:
+                $body = "Demande de bon de travail pour : " . $this->succursale . "</br>";
+                $body .= "Compagnie: " . $this->compagnie . "</br>";
+                $body .= "Responsable: " . $this->responsable . "</br>";
+                $body .= "Telephone: " . $this->telephone . "</br>";
+                $body .= "Courriel: " . $this->email . "</br>";
+                $body .= "VIN: " . $this->vin . "</br>";
+                $body .= "Unité: " . $this->unite . "</br>";
+                $body .= "KM: " . $this->km . "</br>";
+                $body .= "Bon de commande: " . $this->bonCommande . "</br>";
+                $body .= "Travaux à faire : " . $this->travaux . "</br>";
+                $body .= "Note spéciale: " . $this->commentaire . "</br>";
+                $body .= "Instructions: " . $this->instructions . "</br>";
+                break;            
             default:break;
         }
         
