@@ -2,12 +2,18 @@
 class Database{
  
     // specify your own database credentials
+//    private $host     = "127.0.0.1";
+//    private $db_name  = "reseaudynamique";
+//    private $username = "reseaudynamique";
+//    private $password = "TT67xgw!**";
+//    public  $conn;
+ 
     private $host     = "127.0.0.1";
     private $db_name  = "reseaudynamique";
-    private $username = "reseaudynamique";
-    private $password = "TT67xgw!**";
+    private $username = "root";
+    private $password = "Psql0912";
     public  $conn;
- 
+    
     // get the database connection
     public function getConnection(){
  
