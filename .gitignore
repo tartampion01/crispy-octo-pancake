@@ -1,1 +1,7 @@
 /_configs/application.ini
+/_includes/database/dbConnect.php
+/_includes/objects/database.php
+nbproject/private/config.properties
+nbproject/private/private.properties
+nbproject/private/private.xml
+/page1.php
