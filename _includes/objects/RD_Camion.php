@@ -277,7 +277,7 @@ class RD_Camion{
     
     function getPictures($id)
     {
-        $query = "SELECT base64_picture FROM inv_pictures WHERE product_id=$id ORDER BY intorder;";
+        $query = "SELECT base64_picture FROM inv_pictures WHERE product_id=$id ORDER BY intorder LIMIT 1;";
         //echo $query;
         // prepare query statement
         $stmt = $this->conn->prepare($query);
