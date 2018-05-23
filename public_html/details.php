@@ -16,6 +16,18 @@
                     </h1>
                 </div>
                 <div class="contenu">
+                    
+                    
+                    
+                    <?php
+                        foreach($camion->pictures as $pic)
+                        {
+                            ?><img width="100" height="100" src="<?php echo $pic; ?>"/><?php
+                        }
+                    ?>
+                            
+                            
+                                    
                     <div class="left">
                         <div class="toggle clear">
                             <div class="toggle12">
@@ -140,7 +152,6 @@
                                     <div class="ProductBrokerType_RichText"></div>
                                 </div>
                             </div>
-                                
                             <div id="divPics" class="" style="display: none;" zonedescriptor="">
                                 <div class="GpcImageViewerHorizontal" data-excludedefaultimage="false" data-maxresults="0">
                                     <div class="GpcLightBoxZone">

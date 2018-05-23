@@ -68,7 +68,7 @@ class RD_Succursales{
     public $id = 0;
     public $nom = "";
     public $nomLong = "";
-    public $telephones = "";
+    public $telephones;
     public $adresse = "";
     public $ville = "";
     public $codePostal = "";
@@ -87,10 +87,10 @@ class RD_Succursales{
     public $heureOuvertureDimanche = "";
     public $servicesOfferts;
     public $serviceRoutierTitre = "";
-    public $serviceRoutierTelephone = "";
+    public $serviceRoutierTelephone;
     public $remorquageTitre = "";
-    public $remorquageInfo = "";
-    public $remorquageTelephones = "";
+    public $remorquageInfo;
+    public $remorquageTelephones;
     private $parametreBonTravailNomSuccursale = "";
     private $parametreDemandePiecesNomSuccursale = "";
     public $GoogleMapSRC = "";

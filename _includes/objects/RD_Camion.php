@@ -152,6 +152,8 @@ class RD_Camion{
         $this->moteur = $r['engine'] == 0;        
         $this->hp = $r['hp'];
 
+        $this->loadPicturesNew();
+        
         return true;
     }
 
@@ -188,14 +190,39 @@ class RD_Camion{
         $this->moteur = $r['engine'] == 0;        
         $this->hp = $r['hp'];
 
-        $this->pictures = loadPictures();
+        $this->loadPicturesUsed();
         
         return true;
     }
 
-    private function loadPictures()
+    public function loadPicturesNew()
     {
-        
+        global $conn;
+        //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
+        $sql = "SELECT base64_picture FROM inv_pictures WHERE product_id=" . $this->id . " ORDER BY intorder";
+
+        $result = mysqli_query($conn, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            while($row = mysqli_fetch_assoc($result)) {
+                array_push($this->pictures, $row['base64_picture']);
+            }
+        }
+    }
+    
+    public function loadPicturesUsed()
+    {
+        global $conn;
+        //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
+        $sql = "SELECT base64_picture FROM pictures WHERE product_id=" . $this->id . " ORDER BY intorder";
+
+        $result = mysqli_query($conn, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            while($row = mysqli_fetch_assoc($result)) {
+                array_push($this->pictures, $row['base64_picture']);
+            }
+        }
     }
     
     public function test()

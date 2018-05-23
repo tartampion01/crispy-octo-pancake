@@ -298,7 +298,7 @@
 
 <!-- Start : Javascript template -->
 
-<img class="" name="image" title="" src="../../_assets/images/camions/noImage.png" alt="Camions, Remorques et Véhicules">
+
 
 <script id="resultsTemplate" type="text/x-jquery-tmpl">
     
