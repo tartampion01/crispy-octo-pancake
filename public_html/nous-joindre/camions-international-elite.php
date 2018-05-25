@@ -97,7 +97,6 @@
                             </div></div>
                         </div>
                     </div>
-                </div>
                 <div class="right">
                     <div class="blocPhoto">
                         <img name="image" title="" src="<?php echo $suc->imageBatisse; ?>" alt="<?php echo $suc->imageBatisseALT; ?>">
