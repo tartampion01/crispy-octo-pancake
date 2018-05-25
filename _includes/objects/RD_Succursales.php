@@ -97,12 +97,50 @@ class RD_Succursales{
     
     public function getSuccursaleBonTravail()
     {
-        return urlencode($this->parametreBonTravailNomSuccursale);
+        return urlencode(base64_encode($this->parametreBonTravailNomSuccursale));
     }
     
     public function getSuccursaleDemandePieces()
     {
-        return urlencode($this->parametreDemandePiecesNomSuccursale);
+        return urlencode(base64_encode($this->parametreDemandePiecesNomSuccursale));
+    }
+    
+    public static function getEmailDemandePieces($NomSuccursaleBase64)
+    {
+        $emails = '';
+/*        
+        switch ($NomSuccursaleBase64)
+        {
+            // Camions Inter-Lanaudière
+            case "Q2FtaW9ucyBJbnRlci1MYW5hdWRpw6hyZQ==":$emails = "ericb@camionsinterlanaudiere.com";break;
+            // Camions Inter-Anjou
+            case "Q2FtaW9ucyBJbnRlci1BbmpvdQ==":$emails = "pieces@camionsinteranjou.com";break;
+            // Inter-Boucherville
+            case "SW50ZXItQm91Y2hlcnZpbGxl": $emails = "michel.cayer@inter-boucherville.com"; break;
+            // Les Camions Beaudoin
+            case "TGVzIENhbWlvbnMgQmVhdWRvaW4=": $emails = "proyer@camionbeaudoin.com,jpepin@camionbeaudoin.com,gagnonb@camionbeaudoin.com"; break;
+            // Centre du Camion Beaudoin
+            case "Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==": $emails = "flachapelle@camionbeaudouin.com"; break;
+            // Charest International
+            case "Q2hhcmVzdCBJbnRlcm5hdGlvbmFs": $emails = "stephanelambert@charestinter.ca"; break;
+            // Garage Charest et Frères
+            case "R2FyYWdlIENoYXJlc3QgZXQgRnLDqHJlcw==": $emails = "pierrepoudrette@garagecharest.qc.ca"; break;
+            // Le Centre du Camion (Amiante)
+            case "TGUgQ2VudHJlIGR1IENhbWlvbiAoQW1pYW50ZSk=": $emails = "eroy@camionamiante.com"; break;
+            // Le Centre Routier 1994
+            case "TGUgQ2VudHJlIFJvdXRpZXIgMTk5NA==": $emails = "jfraser@centreroutier.com"; break;
+            // Le Centre du Camion (Beauce)
+            case "TGUgQ2VudHJlIGR1IENhbWlvbiAoQmVhdWNlKQ==": $emails = "eroy@camionbeauce.com"; break;
+            // Camions International Élite
+            case "Q2FtaW9ucyBJbnRlcm5hdGlvbmFsIMOJbGl0ZQ==": $emails = "pdesrosiers@inter-quebec.com"; break;
+            // Garage Robert
+            case "R2FyYWdlIFJvYmVydA==": $emails = "proyer@camionbeaudoin.com,jpepin@camionbeaudoin.com,gagnonb@camionbeaudoin.com"; break;
+            default:break;
+        }
+  */        
+        $emails = "ptourigny@servicesinfo.ca,ptourigny@servicesinfo.ca";
+        
+        return $emails;
     }
     
     public function load($succursale){

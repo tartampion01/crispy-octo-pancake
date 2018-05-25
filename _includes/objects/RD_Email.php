@@ -11,6 +11,7 @@ interface TypeEmail
     const EvaluerEchange = 5;
     const InscriptionNextPart = 6;
     const BonTravail = 7;
+    const DemandePieces = 8;
 }
 
 interface TypeVehicule
@@ -55,6 +56,8 @@ Class RD_Email
     public $prixReparationsMax = '';
     public $instructions = '';
     public $compagnie = '';
+    public $pieces = '';
+    public $description = '';
     
     public function load($TypeEmail,$Prenom,$Nom,$Ville,$Email,$Telephone,$Commentaire,$Adresse,$Province,$CodePostal,$Marque,$Modele,$Annee,$Km,$EtatInterieur,$EtatExterieur, $IdVehicule, $TypeVehicule)
     {
@@ -85,10 +88,6 @@ Class RD_Email
                                                   break;
             case TypeEmail::InscriptionNextPart:  $emailto = "ptourigny@servicesinfo.ca";
                                                   $subject = "Inscription NextPart";
-                                                  $toName  = "Philippe Tourigny";
-                                                  break;
-            case TypeEmail::BonTravail:           $emailto = "ptourigny@servicesinfo.ca";
-                                                  $subject = "Bon de travail";
                                                   $toName  = "Philippe Tourigny";
                                                   break;
         }
@@ -202,8 +201,7 @@ Class RD_Email
                 $body .= "Infos demandées au sujet de: <a href='";
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
-                break;
-            case TypeEmail::BonTravail:break;
+                break;            
             default:break;
         }
         
@@ -260,7 +258,7 @@ Class RD_Email
         $this->mail->Port = $applicationConfig['smtp.server.port'];
         $this->mail->setFrom('mailer@reseaudynamique.com', 'reseaudynamique.com');
         $this->mail->addAddress($emailto, $toName);
-        $this->mail->addReplyTo($this->email, $this->prenom . " " . $this->nom);
+        $this->mail->addReplyTo($this->email);
         $this->mail->Subject = $subject;
                 
         // Le body spécifique
@@ -279,7 +277,7 @@ Class RD_Email
                 $body .= "Travaux à faire : " . $this->travaux . "</br>";
                 $body .= "Note spéciale: " . $this->commentaire . "</br>";
                 $body .= "Instructions: " . $this->instructions . "</br>";
-                break;            
+                break;
             default:break;
         }
         
@@ -287,8 +285,74 @@ Class RD_Email
         $this->mail->AltBody = "-alt-";
     }
     
+    public function loadDemandePieces($TypeEmail,$Succursale,$Compagnie,$Responsable, $PiecesRequises,$Email,$Telephone,$Description)
+    {
+        global $applicationConfig;
+        $emailto = $toName = $subject = $body = "";
+        
+        switch($TypeEmail)
+        {
+            case TypeEmail::DemandePieces: 
+                                           // Cuidado vrai emails de gens dans la fonction: 
+                                           $emailto = RD_Succursales::getEmailDemandePieces($Succursale);
+                                           $emailto = "ptourigny@servicesinfo.ca";
+                                           $subject = "Demande de Bon de travail";
+                                           $toName  = "Philippe Tourigny";
+                                           break;
+        }
+        
+        $this->succursale = $Succursale;
+        $this->compagnie = $Compagnie;
+        $this->responsable = $Responsable;
+        $this->email = urldecode($Email);
+        $this->telephone = $Telephone;
+        $this->pieces = $PiecesRequises;
+        $this->description = $Description;
+        
+        $this->mail = new PHPMailer;
+
+        $this->mail->isSMTP();
+        $this->mail->CharSet = 'UTF-8';
+        $this->mail->Host = $applicationConfig['smtp.server.host'];
+        $this->mail->SMTPAuth = true;
+        $this->mail->Username = $applicationConfig['smtp.server.username'];
+        $this->mail->Password = $applicationConfig['smtp.server.password'];
+        $this->mail->SMTPSecure = false;
+        $this->mail->Port = $applicationConfig['smtp.server.port'];
+        $this->mail->setFrom('mailer@reseaudynamique.com', 'reseaudynamique.com');
+        $this->mail->addReplyTo($this->email);
+        $this->mail->Subject = $subject;
+        
+        if( strpos($emailto, ",") === false )
+            $this->mail->addAddress($emailto);
+        else{
+            // Plusieurs adresses emial pour un client ex. Raph & Elo
+            foreach(explode(",",$email) as $emailaddress)
+                $this->mail->addAddress($emailaddress);
+        }
+                
+        // Le body spécifique
+        switch($TypeEmail)
+        {
+            case TypeEmail::DemandePieces:
+                $body = "Demande de pièces pour : " . $this->succursale . "</br>";
+                $body .= "Compagnie: " . $this->prenom . "</br>";                     // On passe la compagnie dans le prenom
+                $body .= "Responsable: " . $this->responsable . "</br>";
+                $body .= "Telephone: " . $this->telephone . "</br>";
+                $body .= "Courriel: " . $this->email . "</br>";
+                $body .= "Pièces: " . $this->nom . "</br>";                           // On passe les pièces dans le nom
+                if( $this->commentaire != "" )
+                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                break;
+            default:break;
+        }
+        
+        $this->mail->Body = $body;
+        $this->mail->AltBody = "-alt-";
+    }   
+    
     public function send()
     {
-        return $this->mail->send();
+        return $this->mail->send();        
     }
 }
