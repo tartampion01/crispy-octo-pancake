@@ -291,8 +291,8 @@
             //echo '<img src="' . RD_Utils::getBase64Image() . '" />';
             //echo '<img src="data:image/jpeg;base64,' . RD_Utils::getBinaryImage() . '" />';
         ?>
+        <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
     </form>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
     
     <div class="loading-overlay">Loading&#8230;</div>
 
