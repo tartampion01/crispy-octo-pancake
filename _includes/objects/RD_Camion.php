@@ -248,8 +248,15 @@ class RD_Camion{
         // decode search parameters
         $params = json_decode($params);
         
-        // select all query
-        $query = "SELECT * FROM inventory WHERE $params->field = '$params->value' ORDER BY marque, Model ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+        // check for empty parameters (search for all products)
+        if(empty($params->field) && empty($params->value)) {
+            // select all query
+            $query = "SELECT * FROM inventory WHERE $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+        }
+        else {
+            // select filtered query
+            $query = "SELECT * FROM inventory WHERE $params->field = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+        }
  
         // prepare query statement
         $stmt = $this->conn->prepare($query);
@@ -264,15 +271,51 @@ class RD_Camion{
         // decode search parameters
         $params = json_decode($params);
         
-        // select all query
-        $queryCount = "SELECT * FROM inventory WHERE $params->field = '$params->value' AND DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy;
-        
+        if(empty($params->field) && empty($params->value)) {
+            // select all query
+            $queryCount = "SELECT * FROM inventory WHERE $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy;
+        }
+        else {
+            // select filtered query
+            $queryCount = "SELECT * FROM inventory WHERE $params->field = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy;
+        }
+      
         // prepare query statement
         $stmtCount = $this->conn->prepare($queryCount);
         // execute query
         $stmtCount->execute();
         
         return $stmtCount;
+    }
+    
+    function readCountFilter($params) {
+        
+        // decode search parameters
+        $params = json_decode($params);
+        
+        if($params->searchType == 'marque') {
+            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            //echo 'QUERY #1'.$query;
+        }
+        if($params->searchType == 'Model') {
+            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            //echo 'QUERY #2'.$query;
+        }
+        if($params->searchType == 'transtype') {
+            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            //echo 'QUERY #3'.$query;
+        }
+        if($params->searchType == 'engine') {
+            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            //echo 'QUERY #4'.$query;
+        }
+        
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+        // execute query
+        $stmt->execute();
+        
+        return $stmt;
     }
     
     function getPictures($id)

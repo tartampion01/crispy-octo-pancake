@@ -148,10 +148,10 @@
                         <!-- MARQUE -->
                         <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle" tabindex="">Marque</a>
-                            <ul style="">
+                            <ul class="marque" style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('marque', 'engine <> "-" AND ' ); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
-                                    <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>'>
+                                    <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria='engine <> "-" AND ' data-selected="false">
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?marque=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                         <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                     </li>
@@ -160,10 +160,10 @@
                         <!-- MODÈLE -->
                         <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle" tabindex="">Modèle</a>
-                            <ul style="">
+                            <ul class="Model" style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('Model', 'engine <> "-" AND '); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
-                                    <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>'>
+                                    <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>' data-custom-criteria='engine <> "-" AND ' data-selected="false">
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?Model=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                         <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                     </li>
@@ -172,10 +172,10 @@
                         <!-- TRANSMISSION -->
                         <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle" tabindex="">Transmission</a>
-                            <ul style="">
+                            <ul class="transtype" style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('transtype', ''); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
-                                    <li class="GpcMenuItem filter-link" data-field='transtype' data-value='<?PHP echo $key ?>'>
+                                    <li class="GpcMenuItem filter-link" data-field='transtype' data-value='<?PHP echo $key ?>' data-custom-criteria='' data-selected="false">
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?transtype=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                         <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                     </li>
@@ -184,10 +184,10 @@
                         <!-- MOTEUR -->
                         <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle" tabindex="">Moteur</a>
-                            <ul style="">
+                            <ul class="engine" style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('engine', ''); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
-                                    <li class="GpcMenuItem filter-link" data-field='engine' data-value='<?PHP echo $key ?>'>
+                                    <li class="GpcMenuItem filter-link" data-field='engine' data-value='<?PHP echo $key ?>' data-custom-criteria='' data-selected="false">
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?engine=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                         <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                     </li>
@@ -298,7 +298,7 @@
 
 <!-- Start : Javascript template -->
 
-
+<img class="" name="image" title="" src="_assets/images/camions/noImage.png" alt="Camions, Remorques et Véhicules">
 
 <script id="resultsTemplate" type="text/x-jquery-tmpl">
     

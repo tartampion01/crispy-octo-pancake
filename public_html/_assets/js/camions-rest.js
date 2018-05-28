@@ -5,14 +5,27 @@ $( document ).ready(function() {
         
         $(this).on('click', function() {
             
-            // Manage selected class
+            var selected = $(this).data('selected');
             $('.filter-link').removeClass('selected');
-            $(this).addClass('selected');
-
-            // Get search params
-            var field = $(this).data('field');
-            var value = $(this).data('value');
-            fetchRecords(field, value)
+            $('.filter-link').data('selected', false);
+            
+            if(selected == true) {
+                $(this).data('selected', false);
+                $(this).removeClass('selected');
+                $('.filter-link').show();
+                
+                fetchRecords('', '', '', true);
+            }
+            else {
+                $(this).addClass('selected');
+                $(this).data('selected', true);
+                
+                // Get search params
+                var field = $(this).data('field');
+                var value = $(this).data('value');
+                var customCriteria = $(this).data('custom-criteria');
+                fetchRecords(field, value, customCriteria, true);
+            }
         });
     });
     
@@ -23,27 +36,27 @@ $( document ).ready(function() {
         
         var field = $('.GpcMenu').find('li.selected').data('field');
         var value = $('.GpcMenu').find('li.selected').data('value');
-        fetchRecords(field, value, true);
+        var customCriteria = $('.GpcMenu').find('li.selected').data('custom-criteria');
+        fetchRecords(field, value, customCriteria, true);
     });
     
     // Bind click event on search sorting dropdown
     $('.search-sorting').on('change', function() {
         var field = $('.GpcMenu').find('li.selected').data('field');
         var value = $('.GpcMenu').find('li.selected').data('value');
-        fetchRecords(field, value, true);
+        var customCriteria = $('.GpcMenu').find('li.selected').data('custom-criteria');
+        fetchRecords(field, value, customCriteria, true);
     });
     
-    // On document load, let search on the first filter menu item
-    $('.filter-link:first').trigger('click');
+    // On document load, search for all products
+    fetchRecords('', '', '', true);
 });
 
-function fetchRecords(field, value, resetPage) {
+function fetchRecords(field, value, customCriteria, resetPage) {
     
     // Show loading spinner
     $('.loading-overlay').show();
 
-    // Get actual page and limit per page
-    //var currentPage = $('.actual-page').html();
     var currentPage = 1;
     if(typeof $pagination !== 'undefined' && resetPage == false)
         currentPage = $pagination.twbsPagination('getCurrentPage');
@@ -57,8 +70,8 @@ function fetchRecords(field, value, resetPage) {
     var params = {
         'field' : field,
         'value' : value,
+        'customCriteria' : customCriteria,
         'sortBy' : sortBy,
-        //'currentPage' : currentPage,
         'currentPage' : currentPage,
         'limitPerPage' : limitPerPage
     };
@@ -68,9 +81,8 @@ function fetchRecords(field, value, resetPage) {
         type: "GET",
         data: 'params='+JSON.stringify(params),
         dataType: 'json',
+        async: true,
         success: function(data){
-
-            console.log(data);
 
             if(data.records != null) {
                 if(data.records.length > 0) {
@@ -111,9 +123,50 @@ function fetchRecords(field, value, resetPage) {
                         initiateStartPageClick: false,
                         onPageClick: function (event, page) {
                             
-                            fetchRecords(field, value, false);
+                            fetchRecords(field, value, customCriteria, false);
                         }
                     }));
+                    
+                    // Reset filter links count number
+                    $(".GpcMenuCategory").each(function() {
+
+                        var countField = $(this).find('.filter-link:first').data('field');
+                        var countCustomCriteria = $(this).find('.filter-link:first').data('custom-criteria');
+                        var countParams = {
+                            'field' : countField,
+                            'value' : value,
+                            'customCriteria' : countCustomCriteria,
+                            'searchType' : field
+                        };
+
+                        $.ajax({
+                            url: 'http://reseaudynamique.com/api/read-count-filter.php',
+                            type: "GET",
+                            data: 'params='+JSON.stringify(countParams),
+                            dataType: 'json',
+                            async: false,
+                            success: function(dataCount){
+
+                                if(Object.keys(dataCount).length) {
+
+                                    console.log(dataCount);
+                                    // Update every filter links count
+                                    $('.GpcMenuCategory').find('.filter-link[data-field="'+countField+'"]').each(function(index) {
+
+                                        $(this).hide();
+
+                                        for(i=0; i<dataCount.length; i++) {
+                                            if (Object.values(dataCount[i]).indexOf($(this).attr('data-value')) > -1) {
+
+                                                $(this).find('.GpcMenuItemCount').html('(' + dataCount[i].count + ')');
+                                                $(this).show();
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    });
                 }
                 else {
                     $('.results-container').html('AUCUN PRODUIT');

@@ -1,4 +1,4 @@
-<link href="../../_assets/css/footer/_footer.css" rel="stylesheet" type="text/css"/>
+<!--<link href="../../_assets/css/footer/_footer.css" rel="stylesheet" type="text/css"/>-->
 <div class="push" data-staticclassnames="push" itemid="">
     <div class="pied" data-staticclassnames="pied" itemid="">
         <div class="shrink clear" data-staticclassnames="shrink clear" itemid="">
