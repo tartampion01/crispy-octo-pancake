@@ -323,7 +323,7 @@
                 <div class="customField">
                     <div class="forBroker label zoneForBroker">
                         <span class="forBroker label spanForBroker">No d'inventaire : </span>
-                        <span class="ProductBrokerType_String">${serial}</span>
+                        <span class="ProductBrokerType_String">${stock}</span>
                     </div>
                 </div>
                 <div class="customField">
