@@ -205,6 +205,7 @@ class RD_Camion{
 
         if(mysqli_num_rows($result) > 0){
             while($row = mysqli_fetch_assoc($result)) {
+                //array_push($this->pictures, urldecode(base64_decode($row['base64_picture'])));
                 array_push($this->pictures, $row['base64_picture']);
             }
         }
