@@ -16,23 +16,15 @@
                     </h1>
                 </div>
                 <div class="contenu">
-                    
-                    
-                    
-                    <?php
-                        foreach($camion->pictures as $pic)
-                        {
-                            ?><img width="100" height="100" src="<?php echo $pic; ?>"/><?php
-                        }
-                    ?>
-                            
-                            
-                                    
                     <div class="left">
                         <div class="toggle clear">
                             <div class="toggle12">
                                 <div class="specToggle" onclick="alternateDivDetailsPage('divSpec','divPics');" style="display: block;visibility: visible;" zonedescriptor="Default">Spécifications</div>
-                                <div class="picToggle" onclick="alternateDivDetailsPage('divPics','divSpec');" style="display: block;visibility: visible;" zonedescriptor="Default">Photos</div>
+                                <?php 
+                                    if( $camion->HAS_picures )
+                                        echo '<div class="picToggle" onclick="alternateDivDetailsPage(\'divPics\',\'divSpec\');" style="display: block;visibility: visible;" zonedescriptor="Default">Photos</div>';
+                                ?>
+                                
                             </div>
                             </br></br></br></br>
                             <div id="divSpec" class="" style="display: inline;" zonedescriptor="" >
@@ -75,7 +67,8 @@
                                     </div>
                                 </div>
                                 <div class="right">
-                                    <img data-categorizedconfig="null" src="/_assets/images/camions/N-4705-2.jpg" alt="img6520" title="">
+                                    <!-- TODO PHOTO ONGLET SPÉCIFICATIONS -->
+                                    <img data-categorizedconfig="null" src="<?php echo $camion->pictures[0]; ?>" title="">
                                 </div>
                             </div>
                                 <div class="caracteristiques">
@@ -160,7 +153,12 @@
                                             <div class="jquery-lightbox " style="position: static; top: -10000px; height: 0px; width: 100px;">
                                                 <div class="lightbox-container-image-box" style="width: 100%; height: 100%;">
                                                     <div class="lightbox-container-image" style="height: 0px; width: 0px; opacity: 1; overflow: auto;">
-                                                        <img class="lightbox-image" style="width: 498px; height: 373px;" src="/_assets/images/camions/N-4705-2_498x0.jpg" width="498" height="373">
+                                                        
+                                                        <!-- TODO PHOTO PRINCIPALE ONGLET PHOTOS -->
+                                                        <img class="lightbox-image" style="width: 498px; height: 373px;" src="<?php echo $camion->pictures[0]; ?>" width="498" height="373">
+                                                        <!--<img class="lightbox-image" style="width: 498px; height: 373px;" src="/_assets/images/camions/N-4705-2_498x0.jpg" width="498" height="373">-->
+                                                        
+                                                        
                                                         <div class="lightbox-video" style="display: none;"></div>
                                                         <div style="display: block; height: 0px; width: 0px;" class="lightbox-nav ItemIDlightboxNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b">
                                                             <a href="#" class="lightbox-nav-btnPrev" style="height: 100%; background: url(&quot;/_images/NmsLightBox/lightbox-blank.gif&quot;) no-repeat transparent; display: none;"></a>
@@ -192,26 +190,15 @@
                                             <div class="bx-wrapper" style="max-width: 580px;">
                                                 <div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 2px;">
                                                     <div class="GpcCarousel"  style="width: 4215%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
-                                                        <div class="GpcImageViewerItem" aria-hidden="true" style="float: left; list-style: none; position: relative; width: 98px;">
-                                                            <a href="/_assets/images/camions/N-4705-2_498x0.jpg" rel="" title="" contenttype="Image" onclick="return false" class="lightbox-image-selected">
-                                                                <img class="ProductImage" src="/_assets/images/camions/N-4705-2_110x0.jpg" alt="img6520">
-                                                            </a>
-                                                        </div>
-                                                    <div class="GpcImageViewerItem" aria-hidden="true" style="float: left; list-style: none; position: relative; width: 98px;">
-                                                        <a href="/_assets/images/camions/N-4705-3_498x0.jpg" rel="" title="" contenttype="Image" onclick="return false">
-                                                            <img class="ProductImage" src="/_assets/images/camions/N-4705-3_110x0.jpg" alt="img6521">
-                                                        </a>
-                                                    </div>
-                                                    <div class="GpcImageViewerItem" aria-hidden="true" style="float: left; list-style: none; position: relative; width: 98px;">
-                                                        <a href="/_assets/images/camions/N-4705-1_498x0.jpg" rel="" title="" contenttype="Image" onclick="return false">
-                                                            <img class="ProductImage" src="/_assets/images/camions/N-4705-1_110x0.jpg" alt="img6522">
-                                                        </a>
-                                                    </div>
-                                                    <div class="GpcImageViewerItem" aria-hidden="false" style="float: left; list-style: none; position: relative; width: 98px;">
-                                                        <a href="/_assets/images/camions/N-4705_498x0.jpg" rel="" title="" contenttype="Image" onclick="return false">
-                                                            <img class="ProductImage" src="/_assets/images/camions/N-4705_110x0.jpg" alt="img6523">
-                                                        </a>
-                                                    </div>
+                                                        
+                                                        <!-- TODO THUMBNAILS -->
+                                                        <?php
+                                                            foreach($camion->pictures as $pic)
+                                                            {
+                                                                ?><img width="100" height="100" src="<?php echo $pic; ?>"/><?php
+                                                            }
+                                                        ?>
+                                                        
                                                     </div>
                                                 </div>
                                                 <div class="bx-controls bx-has-pager">
@@ -237,13 +224,7 @@
                                         </div>
                                     </div>
                                     <div class="GpcClear"></div>
-                                        <script type="carouselImageTemplate" data-carousel="">
-                                            <div class="GpcImageViewerItem">
-                                                <a href="/_assets/images/menu_images/TemplateImage_498x0.png" rel="" title="" contentType="Image" onclick="return false">
-                                                    <img class="ProductImage" src="/gpc/_media/Image/000111000/NmsTemplateImage_110x0.png" />
-                                                </a>
-                                            </div>
-                                        </script>
+                                        
                                 </div>
                             </div>
                         </div>
