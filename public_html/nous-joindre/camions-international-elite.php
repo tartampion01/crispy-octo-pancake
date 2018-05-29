@@ -22,71 +22,70 @@
                                 <?php echo $telephone; ?></br>
                                 <?php endforeach;?>
                             </p>
-
                             <div class="blocMap contenu">
                                 <div><iframe src="<?php echo $suc->GoogleMapSRC; ?>" width="455" height="300" frameborder="0" style="border:0"></iframe></div>
                             </div>
-
                             <div class="blocHeuresDouverture contenu">
                                 <div class="titre">
                                     <h2>Heures d'ouverture</h2>
                                     <p>Veuillez prendre note qu'à compter du 8 mai prochain les heures d'ouverture de notre département de service seront modifiées comme&nbsp;ceci&nbsp;:&nbsp;</p>
                                 </div>
-                                    <div class="heures">
-                                        <table style="width: 100%;" mappingtype="Page" editorselectedelement="true" cellspacing="0" cellpadding="0" border="0">
-                                        <tbody>
-                                            <tr></tr>
-                                            <tr>
-                                                <td colspan="2">Du Lundi 7h30 jusqu'au vendredi à minuit<br></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 150px;">Samedi :</td><td>Fermé</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Dimanche :</td>
-                                                <td>Fermé</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <p>Cependant, pour la période incluse entre le 17 juillet et le 25 août, les heures d'ouverture seront les suivantes :</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Lundi :</td>
-                                                <td><?php echo $suc->heureOuvertureLundi; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Mardi :</td>
-                                                <td><?php echo $suc->heureOuvertureMardi; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Mercredi :</td>
-                                                <td><?php echo $suc->heureOuvertureMercredi; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jeudi :</td>
-                                                <td><?php echo $suc->heureOuvertureJeudi; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Vendredi :</td>
-                                                <td><?php echo $suc->heureOuvertureVendredi; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Samedi :</td>
-                                                <td><?php echo $suc->heureOuvertureSamedi; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Dimanche :</td>
-                                                <td><?php echo $suc->heureOuvertureDimanche; ?></td>
-                                            </tr>
-                                        </tbody>
-                                        </table>
-                                    </div>
+                                <div class="heures">
+                                    <table style="width: 100%;" mappingtype="Page" editorselectedelement="true" cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                        <tr></tr>
+                                        <tr>
+                                            <td colspan="2">Du Lundi 7h30 jusqu'au vendredi à minuit<br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;">Samedi :</td><td>Fermé</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dimanche :</td>
+                                            <td>Fermé</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <p>Cependant, pour la période incluse entre le 17 juillet et le 25 août, les heures d'ouverture seront les suivantes :</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lundi :</td>
+                                            <td><?php echo $suc->heureOuvertureLundi; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mardi :</td>
+                                            <td><?php echo $suc->heureOuvertureMardi; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mercredi :</td>
+                                            <td><?php echo $suc->heureOuvertureMercredi; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jeudi :</td>
+                                            <td><?php echo $suc->heureOuvertureJeudi; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vendredi :</td>
+                                            <td><?php echo $suc->heureOuvertureVendredi; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Samedi :</td>
+                                            <td><?php echo $suc->heureOuvertureSamedi; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dimanche :</td>
+                                            <td><?php echo $suc->heureOuvertureDimanche; ?></td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            </br>
-                            <div class="content"><div class="titre">
-                            <h3>Contact</h3>
+                        </div>
+                        </br>
+                        <div class="content">
+                            <div class="titre">
+                                <h3>Contact</h3>
                                 <?php foreach($suc->contacts as $contact):
                                     foreach($contact as $details):?> 
                                         <h5><?php echo $details[0]; ?></h5>
@@ -94,9 +93,10 @@
                                             <a href='mailto:<?php echo $details[2]; ?>'><?php echo $details[2]; ?></a>
                                         </p>
                                 <?php endforeach;endforeach; ?>
-                            </div></div>
+                            </div>
                         </div>
                     </div>
+                </div>
                 <div class="right">
                     <div class="blocPhoto">
                         <img name="image" title="" src="<?php echo $suc->imageBatisse; ?>" alt="<?php echo $suc->imageBatisseALT; ?>">
@@ -134,10 +134,8 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
     </form>
-    
 </body>
 </html>
