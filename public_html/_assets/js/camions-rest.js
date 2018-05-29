@@ -13,16 +13,18 @@ $( document ).ready(function() {
                 $(this).data('selected', false);
                 $(this).removeClass('selected');
                 $('.filter-link').show();
-                
+                alert('Show all');
                 fetchRecords('', '', '', true);
             }
             else {
                 $(this).addClass('selected');
                 $(this).data('selected', true);
                 
+                //getSearchTerms();
                 // Get search params
-                var field = $(this).data('field');
-                var value = $(this).data('value');
+                var field = $(this).attr('data-field');
+                var value = $(this).attr('data-value');
+                
                 var customCriteria = $(this).data('custom-criteria');
                 fetchRecords(field, value, customCriteria, true);
             }
@@ -188,6 +190,33 @@ function fetchRecords(field, value, customCriteria, resetPage) {
             $('.results-container').html('ERREUR DU SERVEUR');
         }
     });
+}
+
+function getSearchTerms() {
+    
+    var where = [];
+    var counter = 0;
+    
+    $('.GpcMenuCategory .filter-link.selected').each(function() {
+        console.log($(this).parents('ul').attr('class'));
+        
+        var field = $(this).parents('ul').attr('class');
+        var value = $(this).attr('data-value');
+        
+        /*where[counter].field = field;
+        where[counter].value = value;
+        console.log(where);*/
+        
+        var newElement = {};
+        newElement.field = field;
+        newElement.value = value;
+        where.push(newElement);
+        
+        counter++;
+    });
+    
+    //console.log(where);
+    return where;
 }
 
 // Function that refresh the paginator control

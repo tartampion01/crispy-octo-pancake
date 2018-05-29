@@ -309,6 +309,10 @@ class RD_Camion{
             $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
             //echo 'QUERY #4'.$query;
         }
+        if($params->searchType == '') {
+            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            //echo 'QUERY #4'.$query;
+        }
         
         // prepare query statement
         $stmt = $this->conn->prepare($query);
