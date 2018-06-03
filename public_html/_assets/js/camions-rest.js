@@ -6,21 +6,27 @@ $( document ).ready(function() {
         $(this).on('click', function() {
             
             var selected = $(this).data('selected');
-            $('.filter-link').removeClass('selected');
-            $('.filter-link').data('selected', false);
+            //$('.filter-link').removeClass('selected');
+            //$('.filter-link').data('selected', false);
             
             if(selected == true) {
                 $(this).data('selected', false);
                 $(this).removeClass('selected');
-                $('.filter-link').show();
-                alert('Show all');
-                fetchRecords('', '', '', true);
+                //$('.filter-link').show();
+                
+                // Check if at leat we have a custom criteria
+                var customCriteria = '';
+                $('.GpcMenuCategory .filter-link.selected').each(function() {
+                    if(customCriteria == '')
+                        customCriteria = $(this).data('custom-criteria');
+                });
+                
+                fetchRecords('', '', customCriteria, true);
             }
             else {
                 $(this).addClass('selected');
                 $(this).data('selected', true);
                 
-                //getSearchTerms();
                 // Get search params
                 var field = $(this).attr('data-field');
                 var value = $(this).attr('data-value');
@@ -75,7 +81,8 @@ function fetchRecords(field, value, customCriteria, resetPage) {
         'customCriteria' : customCriteria,
         'sortBy' : sortBy,
         'currentPage' : currentPage,
-        'limitPerPage' : limitPerPage
+        'limitPerPage' : limitPerPage,
+        'arrayFilters' : getSearchTerms()
     };
 
     $.ajax({
@@ -138,7 +145,8 @@ function fetchRecords(field, value, customCriteria, resetPage) {
                             'field' : countField,
                             'value' : value,
                             'customCriteria' : countCustomCriteria,
-                            'searchType' : field
+                            'searchType' : field,
+                            'arrayFilters' : getSearchTerms()
                         };
 
                         $.ajax({
@@ -158,7 +166,8 @@ function fetchRecords(field, value, customCriteria, resetPage) {
                                         $(this).hide();
 
                                         for(i=0; i<dataCount.length; i++) {
-                                            if (Object.values(dataCount[i]).indexOf($(this).attr('data-value')) > -1) {
+                                            console.log($(this).attr('data-value') + ' = ' + $(this).attr('data-value'));
+                                            if (Object.values(dataCount[i]).indexOf($(this).attr('data-value').replace('%2B', '+')) > -1) {
 
                                                 $(this).find('.GpcMenuItemCount').html('(' + dataCount[i].count + ')');
                                                 $(this).show();

@@ -175,7 +175,7 @@
                             <ul class="transtype" style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('transtype', ''); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
-                                    <li class="GpcMenuItem filter-link" data-field='transtype' data-value='<?PHP echo $key ?>' data-custom-criteria='' data-selected="false">
+                                    <li class="GpcMenuItem filter-link" data-field='transtype' data-value='<?PHP echo str_replace('+', '%2B', $key) ?>' data-custom-criteria='' data-selected="false">
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?transtype=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                         <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                     </li>

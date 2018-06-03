@@ -301,14 +301,40 @@ class RD_Camion{
         $params = json_decode($params);
         
         if(empty($params->field) && empty($params->value)) {
-            // select all query
-            $queryCount = "SELECT * FROM inventory WHERE $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy;
+            
+            $where = '';
+            
+            for($i=0; $i<count($params->arrayFilters); $i++) {
+                $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '" AND ';
+            }
+            
+            if($where != '') {
+                // select all query
+                $queryCount = "SELECT * FROM inventory WHERE $where $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy;
+            }
+            else {
+                // select all query
+                $queryCount = "SELECT * FROM inventory WHERE $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy;
+            }
         }
         else {
-            // select filtered query
-            $queryCount = "SELECT * FROM inventory WHERE $params->field = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy;
+            
+            $where = '';
+            
+            for($i=0; $i<count($params->arrayFilters); $i++) {
+                $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '" AND ';
+            }
+            
+            if($where != '') {
+                // select filtered query
+                $queryCount = "SELECT * FROM inventory WHERE $where $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy;
+            }
+            else {
+                // select filtered query
+                $queryCount = "SELECT * FROM inventory WHERE $params->field = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy;
+            }
         }
-      
+        //echo $queryCount;
         // prepare query statement
         $stmtCount = $this->conn->prepare($queryCount);
         // execute query
@@ -322,27 +348,51 @@ class RD_Camion{
         // decode search parameters
         $params = json_decode($params);
         
+        $where = '';
+        
+        if(isset($params->arrayFilters) && count($params->arrayFilters) > 0) {
+            
+            //$where = $params->searchType = "'$params->value' AND ";
+            //$where = '';
+            for($i=0; $i<count($params->arrayFilters); $i++) {
+                $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '" AND ';
+            }
+            if($where == '') {
+                $where = $params->searchType = "'$params->value' AND ";
+            }
+            //die($where);
+        }
+        
+        /*if($params->value == '') {
+            die('HERE');
+        }*/
+        
+        //echo $where;
         if($params->searchType == 'marque') {
-            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            //$query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $where $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
             //echo 'QUERY #1'.$query;
         }
         if($params->searchType == 'Model') {
-            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            //$query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $where $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
             //echo 'QUERY #2'.$query;
         }
         if($params->searchType == 'transtype') {
-            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            //$query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $where $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
             //echo 'QUERY #3'.$query;
         }
         if($params->searchType == 'engine') {
-            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            //$query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $where $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
             //echo 'QUERY #4'.$query;
         }
         if($params->searchType == '') {
-            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
+            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $where $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
             //echo 'QUERY #4'.$query;
         }
-        
+        //echo $query;
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
