@@ -266,8 +266,25 @@ class RD_Camion{
             $query = "SELECT * FROM inventory WHERE $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
         }
         else {
-            // select filtered query
-            $query = "SELECT * FROM inventory WHERE $params->field = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+            
+            $where = '';
+            
+            for($i=0; $i<count($params->arrayFilters); $i++) {
+                $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '" AND ';
+            }
+            //die($where);
+            //print_r($params->arrayFilters[0]);
+            //print_r($where);
+            
+            if($where != '') {
+                // select filtered query
+                $query = "SELECT * FROM inventory WHERE $where $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+                //echo $query;
+            }
+            else {
+                // select filtered query
+                $query = "SELECT * FROM inventory WHERE $params->field = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+            }
         }
  
         // prepare query statement
