@@ -4,6 +4,7 @@ class RD_Camion{
     private $conn;
     private $table_name = "products";
     
+    public $HAS_picures = 1;
     public $new = 1;
     /* CHAMPS INVENTORY -> Camions neufs */
     public $id = 0;
@@ -18,7 +19,7 @@ class RD_Camion{
     public $clientsold = ''; 
     public $initialsold = ''; 
     public $invoicedate = ''; 
-    public $receivedate = ''; 
+    public $receivedate = '';
     public $bonus = 0;
     public $credit = 0;
     public $nointerestDate = 0;
@@ -209,6 +210,11 @@ class RD_Camion{
                 array_push($this->pictures, $row['base64_picture']);
             }
         }
+        else
+        {
+            $this->HAS_picures = 0;
+            array_push($this->pictures, "../../_assets/images/camions/noimage.png");
+        }
     }
     
     public function loadPicturesUsed()
@@ -223,6 +229,11 @@ class RD_Camion{
             while($row = mysqli_fetch_assoc($result)) {
                 array_push($this->pictures, $row['base64_picture']);
             }
+        }
+        else
+        {
+            $this->HAS_picures = 0;
+            array_push($this->pictures, "../../_assets/images/camions/noimage.png");
         }
     }
     
