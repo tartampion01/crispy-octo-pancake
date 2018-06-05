@@ -12,6 +12,7 @@ interface TypeEmail
     const InscriptionNextPart = 6;
     const BonTravail = 7;
     const DemandePieces = 8;
+    const InscriptionAUTOMANN = 9;
 }
 
 interface TypeVehicule
@@ -88,6 +89,10 @@ Class RD_Email
                                                   break;
             case TypeEmail::InscriptionNextPart:  $emailto = "ptourigny@servicesinfo.ca";
                                                   $subject = "Inscription NextPart";
+                                                  $toName  = "Philippe Tourigny";
+                                                  break;
+            case TypeEmail::InscriptionAUTOMANN:  $emailto = "ptourigny@servicesinfo.ca"; //crouleau@inter-quebec.com
+                                                  $subject = "Inscription AUTOMANN";
                                                   $toName  = "Philippe Tourigny";
                                                   break;
         }
@@ -198,10 +203,15 @@ Class RD_Email
                 $body .= "Courriel: " . $this->email . "</br>";
                 if( $this->commentaire != "" )
                     $body .= "Commentaire: " . $this->commentaire . "</br></br>";
-                $body .= "Infos demandées au sujet de: <a href='";
-                $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
-                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
-                break;            
+                break;
+            case TypeEmail::InscriptionAUTOMANN:
+                $body = "Demande d'inscription de la part de: " . $this->prenom . " " . $this->nom . "</br>";
+                $body .= "# Facture: " . $this->nom . "</br>";
+                $body .= "Nom succursale: " . $this->ville . "</br>";
+                $body .= "Courriel: " . $this->email . "</br>";
+                if( $this->commentaire != "" )
+                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                break;
             default:break;
         }
         
