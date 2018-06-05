@@ -78,7 +78,8 @@
                                                 <label for="tbNomSuccursale">Nom de votre succursale* :</label>
                                             </div>
                                             <div class="form-input-zone">
-                                                <input name="tbNomSuccursale" id="tbNomSuccursale" class="" type="text">
+                                                <input name="tbNomSuccursale" id="tbNomSuccursale" class="" type="text" value="<?php echo $succursale;?>">
+                                                <span class="error"><?php echo $succursaleErr;?></span>
                                             </div>
                                         </div>
                                         <div class="form-wrapline form-input">
@@ -86,7 +87,8 @@
                                                 <label for="tbNoFacture"># de facture* :</label>
                                             </div>
                                             <div class="form-input-zone">
-                                                <input name="tbNoFacture" id="tbNoFacture" class="" type="text">
+                                                <input name="tbNoFacture" id="tbNoFacture" class="" type="text" value="<?php echo $noFacture;?>">
+                                                <span class="error"><?php echo $noFactureErr;?></span>
                                             </div>
                                         </div>
                                             
@@ -95,7 +97,8 @@
                                                 <label for="tbNomPrenom">Prénom et Nom de famille* :</label>
                                             </div>
                                             <div class="form-input-zone">
-                                                <input name="tbNomPrenom" id="tbNomPrenom" class="" type="text">
+                                                <input name="tbNomPrenom" id="tbNomPrenom" class="" type="text" value="<?php echo $nomPrenom;?>">
+                                                <span class="error"><?php echo $nomPrenomErr;?></span>
                                             </div>
                                         </div>
                                             
@@ -104,7 +107,8 @@
                                                 <label for="tbCourriel">Adresse courriel* :</label>
                                             </div>
                                             <div class="form-input-zone">
-                                                <input name="tbCourriel" id="tbCourriel" class="" type="text">
+                                                <input name="tbCourriel" id="tbCourriel" class="" type="text" value="<?php echo $email;?>">
+                                                <span class="error"><?php echo $emailErr;?></span>
                                             </div>
                                         </div>
                                             
