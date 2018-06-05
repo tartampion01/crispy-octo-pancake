@@ -1,6 +1,6 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body">
-    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
+    <form role="form" method="POST" action="/promotions-nouvelles/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
         <div class="content">
             <div class="shrink">
