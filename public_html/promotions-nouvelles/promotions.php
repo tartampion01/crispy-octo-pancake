@@ -1,19 +1,137 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body">
-    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
+    <form role="form" method="POST" action="/promotions-nouvelles/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
         <div class="content">
             <div class="shrink">
                 <div class="titrepage">
-                    <h1><?php echo $NOMPAGE; ?></h1>
+                    <h1>Promotions</h1>
                 </div>
                 <div class="contenu">
                     <div class="contenu2">
-                        <p></p>
-                        <h2></h2>
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <?php
+                            $divVisibility = "visible";
+
+                            $succursaleErr = $noFactureErr = $nomPrenomErr = $emailErr = "";
+                            $succursale = $noFacture = $nomPrenom = $email = "";
+                            $errorCount = 0;
+
+                            if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+                                if (empty($_POST["tbNomSuccursale"])){
+                                    $succursaleErr = "Champ obligatoire";
+                                    $errorCount += 1;
+                                }
+                                else
+                                    $succursale = RD_Utils::test_input($_POST["tbNomSuccursale"]);
+
+                                if (empty($_POST["tbNoFacture"])){
+                                    $noFactureErr = "Champ obligatoire";
+                                    $errorCount += 1;
+                                }
+                                else
+                                    $noFacture = RD_Utils::test_input($_POST["tbNoFacture"]);
+
+                                if (empty($_POST["tbNomPrenom"])){
+                                    $nomPrenomErr = "Champ obligatoire";
+                                    $errorCount += 1;
+                                }
+                                else
+                                    $nomPrenom = RD_Utils::test_input($_POST["tbNomPrenom"]);
+
+                               if (empty($_POST["tbCourriel"])){
+                                    $emailErr = "Champ obligatoire";
+                                    $errorCount += 1;
+                                }
+                                else {
+                                    $email = RD_Utils::test_input($_POST["tbCourriel"]);
+                                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                                        $emailErr = "Format invalide";
+                                        $errorCount += 1;
+                                    }
+                                }
+
+                                // ENVOI EMAIL
+                                if(isset($_POST['btnSendMail']) && $errorCount == 0)
+                                {
+                                    $RDemail = new RD_Email();
+                                    $RDemail->load(TypeEmail::InscriptionAUTOMANN,$nomPrenom,$noFacture,$succursale,urlencode($email),'','','','','','','','','','','','',TypeVehicule::CamionNeuf);
+                                    if($RDemail->send()){
+                                        $divVisibility = "hidden";
+                                        ?><h2>Votre demande a bien été envoyée</h2><?php
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if( isset($_GET['id']))
+                                    $VehiculeId = $_GET['id'];
+                            }
+                        ?>                    
+                        <div class="zonepromos" style="visibility: <?php echo $divVisibility; ?>">
+                            <div class="form-wrap">
+                                <div class="form-wrap concours-wrap">
+                                    <div class="form-content">
+                                        <h2>Inscription à la promotion AUTOMANN</h2>
+                                        <div class="form-wrapline form-input">
+                                            <div class="form-label-text">
+                                                <label for="tbNomSuccursale">Nom de votre succursale* :</label>
+                                            </div>
+                                            <div class="form-input-zone">
+                                                <input name="tbNomSuccursale" id="tbNomSuccursale" class="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-wrapline form-input">
+                                            <div class="form-label-text">
+                                                <label for="tbNoFacture"># de facture* :</label>
+                                            </div>
+                                            <div class="form-input-zone">
+                                                <input name="tbNoFacture" id="tbNoFacture" class="" type="text">
+                                            </div>
+                                        </div>
+                                            
+                                        <div class="form-wrapline form-input">
+                                            <div class="form-label-text">
+                                                <label for="tbNomPrenom">Prénom et Nom de famille* :</label>
+                                            </div>
+                                            <div class="form-input-zone">
+                                                <input name="tbNomPrenom" id="tbNomPrenom" class="" type="text">
+                                            </div>
+                                        </div>
+                                            
+                                        <div class="form-wrapline form-input">
+                                            <div class="form-label-text">
+                                                <label for="tbCourriel">Adresse courriel* :</label>
+                                            </div>
+                                            <div class="form-input-zone">
+                                                <input name="tbCourriel" id="tbCourriel" class="" type="text">
+                                            </div>
+                                        </div>
+                                            
+                                        <div class="form-wrapline form-submit">
+                                            <input name="btnSendMail" value="Soumettre" id="btnSendMail" type="submit">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearpromos"></div>
+                            <div class="blocpromo">
+                                <div class="promoimage">
+                                    <span>
+                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" target="_blank">
+                                            <img name="image" title="" src="/_assets/images/menu_images/promo-mai-juin-2018-p01.jpg" alt="Promo Mai-Juin 2018-01" style="height:300px;width:231px;" width="231px" height="300px">
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="promotitre">
+                                    <h2><span>Promo pièces</span></h2>
+                                </div>
+                                <div class="promodate">
+                                    <span>Mai &amp; Juin 2018</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
