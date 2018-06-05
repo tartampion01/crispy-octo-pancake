@@ -59,6 +59,14 @@ Class RD_Email
     public $compagnie = '';
     public $pieces = '';
     public $description = '';
+    public $travaux1 = '';
+    public $travaux2 = '';
+    public $travaux3 = '';
+    public $travaux4 = '';
+    public $travaux5 = '';
+    public $travaux6 = '';
+    public $travaux7 = '';
+    public $travaux8 = '';
     
     public function load($TypeEmail,$Prenom,$Nom,$Ville,$Email,$Telephone,$Commentaire,$Adresse,$Province,$CodePostal,$Marque,$Modele,$Annee,$Km,$EtatInterieur,$EtatExterieur, $IdVehicule, $TypeVehicule)
     {
@@ -67,33 +75,33 @@ Class RD_Email
         
         switch($TypeEmail)
         {
-            case TypeEmail::DemandeInformation:   $emailto = "ptourigny@servicesinfo.ca";
+            case TypeEmail::DemandeInformation:   $emailto = "philtourigny@gmail.com";
                                                   $toName  = "Philippe Tourigny";
                                                   $subject = "Demande d'information";
                                                   break;
-            case TypeEmail::PlanifierEssaiRoutier:$emailto = "ptourigny@servicesinfo.ca";
+            case TypeEmail::PlanifierEssaiRoutier:$emailto = "philtourigny@gmail.com";
+                                                  $toName  = "Philippe Tourigny";
                                                   $subject = "Demande de planification d'un essai routier";
-                                                  $toName  = "Philippe Tourigny";                                                  
                                                   break;
-            case TypeEmail::ObtenirPrix:          $emailto = "ptourigny@servicesinfo.ca";
+            case TypeEmail::ObtenirPrix:          $emailto = "philtourigny@gmail.com";
+                                                  $toName  = "Philippe Tourigny";
                                                   $subject = "Obtenir un prix";
-                                                  $toName  = "Philippe Tourigny";                                                  
                                                   break;
-            case TypeEmail::DemandFinancement:    $emailto = "ptourigny@servicesinfo.ca";
+            case TypeEmail::DemandFinancement:    $emailto = "philtourigny@gmail.com";
+                                                  $toName  = "Philippe Tourigny";
                                                   $subject = "Demande de financement";
-                                                  $toName  = "Philippe Tourigny";                                                  
                                                   break;
-            case TypeEmail::EvaluerEchange:       $emailto = "ptourigny@servicesinfo.ca";
+            case TypeEmail::EvaluerEchange:       $emailto = "philtourigny@gmail.com";
+                                                  $toName  = "Philippe Tourigny";
                                                   $subject = "Demande d'évaluation d'échange";
-                                                  $toName  = "Philippe Tourigny";                                                  
                                                   break;
-            case TypeEmail::InscriptionNextPart:  $emailto = "ptourigny@servicesinfo.ca";
+            case TypeEmail::InscriptionNextPart:  $emailto = "philtourigny@gmail.com";
+                                                  $toName  = "Philippe Tourigny";
                                                   $subject = "Inscription NextPart";
-                                                  $toName  = "Philippe Tourigny";
                                                   break;
-            case TypeEmail::InscriptionAUTOMANN:  $emailto = "ptourigny@servicesinfo.ca"; //crouleau@inter-quebec.com
-                                                  $subject = "Inscription AUTOMANN";
+            case TypeEmail::InscriptionAUTOMANN:  $emailto = "philtourigny@gmail.com"; //crouleau@inter-quebec.com
                                                   $toName  = "Philippe Tourigny";
+                                                  $subject = "Inscription AUTOMANN";
                                                   break;
         }
         
@@ -133,84 +141,82 @@ Class RD_Email
         switch($TypeEmail)
         {
             case TypeEmail::DemandeInformation:
-                $body = "Demande d'information de la part de: " . $this->prenom . " " . $this->nom . "</br>";
-                $body .= "Ville: " . $this->ville . "</br>";
-                $body .= "Telephone: " . $this->telephone . "</br>";
-                $body .= "Courriel: " . $this->email . "</br>";
+                $body = "Demande d'information de la part de: " . $this->prenom . " " . $this->nom . "<br />";
+                $body .= "Ville: " . $this->ville . "<br />";
+                $body .= "Telephone: " . $this->telephone . "<br />";
+                $body .= "Courriel: " . $this->email . "<br />";
                 if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
                 $body .= "Infos demandées au sujet de: <a href='";
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
                 break;
             case TypeEmail::PlanifierEssaiRoutier:
-                $body = "Demande d'essai routier de la part de: " . $this->prenom . " " . $this->nom . "</br>";
-                $body .= "Ville: " . $this->ville . "</br>";
-                $body .= "Telephone: " . $this->telephone . "</br>";
-                $body .= "Courriel: " . $this->email . "</br>";
+                $body = "Demande d'essai routier de la part de: " . $this->prenom . " " . $this->nom . "<br />";
+                $body .= "Ville: " . $this->ville . "<br />";
+                $body .= "Telephone: " . $this->telephone . "<br />";
+                $body .= "Courriel: " . $this->email . "<br />";
                 if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
                 $body .= "Infos demandées au sujet de: <a href='";
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
                 break;
             case TypeEmail::ObtenirPrix:
-                $body = "Demande de prix de la part de: " . $this->prenom . " " . $this->nom . "</br>";
-                $body .= "Ville: " . $this->ville . "</br>";
-                $body .= "Telephone: " . $this->telephone . "</br>";
-                $body .= "Courriel: " . $this->email . "</br>";
+                $body = "Demande de prix de la part de: " . $this->prenom . " " . $this->nom . "<br />";
+                $body .= "Ville: " . $this->ville . "<br />";
+                $body .= "Telephone: " . $this->telephone . "<br />";
+                $body .= "Courriel: " . $this->email . "<br />";
                 if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
                 $body .= "Infos demandées au sujet de: <a href='";
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
                 break;
             case TypeEmail::DemandFinancement:
-                $body = "Demande de financement de la part de: " . $this->prenom . " " . $this->nom . "</br>";
-                $body .= "Adresse: " . $this->adresse . "</br>";
-                $body .= "Ville: " . $this->ville . "</br>";
-                $body .= "Code Postal: " . $this->codePostal . "</br>";
-                $body .= "Province: " . base64_decode(urldecode($this->province)) . "</br>";
-                $body .= "Telephone: " . $this->telephone . "</br>";
-                $body .= "Courriel: " . $this->email . "</br>";
+                $body = "Demande de financement de la part de: " . $this->prenom . " " . $this->nom . "<br />";
+                $body .= "Adresse: " . $this->adresse . "<br />";
+                $body .= "Ville: " . $this->ville . "<br />";
+                $body .= "Code Postal: " . $this->codePostal . "<br />";
+                $body .= "Province: " . base64_decode(urldecode($this->province)) . "<br />";
+                $body .= "Telephone: " . $this->telephone . "<br />";
+                $body .= "Courriel: " . $this->email . "<br />";
                 if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
                 $body .= "Infos demandées au sujet de: <a href='";
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
                 break;
             case TypeEmail::EvaluerEchange:
-                $body = "Demande de financement de la part de: " . $this->prenom . " " . $this->nom . "</br>";
-                $body .= "Ville: " . $this->ville . "</br>";
-                $body .= "Telephone: " . $this->telephone . "</br>";
-                $body .= "Courriel: " . $this->email . "</br>";
-                $body .= "Marque: " . $this->marque . "</br>";
-                $body .= "Modèle: " . $this->modele . "</br>";
-                $body .= "Année: " . $this->annee . "</br>";
-                $body .= "KM: " . $this->km . "</br>";
-                $body .= "État intérieur: " . $this->etatExterieur . "</br>";
-                $body .= "État extérieur: " . $this->etatInterieur . "</br>";
+                $body = "Demande de financement de la part de: " . $this->prenom . " " . $this->nom . "<br />";
+                $body .= "Ville: " . $this->ville . "<br />";
+                $body .= "Telephone: " . $this->telephone . "<br />";
+                $body .= "Courriel: " . $this->email . "<br />";
+                $body .= "Marque: " . $this->marque . "<br />";
+                $body .= "Modèle: " . $this->modele . "<br />";
+                $body .= "Année: " . $this->annee . "<br />";
+                $body .= "KM: " . $this->km . "<br />";
+                $body .= "État intérieur: " . $this->etatExterieur . "<br />";
+                $body .= "État extérieur: " . $this->etatInterieur . "<br />";
                 if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
                 $body .= "Infos demandées au sujet de: <a href='";
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
                 break;
             case TypeEmail::InscriptionNextPart:
-                $body = "Demande d'information de la part de: " . $this->prenom . " " . $this->nom . "</br>";
-                $body .= "Entreprise: " . $this->ville . "</br>";
-                $body .= "Telephone: " . $this->telephone . "</br>";
-                $body .= "Courriel: " . $this->email . "</br>";
+                $body = "Demande d'information de la part de: " . $this->prenom . " " . $this->nom . "<br />";
+                $body .= "Entreprise: " . $this->ville . "<br />";
+                $body .= "Telephone: " . $this->telephone . "<br />";
+                $body .= "Courriel: " . $this->email . "<br />";
                 if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
                 break;
             case TypeEmail::InscriptionAUTOMANN:
-                $body = "Demande d'inscription de la part de: " . $this->prenom . " " . $this->nom . "</br>";
-                $body .= "# Facture: " . $this->nom . "</br>";
-                $body .= "Nom succursale: " . $this->ville . "</br>";
-                $body .= "Courriel: " . $this->email . "</br>";
-                if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                $body = "Demande d'inscription de la part de: " . $this->prenom . "<br />";
+                $body .= "# de facture: " . $this->nom . "<br />";
+                $body .= "Nom de votre succursale: " . $this->ville . "<br />";
+                $body .= "Courriel: " . $this->email;
                 break;
             default:break;
         }
@@ -219,18 +225,23 @@ Class RD_Email
         $this->mail->AltBody = "-alt-";
     }
     
-    public function loadBonTravail($TypeEmail,$Succursale,$Compagnie,$Responsable,$Telephone,$Email,$Vin, $Unite, $Km, $BonCommande,$Travaux,$NoteSpeciale, $Instructions, $PrixReparationsMax)
+    public function loadBonTravail($TypeEmail,$Succursale,$Compagnie,$Responsable,$Telephone,$Email,$Vin, $Unite, $Km, $BonCommande,$NoteSpeciale, $Instructions, $PrixReparationsMax, $travaux1, $travaux2, $travaux3, $travaux4, $travaux5, $travaux6, $travaux7, $travaux8, $nomFichier )
     {
         global $applicationConfig;
         $emailto = $toName = $subject = $body = "";
-        
+
+        // TODO get # for succursale et incrémenter
         switch($TypeEmail)
         {
-            case TypeEmail::BonTravail: $emailto = "ptourigny@servicesinfo.ca";
-                                        $subject = "Demande de Bon de travail";
+            case TypeEmail::BonTravail: $emailto = "philtourigny@gmail.com";
+                                        //$subject = "Demande de Bon de travail";
                                         $toName  = "Philippe Tourigny";
                                         break;
         }
+
+        $noBonTravail = RD_Utils::getBonTravail($Succursale);
+        
+        $subject = "Demande de Bon de travail # " . $noBonTravail . " pour " . urldecode(base64_decode($Succursale));
         
         $this->succursale = $Succursale;
         $this->compagnie = $Compagnie;
@@ -241,13 +252,20 @@ Class RD_Email
         $this->unite = $Unite;
         $this->km = $Km;
         $this->bonCommande = $BonCommande;
-        $this->travaux = $Travaux;
+        $this->travaux1 = $travaux1;
+        $this->travaux2 = $travaux2;
+        $this->travaux3 = $travaux3;
+        $this->travaux4 = $travaux4;
+        $this->travaux5 = $travaux5;
+        $this->travaux6 = $travaux6;
+        $this->travaux7 = $travaux7;
+        $this->travaux8 = $travaux8;
         $this->commentaire = $NoteSpeciale;
         $this->prixReparationsMax = $PrixReparationsMax;
         
         switch($Instructions)
         {
-            case TypeInstructionsBonTravail::EstimeAvantDebutTravaux:         $this->instructions = "Demande d'estimé avant d'effecture les travaux.";
+            case TypeInstructionsBonTravail::EstimeAvantDebutTravaux:         $this->instructions = "Demande d'estimé avant d'effectuer les travaux.";
                                                                               break;
             case TypeInstructionsBonTravail::ProcederMaisAppelerSiPrixExcede: $this->instructions = "Procédez, mais appelez si le prix excède : <b>$PrixReparationsMax</b> $";
                                                                               break;
@@ -270,23 +288,181 @@ Class RD_Email
         $this->mail->addAddress($emailto, $toName);
         $this->mail->addReplyTo($this->email);
         $this->mail->Subject = $subject;
+        
+        if( $nomFichier != '' ){
+            $this->mail->addAttachment("../public_html/_uploads/bonTravail/" . $nomFichier);
+        }
                 
         // Le body spécifique
         switch($TypeEmail)
         {
             case TypeEmail::BonTravail:
-                $body = "Demande de bon de travail pour : " . $this->succursale . "</br>";
-                $body .= "Compagnie: " . $this->compagnie . "</br>";
-                $body .= "Responsable: " . $this->responsable . "</br>";
-                $body .= "Telephone: " . $this->telephone . "</br>";
-                $body .= "Courriel: " . $this->email . "</br>";
-                $body .= "VIN: " . $this->vin . "</br>";
-                $body .= "Unité: " . $this->unite . "</br>";
-                $body .= "KM: " . $this->km . "</br>";
-                $body .= "Bon de commande: " . $this->bonCommande . "</br>";
-                $body .= "Travaux à faire : " . $this->travaux . "</br>";
-                $body .= "Note spéciale: " . $this->commentaire . "</br>";
-                $body .= "Instructions: " . $this->instructions . "</br>";
+//                $body = "Demande de bon de travail pour : " . $this->succursale . "<br />";
+//                $body .= "Compagnie: " . $this->compagnie . "<br />";
+//                $body .= "Responsable: " . $this->responsable . "<br />";
+//                $body .= "Telephone: " . $this->telephone . "<br />";
+//                $body .= "Courriel: " . $this->email . "<br />";
+//                $body .= "VIN: " . $this->vin . "<br />";
+//                $body .= "Unité: " . $this->unite . "<br />";
+//                $body .= "KM: " . $this->km . "<br />";
+//                $body .= "Bon de commande: " . $this->bonCommande . "<br />";
+//                $body .= "Travaux à faire : " . $this->travaux . "<br />";
+//                $body .= "Note spéciale: " . $this->commentaire . "<br />";
+//                $body .= "Instructions: " . $this->instructions . "<br />";
+                $body = '<p class="MsoNormal"><img src="http://www.philtourigny.com/assets/logoReseauDynamique.png" width="249" height="69" border="0" alt="Logo" title="Logo" style="display:block"></p>
+                        <div><h1>Demande de bon de travail</span></h1></div>
+                        <p><strong><span lang="FR-CA">Demande # :</span></strong><span lang="FR-CA">&nbsp;' . $noBonTravail . '</span></p>
+                        <p><strong><span lang="FR-CA">Date :</span></strong><span lang="FR-CA">&nbsp;' . date("Y-m-d H:i:s") . '</span></p>
+                        <table class="m_272356984177441604MsoNormalTable" cellspacing="3" cellpadding="0" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal"><strong>Client :</strong></p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal">' . $this->compagnie . '</p>
+                                    </td>
+                                    <td style="width:18.75pt;padding:.75pt .75pt .75pt .75pt" width="25">
+                                        <p class="MsoNormal">&nbsp;</p></td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal"><strong>VIN :</strong></p></td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal">' . $this->vin . '</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal"><strong>Nom du responsable :</strong></p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal">' . $this->responsable . '</p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal">&nbsp;</p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal"><strong>Unité # :</strong></p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal">' . $this->unite . '</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal"><strong>Téléphone :</strong></p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal">' . $this->telephone . '</p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal">&nbsp;</p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal"><strong>Kilométrage :</strong></p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal">' . $this->km . '</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal"><strong>Courriel :</strong></p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal"><a href="mailto:' . $this->email . '" target="_blank">' . $this->email . '</a></p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal">&nbsp;</p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal"><strong>Bon de commande :</strong></p>
+                                    </td>
+                                    <td style="padding:.75pt .75pt .75pt .75pt">
+                                        <p class="MsoNormal">' . $this->bonCommande . '</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            <strong><span lang="FR-CA">Description des travaux :</span></strong>
+                        </p>
+                        <table class="m_272356984177441604MsoNormalTable" cellspacing="0" cellpadding="0" border="0">
+                            <tbody>
+                            <tr>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">Travaux&nbsp;#1&nbsp;:</p>
+                                </td>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">'. $this->travaux1 .'</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">Travaux&nbsp;#2&nbsp;:</p>
+                                </td>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">'. $this->travaux2 .'</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">Travaux&nbsp;#3&nbsp;:</p>
+                                </td>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">'. $this->travaux3 .'</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">Travaux&nbsp;#4&nbsp;:</p>
+                                </td>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">'. $this->travaux4 .'</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">Travaux&nbsp;#5&nbsp;:</p>
+                                </td>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">'. $this->travaux5 .'</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">Travaux&nbsp;#6&nbsp;:</p>
+                                </td>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">'. $this->travaux6 .'</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">Travaux&nbsp;#7&nbsp;:</p>
+                                </td>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">'. $this->travaux7 .'</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">Travaux&nbsp;#8&nbsp;:</p>
+                                </td>
+                                <td style="padding:0cm 0cm 0cm 0cm" valign="top">
+                                    <p class="MsoNormal">'. $this->travaux8 .'</p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong><span lang="FR-CA">Note spéciale :&nbsp;</span></strong><span lang="FR-CA"></span></p>
+                        <p><strong><span lang="FR-CA">Autorisation :</span></strong><span lang="FR-CA">&nbsp;Oui</span></p>
+                        <p><span lang="FR-CA">J\'autorise par ceci le travail de réparation ci-dessus à être effectué avec les matériaux nécessaires. Vous ne serez pas jugé responsable de la perte ou des dommages au véhicule, ou aux articles laissés dans le véhicule, en cas de feu,
+                         de vol, d\'accident ou de toute autre cause indépendante de votre volonté. J\'autorise par ceci vous et vos employés à opérer le véhicule ci-dessus décrit à des fin d\'essais routier et ou d\'inspections. Je reconnais que vous avez un lien légal sur le véhicule
+                         pour recouvrir la valeur des travaux encourue sur le véhicule. </p>
+                        <strong>Par :&nbsp;Service</strong>&nbsp;</span></p>
+                        <p><strong><span lang="FR-CA">Instruction :</span></strong><span lang="FR-CA">&nbsp;' . $this->instructions . '&nbsp;</span></p>
+                        </div>
+                        </div>';
                 break;
             default:break;
         }
@@ -305,7 +481,7 @@ Class RD_Email
             case TypeEmail::DemandePieces: 
                                            // Cuidado vrai emails de gens dans la fonction: 
                                            $emailto = RD_Succursales::getEmailDemandePieces($Succursale);
-                                           $emailto = "ptourigny@servicesinfo.ca";
+                                           $emailto = "philtourigny@gmail.com";
                                            $subject = "Demande de Bon de travail";
                                            $toName  = "Philippe Tourigny";
                                            break;
@@ -345,14 +521,14 @@ Class RD_Email
         switch($TypeEmail)
         {
             case TypeEmail::DemandePieces:
-                $body = "Demande de pièces pour : " . $this->succursale . "</br>";
-                $body .= "Compagnie: " . $this->prenom . "</br>";                     // On passe la compagnie dans le prenom
-                $body .= "Responsable: " . $this->responsable . "</br>";
-                $body .= "Telephone: " . $this->telephone . "</br>";
-                $body .= "Courriel: " . $this->email . "</br>";
-                $body .= "Pièces: " . $this->nom . "</br>";                           // On passe les pièces dans le nom
+                $body = "Demande de pièces pour : " . $this->succursale . "<br />";
+                $body .= "Compagnie: " . $this->prenom . "<br />";                     // On passe la compagnie dans le prenom
+                $body .= "Responsable: " . $this->responsable . "<br />";
+                $body .= "Telephone: " . $this->telephone . "<br />";
+                $body .= "Courriel: " . $this->email . "<br />";
+                $body .= "Pièces: " . $this->nom . "<br />";                           // On passe les pièces dans le nom
                 if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "</br></br>";
+                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
                 break;
             default:break;
         }
