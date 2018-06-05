@@ -80,6 +80,7 @@ interface page
     const EXTERNAL_nextPart = 701;
     const EXTERNAL_fleetrite = 702;
     const EXTERNAL_details = 703;
+    const EXTERNAL_boutiqueEnLigne = 704;
 }
 
 class RD_PageLink
@@ -162,10 +163,11 @@ class RD_PageLink
             case page::Details: $_page = "details";break;
             case page::Carrieres: $_page = "carrieres";break;
             case page::Postuler: $_page = "postuler";break;            
-            
+                
             case page::EXTERNAL_nextPartLogin: $_page = "http://www.nexpart.com/login.php";$_wholeURL = true;break;
             case page::EXTERNAL_fleetrite: $_page = "http://www.fleetrite.com";$_wholeURL = true;break;
             case page::EXTERNAL_details: $_page = "http://reseaudynamique.com/details.php";$_wholeURL = true;break;
+            case page::EXTERNAL_boutiqueEnLigne: $_page = "https://reseaudynamique.gxd.ca/";$_wholeURL = true;break;
             
             default: $_page = "accueil";break;
             //case page:: $_page = "";break;
