@@ -152,6 +152,7 @@ class RD_Camion{
         $this->transmission = $r['transtype'];
         $this->moteur = $r['engine'] == 0;        
         $this->hp = $r['hp'];
+        $this->config = $r['config'];
 
         $this->loadPicturesNew();
         
@@ -190,6 +191,7 @@ class RD_Camion{
         $this->transmission = $r['transtype'];
         $this->moteur = $r['engine'] == 0;        
         $this->hp = $r['hp'];
+        $this->config = $r['config'];
 
         $this->loadPicturesUsed();
         
