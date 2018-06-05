@@ -94,7 +94,7 @@
                             else
                             {
                                 if(isset($_REQUEST["succursale"]))
-                                    echo RD_Utils::GetDropDownSuccursalesDemandePiece(base64_encode(urldecode($_REQUEST["succursale"])));
+                                    echo RD_Utils::GetDropDownSuccursalesDemandePiece($_REQUEST["succursale"]);
                             }
                             ?>
                             <div class="demandeBon" style="visibility: <?php echo $divVisibility; ?>">
