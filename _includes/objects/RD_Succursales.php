@@ -97,12 +97,12 @@ class RD_Succursales{
     
     public function getSuccursaleBonTravail()
     {
-        return urlencode(base64_encode($this->parametreBonTravailNomSuccursale));
+        return base64_encode($this->parametreBonTravailNomSuccursale);
     }
     
     public function getSuccursaleDemandePieces()
     {
-        return urlencode(base64_encode($this->parametreDemandePiecesNomSuccursale));
+        return base64_encode($this->parametreDemandePiecesNomSuccursale);
     }
     
     public static function getEmailDemandePieces($NomSuccursaleBase64)
@@ -715,8 +715,8 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->parametreBonTravailNomSuccursale = "Garage Robert";
-                $this->parametreDemandePiecesNomSuccursale = "Garage Robert";
+                $this->parametreBonTravailNomSuccursale = "Garage%20Robert";
+                $this->parametreDemandePiecesNomSuccursale = "Garage%20Robert";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2741.5253671513356!2d-72.71138334836269!3d46.596619579028236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc64df0b295b3d9%3A0xf26322fa98abd028!2sGarage+Robert+Inc!5e0!3m2!1sfr!2sca!4v1487884811377";
                 break;
             case nomSuccursale::Isuzu:
