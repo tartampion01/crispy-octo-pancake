@@ -1,5 +1,7 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <script type='text/javascript'>
+    var ID_TRAVAUX = 1;
+    
     function setOption(id, value)
     {
         var selectBox = document.getElementById(id),
@@ -12,9 +14,49 @@
             }
         }
     }
+    
+    function hideDiv(id)
+    {
+        ID_TRAVAUX--;
+        
+        var x = document.getElementById(id);
+        x.value = '';
+        
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    
+    function addDivTravaux()
+    {
+        ID_TRAVAUX++;
+        
+        if( ID_TRAVAUX <= 8 )
+        {
+            var x = document.getElementById('divTravaux' + ID_TRAVAUX);
+
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        else
+        {
+            var x = document.getElementById('divAddTravaux');
+            
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    }
 </script>
 <body class="body">
-    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
+    <form method="POST" action="/<?php echo $NOMPAGE; ?>" enctype="multipart/form-data">
     <div class="wrap">
         <div class="content">
             <div class="shrink">
@@ -24,10 +66,60 @@
                 <div class="contenu">
                     <div class="contenu2">
                         <?php
+                        function uploadFile()
+                        {
+                            $nomFichier = '';
+                            $target_dir = "_uploads/bonTravail/";
+                            $target_file = $target_dir . basename($_FILES["FileUpload"]["name"]);
+                            $uploadOk = 1;
+                            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+                            if(isset($_POST["btnSendMail"])) {
+                                $check = getimagesize($_FILES["FileUpload"]["tmp_name"]);
+                                //echo $_FILES["FileUpload"]["tmp_name"];
+                                if($check !== false) {
+                                    //echo "File is an image - " . $check["mime"] . ".";
+                                    $uploadOk = 1;
+                                } else {
+                                    //echo "Ce fichier n'est point une image.";
+                                    $uploadOk = 0;
+                                }
+                            }
+                            // Check if file already exists
+                            if (file_exists($target_file)) {
+                                //echo "Ce fichier existe déjà";
+                                $uploadOk = 0;
+                            }
+                            // Check file size
+                            if ($_FILES["FileUpload"]["size"] > 5000000) {
+                                //echo "Le fichier est trop volumineux. Moins de 5mb.";
+                                $uploadOk = 0;
+                            }
+                            // Allow certain file formats
+                            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "doc" && $imageFileType != "xls") {
+                                //echo "Fichiers .pdf,.jpg,.png,.doc,.xls seulement";
+                                $uploadOk = 0;
+                            }
+                            // Check if $uploadOk is set to 0 by an error
+                            if ($uploadOk == 0) {
+                                //echo "Le fichier n'a pu être ajouté";
+                            // if everything is ok, try to upload file
+                            } else {
+                                if (move_uploaded_file($_FILES["FileUpload"]["tmp_name"], $target_file)) {
+                                    //"Le fichier ". basename( $_FILES["FileUpload"]["name"]). " a été téléchargé.";
+                                    $nomFichier = basename( $_FILES["FileUpload"]["name"]);
+                                } else {
+                                    //echo "Diantre, il y a eu une erreur en ajoutant le fichieré";
+                                }
+                            }
+                            
+                            return $nomFichier;
+                        }
+                        
                         $divVisibility = "visible";
-
+                        $nomFichier = '';
+                        
                         $nomCompagnieErr = $nomResponsableErr = $emailErr = $telErr = $vinErr = $uniteErr = $kmErr = $bonCommandeErr = $travauxErr = $noteSpecialeErr = $instructionsErr = $acceptErr = $prixMaxErr = $captchaErr = "";
-                        $succursale = $nomCompagnie = $nomResponsable = $email = $tel = $vin = $unite = $km = $bonCommande = $travaux = $noteSpeciale = $instructions = $prixMax = "";
+                        $succursale = $nomCompagnie = $nomResponsable = $email = $tel = $vin = $unite = $km = $bonCommande = $noteSpeciale = $instructions = $prixMax = $travaux1 = $travaux2 = $travaux3 = $travaux4 = $travaux5 = $travaux6 = $travaux7 = $travaux8 = "";
                         $fileList = array();
 
                         $errorCount = 0;
@@ -35,7 +127,7 @@
                         if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                             $succursale = $_POST['ddlSuccursales'];
-                            
+
                             if (empty($_POST["tbNomCompagnie"])){
                                 $nomCompagnieErr = "Champ obligatoire";
                                 $errorCount += 1;
@@ -89,10 +181,17 @@
                             else
                                 $bonCommande = RD_Utils::test_input($_POST["tbBonCommande"]);
 
-                            $accept = $_POST['cbAccept'];
-                            if($accept == 0){
+                            if (empty($_POST["cbAccept"])){
                                 $acceptErr = "Cette case est obligatoire";
-                                $errorCount += 1;
+                            }
+                            else
+                            {
+                                $accept = $_POST['cbAccept'];
+                                if($accept == 0){
+                                    $acceptErr = "Cette case est obligatoire";
+                                    $errorCount += 1;
+                                
+                                }
                             }
 
                             if(empty($_POST['rbInstruction'])){
@@ -120,22 +219,34 @@
                                 }
                             }
 
-                            if(!RD_Utils::validateRecaptcha($_POST['g-recaptcha-response'])){
-                                $errorCount += 1;
-                                $captchaErr = 'Veuillez remplir le <i>CAPTCHA</i> correctement.';
-                            }
+//                            if(!RD_Utils::validateRecaptcha($_POST['g-recaptcha-response'])){
+//                                $errorCount += 1;
+//                                $captchaErr = 'Veuillez remplir le <i>CAPTCHA</i> correctement.';
+//                            }
 
                             $unite = $_POST['tbUnite'];
                             $km = $_POST['tbKm'];
-                            $travaux = $_POST['tbTravaux'];
+                            $travaux1 = $_POST['tbTravaux1'];
+                            $travaux2 = $_POST['tbTravaux2'];
+                            $travaux3 = $_POST['tbTravaux3'];
+                            $travaux4 = $_POST['tbTravaux4'];
+                            $travaux5 = $_POST['tbTravaux5'];
+                            $travaux6 = $_POST['tbTravaux6'];
+                            $travaux7 = $_POST['tbTravaux7'];
+                            $travaux8 = $_POST['tbTravaux8'];
                             $noteSpeciale = $_POST['tbNoteSpeciale'];
 
+                            if(!empty($_FILES["FileUpload"]["name"])){
+                                $nomFichier = uploadFile();
+                            }
+                            
                             // ENVOI EMAIL
                             if(isset($_POST['btnSendMail']) && $errorCount == 0)
                             {
                                 $RDemail = new RD_Email();
-                                $RDemail->loadBonTravail(TypeEmail::BonTravail,$succursale,$nomCompagnie,$nomResponsable,$tel,$email,$vin,$unite,$km,$bonCommande,$travaux,$noteSpeciale,$instructions,$prixMax);
-                                if($RDemail->send()){
+                                $RDemail->loadBonTravail(TypeEmail::BonTravail,$succursale,$nomCompagnie,$nomResponsable,$tel,$email,$vin,$unite,$km,$bonCommande,$noteSpeciale,$instructions,$prixMax,$travaux1,$travaux2,$travaux3,$travaux4,$travaux5,$travaux6,$travaux7,$travaux8, $nomFichier);
+                                if($RDemail->send())
+                                {
                                     $divVisibility = "hidden";
                                     ?><h2>Votre demande a bien été envoyée</h2><?php
                                 }
@@ -176,25 +287,82 @@
                             <input name="tbBonCommande" id="tbBonCommande" type="text"  placeholder="Bon de commande *" value="<?php echo $bonCommande;?>">
                             <span class="error"><?php echo $bonCommandeErr;?></span>
 
-                            <div class="supPlainte" data-staticclassnames="supPlainte" itemid="" style="display: none;">
-                                <a class="" name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
-                            </div>
-                            <div class="plainte clear">
-                                <input name="tbTravaux" id="tbTravaux" type="text" class="" placeholder="Description des travaux à faire" value="<?php echo $travaux; ?>">
-                            </div>
-                            <div class="supPlainte" data-staticclassnames="supPlainte" itemid="">
-                                <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                            <div class="wrapPlaintes">
+                                <div class="plainte plainte1">
+                                    <div class="champ">
+                                        <input name="tbTravaux1" id="tbTravaux1" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux1; ?>">
+                                    </div>
+                                    <div class="supPlainte">
+                                        <a class="" name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                    </div>
+                                </div>
+                                <div class="plainte clear">
+                                    <div class="champ">
+                                        <input name="tbTravaux2" id="tbTravaux2" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux2; ?>">
+                                    </div>
+                                    <div class="supPlainte">
+                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                    </div>
+                                </div>
+                                <div class="plainte clear">
+                                    <div class="champ">
+                                        <input name="tbTravaux3" id="tbTravaux3" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux3; ?>">
+                                    </div>
+                                    <div class="supPlainte">
+                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                    </div>
+                                </div>
+                                <div class="plainte clear">
+                                    <div class="champ">
+                                        <input name="tbTravaux4" id="tbTravaux4" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux4; ?>">
+                                    </div>
+                                    <div class="supPlainte">
+                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                    </div>
+                                </div>
+                                <div class="plainte clear">
+                                    <div class="champ">
+                                        <input name="tbTravaux5" id="tbTravaux5" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux5; ?>">
+                                    </div>
+                                    <div class="supPlainte">
+                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                    </div>
+                                </div>
+                                <div class="plainte clear">
+                                    <div class="champ">
+                                        <input name="tbTravaux6" id="tbTravaux6" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux6; ?>">
+                                    </div>
+                                    <div class="supPlainte">
+                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                    </div>
+                                </div>
+                                <div class="plainte clear">
+                                    <div class="champ">
+                                        <input name="tbTravaux7" id="tbTravaux7" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux7; ?>">
+                                    </div>
+                                    <div class="supPlainte">
+                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                    </div>
+                                </div>
+                                <div class="plainte clear">
+                                    <div class="champ">
+                                        <input name="tbTravaux8" id="tbTravaux8" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux8; ?>">
+                                    </div>
+                                    <div class="supPlainte">
+                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="addPlainte">
                                 <p>
-                                    <a name="hyperlien" onclick="javascript:RegisterClick(this);" target="_self">[+] Ajouter d'autres travaux à faire</a>
+                                    <a class="lienAjoutTravaux" name="hyperlien" onclick="javascript:RegisterClick(this);" target="_self">[+] Ajouter d&#39;autres travaux &#224; faire</a>
                                 </p>
                             </div>
 
                             <div class="ReplacementDiv">
                                 <span class="UploadFileText">Inclure un document (PDF, JPG, PNG, DOC, XLS)</span></br>
                                 <span class="ReplacementButton" style="position: relative; overflow: hidden; cursor: pointer;">
-                                    <input type="file" accept=".pdf,.jpg,.png,.doc,.xls" name="FileUpload" id="FileUpload" class="ReplacementButtonInput" title="">
+                                    <input type="file" accept=".pdf,.jpg,.png,.doc,.xls" name="FileUpload" id="FileUpload" class="ReplacementButtonInput" title="">                                    
                                 </span>
                             </div>
 
@@ -214,13 +382,15 @@
                                 J'autorise par ceci le travail de réparation ci-dessus à être effectué avec les matériaux nécessaires. Vous ne serez pas jugé responsable de la perte ou des dommages au véhicule, ou aux articles laissés dans le véhicule, en cas de feu, de vol, d'accident ou de toute autre cause indépendante de votre volonté. J'autorise par ceci vous et vos employés à opérer le véhicule ci-dessus décrit à des fin d'essais routier et ou d'inspections. Je reconnais que vous avez un lien légal sur le véhicule pour recouvrir la valeur des travaux encourue sur le véhicule.
                             </label>
                             <strong>Instructions</strong>
-                            <label class="hideDrummond"><input type="radio" id="rbInstruction" name="rbInstruction" value="1">&nbsp;Je demande un estimé écrit avant le début des travaux.</label>
-                            <input type="radio" name="rbInstruction" id="rbInstruction" value="2">&nbsp;Veuillez procéder aux réparations mais appelez-moi pour approbation avant de continuer si le prix excède $ 
-                            <span class="prixSpan">
-                                <input name="tbPrixReparationMax" id="tbPrixReparationMax" type="text"></span>
-                                <?php echo $prixMaxErr;?></span>
+                            <label class="hideDrummond">
+                                <input type="radio" id="rbInstruction" name="rbInstruction" value="1">&nbsp;Je demande un estimé écrit avant le début des travaux.</label>
+                                <input type="radio" name="rbInstruction" id="rbInstruction" value="2">&nbsp;Veuillez procéder aux réparations mais appelez-moi pour approbation avant de continuer si le prix excède $ 
+                                <span class="prixSpan">
+                                    <input name="tbPrixReparationMax" id="tbPrixReparationMax" type="text" value=<?php echo $prixMax;?>><?php echo $prixMaxErr;?>
+                                </span>
                             <label class="widthError">
-                                <input type="radio" name="rbInstruction" id="rbInstruction" value="3">&nbsp;Je ne veux pas d'évaluation et vous pouvez procéder aux reparations.</label>
+                                <input type="radio" name="rbInstruction" id="rbInstruction" value="3">&nbsp;Je ne veux pas d'évaluation et vous pouvez procéder aux reparations.
+                            </label>
                                 <span class="error"><?php echo $instructionsErr;?></span>
                             <p class="hideDrummond">À cause de l'espace limité de stationnement nous ne pouvons remiser un véhicule pendant des périodes prolongées. Veuillez noter qu'à compter du sixième jour suivant la fin des réparations, des frais de $20.00 par jour de remisage seront exigés jusqu'à ce que le véhicule soit récupéré.</p>
 
@@ -229,125 +399,19 @@
                         <input type="hidden" name="" itemid="">
                         <input type="submit" name="btnSendMail" id="btnSendMail" value="Soumettre" class="">
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<script type="text/javascript">  //<![CDATA[
+                                    <script type="text/javascript">  //<![CDATA[
   $(function () {
-    var $vin = $(".N2287dc7c24134868b9ccf7364a871645CssClass"),
-        $unite = $(".Nf22acb43dfa846bab9ab560424200f3aCssClass"),
-        $button = $(".Na311930d570c4b60b0df28609759e473Css"),
-    $maxPriceApprob = $(".Nc22e6d3d71244746ae6bd804ce043a52CssClass");
-
-    $vin.rules("remove", "required");
-    $unite.rules("remove", "required");
-
-    $maxPriceApprob.rules("add",
-        {
-          required: {
-            depends: function () {
-              return $("input[value='Na6268cc3888744bb9b4723d4b4dffefd']").prop("checked");
-            }
-          }
-        });
-
-
-    $vin.rules("add",
-      {
-        required: {
-          depends: function () {
-            return $unite.val() == "";
-          }
-        },
-        minlength: 8
-      });
-
-    $unite.rules("add",
-    {
-      required: {
-        depends: function () {
-          return $vin.val() == "";
-        }
-      }
-    });
-
-    $vin.keyup(function () {
-      if ($vin.data("isValidate")) {
-        $unite.valid();
-      }
-    });
-
-    $unite.keyup(function () {
-      if ($unite.data("isValidate")) {
-        $vin.valid();
-      }
-    });
-
-    $("[name='instruction']").change(function () {
-      if ($maxPriceApprob.data("isValidate")) {
-        $maxPriceApprob.valid();
-      }
-    });
-
-    $button.click(function () {
-      $vin.data("isValidate", true);
-      $unite.data("isValidate", true);
-      $maxPriceApprob.data("isValidate", true);
-    });
-  });
-
-  $(function () {
-    var submitFct = null;
-    // S'assure de ne pas soumettre le formulaire sans passer par l'obtention du ID
-    setTimeout(function () { submitFct = N9f4aed34144a4343aa5ee5568fadf0ef_Na311930d570c4b60b0df28609759e473_FormManager.Submit; N9f4aed34144a4343aa5ee5568fadf0ef_Na311930d570c4b60b0df28609759e473_FormManager.Submit = function () { }; }, 0);
-    $('.Na311930d570c4b60b0df28609759e473Css').click(function () {
-      $.ajax({
-        type: "POST",
-        data: JSON.stringify({ "provenance": $(".Nd4c743e2a18e4b209f0c816f0bbd5ed0CssClass").val() }),
-        url: "/Service/OrderService.asmx/GetOrderIdAndRecipients",
-        contentType: "application/json;",
-        dataType: "json",
-        success: function (result) {
-          N9f4aed34144a4343aa5ee5568fadf0ef_Na311930d570c4b60b0df28609759e473_FormManager.SubmitFormEntity.EmailTitle = "Demande de bon de travail # " + result.d.OrderId + " pour " + $(".Nd4c743e2a18e4b209f0c816f0bbd5ed0CssClass").val() + " - " + result.d.City;
-          if (!$("input[value='Na6268cc3888744bb9b4723d4b4dffefd']").prop("checked")) {
-            $(".Nc22e6d3d71244746ae6bd804ce043a52CssClass").val("");
-          }
-
-          // Retrouve le champ caché et le met à jour
-          $(".Na311930d570c4b60b0df28609759e473Css").siblings("input[type='hidden']:first").val(result.d.OrderId);
-          $.grep(BrokerManager.Brokers, function (broker) { return broker.BrokerName == "712e814f58904f52a462498264c89427"; })[0].BrokerValue = result.d.Emails;
-          // Fait la soumission du formulaire
-          submitFct.apply(N9f4aed34144a4343aa5ee5568fadf0ef_Na311930d570c4b60b0df28609759e473_FormManager);
-        }, error: function () {
-          alert("Une erreur est survenue, les données n'ont pas été soumises.");
-        }
-      });
-
-      return false;
-    });
-  });
-  $(function () {
-    //Sélectionne la bonne option dans le select list selon le hash dans l'url
-    var refferer = decodeURIComponent(window.location.hash).replace("#", "");
-    refferer = refferer.substr(0, refferer.indexOf(" - "));
-    $("select:first-child option").each(function () {
-      if ($(this).text().indexOf(refferer) >= 0) {
-        $(this).prop("selected", true);
-      }
-    })
-
+    
     $(".plainte:first-child .supPlainte").hide();
 
     //Ajouter une plainte
-    $(".Nae94f1a365774809861a22a6952e566cCss").click(function () {
+    $(".lienAjoutTravaux").click(function () {
       $(".plainte:hidden:first").slideDown("1000", function () {
         if ($(".plainte:visible").length >= 0) {
           $(".plainte:first-child .supPlainte").slideDown();
         }
         if ($(".plainte:visible").length >= 8) {
-          $(".Nae94f1a365774809861a22a6952e566cCss").slideUp();
+          $(".lienAjoutTravaux").slideUp();
         }
       }).find("input").focus();
 
@@ -362,8 +426,8 @@
         if (nbVisibleElements <= 1) {
           $(".plainte:first-child .supPlainte").slideUp();
         }
-        if (nbVisibleElements < 8 && $(".Nae94f1a365774809861a22a6952e566cCss").is(":hidden")) {
-          $(".Nae94f1a365774809861a22a6952e566cCss").slideDown();
+        if (nbVisibleElements < 8 && $(".lienAjoutTravaux").is(":hidden")) {
+          $(".lienAjoutTravaux").slideDown();
         }
 
         //Arrays contenant les zones des plaintes et les valeurs des plaintes
@@ -391,22 +455,110 @@
         }
       });
     });
-
-    $(".N96c4317cd0614b73bec2a21c7d19b069CssClass").attr({"x-autocompletetype": "name-full", "autocomplete": "on", "name": "fullname"});
-    $(".N1abc0e00281a478693711bd87cd0e747CssClass").attr({ "x-autocompletetype": "phone-full", "autocomplete": "on", "name": "phone" });
-    $(".Nd8cd395081f84069a6a21eabf3139f6eCssClass").attr({ "x-autocompletetype": "email", "autocomplete": "on", "name": "email" });
-
   });
   //]]></script>
-                            
-                            
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
     </form>
-    
+    <script type="text/javascript">    //<![CDATA[
+
+
+
+
+
+
+
+$(document).ready(function () {
+
+  $("body").attr("ontouchstart", "");
+  $("body").attr("onmouseover", "");
+
+  var $menuMobile = $(".menuMobile");
+  if ($(window).width() < 641) {
+    $menuMobile.css("left", -$menuMobile.outerWidth());
+  } else {
+    $menuMobile.hide();
+  }
+
+  $(".icoMenuMobile").click(function () {
+    $(this).toggleClass("open");
+
+    $menuMobile.animate({
+      left: parseInt($menuMobile.css('left'), 10) == 0 ?
+          -$menuMobile.outerWidth() :
+          0
+    });
+    $(".wrap").animate({
+      left: parseInt($menuMobile.css('left'), 10) == 0 ?
+        0 :
+        +$menuMobile.outerWidth()
+    });
+    $(".pied").animate({
+      left: parseInt($menuMobile.css('left'), 10) == 0 ?
+        0 :
+        +$menuMobile.outerWidth()
+    });
+  });
+
+  $(".menuCss5").find(".parent > a").click(function () {
+    var open = $(this).parent();
+    if (open.hasClass("expanded")) {
+      open.removeClass("expanded");
+      open.children("div").slideUp();
+    } else {
+      open.addClass("expanded");
+      open.children("div").slideDown("fast", function () {
+        $('html, body').animate({
+          scrollTop: open.offset().top
+        }, 1000);
+      });
+    }
+  });
+  //Faire afficher les filtres
+  $(".toggleFilters").bind("click", openFilters);
+  $(".viewResults a").bind("click", closeFilters);
+  function openFilters() {
+    $(".GpcMenuWrapper").slideDown();
+    $(".toggleFilters").addClass("selected").unbind("click").find(".openClose").bind("click", closeFilters);
+  }
+  function closeFilters() {
+    $(".GpcMenuWrapper").slideUp();
+    $(".toggleFilters").removeClass("selected");
+    setTimeout(function () {
+      $(".toggleFilters").bind("click", openFilters).find(".openClose").unbind("click")
+    }, 250)
+  }
+});
+
+var magicTimeout = "";
+
+$(window).resize(function () {
+  if (magicTimeout != null) {
+    clearTimeout(magicTimeout);
+    magicTimeout = null;
+  }
+  magicTimeout = setTimeout(function () {
+    var $menuMobile = $(".menuMobile");
+    if ($(window).width() < 641) {
+      $menuMobile.show();
+      if (parseInt($menuMobile.css("left")) < 0) {
+        $menuMobile.css("left", -$menuMobile.outerWidth())
+      } else {
+        if ($menuMobile.is(":visible")) {
+          $(".wrap").css("left", $menuMobile.outerWidth());
+          $(".pied").css("left", $menuMobile.outerWidth());
+        }
+      }
+    } else {
+      $menuMobile.hide();
+    }
+  }, 100);
+});
+    //]]>  </script>
     <script src="https://www.google.com/recaptcha/api.js?hl=fr-CA" async defer></script>
 </body>
 </html>
