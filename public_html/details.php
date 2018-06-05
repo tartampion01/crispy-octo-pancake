@@ -3,6 +3,12 @@
     $camion = new RD_Camion(null);
     $camion->load_new(base64_decode(urldecode($_GET["id"])));
 ?>
+<script type="text/javascript">
+    function switchMe(ceci)
+    {
+        document.getElementById("divBig").src = ceci.src;
+    }
+</script>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
         <div class="content produit">
@@ -10,9 +16,17 @@
                 <div class="titrepage">
                     <h1>
                         <!-- Titre camion/ remorque = Marque modele & empattement -->
-                        <span><?php echo $camion->marque;?></span> - 
-                        <span><?php echo $camion->modele;?></span>
-                        &nbsp;<span><?php echo $camion->wb;?></span>
+                        <span>
+                            <?php 
+                                echo $camion->marque . "&nbsp;-&nbsp;";
+                                echo $camion->modele;
+                                
+                                if( $camion->config != "-" )
+                                {
+                                    echo "&nbsp;-&nbsp;" . $camion->config;
+                                }
+                            ?>
+                        </span>
                     </h1>
                 </div>
                 <div class="contenu">
@@ -155,17 +169,17 @@
                                                     <div class="lightbox-container-image" style="height: 0px; width: 0px; opacity: 1; overflow: auto;">
                                                         
                                                         <!-- TODO PHOTO PRINCIPALE ONGLET PHOTOS -->
-                                                        <img class="lightbox-image" style="width: 498px; height: 373px;" src="<?php echo $camion->pictures[0]; ?>" width="498" height="373">
+                                                        <img class="lightbox-image" id="divBig" style="width: 498px; height: 373px;" src="<?php echo $camion->pictures[0]; ?>" width="498" height="373">
                                                         <!--<img class="lightbox-image" style="width: 498px; height: 373px;" src="/_assets/images/camions/N-4705-2_498x0.jpg" width="498" height="373">-->
                                                         
                                                         
                                                         <div class="lightbox-video" style="display: none;"></div>
-                                                        <div style="display: block; height: 0px; width: 0px;" class="lightbox-nav ItemIDlightboxNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b">
-                                                            <a href="#" class="lightbox-nav-btnPrev" style="height: 100%; background: url(&quot;/_images/NmsLightBox/lightbox-blank.gif&quot;) no-repeat transparent; display: none;"></a>
-                                                            <a href="#" class="lightbox-nav-btnNext" style="height: 100%; background: url(&quot;/_images/NmsLightBox/lightbox-btn-next.png&quot;) right 50% no-repeat;"></a>
+                                                        <div style="display: block; height: 0px; width: 0px;" class="lightbox-nav">
+                                                            <a href="#" class="lightbox-nav-btnPrev" style="height: 100%; background: url(&quot;/_images/menu_images/lightbox-blank.gif&quot;) no-repeat transparent; display: none;"></a>
+                                                            <a href="#" class="lightbox-nav-btnNext" style="height: 100%; background: url(&quot;/_images/menu_images/lightbox-btn-next.png&quot;) right 50% no-repeat;"></a>
                                                         </div>
                                                         <div class="lightbox-loading" style="display: none;">
-                                                            <a href="#" class="lightbox-loading-link"><img src="/_images/NmsLightBox/lightbox-ico-loading.gif"></a>
+                                                            <a href="#" class="lightbox-loading-link"><img src="/_images/menu_images/lightbox-ico-loading.gif"></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -195,7 +209,7 @@
                                                         <?php
                                                             foreach($camion->pictures as $pic)
                                                             {
-                                                                ?><img width="100" height="100" src="<?php echo $pic; ?>"/><?php
+                                                                ?><a href="#" class="" contenttype="Image" onclick="return false" ><img class="ProductImage" onclick="switchMe(this);" width="100" height="82" src="<?php echo $pic; ?>"/></a>&nbsp;<?php                                                                
                                                             }
                                                         ?>
                                                         
