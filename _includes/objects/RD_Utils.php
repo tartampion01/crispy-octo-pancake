@@ -13,21 +13,21 @@ class RD_Utils
     {
         //echo "----- $succursaleToSelect ------";
         $ddlDebut = "<select id='ddlSuccursales' name='ddlSuccursales' class='dropDownBonTravailDemandePieces'>";
-        $options = "<option value='Q2FtaW9ucyBJbnRlci1BbmpvdQ=='>Camions Inter-Anjou</option>";
-        $options .= "<option value='Q2FtaW9ucyBJbnRlci1MYW5hdWRpw6hyZQ=='>Camions Inter-Lanaudière</option>";
-        $options .= "<option value='Q2FtaW9ucyBJbnRlcm5hdGlvbmFsIMOJbGl0ZQ=='>Camions International Élite</option>";
-        $options .= "<option value='Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg=='>Centre du Camion Beaudoin</option>";
-        $options .= "<option value='R2FyYWdlIFJvYmVydA=='>Garage Robert</option>";
+        $options = "<option value='Q2FtaW9ucyUyMEludGVyLUFuam91'>Camions Inter-Anjou</option>";
+        $options .= "<option value='Q2FtaW9ucyUyMEludGVyLUxhbmF1ZGklQzMlQThyZQ=='>Camions Inter-Lanaudière</option>";
+        $options .= "<option value='Q2FtaW9ucyUyMEludGVybmF0aW9uYWwlMjAlQzMlODlsaXRl'>Camions International Élite</option>";
+        $options .= "<option value='Q2VudHJlJTIwZHUlMjBDYW1pb24lMjBCZWF1ZG9pbg=='>Centre du Camion Beaudoin</option>";
+        $options .= "<option value='R2FyYWdlJTIwUm9iZXJ0'>Garage Robert</option>";
         $options .= "<option value='SW50ZXItQm91Y2hlcnZpbGxl'>Inter-Boucherville</option>";
-        $options .= "<option value='TGUgQ2VudHJlIGR1IENhbWlvbiAoQW1pYW50ZSk='>Le Centre du Camion (Amiante)</option>";
-        $options .= "<option value='TGUgQ2VudHJlIGR1IENhbWlvbiAoQmVhdWNlKQ=='>Le Centre du Camion (Beauce)</option>";
-        $options .= "<option value='TGUgQ2VudHJlIFJvdXRpZXIgMTk5NA=='>Le Centre Routier 1994</option>";
-        $options .= "<option value='TGVzIENhbWlvbnMgQmVhdWRvaW4='>Les Camions Beaudoin</option>";
+        $options .= "<option value='TGUlMjBDZW50cmUlMjBkdSUyMENhbWlvbiUyMChBbWlhbnRlKQ=='>Le Centre du Camion (Amiante)</option>";
+        $options .= "<option value='TGUlMjBDZW50cmUlMjBkdSUyMENhbWlvbiUyMChCZWF1Y2Up'>Le Centre du Camion (Beauce)</option>";
+        $options .= "<option value='TGUlMjBDZW50cmUlMjBSb3V0aWVyJTIwMTk5NA=='>Le Centre Routier 1994</option>";
+        $options .= "<option value='TGVzJTIwQ2FtaW9ucyUyMEJlYXVkb2lu'>Les Camions Beaudoin</option>";
         $ddlFin = "</select>";
         
         $strIndex = strrpos( $options , $succursaleToSelect );
         if( $strIndex )
-            $options = substr_replace($options, ' selected="selected"', $strIndex + strlen($succursaleToSelect) + 1, 0);
+            $options = substr_replace($options, " selected=selected", $strIndex + strlen($succursaleToSelect) + 1, 0);
         
         echo $ddlDebut . $options . $ddlFin;
     }
@@ -36,18 +36,18 @@ class RD_Utils
     {
         //echo "----- $succursaleToSelect ------";
         $ddlDebut = "<select id='ddlSuccursales' name='ddlSuccursales' class='dropDownBonTravailDemandePieces'>";
-        $options = "<option value='Q2FtaW9ucyBJbnRlci1MYW5hdWRpw6hyZQ=='>Camions Inter-Lanaudière</option>";
-        $options .= "<option value='Q2FtaW9ucyBJbnRlci1BbmpvdQ=='>Camions Inter-Anjou</option>";
+        $options = "<option value='Q2FtaW9ucyUyMEludGVyLUxhbmF1ZGklQzMlQThyZQ=='>Camions Inter-Lanaudière</option>";
+        $options .= "<option value='Q2FtaW9ucyUyMEludGVyLUFuam91'>Camions Inter-Anjou</option>";
         $options .= "<option value='SW50ZXItQm91Y2hlcnZpbGxl'>Inter-Boucherville</option>";
-        $options .= "<option value='TGVzIENhbWlvbnMgQmVhdWRvaW4='>Les Camions Beaudoin</option>";
-        $options .= "<option value='Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg=='>Centre du Camion Beaudoin</option>";
+        $options .= "<option value='TGVzJTIwQ2FtaW9ucyUyMEJlYXVkb2lu'>Les Camions Beaudoin</option>";
+        $options .= "<option value='Q2VudHJlJTIwZHUlMjBDYW1pb24lMjBCZWF1ZG9pbg=='>Centre du Camion Beaudoin</option>";
         $options .= "<option value='Q2hhcmVzdCBJbnRlcm5hdGlvbmFs'>Charest International</option>";
         $options .= "<option value='R2FyYWdlIENoYXJlc3QgZXQgRnLDqHJlcw=='>Garage Charest et Frères</option>";        
-        $options .= "<option value='TGUgQ2VudHJlIGR1IENhbWlvbiAoQW1pYW50ZSk='>Le Centre du Camion (Amiante)</option>";
-        $options .= "<option value='TGUgQ2VudHJlIFJvdXRpZXIgMTk5NA=='>Le Centre Routier 1994</option>";
-        $options .= "<option value='TGUgQ2VudHJlIGR1IENhbWlvbiAoQmVhdWNlKQ=='>Le Centre du Camion (Beauce)</option>";
-        $options .= "<option value='Q2FtaW9ucyBJbnRlcm5hdGlvbmFsIMOJbGl0ZQ=='>Camions International Élite</option>";
-        $options .= "<option value='R2FyYWdlIFJvYmVydA=='>Garage Robert</option>";
+        $options .= "<option value='TGUlMjBDZW50cmUlMjBkdSUyMENhbWlvbiUyMChBbWlhbnRlKQ=='>Le Centre du Camion (Amiante)</option>";
+        $options .= "<option value='TGUlMjBDZW50cmUlMjBSb3V0aWVyJTIwMTk5NA=='>Le Centre Routier 1994</option>";
+        $options .= "<option value='TGUlMjBDZW50cmUlMjBkdSUyMENhbWlvbiUyMChCZWF1Y2Up'>Le Centre du Camion (Beauce)</option>";
+        $options .= "<option value='Q2FtaW9ucyUyMEludGVybmF0aW9uYWwlMjAlQzMlODlsaXRl'>Camions International Élite</option>";
+        $options .= "<option value='R2FyYWdlJTIwUm9iZXJ0'>Garage Robert</option>";
         $ddlFin = "</select>";
         
         $strIndex = strrpos( $options , $succursaleToSelect );
@@ -146,5 +146,17 @@ class RD_Utils
         return $results->success;
     
     }
+    
+    static function getBonTravail($succursale)
+    {
+        global $conn;
+
+        $noBon = $conn->query("SELECT no_bon FROM bon_travail_succursales WHERE nom_succ_base64='$succursale'")->fetch_object()->no_bon;
+
+        $nouveauBon = $noBon + 1;
+        mysqli_query($conn, "UPDATE bon_travail_succursales SET no_bon=$nouveauBon WHERE nom_succ_base64='$succursale'");
+
+        return $noBon;
+    }    
 }
 ?>
