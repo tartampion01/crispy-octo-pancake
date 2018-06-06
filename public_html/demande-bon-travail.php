@@ -224,17 +224,17 @@
 //                                $captchaErr = 'Veuillez remplir le <i>CAPTCHA</i> correctement.';
 //                            }
 
-                            $unite = $_POST['tbUnite'];
-                            $km = $_POST['tbKm'];
-                            $travaux1 = $_POST['tbTravaux1'];
-                            $travaux2 = $_POST['tbTravaux2'];
-                            $travaux3 = $_POST['tbTravaux3'];
-                            $travaux4 = $_POST['tbTravaux4'];
-                            $travaux5 = $_POST['tbTravaux5'];
-                            $travaux6 = $_POST['tbTravaux6'];
-                            $travaux7 = $_POST['tbTravaux7'];
-                            $travaux8 = $_POST['tbTravaux8'];
-                            $noteSpeciale = $_POST['tbNoteSpeciale'];
+                            $unite = RD_Utils::test_input($_POST['tbUnite']);
+                            $km = RD_Utils::test_input($_POST['tbKm']);
+                            $travaux1 = RD_Utils::test_input($_POST['tbTravaux1']);
+                            $travaux2 = RD_Utils::test_input($_POST['tbTravaux2']);
+                            $travaux3 = RD_Utils::test_input($_POST['tbTravaux3']);
+                            $travaux4 = RD_Utils::test_input($_POST['tbTravaux4']);
+                            $travaux5 = RD_Utils::test_input($_POST['tbTravaux5']);
+                            $travaux6 = RD_Utils::test_input($_POST['tbTravaux6']);
+                            $travaux7 = RD_Utils::test_input($_POST['tbTravaux7']);
+                            $travaux8 = RD_Utils::test_input($_POST['tbTravaux8']);
+                            $noteSpeciale = RD_Utils::test_input($_POST['tbNoteSpeciale']);
 
                             if(!empty($_FILES["FileUpload"]["name"])){
                                 $nomFichier = uploadFile();
