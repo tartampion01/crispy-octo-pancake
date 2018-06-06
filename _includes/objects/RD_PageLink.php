@@ -252,7 +252,6 @@ class RD_Header{
         switch($pageName){
             case "a-propos.php":$title = "À Propos Réseau Camion International | Réseau Dynamique";break;
             case "accueil.php":$title = "";break;
-            case "promotions.php":$title = "";break;
             case "nous-joindre.php":$title = "Nous joindre | Réseau Dynamique";break;
             case "urgence-routiere-24h.php":$title = "Urgence Routière 24 h Camions Lourds Canada et États-Unis";break;
             case "camions-lourds-neufs-international.php":$title = "Camions Neufs International | Réseau Dynamqiue";break;
@@ -301,6 +300,7 @@ class RD_Header{
             case "obtenir-prix.php":$title = "Obtenir un prix | Réseau Dynamique";break;
             case "demande-financement.php":$title = "Demande de financement | Réseau Dynamique";break;
             case "evaluer-echange.php":$title = "Évaluer mon échange | Réseau Dynamique";break;
+            case "promotions.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";
             //case "":$title = "";break;
             default:;
         }
