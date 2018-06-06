@@ -18,13 +18,7 @@
                         <!-- Titre camion/ remorque = Marque modele & empattement -->
                         <span>
                             <?php 
-                                echo $camion->marque . "&nbsp;-&nbsp;";
-                                echo $camion->modele;
-                                
-                                if( $camion->config != "-" )
-                                {
-                                    echo "&nbsp;-&nbsp;" . $camion->config;
-                                }
+                                echo $camion->beauTitre;
                             ?>
                         </span>
                     </h1>
@@ -38,7 +32,6 @@
                                     if( $camion->HAS_picures )
                                         echo '<div class="picToggle" onclick="alternateDivDetailsPage(\'divPics\',\'divSpec\');" style="display: block;visibility: visible;" zonedescriptor="Default">Photos</div>';
                                 ?>
-                                
                             </div>
                             </br></br></br></br>
                             <div id="divSpec" class="" style="display: inline;" zonedescriptor="" >
