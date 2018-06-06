@@ -4,18 +4,34 @@
     <div class="wrap">
         <div class="content">
             <div class="shrink">
-                <div class="titrepage">
-                    <h1><?php echo $NOMPAGE; ?></h1>
+                <div class="titrePage">
+                    <h1>Remorques Di-Mond neuves à vendre</h1>
                 </div>
-                <div class="contenu">
-                    <div class="contenu2">
-                        <p></p>
-                        <h2></h2>
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                <div class="contenu contenu2">
+                    <div class="">
+                        Que vous transportiez de la marchandise standard ou de lourdes charges, les remorques fermées Di-Mond fabriquées sur mesure sont à la hauteur du défi.
                     </div>
-                </div>
+                    <div>
+                        <div class="btnToggle">
+                            <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="javascript:void(0);" linkcollapsegroup="" targetid="" class="open">Informations supplémentaires</a>
+                        /div>
+                        <div class="showedZone">
+                            <span>
+                                <h2>Remorques fermées robustes en acier galvanisé</h2>
+                                <p>Contrairement à la concurrence, les remorques fermées Di-Mond reçoivent un traitement d'acier galvanisé complet plutôt qu'un simple traitement de peinture ou ciblé à certaines pièces. Ce procédé vous permet de prévenir la rouille et la corrosion, tout en prolongeant la durée de vie de la remorque : vous pouvez l'utiliser pendant 10 ans sans problème.</p>
+                                <h2>Remorques sur mesure pour transporter tous vos matériaux</h2>
+                                <p>La longueur, le poids ou la nature de votre marchandise n'est pas un obstacle : si nous n'avons pas la remorque qu'il vous faut, nous en construisons une selon vos besoins en transport. 
+                                    <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre)?>">Contactez-nous</a>
+                                    pour nous fournir les caractéristiques de votre remorque que nous fabriquerons sur mesure.
+                                </p>
+                                <p>Tous les modèles de remorques Di-Mond sont offerts par Réseau Dynamique à des prix concurrentiels. Visitez votre concessionnaire local pour voir les modèles et discuter des nombreux avantages et options des Di-Mond.</p>
+                                <p>
+                                    <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_DiMond)?>">Visitez le site officiel de Di-Mond</a> (en anglais seulement)
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+            </div>
             </div>
         </div>
     </div>
