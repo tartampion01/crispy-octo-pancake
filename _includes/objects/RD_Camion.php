@@ -5,6 +5,7 @@ class RD_Camion{
     private $table_name = "products";
     
     public $HAS_picures = 1;
+    public $beauTitre = ''; // Marque + Model + Config
     public $new = 1;
     /* CHAMPS INVENTORY -> Camions neufs */
     public $id = 0;
@@ -154,6 +155,12 @@ class RD_Camion{
         $this->hp = $r['hp'];
         $this->config = $r['config'];
 
+        $this->beauTitre = $this->marque . "&nbsp;-&nbsp;" . $this->modele;
+        if( $this->config != "-" )
+        {
+            $this->beauTitre .= "&nbsp;-&nbsp;" . $this->config;
+        }
+
         $this->loadPicturesNew();
         
         return true;
@@ -193,6 +200,12 @@ class RD_Camion{
         $this->hp = $r['hp'];
         $this->config = $r['config'];
 
+        $this->beauTitre = $this->marque . "&nbsp;-&nbsp;" . $this->modele;
+        if( $camion->config != "-" )
+        {
+            $this->beauTitre .= "&nbsp;-&nbsp;" . $camion->config;
+        }
+        
         $this->loadPicturesUsed();
         
         return true;
