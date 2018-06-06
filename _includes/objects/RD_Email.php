@@ -305,6 +305,7 @@ Class RD_Email
         $this->mail->Port = $applicationConfig['smtp.server.port'];
         $this->mail->setFrom('mailer@reseaudynamique.com', 'reseaudynamique.com');
         $this->mail->addAddress($emailto, $toName);
+        $this->mail->addAddress($this->email);
         $this->mail->addReplyTo($this->email);
         $this->mail->Subject = $subject;
         
