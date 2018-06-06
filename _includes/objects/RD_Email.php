@@ -31,6 +31,7 @@ interface TypeInstructionsBonTravail
 
 Class RD_Email
 {
+    public $camion;
     public $prenom = '';
     public $nom = '';
     public $ville = '';
@@ -86,6 +87,8 @@ Class RD_Email
             case TypeEmail::ObtenirPrix:          $emailto = "philtourigny@gmail.com";
                                                   $toName  = "Philippe Tourigny";
                                                   $subject = "Obtenir un prix";
+                                                  $this->camion = new RD_Camion(null);
+                                                  $this->camion->load_new(urldecode(base64_decode($IdVehicule)));
                                                   break;
             case TypeEmail::DemandFinancement:    $emailto = "philtourigny@gmail.com";
                                                   $toName  = "Philippe Tourigny";
@@ -141,71 +144,87 @@ Class RD_Email
         switch($TypeEmail)
         {
             case TypeEmail::DemandeInformation:
-                $body = "Demande d'information de la part de: " . $this->prenom . " " . $this->nom . "<br />";
-                $body .= "Ville: " . $this->ville . "<br />";
-                $body .= "Telephone: " . $this->telephone . "<br />";
-                $body .= "Courriel: " . $this->email . "<br />";
-                if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
-                $body .= "Infos demandées au sujet de: <a href='";
+                $body .= "<table>";
+                $body .= "<tr><td><b>Provient de </b></td><td><a href='";
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
-                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
+                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+                $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
+                $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
+                $body .= "<tr><td><b>Ville</b></td><td>" . $this->ville . "</td></tr>";
+                $body .= "<tr><td><b>Téléphone</b></td><td>" . $this->telephone . "</td></tr>";
+                $body .= "<tr><td><b>Courriel</b></td><td>" . $this->email . "</td></tr>";
+                if( $this->commentaire != "" )
+                    $body .= "<tr><td><b>Commentaire</b></td><td>" . $this->commentaire . "</td></tr>";
+                $body .= "</table>";
                 break;
             case TypeEmail::PlanifierEssaiRoutier:
-                $body = "Demande d'essai routier de la part de: " . $this->prenom . " " . $this->nom . "<br />";
-                $body .= "Ville: " . $this->ville . "<br />";
-                $body .= "Telephone: " . $this->telephone . "<br />";
-                $body .= "Courriel: " . $this->email . "<br />";
-                if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
-                $body .= "Infos demandées au sujet de: <a href='";
+                $body .= "<table>";
+                $body .= "<tr><td><b>Provient de </b></td><td><a href='";
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
-                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
+                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+                $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
+                $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
+                $body .= "<tr><td><b>Ville</b></td><td>" . $this->ville . "</td></tr>";
+                $body .= "<tr><td><b>Téléphone</b></td><td>" . $this->telephone . "</td></tr>";
+                $body .= "<tr><td><b>Courriel</b></td><td>" . $this->email . "</td></tr>";
+                if( $this->commentaire != "" )
+                    $body .= "<tr><td><b>Commentaire</b></td><td>" . $this->commentaire . "</td></tr>";
+                $body .= "</table>";
                 break;
             case TypeEmail::ObtenirPrix:
-                $body = "Demande de prix de la part de: " . $this->prenom . " " . $this->nom . "<br />";
-                $body .= "Ville: " . $this->ville . "<br />";
-                $body .= "Telephone: " . $this->telephone . "<br />";
-                $body .= "Courriel: " . $this->email . "<br />";
-                if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
-                $body .= "Infos demandées au sujet de: <a href='";
+                $body .= "<table>";
+                $body .= "<tr><td><b>Provient de </b></td><td><a href='";
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
-                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
+                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+                $body .= "<tr><td><b>Véhicule</b></td><td>". $this->camion->beauTitre . "</td></tr>";
+                $body .= "<tr><td><b>SKU</b></td><td>". $this->camion->noInventaire . "</td></tr>";
+                $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
+                $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
+                $body .= "<tr><td><b>Ville</b></td><td>" . $this->ville . "</td></tr>";                
+                if( $this->commentaire != "" )
+                    $body .= "<tr><td><b>Commentaire</b></td><td>" . $this->commentaire . "</td></tr>";
+                $body .= "<tr><td><b>Courriel</b></td><td>" . $this->email . "</td></tr>";
+                $body .= "<tr><td><b>Téléphone</b></td><td>" . $this->telephone . "</td></tr></table>";
                 break;
             case TypeEmail::DemandFinancement:
-                $body = "Demande de financement de la part de: " . $this->prenom . " " . $this->nom . "<br />";
-                $body .= "Adresse: " . $this->adresse . "<br />";
-                $body .= "Ville: " . $this->ville . "<br />";
-                $body .= "Code Postal: " . $this->codePostal . "<br />";
-                $body .= "Province: " . base64_decode(urldecode($this->province)) . "<br />";
-                $body .= "Telephone: " . $this->telephone . "<br />";
-                $body .= "Courriel: " . $this->email . "<br />";
-                if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
-                $body .= "Infos demandées au sujet de: <a href='";
+                $body .= "<table>";
+                $body .= "<tr><td><b>Provient de </b></td><td><a href='";
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
-                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
+                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+                $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
+                $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
+                $body .= "<tr><td><b>Adresse</b></td><td>" . $this->adresse . "</td></tr>";
+                $body .= "<tr><td><b>Ville</b></td><td>" . $this->ville . "</td></tr>";
+                $body .= "<tr><td><b>Code Postal</b></td><td>" . $this->codePostal . "</td></tr>";
+                $body .= "<tr><td><b>Province</b></td><td>" . base64_decode(urldecode($this->province)) . "</td></tr>";
+                $body .= "<tr><td><b>Téléphone</b></td><td>" . $this->telephone . "</td></tr>";
+                $body .= "<tr><td><b>Courriel</b></td><td>" . $this->email . "</td></tr>";
+                if( $this->commentaire != "" )
+                    $body .= "Commentaire: " . $this->commentaire . "</td></tr>";
+                $body .= "</table>";
                 break;
             case TypeEmail::EvaluerEchange:
-                $body = "Demande de financement de la part de: " . $this->prenom . " " . $this->nom . "<br />";
-                $body .= "Ville: " . $this->ville . "<br />";
-                $body .= "Telephone: " . $this->telephone . "<br />";
-                $body .= "Courriel: " . $this->email . "<br />";
-                $body .= "Marque: " . $this->marque . "<br />";
-                $body .= "Modèle: " . $this->modele . "<br />";
-                $body .= "Année: " . $this->annee . "<br />";
-                $body .= "KM: " . $this->km . "<br />";
-                $body .= "État intérieur: " . $this->etatExterieur . "<br />";
-                $body .= "État extérieur: " . $this->etatInterieur . "<br />";
-                if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
-                $body .= "Infos demandées au sujet de: <a href='";
+                $body .= "<table>";
+                $body .= "<tr><td><b>Provient de </b></td><td><a href='";
                 $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
-                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a>";
+                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+                $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
+                $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
+                $body .= "<tr><td><b>Ville</b></td><td>" . $this->ville . "</td></tr>";
+                $body .= "<tr><td><b>Téléphone</b></td><td>" . $this->telephone . "</td></tr>";
+                $body .= "<tr><td><b>Courriel</b></td><td>" . $this->email . "</td></tr>";
+                $body .= "<tr><td><b>Marque</b></td><td>" . $this->marque . "</td></tr>";
+                $body .= "<tr><td><b>Modèle</b></td><td>" . $this->modele . "</td></tr>";
+                $body .= "<tr><td><b>Année</b></td><td>" . $this->annee . "</td></tr>";
+                $body .= "<tr><td><b>KM</b></td><td>" . $this->km . "</td></tr>";
+                $body .= "<tr><td><b>État intérieur</b></td><td>" . $this->etatExterieur . "</td></tr>";
+                $body .= "<tr><td><b>État extérieur</b></td><td>" . $this->etatInterieur . "</td></tr>";
+                if( $this->commentaire != "" )
+                    $body .= "Commentaire: " . $this->commentaire . "</td></tr>";
+                $body .= "</table>";
                 break;
             case TypeEmail::InscriptionNextPart:
-                $body = "Demande d'information de la part de: " . $this->prenom . " " . $this->nom . "<br />";
+                $body = "Demande d'inscription à NextPart de la part de: " . $this->prenom . " " . $this->nom . "<br />";
                 $body .= "Entreprise: " . $this->ville . "<br />";
                 $body .= "Telephone: " . $this->telephone . "<br />";
                 $body .= "Courriel: " . $this->email . "<br />";
@@ -290,7 +309,7 @@ Class RD_Email
         $this->mail->Subject = $subject;
         
         if( $nomFichier != '' ){
-            $this->mail->addAttachment("../public_html/_uploads/bonTravail/" . $nomFichier);
+            $this->mail->addAttachment("../public_html/_uploads/bonTravail/" . $nomFichier); // TODO -> Supprimer le fichier
         }
                 
         // Le body spécifique
