@@ -28,38 +28,49 @@
                                 // Pour conserver le nom temporaire dans le dossier d'upload
                                 // Pour éviter d'avoir deux fois un CV.doc!
                                 $target_file = $target_dir . basename($_FILES[$ctrlName]["tmp_name"]);
-
+//echo $target_file;
                                 $uploadOk = 1;
                                 
                                 $ift = strtolower(pathinfo($target_file,PATHINFO_EXTENSION)); // $ift = imageFileType c'était chiant pour le if plus bas!
                                 if (file_exists($target_file)){
                                     $uploadOk = 0;
                                 }
+//echo $uploadOk;
                                 if ($_FILES[$ctrlName]["size"] > 5000000) {
                                     $uploadOk = 0;
                                 }
+//echo $uploadOk;
                                 //if($ift != "pdf" && $ift != "doc" && $ift != "docx" && $ift != "txt" && $ift != "odt" && $ift != "rtf" && $ift != "tmp") {
-                                if($ift != "tmp"){ //Car on conserve le fichier temporaire qu'on renomme avec le vrai nom en envoyant le email
-                                    $uploadOk = 0;
-                                }
+//echo "prob-->".$ift . "<--ift";
+                                //if($ift != "tmp"){ //Car on conserve le fichier temporaire qu'on renomme avec le vrai nom en envoyant le email
+                                  //  $uploadOk = 0;
+                                //}
+//echo $uploadOk;
 
                                 if ($uploadOk == 0) {
                                 // if everything is ok, try to upload file
                                 } else {
-
+//echo $uploadOk;
                                     if (move_uploaded_file($_FILES[$ctrlName]["tmp_name"], $target_file)) {
+//echo $target_file . "<br/>" . $_FILES[$ctrlName]["tmp_name"]. "<br/>";
                                         if( $cv == 1 ){
                                             global $nomFicherCV;
                                             global $nomFichierCV_TEMP;
                                             $nomFicherCV = basename( $_FILES[$ctrlName]["name"]);
-                                            $nomFichierCV_TEMP = basename($_FILES[$ctrlName]["tmp_name"]);;
+                                            // LOCAL
+                                            //$nomFichierCV_TEMP = basename($_FILES[$ctrlName]["tmp_name"]);;
+                                            // WWW
+                                            $nomFichierCV_TEMP = "../_uploads/emplois/".basename($_FILES[$ctrlName]["tmp_name"]);;
                                         }
                                         else
                                         {
                                             global $nomFichierPres;
                                             global $nomFichierPres_TEMP;
                                             $nomFichierPres = basename( $_FILES[$ctrlName]["name"]);
-                                            $nomFichierPres_TEMP = basename($_FILES[$ctrlName]["tmp_name"]);
+                                            // LOCAL
+                                            //$nomFichierPres_TEMP = basename($_FILES[$ctrlName]["tmp_name"]);
+                                            /// WWW
+                                            $nomFichierPres_TEMP = "../_uploads/emplois/".basename($_FILES[$ctrlName]["tmp_name"]);
                                         }
                                     } else {}
                                 }
@@ -124,6 +135,12 @@
                                 {
                                     $RDemail = new RD_Email();
                                     $RDemail->loadPostulerEmploi(TypeEmail::PostulerEmploi,$emploi,$nom,$prenom,$ville,$tel,$email,$comm,$nomFicherCV,$nomFichierPres,$nomFichierCV_TEMP,$nomFichierPres_TEMP);
+                                    
+//                                    echo "<br/>"."cv_". $nomFicherCV . "<br/>";
+//                                    echo "pres_". $nomFichierPres . "<br/>";
+//                                    echo "cv_temp". $nomFichierCV_TEMP . "<br/>";
+//                                    echo "pres_temp". $nomFichierPres_TEMP . "<br/>";
+                                            
                                     if($RDemail->send()){
                                         $divVisibility = "hidden";
                                         ?><h2>Votre demande a bien été envoyée</h2><?php
