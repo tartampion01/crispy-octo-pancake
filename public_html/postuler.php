@@ -22,7 +22,7 @@
                             function uploadFile($ctrlName, $cv = 0)
                             {
                                 $nomFichier = '';
-                                $target_dir = "_uploads/emplois/";
+                                $target_dir = "../_uploads/emplois/";
                                 //$target_file = $target_dir .  basename($_FILES[$ctrlName]["name"]);
 
                                 // Pour conserver le nom temporaire dans le dossier d'upload
