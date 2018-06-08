@@ -81,6 +81,9 @@ interface page
     const EXTERNAL_fleetrite = 702;
     const EXTERNAL_details = 703;
     const EXTERNAL_boutiqueEnLigne = 704;
+    const EXTERNAL_DiMond = 705;
+    const EXTERNAL_Doepker = 706;
+    const EXTERNAL_OffreEmploi = 707;
 }
 
 class RD_PageLink
@@ -168,6 +171,9 @@ class RD_PageLink
             case page::EXTERNAL_fleetrite: $_page = "http://www.fleetrite.com";$_wholeURL = true;break;
             case page::EXTERNAL_details: $_page = "http://reseaudynamique.com/details.php";$_wholeURL = true;break;
             case page::EXTERNAL_boutiqueEnLigne: $_page = "https://reseaudynamique.gxd.ca/";$_wholeURL = true;break;
+            case page::EXTERNAL_DiMond: $_page = "http://www.di-mond.com/index2.html";$_wholeURL = true;break;
+            case page::EXTERNAL_Doepker: $_page = "http://www.doepker.com/";$_wholeURL = true;break;
+            case page::EXTERNAL_OffreEmploi: $_page = "http://reseaudynamique.com/carrieres.php";$_wholeURL = true;break;
             
             default: $_page = "accueil";break;
             //case page:: $_page = "";break;
