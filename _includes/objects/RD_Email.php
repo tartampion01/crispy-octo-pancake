@@ -573,7 +573,7 @@ Class RD_Email
                             RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_OffreEmploi) . '?emp=' . $emploi->lienEncode .'">'. $emploi->titre .'</a></h1>';
         }
         else{
-            $emailto = "phitltourigny@gmail.com";
+            $emailto = "philtourigny@gmail.com";
             $toName  = "Philippe Tourigny";
             $subject = "Candidature spontanée provenant de www.reseaudynamique.com";
             $bodyHeader = '<h1>Candidature spontanée</h1>';
@@ -597,11 +597,15 @@ Class RD_Email
         $this->mail->Subject = $subject;
         
         if( $CVFile != '' ){
-            $this->mail->addAttachment("../_uploads/emplois/" . $CVFile, $FileCVPrettyName);
+            $this->mail->addAttachment($CVFile, $FileCVPrettyName);
         }
         if( $PresFile != '' ){
-            $this->mail->addAttachment("../_uploads/emplois/" . $PresFile, $FilePresPrettyName);
+            $this->mail->addAttachment($PresFile, $FilePresPrettyName);
         }
+//echo "cvfile: ". $CVFile . "<br/>";
+//echo "cvprette: ". $FileCVPrettyName . "<br/>";
+//echo "presfile: ". $PresFile . "<br/>";
+//echo "prespretty: ". $FilePresPrettyName . "<br/>";
 
         $body = $bodyHeader . '<p><strong><span>Nom :</span></strong>&nbsp;' . $Nom . '</p>
                                <p><strong><span>Prénom :</span></strong>&nbsp;' . $Prenom . '</p>
@@ -609,7 +613,7 @@ Class RD_Email
                                <p><strong><span>Courriel :</span></strong>&nbsp;' . $Email . '</p>
                                <p><strong><span>Téléphone :</span></strong>&nbsp;' . $Telephone . '</p>
                                <p><strong><span>Info candidat(e) :</span></strong>&nbsp;' . $Commentaire . '</p>';
-        
+
         $this->mail->Body = $body;
         $this->mail->AltBody = "-alt-";
     }
