@@ -29,23 +29,25 @@
                                             <label>Titre :</label>
                                             <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres). '?emp=' . $emploi->lienEncode; ?>">
                                                 <?php echo $emploi->titre;?>
-                                            </a></br>
+                                            </a>
+                                            <?php if($succ == "Toutes"){ echo "(".$emploi->succursale.")";}?></br>
                                     <?php }
                                     }
                                     else {?>
                                             <label>Il n'y a pas d'emplois disponibles à cette succursale présentement</label>
-                                            <hr/>
-                                            <p>
-                                                <label>
-                                                    Aucun poste ne correspond à votre profil? Vous êtes intéressés par une carrière chez nous?<br/>
-                                                    Soumettez votre candidature et nous vous contacterons lorsqu'un poste correspondra à votre profil.<br/>
-                                                    <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Postuler) . '?emp=' . urlencode(base64_encode("spontanee")) ?>">
-                                                        Candidature spontanée
-                                                    </a>
-                                                </label>
-                                            </p>
                                     <?php
-                                    }
+                                    }?>
+                                    <hr/>
+                                        <p>
+                                            <label>
+                                                Aucun poste ne correspond à votre profil? Vous êtes intéressés par une carrière chez nous?<br/>
+                                                Soumettez votre candidature et nous vous contacterons lorsqu'un poste correspondra à votre profil.<br/>
+                                                <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Postuler) . '?emp=' . urlencode(base64_encode("spontanee")) ?>">
+                                                    Candidature spontanée
+                                                </a>
+                                            </label>
+                                        </p>
+                                    <?php
                                 }
                             }
                             else
