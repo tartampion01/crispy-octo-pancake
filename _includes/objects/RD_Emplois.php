@@ -7,15 +7,27 @@ class RD_Emploi{
     private $table_name = "offresEmplois";
     
     public $id = 0;
-    public $titre = '';
-    public $fonctions = '';
-    public $dateDebut = '';
-    public $displayOnWeb = '';
-    public $contact = ''; 
-    public $referenceInterne = ''; 
-    public $succursales = array();
-    public $exigences = array();
+    public $titre = "";
+    public $fonctions = "";
+    public $dateDebut = "";
+    public $referenceInterne = "";
+    public $succursale = ""; 
+    public $succursaleObj = ""; // Contiendra l'objet
     public $lienEncode = "";
+    public $niveauEtudes = "";
+    public $statutEmploi = "";
+    public $anneesExperience = "";
+    public $descCompetences = "";
+    public $langues = "";
+    public $salaire = "";
+    public $heuresSemaine = "";
+    public $autres = "";
+    public $contactNom = "";
+    public $contactTitre = "";
+    public $contactTel = "";
+    public $contactCourriel = ""; 
+    public $filled = 0;
+    public $displayOnWeb = 0;
     
     // constructor with $db as database connection
     public function __construct($db){
@@ -40,13 +52,26 @@ class RD_Emploi{
         $result = mysqli_query($conn, $sql);
         $r = mysqli_fetch_array($result);
     
-        $this->id = $r['id'];
+        $this->id = $r['emploi_id'];
         $this->titre = $r['titre'];
         $this->fonctions = $r['fonctions'];
         $this->dateDebut = $r['dateDebut'];
         $this->displayOnWeb = $r['displayOnWeb'];
-        $this->contact = $r['contact'];
-        $this->referenceInterne = $r['referenceInterne'];        
+        $this->referenceInterne = $r['referenceInterne'];
+        $this->succursale = $r['succursale'];
+        $this->niveauEtudes = $r['niveauEtudes'];
+        $this->statutEmploi = $r['statutEmploi'];
+        $this->anneesExperience = $r['anneesExperience'];
+        $this->descCompetences = $r['descCompetences'];
+        $this->langues = $r['langues'];
+        $this->salaire = $r['salaire'];
+        $this->heuresSemaine = $r['heuresSemaine'];
+        $this->autres = $r['autres'];
+        $this->contactNom = $r['contactNom'];
+        $this->contactTitre = $r['contactTitre'];
+        $this->contactTel = $r['contactTel'];
+        $this->contactCourriel = $r['contactCourriel'];
+        $this->filled = $r['filled'];
 
         return true;
     }
@@ -54,48 +79,52 @@ class RD_Emploi{
     public static function getDetailEmploi($lienEncode)
     {
         global $conn;
-        
         // Va chercher un seul emploi
-        $sql = "SELECT * FROM offresEmplois WHERE emploi_id=" . base64_decode(urldecode($lienEncode));
-        $results = mysqli_query($conn, $sql);
-        
+        $lienDecode = urldecode(base64_decode($lienEncode));
         $emploi = new RD_Emploi(null);
         
-        if(mysqli_num_rows($results) > 0){
-            while($row = mysqli_fetch_assoc($results)) {
-                
-                extract($row);                
-                $emploi->id = $emploi_id;
-                $emploi->titre = $titre;
-                $emploi->fonctions = $fonctions;
-                $emploi->dateDebut = date("d/m/Y",$dateDebut);
-                $emploi->displayOnWeb = $displayOnWeb;
-                $emploi->filled = $filled;
-                $emploi->contact = $contact;
-                $emploi->referenceInterne = $referenceInterne;
-                
-                // GET SUCCURSALE(S)
-                $succ = new RD_Succursales();
-                foreach(explode(",",$succursales) as $IdSuc)
-                {
-                    $succ->load($IdSuc);
-                    $emploi->succursales = $succ;
-                }
-                
-                // EXIGENCES EMPLOI
-                $sqlExigences = "SELECT * FROM exigences_emploi AS ee INNER JOIN exigences AS e on ee.exigence_id = e.exigence_id WHERE emploi_id = $emploi_id ORDER BY e.exigence_id";
-                $exigences = mysqli_query($conn, $sqlExigences);
+        if($lienDecode == "spontanee")
+        {
+            $emploi->id = -1;
+            $emploi->titre = "Candidature spontanée";
+            $emploi->lienEncode = $lienEncode;
+        }
+        else
+        {
+            $sql = "SELECT * FROM offresEmplois WHERE emploi_id=" . $lienDecode;
+            
+            $results = mysqli_query($conn, $sql);
+        
+            if(mysqli_num_rows($results) > 0){
+                while($row = mysqli_fetch_assoc($results)) {
+                    //print_r($row);
+                    extract($row);                
+                    $emploi->id = $emploi_id;
+                    $emploi->titre = $titre;
+                    $emploi->fonctions = $fonctions;
+                    $emploi->dateDebut = date("d/m/Y",strtotime($dateDebut));
+                    $emploi->displayOnWeb = $displayOnWeb;
+                    $emploi->filled = $filled;
+                    $emploi->referenceInterne = $referenceInterne;
+                    $emploi->succursaleId = $succursale;
+                    $emploi->niveauEtudes = $niveauEtudes;
+                    $emploi->statutEmploi = $statutEmploi;
+                    $emploi->anneesExperience = $anneesExperience;
+                    $emploi->descCompetences = $descCompetences;
+                    $emploi->langues = $langues;
+                    $emploi->salaire = $salaire;
+                    $emploi->heuresSemaine = $heuresSemaine;
+                    $emploi->autres = $autres;
+                    $emploi->contactNom = $contactNom;
+                    $emploi->contactTitre = $contactTitre;
+                    $emploi->contactTel = $contactTel;
+                    $emploi->contactCourriel = $contactCourriel;
+                    $emploi->filled = $filled;
+                    $emploi->lienEncode = $lienEncode;
 
-                $exigenceTextArray = array();
-                $exigenceValue = array();
-                    
-                if(mysqli_num_rows($exigences) > 0){
-                    while($row = mysqli_fetch_assoc($exigences)) {
-                        array_push($exigenceTextArray, $row['exigence_text']);
-                        array_push($exigenceValue, $row['exigence_value']);
-                    }
-                    //$emploi->exigences = array_combine($exigenceTextArray, $exigenceValue);
-                    $emploi->exigences = array_combine($exigenceTextArray, $exigenceValue);
+                    $succ = new RD_Succursales();
+                    $succ->loadFromVilleString($succursale);
+                    $emploi->succursaleObj = $succ;
                 }
             }
         }
@@ -108,15 +137,15 @@ class RD_Emploi{
      * 0 = toutes les succursales
      * @return array Retourne des objets emploi avec Titre et lienEncode
      */
-    public static function getLinkEmploisCourants($succ_id = 0)
+    public static function getLinkEmploisCourants($succ)
     {
         global $conn;
         
-        if( $succ_id == 0 )
+        if( $succ == "Toutes" )
             $sql = "SELECT * FROM offresEmplois WHERE displayOnWeb=1 AND filled=0";
         else
-            $sql = "SELECT * FROM offresEmplois WHERE succursales LIKE '%$succ_id%' AND displayonWeb=1 AND filled=0";
-        
+            $sql = "SELECT * FROM offresEmplois WHERE succursale LIKE '%$succ%' AND displayonWeb=1 AND filled=0";
+
         $results = mysqli_query($conn, $sql);
         
         $emplois = array();
