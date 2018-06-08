@@ -157,6 +157,7 @@ class RD_Emploi{
 
                 $emploi = new RD_Emploi(null);
                 $emploi->lienEncode = urlencode(base64_encode($emploi_id));
+                $emploi->succursale = $succursale;
                 $emploi->titre = $titre;
                 
                 array_push($emplois, $emploi);
