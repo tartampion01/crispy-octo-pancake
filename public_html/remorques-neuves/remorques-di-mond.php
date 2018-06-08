@@ -11,10 +11,11 @@
                     <div class="">
                         Que vous transportiez de la marchandise standard ou de lourdes charges, les remorques fermées Di-Mond fabriquées sur mesure sont à la hauteur du défi.
                     </div>
+                    <br/>
                     <div>
                         <div class="btnToggle">
                             <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="javascript:void(0);" linkcollapsegroup="" targetid="" class="open">Informations supplémentaires</a>
-                        /div>
+                        </div>
                         <div class="showedZone">
                             <span>
                                 <h2>Remorques fermées robustes en acier galvanisé</h2>
@@ -26,12 +27,12 @@
                                 </p>
                                 <p>Tous les modèles de remorques Di-Mond sont offerts par Réseau Dynamique à des prix concurrentiels. Visitez votre concessionnaire local pour voir les modèles et discuter des nombreux avantages et options des Di-Mond.</p>
                                 <p>
-                                    <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_DiMond)?>">Visitez le site officiel de Di-Mond</a> (en anglais seulement)
+                                    <a name="" href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_DiMond)?>">Visitez le site officiel de Di-Mond</a> (en anglais seulement)
                                 </p>
                             </span>
                         </div>
                     </div>
-            </div>
+                </div>
             </div>
         </div>
     </div>
