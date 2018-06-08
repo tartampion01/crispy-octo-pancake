@@ -172,16 +172,23 @@
                                 <input name="tbTelephone" name="tbTelephone" type="text" class="" value="<?php echo $tel;?>"></h5>
                             <span class="error"><?php echo $telErr;?></span>
 
-                            <div class="ReplacementDiv">Joignez votre CV&nbsp;:
-                                <input type="file" accept=".pdf,.doc,.docx,.txt,.odt,.rtf" name="fileCV" id="fileCV" class="ReplacementButtonInput" title="">                                    
-                            </div>
-                            <br />
-                            <div class="ReplacementDiv">Joignez une lettre de présentation&nbsp;:
-                                <input type="file" accept=".pdf,.doc,.docx,.txt,.odt,.rtf" name="filePres" id="filePres" class="ReplacementButtonInput" title="">                                    
-                            </div>
+                            <br/>
                             
-                            <h5>Parlez nous de vous :<br>
-                                <textarea name="tbCommentaire" name="tbCommentaire" rows="2" cols="20" style="width: 100%;height: 150px;"><?php echo $comm;?></textarea></h5>
+                            <input type="file" id="fileCV" name="fileCV" accept=".pdf,.doc,.docx,.txt,.odt,.rtf" class="hidden" style="display:none;"/>
+                            <label for="fileCV" class="fileReplacement">
+                                Joignez votre CV
+                            </label>&nbsp;
+                            <label id="cvFileName" name="cvFileName"></label>
+                            <br />
+                            
+                            <input type="file" id="filePres" name="filePres" accept=".pdf,.doc,.docx,.txt,.odt,.rtf" class="hidden" style="display:none;"/>
+                            <label for="filePres" class="fileReplacement">
+                                Lettre de présentation
+                            </label>&nbsp;
+                            <label id="cvPresName" name="cvPresName"></label>
+                            
+                            <h5>Quelques mots sur vous :<br>
+                                <textarea name="tbCommentaire" name="tbCommentaire" rows="2" cols="50" style="width: 450px;height: 120px;"><?php echo $comm;?></textarea></h5>
                             <p>
                                 <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" class="">
                             </p>
@@ -192,6 +199,25 @@
             </div>
         </div>
     </div>
+        <!-- POUR modifier le controle de type file, sinon le texte du button est en anglais, et ça affiche "Select à file" direct au load de la page -->
+        <script type="text/javascript">
+            document.getElementById('fileCV').addEventListener('change',prepareUploadCV,false);
+            document.getElementById('filePres').addEventListener('change',prepareUploadPres,false);
+            function prepareUploadCV(event)
+            {
+                var files = event.target.files;
+                var fileName = files[0].name;
+                var cv = document.getElementById("cvFileName");
+                cv.innerHTML = fileName;
+            }
+            function prepareUploadPres(event)
+            {
+                var files = event.target.files;
+                var fileName = files[0].name;
+                var cv = document.getElementById("cvPresName");
+                cv.innerHTML = fileName;
+            }
+        </script>
     </form>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </body>
