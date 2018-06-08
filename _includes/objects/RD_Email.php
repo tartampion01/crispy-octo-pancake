@@ -597,10 +597,10 @@ Class RD_Email
         $this->mail->Subject = $subject;
         
         if( $CVFile != '' ){
-            $this->mail->addAttachment("../public_html/_uploads/emplois/" . $CVFile, $FileCVPrettyName); // TODO -> Supprimer le fichier
+            $this->mail->addAttachment("../_uploads/emplois/" . $CVFile, $FileCVPrettyName);
         }
         if( $PresFile != '' ){
-            $this->mail->addAttachment("../public_html/_uploads/emplois/" . $PresFile, $FilePresPrettyName); // TODO -> Supprimer le fichier
+            $this->mail->addAttachment("../_uploads/emplois/" . $PresFile, $FilePresPrettyName);
         }
 
         $body = $bodyHeader . '<p><strong><span>Nom :</span></strong>&nbsp;' . $Nom . '</p>
