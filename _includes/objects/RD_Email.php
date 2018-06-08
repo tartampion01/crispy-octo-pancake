@@ -13,6 +13,7 @@ interface TypeEmail
     const BonTravail = 7;
     const DemandePieces = 8;
     const InscriptionAUTOMANN = 9;
+    const PostulerEmploi = 10;
 }
 
 interface TypeVehicule
@@ -491,7 +492,7 @@ Class RD_Email
         $this->mail->AltBody = "-alt-";
     }
     
-    public function loadDemandePieces($TypeEmail,$Succursale,$Compagnie,$Responsable, $PiecesRequises,$Email,$Telephone,$Description)
+    public function loadDemandePieces($TypeEmail,$Succursale,$Compagnie,$Responsable,$PiecesRequises,$Email,$Telephone,$Description)
     {
         global $applicationConfig;
         $emailto = $toName = $subject = $body = "";
@@ -556,6 +557,62 @@ Class RD_Email
         $this->mail->Body = $body;
         $this->mail->AltBody = "-alt-";
     }   
+    
+    public function loadPostulerEmploi($TypeEmail,$emploi,$Nom,$Prenom,$Ville,$Telephone,$Email,$Commentaire,$FileCVPrettyName,$FilePresPrettyName,$CVFile,$PresFile)
+    {
+        global $applicationConfig;
+        $emailto = $toName = $subject = $body = "";
+        $bodyHeader = "";
+        
+        // id = -1 quand c'est une candidature spontanée
+        if($emploi->id != -1 ){
+            $emailto = $emploi->succursaleObj->emailOffreEmploi;
+            $toName  = "Philippe Tourigny";
+            $subject = "Réponse pour l'offre d'emploi: " .$emploi->titre . " - [ " . $emploi->referenceInterne . " ] - " . $emploi->succursaleObj->ville;
+            $bodyHeader = '<h1>Candidature pour le poste de <a name="hyperlien" href="'.                    
+                            RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_OffreEmploi) . '?emp=' . $emploi->lienEncode .'">'. $emploi->titre .'</a></h1>';
+        }
+        else{
+            $emailto = "phitltourigny@gmail.com";
+            $toName  = "Philippe Tourigny";
+            $subject = "Candidature spontanée provenant de www.reseaudynamique.com";
+            $bodyHeader = '<h1>Candidature spontanée</h1>';
+        }
+        
+        $this->email = urldecode($Email);
+        
+        $this->mail = new PHPMailer;
+        $this->mail->isSMTP();
+        $this->mail->CharSet = 'UTF-8';
+        $this->mail->Host = $applicationConfig['smtp.server.host'];
+        $this->mail->SMTPAuth = true;
+        $this->mail->Username = $applicationConfig['smtp.server.username'];
+        $this->mail->Password = $applicationConfig['smtp.server.password'];
+        $this->mail->SMTPSecure = false;
+        $this->mail->Port = $applicationConfig['smtp.server.port'];
+        $this->mail->setFrom('mailer@reseaudynamique.com', 'reseaudynamique.com');
+        $this->mail->addAddress($emailto, $toName);
+        $this->mail->addAddress($this->email);
+        $this->mail->addReplyTo($this->email);
+        $this->mail->Subject = $subject;
+        
+        if( $CVFile != '' ){
+            $this->mail->addAttachment("../public_html/_uploads/emplois/" . $CVFile, $FileCVPrettyName); // TODO -> Supprimer le fichier
+        }
+        if( $PresFile != '' ){
+            $this->mail->addAttachment("../public_html/_uploads/emplois/" . $PresFile, $FilePresPrettyName); // TODO -> Supprimer le fichier
+        }
+
+        $body = $bodyHeader . '<p><strong><span>Nom :</span></strong>&nbsp;' . $Nom . '</p>
+                               <p><strong><span>Prénom :</span></strong>&nbsp;' . $Prenom . '</p>
+                               <p><strong><span>Ville :</span></strong>&nbsp;' . $Ville . '</p>
+                               <p><strong><span>Courriel :</span></strong>&nbsp;' . $Email . '</p>
+                               <p><strong><span>Téléphone :</span></strong>&nbsp;' . $Telephone . '</p>
+                               <p><strong><span>Info candidat(e) :</span></strong>&nbsp;' . $Commentaire . '</p>';
+        
+        $this->mail->Body = $body;
+        $this->mail->AltBody = "-alt-";
+    }
     
     public function send()
     {
