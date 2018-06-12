@@ -77,25 +77,25 @@ Class RD_Email
         
         switch($TypeEmail)
         {
-            case TypeEmail::DemandeInformation:   $emailto = "philtourigny@gmail.com";
+            case TypeEmail::DemandeInformation:   $emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
                                                   $toName  = "Philippe Tourigny";
                                                   $subject = "Demande d'information";
                                                   break;
-            case TypeEmail::PlanifierEssaiRoutier:$emailto = "philtourigny@gmail.com";
+            case TypeEmail::PlanifierEssaiRoutier:$emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
                                                   $toName  = "Philippe Tourigny";
                                                   $subject = "Demande de planification d'un essai routier";
                                                   break;
-            case TypeEmail::ObtenirPrix:          $emailto = "philtourigny@gmail.com";
+            case TypeEmail::ObtenirPrix:          $emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
                                                   $toName  = "Philippe Tourigny";
                                                   $subject = "Obtenir un prix";
                                                   $this->camion = new RD_Camion(null);
                                                   $this->camion->load_new(urldecode(base64_decode($IdVehicule)));
                                                   break;
-            case TypeEmail::DemandFinancement:    $emailto = "philtourigny@gmail.com";
+            case TypeEmail::DemandFinancement:    $emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
                                                   $toName  = "Philippe Tourigny";
                                                   $subject = "Demande de financement";
                                                   break;
-            case TypeEmail::EvaluerEchange:       $emailto = "philtourigny@gmail.com";
+            case TypeEmail::EvaluerEchange:       $emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
                                                   $toName  = "Philippe Tourigny";
                                                   $subject = "Demande d'évaluation d'échange";
                                                   break;
@@ -204,26 +204,6 @@ Class RD_Email
                     $body .= "Commentaire: " . $this->commentaire . "</td></tr>";
                 $body .= "</table>";
                 break;
-            case TypeEmail::EvaluerEchange:
-                $body .= "<table>";
-                $body .= "<tr><td><b>Provient de </b></td><td><a href='";
-                $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
-                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
-                $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
-                $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
-                $body .= "<tr><td><b>Ville</b></td><td>" . $this->ville . "</td></tr>";
-                $body .= "<tr><td><b>Téléphone</b></td><td>" . $this->telephone . "</td></tr>";
-                $body .= "<tr><td><b>Courriel</b></td><td>" . $this->email . "</td></tr>";
-                $body .= "<tr><td><b>Marque</b></td><td>" . $this->marque . "</td></tr>";
-                $body .= "<tr><td><b>Modèle</b></td><td>" . $this->modele . "</td></tr>";
-                $body .= "<tr><td><b>Année</b></td><td>" . $this->annee . "</td></tr>";
-                $body .= "<tr><td><b>KM</b></td><td>" . $this->km . "</td></tr>";
-                $body .= "<tr><td><b>État intérieur</b></td><td>" . $this->etatExterieur . "</td></tr>";
-                $body .= "<tr><td><b>État extérieur</b></td><td>" . $this->etatInterieur . "</td></tr>";
-                if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "</td></tr>";
-                $body .= "</table>";
-                break;
             case TypeEmail::InscriptionNextPart:
                 $body = "Demande d'inscription à NextPart de la part de: " . $this->prenom . " " . $this->nom . "<br />";
                 $body .= "Entreprise: " . $this->ville . "<br />";
@@ -245,7 +225,82 @@ Class RD_Email
         $this->mail->AltBody = "-alt-";
     }
     
-    public function loadBonTravail($TypeEmail,$Succursale,$Compagnie,$Responsable,$Telephone,$Email,$Vin, $Unite, $Km, $BonCommande,$NoteSpeciale, $Instructions, $PrixReparationsMax, $travaux1, $travaux2, $travaux3, $travaux4, $travaux5, $travaux6, $travaux7, $travaux8, $nomFichier )
+    public function loadEvaluerEchange($TypeEmail,$Prenom,$Nom,$Ville,$Email,$Telephone,$Commentaire,$Adresse,$Province,$CodePostal,$Marque,$Modele,$Annee,$Km,$EtatInterieur,$EtatExterieur, $IdVehicule, $TypeVehicule, $file1, $file2, $file3, $file1temp, $file2temp, $file3temp)
+    {
+        global $applicationConfig;
+        $emailto = $toName = $subject = $body = "";
+        
+        $emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
+        $toName  = "Philippe Tourigny";
+        $subject = "Demande d'évaluation d'échange";
+
+        $this->prenom = $Prenom;
+        $this->nom = $Nom;
+        $this->ville = $Ville;
+        $this->email = urldecode($Email);
+        $this->telephone = $Telephone;
+        $this->commentaire = $Commentaire;
+        $this->adresse = $Adresse;
+        $this->province = $Province;
+        $this->codePostal = $CodePostal;
+        $this->marque = $Marque;
+        $this->modele = $Modele;
+        $this->annee = $Annee;
+        $this->km = $Km;
+        $this->etatInterieur = urldecode(base64_decode($EtatInterieur));
+        $this->etatExterieur = urldecode(base64_decode($EtatExterieur));
+        $this->idVehicule = $IdVehicule;
+        
+        $this->mail = new PHPMailer;
+
+        $this->mail->isSMTP();
+        $this->mail->CharSet = 'UTF-8';
+        $this->mail->Host = $applicationConfig['smtp.server.host'];
+        $this->mail->SMTPAuth = true;
+        $this->mail->Username = $applicationConfig['smtp.server.username'];
+        $this->mail->Password = $applicationConfig['smtp.server.password'];
+        $this->mail->SMTPSecure = false;
+        $this->mail->Port = $applicationConfig['smtp.server.port'];
+        $this->mail->setFrom('mailer@reseaudynamique.com', 'reseaudynamique.com');
+        $this->mail->addAddress($emailto, $toName);
+        $this->mail->addReplyTo($this->email, $this->prenom . " " . $this->nom);
+        $this->mail->Subject = $subject;
+        
+        $body .= "<table>";
+        $body .= "<tr><td><b>Provient de </b></td><td><a href='";
+        $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
+        $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+        $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
+        $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
+        $body .= "<tr><td><b>Ville</b></td><td>" . $this->ville . "</td></tr>";
+        $body .= "<tr><td><b>Téléphone</b></td><td>" . $this->telephone . "</td></tr>";
+        $body .= "<tr><td><b>Courriel</b></td><td>" . $this->email . "</td></tr>";
+        $body .= "<tr><td><b>Marque</b></td><td>" . $this->marque . "</td></tr>";
+        $body .= "<tr><td><b>Modèle</b></td><td>" . $this->modele . "</td></tr>";
+        $body .= "<tr><td><b>Année</b></td><td>" . $this->annee . "</td></tr>";
+        $body .= "<tr><td><b>KM</b></td><td>" . $this->km . "</td></tr>";
+        $body .= "<tr><td><b>État intérieur</b></td><td>" . $this->etatExterieur . "</td></tr>";
+        $body .= "<tr><td><b>État extérieur</b></td><td>" . $this->etatInterieur . "</td></tr>";
+        if( $this->commentaire != "" )
+            $body .= "Commentaire: " . $this->commentaire . "</td></tr>";
+        $body .= "</table>";
+        
+        if( $file1 != '' ){
+            $this->mail->addAttachment($file1temp, $file1);
+        }
+        if( $file2 != '' ){
+            $this->mail->addAttachment($file2temp, $file2);
+        }
+        if( $file3 != '' ){
+            $this->mail->addAttachment($file3temp, $file3);
+        }
+        
+        $this->mail->Body = $body;
+        $this->mail->AltBody = "-alt-";
+        
+    }
+    
+    public function loadBonTravail($TypeEmail,$Succursale,$Compagnie,$Responsable,$Telephone,$Email,$Vin, $Unite, $Km, $BonCommande,$NoteSpeciale, $Instructions, $PrixReparationsMax, $travaux1, $travaux2, $travaux3, $travaux4, $travaux5, $travaux6, $travaux7, $travaux8, $file1, $file2, $file3, $file1temp, $file2temp, $file3temp)
     {
         global $applicationConfig;
         $emailto = $toName = $subject = $body = "";
@@ -310,8 +365,14 @@ Class RD_Email
         $this->mail->addReplyTo($this->email);
         $this->mail->Subject = $subject;
         
-        if( $nomFichier != '' ){
-            $this->mail->addAttachment("../public_html/_uploads/bonTravail/" . $nomFichier); // TODO -> Supprimer le fichier
+        if( $file1 != '' ){
+            $this->mail->addAttachment($file1temp, $file1);
+        }
+        if( $file2 != '' ){
+            $this->mail->addAttachment($file2temp, $file2);
+        }
+        if( $file3 != '' ){
+            $this->mail->addAttachment($file3temp, $file3);
         }
                 
         // Le body spécifique
@@ -602,10 +663,6 @@ Class RD_Email
         if( $PresFile != '' ){
             $this->mail->addAttachment($PresFile, $FilePresPrettyName);
         }
-//echo "cvfile: ". $CVFile . "<br/>";
-//echo "cvprette: ". $FileCVPrettyName . "<br/>";
-//echo "presfile: ". $PresFile . "<br/>";
-//echo "prespretty: ". $FilePresPrettyName . "<br/>";
 
         $body = $bodyHeader . '<p><strong><span>Nom :</span></strong>&nbsp;' . $Nom . '</p>
                                <p><strong><span>Prénom :</span></strong>&nbsp;' . $Prenom . '</p>
