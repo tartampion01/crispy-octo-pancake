@@ -84,7 +84,7 @@
                         <?PHP if( $truckResults && (mysqli_num_rows($truckResults) > 0)){
                             while($row = mysqli_fetch_assoc($truckResults)) { ?>
                                 <div class="FacetedResultTemplate DefaultResultContainer" >
-                                    <a data-link="product link" href="<?php echo RD_PageLink::getHref(folder::Root, page::Details) . "?k=" . urlencode($row['id']); ?>">TROCK</a>
+                                    <a data-link="product link" href="<?php echo RD_PageLink::getHref(folder::Root,page::Details_New) . "?k=" . urlencode($row['id']); ?>">TROCK</a>
                                     <div class="ResultImage">
                                         <img src="" title="" alt="TODO">
                                         <div class="imgPromo" style="display: none;"></div>
@@ -149,7 +149,7 @@
                         <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle" tabindex="">Marque</a>
                             <ul class="marque" style="">
-                                <?PHP $results = selectNewTrucksDisctinctCriteria('marque', 'engine <> "-" AND ' ); ?>
+                                <?PHP $results = selectNewTrucksDisctinctCriteria('marque', 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ' ); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
                                     <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria='engine <> "-" AND ' data-selected="false">
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?marque=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
@@ -161,7 +161,7 @@
                         <li class="GpcMenuCategory expanded">
                             <a class="GpcMenuCategoryTitle" tabindex="">Modèle</a>
                             <ul class="Model" style="">
-                                <?PHP $results = selectNewTrucksDisctinctCriteria('Model', 'engine <> "-" AND '); ?>
+                                <?PHP $results = selectNewTrucksDisctinctCriteria('Model', 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND '); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
                                     <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>' data-custom-criteria='engine <> "-" AND ' data-selected="false">
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?Model=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
@@ -303,7 +303,7 @@
 <script id="resultsTemplate" type="text/x-jquery-tmpl">
     
     <div class="FacetedResultTemplate DefaultResultContainer">
-        <a href="details.php?id=${encodeURI(btoa(id))}">
+        <a href="details_new.php?id=${encodeURI(btoa(id))}">
             <div class="ResultImage">                
                 <img src="${pictures[0]}" title="" alt="">
                 <div class="imgPromo" style="display: none;"></div>
