@@ -1,6 +1,6 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body">
-    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
+    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>" enctype="multipart/form-data">
     <div class="wrap">
         <div class="content">
             <div class="shrink">
@@ -17,6 +17,53 @@
                                 $prenomErr = $nomErr = $villeErr = $emailErr = $telErr = $marqueErr = $modeleErr = $anneeErr = $kmErr = "";
                                 $prenom = $nom = $ville = $email = $tel = $marque = $modele = $annee = $km = $etatExt = $etatInt = $VehiculeId = "";
                                 $errorCount = 0;
+                                $filename1 = $filename2 = $filename3 = "";
+                                $file1Temp = $file2Temp = $file3Temp = "";
+                                
+                                function uploadFile($ctrlName)
+                                {
+                                    $target_dir = "../_uploads/evaluerEchange/";
+
+                                    // Pour conserver le nom temporaire dans le dossier d'upload
+                                    // Pour éviter d'avoir deux fois un CV.doc!
+                                    $target_file = $target_dir . basename($_FILES[$ctrlName]["tmp_name"]);
+                                    $uploadOk = 1;
+
+                                    $ift = strtolower(pathinfo($target_file,PATHINFO_EXTENSION)); // $ift = imageFileType c'était chiant pour le if plus bas!
+                                    if (file_exists($target_file)){
+                                        $uploadOk = 0;
+                                    }
+                                    if ($_FILES[$ctrlName]["size"] > 5000000) {
+                                        $uploadOk = 0;
+                                    }
+
+                                    if ($uploadOk == 0) {
+                                    // if everything is ok, try to upload file
+                                    } else {
+                                        if (move_uploaded_file($_FILES[$ctrlName]["tmp_name"], $target_file)) {
+                                            switch($ctrlName)
+                                            {
+                                                case "file1":global $filename1;
+                                                             global $file1Temp;
+                                                             $filename1 = basename( $_FILES[$ctrlName]["name"]);
+                                                             $file1Temp = $target_dir . basename($_FILES[$ctrlName]["tmp_name"]);
+                                                             break;
+                                                case "file2":global $filename2;
+                                                             global $file2Temp;
+                                                             $filename2 = basename( $_FILES[$ctrlName]["name"]);
+                                                             $file2Temp = $target_dir . basename($_FILES[$ctrlName]["tmp_name"]);
+                                                             break;
+                                                case "file3":global $filename3;
+                                                             global $file3Temp;
+                                                             $filename3 = basename( $_FILES[$ctrlName]["name"]);
+                                                             $file3Temp = $target_dir . basename($_FILES[$ctrlName]["tmp_name"]);
+                                                             break;
+                                                default:break;
+                                                    
+                                            }
+                                        } else {}
+                                    }
+                                }
                                 
                                 if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                     
@@ -94,11 +141,21 @@
                                     $etatExt = $_POST['cboEtatExt'];
                                     $etatInt = $_POST['cboEtatInt'];
 
+                                    if(!empty($_FILES["file1"]["name"])){
+                                        uploadFile("file1");
+                                    }
+                                    if(!empty($_FILES["file2"]["name"])){
+                                        uploadFile("file2");
+                                    }
+                                    if(!empty($_FILES["file3"]["name"])){
+                                        uploadFile("file3");
+                                    }
+
                                     // ENVOI EMAIL
                                     if(isset($_POST['btnSendMail']) && $errorCount == 0)
                                     {
                                         $RDemail = new RD_Email();
-                                        $RDemail->load(TypeEmail::EvaluerEchange,$prenom,$nom,$ville,urlencode($email),$tel,'','','','',$marque,$modele,$annee,$km,$etatExt,$etatInt,$VehiculeId,TypeVehicule::CamionNeuf);
+                                        $RDemail->loadEvaluerEchange(TypeEmail::EvaluerEchange,$prenom,$nom,$ville,urlencode($email),$tel,'','','','',$marque,$modele,$annee,$km,$etatExt,$etatInt,$VehiculeId,TypeVehicule::CamionNeuf,$filename1,$filename2,$filename3,$file1Temp,$file2Temp,$file3Temp);
                                         if($RDemail->send()){
                                             $divVisibility = "hidden";
                                             ?><h2>Votre demande a bien été envoyée</h2><?php
@@ -161,7 +218,23 @@
                                         <option selected="selected" value="UGV1dC3DqnRyZSB2ZW5kdSB0ZWwgcXVlbA==">Peut-être vendu tel quel</option>
                                         <option value="UsOpcGFyYXRpb24gcmVxdWlzZQ==">Réparation requise</option>
                                         <option value="UsOpcGFyYXRpb24gbWFqZXVyZSByZXF1aXNl">Réparation majeure requise</option>
-                                    </select></h5>
+                                    </select>
+                                </h5>
+                                
+                                <h5>Images du véhicule :</h5>
+                                <input type="file" id="file1" name="file1" accept=".jpg,.jpeg,.png,.bmp,.tif" class="hidden" style="display:none;"/>
+                                <label for="file1" class="fileReplacement">Joignez une image</label>&nbsp;
+                                <label id="labelFile1" name="labelFile1"></label>
+                                <br />
+                                <input type="file" id="file2" name="file2" accept=".jpg,.jpeg,.png,.bmp,.tif" class="hidden" style="display:none;"/>
+                                <label for="file2" class="fileReplacement">Joignez une image</label>&nbsp;
+                                <label id="labelFile2" name="labelFile2"></label>
+                                <br />
+                                <input type="file" id="file3" name="file3" accept=".jpg,.jpeg,.png,.bmp,.tif" class="hidden" style="display:none;"/>
+                                <label for="file3" class="fileReplacement">Joignez une image</label>&nbsp;
+                                <label id="labelFile3" name="labelFile3"></label>
+                                <br />
+                            <br />
                                 <p>
                                     <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" class="">
                                 </p>
@@ -173,7 +246,34 @@
         </div>
     </div>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
+        <!-- POUR modifier le controle de type file, sinon le texte du button est en anglais, et ça affiche "Select à file" direct au load de la page -->
+        <script type="text/javascript">
+            document.getElementById('file1').addEventListener('change',prep1,false);
+            document.getElementById('file2').addEventListener('change',prep2,false);
+            document.getElementById('file3').addEventListener('change',prep3,false);
+            
+            function prep1(event)
+            {
+                var files = event.target.files;
+                var fileName = files[0].name;
+                var cv = document.getElementById("labelFile1");
+                cv.innerHTML = fileName;
+            }
+            function prep2(event)
+            {
+                var files = event.target.files;
+                var fileName = files[0].name;
+                var cv = document.getElementById("labelFile2");
+                cv.innerHTML = fileName;
+            }
+            function prep3(event)
+            {
+                var files = event.target.files;
+                var fileName = files[0].name;
+                var cv = document.getElementById("labelFile3");
+                cv.innerHTML = fileName;
+            }
+        </script>
     </form>
-    
 </body>
 </html>
