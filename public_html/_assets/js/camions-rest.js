@@ -56,8 +56,8 @@ $( document ).ready(function() {
         fetchRecords(field, value, customCriteria, true);
     });
     
-    // On document load, search for all products
-    fetchRecords('', '', '', true);
+    // On document load, search for all products (with default customCriteria)
+    fetchRecords('', '', 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ', true);
 });
 
 function fetchRecords(field, value, customCriteria, resetPage) {
@@ -159,14 +159,14 @@ function fetchRecords(field, value, customCriteria, resetPage) {
 
                                 if(Object.keys(dataCount).length) {
 
-                                    console.log(dataCount);
+                                    //console.log(dataCount);
                                     // Update every filter links count
                                     $('.GpcMenuCategory').find('.filter-link[data-field="'+countField+'"]').each(function(index) {
 
                                         $(this).hide();
 
                                         for(i=0; i<dataCount.length; i++) {
-                                            console.log($(this).attr('data-value') + ' = ' + $(this).attr('data-value'));
+                                            //console.log($(this).attr('data-value') + ' = ' + $(this).attr('data-value'));
                                             if (Object.values(dataCount[i]).indexOf($(this).attr('data-value').replace('%2B', '+')) > -1) {
 
                                                 $(this).find('.GpcMenuItemCount').html('(' + dataCount[i].count + ')');
@@ -207,7 +207,7 @@ function getSearchTerms() {
     var counter = 0;
     
     $('.GpcMenuCategory .filter-link.selected').each(function() {
-        console.log($(this).parents('ul').attr('class'));
+        //console.log($(this).parents('ul').attr('class'));
         
         var field = $(this).parents('ul').attr('class');
         var value = $(this).attr('data-value');
