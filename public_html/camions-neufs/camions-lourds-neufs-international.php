@@ -13,9 +13,9 @@
                     </div>
                     <div class="toggle">
                         <div class="btnToggle">
-                            <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="javascript:void(0);" linkcollapsegroup="" targetid="" class="open">Informations supplémentaires</a>
+                            <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" href="javascript:void(0);">Informations supplémentaires</a>
                         </div>
-                        <div class="" style="display: none;">
+                        <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="display:none;">
                             <span>
                                 <h2>La puissance de l'innovation</h2>
                                 <p>Que vous soyez sur la route pour la semaine ou pour la fin de semaine, vous avez besoin d'un camion qui vous permettra d'atteindre vos objectifs d'affaires. Élaborés selon les plus hautes normes de qualité obtenues par une recherche constante de l'innovation, les camions International possèdent style et puissance. Avec la fiabilité et la productivité offertes par ces véhicules vous serez en mesure de faire face à tous les défis rencontrés sur la route. International vous aide à respecter vos engagements envers vos clients et à conserver leur confiance.</p>
