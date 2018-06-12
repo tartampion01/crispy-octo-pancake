@@ -70,7 +70,7 @@ Class RD_Email
     public $travaux7 = '';
     public $travaux8 = '';
     
-    public function load($TypeEmail,$Prenom,$Nom,$Ville,$Email,$Telephone,$Commentaire,$Adresse,$Province,$CodePostal,$Marque,$Modele,$Annee,$Km,$EtatInterieur,$EtatExterieur, $IdVehicule, $TypeVehicule)
+    public function load($TypeEmail,$Prenom,$Nom,$Ville,$Email,$Telephone,$Commentaire,$Adresse,$Province,$CodePostal,$Marque,$Modele,$Annee,$Km,$EtatInterieur,$EtatExterieur, $IdVehicule, $TypeVehicule, $NEW)
     {
         global $applicationConfig;
         $emailto = $toName = $subject = $body = "";
@@ -147,7 +147,10 @@ Class RD_Email
             case TypeEmail::DemandeInformation:
                 $body .= "<table>";
                 $body .= "<tr><td><b>Provient de </b></td><td><a href='";
-                $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
+                if( $NEW == 1 )
+                    $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
+                else
+                    $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
                 $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
                 $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
@@ -161,7 +164,10 @@ Class RD_Email
             case TypeEmail::PlanifierEssaiRoutier:
                 $body .= "<table>";
                 $body .= "<tr><td><b>Provient de </b></td><td><a href='";
-                $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
+                if( $NEW == 1 )
+                    $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
+                else
+                    $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
                 $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
                 $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
@@ -175,7 +181,10 @@ Class RD_Email
             case TypeEmail::ObtenirPrix:
                 $body .= "<table>";
                 $body .= "<tr><td><b>Provient de </b></td><td><a href='";
-                $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
+                if( $NEW == 1 )
+                    $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
+                else
+                    $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
                 $body .= "<tr><td><b>Véhicule</b></td><td>". $this->camion->beauTitre . "</td></tr>";
                 $body .= "<tr><td><b>SKU</b></td><td>". $this->camion->noInventaire . "</td></tr>";
@@ -190,7 +199,10 @@ Class RD_Email
             case TypeEmail::DemandFinancement:
                 $body .= "<table>";
                 $body .= "<tr><td><b>Provient de </b></td><td><a href='";
-                $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
+                if( $NEW == 1 )
+                    $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
+                else
+                    $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
                 $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
                 $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
@@ -225,7 +237,7 @@ Class RD_Email
         $this->mail->AltBody = "-alt-";
     }
     
-    public function loadEvaluerEchange($TypeEmail,$Prenom,$Nom,$Ville,$Email,$Telephone,$Commentaire,$Adresse,$Province,$CodePostal,$Marque,$Modele,$Annee,$Km,$EtatInterieur,$EtatExterieur, $IdVehicule, $TypeVehicule, $file1, $file2, $file3, $file1temp, $file2temp, $file3temp)
+    public function loadEvaluerEchange($TypeEmail,$Prenom,$Nom,$Ville,$Email,$Telephone,$Commentaire,$Adresse,$Province,$CodePostal,$Marque,$Modele,$Annee,$Km,$EtatInterieur,$EtatExterieur, $IdVehicule, $TypeVehicule, $file1, $file2, $file3, $file1temp, $file2temp, $file3temp, $NEW)
     {
         global $applicationConfig;
         $emailto = $toName = $subject = $body = "";
@@ -268,7 +280,12 @@ Class RD_Email
         
         $body .= "<table>";
         $body .= "<tr><td><b>Provient de </b></td><td><a href='";
-        $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_details) . "?id=" . $this->idVehicule;
+        
+        if( $NEW == 1 )
+            $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
+        else
+            $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
+        
         $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
         $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
         $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
