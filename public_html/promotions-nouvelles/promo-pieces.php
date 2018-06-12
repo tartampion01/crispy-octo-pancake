@@ -15,35 +15,43 @@
                                 <div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 610px;">
                                     <div class="carrousel" displayedzonestyle="width: auto; position: relative;">
                                         <div aria-hidden="true" style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;">
-                                            <img name="image" title="pagecouverturemarsavril" src="../_assets/images/menu_images/pagecouverturemarsavril.gif" alt="pagecouverturemarsavril">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p01.jpg" alt="Promo Mai-Juin 2018-12">
                                         </div>
                                         <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" title="hortonmarsavril" src="../_assets/images/menu_images/hortonmarsavril.gif" alt="hortonmarsavril">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p02.jpg" alt="Promo Mai-Juin 2018-12">
                                         </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="true">
-                                            <img name="image" title="panamarsavril" src="../_assets/images/menu_images/panamarsavril.gif" alt="panamarsavril">
+                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p03.jpg" alt="Promo Mai-Juin 2018-12">
                                         </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="true">
-                                            <img name="image" title="fleetritemarsavril" src="../_assets/images/menu_images/fleetritemarsavril.gif" alt="fleetritemarsavril">
+                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p04.jpg" alt="Promo Mai-Juin 2018-12">
                                         </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="true">
-                                            <img name="image" title="paimarsavril" src="../_assets/images/menu_images/paimarsavril.gif" alt="paimarsavril">
+                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p05.jpg" alt="Promo Mai-Juin 2018-12">
                                         </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="true">
-                                            <img name="image" title="bendixmarsavril" src="../_assets/images/menu_images/bendixmarsavril.gif" alt="bendixmarsavril">
+                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p06.jpg" alt="Promo Mai-Juin 2018-12">
                                         </div>
-                                        <div style="display: none; float: none; list-style: none; position: absolute; width: 790px; z-index: 0;" aria-hidden="true">
-                                            <img name="image" title="automannmarsavril" src="../_assets/images/menu_images/automannmarsavril.gif" alt="automannmarsavril">
+                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p07.jpg" alt="Promo Mai-Juin 2018-12">
                                         </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 50;" aria-hidden="true">
-                                            <img name="image" title="gbcmarsavril" src="../_assets/images/menu_images/gbcmarsavril.gif" alt="gbcmarsavril">
+                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p08.jpg" alt="Promo Mai-Juin 2018-12">
                                         </div>
-                                        <div style="display: none; float: none; list-style: none; position: absolute; width: 790px; z-index: 0;" aria-hidden="true">
-                                            <img name="image" title="shellmarsavril" src="../_assets/images/menu_images/shellmarsavril.gif" alt="shellmarsavril">
+                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p09.jpg" alt="Promo Mai-Juin 2018-12">
                                         </div>
-                                        <div style="display: none; float: none; list-style: none; position: absolute; width: 790px; z-index: 0;" aria-hidden="true">
-                                            <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="/nous-joindre">
-                                                <img name="image" title="reseaumapmarsavril" src="../_assets/images/menu_images/reseaumapmarsavril.gif" alt="reseaumapmarsavril"></a>
+                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p10.jpg" alt="Promo Mai-Juin 2018-12">
+                                        </div>
+                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p11.jpg" alt="Promo Mai-Juin 2018-12">
+                                        </div>
+                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p12.jpg" alt="Promo Mai-Juin 2018-12">
+                                        </div>
+                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
+                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p13.jpg" alt="Promo Mai-Juin 2018-12">
                                         </div>
                                     </div>
                                 </div>
@@ -63,6 +71,9 @@
                                         <div class="bx-pager-item"><a href="" data-slide-index="7" class="bx-pager-link">8</a></div>
                                         <div class="bx-pager-item"><a href="" data-slide-index="8" class="bx-pager-link">9</a></div>
                                         <div class="bx-pager-item"><a href="" data-slide-index="9" class="bx-pager-link">10</a></div>
+                                        <div class="bx-pager-item"><a href="" data-slide-index="11" class="bx-pager-link">11</a></div>
+                                        <div class="bx-pager-item"><a href="" data-slide-index="12" class="bx-pager-link">12</a></div>
+                                        <div class="bx-pager-item"><a href="" data-slide-index="13" class="bx-pager-link">13</a></div>
                                     </div>
                                 </div>
                             </div>
