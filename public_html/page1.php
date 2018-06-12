@@ -151,7 +151,7 @@
                             <ul class="marque" style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('marque', 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ' ); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
-                                    <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria='engine <> "-" AND ' data-selected="false">
+                                    <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria='engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ' data-selected="false">
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?marque=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                         <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                     </li>
@@ -163,7 +163,7 @@
                             <ul class="Model" style="">
                                 <?PHP $results = selectNewTrucksDisctinctCriteria('Model', 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND '); ?>
                                     <?PHP foreach($results as $key => $value){ ?>
-                                    <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>' data-custom-criteria='engine <> "-" AND ' data-selected="false">
+                                    <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>' data-custom-criteria='engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ' data-selected="false">
                                         <?PHP /*echo "<a class='GpcItemTitle' href='?Model=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                         <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                     </li>
