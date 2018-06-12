@@ -5,7 +5,7 @@
         <div class="content">
             <div class="shrink">
                 <div class="titrepage">
-                    <h1><?php echo $NOMPAGE; ?></h1>
+                    <h1>Concours</h1>
                 </div>
                 <div class="contenu">
                     <div class="contenu2">
