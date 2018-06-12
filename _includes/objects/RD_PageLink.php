@@ -30,9 +30,10 @@ interface page
     const DemandeFinancement = 13;
     const EvaluerEchange = 14;
     const NousJoindre = 15;
-    const Details = 16;
-    const Carrieres = 17;
-    const Postuler = 18;
+    const Details_New = 16;
+    const Details_Used = 17;
+    const Carrieres = 18;
+    const Postuler = 19;
     
     const CamionsInventaireComplet = 100;
     const CamionsInternational = 101;
@@ -79,7 +80,8 @@ interface page
     const EXTERNAL_nextPartLogin = 700;
     const EXTERNAL_nextPart = 701;
     const EXTERNAL_fleetrite = 702;
-    const EXTERNAL_details = 703;
+    const EXTERNAL_detailsNEW = 703;
+    const EXTERNAL_detailsUSED = 708;
     const EXTERNAL_boutiqueEnLigne = 704;
     const EXTERNAL_DiMond = 705;
     const EXTERNAL_Doepker = 706;
@@ -163,13 +165,15 @@ class RD_PageLink
             case page::ObtenirPrix: $_page = "obtenir-prix";break;
             case page::DemandeFinancement: $_page = "demande-financement";break;
             case page::EvaluerEchange: $_page = "evaluer-echange";break;
-            case page::Details: $_page = "details";break;
+            case page::Details_New: $_page = "details_new";break;
+            case page::Details_Used: $_page = "details_used";break;
             case page::Carrieres: $_page = "carrieres";break;
             case page::Postuler: $_page = "postuler";break;            
                 
             case page::EXTERNAL_nextPartLogin: $_page = "http://www.nexpart.com/login.php";$_wholeURL = true;break;
             case page::EXTERNAL_fleetrite: $_page = "http://www.fleetrite.com";$_wholeURL = true;break;
-            case page::EXTERNAL_details: $_page = "http://reseaudynamique.com/details.php";$_wholeURL = true;break;
+            case page::EXTERNAL_detailsNEW: $_page = "http://reseaudynamique.com/details_new.php";$_wholeURL = true;break;
+            case page::EXTERNAL_detailsUSED: $_page = "http://reseaudynamique.com/details_used.php";$_wholeURL = true;break;
             case page::EXTERNAL_boutiqueEnLigne: $_page = "https://reseaudynamique.gxd.ca/";$_wholeURL = true;break;
             case page::EXTERNAL_DiMond: $_page = "http://www.di-mond.com/index2.html";$_wholeURL = true;break;
             case page::EXTERNAL_Doepker: $_page = "http://www.doepker.com/";$_wholeURL = true;break;
