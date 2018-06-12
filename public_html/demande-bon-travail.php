@@ -66,63 +66,66 @@
                 <div class="contenu">
                     <div class="contenu2">
                         <?php
-                        function uploadFile()
+                        
+                        $divVisibility = "visible";
+                        
+                        $nomCompagnieErr = $nomResponsableErr = $emailErr = $telErr = $vinErr = $uniteErr = $kmErr = $bonCommandeErr = $travauxErr = $noteSpecialeErr = $instructionsErr = $acceptErr = $prixMaxErr = $captchaErr = "";
+                        $succursale = $nomCompagnie = $nomResponsable = $email = $tel = $vin = $unite = $km = $bonCommande = $noteSpeciale = $instructions = $prixMax = $travaux1 = $travaux2 = $travaux3 = $travaux4 = $travaux5 = $travaux6 = $travaux7 = $travaux8 = "";
+                        $filename1 = $filename2 = $filename3 = "";
+                        $file1Temp = $file2Temp = $file3Temp = "";
+
+                        $errorCount = 0;
+                        
+                        function uploadFile($ctrlName)
                         {
-                            $nomFichier = '';
-                            $target_dir = "_uploads/bonTravail/";
-                            $target_file = $target_dir . basename($_FILES["FileUpload"]["name"]);
+                            $target_dir = "../_uploads/bonTravail/";
+                            $target_file = $target_dir . basename($_FILES[$ctrlName]["tmp_name"]);
                             $uploadOk = 1;
-                            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-                            if(isset($_POST["btnSendMail"])) {
-                                $check = getimagesize($_FILES["FileUpload"]["tmp_name"]);
-                                //echo $_FILES["FileUpload"]["tmp_name"];
-                                if($check !== false) {
-                                    //echo "File is an image - " . $check["mime"] . ".";
-                                    $uploadOk = 1;
-                                } else {
-                                    //echo "Ce fichier n'est point une image.";
-                                    $uploadOk = 0;
-                                }
-                            }
-                            // Check if file already exists
-                            if (file_exists($target_file)) {
-                                //echo "Ce fichier existe déjà";
+
+                            $ift = strtolower(pathinfo($target_file,PATHINFO_EXTENSION)); // $ift = imageFileType c'était chiant pour le if plus bas!
+                            if (file_exists($target_file)){
                                 $uploadOk = 0;
                             }
-                            // Check file size
-                            if ($_FILES["FileUpload"]["size"] > 5000000) {
-                                //echo "Le fichier est trop volumineux. Moins de 5mb.";
+                            if ($_FILES[$ctrlName]["size"] > 5000000) {
                                 $uploadOk = 0;
                             }
+                            
                             // Allow certain file formats
-                            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "doc" && $imageFileType != "xls") {
-                                //echo "Fichiers .pdf,.jpg,.png,.doc,.xls seulement";
-                                $uploadOk = 0;
-                            }
+//                            if($ift != "jpg" && $ift != "png" && $ift != "jpeg" && $ift != "doc" && $ift != "xls") {
+//                                //echo "Fichiers .pdf,.jpg,.png,.doc,.xls seulement";
+//                                $uploadOk = 0;
+//                            }
+                            
                             // Check if $uploadOk is set to 0 by an error
                             if ($uploadOk == 0) {
-                                //echo "Le fichier n'a pu être ajouté";
                             // if everything is ok, try to upload file
                             } else {
-                                if (move_uploaded_file($_FILES["FileUpload"]["tmp_name"], $target_file)) {
-                                    //"Le fichier ". basename( $_FILES["FileUpload"]["name"]). " a été téléchargé.";
-                                    $nomFichier = basename( $_FILES["FileUpload"]["name"]);
+                                if (move_uploaded_file($_FILES[$ctrlName]["tmp_name"], $target_file)) {
+                                    switch($ctrlName)
+                                    {
+                                        case "file1":global $filename1;
+                                                     global $file1Temp;
+                                                     $filename1 = basename( $_FILES[$ctrlName]["name"]);
+                                                     $file1Temp = $target_dir . basename($_FILES[$ctrlName]["tmp_name"]);
+                                                     break;
+                                        case "file2":global $filename2;
+                                                     global $file2Temp;
+                                                     $filename2 = basename( $_FILES[$ctrlName]["name"]);
+                                                     $file2Temp = "../_uploads/bonTravail/" . basename($_FILES[$ctrlName]["tmp_name"]);
+                                                     break;
+                                        case "file3":global $filename3;
+                                                     global $file3Temp;
+                                                     $filename3 = basename( $_FILES[$ctrlName]["name"]);
+                                                     $file3Temp = "../_uploads/bonTravail/" . basename($_FILES[$ctrlName]["tmp_name"]);
+                                                     break;
+                                        default:break;
+
+                                    }
                                 } else {
                                     //echo "Diantre, il y a eu une erreur en ajoutant le fichieré";
                                 }
                             }
-                            
-                            return $nomFichier;
-                        }
-                        
-                        $divVisibility = "visible";
-                        $nomFichier = '';
-                        
-                        $nomCompagnieErr = $nomResponsableErr = $emailErr = $telErr = $vinErr = $uniteErr = $kmErr = $bonCommandeErr = $travauxErr = $noteSpecialeErr = $instructionsErr = $acceptErr = $prixMaxErr = $captchaErr = "";
-                        $succursale = $nomCompagnie = $nomResponsable = $email = $tel = $vin = $unite = $km = $bonCommande = $noteSpeciale = $instructions = $prixMax = $travaux1 = $travaux2 = $travaux3 = $travaux4 = $travaux5 = $travaux6 = $travaux7 = $travaux8 = "";
-                        $fileList = array();
-
-                        $errorCount = 0;
+                        }                        
 
                         if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -236,15 +239,21 @@
                             $travaux8 = RD_Utils::test_input($_POST['tbTravaux8']);
                             $noteSpeciale = RD_Utils::test_input($_POST['tbNoteSpeciale']);
 
-                            if(!empty($_FILES["FileUpload"]["name"])){
-                                $nomFichier = uploadFile();
+                            if(!empty($_FILES["file1"]["name"])){
+                                uploadFile("file1");
+                            }
+                            if(!empty($_FILES["file2"]["name"])){
+                                uploadFile("file2");
+                            }
+                            if(!empty($_FILES["file3"]["name"])){
+                                uploadFile("file3");
                             }
                             
                             // ENVOI EMAIL
                             if(isset($_POST['btnSendMail']) && $errorCount == 0)
                             {
                                 $RDemail = new RD_Email();
-                                $RDemail->loadBonTravail(TypeEmail::BonTravail,$succursale,$nomCompagnie,$nomResponsable,$tel,$email,$vin,$unite,$km,$bonCommande,$noteSpeciale,$instructions,$prixMax,$travaux1,$travaux2,$travaux3,$travaux4,$travaux5,$travaux6,$travaux7,$travaux8, $nomFichier);
+                                $RDemail->loadBonTravail(TypeEmail::BonTravail,$succursale,$nomCompagnie,$nomResponsable,$tel,$email,$vin,$unite,$km,$bonCommande,$noteSpeciale,$instructions,$prixMax,$travaux1,$travaux2,$travaux3,$travaux4,$travaux5,$travaux6,$travaux7,$travaux8, $filename1,$filename2,$filename3,$file1Temp,$file2Temp,$file3Temp); 
                                 if($RDemail->send())
                                 {
                                     $divVisibility = "hidden";
@@ -359,13 +368,22 @@
                                 </p>
                             </div>
 
-                            <div class="ReplacementDiv">
-                                <span class="UploadFileText">Inclure un document (PDF, JPG, PNG, DOC, XLS)</span></br>
-                                <span class="ReplacementButton" style="position: relative; overflow: hidden; cursor: pointer;">
-                                    <input type="file" accept=".pdf,.jpg,.png,.doc,.xls" name="FileUpload" id="FileUpload" class="ReplacementButtonInput" title="">                                    
-                                </span>
+                            <div class="formulaire">
+                             <h5>Inclure un document (PDF, JPG, PNG, DOC, XLS)</h5>
+                                <input type="file" id="file1" name="file1" accept=".jpg,.jpeg,.pdf,.doc,.xls" class="hidden" style="display:none;"/>
+                                <label for="file1" class="fileReplacement">Joignez une fichier</label>&nbsp;
+                                <label id="labelFile1" name="labelFile1"></label>
+                                <br />
+                                <input type="file" id="file2" name="file2" accept=".jpg,.jpeg,.pdf,.doc,.xls" class="hidden" style="display:none;"/>
+                                <label for="file2" class="fileReplacement">Joignez une fichier</label>&nbsp;
+                                <label id="labelFile2" name="labelFile2"></label>
+                                <br />
+                                <input type="file" id="file3" name="file3" accept=".jpg,.jpeg,.pdf,.doc,.xls" class="hidden" style="display:none;"/>
+                                <label for="file3" class="fileReplacement">Joignez une fichier</label>&nbsp;
+                                <label id="labelFile3" name="labelFile3"></label>
+                                <br />
                             </div>
-
+                            
                             <textarea id="tbNoteSpeciale" name="tbNoteSpeciale" rows="2" cols="20" placeholder="Note spéciale" value="<?php echo $noteSpeciale; ?>"></textarea>
 
                             <p>&nbsp;</p>
@@ -399,7 +417,35 @@
                         <input type="hidden" name="" itemid="">
                         <input type="submit" name="btnSendMail" id="btnSendMail" value="Soumettre" class="">
                         </div>
-                                    <script type="text/javascript">  //<![CDATA[
+                        <script type="text/javascript">
+                            document.getElementById('file1').addEventListener('change',prep1,false);
+                            document.getElementById('file2').addEventListener('change',prep2,false);
+                            document.getElementById('file3').addEventListener('change',prep3,false);
+
+                            function prep1(event)
+                            {
+                                var files = event.target.files;
+                                var fileName = files[0].name;
+                                var cv = document.getElementById("labelFile1");
+                                cv.innerHTML = fileName;
+                            }
+                            function prep2(event)
+                            {
+                                var files = event.target.files;
+                                var fileName = files[0].name;
+                                var cv = document.getElementById("labelFile2");
+                                cv.innerHTML = fileName;
+                            }
+                            function prep3(event)
+                            {
+                                var files = event.target.files;
+                                var fileName = files[0].name;
+                                var cv = document.getElementById("labelFile3");
+                                cv.innerHTML = fileName;
+                            }
+                        </script>
+        
+        <script type="text/javascript">  //<![CDATA[
   $(function () {
     
     $(".plainte:first-child .supPlainte").hide();
