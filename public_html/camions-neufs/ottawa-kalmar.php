@@ -11,11 +11,11 @@
                     <div>
                         Réseau Dynamique, dépositaire Ottawa Kalmar, offre une large sélection de tracteurs de terminal aux différents types d'industries et d'usages.
                     </div>
-                    <div class="toggle" itemid="">
-                        <div class="btnToggle" itemid="">
-                            <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="javascript:void(0);" linkcollapsegroup="" targetid="" class="open">Informations supplémentaires</a>
+                     <div class="toggle">
+                        <div class="btnToggle">
+                            <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" href="javascript:void(0);">Informations supplémentaires</a>
                         </div>
-                        <div class="" style="display: none;">
+                        <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="display:none;">
                             <span>
                                 <h2>Le meilleur tracteur de terminal pour vos opérations</h2>
                                 <p>Ottawa Kalmar est chef de file dans la construction de tracteurs de terminal pour une bonne raison : aucun autre camion n'égale les propriétés ergonomiques, la fiabilité inébranlable et le soutien offert par Ottawa auprès de sa clientèle. Au sommet depuis plus de 50 ans, les camions Ottawa Kalmar continuent avec succès à déplacer les remorques autour des centres de distribution, des stations de transfert, des terminaux de camions ainsi que des ports et autres lieux d'entreposage de conteneurs.</p>
