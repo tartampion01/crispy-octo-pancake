@@ -692,7 +692,7 @@ a {
     }
 
 .titrepage {
-  padding: 0 10px;
+  /*padding: 0 10px;*/
 }
 
 .toggle {
@@ -756,15 +756,6 @@ a {
     -webkit-transform: rotate(0deg);
   }
 
-.showedZone {
-  background: rgb(238, 238, 238);
-  padding: 38px;
-}
-
-  .showedZone h2 {
-    margin-top: 0px;
-  }
-
 .FacetedExplorer {
   position: relative !important;
 }
@@ -788,7 +779,8 @@ margin-top: 36px;
 
 .contenu {
   line-height: 1.5em;
-  padding: 0px 0px 0px 10px;
+  /*padding: 0px 0px 0px 10px;*/
+  padding: 0px 0px 0px 0px;
 }
 
 .contenu2 {
@@ -854,6 +846,15 @@ margin-top: 36px;
     list-style-image: none;
     background: url(../../../_assets/images/menu_images/puce.png) left 9px no-repeat;
     padding-left: 9px;
+  }
+  
+.showedZone {
+  background: rgb(238, 238, 238);
+  padding: 38px;
+}
+
+  .showedZone h2 {
+    margin-top: 0px;
   }
 
 .contenu hr {

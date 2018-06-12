@@ -11,9 +11,9 @@
                     <div class="contenu2">
                         <div class="toggle">
                             <div class="btnToggle">
-                                <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" href="javascript:void(0);">Informations supplémentaires</a>
+                                <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
                             </div>
-                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="">
+                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="display:none;">
                                 <span>
                                     <h2>Skid Steer</h2>
                                     <p><strong>Un seul véhicule, une infinité de possibilités</strong>. Vous ne pouvez jamais prévoir totalement ce que vous allez affronter demain. Toutefois, au volant d'un Skeed Steer vous pouvez affirmer d'avance que vous allez remporter la bataille. Grâce à son parfait équilibre entre puissance et performance, vous avez l'assurance de faire plus en beaucoup moins de temps.</p>

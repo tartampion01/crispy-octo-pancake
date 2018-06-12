@@ -5,4 +5,8 @@ $( document ).ready(function() {
         $(this).next('ul').slideToggle();
         $(this).parent('li').toggleClass('expanded');
     });
+    
+    $('.information-supplementaire').on('click', function() {
+        $(this).toggleClass('open');
+    });
 });

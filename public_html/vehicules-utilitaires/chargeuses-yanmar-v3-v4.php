@@ -14,9 +14,9 @@
                                 conférant polyvalence et manœuvrabilité, les chargeuses sont idéales pour les travaux à l'extérieur et à l'intérieur.</div>	
                         <div class="toggle">
                             <div class="btnToggle">
-                                <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" href="javascript:void(0);">Informations supplémentaires</a>
+                                <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
                             </div>
-                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="">
+                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="display:none;">
                                 <span>
                                     <h2>Chargeuse sur pneus</h2>
                                     <p>En possédant un rayon de braquage égal à la longueur de la machine, les chargeuses V3 et V4 sont les véhicules utilitaires par excellence pour les travaux de bâtiments, les travaux publics, la rénovation, l'aménagement paysager et l'agriculture, entre autres. La chargeuse sur pneus, tout comme la chargeuse à direction à glissement, offre des avantages non négligeables.</p>

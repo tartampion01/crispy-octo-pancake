@@ -15,10 +15,10 @@
                         <div class="toggle">
                             
                             <div class="btnToggle">
-                                <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" href="javascript:void(0);">Informations supplémentaires</a>
+                                <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
                             </div>
                             
-                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="">
+                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="display:none;">
                                 <span>
                                     <h2>Tout pour l&#39;op&#233;rateur professionnel</h2>
                                     <p >R&#233;seau Dynamique poss&#232;de en inventaire les 2 s&#233;ries de mod&#232;les &quot;VIO&quot; et &quot;SV&quot;, lesquels vont de 0,8 T aux pelles de classe 10 T. Con&#231;ues pour offrir une performance in&#233;gal&#233;e sur les terrains les plus ardus, les mini-excavatrices vous feront sauver temps et argent.</p>
