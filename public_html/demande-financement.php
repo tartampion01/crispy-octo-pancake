@@ -19,6 +19,8 @@
                                 $prenomErr = $nomErr = $adresseErr = $codePostalErr = $villeErr = $emailErr = $telErr = "";
                                 $prenom = $nom = $adresse = $codePostal = $province = $ville = $email = $tel = $VehiculeId = "";
                                 $errorCount = 0;
+                                // from url pour savoir si dans le email on met le lien vers la page details_new ou details_used
+                                $NEW = 1;
                                 
                                 if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                     
@@ -85,7 +87,7 @@
                                     if(isset($_POST['btnSendMail']) && $errorCount == 0)
                                     {
                                         $RDemail = new RD_Email();
-                                        $RDemail->load(TypeEmail::DemandFinancement,$prenom,$nom,$ville,urlencode($email),$tel,'',$adresse,$province,$codePostal,'','','','','','',$VehiculeId,TypeVehicule::CamionNeuf);
+                                        $RDemail->load(TypeEmail::DemandFinancement,$prenom,$nom,$ville,urlencode($email),$tel,'',$adresse,$province,$codePostal,'','','','','','',$VehiculeId,TypeVehicule::CamionNeuf, $NEW);
                                         if($RDemail->send()){
                                             $divVisibility = "hidden";
                                             ?><h2>Votre demande a bien été envoyée</h2><?php
@@ -96,10 +98,13 @@
                                 {
                                     if( isset($_GET['id']))
                                         $VehiculeId = $_GET['id'];
+                                    if(isset($_GET['n']))
+                                        $NEW = $_GET['n'];
                                 }
                             ?>
                             <div class="formulaire" style="visibility: <?php echo $divVisibility; ?>">
                                 <input type="hidden" id="hidVehiculeId" name="hidVehiculeId" value="<?php echo $VehiculeId; ?>">
+                                <input type="hidden" id="newOrUsed" name="newOrUsed" value="<?php echo $NEW; ?>">
                                 <p><font size="1">Les champs marqués d'un astérisque (*) sont obligatoires.</font></p>
                                 <h5>Prénom *&nbsp;:<br>
                                     <input name="tbPrenom" id="tbPrenom" type="text" class="" value="<?php echo $prenom;?>"></h5>
