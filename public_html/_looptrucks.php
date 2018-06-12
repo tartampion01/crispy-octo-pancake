@@ -14,7 +14,7 @@
                         <?php
                         
                             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                                if( isset($_POST['btnUpdateImages'])){
+                                if( isset($_POST['btnUpdateImagesNewTrucks'])){
                                     global $conn;
                                     $sql = "SELECT inventory.id FROM inventory";
                                     //$sql = "SELECT inventory.id FROM inventory WHERE id=4377";
@@ -25,14 +25,13 @@
                                             echo "<b>Camion: " . $row['id'] . "</b></br>";
 
                                             $sqlPic = "SELECT inv_pictures.id, inv_pictures.name FROM inventory INNER JOIN inv_pictures ON inventory.id = inv_pictures.product_id WHERE inv_pictures.product_id=" . $row['id'];
-                                            //$sqlPic = "SELECT inv_pictures.id, inv_pictures.name FROM inventory INNER JOIN inv_pictures ON inventory.id = inv_pictures.product_id WHERE inv_pictures.product_id=4377 ORDER BY intorder";
+
                                             $resultPics = mysqli_query($conn, $sqlPic);
                                             if(mysqli_num_rows($resultPics) > 0){
                                                 while($rowPic = mysqli_fetch_assoc($resultPics)) {
 
-                                                    //echo "--------)))" . filesize(__DIR__  . "/_assets/images/camions/" . $rowPic["name"]) . "</br>";
                                                     $fileName = __DIR__  . "/_assets/images/camions/" . $rowPic["name"];
-//echo $fileName . "</br>";
+
                                                     if( file_exists($fileName) )
                                                     {
                                                         $stringimage = file_get_contents($fileName);
@@ -41,16 +40,50 @@
                                                         //fclose($file);
 
                                                         $picId = $rowPic['id'];
-//echo base64_encode($stringimage) . "</br></br></br></br></br></br></br></br>PROOOOOOOT";
-//echo $stringimage;  
-//echo "HHHHHHHHHHHHHHHHHHHHHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-//$tmpFile = mysqli_real_escape_string($conn, $tmpFile);
-//echo mysqli_real_escape_string($conn,base64_encode($stringimage));
-//echo "<img src='data:image/jpeg;base64," . base64_encode($stringimage) . "' />";
-//mysqli_real_escape_string($conn, $stringimage);
                                                         $sqlExecImage = "UPDATE inv_pictures SET base64_picture='data:image/jpeg;base64," . mysqli_real_escape_string($conn,base64_encode($stringimage)) . "' WHERE id=" . $picId;
-//echo $stringimage . "</br></br></br></br></br></br></br></br>prout!";
-//echo $sqlExecImage;
+                                                        
+                                                        if( mysqli_query($conn, $sqlExecImage)){
+                                                            echo "Pic $picId Updatée...</br>";
+                                                        }
+                                                        else
+                                                            echo "Potage = couille! ID=[$picId]</br>";
+                                                    }
+                                                    else
+                                                    {
+                                                        echo "FICHIER: <b>$fileName</b> INEXISTANT</br>";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                if( isset($_POST['btnUpdateImagesUsedTrucks'])){
+                                    global $conn;
+                                    $sql = "SELECT trucks.id FROM trucks";
+                                    $result = mysqli_query($conn, $sql);
+
+                                    if(mysqli_num_rows($result) > 0){
+                                        while($row = mysqli_fetch_assoc($result)) {
+                                            echo "<b>Truck: " . $row['id'] . "</b></br>";
+
+                                            $sqlPic = "SELECT pictures.id, pictures.name FROM trucks INNER JOIN pictures ON trucks.id = pictures.product_id WHERE pictures.product_id=" . $row['id'];
+
+                                            $resultPics = mysqli_query($conn, $sqlPic);
+                                            if(mysqli_num_rows($resultPics) > 0){
+                                                while($rowPic = mysqli_fetch_assoc($resultPics)) {
+
+                                                    $fileName = __DIR__  . "/_assets/images/camions/" . $rowPic["name"];
+
+                                                    if( file_exists($fileName) )
+                                                    {
+                                                        $stringimage = file_get_contents($fileName);
+                                                        //$file = fopen( $fileName, "r") or die("Unable to open file!");
+                                                        //$tmpFile = fread($file,filesize($fileName));
+                                                        //fclose($file);
+
+                                                        $picId = $rowPic['id'];
+                                                        $sqlExecImage = "UPDATE pictures SET base64_picture='data:image/jpeg;base64," . mysqli_real_escape_string($conn,base64_encode($stringimage)) . "' WHERE id=" . $picId;
+                                                        
                                                         if( mysqli_query($conn, $sqlExecImage)){
                                                             echo "Pic $picId Updatée...</br>";
                                                         }
@@ -68,7 +101,8 @@
                                 }
                             }
                         ?>
-                        <input type="submit" id="btnUpdateImages" name="btnUpdateImages" value="BASE 64" />
+                        <input type="submit" id="btnUpdateImagesNewTrucks" name="btnUpdateImagesNewTrucks" value="New trucks BASE 64" />
+                        <input type="submit" id="btnUpdateImagesUsedTrucks" name="btnUpdateImagesUsedTrucks" value="Used trucks BASE 64" />
                     </div>
                 </div>
             </div>
