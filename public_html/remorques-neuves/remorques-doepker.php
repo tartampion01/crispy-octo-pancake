@@ -8,15 +8,15 @@
                     <h1>Remorques Doepker</h1>
                 </div>
                 <div class="contenu contenu2">
-                    <div class="">
+                    <div>
                         Conçues pour offrir une performance inégalée, les remorques DOEPKER offrent un rendement supérieur sur la route. Fabriquées dans des matériaux durables et de qualité, elles sont fortes, légères et représentent les remorques les plus profitables de l'industrie.
                     </div>
                     <br/>
                     <div>
                         <div class="btnToggle">
-                            <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="javascript:void(0);" linkcollapsegroup="" targetid="" class="open">Informations supplémentaires</a>
+                            <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
                         </div>
-                        <div class="showedZone">
+                        <div id="divToggle" class="showedZone" style="display:none;">
                             <span>
                                 <h2>Remorques agricoles</h2>
                                 <p>Plus légères et plus fortes remorques en aluminium sur le marché, les remorques agricoles de DOEPKER sont couvertes par une garantie structurelle de 5 ans à 100 %. Élaborées avec une combinaison de métaux uniques et un design exceptionnel, elles pèsent jusqu'à une 1 tonne de moins que leurs homologues sur le marché. Le revêtement extérieur ne fait pas exception d'innovation. Le mélange de zinc pur à 100 % et l'acier contribuent à préserver la remorque des contaminants des routes canadiennes. Munies d'une chute de déchargement au-dessus et de valves en dessous, elles sont simples d'utilisation au chargement et au déchargement.</p>
