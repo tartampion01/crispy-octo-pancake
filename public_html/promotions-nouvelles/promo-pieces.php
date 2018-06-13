@@ -1,5 +1,5 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-<body class="body">
+<body class="body">    
     <form role="form" method="POST" action="/promotions-nouvelles/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
         <div class="content">
@@ -10,108 +10,181 @@
                 <div class="contenu">
                 <div class="contenu2">
                     <div class="bxslider">
-                        <span data-staticclassnames="">
-                            <div class="bx-wrapper" style="max-width: 100%;">
-                                <div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 610px;">
-                                    <div class="carrousel" displayedzonestyle="width: auto; position: relative;">
-                                        <div aria-hidden="true" style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p01.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p02.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p03.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p04.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p05.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p06.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p07.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p08.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p09.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p10.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p11.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p12.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                        <div style="float: none; list-style: none; position: absolute; width: 790px; z-index: 0; display: none;" aria-hidden="false">
-                                            <img name="image" src="../../_assets/images/promo/promo-mai-juin-2018-p13.jpg" alt="Promo Mai-Juin 2018-12">
-                                        </div>
-                                    </div>
+                        <span>
+                            <div class="carrousel">
+                                <div class="">
+                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p01.jpg" alt="Promo Mai-Juin 2018-01" />
                                 </div>
-                                <div class="bx-controls bx-has-controls-direction bx-has-pager">
-                                    <div class="bx-controls-direction">
-                                        <a class="bx-prev" href="">prev</a>
-                                        <a class="bx-next" href="">next</a>
-                                    </div>
-                                    <div class="bx-pager bx-default-pager">
-                                        <div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link active">1</a></div>
-                                        <div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div>
-                                        <div class="bx-pager-item"><a href="" data-slide-index="2" class="bx-pager-link">3</a></div>
-                                        <div class="bx-pager-item"><a href="" data-slide-index="3" class="bx-pager-link">4</a></div>
-                                        <div class="bx-pager-item"><a href="" data-slide-index="4" class="bx-pager-link">5</a></div>
-                                        <div class="bx-pager-item"><a href="" data-slide-index="5" class="bx-pager-link">6</a></div>
-                                        <div class="bx-pager-item"><a href="" data-slide-index="6" class="bx-pager-link">7</a></div>
-                                        <div class="bx-pager-item"><a href="" data-slide-index="7" class="bx-pager-link">8</a></div>
-                                        <div class="bx-pager-item"><a href="" data-slide-index="8" class="bx-pager-link">9</a></div>
-                                        <div class="bx-pager-item"><a href="" data-slide-index="9" class="bx-pager-link">10</a></div>
-                                        <div class="bx-pager-item"><a href="" data-slide-index="11" class="bx-pager-link">11</a></div>
-                                        <div class="bx-pager-item"><a href="" data-slide-index="12" class="bx-pager-link">12</a></div>
-                                        <div class="bx-pager-item"><a href="" data-slide-index="13" class="bx-pager-link">13</a></div>
-                                    </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p02.jpg" alt="Promo Mai-Juin 2018-02" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p03.jpg" alt="Promo Mai-Juin 2018-03" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p04.jpg" alt="Promo Mai-Juin 2018-04" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p05.jpg" alt="Promo Mai-Juin 2018-05" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p06.jpg" alt="Promo Mai-Juin 2018-06" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p07.jpg" alt="Promo Mai-Juin 2018-07" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p08.jpg" alt="Promo Mai-Juin 2018-08" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p09.jpg" alt="Promo Mai-Juin 2018-09" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p10.jpg" alt="Promo Mai-Juin 2018-10" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p11.jpg" alt="Promo Mai-Juin 2018-11" /></a>
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p12.jpg" alt="Promo Mai-Juin 2018-12" /></a>
+                                </div>
+                                <div class="" style="display:none;">
+                                    <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre)?>">
+                                        <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p13.jpg" alt="Promo Mai-Juin 2018-13" />
+                                    </a>
                                 </div>
                             </div>
                         </span>
                     </div>
-                    <div id="ctl00_Nms_Designer_Web_UI_Widget_Library_LibraryText94fd26ecd3c847a2afa092aa02be4b3b_Nms_Designer_Web_UI_Widget_Zone_NmsLiteralebae89b4993e42dcbba01c0adc09de7d">
-                        <script>
-                            //<![CDATA[
-                            var newCarrousel = "";
-                            newCarrousel = $('.bxslider .carrousel').bxSlider({
-                              useCSS: false,
-                              auto: false,
-                              autoStart: true,
-                              mode: "fade",
-                              pager: true,
-                              controls: true,
-                              responsive: true,
-                        //      prevSelector: $(".flecheGauche"),
-                        //      nextSelector: $(".flecheDroite"),
-                              speed: 500,
-                              pause: 5000,
-                        //     adaptiveHeight: true,
-                        //      touchEnabled: true,
-                        //      slideWidth: 944,
-                              prevText: "prev",
-                              nextText: "next"
+                    <script>
+                        //<![CDATA[
 
-                            }); 
+                        var newCarrousel = "";
+                        newCarrousel = $('.bxslider .carrousel').bxSlider({
+                          useCSS: false,
+                          auto: false,
+                          autoStart: true,
+                          mode: "fade",
+                          pager: true,
+                          controls: true,
+                          responsive: true,
+                    //      prevSelector: $(".flecheGauche"),
+                    //      nextSelector: $(".flecheDroite"),
+                          speed: 500,
+                          pause: 5000,
+                    //     adaptiveHeight: true,
+                    //      touchEnabled: true,
+                    //      slideWidth: 944,
+                          prevText: "prev",
+                          nextText: "next"
 
-                            //]]>
+                        }); 
 
-                        </script>
-                    </div>
-                </div>
+                        //]]>
+                    </script>
                 </div>
             </div>
-        </div>
-    </div>
+                        
+            <script type="text/javascript">    //<![CDATA[
+$(document).ready(function () {
+
+  $("body").attr("ontouchstart", "");
+  $("body").attr("onmouseover", "");
+
+  var $menuMobile = $(".menuMobile");
+  if ($(window).width() < 641) {
+    $menuMobile.css("left", -$menuMobile.outerWidth());
+  } else {
+    $menuMobile.hide();
+  }
+
+  $(".icoMenuMobile").click(function () {
+    $(this).toggleClass("open");
+
+    $menuMobile.animate({
+      left: parseInt($menuMobile.css('left'), 10) == 0 ?
+          -$menuMobile.outerWidth() :
+          0
+    });
+    $(".wrap").animate({
+      left: parseInt($menuMobile.css('left'), 10) == 0 ?
+        0 :
+        +$menuMobile.outerWidth()
+    });
+    $(".pied").animate({
+      left: parseInt($menuMobile.css('left'), 10) == 0 ?
+        0 :
+        +$menuMobile.outerWidth()
+    });
+  });
+
+  $(".menuCss5").find(".parent > a").click(function () {
+    var open = $(this).parent();
+    if (open.hasClass("expanded")) {
+      open.removeClass("expanded");
+      open.children("div").slideUp();
+    } else {
+      open.addClass("expanded");
+      open.children("div").slideDown("fast", function () {
+        $('html, body').animate({
+          scrollTop: open.offset().top
+        }, 1000);
+      });
+    }
+  });
+  //Faire afficher les filtres
+  $(".toggleFilters").bind("click", openFilters);
+  $(".viewResults a").bind("click", closeFilters);
+  function openFilters() {
+    $(".GpcMenuWrapper").slideDown();
+    $(".toggleFilters").addClass("selected").unbind("click").find(".openClose").bind("click", closeFilters);
+  }
+  function closeFilters() {
+    $(".GpcMenuWrapper").slideUp();
+    $(".toggleFilters").removeClass("selected");
+    setTimeout(function () {
+      $(".toggleFilters").bind("click", openFilters).find(".openClose").unbind("click")
+    }, 250)
+  }
+});
+
+var magicTimeout = "";
+
+$(window).resize(function () {
+  if (magicTimeout != null) {
+    clearTimeout(magicTimeout);
+    magicTimeout = null;
+  }
+  magicTimeout = setTimeout(function () {
+    var $menuMobile = $(".menuMobile");
+    if ($(window).width() < 641) {
+      $menuMobile.show();
+      if (parseInt($menuMobile.css("left")) < 0) {
+        $menuMobile.css("left", -$menuMobile.outerWidth())
+      } else {
+        if ($menuMobile.is(":visible")) {
+          $(".wrap").css("left", $menuMobile.outerWidth());
+          $(".pied").css("left", $menuMobile.outerWidth());
+        }
+      }
+    } else {
+      $menuMobile.hide();
+    }
+  }, 100);
+});
+    //]]>  </script>
+</div></div></div>
+<img alt="" src="#" style="position:absolute;left:-10px;top:-10px;width:1px;height:1px;" />
+
+<script type="text/javascript">
+//<![CDATA[
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-120787761-1', 'auto');
+ga('nms.send', 'pageview');$("img[src$='.png']").ready(function() {  if ($(this).height() > 0) { $(this).ifixpng(); }});$(document.body).bind('mouseover', function() { setTimeout(function() { $("img[src$='.png']").ifixpng(); }, 10); });$(document).HighlightSelector({QueryHashKeyName : 'qa',HighlightClass : 'qaHighlight'});NmsWeightUnitEnum = {"None":0,"G":1,"Kg":2,"Lb":4,"Oz":8,"Ton":16}; NmsLengthUnitEnum = {"None":0,"Cm":1,"M":2,"Km":4,"Ft":8,"In":16,"Yd":32};$(document).ready(function(){});//]]>
+</script>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </form>
     
