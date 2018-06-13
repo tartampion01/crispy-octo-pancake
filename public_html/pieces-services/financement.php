@@ -2,7 +2,7 @@
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
-        <div class="content">
+        <div class="content search-result">
             <div class="shrink">
                 <div class="titrepage">
                     <h1>FINANCEMENT</h1>

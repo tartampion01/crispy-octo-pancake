@@ -189,7 +189,7 @@ function fetchRecords(field, value, customCriteria, resetPage) {
             
             // Scroll page to top of search results
             $('html, body').animate({
-                scrollTop: $(".titrePage").offset().top
+                scrollTop: $(".GpcMenuWrapper").offset().top
             }, 750);
 
             // Hide loading spinner

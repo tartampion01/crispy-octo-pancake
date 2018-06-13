@@ -4,7 +4,7 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body">
     <form role="form" method="POST" action="/page1.php">
-    <div class="content" style="height: 80%">
+    <div class="content search-result" style="height: 80%">
         <div class="shrink">
             <div class="titrePage">
                 <h1><span>Inventaire complet</span></h1>
