@@ -12,7 +12,7 @@
         <div class="recherche">
             <div class="SearchMainDiv">
                 <form role="form" method="POST" action="../search.php">
-                    <input title="Rechercher" class="SearchTextBox" placeholder="Rechercher" type="text">
+                    <input id="tbSearch" name="tbSearch" title="Rechercher" class="SearchTextBox" placeholder="Rechercher" type="text">
                     <input type="image" id="imgSearch" name="imgSearch" class="SearchImage" src="../../_assets/images/menu_images/spacer.png" alt="Rechercher" style="cursor:pointer;">
                 </form>
             </div>
