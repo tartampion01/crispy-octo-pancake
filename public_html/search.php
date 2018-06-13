@@ -5,13 +5,26 @@
         <div class="content">
             <div class="shrink">
                 <div class="titrepage">
-                    <h1>Oups!</h1>
+                    <h1><?php echo $NOMPAGE; ?></h1>
                 </div>
                 <div class="contenu">
                     <div class="contenu2">
                         <p></p>
-                        <h2>La page demandée n'a pas été trouvée</h2>
-                        <h4>Cliquez ici pour retourner à la page d'<a href="<?php echo RD_PageLink::getHref(folder::Root,page::Accueil) ?>" class="rank1" target="_self">accueil</a></h4>
+                        <?php 
+                            if( isset($_POST['tbSearch']))
+                            {
+                                $searchTerm = $_POST['tbSearch'];
+                                
+                                //RECHERCHE FICHIERS
+                                foreach( RD_Utils::GetSearchFiles() as $file )
+                                {
+                                    echo $file . "</br>";
+                                }
+                            }
+                        ?>
+                        <h2></h2>
+                        <p></p>
+                        <p></p>
                         <p></p>
                     </div>
                 </div>
