@@ -151,9 +151,11 @@ class RD_Camion{
         $this->essieuArriere = $r['rearaxle'];
         $this->suspensionArriere = $r['rearsuspension'];
         $this->transmission = $r['transtype'];
-        $this->moteur = $r['engine'] == 0;        
+        $this->moteur = $r['engine'] == 0;
         $this->hp = $r['hp'];
         $this->config = $r['config'];
+        $this->color = $r['color'];
+        $this->equipment = $r['equipment'];
 
         $this->beauTitre = $this->marque . "&nbsp;-&nbsp;" . $this->modele;
         if( $this->config != "-" )
@@ -196,7 +198,16 @@ class RD_Camion{
         $this->essieuArriere = $r['rearaxle'];
         $this->suspensionArriere = $r['rearsuspension'];
         $this->transmission = $r['transtype'];
-        $this->moteur = $r['engine'] == 0;        
+        $this->moteur = $r['engine'] == 0;
+        $this->ratio_ar = $r['ratio_ar'];
+        $this->pneu_ar_dim = $r['pneu_ar_dim'];
+        $this->pneu_av_dim = $r['pneu_av_dim'];
+        $this->freins = $r['freins'];
+        $this->reservoirs = $r['reservoirs'];
+        $this->couleur_in = $r['couleur_in'];
+        $this->couleur_ex = $r['couleur_ex'];
+        $this->equipements = $r['equipements'];
+        $this->equipements2 = $r['equipements2'];
         $this->hp = $r['hp'];
         $this->config = $r['config'];
 
@@ -221,8 +232,13 @@ class RD_Camion{
 
         if(mysqli_num_rows($result) > 0){
             while($row = mysqli_fetch_assoc($result)) {
-                //array_push($this->pictures, urldecode(base64_decode($row['base64_picture'])));
-                array_push($this->pictures, $row['base64_picture']);
+                if( $row['base64_picture'] != "" )
+                    array_push($this->pictures, $row['base64_picture']);
+                else
+                {
+                    $this->HAS_picures = 0;
+                    array_push($this->pictures, "../../_assets/images/camions/noimage.png");
+                }
             }
         }
         else
@@ -242,7 +258,13 @@ class RD_Camion{
 
         if(mysqli_num_rows($result) > 0){
             while($row = mysqli_fetch_assoc($result)) {
-                array_push($this->pictures, $row['base64_picture']);
+                if( $row['base64_picture'] != "" )
+                    array_push($this->pictures, $row['base64_picture']);
+                else
+                {
+                    $this->HAS_picures = 0;
+                    array_push($this->pictures, "../../_assets/images/camions/noimage.png");
+                }
             }
         }
         else
@@ -418,7 +440,7 @@ class RD_Camion{
     
     function getPictures($id)
     {
-        $query = "SELECT base64_picture FROM inv_pictures WHERE product_id=$id ORDER BY intorder LIMIT 1;";
+        $query = "SELECT base64_picture FROM inv_pictures WHERE product_id=$id AND base64_picture <> '' ORDER BY intorder LIMIT 1;";
         //echo $query;
         // prepare query statement
         $stmt = $this->conn->prepare($query);
