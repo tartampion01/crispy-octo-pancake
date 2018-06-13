@@ -4180,7 +4180,7 @@ div {  }
 /* Loading overlay - added by JP */
 .loading-overlay {
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   height: 2em;
   width: 2em;
   overflow: show;
