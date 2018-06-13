@@ -154,6 +154,60 @@ class RD_Utils
         mysqli_query($conn, "UPDATE bon_travail_succursales SET no_bon=$nouveauBon WHERE nom_succ_base64='$succursale'");
 
         return $noBon;
-    }    
+    }
+    
+    public static function GetSearchFiles()
+    {
+        $filesToSearch = array();
+        
+        $filesToSearch[] = "a-propos.php";
+        $filesToSearch[] = "accueil.php";
+        $filesToSearch[] = "camions-occasion.php";
+        $filesToSearch[] = "carrieres.php";
+        $filesToSearch[] = "fournisseurs.php";
+        $filesToSearch[] = "location-camions.php";
+        $filesToSearch[] = "mentions-legales.php";
+        $filesToSearch[] = "nous-joindre.php";
+        $filesToSearch[] = "obtenir-prix.php";
+        $filesToSearch[] = "page1.php";
+        $filesToSearch[] = "plan-site.php";
+        $filesToSearch[] = "postuler.php";
+        $filesToSearch[] = "promotions-nouvelles.php";
+        $filesToSearch[] = "urgence-routiere-24h.php";
+        $filesToSearch[] = "camions-neufs/camions-lourds-neufs-international.php";
+        $filesToSearch[] = "camions-neufs/inventaire-camion-neufs.php";
+        $filesToSearch[] = "camions-neufs/isuzu.php";
+        $filesToSearch[] = "camions-neufs/ottawa-kalmar.php";
+        $filesToSearch[] = "nous-joindre/camions-inter-anjou.php";
+        $filesToSearch[] = "nous-joindre/camions-international-elite.php";
+        $filesToSearch[] = "nous-joindre/camions-isuzu.php";
+        $filesToSearch[] = "nous-joindre/centre-camion-beaudoin.php";
+        $filesToSearch[] = "nous-joindre/centre-routier-1994.php";
+        $filesToSearch[] = "nous-joindre/charest-international.php";
+        $filesToSearch[] = "nous-joindre/garage-charest-freres.php";
+        $filesToSearch[] = "nous-joindre/garage-robert.php";
+        $filesToSearch[] = "nous-joindre/inter-boucherville.php";
+        $filesToSearch[] = "nous-joindre/inter-lanaudiere.php";
+        $filesToSearch[] = "nous-joindre/le-centre-camion-amiante.php";
+        $filesToSearch[] = "nous-joindre/le-centre-camion-beauce.php";
+        $filesToSearch[] = "nous-joindre/les-camions-beaudoin.php";
+        $filesToSearch[] = "pieces-services/apres-vente.php";
+        $filesToSearch[] = "pieces-services/financement.php";
+        $filesToSearch[] = "pieces-services/pieces-accessoires.php";
+        $filesToSearch[] = "pieces-services/service-routier.php";
+        $filesToSearch[] = "promotions-nouvelles/concours.php";
+        $filesToSearch[] = "promotions-nouvelles/nouvelles.php";
+        $filesToSearch[] = "promotions-nouvelles/promo-pieces.php";
+        $filesToSearch[] = "promotions-nouvelles/promotions.php";
+        $filesToSearch[] = "remorques-neuves/inventaire-remorques.php";
+        $filesToSearch[] = "remorques-neuves/remorques-di-mond.php";
+        $filesToSearch[] = "remorques-neuves/remorques-doepker.php";
+        $filesToSearch[] = "vehicules-utilitaires/chargeuses-yanmar-v3-v4.php";
+        $filesToSearch[] = "vehicules-utilitaires/mini-excavatrices.php";
+        $filesToSearch[] = "vehicules-utilitaires/skid-steer-chargeur-chenilles.php";
+        $filesToSearch[] = "vehicules-utilitaires/transporteurs-tout-terrain.php";
+
+        return $filesToSearch;
+    }
 }
 ?>
