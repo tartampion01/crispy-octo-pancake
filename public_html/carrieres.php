@@ -28,9 +28,8 @@
                                         foreach($emplois as $emploi){?>
                                             <label>Titre :</label>
                                             <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres). '?emp=' . $emploi->lienEncode; ?>">
-                                                <?php echo $emploi->titre;?>
-                                            </a>
-                                            <?php if($succ == "Toutes"){ echo "(".$emploi->succursale.")";}?></br>
+                                                <?php echo $emploi->titre;?></a>
+                                            <?php if($succ == "Toutes"){ echo "&nbsp;(".$emploi->succursale.")";}?></br>
                                     <?php }
                                     }
                                     else {?>
