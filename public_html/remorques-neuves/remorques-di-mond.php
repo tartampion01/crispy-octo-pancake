@@ -8,15 +8,15 @@
                     <h1>Remorques Di-Mond neuves à vendre</h1>
                 </div>
                 <div class="contenu contenu2">
-                    <div class="">
+                    <div>
                         Que vous transportiez de la marchandise standard ou de lourdes charges, les remorques fermées Di-Mond fabriquées sur mesure sont à la hauteur du défi.
                     </div>
                     <br/>
                     <div>
                         <div class="btnToggle">
-                            <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="javascript:void(0);" linkcollapsegroup="" targetid="" class="open">Informations supplémentaires</a>
+                            <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
                         </div>
-                        <div class="showedZone">
+                        <div id="divToggle" class="showedZone" style="display:none;">
                             <span>
                                 <h2>Remorques fermées robustes en acier galvanisé</h2>
                                 <p>Contrairement à la concurrence, les remorques fermées Di-Mond reçoivent un traitement d'acier galvanisé complet plutôt qu'un simple traitement de peinture ou ciblé à certaines pièces. Ce procédé vous permet de prévenir la rouille et la corrosion, tout en prolongeant la durée de vie de la remorque : vous pouvez l'utiliser pendant 10 ans sans problème.</p>
