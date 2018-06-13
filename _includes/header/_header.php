@@ -15,6 +15,7 @@
     </title>
 
     <script type='text/javascript' src='../../_assets/js/jquery-3.2.1.js'></script>
+    <script type="text/javascript" src="../../_assets/js/jquery-bxslider.js" ></script>
     <script type='text/javascript' src='../../_assets/js/ajax.js'></script>
     <script type='text/javascript' src='../../_assets/js/rotator.js'></script>
     <script type='text/javascript' src='../../_assets/js/utilities.js'></script>
@@ -32,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_assets/css/default/defaultGpcframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/HighLightSelector.css" media="All" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/font-awesome.css" />
     
     <link rel='canonical' href='<?PHP echo $NOMPAGE ?>' />
     <meta content="<?PHP RD_Header::getMetaContent($NOMPAGE); ?>" name="description" />
