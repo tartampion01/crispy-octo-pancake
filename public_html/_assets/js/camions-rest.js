@@ -227,6 +227,147 @@ function fetchRecords(field, value, customCriteria, resetPage) {
     });
 }
 
+function fetchUsedRecords(field, value, customCriteria, resetPage) {
+    
+    // Show loading spinner
+    $('.loading-overlay').show();
+
+    var currentPage = 1;
+    if(typeof $pagination !== 'undefined' && resetPage == false)
+        currentPage = $pagination.twbsPagination('getCurrentPage');
+    else
+        currentPage = 1;
+    var limitPerPage = $('.GpcPagerCountSelector').children('div.selected').html();
+
+    // Get sortBy value
+    var sortBy = $('.search-sorting option:selected').val();
+    
+    var params = {
+        'field' : field,
+        'value' : value,
+        'customCriteria' : customCriteria,
+        'sortBy' : sortBy,
+        'currentPage' : currentPage,
+        'limitPerPage' : limitPerPage,
+        'arrayFilters' : getSearchTerms()
+    };
+
+    $.ajax({
+        url: 'http://reseaudynamique.com/api/readUsed.php',
+        type: "GET",
+        data: 'params='+JSON.stringify(params),
+        dataType: 'json',
+        async: true,
+        success: function(data){
+
+            if(data.records != null) {
+                if(data.records.length > 0) {
+
+                    // Empty out the div that will hold the generated content
+                    $(".results-container").empty();
+                    // Call the tmpl function, pass in the data and have it append to resultsTemplate
+                    $("#resultsTemplate").tmpl( data.records ).appendTo(".results-container");
+
+                    // Get total page count
+                    var totalPages = Math.ceil(data.countRows / limitPerPage);
+                    
+                    // Set total records count
+                    $('.GpcPagedResultTotalCount').html(data.countRows);
+                    
+                    // Set page results current count
+                    var resultsRange = '';
+                    if(currentPage == 1)
+                        resultsRange = '1 - ' + limitPerPage;
+                    else if(currentPage == totalPages)
+                        resultsRange = parseInt(limitPerPage * currentPage - limitPerPage + 1) + ' - ' + parseInt(data.countRows);
+                    else
+                        resultsRange = parseInt(limitPerPage * currentPage - limitPerPage + 1) + ' - ' + parseInt(limitPerPage * currentPage);
+                    
+                    $('.GpcPagedResultCurrentCount').html(resultsRange);
+                    
+                    // Set paginator control
+                    $pagination = $('.pagination')
+                    $pagination.twbsPagination('destroy');
+                    $pagination.twbsPagination($.extend({}, {
+                        startPage: currentPage,
+                        totalPages: totalPages,
+                        visiblePages: 5,
+                        first: '&lt;&lt;',
+                        prev: 'Précédent',
+                        next: 'Suivant',
+                        last: '&gt;&gt;',
+                        initiateStartPageClick: false,
+                        onPageClick: function (event, page) {
+                            
+                            fetchRecords(field, value, customCriteria, false);
+                        }
+                    }));
+                    
+                    // Reset filter links count number
+                    $(".GpcMenuCategory").each(function() {
+
+                        var countField = $(this).find('.filter-link:first').data('field');
+                        var countCustomCriteria = $(this).find('.filter-link:first').data('custom-criteria');
+                        var countParams = {
+                            'field' : countField,
+                            'value' : value,
+                            'customCriteria' : countCustomCriteria,
+                            'searchType' : field,
+                            'arrayFilters' : getSearchTerms()
+                        };
+
+                        $.ajax({
+                            url: 'http://reseaudynamique.com/api/read-count-filterUsed.php',
+                            type: "GET",
+                            data: 'params='+JSON.stringify(countParams),
+                            dataType: 'json',
+                            async: false,
+                            success: function(dataCount){
+
+                                if(Object.keys(dataCount).length) {
+
+                                    //console.log(dataCount);
+                                    // Update every filter links count
+                                    $('.GpcMenuCategory').find('.filter-link[data-field="'+countField+'"]').each(function(index) {
+
+                                        $(this).hide();
+
+                                        for(i=0; i<dataCount.length; i++) {
+                                            //console.log($(this).attr('data-value') + ' = ' + $(this).attr('data-value'));
+                                            if (Object.values(dataCount[i]).indexOf($(this).attr('data-value').replace('%2B', '+')) > -1) {
+
+                                                $(this).find('.GpcMenuItemCount').html('(' + dataCount[i].count + ')');
+                                                $(this).show();
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    });
+                }
+                else {
+                    $('.results-container').html('AUCUN PRODUIT');
+                }
+            }
+            else {
+                $('.results-container').html(data.message);
+            }
+            
+            // Scroll page to top of search results
+            /*$('html, body').animate({
+                scrollTop: $(".GpcMenuWrapper").offset().top
+            }, 750);*/
+
+            // Hide loading spinner
+            $('.loading-overlay').hide();
+        },
+        error: function(xhr, status, error) {
+            $('.results-container').html('ERREUR DU SERVEUR');
+        }
+    });
+}
+
 function getSearchTerms() {
     
     var where = [];
