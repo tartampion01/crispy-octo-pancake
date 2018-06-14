@@ -195,7 +195,7 @@ class RD_Utils
         $filesToSearch[] = "pieces-services/apres-vente.php";
         $filesToSearch[] = "pieces-services/financement.php";
         $filesToSearch[] = "pieces-services/pieces-accessoires.php";
-        $filesToSearch[] = "pieces-services/service-routier.php";
+        //$filesToSearch[] = "pieces-services/service-routier.php";
         $filesToSearch[] = "promotions-nouvelles/concours.php";
         $filesToSearch[] = "promotions-nouvelles/nouvelles.php";
         $filesToSearch[] = "promotions-nouvelles/promo-pieces.php";
