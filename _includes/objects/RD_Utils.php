@@ -60,19 +60,20 @@ class RD_Utils
     public static function GetDropDownSuccursalesCarrieres($succursaleToSelect)
     {
         $ddlDebut = "<select name='ddlSuccursales' id='ddlSuccursales'" . $succursaleToSelect . " class='dropDownBonTravailDemandePieces' onchange='form.submit();'>";
-        $options = "<option value='Toutes'>Toutes les succursales</option>";
-        $options .= "<option value='Joliette'>Camions Inter-Lanaudière</option>";
-        $options .= "<option value='Anjou'>Camions Inter-Anjou</option>";
-        $options .= "<option value='Boucherville'>Inter-Boucherville</option>";
-        $options .= "<option value='Drummondville'>Les Camions Beaudoin</option>";
-        $options .= "<option value='St-Hyacinthe'>Centre du Camion Beaudoin</option>";
-        $options .= "<option value='Victoriaville'>Charest International</option>";
-        $options .= "<option value='Trois-Rivières'>Garage Charest et Frères</option>";
-        $options .= "<option value='Thetford Mines'>Le Centre du Camion (Amiante)</option>";
-        $options .= "<option value='St-Georges'>Le Centre du Camion (Beauce)</option>";
-        $options .= "<option value='Rivière-du-Loup'>Le Centre Routier 1994</option>";
-        $options .= "<option value='Québec'>Camions International Élite</option>";
-        $options .= "<option value='Shawinigan'>Garage Robert</option>";        
+        $options = "<option value='Toutes'>Toutes les succursales</option>";        
+        $options .= "<option value='Anjou'>Anjou - Camions Inter-Anjou</option>";
+        $options .= "<option value='Boucherville'>Boucherville - Inter-Boucherville</option>";
+        $options .= "<option value='Drummondville'>Drummondville - Les Camions Beaudoin</option>";
+        $options .= "<option value='Joliette'>Joliette - Camions Inter-Lanaudière</option>";
+        $options .= "<option value='Québec'>Québec - Camions International Élite</option>";
+        $options .= "<option value='Rivière-du-Loup'>Rivière-du-Loup - Le Centre Routier 1994</option>";
+        $options .= "<option value='St-Hyacinthe'>St-Hyacinthe - Centre du Camion Beaudoin</option>";
+        $options .= "<option value='St-Georges'>St-Georges - Le Centre du Camion (Beauce)</option>";
+        $options .= "<option value='Shawinigan'>Shawinigan - Garage Robert</option>";
+        $options .= "<option value='Trois-Rivières'>Trois-Rivières - Garage Charest et Frères</option>";
+        $options .= "<option value='Thetford Mines'>Thetford Mines - Le Centre du Camion (Amiante)</option>";
+        $options .= "<option value='Victoriaville'>Victoriaville - Charest International</option>";
+        
         $ddlFin = "</select>";
 
         $strIndex = strrpos( $options , "value='" . $succursaleToSelect );
