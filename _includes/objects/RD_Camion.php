@@ -341,14 +341,17 @@ class RD_Camion{
         if(empty($params->field) && empty($params->value)) {
             // select all query
             $query = "SELECT * FROM trucks ORDER BY marque, modele LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
-            //echo $query;
+            //echo "#1". $query;
         }
         else {
             
             $where = '';
-            
-            for($i=0; $i<count($params->arrayFilters); $i++) {
-                $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '" AND ';
+            $count = count($params->arrayFilters);
+            for($i=0; $i<$count; $i++) {
+                if($count == 1)
+                    $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '"';
+                else
+                    $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '" AND ';
             }
             //die($where);
             //print_r($params->arrayFilters[0]);
@@ -356,12 +359,13 @@ class RD_Camion{
             
             if($where != '') {
                 // select filtered query
-                $query = "SELECT * FROM trucks WHERE $where $params->customCriteria ORDER BY marque, Model ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
-                //echo $query;
+                $query = "SELECT * FROM trucks WHERE $where $params->customCriteria ORDER BY marque, modele ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+                //echo "#2". $query;
             }
             else {
                 // select filtered query
                 $query = "SELECT * FROM trucks WHERE $params->field = '$params->value' AND $params->customCriteria ORDER BY marque, modele ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+                //echo "#3". $query;
             }
         }
  
@@ -436,11 +440,11 @@ class RD_Camion{
             
             if($where != '') {
                 // select all query
-                $queryCount = "SELECT * FROM trucks WHERE $where $params->customCriteria ORDER BY marque, Model ".$params->sortBy;
+                $queryCount = "SELECT * FROM trucks WHERE $where $params->customCriteria ORDER BY marque, modele ".$params->sortBy;
             }
             else {
                 // select all query
-                $queryCount = "SELECT * FROM trucks WHERE $params->customCriteria ORDER BY marque, Model ".$params->sortBy;
+                $queryCount = "SELECT * FROM trucks ORDER BY marque, modele ".$params->sortBy;
             }
         }
         else {
@@ -453,11 +457,11 @@ class RD_Camion{
             
             if($where != '') {
                 // select filtered query
-                $queryCount = "SELECT * FROM trucks WHERE $where $params->customCriteria ORDER BY marque, Model ".$params->sortBy;
+                $queryCount = "SELECT * FROM trucks WHERE $where $params->customCriteria ORDER BY marque, modele ".$params->sortBy;
             }
             else {
                 // select filtered query
-                $queryCount = "SELECT * FROM trucks WHERE $params->field = '$params->value' AND $params->customCriteria ORDER BY marque, Model ".$params->sortBy;
+                $queryCount = "SELECT * FROM trucks WHERE $params->field = '$params->value' AND $params->customCriteria ORDER BY marque, modele ".$params->sortBy;
             }
         }
         //echo $queryCount;
@@ -573,8 +577,8 @@ class RD_Camion{
             //echo 'QUERY #4'.$query;
         }
         if($params->searchType == '') {
-            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM trucks WHERE $where $params->customCriteria GROUP BY $params->field ORDER BY COUNT DESC";
-            //echo 'QUERY #4'.$query;
+            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM trucks GROUP BY $params->field ORDER BY COUNT DESC";
+            //echo 'QUERY #5'.$query;
         }
         //echo $query;
         // prepare query statement
