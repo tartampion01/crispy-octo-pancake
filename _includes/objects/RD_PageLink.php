@@ -81,11 +81,12 @@ interface page
     const EXTERNAL_nextPart = 701;
     const EXTERNAL_fleetrite = 702;
     const EXTERNAL_detailsNEW = 703;
-    const EXTERNAL_detailsUSED = 708;
-    const EXTERNAL_boutiqueEnLigne = 704;
-    const EXTERNAL_DiMond = 705;
-    const EXTERNAL_Doepker = 706;
-    const EXTERNAL_OffreEmploi = 707;
+    const EXTERNAL_detailsUSED = 704;
+    const EXTERNAL_boutiqueEnLigne = 705;
+    const EXTERNAL_DiMond = 706;
+    const EXTERNAL_Doepker = 707;
+    const EXTERNAL_OffreEmploi = 708;
+    const EXTERNAL_INTERNATIONAL = 709;
 }
 
 class RD_PageLink
@@ -178,7 +179,7 @@ class RD_PageLink
             case page::EXTERNAL_DiMond: $_page = "http://www.di-mond.com/index2.html";$_wholeURL = true;break;
             case page::EXTERNAL_Doepker: $_page = "http://www.doepker.com/";$_wholeURL = true;break;
             case page::EXTERNAL_OffreEmploi: $_page = "http://reseaudynamique.com/carrieres.php";$_wholeURL = true;break;
-            
+            case page::EXTERNAL_INTERNATIONAL: $_page = "http://ca.internationaltrucks.com/";$_wholeURL = true;break;
             default: $_page = "accueil";break;
             //case page:: $_page = "";break;
         }
@@ -253,12 +254,75 @@ class RD_Header{
         echo $metaContent == "" ? "Réseau Dynamique est concessionnaire panquébécois de camions International et détaillant de camions et véhicules routiers Ottawa Kalmar, Isuzu et Yanmar." : $metaContent;
     }
     
+    public static function getPageMetaForSearch($pageName)
+    {   
+        $metaContent = "";
+        switch($pageName){
+            case "a-propos.php":$metaContent = "Le Réseau Dynamique est le plus important réseau de concessionnaires International au Québec. Plus de 19 points de service répartis sur le territoire québécois.";break;
+            case "accueil.php":$metaContent = "Réseau Dynamique est concessionnaire panquébécois de camions International et détaillant de camions et véhicules routiers Ottawa Kalmar, Isuzu et Yanmar.";break;
+            case "promotions.php":$metaContent = "Profitez de promotions avantageuses à l&#39;achat d&#39;un ou plusieurs camions lourds International chez votre concessionnaire Réseau Dynamique.";break;
+            case "nous-joindre.php":$metaContent = "Trouvez les coordonnées des succursales Réseau Dynamique au Québec.";break;
+            case "urgence-routiere-24h.php":$metaContent = "Pour toute urgence sur la route, contactez la succursale la plus près de votre emplacement et profitez d&#39;une assistance routière ou un remorquage 24 h.";break;
+            case "camions-lourds-neufs-international.php":$metaContent = "Trouvez un grand inventaire de camions lourds International neufs dans les divisions de Réseau Dynamique. Plus de 11 concessionnaires partout au Québec.";break;
+            case "inventaire-camion-neufs.php":$metaContent = "Réseau Dynamique possède une grande flotte de camions neufs International, Ottawa Kalmar et Isuzu. Consultez notre inventaire en ligne pour voir nos modèles.";break;
+            case "isuzu.php":$metaContent = "Présents à travers le Québec, les concessionnaires de Réseau Dynamique sont dépositaires de la gamme complète de camions Isuzu.";break;
+            case "ottawa-kalmar.php.php":$metaContent = "Trouvez un grand inventaire de camions Ottawa Kalmar neufs dans les divisions de Réseau Dynamique. Plus de 11 concessionnaires présents partout au Québec.";break;
+            case "les-camions-beaudoin.php":$metaContent = "Rendez-vous à la succursale Les Camions Beaudoin pour un vaste choix de camions International et l&#39;entretien ou la réparation de votre camion lourd.";break;
+            case "inter-lanaudiere.php":$metaContent = "Rendez-vous à la succursale Inter-Lanaudière pour un vaste choix de camions International et l&#39;entretien ou la réparation de votre camion lourd.";break;
+            case "camions-inter-anjou.php":$metaContent = "Inter-Anjou à Anjou offre un vaste choix de camions International en plus d&#39;offrir l&#39;entretien et la réparation de votre camion lourd.";break;
+            case "inter-boucherville.php":$metaContent = "Rendez-vous à la succursale Inter-Boucherville pour un vaste choix de camions International et l&#39;entretien ou la réparation de votre camion lourd.";break;
+            case "centre-camion-beaudoin.php":$metaContent = "Rendez-vous à la succursale Centre du Camion Beaudoin ou pour un vaste choix de camions International et l&#39;entretien ou la réparation de votre camion lourd.";break;
+            case "charest-international.php":$metaContent = "Rendez-vous à la succursale Charest International pour un vaste choix de camions International et l&#39;entretien ou la réparation de votre camion lourd.";break;
+            case "garage-charest-freres.php":$metaContent = "Garage Charest et Frères à Trois-Rivières offre un vaste choix de camions International en plus d&#39;offrir l&#39;entretien et la réparation de votre camion lourd.";break;
+            case "le-centre-camion-amiante.php":$metaContent = "Le Centre du Camion à Thetford Mines offre un vaste choix de camions International en plus d&#39;offrir l&#39;entretien et la réparation de votre camion lourd.";break;
+            case "le-centre-camion-beauce.php":$metaContent = "Le Centre du Camion de St-Georges offre un vaste choix de camions International en plus d&#39;offrir l&#39;entretien et la réparation de votre camion lourd.";break;
+            case "centre-routier-1994.php":$metaContent = "Le Centre Routier 1994 à Rivière-du-Loup offre un vaste choix de camions International en plus d&#39;offrir l&#39;entretien et la réparation de votre camion lourd.";break;
+            case "camions-international-elite.php":$metaContent = "Camions International Élite à Québec offre un vaste choix de camions International en plus d&#39;offrir l&#39;entretien et la réparation de votre camion lourd.";break;
+            case "garage-robert.php":$metaContent = "Rendez-vous à la succursale Les Camions Beaudoin pour un vaste choix de camions International et l&#39;entretien ou la réparation de votre camion lourd.";break;
+            case "camions-isuzu.php":$metaContent = "";break;
+            case "confirmation-abonnement.php":$metaContent = "Merci de vous être abonné à NextPart. Nous espérons que votre expérience avec Réseau Dynamique en soit bonifiée!";break;
+            case "abonnement-nextpart.php":$metaContent="Inscrivez-vous au service NextPart.";break;
+            case "service-routier.php":$metaContent = "Économisez temps et coûts de remorquage grâce au service routier pour camions lourds de Réseau Dynamique. Service disponible partout au Québec.";break;
+            case "pieces-accessoires.php":$metaContent = "Réseau Dynamique offre un large inventaire de pièces et accessoires pour les camions de toutes tailles et de toutes marques.";break;
+            case "financement.php":$metaContent = "Pour un camion neuf ou d&#39;occasion ou encore un lot de camions, vous trouverez satisfaction parmi notre gamme de produits de financement concurrentiels.";break;
+            case "apres-vente.php":$metaContent = "Profitez d&#39;un service après-vente incomparable sur votre camion lourd avec Réseau Dynamique grâce à un réseau composé de 19 points de service au Québec.";break;
+            case "promotions.php":$metaContent = "Profitez de promotions avantageuses à l&#39;achat d&#39;un ou plusieurs camions lourds International chez votre concessionnaire Réseau Dynamique.";break;
+            //case "promo-pieces.php":$metaContent = "";break;
+            case "nouvelles.php":$metaContent = "Consultez les nouvelles et découvrez les événements à venir du Réseau Dynamique.";break;
+            //case "concours.php":$metaContent = "";break;
+            case "remorques-doepker.php":$metaContent = "Découvrez nos modèles haute performance de remorques agricoles, ponts plats, remorques-citernes, remorques pour bois d&#39;oeuvre et remorques à gravier Doepker.";break;
+            case "remorques-di-mond.php":$metaContent = "";break;
+            case "inventaire-remorques.php":$metaContent = "Réseau Dynamique possède une grande flotte de remorques et ponts plats. Consultez notre inventaire en ligne pour voir nos modèles.";break;
+            case "transporteurs-tout-terrain.php":$metaContent = "Offrez-vous des performances supérieures et respectez l&#39;environnement avec les transporteurs tout-terrain de Yanmar. Découvrez les modèles maintenant!";break;
+            case "skid-steer-chargeur-chenilles.php":$metaContent = "Découvrez la polyvalence et la puissance des Skeed Steer et chargeur à Chenilles Yanmar disponibles chez Réseau Dynamique dès maintenant!";break;
+            case "mini-excavatrices.php":$metaContent = "Les mini-excavatrices de Yanmar sont synonymes de puissance, durabilité et efficacité. Retrouvez-les chez votre dépositaire Réseau Dynamique dès maintenant.";break;
+            case "chargeuses-yanmar-v3-v4.php":$metaContent = "Découvrez dès maintenant les avantages des chargeuses V3 et V4 de Yanmar, les véhicules utilitaires idéaux pour vos travaux extérieurs et intérieurs.";break;
+            case "fournisseurs.php":$metaContent = "Le Réseau Dynamique est le plus important réseau de concessionnaires International au Québec. Plus de 19 points de service répartis sur le territoire québécois.";break;
+            case "plan-site.php":$metaContent = "Consultez le plan du site pour en savoir plus sur les produits et services de Réseau Dynamique.";break;
+            case "mentions-legales.php":$metaContent = "Pour toute information d’ordre légal concernant le site Web de Réseau Dynamique, consultez les mentions légales.";break;
+            case "location-camions.php":$metaContent = "Réseau Dynamique offre un service de location de camions lourds International et Ottawa Kalmar, neufs et usagés louables à court ou à long terme.";break;
+            case "demande-pieces.php":$metaContent = "";break;
+            case "demande-bon-travail.php":$metaContent = "";break;
+            case "camions-occasion.php":$metaContent = "Trouvez un grand inventaire de camions lourds d&#39;occasion dans les divisions de Réseau Dynamique. Plus de 11 concessionnaires présents partout au Québec.";break;
+            //case "demande-information.php":$title = "";break;
+            //case "planifier-essai-routier.php":$title = "";break;
+            //case "obtenir-prix.php":$title = "";break;
+            //case "demande-financement.php":$title = "";break;
+            //case "evaluer-echange.php":$title = "";break;
+            //case "":$metaContent = "";
+            default:"Le Réseau Dynamique est le plus important réseau de concessionnaires International au Québec. Plus de 19 points de service répartis sur le territoire québécois.";break;
+        }
+        
+        return $metaContent == "" ? "Réseau Dynamique est concessionnaire panquébécois de camions International et détaillant de camions et véhicules routiers Ottawa Kalmar, Isuzu et Yanmar." : $metaContent;
+    }
+    
     /*
      * public static function getPageTitle($pageName)
      */    
     public static function getPageTitle($pageName)
     {   
         $title = "";
+        
         switch($pageName){
             case "a-propos.php":$title = "À Propos Réseau Camion International | Réseau Dynamique";break;
             case "accueil.php":$title = "";break;
@@ -289,7 +353,7 @@ class RD_Header{
             case "apres-vente.php":$title = "Service Après-Vente Camions Lourds | Réseau Dynamique";break;
             case "promotions.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";break;
             case "promo-pieces.php":$title = "Promo pièces | Réseau Dynamique";break;
-            case "nouvelles.php":$title = "ouvelles et Événements | Réseau Dynamique";break;
+            case "nouvelles.php":$title = "Nouvelles et Événements | Réseau Dynamique";break;
             case "concours.php":$title = "Concours | Réseau Dynamique";break;
             case "remorques-doepker.php":$title = "Remorques Doepker | Réseau Dynamique";break;
             case "remorques-di-mond.php":$title = "Remorques Di-Mond | Réseau Dynamique";break;
@@ -316,6 +380,69 @@ class RD_Header{
         }
         
         echo $title == "" ? "Réseau Dynamique | Concessionnaire Camions International" : $title;
+    }
+    
+    public static function getPageTitleForSearch($pageName)
+    {   
+        $title = "";
+        
+        switch($pageName){
+            case "a-propos.php":$title = "À Propos Réseau Camion International | Réseau Dynamique";break;
+            case "accueil.php":$title = "Accueil | Réseau Dynamique";break;
+            case "nous-joindre.php":$title = "Nous joindre | Réseau Dynamique";break;
+            case "urgence-routiere-24h.php":$title = "Urgence Routière 24 h Camions Lourds Canada et États-Unis";break;
+            case "camions-lourds-neufs-international.php":$title = "Camions Neufs International | Réseau Dynamqiue";break;
+            case "inventaire-camion-neufs.php":$title = "Camion neufs | Réseau Dynamique";break;
+            case "isuzu.php":$title = "Camions Neufs Isuzu | Réseau Dynamique";break;
+            case "ottawa-kalmar.php.php":$title = "Camions Lourds Neufs Ottawa Kalmar | Réseau Dynamique";break;
+            case "les-camions-beaudoin.php":$title = "Camions International Saint-Hyacinthe | Les Camions Beaudoin";break;
+            case "inter-lanaudiere.php":$title = "Camions International Joliette | Inter-Launaudiere";break;
+            case "camions-inter-anjou.php":$title = "Camions International Anjou | Inter-Anjou";break;
+            case "inter-boucherville.php":$title = "Camions International Boucherville | Inter-Boucherville";break;
+            case "centre-camion-beaudoin.php":$title = "Camions International Drummondville | Centre du Camion Beaudoin";break;
+            case "charest-international.php":$title = "Camions International Victoriaville | Charest International";break;
+            case "garage-charest-freres.php":$title = "Camions International Trois-Rivières | Garage Charest et Frères";break;
+            case "le-centre-camion-amiante.php":$title = "Camions International Thetford Mines | Le Centre du camion";break;
+            case "le-centre-camion-beauce.php":$title = "Camions International St-Georges | Le Centre du Camion";break;
+            case "centre-routier-1994.php":$title = "Camions International Rivière-du-Loup | Centre Routier 1994";break;
+            case "camions-international-elite.php":$title ="Camions International Québec | Camions International Élite";break; 
+            case "garage-robert.php":$title = "Garage Robert Shawinigan | Réseau Dynamique";break;
+            case "camions-isuzu.php":$title = "Camions Isuzu";break;
+            case "confirmation-abonnement.php":$title = "";break;
+            case "abonnement-nextpart.php":$title = "Inscription à NextPart | Réseau Dynamique";break;
+            //case "service-routier.php":$title = "Service Routier Mécanique Camion Lourd | Réseau Dynamique";break;
+            case "pieces-accessoires.php":$title = "Pièces et Accessoires pour Camions | Réseau Dynamique";break;
+            case "financement.php":$title = "Financement Camions Lourds Neufs & Usagés | Réseau Dynamique";break;
+            case "apres-vente.php":$title = "Service Après-Vente Camions Lourds | Réseau Dynamique";break;
+            case "promotions.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";break;
+            case "promo-pieces.php":$title = "Promo pièces | Réseau Dynamique";break;
+            case "nouvelles.php":$title = "Nouvelles et Événements | Réseau Dynamique";break;
+            case "concours.php":$title = "Concours | Réseau Dynamique";break;
+            case "remorques-doepker.php":$title = "Remorques Doepker | Réseau Dynamique";break;
+            case "remorques-di-mond.php":$title = "Remorques Di-Mond | Réseau Dynamique";break;
+            case "inventaire-remorques.php":$title = "Inventaire complet de remorques | Réseau Dynamique";break;
+            case "transporteurs-tout-terrain.php":$title = "Transporteurs Tout Terrain Yanmar | Réseau Dynamique";break;
+            case "skid-steer-chargeur-chenilles.php":$title = "Skeed Steer & Chargeur à Chenilles Yanmar | Réseau Dynamique";break;
+            case "mini-excavatrices.php":$title = "Mini-Excavatrices Yanmar | Réseau Dynamique";break;
+            case "chargeuses-yanmar-v3-v4.php":$title = "Chargeuses Yanmar V3 et V4 | Réseau Dynamique";break;
+            case "fournisseurs.php":$title = "Fournisseurs | Réseau Dynamique";break;
+            case "plan-site.php":$title = "Plan du site | Réseau Dynamique";break;
+            case "mentions-legales.php":$title = "Mentions légales | Réseau Dynamique";break;
+            case "location-camions.php":$title = "Location de Camions Lourds | Réseau Dynamique";break;
+            case "demande-pieces.php":$title = "Demande de pièces | Réseau dynamique";break;
+            case "demande-bon-travail.php":$title = "Demande de bon de travail | Réseau dynamique";break;
+            case "camions-occasion.php":$title = "Camions Lourds d'Occasion | Réseau Dynamique";break;
+            case "demande-information.php":$title = "Demande d'information | Réseau Dynamique";break;
+            case "planifier-essai-routier.php":$title = "Planifier un essai routier | Réseau Dynamique";break;
+            case "obtenir-prix.php":$title = "Obtenir un prix | Réseau Dynamique";break;
+            case "demande-financement.php":$title = "Demande de financement | Réseau Dynamique";break;
+            case "evaluer-echange.php":$title = "Évaluer mon échange | Réseau Dynamique";break;
+            case "promotions.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";
+            //case "":$title = "";break;
+            default:;
+        }
+        
+        return $title == "" ? "Réseau Dynamique | Concessionnaire Camions International" : $title;
     }
 }
 ?>
