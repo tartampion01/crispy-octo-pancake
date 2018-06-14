@@ -177,7 +177,7 @@
     <script id="resultsTemplate" type="text/x-jquery-tmpl">
 
         <div class="FacetedResultTemplate DefaultResultContainer">
-            <a href="../details.php?id=${encodeURI(btoa(id))}">
+            <a href="../details_new.php?id=${encodeURI(btoa(id))}">
                 <div class="ResultImage">                
                     <img src="${pictures[0]}" title="" alt="">
                     <div class="imgPromo" style="display: none;"></div>
