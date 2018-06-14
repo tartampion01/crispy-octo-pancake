@@ -18,11 +18,6 @@ function getSuccursales($arraySuccursale)
     return $return_succ;
 }
 
-function getExigences($emploi_id)
-{
-    
-}
-
 /**
  * @param int $id <p>inventory.id</p>
  * @param string $fieldCriteria <p>inventory.[fieldCriteria]</p>
@@ -56,5 +51,25 @@ function selectNewTrucksDisctinctCriteria($field, $customCriteria)
     }
 
     return array_combine($fieldArray, $countArray);
-                       
+}
+
+function selectUsedTrucksDisctinctCriteria($field, $customCriteria)
+{
+    global $conn;
+    //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
+    $sql = "SELECT COUNT($field) AS COUNT,$field FROM trucks GROUP BY $field ORDER BY COUNT DESC";
+//echo $sql;
+    $result = mysqli_query($conn, $sql);
+    
+    $fieldArray = array();
+    $countArray = array();
+            
+    if(mysqli_num_rows($result) > 0){
+        while($row = mysqli_fetch_assoc($result)) {
+            array_push($fieldArray, $row[$field]);
+            array_push($countArray, $row['COUNT']);
+        }
+    }
+
+    return array_combine($fieldArray, $countArray);
 }
