@@ -273,7 +273,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "Remorquage";
                 $this->remorquageInfo[] = "<b>Remorquage Rondeau</b>";
                 $this->remorquageInfo[] = "450 887-2970";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "philtourigny@gmail.com"; //nadineb@camionsinterlanaudiere.com
                 $this->parametreBonTravailNomSuccursale = "Camions%20Inter-Lanaudi%C3%A8re";
                 $this->parametreDemandePiecesNomSuccursale = "Camions%20Inter-Lanaudi%C3%A8re%";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22163.018849870517!2d-73.40596211499049!3d46.02361877120809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc8bd890a98260f%3A0xbf44a24df56dd942!2s791+Rue+Samuel-Racine%2C+Joliette%2C+QC+J6E+0E8%2C+Canada!5e0!3m2!1sfr!2sfr!4v1408893246410";
@@ -552,7 +552,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "philtourigny@gmail.com"; //agilbert@centrecamionamiante.com
                 $this->parametreBonTravailNomSuccursale = "Le%20Centre%20du%20Camion%20(Amiante)";
                 $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20du%20Camion%20(Amiante)";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d44248.510441026425!2d-71.21615704602989!3d46.120233668091934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb836afcbac657b%3A0xf1391e007d68512!2s4680+Boulevard+Frontenac+Est%2C+Thetford+Mines%2C+QC+G6H+4G5%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326651313";
@@ -596,7 +596,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "philtourigny@gmail.com"; //agilbert@centrecamionamiante.com
                 $this->parametreBonTravailNomSuccursale = "Le%20Centre%20du%20Camion%20(Beauce)";
                 $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20du%20Camion%20(Beauce)";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d44234.28546235947!2d-70.66052790789594!3d46.13794390165895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb9bfb2d0bb2569%3A0xe16a57df5a27951b!2s8900+25e+Avenue%2C+Saint-Georges%2C+QC+G6A+1M8%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326747414";
