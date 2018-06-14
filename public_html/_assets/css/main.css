@@ -769,6 +769,9 @@ margin-top: 36px;
   padding-bottom: 7em;
   /*padding-top: 2.2em;*/
 }
+.content.search-result {
+    padding-top: 2.2em;
+}
 
   .content h1 {
     font: 400 2.5714em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
@@ -4177,7 +4180,7 @@ div {  }
 /* Loading overlay - added by JP */
 .loading-overlay {
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   height: 2em;
   width: 2em;
   overflow: show;

@@ -21,11 +21,15 @@ $( document ).ready(function() {
                         customCriteria = $(this).data('custom-criteria');
                 });
                 
+                if(customCriteria == '') {
+                    customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+                }
+                
                 fetchRecords('', '', customCriteria, true);
             }
             else {
                 $(this).addClass('selected');
-                $(this).data('selected', true);
+                $(this).attr('data-selected', true);
                 
                 // Get search params
                 var field = $(this).attr('data-field');
@@ -45,6 +49,17 @@ $( document ).ready(function() {
         var field = $('.GpcMenu').find('li.selected').data('field');
         var value = $('.GpcMenu').find('li.selected').data('value');
         var customCriteria = $('.GpcMenu').find('li.selected').data('custom-criteria');
+        
+        if(field == undefined) {
+            field = '';
+        }
+        if(value == undefined) {
+            value = '';
+        }
+        if(customCriteria == undefined) {
+            customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+        }
+        
         fetchRecords(field, value, customCriteria, true);
     });
     
@@ -53,11 +68,22 @@ $( document ).ready(function() {
         var field = $('.GpcMenu').find('li.selected').data('field');
         var value = $('.GpcMenu').find('li.selected').data('value');
         var customCriteria = $('.GpcMenu').find('li.selected').data('custom-criteria');
+        
+        if(field == undefined) {
+            field = '';
+        }
+        if(value == undefined) {
+            value = '';
+        }
+        if(customCriteria == undefined) {
+            customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+        }
+        
         fetchRecords(field, value, customCriteria, true);
     });
     
     // On document load, search for all products (with default customCriteria)
-    fetchRecords('', '', 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ', true);
+    //fetchRecords('', '', 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ', true);
 });
 
 function fetchRecords(field, value, customCriteria, resetPage) {
@@ -188,9 +214,9 @@ function fetchRecords(field, value, customCriteria, resetPage) {
             }
             
             // Scroll page to top of search results
-            $('html, body').animate({
-                scrollTop: $(".titrePage").offset().top
-            }, 750);
+            /*$('html, body').animate({
+                scrollTop: $(".GpcMenuWrapper").offset().top
+            }, 750);*/
 
             // Hide loading spinner
             $('.loading-overlay').hide();

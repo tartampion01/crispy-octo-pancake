@@ -1,149 +1,12 @@
-<script>
-    pageName = 'page1.php';
-</script>
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body">
     <form role="form" method="POST" action="/page1.php">
-    <div class="content" style="height: 80%">
+    <div class="content search-result" style="height: 80%">
         <div class="shrink">
             <div class="titrePage">
                 <h1><span>Inventaire complet</span></h1>
             </div>
-            <?php
-                try{
-                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                        if (isset($_POST['btnShowTruck'])) {
-
-                            $truckResults = getNewTruck($_POST['tbShowTruck']);
-                            $truckInfo = "";
-
-                            if(mysqli_num_rows($truckResults) > 0){
-                                while($row = mysqli_fetch_assoc($truckResults)) {
-                                    $truckInfo .= "Marque <b>" . $row['marque'] . "</b></br>";
-                                    $truckInfo .= "Modèle <b>" . $row['Model'] . "</b></br>";
-                                    $truckInfo .= "Année <b>" . $row['strAnnee'] . "</b></br>";
-                                    $truckInfo .= "No inventaire <b>" . $row['stock'] . "</b></br>";
-                                    $truckInfo .= "No Série <b>" . $row['serial'] . "</b></br>";
-                                    $truckInfo .= "Empattement <b>" . $row['wb'] . "</b></br>";
-                                    $truckInfo .= "Essieu avant <b>" . $row['frontaxle'] . "</b></br>";
-                                    $truckInfo .= "Essieu arrière <b>" . $row['rearaxle'] . "</b></br>";
-                                    $truckInfo .= "Suspension arrière <b>" . $row['rearsuspension'] . "</b></br>";
-                                    $truckInfo .= "Transmission <b>" . $row['transtype'] . "</b></br>";
-                                    $truckInfo .= "Moteur <b>" . $row['engine'] . "</b></br>";
-                                    $truckInfo .= "HP <b>" . $row['hp'] . "</b></br>";
-                                    $truckInfo .= "Ratio essieu arrière <b>" . $row['ratio'] . "</b></br>";
-                                }
-                            }
-                            echo $truckInfo;
-                        }
-                    }
-                    else
-                    {
-                        $fieldCriteria = $marque = $model = $transtype = $engine = "";
-
-                        if(isset($_GET['marque'])){
-                            $marque = $_GET['marque'];
-                            $fieldCriteria = "marque";
-                        }
-                        if(isset($_GET['Model'])){
-                            $model = $_GET['Model'];
-                            $fieldCriteria = "Model";
-                        }
-                        if(isset($_GET['transtype'])){
-                            $transtype = $_GET['transtype'];
-                            $fieldCriteria = "transtype";
-                        }
-                        if(isset($_GET['engine'])){
-                            $engine = $_GET['engine'];
-                            $fieldCriteria = "engine";
-                        }
-                        
-                        $truckResults = false;
-                        if($marque != "")
-                            $truckResults = getNewTruck(0, $fieldCriteria, $marque);
-                        if($model != "")
-                            $truckResults = getNewTruck(0, $fieldCriteria, $model);
-                        if($transtype != "")
-                            $truckResults = getNewTruck(0, $fieldCriteria, $transtype);
-                        if($engine != "")
-                            $truckResults = getNewTruck(0, $fieldCriteria, $engine);
-                        
-                        $truckInfo = "";
-
-//                        if(mysqli_num_rows($truckResults) > 0){
-//                            while($row = mysqli_fetch_assoc($truckResults)) {
-//                                $truckInfo .= "Marque <b>" . $row['marque'] . " " . $row['Model'] . " " . $row['config'] ."</b></br>";
-//                                $truckInfo .= "No inventaire <b>" . $row['stock'] . "</b></br>";
-//                                $truckInfo .= "Marque <b>" . $row['marque'] . "</b></br>";
-//                                $truckInfo .= "Modèle <b>" . $row['Model'] . "</b></br>";
-//                                $truckInfo .= "Moteur <b>" . $row['engine'] . "</b></br>";
-//                            }
-//                        }
-//                        echo $truckInfo;
-                        ?>
-                        <!--<div class="GpcFacetedResults defaultFacet">
-                        <div class=" GpcPagedResultCount">
-                        <div class="GpcResultItemWrapper">
-                        <?PHP if( $truckResults && (mysqli_num_rows($truckResults) > 0)){
-                            while($row = mysqli_fetch_assoc($truckResults)) { ?>
-                                <div class="FacetedResultTemplate DefaultResultContainer" >
-                                    <a data-link="product link" href="<?php echo RD_PageLink::getHref(folder::Root, page::Details) . "?k=" . urlencode($row['id']); ?>">TROCK</a>
-                                    <div class="ResultImage">
-                                        <img src="" title="" alt="TODO">
-                                        <div class="imgPromo" style="display: none;"></div>
-                                    </div>
-                                    <div class="ResultContent">
-                                        <div class="ResultContentProductName">
-                                            <h2>
-                                                <span class="ProductBrokerType_String"><?PHP echo $row['marque'] ?></span>
-                                                <span>&nbsp;</span>
-                                                <span class="ProductBrokerType_String"><?PHP echo $row['Model'] ?></span>
-                                                <span>&nbsp;</span>
-                                                <span class="ProductBrokerType_String"><?PHP echo $row['config'] ?></span>
-                                            </h2>
-                                        </div>
-                                        <div class="customField">
-                                            <div class="forBroker label zoneForBroker">
-                                                <span class="forBroker label spanForBroker">No d'inventaire : </span>
-                                                <span class="ProductBrokerType_String"><?PHP echo $row['stock'] ?></span>
-                                            </div>
-                                        </div>
-                                        <div class="customField">
-                                                <div class="forBroker label zoneForBroker">
-                                                        <span class="forBroker label spanForBroker">Marque : </span>
-                                                        <span class="ProductBrokerType_String"><?PHP echo $row['marque'] ?></span>
-                                                </div>
-                                        </div>
-                                        <div class="customField">
-                                            <div class="forBroker label zoneForBroker">
-                                                <span class="forBroker label spanForBroker">Modèle : </span>
-                                                <span class="ProductBrokerType_String"><?PHP echo $row['Model'] ?></span>
-                                            </div>
-                                        </div>
-                                        <div class="customField">
-                                            <div class="forBroker label zoneForBroker">
-                                                <span class="forBroker label spanForBroker">Moteur : </span>
-                                                <span class="ProductBrokerType_String"><?PHP echo $row['engine'] ?></span>
-                                            </div>
-                                        </div>
-                                        <div class="inPromo">
-                                            <span class="ProductBrokerType_Boolean">False</span>
-                                        </div>
-                                        <div class="imgPlus"></div>
-                                    </div>
-                                    </a>
-                                </div>
-                        <?PHP }}?>
-                        </div>
-                        </div>
-                        </div>-->
-                        <?PHP
-                    }
-                }
-                catch (Exception $e) {
-                    echo 'Caught exception: ',  $e->getMessage(), "\n";
-                }
-            ?>
+            
             <div class="contenu contenu2">
                 <div>
                     International compte le plus grand réseau de concessionnaires de camions lourds, moyens et services sévères en Amérique du Nord. Réseau Dynamique, fier membre de la famille International, offre une large sélection de camions lourds adaptés aux différents types d'industries et d'usages.
@@ -298,33 +161,14 @@
                 </div>
             </div>
         </div>
-            <div class="FacetedExplorerClear GpcClear">
-                </div>
+        <div class="FacetedExplorerClear GpcClear"></div>
     </div>
-        <!--
-        exemples REST
-        <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>
-        <a href="_includes/objects/read.php?field=Model&value=4300">4300</a></br>
-        <a href="_includes/objects/read.php?field=transtype&value=AISIN A460">AISIN A460</a></br>
-        <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>
-        <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>
-        <a href="_includes/objects/read.php?field=marque&value=international">INTERNATIONAL</a></br>        
-        ID:<input type="text" id="tbShowTruck" name="tbShowTruck" value="" text="" />
-        <input type="submit" id="btnShowTruck" name="btnShowTruck" text="Afficher">
-        -->
-        <?php
-            //echo '<img src="' . RD_Utils::getBase64Image() . '" />';
-            //echo '<img src="data:image/jpeg;base64,' . RD_Utils::getBinaryImage() . '" />';
-        ?>
         <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
     </form>
     
     <div class="loading-overlay">Loading&#8230;</div>
 
 <!-- Start : Javascript template -->
-
-<img class="" name="image" title="" src="_assets/images/camions/noimage.png" alt="Camions, Remorques et Véhicules">
-
 <script id="resultsTemplate" type="text/x-jquery-tmpl">
     
     <div class="FacetedResultTemplate DefaultResultContainer">
@@ -378,5 +222,13 @@
     </div>
 </script>
 <!-- End : Javascript template -->
+
+<script>
+$( document ).ready(function() {
+
+    // On page load, fetch all records
+    fetchRecords('', '', 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ', true);
+});
+</script>
 </body>
 </html>
