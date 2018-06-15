@@ -1,4 +1,6 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
+<script type='text/javascript'>var _N = 1;</script>
+<script src="../_assets/js/camions-rest.js" type="text/javascript"></script>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">

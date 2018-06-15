@@ -1,4 +1,6 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_headerUsed.php'); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
+<script type='text/javascript'>var _N = 0;</script>
+<script src="_assets/js/camions-rest.js" type="text/javascript"></script>
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
@@ -215,7 +217,7 @@
     $( document ).ready(function() {
         
         // On page load, fetch all records
-        fetchUsedRecords('', '', '', true);        
+        fetchRecords('', '', '', true, 0);
     });
     </script>
 </body>
