@@ -341,7 +341,28 @@ class RD_Camion{
         // check for empty parameters (search for all products)
         if(empty($params->field) && empty($params->value)) {
             // select all query
-            $query = "SELECT * FROM trucks ORDER BY marque, modele LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+            
+            $where = '';
+            $count = count($params->arrayFilters);
+            for($i=0; $i<$count; $i++) {
+                if($count == 1)
+                    $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '"';
+                else
+                    $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '" AND ';
+            }
+            
+            if($where != '' && empty($params->customCriteria) && $count > 1) {
+                $where = substr($where, 0, -4);
+            }
+            
+            if($where == '') {
+                $query = "SELECT * FROM trucks ORDER BY marque, modele LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+                //echo "#1". $query;
+            }
+            else {
+                $query = "SELECT * FROM trucks WHERE $where  ORDER BY marque, modele LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+                //echo "#1". $query;
+            }
             //echo "#1". $query;
         }
         else {
@@ -572,6 +593,7 @@ class RD_Camion{
             //$query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
             $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM trucks WHERE $where $params->customCriteria GROUP BY $params->field ORDER BY COUNT DESC";
             //echo 'QUERY #1'.$query;
+            //die('HERE');
         }
         if($params->searchType == 'modele') {
             //$query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM inventory WHERE $params->searchType = '$params->value' AND $params->customCriteria DisplayOnWebSite=1 GROUP BY $params->field ORDER BY COUNT DESC";
@@ -589,7 +611,10 @@ class RD_Camion{
             //echo 'QUERY #4'.$query;
         }
         if($params->searchType == '') {
-            $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM trucks GROUP BY $params->field ORDER BY COUNT DESC";
+            if($where != '')
+                $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM trucks WHERE $where GROUP BY $params->field ORDER BY COUNT DESC";
+            else
+                $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM trucks GROUP BY $params->field ORDER BY COUNT DESC";
             //echo 'QUERY #5'.$query;
         }
         //echo $query;
