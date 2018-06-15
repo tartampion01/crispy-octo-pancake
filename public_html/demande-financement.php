@@ -99,7 +99,7 @@
                                     if( isset($_GET['id']))
                                         $VehiculeId = $_GET['id'];
                                     if(isset($_GET['n']))
-                                        $NEW = $_GET['n'];
+                                        $NEW = base64_decode($_GET['n']);                                    
                                 }
                             ?>
                             <div class="formulaire" style="visibility: <?php echo $divVisibility; ?>">
