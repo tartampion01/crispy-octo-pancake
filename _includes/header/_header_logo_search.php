@@ -5,7 +5,7 @@
             <img name="image" title="" src="../../_assets/images/menu_images/spacer.png" alt="image">
         </div>
         <div class="logo">
-            <a class="" name="hyperlien" onclick="javascript:RegisterClick(this);" href="/accueil" target="_self">
+            <a class="" name="hyperlien" onclick="javascript:RegisterClick(this);" href="<?php echo RD_PageLink::getHref(folder::Root,page::Accueil); ?>" target="_self">
                 <img class="" name="image" title="" src="../../_assets/images/menu_images/reseau-dynamique.png" alt="Camions, Remorques et Véhicules">
             </a>
         </div>
