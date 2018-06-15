@@ -301,6 +301,7 @@ class RD_Camion{
         if(empty($params->field) && empty($params->value)) {
             // select all query
             $query = "SELECT * FROM inventory WHERE $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+            //echo $query;
         }
         else {
             
@@ -353,9 +354,10 @@ class RD_Camion{
                 else
                     $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '" AND ';
             }
-            //die($where);
-            //print_r($params->arrayFilters[0]);
-            //print_r($where);
+            
+            if($where != '' && empty($params->customCriteria) && $count > 1) {
+                $where = substr($where, 0, -4);
+            }
             
             if($where != '') {
                 // select filtered query
@@ -368,7 +370,7 @@ class RD_Camion{
                 //echo "#3". $query;
             }
         }
- 
+ //echo $query;
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
@@ -433,11 +435,14 @@ class RD_Camion{
         if(empty($params->field) && empty($params->value)) {
             
             $where = '';
-            
+            $count = count($params->arrayFilters);
             for($i=0; $i<count($params->arrayFilters); $i++) {
                 $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '" AND ';
             }
             
+            if($where != '' && empty($params->customCriteria)) {
+                $where = substr($where, 0, -4);
+            }
             if($where != '') {
                 // select all query
                 $queryCount = "SELECT * FROM trucks WHERE $where $params->customCriteria ORDER BY marque, modele ".$params->sortBy;
@@ -455,6 +460,9 @@ class RD_Camion{
                 $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '" AND ';
             }
             
+            if($where != '' && empty($params->customCriteria)) {
+                $where = substr($where, 0, -4);
+            }
             if($where != '') {
                 // select filtered query
                 $queryCount = "SELECT * FROM trucks WHERE $where $params->customCriteria ORDER BY marque, modele ".$params->sortBy;
@@ -549,6 +557,10 @@ class RD_Camion{
                 $where = $params->searchType = "'$params->value' AND ";
             }
             //die($where);
+            
+            if($where != '' && empty($params->customCriteria)) {
+                $where = substr($where, 0, -4);
+            }
         }
         
         /*if($params->value == '') {

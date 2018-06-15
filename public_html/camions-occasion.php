@@ -2,7 +2,7 @@
 <body class="body">
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
-        <div class="content search-result">
+        <div class="content">
             <div class="shrink">
                 <div class="titrepage">
                     <h1>Camions d'occasion</h1>
@@ -26,7 +26,7 @@
                             <!-- MODÈLE -->
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Modèle</a>
-                                <ul class="Model" style="">
+                                <ul class="modele" style="">
                                     <?PHP $results = selectUsedTrucksDisctinctCriteria('modele', ''); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
                                         <li class="GpcMenuItem filter-link" data-field='modele' data-value='<?PHP echo $key ?>' data-custom-criteria='' data-selected="false">
@@ -38,7 +38,7 @@
                             <!-- TRANSMISSION -->
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Transmission</a>
-                                <ul class="transtype" style="">
+                                <ul class="transmission" style="">
                                     <?PHP $results = selectUsedTrucksDisctinctCriteria('transmission', ''); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
                                         <li class="GpcMenuItem filter-link" data-field='transmission' data-value='<?PHP echo str_replace('+', '%2B', $key) ?>' data-custom-criteria='' data-selected="false">
@@ -50,7 +50,7 @@
                             <!-- MOTEUR -->
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Moteur</a>
-                                <ul class="engine" style="">
+                                <ul class="moteur" style="">
                                     <?PHP $results = selectUsedTrucksDisctinctCriteria('moteur', ''); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
                                         <li class="GpcMenuItem filter-link" data-field='moteur' data-value='<?PHP echo $key ?>' data-custom-criteria='' data-selected="false">

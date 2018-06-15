@@ -29,7 +29,7 @@ $( document ).ready(function() {
             }
             else {
                 $(this).addClass('selected');
-                $(this).attr('data-selected', true);
+                $(this).data('selected', true);
                 
                 // Get search params
                 var field = $(this).attr('data-field');
