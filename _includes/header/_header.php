@@ -18,8 +18,7 @@
     <script type="text/javascript" src="../../_assets/js/jquery-bxslider.js" ></script>
     <script type='text/javascript' src='../../_assets/js/ajax.js'></script>
     <script type='text/javascript' src='../../_assets/js/rotator.js'></script>
-    <script type='text/javascript' src='../../_assets/js/utilities.js'></script>
-    <script type='text/javascript' src='../../_assets/js/camions-rest.js'></script>
+    <script type='text/javascript' src='../../_assets/js/utilities.js'></script>    
     <script type='text/javascript' src='../../_assets/js/jquery.tmpl.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.twbsPagination.js'></script>
     
