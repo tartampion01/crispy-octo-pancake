@@ -91,7 +91,7 @@
                                                 <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesFinancement); ?>" class="rank3">Financement</a>
                                             </li>
                                             <li class="rank4">
-                                                <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPromoPieces); ?>" class="rank4">Promo pièces</a>
+                                                <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PiecesEtServicesPromoPieces); ?>" class="rank4">Promo pièces</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -164,18 +164,8 @@
                                 <li class="rank10">
                                     <a href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H); ?>" class="rank10">Urgence routière 24h</a>
                                 </li>
-                                <li class="rank11 parent">
-                                    <a href="<?php echo RD_PageLink::getHref(folder::Nextpart,page::InscriptionNextPart); ?>" class="rank11">Inscription à NextPart</a>
-                                    <div class="itemChildDiv14">
-                                        <ul class="itemChild14">
-                                            <li class="first rank0">
-                                                <a href="<?php echo RD_PageLink::getHref(folder::Nextpart,page::InscriptionNextPartAbonnement); ?>" class="first rank0">Confirmation d'abonnement</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="rank12">
-                                    <a href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H); ?>" class="rank12">Urgence routière 24h</a>
+                                <li class="rank11">
+                                    <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres); ?>" class="rank12">Carrières</a>
                                 </li>
                             </ul>
                         </div>
