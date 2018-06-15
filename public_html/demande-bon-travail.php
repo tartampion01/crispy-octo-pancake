@@ -55,7 +55,7 @@
         }
     }
 </script>
-<body class="body">
+<body class="body"><?php RD_Utils::write_Gtag() ?>
     <form method="POST" action="/<?php echo $NOMPAGE; ?>" enctype="multipart/form-data">
     <div class="wrap">
         <div class="content">

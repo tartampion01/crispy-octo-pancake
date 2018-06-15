@@ -1,7 +1,7 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <script type='text/javascript'>var _N = 1;</script>
 <script src="../_assets/js/camions-rest.js" type="text/javascript"></script>
-<body class="body">
+<body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
         <div class="content search-result">

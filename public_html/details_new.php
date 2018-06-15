@@ -14,7 +14,7 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
     <script src="_assets/js/CUSTOMSCRIPTPAGEDETAILS.js" type="text/javascript"></script>
     <script src="_assets/js/AJAXPAGEDETAILS.js" type="text/javascript"></script>
 </head>
-<body class="body">
+<body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
         <div class="content produit">
             <div class="shrink">

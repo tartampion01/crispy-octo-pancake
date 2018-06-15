@@ -1,5 +1,5 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-<body class="body">
+<body class="body"><?php RD_Utils::write_Gtag() ?>
     <style>
         .searchParagraph{
             font-size: 11px;

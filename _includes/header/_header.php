@@ -14,6 +14,10 @@
         <?PHP RD_Header::getPageTitle($NOMPAGE); ?>
     </title>
 
+    <!-- Start Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-569RKDC');</script>
+    <!-- End Google Tag Manager -->
+
     <script type='text/javascript' src='../../_assets/js/jquery-3.2.1.js'></script>
     <script type="text/javascript" src="../../_assets/js/jquery-bxslider.js" ></script>
     <script type='text/javascript' src='../../_assets/js/ajax.js'></script>
@@ -22,13 +26,9 @@
     <script type='text/javascript' src='../../_assets/js/jquery.tmpl.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.twbsPagination.js'></script>
     
-    <!-- Bootstrap CDN includes -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- Bootstrap CDN includes -->    
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    
-    <script type="text/javascript">var ShortCultureID = 'fr'; var LongCultureID = 'fr-CA';</script>
-    <script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','www.google-analytics.com/analytics.js','ga');ga('create', 'UA-3192388-1');ga('require','displayfeatures');ga('send', 'pageview');</script>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/defaultGpcframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/HighLightSelector.css" media="All" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/main.css" />

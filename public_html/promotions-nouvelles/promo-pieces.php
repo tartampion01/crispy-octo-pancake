@@ -1,5 +1,5 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-<body class="body">    
+<body class="body"><?php RD_Utils::write_Gtag() ?>    
     <form role="form" method="POST" action="/promotions-nouvelles/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
         <div class="content search-result">
@@ -183,7 +183,6 @@ $(window).resize(function () {
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-120787761-1', 'auto');
-ga('nms.send', 'pageview');$("img[src$='.png']").ready(function() {  if ($(this).height() > 0) { $(this).ifixpng(); }});$(document.body).bind('mouseover', function() { setTimeout(function() { $("img[src$='.png']").ifixpng(); }, 10); });$(document).HighlightSelector({QueryHashKeyName : 'qa',HighlightClass : 'qaHighlight'});NmsWeightUnitEnum = {"None":0,"G":1,"Kg":2,"Lb":4,"Oz":8,"Ton":16}; NmsLengthUnitEnum = {"None":0,"Cm":1,"M":2,"Km":4,"Ft":8,"In":16,"Yd":32};$(document).ready(function(){});//]]>
 </script>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </form>

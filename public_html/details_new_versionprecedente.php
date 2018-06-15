@@ -9,7 +9,7 @@
         document.getElementById("divBig").src = ceci.src;
     }
 </script>
-<body class="body">
+<body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
         <div class="content produit">
             <div class="shrink">

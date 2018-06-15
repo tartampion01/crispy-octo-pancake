@@ -32,11 +32,11 @@ function getNewTruck($id, $fieldCriteria='', $value='')
     return mysqli_query($conn, $sql);
 }
 
-function selectNewTrucksDisctinctCriteria($field, $customCriteria)
+function selectNewTrucksDisctinctCriteria($field, $customCriteria, $orderBy, $order)
 {
     global $conn;
     //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
-    $sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE $customCriteria DisplayOnWebSite=1 GROUP BY $field ORDER BY COUNT DESC";
+    $sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE $customCriteria DisplayOnWebSite=1 GROUP BY $field ORDER BY $orderBy $order";
 
     $result = mysqli_query($conn, $sql);
     
@@ -53,11 +53,11 @@ function selectNewTrucksDisctinctCriteria($field, $customCriteria)
     return array_combine($fieldArray, $countArray);
 }
 
-function selectUsedTrucksDisctinctCriteria($field, $customCriteria)
+function selectUsedTrucksDisctinctCriteria($field, $orderBy, $order)
 {
     global $conn;
     //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
-    $sql = "SELECT COUNT($field) AS COUNT,$field FROM trucks GROUP BY $field ORDER BY COUNT DESC";
+    $sql = "SELECT COUNT($field) AS COUNT,$field FROM trucks GROUP BY $field ORDER BY $orderBy $order";
 //echo $sql;
     $result = mysqli_query($conn, $sql);
     

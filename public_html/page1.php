@@ -1,5 +1,5 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-<body class="body">
+<body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/page1.php">
     <div class="content search-result" style="height: 80%">
         <div class="shrink">
@@ -172,7 +172,7 @@
 <script id="resultsTemplate" type="text/x-jquery-tmpl">
     
     <div class="FacetedResultTemplate DefaultResultContainer">
-        <a href="details.php?id=${encodeURI(btoa(id))}">
+        <a href="details_new.php?id=${encodeURI(btoa(id))}">
             <div class="ResultImage">                
                 <img src="${pictures[0]}" title="" alt="">
                 <div class="imgPromo" style="display: none;"></div>
