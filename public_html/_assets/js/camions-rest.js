@@ -1,4 +1,8 @@
 $( document ).ready(function() {
+    // VAR _N est définie dans les pages d'affichage des camions neufs et usagés 1=new 0=used
+    // je mets ça pour être certain qu'on à rien d'autre que 0 ou 1
+    if( (_N != 1) && (_N != 0) )
+        _N = 1;
     
     // Bind click event on each filter link
     $('.filter-link').each(function(){
@@ -22,10 +26,13 @@ $( document ).ready(function() {
                 });
                 
                 if(customCriteria == '') {
-                    customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+                    if( _N == 1 )
+                        customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+                    else
+                        customCriteria = '';
                 }
                 
-                fetchRecords('', '', customCriteria, true);
+                fetchRecords(field, value, customCriteria, true, _N);
             }
             else {
                 $(this).addClass('selected');
@@ -36,7 +43,8 @@ $( document ).ready(function() {
                 var value = $(this).attr('data-value');
                 
                 var customCriteria = $(this).data('custom-criteria');
-                fetchRecords(field, value, customCriteria, true);
+                
+                fetchRecords(field, value, customCriteria, true, _N);
             }
         });
     });
@@ -57,10 +65,13 @@ $( document ).ready(function() {
             value = '';
         }
         if(customCriteria == undefined) {
-            customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+            if( _N == 1 )
+                customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+            else
+                customCriteria = '';
         }
         
-        fetchRecords(field, value, customCriteria, true);
+        fetchRecords(field, value, customCriteria, true, _N);
     });
     
     // Bind click event on search sorting dropdown
@@ -76,17 +87,20 @@ $( document ).ready(function() {
             value = '';
         }
         if(customCriteria == undefined) {
-            customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+            if( _N == 1 )
+                customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+            else
+                customCriteria = '';
         }
         
-        fetchRecords(field, value, customCriteria, true);
+        fetchRecords(field, value, customCriteria, true, _N);
     });
     
     // On document load, search for all products (with default customCriteria)
     //fetchRecords('', '', 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ', true);
 });
 
-function fetchRecords(field, value, customCriteria, resetPage) {
+function fetchRecords(field, value, customCriteria, resetPage, newOrOld) { // new == 1 old == 0
     
     // Show loading spinner
     $('.loading-overlay').show();
@@ -112,7 +126,7 @@ function fetchRecords(field, value, customCriteria, resetPage) {
     };
 
     $.ajax({
-        url: 'http://reseaudynamique.com/api/read.php',
+        url: 'http://reseaudynamique.com/api/read.php?n=' + newOrOld,
         type: "GET",
         data: 'params='+JSON.stringify(params),
         dataType: 'json',
@@ -158,7 +172,7 @@ function fetchRecords(field, value, customCriteria, resetPage) {
                         initiateStartPageClick: false,
                         onPageClick: function (event, page) {
                             
-                            fetchRecords(field, value, customCriteria, false);
+                            fetchRecords(field, value, customCriteria, false, newOrOld);
                         }
                     }));
                     
@@ -176,7 +190,7 @@ function fetchRecords(field, value, customCriteria, resetPage) {
                         };
 
                         $.ajax({
-                            url: 'http://reseaudynamique.com/api/read-count-filter.php',
+                            url: 'http://reseaudynamique.com/api/read-count-filter.php?n=' + newOrOld,
                             type: "GET",
                             data: 'params='+JSON.stringify(countParams),
                             dataType: 'json',
@@ -222,7 +236,7 @@ function fetchRecords(field, value, customCriteria, resetPage) {
             $('.loading-overlay').hide();
         },
         error: function(xhr, status, error) {
-            $('.results-container').html('ERREUR DU SERVEUR');
+            $('.results-container').html(error);
         }
     });
 }
