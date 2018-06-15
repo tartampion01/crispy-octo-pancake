@@ -15,10 +15,15 @@ $db = $database->getConnection();
 // initialize object
 $camion = new RD_Camion($db);
  
+// NEW OR OLD TRUCK
+$newOrOld = $_GET['n'];
+
 // query Camions
-//$stmt = $camion->readTest('Model','4300');
-$stmt = $camion->readCountFilter($_GET['params']);  // readTest($_GET['field'], $_GET['value']);
-//$stmtCount = $camion->readTestCount($_GET['params']);
+if( $newOrOld == 1 )
+    $stmt = $camion->readCountFilter($_GET['params']);
+elseif( $newOrOld == 0 )
+    $stmt = $camion->readCountFilterUsed($_GET['params']);
+
 $num = $stmt->rowCount();
  
 // check if more than 0 record found

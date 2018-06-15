@@ -15,10 +15,20 @@ $db = $database->getConnection();
 // initialize object
 $camion = new RD_Camion($db);
  
-// query Camions
-//$stmt = $camion->readTest('Model','4300');
-$stmt = $camion->readTest($_GET['params']);  // readTest($_GET['field'], $_GET['value']);
-$stmtCount = $camion->readTestCount($_GET['params']);
+// NEW OR OLD TRUCK
+$newOrOld = $_GET['n'];
+
+// query Camions || trucks
+if( $newOrOld == 1 )
+    $stmt = $camion->readTest($_GET['params']);
+elseif( $newOrOld == 0 )
+    $stmt = $camion->readTestUsed($_GET['params']);
+
+if( $newOrOld == 1 )
+    $stmtCount = $camion->readTestCount($_GET['params']);
+elseif( $newOrOld == 0 )
+    $stmtCount = $camion->readTestCountUsed($_GET['params']);
+
 $num = $stmt->rowCount();
  
 // check if more than 0 record found
@@ -40,7 +50,9 @@ if($num>0){
         extract($row);
  
         $pictures = array();
-        $stmtPictures = $camion->getPictures($id);
+        // Oui car le ID n'est pas écrit pareil dans les deux tables!!!
+        $stmtPictures = $camion->getPictures($newOrOld == 1 ? $id : $ID, $newOrOld);
+        
         $nbPics = $stmtPictures->rowCount();
         if($nbPics > 0){
             while ($rowPictures = $stmtPictures->fetch(PDO::FETCH_ASSOC)){
@@ -53,24 +65,39 @@ if($num>0){
             // Pas d'images dans db on met ceci
             array_push($pictures, "../../_assets/images/camions/noimage.png");
         }
-        
-        $Camion_item=array(
-            "id" => $id,
-            "marque" => $marque,
-            "Model" => $Model,
-            "strAnnee" => $strAnnee,
-            "stock" => $stock,
-            "serial" => $serial,
-            "wb" => $wb,
-            "frontaxle" => $frontaxle,
-            "rearaxle" => $rearaxle,
-            "rearsuspension" => $rearsuspension,
-            "transmission" => $transmission,
-            "transtype" => $transtype,
-            "engine" => $engine,
-            "hp" => $hp,
-            "pictures" => $pictures
-        );
+        if( $newOrOld == 1 ){
+            $Camion_item=array(
+                "id" => $id,
+                "marque" => $marque,
+                "Model" => $Model,
+                "strAnnee" => $strAnnee,
+                "stock" => $stock,
+                "serial" => $serial,
+                "wb" => $wb,
+                "frontaxle" => $frontaxle,
+                "rearaxle" => $rearaxle,
+                "rearsuspension" => $rearsuspension,
+                "transmission" => $transmission,
+                "transtype" => $transtype,
+                "engine" => $engine,
+                "hp" => $hp,
+                "pictures" => $pictures
+            );
+        }
+        elseif( $newOrOld == 0 )
+        {
+            $Camion_item=array(
+                "id" => $ID,
+                "marque" => $marque,
+                "Model" => $modele,
+                "strAnnee" => $intAnnee,
+                "stock" => $unite,
+                "serial" => $noSerie,
+                "transmission" => $transmission,
+                "engine" => $moteur,
+                "pictures" => $pictures
+            );
+        }
         
         array_push($Camions_arr["records"], $Camion_item);
     }
