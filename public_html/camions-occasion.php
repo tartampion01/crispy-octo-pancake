@@ -15,7 +15,7 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Marque</a>
                                 <ul class="marque" style="">
-                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('marque', '' ); ?>
+                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('marque', 'COUNT', 'DESC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
                                         <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria='' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?marque=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
@@ -27,7 +27,7 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Modèle</a>
                                 <ul class="modele" style="">
-                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('modele', ''); ?>
+                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('modele', 'modele', 'ASC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
                                         <li class="GpcMenuItem filter-link" data-field='modele' data-value='<?PHP echo $key ?>' data-custom-criteria='' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?modele=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
@@ -39,7 +39,7 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Transmission</a>
                                 <ul class="transmission" style="">
-                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('transmission', ''); ?>
+                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('transmission', 'transmission', 'ASC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
                                         <li class="GpcMenuItem filter-link" data-field='transmission' data-value='<?PHP echo str_replace('+', '%2B', $key) ?>' data-custom-criteria='' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?transmission=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
@@ -51,7 +51,7 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Moteur</a>
                                 <ul class="moteur" style="">
-                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('moteur', ''); ?>
+                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('moteur', 'moteur', 'ASC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
                                         <li class="GpcMenuItem filter-link" data-field='moteur' data-value='<?PHP echo $key ?>' data-custom-criteria='' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?moteur=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
