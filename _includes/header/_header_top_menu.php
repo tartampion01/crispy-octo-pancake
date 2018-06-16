@@ -1,6 +1,5 @@
 <?php
 $pageName = basename($_SERVER['SCRIPT_NAME']);
-echo $_SERVER['SCRIPT_NAME'];
 ?>
 <!-- TOP MENU -->
 <div class="utilitaire clear">
