@@ -305,7 +305,7 @@
                                         <a class="" name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
                                     </div>
                                 </div>
-                                <div class="plainte clear">
+                                <div class="plainte clear" style="display: none;">
                                     <div class="champ">
                                         <input name="tbTravaux2" id="tbTravaux2" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux2; ?>">
                                     </div>
@@ -313,7 +313,7 @@
                                         <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
                                     </div>
                                 </div>
-                                <div class="plainte clear">
+                                <div class="plainte clear" style="display: none;">
                                     <div class="champ">
                                         <input name="tbTravaux3" id="tbTravaux3" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux3; ?>">
                                     </div>
@@ -321,7 +321,7 @@
                                         <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
                                     </div>
                                 </div>
-                                <div class="plainte clear">
+                                <div class="plainte clear" style="display: none;">
                                     <div class="champ">
                                         <input name="tbTravaux4" id="tbTravaux4" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux4; ?>">
                                     </div>
@@ -329,7 +329,7 @@
                                         <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
                                     </div>
                                 </div>
-                                <div class="plainte clear">
+                                <div class="plainte clear" style="display: none;">
                                     <div class="champ">
                                         <input name="tbTravaux5" id="tbTravaux5" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux5; ?>">
                                     </div>
@@ -337,7 +337,7 @@
                                         <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
                                     </div>
                                 </div>
-                                <div class="plainte clear">
+                                <div class="plainte clear" style="display: none;">
                                     <div class="champ">
                                         <input name="tbTravaux6" id="tbTravaux6" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux6; ?>">
                                     </div>
@@ -345,7 +345,7 @@
                                         <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
                                     </div>
                                 </div>
-                                <div class="plainte clear">
+                                <div class="plainte clear" style="display: none;">
                                     <div class="champ">
                                         <input name="tbTravaux7" id="tbTravaux7" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux7; ?>">
                                     </div>
@@ -353,7 +353,7 @@
                                         <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
                                     </div>
                                 </div>
-                                <div class="plainte clear">
+                                <div class="plainte clear" style="display: none;">
                                     <div class="champ">
                                         <input name="tbTravaux8" id="tbTravaux8" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux8; ?>">
                                     </div>
@@ -369,18 +369,18 @@
                             </div>
 
                             <div class="formulaire">
-                             <h5>Inclure un document (PDF, JPG, PNG, DOC, XLS)</h5>
+                             <span class="filter-file">Inclure un document (PDF, JPG, PNG, DOC, XLS)</span>
                                 <input type="file" id="file1" name="file1" accept=".jpg,.jpeg,.pdf,.doc,.xls" class="hidden" style="display:none;"/>
-                                <label for="file1" class="fileReplacement">Joignez une fichier</label>&nbsp;
-                                <label id="labelFile1" name="labelFile1"></label>
+                                <label for="file1" class="fileReplacement">Joignez une fichier</label>
+                                <label id="labelFile1" name="labelFile1" class="info-file"></label>
                                 <br />
                                 <input type="file" id="file2" name="file2" accept=".jpg,.jpeg,.pdf,.doc,.xls" class="hidden" style="display:none;"/>
-                                <label for="file2" class="fileReplacement">Joignez une fichier</label>&nbsp;
-                                <label id="labelFile2" name="labelFile2"></label>
+                                <label for="file2" class="fileReplacement">Joignez une fichier</label>
+                                <label id="labelFile2" name="labelFile2" class="info-file"></label>
                                 <br />
                                 <input type="file" id="file3" name="file3" accept=".jpg,.jpeg,.pdf,.doc,.xls" class="hidden" style="display:none;"/>
-                                <label for="file3" class="fileReplacement">Joignez une fichier</label>&nbsp;
-                                <label id="labelFile3" name="labelFile3"></label>
+                                <label for="file3" class="fileReplacement">Joignez une fichier</label>
+                                <label id="labelFile3" name="labelFile3" class="info-file"></label>
                                 <br />
                             </div>
                             
@@ -402,7 +402,8 @@
                             <strong>Instructions</strong>
                             <label class="hideDrummond">
                                 <input type="radio" id="rbInstruction" name="rbInstruction" value="1">&nbsp;Je demande un estimé écrit avant le début des travaux.</label>
-                                <input type="radio" name="rbInstruction" id="rbInstruction" value="2">&nbsp;Veuillez procéder aux réparations mais appelez-moi pour approbation avant de continuer si le prix excède $ 
+                            <label>
+                                <input type="radio" name="rbInstruction" id="rbInstruction" value="2">&nbsp;Veuillez procéder aux réparations mais appelez-moi pour approbation avant de continuer si le prix excède $ </label>
                                 <span class="prixSpan">
                                     <input name="tbPrixReparationMax" id="tbPrixReparationMax" type="text" value=<?php echo $prixMax;?>><?php echo $prixMaxErr;?>
                                 </span>
