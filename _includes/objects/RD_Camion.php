@@ -302,6 +302,28 @@ class RD_Camion{
             // select all query
             $query = "SELECT * FROM inventory WHERE $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
             //echo $query;
+            
+            $where = '';
+            $count = count($params->arrayFilters);
+            for($i=0; $i<$count; $i++) {
+                /*if($count == 1)
+                    $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '"';
+                else*/
+                    $where .= $params->arrayFilters[$i]->field . ' = "' . $params->arrayFilters[$i]->value . '" AND ';
+            }
+            
+            /*if($where != '' && empty($params->customCriteria) && $count > 1) {
+                $where = substr($where, 0, -4);
+            }*/
+            
+            if($where == '') {
+                $query = "SELECT * FROM inventory WHERE $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+                //echo "#1". $query;
+            }
+            else {
+                $query = "SELECT * FROM inventory WHERE $where $params->customCriteria DisplayOnWebSite=1 ORDER BY marque, Model LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
+                //echo "#1 ". $query;
+            }
         }
         else {
             

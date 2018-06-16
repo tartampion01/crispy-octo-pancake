@@ -32,7 +32,8 @@ $( document ).ready(function() {
                         customCriteria = '';
                 }
                 
-                fetchRecords(field, value, customCriteria, true, _N);
+                //fetchRecords(field, value, customCriteria, true, _N);
+                fetchRecords('', '', customCriteria, true, _N);
             }
             else {
                 $(this).addClass('selected');
