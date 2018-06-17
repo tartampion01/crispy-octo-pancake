@@ -1,3 +1,9 @@
+*,
+.contenu-nous-joindre ::before,
+.contenu-nous-joindre ::after {
+  box-sizing: unset; // 1
+}
+
 .utilitaire {
     background: #181818;
 }
@@ -697,6 +703,9 @@ a {
 
 .toggle {
   margin: 2em 0px;
+}
+.toggle.toggle-product {
+    margin: 0em 0px;
 }
 
 .btnToggle {
@@ -4384,6 +4393,7 @@ div {  }
 .demandeBon .champ input[type=text] {
     margin: 0px;
     width: 96%;
+    padding: .75em;;
 }
 .supPlainte {
     width: 40px;

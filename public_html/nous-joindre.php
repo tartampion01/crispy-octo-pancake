@@ -808,7 +808,7 @@ function urldecode(str) {
                         <div class="mapCanvas" data-staticClassNames="mapCanvas"></div>
                     </div>
 
-<div class="contenu" data-staticClassNames="contenu">
+<div class="contenu contenu-nous-joindre" data-staticClassNames="contenu">
     <div class="" data-staticClassNames=" ">
         <h2>Concessionnaires</h2>
     </div>
