@@ -222,10 +222,10 @@
                                 }
                             }
 
-//                            if(!RD_Utils::validateRecaptcha($_POST['g-recaptcha-response'])){
-//                                $errorCount += 1;
-//                                $captchaErr = 'Veuillez remplir le <i>CAPTCHA</i> correctement.';
-//                            }
+                            if(!RD_Utils::validateRecaptcha($_POST['g-recaptcha-response'])){
+                                $errorCount += 1;
+                                $captchaErr = 'Veuillez remplir le <i>CAPTCHA</i> correctement.';
+                            }
 
                             $unite = RD_Utils::test_input($_POST['tbUnite']);
                             $km = RD_Utils::test_input($_POST['tbKm']);
@@ -510,102 +510,7 @@
         </div>
     </div>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
-    </form>
-    <script type="text/javascript">    //<![CDATA[
-
-
-
-
-
-
-
-$(document).ready(function () {
-
-  $("body").attr("ontouchstart", "");
-  $("body").attr("onmouseover", "");
-
-  var $menuMobile = $(".menuMobile");
-  if ($(window).width() < 641) {
-    $menuMobile.css("left", -$menuMobile.outerWidth());
-  } else {
-    $menuMobile.hide();
-  }
-
-  $(".icoMenuMobile").click(function () {
-    $(this).toggleClass("open");
-
-    $menuMobile.animate({
-      left: parseInt($menuMobile.css('left'), 10) == 0 ?
-          -$menuMobile.outerWidth() :
-          0
-    });
-    $(".wrap").animate({
-      left: parseInt($menuMobile.css('left'), 10) == 0 ?
-        0 :
-        +$menuMobile.outerWidth()
-    });
-    $(".pied").animate({
-      left: parseInt($menuMobile.css('left'), 10) == 0 ?
-        0 :
-        +$menuMobile.outerWidth()
-    });
-  });
-
-  $(".menuCss5").find(".parent > a").click(function () {
-    var open = $(this).parent();
-    if (open.hasClass("expanded")) {
-      open.removeClass("expanded");
-      open.children("div").slideUp();
-    } else {
-      open.addClass("expanded");
-      open.children("div").slideDown("fast", function () {
-        $('html, body').animate({
-          scrollTop: open.offset().top
-        }, 1000);
-      });
-    }
-  });
-  //Faire afficher les filtres
-  $(".toggleFilters").bind("click", openFilters);
-  $(".viewResults a").bind("click", closeFilters);
-  function openFilters() {
-    $(".GpcMenuWrapper").slideDown();
-    $(".toggleFilters").addClass("selected").unbind("click").find(".openClose").bind("click", closeFilters);
-  }
-  function closeFilters() {
-    $(".GpcMenuWrapper").slideUp();
-    $(".toggleFilters").removeClass("selected");
-    setTimeout(function () {
-      $(".toggleFilters").bind("click", openFilters).find(".openClose").unbind("click")
-    }, 250)
-  }
-});
-
-var magicTimeout = "";
-
-$(window).resize(function () {
-  if (magicTimeout != null) {
-    clearTimeout(magicTimeout);
-    magicTimeout = null;
-  }
-  magicTimeout = setTimeout(function () {
-    var $menuMobile = $(".menuMobile");
-    if ($(window).width() < 641) {
-      $menuMobile.show();
-      if (parseInt($menuMobile.css("left")) < 0) {
-        $menuMobile.css("left", -$menuMobile.outerWidth())
-      } else {
-        if ($menuMobile.is(":visible")) {
-          $(".wrap").css("left", $menuMobile.outerWidth());
-          $(".pied").css("left", $menuMobile.outerWidth());
-        }
-      }
-    } else {
-      $menuMobile.hide();
-    }
-  }, 100);
-});
-    //]]>  </script>
+    </form>    
     <script src="https://www.google.com/recaptcha/api.js?hl=fr-CA" async defer></script>
 </body>
 </html>
