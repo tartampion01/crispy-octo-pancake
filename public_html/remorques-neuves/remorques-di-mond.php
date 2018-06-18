@@ -13,8 +13,7 @@
                     <div>
                         Que vous transportiez de la marchandise standard ou de lourdes charges, les remorques fermées Di-Mond fabriquées sur mesure sont à la hauteur du défi.
                     </div>
-                    <br/>
-                    <div>
+                    <div class="toggle">
                         <div class="btnToggle">
                             <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
                         </div>

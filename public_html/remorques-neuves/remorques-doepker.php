@@ -13,8 +13,7 @@
                     <div>
                         Conçues pour offrir une performance inégalée, les remorques DOEPKER offrent un rendement supérieur sur la route. Fabriquées dans des matériaux durables et de qualité, elles sont fortes, légères et représentent les remorques les plus profitables de l'industrie.
                     </div>
-                    <br/>
-                    <div>
+                    <div class="toggle">
                         <div class="btnToggle">
                             <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
                         </div>
