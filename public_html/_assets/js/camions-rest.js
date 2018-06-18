@@ -29,7 +29,7 @@ $( document ).ready(function() {
                     if( _N == 1 )
                         customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
                     else if( _N == 2)
-                        customCriteria = ' marque="doepker" or marque="asetrail" or marque="di-mond" AND ';
+                        customCriteria = ' (marque="doepker" or marque="asetrail" or marque="di-mond") AND ';
                     else
                         customCriteria = '';
                 }
@@ -71,7 +71,7 @@ $( document ).ready(function() {
             if( _N == 1 )
                 customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
             else if( _N == 2)
-                customCriteria = ' marque="doepker" or marque="asetrail" or marque="di-mond" AND ';
+                customCriteria = ' (marque="doepker" or marque="asetrail" or marque="di-mond") AND ';
             else
                 customCriteria = '';
         }
@@ -95,7 +95,7 @@ $( document ).ready(function() {
             if( _N == 1 )
                 customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
             else if( _N == 2)
-                customCriteria = ' marque="doepker" or marque="asetrail" or marque="di-mond" AND ';
+                customCriteria = ' (marque="doepker" or marque="asetrail" or marque="di-mond") AND ';
             else
                 customCriteria = '';
         }
