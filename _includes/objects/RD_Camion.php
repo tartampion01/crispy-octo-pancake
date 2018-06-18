@@ -151,8 +151,14 @@ class RD_Camion{
         $this->essieuArriere = $r['rearaxle'];
         $this->suspensionArriere = $r['rearsuspension'];
         $this->transmission = $r['transtype'];
-        $this->moteur = $r['engine'] == 0;
-        $this->hp = $r['hp'];
+        
+        // ELSE ça reste string vide dans le cas des remorques
+        if( $r['engine'] != "-")
+            $this->moteur = $r['engine'];
+        
+        if( $r['hp'] != 0)
+            $this->hp = $r['hp'];
+
         $this->config = $r['config'];
         $this->color = $r['color'];
         $this->equipment = $r['equipment'];
@@ -173,11 +179,11 @@ class RD_Camion{
         
         if($id>0){
             $id = mysqli_real_escape_string($conn, $id);
-            $sql = "SELECT * FROM inventory WHERE id=$id";
+            $sql = "SELECT * FROM trucks WHERE id=$id";
         }
         elseif($serial != ''){
             $serial = mysqli_real_escape_string($conn, $serial);
-            $sql = "SELECT * FROM inventory WHERE serial='$serial'";
+            $sql = "SELECT * FROM trucks WHERE serial='$serial'";
         }       
         else
             return false;
@@ -190,15 +196,15 @@ class RD_Camion{
         $this->id_encode = urlencode(base64_encode($r['id']));
         $this->marque = $r['marque'];
         $this->modele = $r['modele'];
-        $this->annee = $r['strAnnee'];
-        $this->noInventaire = $r['stock'];
-        $this->noSerie = $r['serial'];
-        $this->empattement = $r['wb'];
-        $this->essieuAvant = $r['frontaxle'];
-        $this->essieuArriere = $r['rearaxle'];
-        $this->suspensionArriere = $r['rearsuspension'];
-        $this->transmission = $r['transtype'];
-        $this->moteur = $r['engine'] == 0;
+        $this->annee = $r['intAnnee'];
+        $this->noInventaire = $r['unite'];
+        $this->noSerie = $r['noSerie'];
+        $this->empattement = $r['empattement'];
+        $this->essieuAvant = $r['essieuAvant'];
+        $this->essieuArriere = $r['essieuArriere'];
+        $this->suspensionArriere = $r['suspensionArriere'];
+        $this->transmission = $r['transmission'];
+        $this->moteur = $r['moteur'];
         $this->ratio_ar = $r['ratio_ar'];
         $this->pneu_ar_dim = $r['pneu_ar_dim'];
         $this->pneu_av_dim = $r['pneu_av_dim'];
@@ -208,7 +214,7 @@ class RD_Camion{
         $this->couleur_ex = $r['couleur_ex'];
         $this->equipements = $r['equipements'];
         $this->equipements2 = $r['equipements2'];
-        $this->hp = $r['hp'];
+        $this->hp = ""; // pas présent camions usagés
         $this->config = $r['config'];
 
         $this->beauTitre = $this->marque . "&nbsp;-&nbsp;" . $this->modele;
@@ -650,7 +656,7 @@ class RD_Camion{
     
     function getPictures($id, $newOrOld)
     {
-        if( $newOrOld == 1 )
+        if( $newOrOld == 1 || $newOrOld == 2 )
             $query = "SELECT base64_picture FROM inv_pictures WHERE product_id=$id AND base64_picture <> '' ORDER BY intorder LIMIT 1;";
         else
             $query = "SELECT base64_picture FROM pictures WHERE product_id=$id AND base64_picture <> '' ORDER BY intorder LIMIT 1;";
