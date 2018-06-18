@@ -19,10 +19,11 @@ $camion = new RD_Camion($db);
 $newOrOld = $_GET['n'];
 
 // query Camions
-if( $newOrOld == 1 )
-    $stmt = $camion->readCountFilter($_GET['params']);
-elseif( $newOrOld == 0 )
+if( $newOrOld == 0 )
     $stmt = $camion->readCountFilterUsed($_GET['params']);
+elseif( $newOrOld == 1 || $newOrOld == 2 )
+    $stmt = $camion->readCountFilter($_GET['params']);
+
 
 $num = $stmt->rowCount();
  

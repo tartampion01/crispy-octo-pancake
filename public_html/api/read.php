@@ -19,12 +19,12 @@ $camion = new RD_Camion($db);
 $newOrOld = $_GET['n'];
 
 // query Camions || trucks
-if( $newOrOld == 1 )
+if( $newOrOld == 1 || $newOrOld == 2 )
     $stmt = $camion->readTest($_GET['params']);
 elseif( $newOrOld == 0 )
     $stmt = $camion->readTestUsed($_GET['params']);
 
-if( $newOrOld == 1 )
+if( $newOrOld == 1 || $newOrOld == 2 )
     $stmtCount = $camion->readTestCount($_GET['params']);
 elseif( $newOrOld == 0 )
     $stmtCount = $camion->readTestCountUsed($_GET['params']);
@@ -51,7 +51,7 @@ if($num>0){
  
         $pictures = array();
         // Oui car le ID n'est pas écrit pareil dans les deux tables!!!
-        $stmtPictures = $camion->getPictures($newOrOld == 1 ? $id : $ID, $newOrOld);
+        $stmtPictures = $camion->getPictures($newOrOld == 1 || 2 ? $id : $ID, $newOrOld);
         
         $nbPics = $stmtPictures->rowCount();
         if($nbPics > 0){
@@ -65,7 +65,7 @@ if($num>0){
             // Pas d'images dans db on met ceci
             array_push($pictures, "../../_assets/images/camions/noimage.png");
         }
-        if( $newOrOld == 1 ){
+        if( $newOrOld == 1 || $newOrOld == 2 ){
             $Camion_item=array(
                 "id" => $id,
                 "marque" => $marque,
@@ -106,7 +106,7 @@ if($num>0){
 }
 else{
     echo json_encode(
-        array("message" => "Aucun résultat n'a été trouvé pour votre recherche.")
+        array("message" => "Aucun résultat n'a été trouvé pour votre recherche de marde.")
     );
 }
 ?>
