@@ -408,7 +408,7 @@ Class RD_Email
 //                $body .= "Travaux à faire : " . $this->travaux . "<br />";
 //                $body .= "Note spéciale: " . $this->commentaire . "<br />";
 //                $body .= "Instructions: " . $this->instructions . "<br />";
-                $body = '<p class="MsoNormal"><img src="http://www.philtourigny.com/assets/logoReseauDynamique.png" width="249" height="69" border="0" alt="Logo" title="Logo" style="display:block"></p>
+                $body = '<p class="MsoNormal"><img src="http://www.reseaudynamique.com/_assets/images/logoReseauDynamique.png" width="249" height="69" border="0" alt="Logo" title="Logo" style="display:block"></p>
                         <div><h1>Demande de bon de travail</span></h1></div>
                         <p><strong><span lang="FR-CA">Demande # :</span></strong><span lang="FR-CA">&nbsp;' . $noBonTravail . '</span></p>
                         <p><strong><span lang="FR-CA">Date :</span></strong><span lang="FR-CA">&nbsp;' . date("Y-m-d H:i:s") . '</span></p>
