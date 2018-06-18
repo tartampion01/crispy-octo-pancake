@@ -51,7 +51,7 @@ if($num>0){
  
         $pictures = array();
         // Oui car le ID n'est pas écrit pareil dans les deux tables!!!
-        $stmtPictures = $camion->getPictures($newOrOld == 1 || 2 ? $id : $ID, $newOrOld);
+        $stmtPictures = $camion->getPictures($newOrOld == 1 || $newOrOld == 2 ? $id : $ID, $newOrOld);
         
         $nbPics = $stmtPictures->rowCount();
         if($nbPics > 0){
