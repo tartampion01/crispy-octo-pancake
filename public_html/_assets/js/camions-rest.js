@@ -1,7 +1,7 @@
 $( document ).ready(function() {
-    // VAR _N est définie dans les pages d'affichage des camions neufs et usagés 1=new 0=used
+    // VAR _N est définie dans les pages d'affichage des camions neufs et usagés 1=new 0=used 2=remorque
     // je mets ça pour être certain qu'on à rien d'autre que 0 ou 1
-    if( (_N != 1) && (_N != 0) )
+    if( (_N != 1) && (_N != 0) && (_N != 2 ))
         _N = 1;
     
     // Bind click event on each filter link
@@ -28,10 +28,12 @@ $( document ).ready(function() {
                 if(customCriteria == '') {
                     if( _N == 1 )
                         customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+                    else if( _N == 2)
+                        customCriteria = ' marque = "doepker" or marque="asetrail" or marque="di-mond" ';
                     else
                         customCriteria = '';
                 }
-                
+
                 //fetchRecords(field, value, customCriteria, true, _N);
                 fetchRecords('', '', customCriteria, true, _N);
             }
@@ -68,6 +70,8 @@ $( document ).ready(function() {
         if(customCriteria == undefined) {
             if( _N == 1 )
                 customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+            else if( _N == 2)
+                customCriteria = ' marque = "doepker" or marque="asetrail" or marque="di-mond" ';
             else
                 customCriteria = '';
         }
@@ -90,6 +94,8 @@ $( document ).ready(function() {
         if(customCriteria == undefined) {
             if( _N == 1 )
                 customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+            else if( _N == 2)
+                customCriteria = ' marque = "doepker" or marque="asetrail" or marque="di-mond" ';
             else
                 customCriteria = '';
         }
