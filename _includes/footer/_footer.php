@@ -1,4 +1,3 @@
-<!--<link href="../../_assets/css/footer/_footer.css" rel="stylesheet" type="text/css"/>-->
 <div class="push"></div>
     <div class="pied">
         <div class="shrink clear">
@@ -133,6 +132,5 @@ $(window).resize(function () {
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-55593676-1', 'auto', {'name': 'nms'});
-ga('nms.send', 'pageview');$("img[src$='.png']").ready(function() {  if ($(this).height() > 0) { $(this).ifixpng(); }});$(document.body).bind('mouseover', function() { setTimeout(function() { $("img[src$='.png']").ifixpng(); }, 10); });$(document).HighlightSelector({QueryHashKeyName : 'qa',HighlightClass : 'qaHighlight'});$(document).ready(function(){});//]]>
+ga('create', 'UA-120787761-1', 'auto');
 </script>
