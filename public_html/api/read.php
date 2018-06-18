@@ -106,7 +106,7 @@ if($num>0){
 }
 else{
     echo json_encode(
-        array("message" => "Aucun résultat n'a été trouvé pour votre recherche de marde.")
+        array("message" => "Aucun résultat n'a été trouvé pour votre recherche.")
     );
 }
 ?>
