@@ -11,8 +11,8 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
 <head>
     <!-- Ces deux scripts sont présents dans la page détails -->
-    <script src="_assets/js/CUSTOMSCRIPTPAGEDETAILS.js" type="text/javascript"></script>
-    <script src="_assets/js/AJAXPAGEDETAILS.js" type="text/javascript"></script>
+    <!--<script src="_assets/js/CUSTOMSCRIPTPAGEDETAILS.js" type="text/javascript"></script>-->
+    <!--<script src="_assets/js/AJAXPAGEDETAILS.js" type="text/javascript"></script>-->
 </head>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
