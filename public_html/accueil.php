@@ -7,28 +7,28 @@
             <div class="shrink2 clear">
                 <div class="rotation">
                     <div class="leftArrow" itemid="previous-slide"></div>
-                    <div class="rightArrow" itemid="next-slide"></div>
-                        <div class="">
-                            <div class="jshowoff jshowoff-1">
-                                <div>
-                                    <img name="image" title="" src="_assets/images/homeBanner/retour-lonestar.png" alt="Retour Lonestar">
-                                </div>
-                                <div>
-                                    <a name="hyperlien" href="/camions-neufs/isuzu">
-                                        <img name="image" title="" src="_assets/images/homeBanner/isuzu.jpg" alt="isuzu">
-                                    </a>
-                                </div>
-                                <div>
-                                    <a name="hyperlien" href="/remorques-neuves">
-                                        <img name="image" title="" src="_assets/images/homeBanner/doepker.jpg" alt="doepker">
-                                    </a>
-                                </div>
-                                <div>
-                                    <img name="image" title="" src="_assets/images/menu_images/promo-site-web.jpg" alt="promo site web" />
+                        <div class="rightArrow" itemid="next-slide"></div>
+                            <div class="">
+                                <div class="jshowoff jshowoff-1">
+                                    <div>
+                                        <img name="image" title="" src="_assets/images/homeBanner/retour-lonestar.png" alt="Retour Lonestar">
+                                    </div>
+                                    <div>
+                                        <a name="hyperlien" href="/camions-neufs/isuzu">
+                                            <img name="image" title="" src="_assets/images/homeBanner/isuzu.jpg" alt="isuzu">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a name="hyperlien" href="/remorques-neuves">
+                                            <img name="image" title="" src="_assets/images/homeBanner/doepker.jpg" alt="doepker">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <img name="image" title="" src="_assets/images/menu_images/promo-site-web.jpg" alt="promo site web" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                </div>
             </div>
 	</div>
 	<div class="content accueil">
@@ -141,7 +141,7 @@
                 </div>
             </div>
 	</div>
-        <div id="c5_c68" class="push"></div>
+        <div id="" class="push"></div>
     </div>
     </form>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
