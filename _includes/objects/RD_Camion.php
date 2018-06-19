@@ -175,11 +175,7 @@ class RD_Camion{
     }
 
     public function load_used($id = 0, $serial = ''){
-        // OPEN CONNECTION
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        $conn = Database::getConn();
         
         if($id>0){
             $id = mysqli_real_escape_string($conn, $id);
@@ -652,7 +648,7 @@ class RD_Camion{
                 $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM trucks GROUP BY $params->field ORDER BY COUNT DESC";
             //echo 'QUERY #5'.$query;
         }
-        echo $query;
+        //echo $query;
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
