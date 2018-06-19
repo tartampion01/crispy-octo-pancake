@@ -55,12 +55,11 @@ function selectNewTrucksDisctinctCriteria($field, $customCriteria, $orderBy, $or
     return array_combine($fieldArray, $countArray);
 }
 
-function selectUsedTrucksDisctinctCriteria($field, $customCriteria, $orderBy, $order)
+function selectUsedTrucksDisctinctCriteria($field, $customCriteria)
 {
     $conn = Database::getConn();
-    
     //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
-    $sql = "SELECT COUNT($field) AS COUNT,$field FROM trucks WHERE $customCriteria GROUP BY $field ORDER BY $orderBy $order";
+    $sql = "SELECT COUNT($field) AS COUNT,$field FROM trucks GROUP BY $field ORDER BY COUNT DESC";
 //echo $sql;
     $result = mysqli_query($conn, $sql);
     
