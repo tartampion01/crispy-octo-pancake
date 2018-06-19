@@ -192,35 +192,36 @@ class RD_Camion{
         $r = mysqli_fetch_array($result);
     
         $this->new = 0;
-        $this->id = $r['id'];
-        $this->id_encode = urlencode(base64_encode($r['id']));
+        $this->id = $r['ID'];
+        $this->id_encode = urlencode(base64_encode($r['ID']));
         $this->marque = $r['marque'];
         $this->modele = $r['modele'];
         $this->annee = $r['intAnnee'];
         $this->noInventaire = $r['unite'];
         $this->noSerie = $r['noSerie'];
         $this->empattement = $r['empattement'];
-        $this->essieuAvant = $r['essieuAvant'];
-        $this->essieuArriere = $r['essieuArriere'];
-        $this->suspensionArriere = $r['suspensionArriere'];
+        $this->essieuAvant = $r['essieu_avant'];
+        $this->essieuArriere = $r['essieu_arriere'];
+        $this->suspensionArriere = $r['suspension_ar'];
         $this->transmission = $r['transmission'];
         $this->moteur = $r['moteur'];
         $this->ratio_ar = $r['ratio_ar'];
         $this->pneu_ar_dim = $r['pneu_ar_dim'];
         $this->pneu_av_dim = $r['pneu_av_dim'];
         $this->freins = $r['freins'];
+        $this->intMillage = $r['intMillage'];
         $this->reservoirs = $r['reservoirs'];
         $this->couleur_in = $r['couleur_in'];
         $this->couleur_ex = $r['couleur_ex'];
         $this->equipements = $r['equipements'];
-        $this->equipements2 = $r['equipements2'];
+        $this->equipement2 = $r['equipement2'];
         $this->hp = ""; // pas présent camions usagés
         $this->config = $r['config'];
 
         $this->beauTitre = $this->marque . "&nbsp;-&nbsp;" . $this->modele;
-        if( $camion->config != "-" )
+        if( $this->config != "-" )
         {
-            $this->beauTitre .= "&nbsp;-&nbsp;" . $camion->config;
+            $this->beauTitre .= "&nbsp;-&nbsp;" . $this->config;
         }
         
         $this->loadPicturesUsed();
@@ -233,7 +234,7 @@ class RD_Camion{
         global $conn;
         //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
         $sql = "SELECT base64_picture FROM inv_pictures WHERE product_id=" . $this->id . " ORDER BY intorder";
-
+echo $sql;
         $result = mysqli_query($conn, $sql);
 
         if(mysqli_num_rows($result) > 0){
@@ -362,7 +363,7 @@ class RD_Camion{
     }
     
     function readTestUsed($params){
-        
+
         // decode search parameters
         $params = json_decode($params);
         
@@ -389,9 +390,9 @@ class RD_Camion{
             }
             else {
                 $query = "SELECT * FROM trucks WHERE $where  ORDER BY marque, modele LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
-                //echo "#1". $query;
+                //echo "#2". $query;
             }
-            //echo "#1". $query;
+            //echo "#3". $query;
         }
         else {
             
@@ -411,15 +412,15 @@ class RD_Camion{
             if($where != '') {
                 // select filtered query
                 $query = "SELECT * FROM trucks WHERE $where $params->customCriteria ORDER BY marque, modele ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
-                //echo "#2". $query;
+                //echo "#4". $query;
             }
             else {
                 // select filtered query
                 $query = "SELECT * FROM trucks WHERE $params->field = '$params->value' AND $params->customCriteria ORDER BY marque, modele ".$params->sortBy." LIMIT ". ( ( $params->currentPage - 1 ) * $params->limitPerPage ) . ", $params->limitPerPage";
-                //echo "#3". $query;
+                //echo "#5". $query;
             }
         }
- //echo $query;
+ //echo "#6" . $query;
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
@@ -645,7 +646,7 @@ class RD_Camion{
                 $query = "SELECT COUNT($params->field) AS COUNT, $params->field FROM trucks GROUP BY $params->field ORDER BY COUNT DESC";
             //echo 'QUERY #5'.$query;
         }
-        //echo $query;
+        echo $query;
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
