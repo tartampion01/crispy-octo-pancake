@@ -109,7 +109,7 @@
                                 <?php echo $telephone; ?></br>
                             <?php endforeach;?>
                         </p>
-                        <div class="btnBon" style="display:block;">
+                        <div class="btnBon" style="display:none;">
                             <h2><a class="buttonBon" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::BonDeTravail) . "?succursale=" . $suc->getSuccursaleBonTravail(); ?>" target="_self">Ouvrez un bon de travail</a></h2>
                         </div>
                         <div class="btnPieces" style="display:block;">
@@ -120,8 +120,8 @@
             </div>
         </div>
     </div>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>    
     </form>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
     
 </body>
 </html>
