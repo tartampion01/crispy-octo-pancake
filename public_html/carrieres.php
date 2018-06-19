@@ -132,14 +132,17 @@
                                     <?php
                                     echo RD_Utils::GetDropDownSuccursalesCarrieres("Toutes");?>
                                     </br><hr>
-                                    <?php foreach(RD_Emploi::getLinkEmploisCourants(0) as $emploi):?>
+                                    <?php $counteEmp=0; foreach(RD_Emploi::getLinkEmploisCourants(0) as $emploi):?>
                                         <label>
                                             <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres) . '?emp=' . $emploi->lienEncode; ?>">
-                                                <?php echo $emploi->titre; ?>
+                                                <?php echo $emploi->titre; $counteEmp+=1; ?>
                                             </a>
                                         </label>
                                         </br>
-                                    <?php endforeach; ?>
+                                    <?php endforeach; if( $counteEmp == 0 ){
+                                        echo "<label>Il n'y a pas d'emplois disponibles présentement</label>";
+                                    }
+                                        ?>
                                 
                                     <hr/>
                                     <p>
