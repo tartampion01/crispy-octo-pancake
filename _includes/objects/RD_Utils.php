@@ -83,40 +83,6 @@ class RD_Utils
         print_r($ddlDebut . $options . $ddlFin);
     }
     
-    function getBase64Image(){
-        global $conn;
-        //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
-        $sql = "SELECT base64_picture FROM pictures WHERE id=4559";
-        $pic = "";
-        
-        $result = mysqli_query($conn, $sql);
-
-        if(mysqli_num_rows($result) > 0){
-            while($row = mysqli_fetch_assoc($result)) {
-                $pic = $row['picture_base64'];
-            }
-        }
-
-        return $pic;
-    }
-    
-    function getBinaryImage(){
-        global $conn;
-        //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
-        $sql = "SELECT base64_picture FROM pictures WHERE id=4559";
-        $pic = "";
-        
-        $result = mysqli_query($conn, $sql);
-
-        if(mysqli_num_rows($result) > 0){
-            while($row = mysqli_fetch_assoc($result)) {
-                $pic = $row['picture_binary'];
-            }
-        }
-
-        return $pic;
-    }
-    
     static function validateRecaptcha($captchaResponse){
         global $applicationConfig;
 
