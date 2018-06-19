@@ -1,4 +1,4 @@
-<?php
+@camionbeaudoin.com<?php
 interface nomSuccursale
 {
     const Joliette = 1;
@@ -110,7 +110,7 @@ class RD_Succursales{
     public static function getEmailDemandePieces($NomSuccursaleBase64)
     {
         $emails = '';
-/*        
+
         switch ($NomSuccursaleBase64)
         {
             // Camions Inter-Lanaudière
@@ -139,8 +139,44 @@ class RD_Succursales{
             case "R2FyYWdlIFJvYmVydA==": $emails = "proyer@camionbeaudoin.com,jpepin@camionbeaudoin.com,gagnonb@camionbeaudoin.com"; break;
             default:break;
         }
-  */        
-        $emails = "ptourigny@servicesinfo.ca,ptourigny@servicesinfo.ca";
+
+        return $emails;
+    }
+    
+    public static function getEmailBonTravail($NomSuccursaleBase64)
+    {
+        $emails = '';
+
+        switch ($NomSuccursaleBase64)
+        {
+            // Camions Inter-Lanaudière
+            case "Q2FtaW9ucyBJbnRlci1MYW5hdWRpw6hyZQ==":$emails = "services@camionsinterlanaudiere.com";break;
+            // Camions Inter-Anjou
+            case "Q2FtaW9ucyBJbnRlci1BbmpvdQ==":$emails = "service@camionsinteranjou.com";break;
+            // Inter-Boucherville
+            case "SW50ZXItQm91Y2hlcnZpbGxl": $emails = "servicecib@inter-boucherville.com"; break;
+            // Les Camions Beaudoin
+            case "TGVzIENhbWlvbnMgQmVhdWRvaW4=": $emails = "mjulien@camionbeaudoin.com"; break;
+            // Centre du Camion Beaudoin
+            case "Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==": $emails = "service@camionbeaudouin.com"; break;
+            // Charest International
+            //case "Q2hhcmVzdCBJbnRlcm5hdGlvbmFs": $emails = "service@charestinter.ca"; break;
+            // Garage Charest et Frères
+            //case "R2FyYWdlIENoYXJlc3QgZXQgRnLDqHJlcw==": $emails = "service@garagecharest.qc.ca"; break;
+            // Le Centre du Camion (Amiante)
+            case "TGUgQ2VudHJlIGR1IENhbWlvbiAoQW1pYW50ZSk=": $emails = "services@centrecamionamiante.com"; break;
+            // Le Centre Routier 1994
+            case "TGUgQ2VudHJlIFJvdXRpZXIgMTk5NA==": $emails = "service@centreroutier.com"; break;
+            // Le Centre du Camion (Beauce)
+            case "TGUgQ2VudHJlIGR1IENhbWlvbiAoQmVhdWNlKQ==": $emails = "service@centrecamionbeauce.com"; break;
+            // Camions International Élite
+            case "Q2FtaW9ucyBJbnRlcm5hdGlvbmFsIMOJbGl0ZQ==": $emails = "service@inter-quebec.com"; break;
+            // Garage Robert
+            case "R2FyYWdlIFJvYmVydA==": $emails = "service@camionbeaudoin.com"; break;
+            default:break;
+        }
+
+        //$emails = "ptourigny@servicesinfo.ca,ptourigny@servicesinfo.ca";
         
         return $emails;
     }
@@ -222,7 +258,7 @@ class RD_Succursales{
                 $this->remorquageTelephones[] = "Pagette : 819 472-8784";
                 $this->remorquageTelephones[] = "Cellulaire : 819 472-9498";
                 $this->remorquageTelephones[] = "Cellulaire : 819 314-2152";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "";
                 $this->parametreBonTravailNomSuccursale = "Centre%20du%20Camion%20Beaudoin";
                 $this->parametreDemandePiecesNomSuccursale = "Centre%20du%20Camion%20Beaudoin";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11106.822165113635!2d-72.53330098323865!3d45.89720200737321!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc813b0527f597b%3A0x1be13eca5cb42f3e!2s5360+Rue+Saint+Roch+Sud%2C+Drummondville%2C+QC%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326316710";
@@ -273,7 +309,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "Remorquage";
                 $this->remorquageInfo[] = "<b>Remorquage Rondeau</b>";
                 $this->remorquageInfo[] = "450 887-2970";
-                $this->emailOffreEmploi = "philtourigny@gmail.com"; //nadineb@camionsinterlanaudiere.com
+                $this->emailOffreEmploi = "nadineb@camionsinterlanaudiere.com";
                 $this->parametreBonTravailNomSuccursale = "Camions%20Inter-Lanaudi%C3%A8re";
                 $this->parametreDemandePiecesNomSuccursale = "Camions%20Inter-Lanaudi%C3%A8re%";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22163.018849870517!2d-73.40596211499049!3d46.02361877120809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc8bd890a98260f%3A0xbf44a24df56dd942!2s791+Rue+Samuel-Racine%2C+Joliette%2C+QC+J6E+0E8%2C+Canada!5e0!3m2!1sfr!2sfr!4v1408893246410";
@@ -318,7 +354,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "";
                 $this->parametreBonTravailNomSuccursale = "Camions%20Inter-Anjou";
                 $this->parametreDemandePiecesNomSuccursale = "Camions%20Inter-Anjou";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d11163.844011680309!2d-73.564711!3d45.611426!3m2!1i1024!2i768!4f13.1!2m1!1s8300,+rue+Edison,+Anjou,,+H1J+1S8!6i15!3m1!1sfr";
@@ -334,9 +370,9 @@ class RD_Succursales{
                 $this->telephones[] = "Téléphone : 450 655-5050";
                 $this->telephones[] = "Montréal : 514 523-5860";
                 $this->telephones[] = "Télécopieur : 450 655-5649";
-                $this->heureOuvertureLundi = " 	7:00 - 12:45 a.m.";
-                $this->heureOuvertureMardi = " 	7:00 - 12:45 a.m.";
-                $this->heureOuvertureMercredi = " 	7:00 - 12:45 a.m.";
+                $this->heureOuvertureLundi = "7:00 - 12:45 a.m.";
+                $this->heureOuvertureMardi = "7:00 - 12:45 a.m.";
+                $this->heureOuvertureMercredi = "7:00 - 12:45 a.m.";
                 $this->heureOuvertureJeudi = " 	7:00 - 12:45 a.m.";
                 $this->heureOuvertureVendredi = "7:00 - 19:00";
                 $this->heureOuvertureSamedi = "7:00 - 17:00";
@@ -365,7 +401,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "";
                 $this->parametreBonTravailNomSuccursale = "Inter-Boucherville";
                 $this->parametreDemandePiecesNomSuccursale = "Inter-Boucherville";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.664724181342!2d-73.43226168421735!3d45.557069735262516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc90313cf5751b1%3A0x467f2a404e4b0b50!2sLe+R%C3%A9seau+Dynamique+-+Inter-Boucherville!5e0!3m2!1sen!2sca!4v1450368469108";
@@ -413,7 +449,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "";
                 $this->parametreBonTravailNomSuccursale = "Les%20Camions%20Beaudoin";
                 $this->parametreDemandePiecesNomSuccursale = "Les%20Camions%20Beaudoin";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11158.484498255408!2d-72.972822!3d45.638347!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc84e18d82e8d13%3A0x6052de6f5ffc43d6!2s3255+Rue+Picard%2C+Saint-Hyacinthe%2C+QC+J2S%2C+Canada!5e0!3m2!1sfr!2s!4v1409326228145";
@@ -462,7 +498,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "";
                 $this->parametreBonTravailNomSuccursale = "";
                 $this->parametreDemandePiecesNomSuccursale = "Charest%20International";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11072.196225602798!2d-71.966232!3d46.070062999999934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb80140b34d77f7%3A0x5ffda7dc99d7f478!2s275+Boulevard+Pierre-Roux+Est%2C+Victoriaville%2C+QC+G6T%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326486269";
@@ -507,7 +543,7 @@ class RD_Succursales{
                 $this->remorquageInfo[] = "Téléphone : 819 472-9498";
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "";
                 $this->parametreDemandePiecesNomSuccursale = "Garage%20Charest%20et%20Fr%C3%A8res";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d22040.283407664505!2d-72.54211346996249!3d46.32899089635898!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc7c5ff023d1761%3A0xf01c688e04d66dfb!2s2250+Rue+Royale%2C+Trois-Rivi%C3%A8res%2C+QC+G9A+4L5%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326570152";
                 break;
@@ -552,7 +588,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com"; //agilbert@centrecamionamiante.com
+                $this->emailOffreEmploi = "agilbert@centrecamionamiante.com";
                 $this->parametreBonTravailNomSuccursale = "Le%20Centre%20du%20Camion%20(Amiante)";
                 $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20du%20Camion%20(Amiante)";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d44248.510441026425!2d-71.21615704602989!3d46.120233668091934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb836afcbac657b%3A0xf1391e007d68512!2s4680+Boulevard+Frontenac+Est%2C+Thetford+Mines%2C+QC+G6H+4G5%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326651313";
@@ -596,7 +632,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com"; //agilbert@centrecamionamiante.com
+                $this->emailOffreEmploi = "agilbert@centrecamionamiante.com";
                 $this->parametreBonTravailNomSuccursale = "Le%20Centre%20du%20Camion%20(Beauce)";
                 $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20du%20Camion%20(Beauce)";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d44234.28546235947!2d-70.66052790789594!3d46.13794390165895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb9bfb2d0bb2569%3A0xe16a57df5a27951b!2s8900+25e+Avenue%2C+Saint-Georges%2C+QC+G6A+1M8%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326747414";
@@ -652,7 +688,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "";
                 $this->parametreBonTravailNomSuccursale = "Le%20Centre%20Routier%201994";
                 $this->parametreDemandePiecesNomSuccursale = "Le%20Centre%20Routier%201994";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d42861.92243504292!2d-69.50780766765017!3d47.82273376675654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbe409656ae6dbd%3A0xa4becb558dca0615!2s375+Rue+T%C3%A9miscouata%2C+Rivi%C3%A8re-du-Loup%2C+QC+G5R+2Y9%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326819559";
@@ -707,7 +743,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "";
                 $this->parametreBonTravailNomSuccursale = "Camions%20International%20%C3%89lite";
                 $this->parametreDemandePiecesNomSuccursale = "Camions%20International%20%C3%89lite";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d43677.303696618874!2d-71.25924050704916!3d46.82731947110966!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb897c9b2487949%3A0xf512afa9a00fc899!2s265+Rue+%C3%89tienne+Dubreuil%2C+Qu%C3%A9bec%2C+QC+G1M+4A6%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326911563";
@@ -751,7 +787,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "";
                 $this->parametreBonTravailNomSuccursale = "Garage%20Robert";
                 $this->parametreDemandePiecesNomSuccursale = "Garage%20Robert";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2741.5253671513356!2d-72.71138334836269!3d46.596619579028236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc64df0b295b3d9%3A0xf26322fa98abd028!2sGarage+Robert+Inc!5e0!3m2!1sfr!2sca!4v1487884811377";
@@ -788,7 +824,7 @@ class RD_Succursales{
                 $this->parametreDemandePiecesNomSuccursale = "";
                 $this->parametreBonTravailNomSuccursale = "";
                 $this->parametreDemandePiecesNomSuccursale = "";
-                $this->emailOffreEmploi = "philtourigny@gmail.com";
+                $this->emailOffreEmploi = "";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2741.5253671513356!2d-72.71138334836269!3d46.596619579028236!2m3!"
                         . "1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc64df0b295b3d9%3A0xf26322fa98abd028!2sGarage+Robert+Inc!5e0!3m2!1sfr!2sca!4v1487884811377";
                 break;
