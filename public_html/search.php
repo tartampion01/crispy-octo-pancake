@@ -16,7 +16,9 @@
                 <div class="contenu">
                     <?php 
                         if( isset($_POST['tbSearch']))
-                        {                                
+                        {
+                            $conn = Database::getConn();
+                            
                             $searchTerm = $_POST['tbSearch'];
                             echo "<p>Résultat(s) de recherche pour : <b>" . $searchTerm . "</b></p>";
 
