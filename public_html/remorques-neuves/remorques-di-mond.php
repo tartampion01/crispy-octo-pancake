@@ -15,7 +15,7 @@
                     </div>
                     <div class="toggle">
                         <div class="btnToggle">
-                            <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
+                            <a class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
                         </div>
                         <div id="divToggle" class="showedZone" style="display:none;">
                             <span>
@@ -209,7 +209,9 @@
     $( document ).ready(function() {
     
         // On page load, trigger corresponding menu item
-        $("li[data-value='di-mond']").trigger('click');
+        //$("li[data-value='di-mond']").trigger('click');
+        // On page load, fetch all records
+        fetchRecords('', '', 'engine="-" AND marque="di-mond" AND ', true, 1);
     });
     </script>
 </body>

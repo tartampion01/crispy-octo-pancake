@@ -183,7 +183,7 @@
     $( document ).ready(function() {
         
         // On page load, fetch all records
-        fetchRecords('', '', 'engine="-" AND marque="asetrail" or marque="doepker" or marque="di-mond" AND ', true, 1);
+        fetchRecords('', '', 'engine="-" AND (marque="asetrail" or marque="doepker" or marque="di-mond") AND ', true, 1);
     });
     </script>
 </body>
