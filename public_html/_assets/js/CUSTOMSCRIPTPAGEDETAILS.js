@@ -1,3 +1,4 @@
+/*
 function LoadNmsMultiZoneContentNms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528(){
     NmsCarouselLoadOnDemandNms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b();
 }$(document).ready(function(){
@@ -137,3 +138,4 @@ $("#Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms14085
     $('#ctl28_Ne394fb4275c44f1da5ddc6c65a3d1a3b_N2d686881d1954ca1adbb2fa95aa02f31_ctl00_N776781fa500d4e4aa792bae6f1cb5678_ctl00').click(function(){ $.cookie('JSONSearch',JSON.stringify({pages:[], forms:[]}),{expires:1});   window.location='/resultats-recherche#keyword=' + encodeURIComponent($(this).siblings('input:text').val());if ('/resultats-recherche' == window.location.href.substring(0, window.location.href.indexOf('#')).replace('http://', '').replace(window.location.host, '')) {window.location.reload();}});
     $('#ctl28_Ne394fb4275c44f1da5ddc6c65a3d1a3b_N2d686881d1954ca1adbb2fa95aa02f31_ctl00_N776781fa500d4e4aa792bae6f1cb5678__txtSearchNa32e333ddb924e728779b52566acc13f').watermark('Rechercher').bind('keydown',function(evt){if (evt.keyCode==13){evt.preventDefault();
             $(this).siblings().click();return false;}});var ctl28_Ne394fb4275c44f1da5ddc6c65a3d1a3b_ctl00_Nms_Designer_Web_UI_Widget_Dynamic_NmsMenu4606ddc3c62849ada884c8f1ec6ffd2a = new Menu('ctl28_Ne394fb4275c44f1da5ddc6c65a3d1a3b_ctl00_Nms_Designer_Web_UI_Widget_Dynamic_NmsMenu4606ddc3c62849ada884c8f1ec6ffd2aUl');});
+*/
