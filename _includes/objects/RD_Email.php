@@ -77,16 +77,18 @@ Class RD_Email
         
         switch($TypeEmail)
         {
-            case TypeEmail::DemandeInformation:   $emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
-                                                  $toName  = "Philippe Tourigny";
+            case TypeEmail::DemandeInformation:   //$emailto = "philtourigny@gmail.com";
+                                                  $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
+                                                  $toName  = "";
                                                   $subject = "Demande d'information";
                                                   break;
-            case TypeEmail::PlanifierEssaiRoutier:$emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
-                                                  $toName  = "Philippe Tourigny";
+            case TypeEmail::PlanifierEssaiRoutier://$emailto = "philtourigny@gmail.com";
+                                                  $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
+                                                  $toName  = "";
                                                   $subject = "Demande de planification d'un essai routier";
                                                   break;
-            case TypeEmail::ObtenirPrix:          $emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
-                                                  $toName  = "Philippe Tourigny";
+            case TypeEmail::ObtenirPrix:          //$emailto = "philtourigny@gmail.com";
+                                                  $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
                                                   $subject = "Obtenir un prix";
                                                   $this->camion = new RD_Camion(null);
                                                   if( $NEW == 1 )
@@ -94,20 +96,24 @@ Class RD_Email
                                                   else
                                                       $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
-            case TypeEmail::DemandFinancement:    $emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
-                                                  $toName  = "Philippe Tourigny";
+            case TypeEmail::DemandFinancement:    //$emailto = "philtourigny@gmail.com";
+                                                  $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
+                                                  $toName  = "";
                                                   $subject = "Demande de financement";
                                                   break;
-            case TypeEmail::EvaluerEchange:       $emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
-                                                  $toName  = "Philippe Tourigny";
+            case TypeEmail::EvaluerEchange:       //$emailto = "philtourigny@gmail.com";
+                                                  $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
+                                                  $toName  = "";
                                                   $subject = "Demande d'évaluation d'échange";
                                                   break;
-            case TypeEmail::InscriptionNextPart:  $emailto = "philtourigny@gmail.com";
-                                                  $toName  = "Philippe Tourigny";
+            case TypeEmail::InscriptionNextPart:  //$emailto = "philtourigny@gmail.com";
+                                                  $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
+                                                  $toName  = "";
                                                   $subject = "Inscription NextPart";
                                                   break;
-            case TypeEmail::InscriptionAUTOMANN:  $emailto = "philtourigny@gmail.com"; //crouleau@inter-quebec.com
-                                                  $toName  = "Philippe Tourigny";
+            case TypeEmail::InscriptionAUTOMANN:  //$emailto = "philtourigny@gmail.com";
+                                                  $emailto= "crouleau@inter-quebec.com";
+                                                  $toName  = "";
                                                   $subject = "Inscription AUTOMANN";
                                                   break;
         }
@@ -139,11 +145,18 @@ Class RD_Email
         $this->mail->Password = $applicationConfig['smtp.server.password'];
         $this->mail->SMTPSecure = false;
         $this->mail->Port = $applicationConfig['smtp.server.port'];
-        $this->mail->setFrom('mailer@reseaudynamique.com', 'reseaudynamique.com');
-        $this->mail->addAddress($emailto, $toName);
+        $this->mail->setFrom('mailer@reseaudynamique.com', 'reseaudynamique.com');        
         $this->mail->addReplyTo($this->email, $this->prenom . " " . $this->nom);
         $this->mail->Subject = $subject;
-                
+
+        if( strpos($emailto, ",") === false )
+            $this->mail->addAddress($emailto);
+        else{
+            // Plusieurs adresses emial pour un client ex. Raph & Elo
+            foreach(explode(",",$email) as $emailaddress)
+                $this->mail->addAddress($emailaddress);
+        }
+        
         // Le body spécifique
         switch($TypeEmail)
         {
@@ -235,7 +248,7 @@ Class RD_Email
                 break;
             default:break;
         }
-        
+//echo $body;
         $this->mail->Body = $body;
         $this->mail->AltBody = "-alt-";
     }
@@ -245,8 +258,9 @@ Class RD_Email
         global $applicationConfig;
         $emailto = $toName = $subject = $body = "";
         
-        $emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
-        $toName  = "Philippe Tourigny";
+        //$emailto = "philtourigny@gmail.com";
+        $emailto = "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
+        $toName  = "";
         $subject = "Demande d'évaluation d'échange";
 
         $this->prenom = $Prenom;
@@ -277,9 +291,16 @@ Class RD_Email
         $this->mail->SMTPSecure = false;
         $this->mail->Port = $applicationConfig['smtp.server.port'];
         $this->mail->setFrom('mailer@reseaudynamique.com', 'reseaudynamique.com');
-        $this->mail->addAddress($emailto, $toName);
         $this->mail->addReplyTo($this->email, $this->prenom . " " . $this->nom);
         $this->mail->Subject = $subject;
+        
+        if( strpos($emailto, ",") === false )
+            $this->mail->addAddress($emailto);
+        else{
+            // Plusieurs adresses emial pour un client ex. Raph & Elo
+            foreach(explode(",",$email) as $emailaddress)
+                $this->mail->addAddress($emailaddress);
+        }
         
         $body .= "<table>";
         $body .= "<tr><td><b>Provient de </b></td><td><a href='";
@@ -314,7 +335,7 @@ Class RD_Email
         if( $file3 != '' ){
             $this->mail->addAttachment($file3temp, $file3);
         }
-        
+//echo $body;        
         $this->mail->Body = $body;
         $this->mail->AltBody = "-alt-";
         
@@ -328,9 +349,10 @@ Class RD_Email
         // TODO get # for succursale et incrémenter
         switch($TypeEmail)
         {
-            case TypeEmail::BonTravail: $emailto = "philtourigny@gmail.com";
+            case TypeEmail::BonTravail: //$emailto = "philtourigny@gmail.com";
+                                        $emailto = RD_Succursales::getEmailBonTravail($Succursale);
                                         //$subject = "Demande de Bon de travail";
-                                        $toName  = "Philippe Tourigny";
+                                        $toName  = "";
                                         break;
         }
 
@@ -561,7 +583,7 @@ Class RD_Email
                         <p><span lang="FR-CA">J\'autorise par ceci le travail de réparation ci-dessus à être effectué avec les matériaux nécessaires. Vous ne serez pas jugé responsable de la perte ou des dommages au véhicule, ou aux articles laissés dans le véhicule, en cas de feu,
                          de vol, d\'accident ou de toute autre cause indépendante de votre volonté. J\'autorise par ceci vous et vos employés à opérer le véhicule ci-dessus décrit à des fin d\'essais routier et ou d\'inspections. Je reconnais que vous avez un lien légal sur le véhicule
                          pour recouvrir la valeur des travaux encourue sur le véhicule. </p>
-                        <strong>Par :&nbsp;Service</strong>&nbsp;</span></p>
+                        <strong>Par :&nbsp;'. $this->responsable .'</strong>&nbsp;</span></p>
                         <p><strong><span lang="FR-CA">Instruction :</span></strong><span lang="FR-CA">&nbsp;' . $this->instructions . '&nbsp;</span></p>
                         </div>
                         </div>';
@@ -583,13 +605,12 @@ Class RD_Email
             case TypeEmail::DemandePieces: 
                                            // Cuidado vrai emails de gens dans la fonction: 
                                            $emailto = RD_Succursales::getEmailDemandePieces($Succursale);
-                                           $emailto = "philtourigny@gmail.com";
-                                           $subject = "Demande de Bon de travail";
-                                           $toName  = "Philippe Tourigny";
+                                           $subject = "Demande de pièces";
+                                           $toName  = "";
                                            break;
         }
         
-        $this->succursale = $Succursale;
+        $this->succursale = urldecode(base64_decode($Succursale));
         $this->compagnie = $Compagnie;
         $this->responsable = $Responsable;
         $this->email = urldecode($Email);
@@ -624,13 +645,13 @@ Class RD_Email
         {
             case TypeEmail::DemandePieces:
                 $body = "Demande de pièces pour : " . $this->succursale . "<br />";
-                $body .= "Compagnie: " . $this->prenom . "<br />";                     // On passe la compagnie dans le prenom
+                $body .= "Compagnie: " . $this->compagnie . "<br />";                     // On passe la compagnie dans le prenom
                 $body .= "Responsable: " . $this->responsable . "<br />";
                 $body .= "Telephone: " . $this->telephone . "<br />";
                 $body .= "Courriel: " . $this->email . "<br />";
-                $body .= "Pièces: " . $this->nom . "<br />";                           // On passe les pièces dans le nom
-                if( $this->commentaire != "" )
-                    $body .= "Commentaire: " . $this->commentaire . "<br /><br />";
+                $body .= "Pièces: " . $this->pieces . "<br />";                           // On passe les pièces dans le nom
+                if( $this->description != "" )
+                    $body .= "Description: " . $this->description . "<br /><br />";
                 break;
             default:break;
         }
@@ -648,14 +669,14 @@ Class RD_Email
         // id = -1 quand c'est une candidature spontanée
         if($emploi->id != -1 ){
             $emailto = $emploi->succursaleObj->emailOffreEmploi;
-            $toName  = "Philippe Tourigny";
+            $toName  = "";
             $subject = "Réponse pour l'offre d'emploi: " .$emploi->titre . " - [ " . $emploi->referenceInterne . " ] - " . $emploi->succursaleObj->ville;
             $bodyHeader = '<h1>Candidature pour le poste de <a name="hyperlien" href="'.                    
                             RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_OffreEmploi) . '?emp=' . $emploi->lienEncode .'">'. $emploi->titre .'</a></h1>';
         }
         else{
-            $emailto = "philtourigny@gmail.com";
-            $toName  = "Philippe Tourigny";
+            $emailto = "rh@camionbeaudoin.com";
+            $toName  = "";
             $subject = "Candidature spontanée provenant de www.reseaudynamique.com";
             $bodyHeader = '<h1>Candidature spontanée</h1>';
         }
@@ -672,8 +693,7 @@ Class RD_Email
         $this->mail->SMTPSecure = false;
         $this->mail->Port = $applicationConfig['smtp.server.port'];
         $this->mail->setFrom('mailer@reseaudynamique.com', 'reseaudynamique.com');
-        $this->mail->addAddress($emailto, $toName);
-        $this->mail->addAddress($this->email);
+        $this->mail->addAddress($emailto, $toName);        
         $this->mail->addReplyTo($this->email);
         $this->mail->Subject = $subject;
         
