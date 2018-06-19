@@ -17,9 +17,9 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Marque</a>
                                 <ul class="marque" style="">
-                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('marque', 'COUNT', 'DESC'); ?>
+                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('marque', ' marque<>"capacity" and marque<>"asetrail" ', 'COUNT', 'DESC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
-                                        <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria='' data-selected="false">
+                                        <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria=' marque<>"capacity" and marque<>"asetrail" ' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?marque=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                             <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                         </li>
@@ -29,9 +29,9 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Modèle</a>
                                 <ul class="modele" style="">
-                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('modele', 'modele', 'ASC'); ?>
+                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('modele', ' marque<>"capacity" and marque<>"asetrail" ', 'modele', 'ASC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
-                                        <li class="GpcMenuItem filter-link" data-field='modele' data-value='<?PHP echo $key ?>' data-custom-criteria='' data-selected="false">
+                                        <li class="GpcMenuItem filter-link" data-field='modele' data-value='<?PHP echo $key ?>' data-custom-criteria=' and marque<>"capacity" and marque<>"asetrail" ' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?modele=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                             <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                         </li>
@@ -41,9 +41,9 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Transmission</a>
                                 <ul class="transmission" style="">
-                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('transmission', 'transmission', 'ASC'); ?>
+                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('transmission', ' transmission<>"" AND marque<>"capacity" AND marque<>"asetrail" ', 'transmission', 'ASC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
-                                        <li class="GpcMenuItem filter-link" data-field='transmission' data-value='<?PHP echo str_replace('+', '%2B', $key) ?>' data-custom-criteria='' data-selected="false">
+                                        <li class="GpcMenuItem filter-link" data-field='transmission' data-value='<?PHP echo str_replace('+', '%2B', $key) ?>' data-custom-criteria=' transmission<>"" AND marque<>"capacity" AND marque<>"asetrail" ' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?transmission=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                             <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                         </li>
@@ -53,9 +53,9 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Moteur</a>
                                 <ul class="moteur" style="">
-                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('moteur', 'moteur', 'ASC'); ?>
+                                    <?PHP $results = selectUsedTrucksDisctinctCriteria('moteur', ' moteur<>"" AND marque<>"capacity" AND marque<>"asetrail" ', 'moteur', 'ASC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
-                                        <li class="GpcMenuItem filter-link" data-field='moteur' data-value='<?PHP echo $key ?>' data-custom-criteria='' data-selected="false">
+                                        <li class="GpcMenuItem filter-link" data-field='moteur' data-value='<?PHP echo $key ?>' data-custom-criteria=' moteur<>"" AND marque<>"capacity" AND marque<>"asetrail" ' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?moteur=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                             <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                         </li>
@@ -172,17 +172,15 @@
                         <h2>
                             <span class="ProductBrokerType_String">${marque}</span>
                             <span>&nbsp;</span>
-                            <span class="ProductBrokerType_String">${Model}</span>
+                            <span class="ProductBrokerType_String">${modele}</span>
                             <span>&nbsp;</span>
-                            <span>
-                                <span class="ProductBrokerType_String">6 x 4</span>
-                            </span>
+                            <span class="ProductBrokerType_String">${config}</span>
                         </h2>
                     </div>
                     <div class="customField">
                         <div class="forBroker label zoneForBroker">
                             <span class="forBroker label spanForBroker">No d'inventaire : </span>
-                            <span class="ProductBrokerType_String">${stock}</span>
+                            <span class="ProductBrokerType_String">${unite}</span>
                         </div>
                     </div>
                     <div class="customField">
@@ -194,13 +192,13 @@
                     <div class="customField">
                         <div class="forBroker">
                             <span class="forBroker">Modèle : </span>
-                            <span class="ProductBrokerType_String">${Model}</span>
+                            <span class="ProductBrokerType_String">${modele}</span>
                         </div>
                     </div>
                     <div class="customField">
                         <div class="forBroker">
                             <span class="forBroker">Moteur : </span>
-                            <span class="ProductBrokerType_String">${engine}</span>
+                            <span class="ProductBrokerType_String">${moteur}</span>
                         </div>
                     </div>
                     <div class="inPromo">
@@ -217,7 +215,7 @@
     $( document ).ready(function() {
         
         // On page load, fetch all records
-        fetchRecords('', '', '', true, 0);
+        fetchRecords('', '', '  marque<>"capacity" and marque<>"asetrail" ', true, 0);
     });
     </script>
 </body>
