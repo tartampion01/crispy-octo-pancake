@@ -234,7 +234,7 @@ class RD_Camion{
         global $conn;
         //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
         $sql = "SELECT base64_picture FROM inv_pictures WHERE product_id=" . $this->id . " ORDER BY intorder";
-echo $sql;
+        //echo $sql;
         $result = mysqli_query($conn, $sql);
 
         if(mysqli_num_rows($result) > 0){
