@@ -28,38 +28,24 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
                         </span>
                     </h1>
                 </div>
-                <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537" class="Nms1408540578537 contenu" data-staticClassNames="Nms1408540578537 contenu">
-                    <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538" class="Nms1408540578538 left" data-staticClassNames="Nms1408540578538 left">
-                        <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_Nms1408540578539" class="Nms1408540578539 toggle toggle-product clear" data-staticClassNames="Nms1408540578539 toggle clear">
-                            <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_Nms1408540578539_N61ad43b3bd3d423b8713fb1e4aeee10a" class="N61ad43b3bd3d423b8713fb1e4aeee10a N61ad43b3bd3d423b8713fb1e4aeee10aCss" data-staticClassNames="N61ad43b3bd3d423b8713fb1e4aeee10a N61ad43b3bd3d423b8713fb1e4aeee10aCss">
-                                <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_Nms1408540578539_N61ad43b3bd3d423b8713fb1e4aeee10a_defaultZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZonea86c374723e64ec78f43b0e26fba6f27" class="defaultZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZonea86c374723e64ec78f43b0e26fba6f27 specToggle" data-staticClassNames="defaultZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZonea86c374723e64ec78f43b0e26fba6f27 specToggle" style="display:none;">
-                                    Sp&#233;cifications
-                                </div>
-                                <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_Nms1408540578539_N61ad43b3bd3d423b8713fb1e4aeee10a_hoverZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZonea86c374723e64ec78f43b0e26fba6f27" class="hoverZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZonea86c374723e64ec78f43b0e26fba6f27 " data-staticClassNames="hoverZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZonea86c374723e64ec78f43b0e26fba6f27 " style="display:none;">
-                                </div>
-                                <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_Nms1408540578539_N61ad43b3bd3d423b8713fb1e4aeee10a_selectedZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZonea86c374723e64ec78f43b0e26fba6f27" class="selectedZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZonea86c374723e64ec78f43b0e26fba6f27 specToggle selected" data-staticClassNames="selectedZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZonea86c374723e64ec78f43b0e26fba6f27 specToggle selected">
-                                    Sp&#233;cifications
-                                </div>
-                                <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_Nms1408540578539_N61ad43b3bd3d423b8713fb1e4aeee10a_selectedHoverZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZonea86c374723e64ec78f43b0e26fba6f27" class="selectedHoverZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZonea86c374723e64ec78f43b0e26fba6f27 " data-staticClassNames="selectedHoverZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZonea86c374723e64ec78f43b0e26fba6f27 " style="display:none;">
+                <div class="contenu">
+                    <div class="left">
+                        <div class="toggle toggle-product clear">
+                            <div>
+                                <div class="specToggle selected" style="">
+                                    Spécifications
                                 </div>
                             </div>
-                            <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_Nms1408540578539_N4f26a07e93be4a3fb53619e9fb9322fa" class="N4f26a07e93be4a3fb53619e9fb9322fa toggle12" data-staticClassNames="N4f26a07e93be4a3fb53619e9fb9322fa toggle12">
-                                <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_Nms1408540578539_N4f26a07e93be4a3fb53619e9fb9322fa_defaultZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZone11684894dbca4a41b860e3aaeb25ced0" class="defaultZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZone11684894dbca4a41b860e3aaeb25ced0 picToggle" data-staticClassNames="defaultZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZone11684894dbca4a41b860e3aaeb25ced0 picToggle" style="display:;">
+                            <div >
+                                <div class="picToggle" style="">
                                     Photos
-                                </div>
-                                <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_Nms1408540578539_N4f26a07e93be4a3fb53619e9fb9322fa_hoverZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZone11684894dbca4a41b860e3aaeb25ced0" class="hoverZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZone11684894dbca4a41b860e3aaeb25ced0 " data-staticClassNames="hoverZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZone11684894dbca4a41b860e3aaeb25ced0 " style="display:none;">
-                                </div>
-                                <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_Nms1408540578539_N4f26a07e93be4a3fb53619e9fb9322fa_selectedZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZone11684894dbca4a41b860e3aaeb25ced0" class="selectedZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZone11684894dbca4a41b860e3aaeb25ced0 picToggle selected" data-staticClassNames="selectedZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZone11684894dbca4a41b860e3aaeb25ced0 picToggle selected" style="display:none;">
-                                    Photos
-                                </div>
-                                <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_Nms1408540578539_N4f26a07e93be4a3fb53619e9fb9322fa_selectedHoverZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZone11684894dbca4a41b860e3aaeb25ced0" class="selectedHoverZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZone11684894dbca4a41b860e3aaeb25ced0 " data-staticClassNames="selectedHoverZone_Nms_Designer_Web_UI_Widget_Zone_NmsToggleZone11684894dbca4a41b860e3aaeb25ced0 " style="display:none;">
                                 </div>
                             </div>
                         </div>
-                        <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a" class="N30cc730eb5cf488491c6832748930e4a info" data-staticClassNames="N30cc730eb5cf488491c6832748930e4a info">
-                            <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_MultiZone_Nms_Designer_Web_UI_Widget_Zone_NmsMultiZone3304701d9c6d43d4a1ed1012bfe4feaf" class="MultiZone_Nms_Designer_Web_UI_Widget_Zone_NmsMultiZone3304701d9c6d43d4a1ed1012bfe4feaf MultiZone_Nms_Designer_Web_UI_Widget_Zone_NmsMultiZone3304701d9c6d43d4a1ed1012bfe4feafCss" data-staticClassNames="MultiZone_Nms_Designer_Web_UI_Widget_Zone_NmsMultiZone3304701d9c6d43d4a1ed1012bfe4feaf MultiZone_Nms_Designer_Web_UI_Widget_Zone_NmsMultiZone3304701d9c6d43d4a1ed1012bfe4feafCss" style="display:;">
-                                <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_MultiZone_Nms_Designer_Web_UI_Widget_Zone_NmsMultiZone3304701d9c6d43d4a1ed1012bfe4feaf_Nms1408544369806" class="Nms1408544369806 bref" data-staticClassNames="Nms1408544369806 bref">
-                                    <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_MultiZone_Nms_Designer_Web_UI_Widget_Zone_NmsMultiZone3304701d9c6d43d4a1ed1012bfe4feaf_Nms1408544369806_Nms1408544369807" class="Nms1408544369807 left" data-staticClassNames="Nms1408544369807 left">
+                        <div class="info">
+                            <div class="content-spec">
+                                <div class="bref">
+                                    <div class="left">
                                         <div class="forBroker">
                                             <span class="icon"><img class="" name="image" title="" src="/_assets/images/menu_images/icon-marque.png" alt="Marque"></span>
                                             <span class="forBroker marque">Marque :&nbsp;</span>
@@ -96,19 +82,19 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
                                             <span class=""></span>
                                         </div>
                                     </div>
-                                    <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_MultiZone_Nms_Designer_Web_UI_Widget_Zone_NmsMultiZone3304701d9c6d43d4a1ed1012bfe4feaf_Nms1408544369806_Nms1408544369814" class="Nms1408544369814 right" data-staticClassNames="Nms1408544369814 right">
+                                    <div class="right">
                                         <img data-categorizedconfig="null" brokeridentifier="InventoryProductBroker_DefaultImage" src="<?php echo $camion->pictures[0]; ?>" title="<?php echo $camion->beauTitre ?>" />
                                     </div>
                                 </div>
-                                <div id="" class="caracteristiques" data-staticClassNames="caracteristiques">
-                                    <div id="" class="titre" data-staticClassNames="titre">
-                                        <h2 id="">Caract&#233;ristiques</h2>
+                                <div class="caracteristiques">
+                                    <div class="titre">
+                                        <h2>Caractéristiques</h2>
                                     </div>
 
 
-                                    <div id="" class="forBroker" data-staticClassNames="forBroker">
-                                        <span id="" class="forBroker" data-staticClassNames="forBroker">Empattement</span>
-                                        <span class="ProductBrokerType_Integer" >126</span>
+                                    <div class="forBroker">
+                                        <span class="forBroker">Empattement</span>
+                                        <span class="ProductBrokerType_Integer">126</span>
                                     </div>
 
                                     <?php if($camion->empattement != "")
@@ -140,11 +126,11 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
                                 </div>
                             </div>
                             
-                            <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528" class="NmsZone1408544053528 NmsZone1408544053528Css" data-staticClassNames="NmsZone1408544053528 NmsZone1408544053528Css" style="display:none;">
-                                <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec" class="N2e91e40d87cd4465b53f539486b158ec GpcImageViewerHorizontal" data-excludeDefaultImage="false" data-maxResults="0" data-staticClassNames="N2e91e40d87cd4465b53f539486b158ec GpcImageViewerHorizontal">
-                                    <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_lightboxZoneNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b" class="lightboxZoneNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcLightBoxZone" data-staticClassNames="lightboxZoneNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcLightBoxZone">
+                            <div class="content-pic" style="display:none;">
+                                <div class=" GpcImageViewerHorizontal">
+                                    <div class=" GpcLightBoxZone">
                                         
-                                        <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_lightboxZoneNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_lightboxNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b" class="lightboxNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcLightBox ItemIDlightboxNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b" data-staticClassNames="lightboxNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcLightBox">
+                                        <div class="GpcLightBox">
                                             <?php
                                             if(isset($camion->pictures[0]) && !empty($camion->pictures[0])) {
                                                 echo '<img src="' . $camion->pictures[0] . '" class="lightbox-image" alt="" />';
@@ -153,11 +139,11 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
                                         </div>
                                         
                                     </div>
-                                    <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b" class="GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcCarouselAndButtons" data-staticClassNames="GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcCarouselAndButtons">
-                                        <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselPreviousNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b" class="GpcCarouselPreviousNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcCarouselPrevious" data-staticClassNames="GpcCarouselPreviousNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcCarouselPrevious">
+                                    <div class="GpcCarouselAndButtons">
+                                        <div class="GpcCarouselPrevious">
                                         </div>
-                                        <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b" class="GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcCarouselWrapper" data-staticClassNames="GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcCarouselWrapper">
-                                            <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b" class="GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcCarousel" data-staticClassNames="GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcCarousel">
+                                        <div class="GpcCarouselWrapper">
+                                            <div class="GpcCarousel">
                                                 
                                                 <?php
                                                 $count = 0;
@@ -174,10 +160,10 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
 
                                             </div>
                                         </div>
-                                        <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNextNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b" class="GpcCarouselNextNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcCarouselNext" data-staticClassNames="GpcCarouselNextNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcCarouselNext">
+                                        <div class="GpcCarouselNext">
                                         </div>
                                     </div>
-                                    <div id="Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcClearNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b" class="GpcClearNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcClear" data-staticClassNames="GpcClearNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b GpcClear">
+                                    <div class="GpcClear">
                                     </div>
                                 </div>
                             </div>
@@ -222,7 +208,7 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-120787761-1', 'auto');
-
+/*
 function NmsCarouselLoadOnDemandNms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b() {
     window['bxNms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b']=$("#Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b").bxSlider( {
         nextSelector: "div[ItemID='GpcCarouselNextNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b']", 
@@ -272,7 +258,7 @@ NmsLengthUnitEnum= {
 ;
 $(document).ready(function() {}
 
-); //]]>
+);*/ //]]>
 </script>
 </form>
 </body>
