@@ -6,7 +6,7 @@
         header("Location: accueil.php");
     
 $camion = new RD_Camion(null);
-$camion->load_new(base64_decode(urldecode($_GET["id"])));
+$camion->load_used(base64_decode(urldecode($_GET["id"])));
 ?>
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
 <head>
@@ -71,10 +71,10 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
                                             <span class="forBroker serie">No Série :&nbsp;</span>
                                             <span class=""><?php echo $camion->noSerie ?></span>
                                         </div>
-                                        <div class="forBroker" style="display:none;">
+                                        <div class="forBroker">
                                             <span class="icon"><img class="" name="image" title="" src="/_assets/images/menu_images/icon-kilometrage.png" alt="Kilometrage"></span>
                                             <span class="forBroker kilometrage">Kilométrage :&nbsp;</span>
-                                            <span class=""></span>
+                                            <span class=""><?php echo $camion->intMillage ?></span>
                                         </div>
                                         <div class="forBroker lePrix isUsed-" style="display:none;">
                                             <span class="icon"><img class="" name="image" title="" src="/_assets/images/menu_images/icon-prix.png" alt="Prix"></span>
@@ -116,7 +116,9 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
                                     <?php if($camion->color != "")
                                         echo "<div class='forBroker'><span class='forBroker'>Couleur</span><span class='ProductBrokerType_Integer'>" . $camion->color . "</div>";?>
                                     <?php if($camion->equipements != "")
-                                        echo "<div class='forBroker'><span class='forBroker'>Équipement</span><span class='ProductBrokerType_Integer'>" . $camion->equipment . "</div>";?>
+                                        echo "<div class='forBroker'><span class='forBroker'>Équipement</span><span class='ProductBrokerType_Integer'>" . $camion->equipements . "</div>";?>
+                                    <?php if($camion->equipement2 != "")
+                                        echo "<div class='forBroker'><span class='forBroker'>Équipement</span><span class='ProductBrokerType_Integer'>" . $camion->equipement2 . "</div>";?>
                                 </div>
                             </div>
                             
@@ -171,22 +173,22 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
                             </div>
                         </div>
                         <div class="options">
-                            <a class="demandeDinfo" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeInformation) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
+                            <a class="demandeDinfo" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeInformation) . "?id=" . $camion->id_encode . "&n=" . base64_encode(0); ?>" target="_self">
                                 Demande d'information
                             </a>
-                            <a class="essaiRoutier" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::PlanifierEssaiRoutier) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
+                            <a class="essaiRoutier" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::PlanifierEssaiRoutier) . "?id=" . $camion->id_encode . "&n=" . base64_encode(0); ?>" target="_self">
                                 Planifier un essai routier
                             </a>
                             <a class="trouverConcessionnaire" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::NousJoindre); ?>" target="_self">
                                 Trouver un concessionnaire
                             </a>
-                            <a class="orange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
+                            <a class="orange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(0); ?>" target="_self">
                                 Obtenir un prix
                             </a>
-                            <a class="orange" name="orange" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeFinancement) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">
+                            <a class="orange" name="orange" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeFinancement) . "?id=" . $camion->id_encode . "&n=" . base64_encode(0); ?>">
                                 Demande de financement
                             </a>
-                            <a class="orange" name="orange" href="<?php echo RD_PageLink::getHref(folder::Root, page::EvaluerEchange) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">
+                            <a class="orange" name="orange" href="<?php echo RD_PageLink::getHref(folder::Root, page::EvaluerEchange) . "?id=" . $camion->id_encode . "&n=" . base64_encode(0); ?>">
                                 Évaluer mon échange
                             </a>
                         </div>
