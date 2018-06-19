@@ -152,9 +152,9 @@
             <p>Avec Réseau Dynamique, vous faites un choix sensé pour le présent et le futur. Les&nbsp;<a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>" target="_self">19 centres de pièces et services du Réseau</a> dispersés sur le territoire québécois assurent aux clients de Réseau Dynamique un service après-vente inégalable. Remettez l'entretien de votre camion ou de votre flotte entre les mains de techniciens formés directement par les fabricants.</p>
             <p>Disponibles en un seul endroit au Centre-du-Québec, venez faire l'essai de nos camions d'occasion.</p>
         </div>
-    </div>        
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>    
+    </div>                
     </form>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
     
     <div class="loading-overlay">Loading&#8230;</div>
     

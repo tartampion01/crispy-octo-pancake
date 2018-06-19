@@ -143,7 +143,7 @@
 	</div>
         <div id="c5_c68" class="push"></div>
     </div>
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
-</form>
+    </form>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </body>
 </html>

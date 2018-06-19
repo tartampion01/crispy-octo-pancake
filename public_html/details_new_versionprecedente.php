@@ -228,8 +228,9 @@
         </div>
     </div>
 </div>
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </form>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
+
     
     <!--<div id="stcpDiv" style="position: absolute; top: -1999px; left: -1988px;">ShareThis Copy and Paste</div>
     <div id="stwrapper" class="stwrapper stwrapper4x" style="display: block;">

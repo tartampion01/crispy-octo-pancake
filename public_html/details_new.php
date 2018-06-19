@@ -194,7 +194,6 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
                 </div>
             </div>
 	</div>
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
         <script type="text/javascript">
 //<![CDATA[
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -255,5 +254,6 @@ $(document).ready(function() {}
 );*/ //]]>
 </script>
 </form>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </body>
 </html>

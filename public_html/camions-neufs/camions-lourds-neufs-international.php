@@ -167,9 +167,9 @@
             </div>
             <div class="FacetedExplorerClear GpcClear"></div>
         </div>
-    </div>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
+    </div>    
     </form>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
     
     <div class="loading-overlay">Loading&#8230;</div>
     

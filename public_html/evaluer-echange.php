@@ -254,7 +254,6 @@
             </div>
         </div>
     </div>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
         <!-- POUR modifier le controle de type file, sinon le texte du button est en anglais, et ça affiche "Select à file" direct au load de la page -->
         <script type="text/javascript">
             document.getElementById('file1').addEventListener('change',prep1,false);
@@ -284,5 +283,6 @@
             }
         </script>
     </form>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </body>
 </html>

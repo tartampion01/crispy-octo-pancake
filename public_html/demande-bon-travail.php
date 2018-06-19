@@ -508,9 +508,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
+    </div>    
     </form>    
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
     <script src="https://www.google.com/recaptcha/api.js?hl=fr-CA" async defer></script>
 </body>
 </html>
