@@ -42,9 +42,9 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Marque</a>
                                 <ul class="marque" style="">
-                                    <?PHP $results = selectNewTrucksDisctinctCriteria('marque', 'engine <> "-" AND ', 'COUNT', 'DESC' ); ?>
+                                    <?PHP $results = selectNewTrucksDisctinctCriteria('marque', ' marque <> "asetrail" AND marque <> "doepker" AND marque <> "BWS" AND ', 'COUNT', 'DESC' ); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
-                                        <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria='engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ' data-selected="false">
+                                        <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria=' marque <> "asetrail" AND marque <> "doepker" AND marque <> "BWS" AND ' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?marque=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                             <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                         </li>
@@ -54,9 +54,9 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Modèle</a>
                                 <ul class="Model" style="">
-                                    <?PHP $results = selectNewTrucksDisctinctCriteria('Model', 'engine <> "-" AND ', 'Model', 'ASC'); ?>
+                                    <?PHP $results = selectNewTrucksDisctinctCriteria('Model', ' marque <> "asetrail" AND marque <> "doepker" AND marque <> "BWS" AND ', 'Model', 'ASC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
-                                        <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>' data-custom-criteria='engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ' data-selected="false">
+                                        <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>' data-custom-criteria=' marque <> "asetrail" AND marque <> "doepker" AND marque <> "BWS" AND ' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?Model=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                             <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                         </li>
@@ -165,12 +165,12 @@
                         </div>
                     </div>
                 </div>
-
+                
             </div>
             <div class="FacetedExplorerClear GpcClear"></div>
         </div>
     </div>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>    
     </form>
     
     <div class="loading-overlay">Loading&#8230;</div>
@@ -232,7 +232,7 @@
     
     <script>
     $( document ).ready(function() {
-        
+    
         // On page load, trigger corresponding menu item
         $("li[data-value='Kalmar']").trigger('click');
     });
