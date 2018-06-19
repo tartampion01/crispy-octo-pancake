@@ -404,9 +404,7 @@
                                 <input type="radio" id="rbInstruction" name="rbInstruction" value="1">&nbsp;Je demande un estimé écrit avant le début des travaux.</label>
                             <label>
                                 <input type="radio" name="rbInstruction" id="rbInstruction" value="2">&nbsp;Veuillez procéder aux réparations mais appelez-moi pour approbation avant de continuer si le prix excède $ </label>
-                                <span class="prixSpan">
-                                    <input name="tbPrixReparationMax" id="tbPrixReparationMax" type="text" value=<?php echo $prixMax;?>><?php echo $prixMaxErr;?>
-                                </span>
+                                <input style="width:75px;" name="tbPrixReparationMax" id="tbPrixReparationMax" type="text" value=<?php echo $prixMax;?>><?php echo $prixMaxErr;?>
                             <label class="widthError">
                                 <input type="radio" name="rbInstruction" id="rbInstruction" value="3">&nbsp;Je ne veux pas d'évaluation et vous pouvez procéder aux reparations.
                             </label>
