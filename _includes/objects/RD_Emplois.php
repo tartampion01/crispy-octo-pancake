@@ -36,7 +36,7 @@ class RD_Emploi{
     }
     
     public function load($id = 0, $referenceInterne = ''){
-        global $conn;
+        $conn = Database::getConn();
         
         if($id>0){
             $id = mysqli_real_escape_string($conn, $id);
@@ -78,7 +78,7 @@ class RD_Emploi{
     
     public static function getDetailEmploi($lienEncode)
     {
-        global $conn;
+        $conn = Database::getConn();
         // Va chercher un seul emploi
         $lienDecode = urldecode(base64_decode($lienEncode));
         $emploi = new RD_Emploi(null);
@@ -139,7 +139,7 @@ class RD_Emploi{
      */
     public static function getLinkEmploisCourants($succ)
     {
-        global $conn;
+        $conn = Database::getConn();
         
         if( $succ == "Toutes" )
             $sql = "SELECT * FROM offresEmplois WHERE displayOnWeb=1 AND filled=0";

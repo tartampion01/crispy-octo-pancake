@@ -122,8 +122,8 @@ class RD_Camion{
     }
     
     public function load_new($id = 0, $serial = ''){
-        global $conn;
-        
+        $conn = Database::getConn();
+                
         if($id>0){
             $id = mysqli_real_escape_string($conn, $id);
             $sql = "SELECT * FROM inventory WHERE id=$id";
@@ -175,7 +175,11 @@ class RD_Camion{
     }
 
     public function load_used($id = 0, $serial = ''){
-        global $conn;
+        // OPEN CONNECTION
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
         
         if($id>0){
             $id = mysqli_real_escape_string($conn, $id);
@@ -231,7 +235,8 @@ class RD_Camion{
 
     public function loadPicturesNew()
     {
-        global $conn;
+        $conn = Database::getConn();
+        
         //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
         $sql = "SELECT base64_picture FROM inv_pictures WHERE product_id=" . $this->id . " ORDER BY intorder";
         //echo $sql;
@@ -257,7 +262,8 @@ class RD_Camion{
     
     public function loadPicturesUsed()
     {
-        global $conn;
+        $conn = Database::getConn();
+        
         //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
         $sql = "SELECT base64_picture FROM pictures WHERE product_id=" . $this->id . " ORDER BY intorder";
 

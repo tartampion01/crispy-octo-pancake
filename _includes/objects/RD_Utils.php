@@ -113,7 +113,7 @@ class RD_Utils
     
     static function getBonTravail($succursale)
     {
-        global $conn;
+        $conn = Database::getConn();
 
         $noBon = $conn->query("SELECT no_bon FROM bon_travail_succursales WHERE nom_succ_base64='$succursale'")->fetch_object()->no_bon;
 

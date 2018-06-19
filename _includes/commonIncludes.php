@@ -3,7 +3,7 @@
 $applicationConfig = parse_ini_file(dirname(__DIR__).'/_configs/application.ini');
 
 // CONNECTION DB
-require_once(dirname(__DIR__). '/_includes/database/dbConnect.php');
+require_once(dirname(__DIR__). '/_includes/objects/dbConnect.php');
 // FONCTIONS
 require_once(dirname(__DIR__). '/_includes/functions/dbFunctions.php');
 // SITE BUSINESS OBJECTS

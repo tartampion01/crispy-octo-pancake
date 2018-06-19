@@ -26,7 +26,8 @@ function getSuccursales($arraySuccursale)
  */
 function getNewTruck($id, $fieldCriteria='', $value='')
 {
-    global $conn; 
+    $conn = Database::getConn();
+        
     $sql = $fieldCriteria == "" ? "SELECT * FROM inventory WHERE id=".$id . " and DisplayOnWebSite=1" : "SELECT * FROM inventory WHERE $fieldCriteria='$value' and DisplayOnWebSite=1";
 
     return mysqli_query($conn, $sql);
@@ -34,10 +35,11 @@ function getNewTruck($id, $fieldCriteria='', $value='')
 
 function selectNewTrucksDisctinctCriteria($field, $customCriteria, $orderBy, $order)
 {
-    global $conn;
+    $conn = Database::getConn();
+    
     //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
     $sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE $customCriteria DisplayOnWebSite=1 GROUP BY $field ORDER BY $orderBy $order";
-
+//echo $sql;
     $result = mysqli_query($conn, $sql);
     
     $fieldArray = array();
@@ -53,11 +55,12 @@ function selectNewTrucksDisctinctCriteria($field, $customCriteria, $orderBy, $or
     return array_combine($fieldArray, $countArray);
 }
 
-function selectUsedTrucksDisctinctCriteria($field, $orderBy, $order)
+function selectUsedTrucksDisctinctCriteria($field, $customCriteria, $orderBy, $order)
 {
-    global $conn;
+    $conn = Database::getConn();
+    
     //$sql = "SELECT COUNT($field) AS COUNT,$field FROM inventory WHERE DisplayOnWebSite=1 GROUP BY $field ORDER BY " . $field;
-    $sql = "SELECT COUNT($field) AS COUNT,$field FROM trucks GROUP BY $field ORDER BY $orderBy $order";
+    $sql = "SELECT COUNT($field) AS COUNT,$field FROM trucks WHERE $customCriteria GROUP BY $field ORDER BY $orderBy $order";
 //echo $sql;
     $result = mysqli_query($conn, $sql);
     
