@@ -7,7 +7,7 @@ $( document ).ready(function() {
     });
     
     $('.information-supplementaire').on('click', function() {
-        $(this).toggleClass('open');
+        $('.showedZone').toggle();
     });
     
     // Page détails - Images rotator
@@ -15,5 +15,19 @@ $( document ).ready(function() {
         $('.GpcImageViewerItem a').removeClass('lightbox-image-selected');
         $(this).parents('.lightbox-image-link').addClass('lightbox-image-selected');
         $('.lightbox-image').attr('src', $(this).attr('src'));
+    });
+    
+    // Page détails - Toggle tab "Spécifications" - "Photos"
+    $('.specToggle').on('click', function() {
+        $('.picToggle').removeClass('selected');
+        $(this).addClass('selected');
+        $('.content-pic').hide();
+        $('.content-spec').show();
+    });
+    $('.picToggle').on('click', function() {
+        $('.specToggle').removeClass('selected');
+        $(this).addClass('selected');
+        $('.content-spec').hide();
+        $('.content-pic').show();
     });
 });
