@@ -41,9 +41,9 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Marque</a>
                                 <ul class="marque" style="">
-                                    <?PHP $results = selectNewTrucksDisctinctCriteria('marque', 'engine="-" AND marque="doepker" AND ', 'COUNT', 'DESC' ); ?>
+                                    <?PHP $results = selectNewTrucksDisctinctCriteria('marque', ' engine="-" AND marque="doepker" AND ', 'COUNT', 'DESC' ); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
-                                        <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria='engine = "-" AND marque="doepker" AND ' data-selected="false">
+                                        <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria=' engine = "-" AND marque="doepker" AND ' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?marque=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                             <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                         </li>
@@ -53,9 +53,9 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Modèle</a>
                                 <ul class="Model" style="">
-                                    <?PHP $results = selectNewTrucksDisctinctCriteria('Model', 'engine="-" AND marque="doepker" AND ', 'Model', 'ASC'); ?>
+                                    <?PHP $results = selectNewTrucksDisctinctCriteria('Model', ' engine="-" AND marque="doepker" AND ', 'Model', 'ASC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
-                                        <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>' data-custom-criteria='engine = "-" AND marque="doepker" AND ' data-selected="false">
+                                        <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>' data-custom-criteria=' engine = "-" AND marque="doepker" AND ' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?Model=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                             <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                         </li>
@@ -211,7 +211,7 @@
         // On page load, trigger corresponding menu item
         //$("li[data-value='doepker']").trigger('click');
         // On page load, fetch all records
-        fetchRecords('', '', 'engine="-" AND marque="doepker" AND ', true, 1);
+        fetchRecords('', '', ' engine="-" AND marque="doepker" AND ', true, 1);
     });
     </script>
 </body>

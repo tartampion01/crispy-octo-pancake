@@ -12,7 +12,7 @@ $( document ).ready(function() {
             var selected = $(this).data('selected');
             //$('.filter-link').removeClass('selected');
             //$('.filter-link').data('selected', false);
-            
+
             if(selected == true) {
                 $(this).data('selected', false);
                 $(this).removeClass('selected');
@@ -27,9 +27,9 @@ $( document ).ready(function() {
                 
                 if(customCriteria == '') {
                     if( _N == 1 )
-                        customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+                        customCriteria = ' (marque="international" AND DisplayOnWebSite=1) or (marque="isuzu" AND DisplayOnWebSite=1) or marque="kalmar" AND ';
                     else if( _N == 2)
-                        customCriteria = ' (marque="doepker" or marque="asetrail" or marque="di-mond") AND ';
+                        customCriteria = ' engine="-" AND marque="doepker" AND ';
                     else
                         customCriteria = '';
                 }
@@ -69,9 +69,9 @@ $( document ).ready(function() {
         }
         if(customCriteria == undefined) {
             if( _N == 1 )
-                customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+                customCriteria = ' (marque="international" AND DisplayOnWebSite=1) or (marque="isuzu" AND DisplayOnWebSite=1) or marque="kalmar" AND ';
             else if( _N == 2)
-                customCriteria = ' (marque="doepker" or marque="asetrail" or marque="di-mond") AND ';
+                customCriteria = ' engine="-" AND marque="doepker" AND ';
             else
                 customCriteria = '';
         }
@@ -93,9 +93,9 @@ $( document ).ready(function() {
         }
         if(customCriteria == undefined) {
             if( _N == 1 )
-                customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
+                customCriteria = ' (marque="international" AND DisplayOnWebSite=1) or (marque="isuzu" AND DisplayOnWebSite=1) or marque="kalmar" AND ';
             else if( _N == 2)
-                customCriteria = ' (marque="doepker" or marque="asetrail" or marque="di-mond") AND ';
+                customCriteria = ' engine="-" AND marque="doepker" AND ';
             else
                 customCriteria = '';
         }
@@ -154,6 +154,9 @@ function fetchRecords(field, value, customCriteria, resetPage, newOrOld) { // ne
                     // Set total records count
                     $('.GpcPagedResultTotalCount').html(data.countRows);
                     
+                    if(limitPerPage > data.countRows)
+                        limitPerPage = data.countRows;
+                        
                     // Set page results current count
                     var resultsRange = '';
                     if(currentPage == 1)

@@ -1,5 +1,5 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_headerUsed.php'); ?>
-<!--<script type='text/javascript'>var _N = 0;</script>-->
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
+<script type='text/javascript'>var _N = 0;</script>
 <script src="_assets/js/camions-rest.js" type="text/javascript"></script>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">

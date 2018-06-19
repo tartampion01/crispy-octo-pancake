@@ -211,7 +211,7 @@
     $( document ).ready(function() {
         
         // On page load, fetch all records
-        fetchRecords('', '', ' marque="international" AND DisplayOnWebSite=1 or marque="isuzu" AND DisplayOnWebSite=1 or marque="kalmar" AND ', true, 1);
+        fetchRecords('', '', ' (marque="international" AND DisplayOnWebSite=1) or (marque="isuzu" AND DisplayOnWebSite=1) or marque="kalmar" AND ', true, 1);
     });
     </script>
 </body>
