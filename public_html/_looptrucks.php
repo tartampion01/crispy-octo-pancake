@@ -15,7 +15,7 @@
                         
                             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 if( isset($_POST['btnUpdateImagesNewTrucks'])){
-                                    global $conn;
+                                    $conn = Database::getConn();
                                     $sql = "SELECT inventory.id FROM inventory";
                                     //$sql = "SELECT inventory.id FROM inventory WHERE id=4377";
                                     $result = mysqli_query($conn, $sql);
@@ -58,7 +58,7 @@
                                     }
                                 }
                                 if( isset($_POST['btnUpdateImagesUsedTrucks'])){
-                                    global $conn;
+                                    $conn = Database::getConn();
                                     $sql = "SELECT trucks.id FROM trucks";
                                     $result = mysqli_query($conn, $sql);
 
@@ -100,7 +100,7 @@
                                     }
                                 }
                                 if( isset($_POST['btnUpdateSingleNewTruck'])){
-                                    global $conn;
+                                    $conn = Database::getConn();
                                     $ID = $_POST['tbIDNEW'];
                                     $sql = "SELECT inventory.id FROM inventory WHERE ID=$ID";
                                     $result = mysqli_query($conn, $sql);
@@ -146,7 +146,7 @@
                                     }
                                 }
                                 if( isset($_POST['btnUpdateSingleUsedTruck'])){
-                                    global $conn;
+                                    $conn = Database::getConn();
                                     $ID = $_POST['tbIDUSED'];
                                     $sql = "SELECT trucks.id FROM trucks WHERE ID=$ID";
                                     $result = mysqli_query($conn, $sql);
@@ -191,7 +191,7 @@
                                     }
                                 }
                                 if( isset($_POST['btnUpdateSingleNewTruckWithBase64'])){
-                                    global $conn;
+                                    $conn = Database::getConn();
                                     if(isset($_POST['tbIDNewBase64']) && isset($_POST['tbNewbase64']))
                                     {
                                         $ID = $_POST['tbIDNewBase64'];
@@ -211,7 +211,7 @@
                                     }
                                 }
                                 if( isset($_POST['btnUpdateSingleUsedTruckWithBase64'])){
-                                    global $conn;
+                                    $conn = Database::getConn();
                                     if(isset($_POST['tbIDUsedBase64']) && isset($_POST['tbUsedBase64']))
                                     {
                                         $ID = $_POST['tbIDUsedBse64'];
@@ -229,6 +229,25 @@
                                     {
                                         echo "FILL ID and base64 value";
                                     }
+                                }
+                                if( isset($_POST['btnTestRemoteConnection'])){
+                                    $conn = Database::getConn();
+                                        
+                                    $base64 = $_POST['tbUsedBase64'];
+                                    $regurgitat = "";
+                                    
+                                    $sql = "select * FROM bon_travail_succursales";
+
+                                    $results = mysqli_query($conn, $sql);
+
+                                    if(mysqli_num_rows($results) > 0){
+                                        while($row = mysqli_fetch_assoc($results)) {
+                                            $regurgitat .= "ID&nbsp;:&nbsp;<b>" . $row['id_bon_travail_succursales'] . "</b>&nbsp;";
+                                            $regurgitat .= "Succ&nbsp;:&nbsp;<b>" . $row['nom_succ'] . "</b>&nbsp;";
+                                            $regurgitat .= "Bon&nbsp;:&nbsp;<b>" . $row['no_bon'] . "</b>&nbsp;</br>";
+                                        }
+                                    }
+                                    echo $regurgitat;
                                 }
                             }
                         ?>
@@ -255,7 +274,9 @@
                         <input type="submit" id="btnUpdateSingleNewTruckWithBase64" name="btnUpdateSingleNewTruckWithBase64" value="Update NEW" /></br>
                         <b>[</b>ID<b>]</b>&nbsp;:&nbsp;<input type='text' id='tbIDUsedBase64' name='tbIDUsedBase64' /></br>
                         <b>[</b>BASE 64<b>]</b>&nbsp;:&nbsp;<input type='text' id='tbUsedBase64' name='tbUsedBase64' /></br>
-                        <input type="submit" id="btnUpdateSingleUsedTruckWithBase64" name="btnUpdateSingleUsedTruckWithBase64" value="Update USED" />
+                        <input type="submit" id="btnUpdateSingleUsedTruckWithBase64" name="btnUpdateSingleUsedTruckWithBase64" value="Update USED" /></br>
+                        <b>[</b>TEST REMOTE DB CONNECTION<b>]</b>&nbsp;:&nbsp;</br>
+                        <input type="submit" id="btnTestRemoteConnection" name="btnTestRemoteConnection" value="YES DO IT NOW!" />
                         <br/>
                     </div>
                 </div>
