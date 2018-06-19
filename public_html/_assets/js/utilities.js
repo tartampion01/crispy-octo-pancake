@@ -30,4 +30,18 @@ $( document ).ready(function() {
         $('.content-spec').hide();
         $('.content-pic').show();
     });
+    
+    // Start Home page main rotator
+    if($(".jshowoff").length > 0) {
+        $(".jshowoff").jshowoff({
+            hoverPause:false, 
+            controls:false, 
+            changeSpeed:300, links:true, 
+            effect:'fade', 
+            autoPlay:true, 
+            speed:5000,
+            controlText:{play:'Jouer',pause:'Pause',previous:'PrÃ©cÃ©dent',next:'Suivant'}, 
+            controlZone:{ PlayPauseItemID:'', PreviousItemID:'previous-slide',NextItemID:'next-slide' }  
+        });
+    }
 });

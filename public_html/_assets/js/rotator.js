@@ -1,3 +1,4 @@
+/*
 function toggleInformationSupplementaire(id)
 {
     var x = document.getElementById(id);
@@ -16,9 +17,10 @@ function alternateDivDetailsPage(idToShow, idToHide)
     show.style.display = "inline";
     hide.style.display = "none";
 }
+*/
 
 $(document).ready(function(){
-    $(".Nms1408366976445").attr("ItemID","Nms1408366976445");
+    /*$(".Nms1408366976445").attr("ItemID","Nms1408366976445");
     $(".N116f7f7607df44ee914a4188131bc78a_N5bf9d4b4401640e8a9388d2f910e7043").attr("ItemID","N116f7f7607df44ee914a4188131bc78a_N5bf9d4b4401640e8a9388d2f910e7043");
     $(".N116f7f7607df44ee914a4188131bc78a_Nf89cb8cc15084353935abf451f4f81c9").attr("ItemID","N116f7f7607df44ee914a4188131bc78a_Nf89cb8cc15084353935abf451f4f81c9");
     $(".Na803ad8a6909445a8a5afcdfa66c0444_N607b1007d7e94ddfa6c8b7fb16377602").attr("ItemID","Na803ad8a6909445a8a5afcdfa66c0444_N607b1007d7e94ddfa6c8b7fb16377602");
@@ -58,9 +60,9 @@ $(document).ready(function(){
     $(".N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N384f9cf8833f44379cabc7ac83eba510_N776781fa500d4e4aa792bae6f1cb5678").attr("ItemID","N549e1a5b6f6f4a4d9bc7f62739bfc8ad_N384f9cf8833f44379cabc7ac83eba510_N776781fa500d4e4aa792bae6f1cb5678");
     $(document).ready(function() {}); 
     //$('form').submit (function()
-    //{ return false; });
+    //{ return false; });*/
     
-    var c5_ctl00_c7_c8_ctl00_c9 = new Menu('c5_ctl00_c7_c8_ctl00_c9Ul');
+    /*var c5_ctl00_c7_c8_ctl00_c9 = new Menu('c5_ctl00_c7_c8_ctl00_c9Ul');
     $('#c5_ctl01_c10_c11_ctl00_c17_ctl00').click(function(){ 
         $.cookie('JSONSearch',JSON.stringify({pages:[], forms:[]}),{expires:1});
         window.location='/resultats-recherche#keyword=' + encodeURIComponent($(this).siblings('input:text').val());
@@ -88,5 +90,5 @@ $(document).ready(function(){
         
     if($(".jshowoff").length > 0) {
         $(".jshowoff").jshowoff({hoverPause:false, controls:false, changeSpeed:300, links:true, effect:'fade', autoPlay:true, speed:5000,controlText:{play:'Jouer',pause:'Pause',previous:'PrÃ©cÃ©dent',next:'Suivant'}, controlZone:{ PlayPauseItemID:'', PreviousItemID:'previous-slide',NextItemID:'next-slide' }  });
-    }
+    }*/
  });
