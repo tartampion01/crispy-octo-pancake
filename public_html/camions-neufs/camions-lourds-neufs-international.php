@@ -189,9 +189,7 @@
                             <span>&nbsp;</span>
                             <span class="ProductBrokerType_String">${Model}</span>
                             <span>&nbsp;</span>
-                            <span>
-                                <span class="ProductBrokerType_String">6 x 4</span>
-                            </span>
+                            <span class="ProductBrokerType_String">${config}</span>
                         </h2>
                     </div>
                     <div class="customField">
