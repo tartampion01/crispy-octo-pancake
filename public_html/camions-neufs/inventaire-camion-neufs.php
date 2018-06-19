@@ -21,9 +21,9 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Marque</a>
                                 <ul class="marque" style="">
-                                    <?PHP $results = selectNewTrucksDisctinctCriteria('marque', ' marque="international" AND DisplayOnWebSite=1 or marque="isuzu" AND DisplayOnWebSite=1 or marque="kalmar" AND ', 'COUNT', 'DESC' ); ?>
+                                    <?PHP $results = selectNewTrucksDisctinctCriteria('marque', ' marque<> "BWS" AND marque<>"asetrail" AND marque<>"doepker" AND ', 'COUNT', 'DESC' ); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
-                                        <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria=' marque="international" AND DisplayOnWebSite=1 or marque="isuzu" AND DisplayOnWebSite=1 or marque="kalmar" AND ' data-selected="false">
+                                        <li class="GpcMenuItem filter-link" data-field='marque' data-value='<?PHP echo $key ?>' data-custom-criteria=' marque<> "BWS" AND marque<>"asetrail" AND marque<>"doepker" AND ' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?marque=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                             <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                         </li>
@@ -33,9 +33,9 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Modèle</a>
                                 <ul class="Model" style="">
-                                    <?PHP $results = selectNewTrucksDisctinctCriteria('Model', ' marque="international" AND DisplayOnWebSite=1 or marque="isuzu" AND DisplayOnWebSite=1 or marque="kalmar" AND ', 'Model', 'ASC'); ?>
+                                    <?PHP $results = selectNewTrucksDisctinctCriteria('Model', ' marque<> "BWS" AND marque<>"asetrail" AND marque<>"doepker" AND ', 'Model', 'ASC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
-                                        <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>' data-custom-criteria=' marque="international" AND DisplayOnWebSite=1 or marque="isuzu" AND DisplayOnWebSite=1 or marque="kalmar" AND ' data-selected="false">
+                                        <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>' data-custom-criteria=' marque<> "BWS" AND marque<>"asetrail" AND marque<>"doepker" AND ' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?Model=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                             <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                         </li>
@@ -57,9 +57,9 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Moteur</a>
                                 <ul class="engine" style="">
-                                    <?PHP $results = selectNewTrucksDisctinctCriteria('engine', ' marque="international" AND DisplayOnWebSite=1 or marque="isuzu" AND DisplayOnWebSite=1 or marque="kalmar" AND  ', 'engine', 'ASC'); ?>
+                                    <?PHP $results = selectNewTrucksDisctinctCriteria('engine', ' (marque<> "BWS" AND marque<>"asetrail" AND marque<>"doepker") AND ', 'engine', 'ASC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
-                                        <li class="GpcMenuItem filter-link" data-field='engine' data-value='<?PHP echo $key ?>' data-custom-criteria='' data-selected="false">
+                                        <li class="GpcMenuItem filter-link" data-field='engine' data-value='<?PHP echo $key ?>' data-custom-criteria=' (marque<> "BWS" AND marque<>"asetrail" AND marque<>"doepker") AND ' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?engine=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
                                             <?PHP echo "<a class='GpcItemTitle' href='javascript:void(0);'>$key <span class='GpcMenuItemCount'>($value)</span></a>";} ?>
                                         </li>
