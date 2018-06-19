@@ -89,7 +89,10 @@ Class RD_Email
                                                   $toName  = "Philippe Tourigny";
                                                   $subject = "Obtenir un prix";
                                                   $this->camion = new RD_Camion(null);
-                                                  $this->camion->load_new(urldecode(base64_decode($IdVehicule)));
+                                                  if( $NEW == 1 )
+                                                    $this->camion->load_new(urldecode(base64_decode($IdVehicule)));
+                                                  else
+                                                      $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
             case TypeEmail::DemandFinancement:    $emailto = "philtourigny@gmail.com";//dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com
                                                   $toName  = "Philippe Tourigny";
