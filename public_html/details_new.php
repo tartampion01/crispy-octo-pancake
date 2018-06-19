@@ -9,11 +9,6 @@ $camion = new RD_Camion(null);
 $camion->load_new(base64_decode(urldecode($_GET["id"])));
 ?>
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
-<head>
-    <!-- Ces deux scripts sont présents dans la page détails -->
-    <!--<script src="_assets/js/CUSTOMSCRIPTPAGEDETAILS.js" type="text/javascript"></script>-->
-    <!--<script src="_assets/js/AJAXPAGEDETAILS.js" type="text/javascript"></script>-->
-</head>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
         <div class="content produit">
@@ -201,57 +196,6 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-120787761-1', 'auto');
-/*
-function NmsCarouselLoadOnDemandNms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b() {
-    window['bxNms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b']=$("#Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b").bxSlider( {
-        nextSelector: "div[ItemID='GpcCarouselNextNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b']", 
-        prevSelector: "div[ItemID='GpcCarouselPreviousNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b']", 
-        speed: 200, 
-        maxSlides: 4, 
-        slideWidth: ($("#Nms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b").width()/4), 
-        infiniteLoop: false, 
-        //useCSS: (!(window.navigator.userAgent.indexOf('MSIE') > 0 || !!navigator.userAgent.match(/Trident.*rv\: 11\./))), 
-        nextText: '', 
-        prevText: '',
-    }
-    );
-    $("div[ItemID='GpcCarouselNextNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b']").click(function() {
-        bxNms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b.goToNextSlide();
-        bxNms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b.stopAuto();
-        return false;
-    }
-    );
-    $("div[ItemID='GpcCarouselPreviousNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b']").click(function() {
-        bxNms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b.goToPrevSlide();
-        bxNms1408540578531_Nms1408540578534_Nms1408540578535_Nms1408540578537_Nms1408540578538_N30cc730eb5cf488491c6832748930e4a_NmsZone1408544053528_N2e91e40d87cd4465b53f539486b158ec_GpcCarouselAndButtonsNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselWrapperNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b_GpcCarouselNms_Designer_Web_UI_Widget_Inventory_ProductImageList421ba47aa702441f81eb0e811295af7b.stopAuto();
-        return false;
-    }
-    );
-}
-
-NmsWeightUnitEnum= {
-    "None": 0, "G": 1, "Kg": 2, "Lb": 4, "Oz": 8, "Ton": 16
-}
-
-;
-NmsLengthUnitEnum= {
-    "None": 0, "Cm": 1, "M": 2, "Km": 4, "Ft": 8, "In": 16, "Yd": 32
-}
-
-;
-NmsWeightUnitEnum= {
-    "None": 0, "G": 1, "Kg": 2, "Lb": 4, "Oz": 8, "Ton": 16
-}
-
-;
-NmsLengthUnitEnum= {
-    "None": 0, "Cm": 1, "M": 2, "Km": 4, "Ft": 8, "In": 16, "Yd": 32
-}
-
-;
-$(document).ready(function() {}
-
-);*/ //]]>
 </script>
 </form>
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
