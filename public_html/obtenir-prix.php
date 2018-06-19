@@ -69,6 +69,8 @@
                                     if(!empty($_POST["hidVehiculeId"]))
                                         $VehiculeId = $_POST["hidVehiculeId"];
                                     
+                                    $NEW = $_POST['newOrUsed'];
+                                    
                                     // ENVOI EMAIL
                                     if(isset($_POST['btnSendMail']) && $errorCount == 0)
                                     {

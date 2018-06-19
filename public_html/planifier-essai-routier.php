@@ -67,6 +67,8 @@
                                     
                                     $comm = isset($_POST["tbCommentaire"]) ? RD_Utils::test_input($_POST["tbCommentaire"]) : "";
                                     
+                                    $NEW = $_POST['newOrUsed'];
+                                    
                                     if(!empty($_POST["hidVehiculeId"]))
                                         $VehiculeId = $_POST["hidVehiculeId"];
                                     
