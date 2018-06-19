@@ -29,9 +29,9 @@ $( document ).ready(function() {
                     if( _N == 1 )
                         customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
                     else if( _N == 2)
-                        customCriteria = ' (marque="doepker" or marque="asetrail" or marque="di-mond") AND ';
+                        customCriteria = ' (marque="doepker" or marque="di-mond") AND ';
                     else
-                        customCriteria = '';
+                        customCriteria = ' marque <> "asetrail" and marque <> "doepker" AND ';
                 }
 
                 //fetchRecords(field, value, customCriteria, true, _N);
@@ -51,7 +51,7 @@ $( document ).ready(function() {
             }
         });
     });
-    
+
     // Bind click event on limit per page links
     $('.limit-per-page').on('click', function() {
         $('.limit-per-page').removeClass('selected');
@@ -71,9 +71,9 @@ $( document ).ready(function() {
             if( _N == 1 )
                 customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
             else if( _N == 2)
-                customCriteria = ' (marque="doepker" or marque="asetrail" or marque="di-mond") AND ';
+                customCriteria = ' (marque="doepker" or marque="di-mond") AND ';
             else
-                customCriteria = '';
+                customCriteria = ' marque <> "asetrail" and marque <> "doepker" AND ';
         }
         
         fetchRecords(field, value, customCriteria, true, _N);
@@ -95,9 +95,9 @@ $( document ).ready(function() {
             if( _N == 1 )
                 customCriteria = 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ';
             else if( _N == 2)
-                customCriteria = ' (marque="doepker" or marque="asetrail" or marque="di-mond") AND ';
+                customCriteria = ' (marque="doepker" or marque="di-mond") AND ';
             else
-                customCriteria = '';
+                customCriteria = ' marque <> "asetrail" and marque <> "doepker" AND ';
         }
         
         fetchRecords(field, value, customCriteria, true, _N);
@@ -107,7 +107,7 @@ $( document ).ready(function() {
     //fetchRecords('', '', 'engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ', true);
 });
 
-function fetchRecords(field, value, customCriteria, resetPage, newOrOld) { // new == 1 old == 0
+function fetchRecords(field, value, customCriteria, resetPage, newOrOld) { // new == 1 old == 0 remorques == 2
     
     // Show loading spinner
     $('.loading-overlay').show();
