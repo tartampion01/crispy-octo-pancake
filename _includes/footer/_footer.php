@@ -30,7 +30,7 @@
     <div id="ctl24_c78_ctl00_c80" class="menuCss5">
         <ul id="ctl24_c78_ctl00_c80Ul" class="MenuBar">
             <li class="item4 selected first rank0" id="c80_0" expansionmode="HoverExpansion">
-                <a href="a<?php echo RD_PageLink::getHref(folder::Root,page::Accueil); ?>" class="selected first rank0" target="_self">Accueil</a>
+                <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Accueil); ?>" class="selected first rank0" target="_self">Accueil</a>
             </li>
             <li class="item13 rank1" id="" expansionmode="HoverExpansion">
                 <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Apropos); ?>" class=" rank1" target="_self">&#192; propos</a>
