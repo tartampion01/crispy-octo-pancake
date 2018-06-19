@@ -1,4 +1,4 @@
-@camionbeaudoin.com<?php
+<?php
 interface nomSuccursale
 {
     const Joliette = 1;
