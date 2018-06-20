@@ -20,7 +20,15 @@ links :				whether to create & display numeric links to each slide [boolean, def
 speed :				time each slide is shown [integer, milliseconds, defaults to 3000]
 
 */
-
+jQuery.browser = {};
+(function () {
+    jQuery.browser.msie = false;
+    jQuery.browser.version = 0;
+    if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+        jQuery.browser.msie = true;
+        jQuery.browser.version = RegExp.$1;
+    }
+})();
 (function($) {
 
 
