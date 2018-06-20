@@ -181,7 +181,7 @@
     $( document ).ready(function() {
         
         // On page load, fetch all records
-        fetchRecords('', '', ' engine="-" AND ((marque="asetrail" AND DisplayOnWebSite=1) or (marque="doepker" AND DisplayOnWebSite=1) or (marque="di-mond" AND DisplayOnWebSite=1)) AND ', true, 2);
+        fetchRecords('', '', ' engine="-" AND (marque="doepker" or marque="di-mond" or marque="asetrail") AND ', true, 2);
     });
     </script>
 </body>

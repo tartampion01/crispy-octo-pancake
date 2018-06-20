@@ -1,5 +1,5 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-<script type='text/javascript'>var _N = 2;</script>
+<script type='text/javascript'>var _N = 3;</script>
 <script src="../_assets/js/camions-rest.js" type="text/javascript"></script>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
@@ -53,7 +53,7 @@
                             <li class="GpcMenuCategory expanded">
                                 <a class="GpcMenuCategoryTitle" tabindex="">Modèle</a>
                                 <ul class="Model" style="">
-                                    <?PHP $results = selectNewTrucksDisctinctCriteria('Model',  'engine="-" AND marque="di-mond" AND ', 'Model', 'ASC'); ?>
+                                    <?PHP $results = selectNewTrucksDisctinctCriteria('Model',  ' engine="-" AND marque="di-mond" AND ', 'Model', 'ASC'); ?>
                                         <?PHP foreach($results as $key => $value){ ?>
                                         <li class="GpcMenuItem filter-link" data-field='Model' data-value='<?PHP echo $key ?>' data-custom-criteria=' engine <> "-" AND marque <> "asetrail" and marque <> "doepker" AND ' data-selected="false">
                                             <?PHP /*echo "<a class='GpcItemTitle' href='?Model=$key'>$key</a><span class='GpcMenuItemCount'>($value)</span>";}*/ ?>
@@ -211,7 +211,7 @@
         // On page load, trigger corresponding menu item
         //$("li[data-value='di-mond']").trigger('click');
         // On page load, fetch all records
-        fetchRecords('', '', ' engine="-" AND marque="di-mond" AND ', true, 1);
+        fetchRecords('', '', ' engine="-" AND marque="di-mond" AND ', true, 3);
     });
     </script>
 </body>

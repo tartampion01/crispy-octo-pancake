@@ -1,7 +1,7 @@
 $( document ).ready(function() {
-    // VAR _N est définie dans les pages d'affichage des camions neufs et usagés 1=new 0=used 2=remorque
+    // VAR _N est définie dans les pages d'affichage des camions neufs et usagés 1=new 0=used 2=remorque-all 3=remorque-di-mond 4=remorque-doepker
     // je mets ça pour être certain qu'on à rien d'autre que 0 ou 1
-    if( (_N != 1) && (_N != 0) && ( _N != 2 ))
+    if( (_N != 1) && (_N != 0) && ( _N != 2 ) && ( _N != 3 ) && ( _N != 4 ))
         _N = 1;
 
     // Bind click event on each filter link
@@ -29,11 +29,18 @@ $( document ).ready(function() {
                     if( _N == 1 )
                         customCriteria = ' (marque="international" AND DisplayOnWebSite=1) or (marque="isuzu" AND DisplayOnWebSite=1) or marque="kalmar" AND ';
                     else if( _N == 2)
+                        customCriteria = ' engine="-" AND (marque="doepker" or marque="di-mond" or marque="asetrail") AND ';
+                    else if( _N == 3)
+                        customCriteria = ' engine="-" AND marque="di-mond" AND ';
+                    else if( _N == 4)
                         customCriteria = ' engine="-" AND marque="doepker" AND ';
                     else
                         customCriteria = '';
                 }
 
+                if( _N == 3 || _N == 4)
+                    _N = 2;
+                     
                 //fetchRecords(field, value, customCriteria, true, _N);
                 fetchRecords('', '', customCriteria, true, _N);
             }
@@ -71,10 +78,17 @@ $( document ).ready(function() {
             if( _N == 1 )
                 customCriteria = ' (marque="international" AND DisplayOnWebSite=1) or (marque="isuzu" AND DisplayOnWebSite=1) or marque="kalmar" AND ';
             else if( _N == 2)
+                customCriteria = ' engine="-" AND (marque="doepker" or marque="di-mond" or marque="asetrail") AND ';
+            else if( _N == 3)
+                customCriteria = ' engine="-" AND marque="di-mond" AND ';
+            else if( _N == 4)
                 customCriteria = ' engine="-" AND marque="doepker" AND ';
             else
                 customCriteria = '';
         }
+        
+        if( _N == 3 || _N == 4)
+            _N = 2;
         
         fetchRecords(field, value, customCriteria, true, _N);
     });
@@ -95,10 +109,17 @@ $( document ).ready(function() {
             if( _N == 1 )
                 customCriteria = ' (marque="international" AND DisplayOnWebSite=1) or (marque="isuzu" AND DisplayOnWebSite=1) or marque="kalmar" AND ';
             else if( _N == 2)
+                customCriteria = ' engine="-" AND (marque="doepker" or marque="di-mond" or marque="asetrail") AND ';
+            else if( _N == 3)
+                customCriteria = ' engine="-" AND marque="di-mond" AND ';
+            else if( _N == 4)
                 customCriteria = ' engine="-" AND marque="doepker" AND ';
             else
                 customCriteria = '';
         }
+        
+        if( _N == 3 || _N == 4)
+            _N = 2;
         
         fetchRecords(field, value, customCriteria, true, _N);
     });
@@ -121,6 +142,9 @@ function fetchRecords(field, value, customCriteria, resetPage, newOrOld) { // ne
 
     // Get sortBy value
     var sortBy = $('.search-sorting option:selected').val();
+    
+    if( newOrOld == 3 || newOrOld == 4)
+        newOrOld = 2;
     
     var params = {
         'field' : field,

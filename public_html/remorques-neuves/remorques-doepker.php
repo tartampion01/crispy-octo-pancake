@@ -1,5 +1,5 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-<script type='text/javascript'>var _N = 2;</script>
+<script type='text/javascript'>var _N = 4;</script>
 <script src="../_assets/js/camions-rest.js" type="text/javascript"></script>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
@@ -211,7 +211,7 @@
         // On page load, trigger corresponding menu item
         //$("li[data-value='doepker']").trigger('click');
         // On page load, fetch all records
-        fetchRecords('', '', ' engine="-" AND marque="doepker" AND ', true, 1);
+        fetchRecords('', '', ' engine="-" AND marque="doepker" AND ', true, 4);
     });
     </script>
 </body>
