@@ -240,6 +240,9 @@ html, body, form {
   padding: 0;
   height: 100%;
 }
+form {
+    height: auto;
+}
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -2091,8 +2094,8 @@ UL.store-list {
 }
 
 .push {
-  /*height: 0px;*/
-  height: 74px;
+  height: 0px;
+  /*height: 74px;*/
   clear: both;
   position: relative;
 }
@@ -4425,4 +4428,14 @@ div {  }
 .filter-file,
 .info-file {
     font-size: 1em !important;
+}
+
+.camions-occasions .shrink:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.page-link {
+    background-color: transparent;
 }
