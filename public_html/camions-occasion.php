@@ -4,7 +4,7 @@
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
-        <div class="content">
+        <div class="content camions-occasions">
             <div class="shrink">
                 <div class="titrepage">
                     <h1>Camions d'occasion</h1>
@@ -140,18 +140,19 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="FacetedExplorerClear GpcClear"></div>
+                <div style="margin-top: 2em;">
+                    <p>Réseau Dynamique est la référence dans le domaine des camions lourds et des tracteurs terminaux d'occasion.</p>
+                    <h2>Pourquoi choisir un camion d'occasion chez Réseau Dynamique?</h2>
+                    <p>Avant d'être mis en vente, tous les véhicules d'occasion de Réseau Dynamique ont été inspectés minutieusement et réparés. Revendeur de camions de toutes classes, vous êtes assuré de trouver un camion de grande qualité répondant en tous points à vos besoins d'affaires.</p>
+                    <p>Détaillant de camions neufs de marque International, Réseau Dynamique offre des garanties prolongées du manufacturier sur les composants majeurs de ses véhicules. Les services d'experts des mécaniciens accrédités International offrent également la reconstruction complète des composants majeurs.</p>
+                    <h2>Le service après-vente : la force d'un réseau</h2>
+                    <p>Avec Réseau Dynamique, vous faites un choix sensé pour le présent et le futur. Les&nbsp;<a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>" target="_self">19 centres de pièces et services du Réseau</a> dispersés sur le territoire québécois assurent aux clients de Réseau Dynamique un service après-vente inégalable. Remettez l'entretien de votre camion ou de votre flotte entre les mains de techniciens formés directement par les fabricants.</p>
+                    <p>Disponibles en un seul endroit au Centre-du-Québec, venez faire l'essai de nos camions d'occasion.</p>
+                </div>
             </div>
             <div class="FacetedExplorerClear GpcClear"></div>
-            <div style="padding-left: 225px;padding:225px;">
-                <p>Réseau Dynamique est la référence dans le domaine des camions lourds et des tracteurs terminaux d'occasion.</p>
-                <h2>Pourquoi choisir un camion d'occasion chez Réseau Dynamique?</h2>
-                <p>Avant d'être mis en vente, tous les véhicules d'occasion de Réseau Dynamique ont été inspectés minutieusement et réparés. Revendeur de camions de toutes classes, vous êtes assuré de trouver un camion de grande qualité répondant en tous points à vos besoins d'affaires.</p>
-                <p>Détaillant de camions neufs de marque International, Réseau Dynamique offre des garanties prolongées du manufacturier sur les composants majeurs de ses véhicules. Les services d'experts des mécaniciens accrédités International offrent également la reconstruction complète des composants majeurs.</p>
-                <h2>Le service après-vente : la force d'un réseau</h2>
-                <p>Avec Réseau Dynamique, vous faites un choix sensé pour le présent et le futur. Les&nbsp;<a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>" target="_self">19 centres de pièces et services du Réseau</a> dispersés sur le territoire québécois assurent aux clients de Réseau Dynamique un service après-vente inégalable. Remettez l'entretien de votre camion ou de votre flotte entre les mains de techniciens formés directement par les fabricants.</p>
-                <p>Disponibles en un seul endroit au Centre-du-Québec, venez faire l'essai de nos camions d'occasion.</p>
-            </div>
+            
         </div>
     </div>
     </form>
