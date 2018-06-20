@@ -2099,6 +2099,9 @@ UL.store-list {
   clear: both;
   position: relative;
 }
+.home-page .push {
+    height: 74px;
+}
 
 .pied {
   height: 74px;
