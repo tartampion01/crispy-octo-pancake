@@ -36,7 +36,7 @@
                 <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Apropos); ?>" class=" rank1" target="_self">&#192; propos</a>
             </li>
             <li class="item14 rank2 parent" id="" expansionmode="ClickExpansion">
-                <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromotions); ?>" class=" rank2" target="_self">Promotions et nouvelles</a>
+                <a href="<?php //echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromotions); ?>javascript:void(0);" class=" rank2" target="_self">Promotions et nouvelles</a>
                 <div class="itemChildDiv14">
                     <ul class="itemChild14">
                         <li class="item46 first rank0" id="" expansionmode="HoverExpansion">
@@ -58,7 +58,7 @@
                 <a href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H); ?>" class=" rank3" target="_self">Urgence routi&#232;re 24h</a>
             </li>
             <li class="item5 rank4 parent" id="" expansionmode="ClickExpansion">
-                <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>" class=" rank4" target="_self">Camions neufs</a>
+                <a href="<?php //echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>javascript:void(0);" class=" rank4" target="_self">Camions neufs</a>
                 <div class="itemChildDiv5">
                     <ul class="itemChild5">
                         <li class="item59 first rank0" id="" expansionmode="HoverExpansion">
@@ -83,7 +83,7 @@
                 <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>" class=" rank6" target="_self">Remorques neuves</a>
             </li>
             <li class="item9 rank7 parent" id="" expansionmode="ClickExpansion">
-                <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>" class=" rank7" target="_self">V&#233;hicules utilitaires</a>
+                <a href="<?php //echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>javascript:void(0);" class=" rank7" target="_self">V&#233;hicules utilitaires</a>
                 <div class="itemChildDiv9">
                     <ul class="itemChild9">
                         <li class="item37 first rank0" id="" expansionmode="HoverExpansion">
@@ -105,7 +105,7 @@
                 <a href="<?php echo RD_PageLink::getHref(folder::Root,page::LocationsDeCamions); ?>" class=" rank8" target="_self">Location de camions</a>
             </li>
             <li class="item11 rank9 parent" id="" expansionmode="ClickExpansion">
-                <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesFinancement); ?>" class=" rank9" target="_self">Pi&#232;ces et services</a>
+                <a href="<?php //echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesFinancement); ?>javascript:void(0);" class=" rank9" target="_self">Pi&#232;ces et services</a>
                 <div class="itemChildDiv11">
                     <ul class="itemChild11">
                         <li class="item41 first rank0" id="" expansionmode="HoverExpansion">
