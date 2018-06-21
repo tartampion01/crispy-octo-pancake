@@ -4010,6 +4010,21 @@ max-height: 510px }
         background: url(../images/loupe-mobile.jpg) 49% 45% no-repeat #fff;
         background-size: 50%;
     }
+    
+    .search-result .contenu.contenu2 {
+        padding: 0px;
+    }
+    .search-result .more-info {
+        padding: 0 3%;
+    }
+    .search-result .titrepage {
+        padding: 0 3%;
+    }
+    
+    .btnToggle a {
+        font: 700 1.8em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+        padding: 0.8em 3%;
+    }
 }
 
 @media all and (max-width: 660px) {
