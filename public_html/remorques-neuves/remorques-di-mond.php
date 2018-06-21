@@ -10,7 +10,7 @@
                     <h1>Remorques Di-Mond neuves à vendre</h1>
                 </div>
                 <div class="contenu contenu2">
-                    <div>
+                    <div class="more-info">
                         Que vous transportiez de la marchandise standard ou de lourdes charges, les remorques fermées Di-Mond fabriquées sur mesure sont à la hauteur du défi.
                     </div>
                     <div class="toggle">

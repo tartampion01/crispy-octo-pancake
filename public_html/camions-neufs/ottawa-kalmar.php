@@ -10,7 +10,7 @@
                     <h1>Camions neufs Ottawa Kalmar</h1>
                 </div>
                 <div class="contenu contenu2">
-                    <div>
+                    <div class="more-info">
                         Réseau Dynamique, dépositaire Ottawa Kalmar, offre une large sélection de tracteurs de terminal aux différents types d'industries et d'usages.
                     </div>
                      <div class="toggle">

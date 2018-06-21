@@ -10,7 +10,7 @@
                     <h1>Camions neufs Isuzu</h1>
                 </div>
                 <div class="contenu contenu2">
-                    <div>
+                    <div class="more-info">
                         Camions les plus vendus en Amérique du Nord depuis 1986, les camions Isuzu offrent une performance de haut niveau et des prix surprenants. Présents à travers le Québec, les concessionnaires de Réseau Dynamique sont dépositaires de la gamme complète de camions Isuzu : camion léger (série N), camion moyen (série F), camion lourd (série C&amp;E). Économiques, propres et respectueux de l'environnement, ils s'imposeront comme un atout majeur dans votre entreprise.
                     </div>
                      <div class="toggle">
