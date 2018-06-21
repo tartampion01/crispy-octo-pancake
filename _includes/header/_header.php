@@ -9,6 +9,7 @@
     header("Access-Control-Allow-Methods: PUT, GET, POST");
     header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 ?>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
     <title>
         <?PHP RD_Header::getPageTitle($NOMPAGE); ?>
