@@ -22,7 +22,8 @@
     <script type='text/javascript' src='../../_assets/js/jquery-3.2.1.js'></script>
     <script type="text/javascript" src="../../_assets/js/jquery-bxslider.js" ></script>
     <!--<script type='text/javascript' src='../../_assets/js/ajax.js'></script>-->
-    <script type='text/javascript' src='../../_assets/js/utilities.js'></script>    
+    <script type='text/javascript' src='../../_assets/js/utilities.js'></script>  
+    <script type="text/javascript" src="../_assets/js/object.values.polyfill.js"></script>
     <script type='text/javascript' src='../../_assets/js/jquery.tmpl.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.twbsPagination.js'></script>
     
