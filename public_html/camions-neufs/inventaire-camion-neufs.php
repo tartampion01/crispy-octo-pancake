@@ -9,11 +9,6 @@
                 <div class="titrepage">
                     <h1>Inventaire complet</h1>
                 </div>
-                <div class="contenu contenu2">
-                    
-                </div>
-                
-                <br />
                 <div class="FacetedExplorer">
                     <div class="GpcMenuWrapper">
                         <ul class="GpcMenu FacetedNavigation">
