@@ -10,14 +10,14 @@ Object.values = Object.values ? Object.values : function(obj) {
         // if ES6 is supported
         if (Object.keys) {
             return Object.keys(obj).map(function (key) {
-                    return obj[key];
+                return obj[key];
             });
         }
 
         var result = [];
         for (var prop in obj) {
             if (obj.hasOwnProperty(prop)) {
-                    result.push(obj[prop]);
+                result.push(obj[prop]);
             }
         }
 
