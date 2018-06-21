@@ -4439,6 +4439,7 @@ div {  }
     clear: both;
 }
 
-.page-link {
+.page-link,
+.page-item.disabled .page-link {
     background-color: transparent;
 }
