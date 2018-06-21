@@ -3988,6 +3988,28 @@ max-height: 510px }
         font: 400 1em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
         padding-left: 13.2411%;
       }
+      
+      
+      .menuMobile .recherche .SearchTextBox {
+        width: 92%;
+        padding: 0px 4%;
+        height: 2em;
+        font: 400 1em/2.14em 'Montserrat', Arial, Helvetica, sans-serif;
+        color: #4c4c4c;
+        position: absolute;
+        left: 0px;
+        top: 1em;
+        border: 0px;
+      }
+      .menuMobile .recherche .SearchImage {
+        width: 14%;
+        height: 2em;
+        position: absolute;
+        right: 0px;
+        top: 1em;
+        background: url(../images/loupe-mobile.jpg) 49% 45% no-repeat #fff;
+        background-size: 50%;
+    }
 }
 
 @media all and (max-width: 660px) {
