@@ -1,7 +1,7 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="wrap">
+    <div class="">
         <div class="content search-result">
             <div class="shrink">
                 <div class="titrepage">
@@ -16,7 +16,7 @@
                             <div class="btnToggle">
                                 <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
                             </div>
-                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="display:none;">
+                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone">
                                 <span>
                                     <h2>Chargeuse sur pneus</h2>
                                     <p>En possédant un rayon de braquage égal à la longueur de la machine, les chargeuses V3 et V4 sont les véhicules utilitaires par excellence pour les travaux de bâtiments, les travaux publics, la rénovation, l'aménagement paysager et l'agriculture, entre autres. La chargeuse sur pneus, tout comme la chargeuse à direction à glissement, offre des avantages non négligeables.</p>

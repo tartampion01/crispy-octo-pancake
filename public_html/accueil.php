@@ -2,7 +2,7 @@
 <script type='text/javascript' src='../../_assets/js/jquery.jshowoff.js'></script>
 <body class="body home-page"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="wrap" data-staticClassNames="wrap">
+    <div class="" data-staticClassNames="wrap">
         <div class="banner" data-staticClassNames="banner">
             <div class="shrink2 clear">
                 <div class="rotation">

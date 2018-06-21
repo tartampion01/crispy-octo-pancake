@@ -7,7 +7,7 @@
         }
     </style>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="wrap">
+    <div class="">
         <div class="content">
             <div class="shrink">
                 <div class="titrepage">

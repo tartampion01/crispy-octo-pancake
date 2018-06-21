@@ -2,6 +2,7 @@
 $pageName = basename($_SERVER['SCRIPT_NAME']);
 ?>
 <!-- TOP MENU -->
+<div class="wrap">
 <div class="utilitaire clear">
     <div class="shrink">
         <div class="menuCss2">

@@ -1,7 +1,7 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="wrap">
+    <div class="">
         <div class="content search-result">
             <div class="shrink">
                 <div class="titrepage">
@@ -19,7 +19,7 @@
                             <div class="btnToggle">
                                 <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
                             </div>
-                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="display:none;">
+                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone">
                                 <span>
                                     <h2>Des performances exceptionnelles dans le respect de l'environnement</h2>
                                     <p >Relayez le sable, les sols meubles et marécageux ou encore les versants rescapés au dernier rang de vos soucis. Les larges chenilles en caoutchouc offrent une pression au sol très réduite et une répartition des masses évitant la détérioration inutile des sols fragiles et de l'asphalte. La benne basculante, et rotative sur 180° pour certains modèles, offre un angle de déversement important permettant un déchargement sécuritaire d'un seul coup.</p>

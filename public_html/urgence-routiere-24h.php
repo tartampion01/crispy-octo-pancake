@@ -1,11 +1,11 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="wrap">
+    <div class="">
         <div class="content">
             <div class="shrink">
                 <div class="titrepage"><h1>Urgence Routière 24h</br>pour camions lourds</h1></div>
-                <div class="contenu2">Pour toute urgence sur la route, contactez rapidement la succursale la plus près de votre emplacement et profitez d'une assistance routière ou un remorquage.</div>
+                <div class="contenu contenu2">Pour toute urgence sur la route, contactez rapidement la succursale la plus près de votre emplacement et profitez d'une assistance routière ou un remorquage.</div>
                 <div class="contenu"><div class="contenu2">
                     <h2><a href='<?php echo RD_PageLink::getHref(folder::NousJoindre,page::NousJoindreCamionsInterAnjou); ?>'>Camions Inter-Anjou</a></h2>
                     <h4>Anjou</h4>

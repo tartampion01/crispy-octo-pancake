@@ -3,10 +3,10 @@
 <script src="../_assets/js/camions-rest.js" type="text/javascript"></script>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="wrap">
+    <div class="">
         <div class="content search-result">
             <div class="shrink">
-                <div class="titrePage">
+                <div class="titrepage">
                     <h1>Camions neufs International</h1>
                 </div>
                 <div class="contenu contenu2">

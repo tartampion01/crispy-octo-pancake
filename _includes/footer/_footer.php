@@ -1,4 +1,4 @@
-<div class="push"></div>
+<div class="push"></div></div>
     <div class="pied">
         <div class="shrink clear">
             <div class="left">
@@ -224,7 +224,7 @@ $(window).resize(function () {
     }
   }, 100);
 });
-    //]]>  </script></div><img alt="" src="#" style="position:absolute;left:-10px;top:-10px;width:1px;height:1px;" />
+    //]]>  </script><img alt="" src="#" style="position:absolute;left:-10px;top:-10px;width:1px;height:1px;" />
 
 	
 	

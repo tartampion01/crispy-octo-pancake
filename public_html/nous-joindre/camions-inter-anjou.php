@@ -2,7 +2,7 @@
 <?php $suc = new RD_Succursales(); $suc->load(nomSuccursale::Anjou); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="wrap">
+    <div class="">
         <div class="content">
             <div class="shrink">
                 <div class="left">

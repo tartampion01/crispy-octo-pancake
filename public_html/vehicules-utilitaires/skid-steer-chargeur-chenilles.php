@@ -1,7 +1,7 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="wrap">
+    <div class="">
         <div class="content search-result">
             <div class="shrink">
                 <div class="titrepage">
@@ -13,7 +13,7 @@
                             <div class="btnToggle">
                                 <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
                             </div>
-                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="display:none;">
+                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone">
                                 <span>
                                     <h2>Skid Steer</h2>
                                     <p><strong>Un seul véhicule, une infinité de possibilités</strong>. Vous ne pouvez jamais prévoir totalement ce que vous allez affronter demain. Toutefois, au volant d'un Skeed Steer vous pouvez affirmer d'avance que vous allez remporter la bataille. Grâce à son parfait équilibre entre puissance et performance, vous avez l'assurance de faire plus en beaucoup moins de temps.</p>

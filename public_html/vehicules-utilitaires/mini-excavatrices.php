@@ -1,7 +1,7 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="wrap">
+    <div class="">
         <div class="content search-result">
             <div class="shrink">
                 <div class="titrepage">
@@ -18,7 +18,7 @@
                                 <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>
                             </div>
                             
-                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone" style="display:none;">
+                            <div id="divToggle" class="showedZone" data-staticclassnames="showedZone">
                                 <span>
                                     <h2>Tout pour l&#39;op&#233;rateur professionnel</h2>
                                     <p >R&#233;seau Dynamique poss&#232;de en inventaire les 2 s&#233;ries de mod&#232;les &quot;VIO&quot; et &quot;SV&quot;, lesquels vont de 0,8 T aux pelles de classe 10 T. Con&#231;ues pour offrir une performance in&#233;gal&#233;e sur les terrains les plus ardus, les mini-excavatrices vous feront sauver temps et argent.</p>
