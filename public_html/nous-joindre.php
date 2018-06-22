@@ -887,7 +887,7 @@ function urldecode(str) {
         <div class="voir"><span><a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::NousJoindre,page::NousJoindreGarageRobert); ?>" target="_self">Voir la fiche</a></span></div>
     </div>
     
-    <div><h2>Points de services</h2></div>
+    <div><h2>Points de service</h2></div>
     <div class="concession">
         <div class="titre"><h3><span>Chicoutimi</span></h3></div>
         <div class="nom"><h4><span>Potvin Centre du Camion</span></h4></div>
