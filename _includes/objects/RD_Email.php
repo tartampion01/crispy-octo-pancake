@@ -188,7 +188,7 @@ Class RD_Email
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
                 else
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
-                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+                $body .= "'>" . $this->camion->noInventaire . "</a></td></tr>";
                 $body .= "<tr><td><b>Véhicule</b></td><td>". $this->camion->beauTitre . "</td></tr>";
                 $body .= "<tr><td><b>SKU</b></td><td>". $this->camion->noInventaire . "</td></tr>";
                 $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
@@ -208,7 +208,7 @@ Class RD_Email
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
                 else
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
-                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+                $body .= "'>" . $this->camion->noInventaire . "</a></td></tr>";
                 $body .= "<tr><td><b>Véhicule</b></td><td>". $this->camion->beauTitre . "</td></tr>";
                 $body .= "<tr><td><b>SKU</b></td><td>". $this->camion->noInventaire . "</td></tr>";
                 $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
@@ -228,7 +228,7 @@ Class RD_Email
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
                 else
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
-                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+                $body .= "'>" . $this->camion->noInventaire . "</a></td></tr>";
                 $body .= "<tr><td><b>Véhicule</b></td><td>". $this->camion->beauTitre . "</td></tr>";
                 $body .= "<tr><td><b>SKU</b></td><td>". $this->camion->noInventaire . "</td></tr>";
                 $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
@@ -247,7 +247,7 @@ Class RD_Email
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
                 else
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
-                $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+                $body .= "'>" . $this->camion->noInventaire . "</a></td></tr>";
                 $body .= "<tr><td><b>Véhicule</b></td><td>". $this->camion->beauTitre . "</td></tr>";
                 $body .= "<tr><td><b>SKU</b></td><td>". $this->camion->noInventaire . "</td></tr>";
                 $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
@@ -347,7 +347,7 @@ Class RD_Email
         else
             $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
         
-        $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+        $body .= "'>" . $this->camion->noInventaire . "</a></td></tr>";
         
         $body .= "<tr><td><b>Véhicule</b></td><td>". $this->camion->beauTitre . "</td></tr>";
         $body .= "<tr><td><b>SKU</b></td><td>". $this->camion->noInventaire . "</td></tr>";
