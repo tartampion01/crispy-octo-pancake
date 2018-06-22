@@ -4041,6 +4041,7 @@ max-height: 510px }
     .bxslider .bx-controls .bx-pager .bx-pager-item a {
         margin: 0.5em 0.2em;
     }
+}
 
 @media all and (max-width: 660px) {
 }
