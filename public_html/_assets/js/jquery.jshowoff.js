@@ -111,34 +111,13 @@ jQuery.browser = {};
       // add first slide to wrapper
       var firstClone = $(gallery[0]).clone();
       firstClone.appendTo($cont);
-      if (firstClone[0].getAttribute("NmsMultiZoneContentScript") != null) {
+      if (firstClone[0].getAttribute("MultiZoneContentScript") != null) {
 
-        eval(firstClone[0].getAttribute("NmsMultiZoneContentScript"));
-        firstClone.removeAttr("NmsMultiZoneContentScript");
+        eval(firstClone[0].getAttribute("MultiZoneContentScript"));
+        firstClone.removeAttr("MultiZoneContentScript");
       }
       // preload slide images into memory
       preloadImg();
-
-
-      if (config.controlZone.PlayPauseItemID) {
-        if (config.autoPlay) {
-          $("[ItemID='" + config.controlZone.PlayPauseItemID + "']").addClass("isNmsPlay");
-        }
-        $("[ItemID='" + config.controlZone.PlayPauseItemID + "']").click(function () {
-
-          if ($(this).hasClass("isNmsPlay")) {
-            nmsPause();
-            $(this).removeClass("isNmsPlay");
-
-          }
-          else {
-            play();
-            $(this).addClass("isNmsPlay");
-
-          }
-          return false;
-        });
-      }
 
       if (config.controlZone.PreviousItemID) {
         $("[ItemID='" + config.controlZone.PreviousItemID + "']").click(function () { previous(); return false; });
@@ -233,34 +212,14 @@ jQuery.browser = {};
             $cont.children().eq(0).css('position', 'absolute').remove();
           };
         };
-        if (clone[0].getAttribute("NmsMultiZoneContentScript") != null) {
-
-          eval(clone[0].getAttribute("NmsMultiZoneContentScript"));
-          clone.removeAttr("NmsMultiZoneContentScript");
-        }
+        
 
         // update active class on slide link
         if (config.links) {
           $('.' + uniqueClass + '-active').removeClass(uniqueClass + '-active jshowoff-active');
           $('.' + uniqueClass + '-slidelinks a').eq(counter).addClass(uniqueClass + '-active jshowoff-active');
         };
-      };
-
-      // is the rotator currently in 'play' mode
-      function isPlaying() {
-        if (config.controlZone.PlayPauseItemID != "") {
-          if ($("[ItemID='" + config.controlZone.PlayPauseItemID + "']").hasClass("isNmsPlay")) {
-            return true;
-          }
-          else {
-            return false;
-          }
-        }
-        else {
-          return $('.' + uniqueClass + '-play').hasClass('jshowoff-paused') ? false : true;
-        }
-
-      };
+      };     
 
       function resumePlay(src) {
         if (!isBusy()) {
@@ -289,10 +248,6 @@ jQuery.browser = {};
           }
         };
       };
-
-      function nmsPause() {
-        clearInterval(timer);
-      }
 
       // stop slide rotation
       function pause(src) {
