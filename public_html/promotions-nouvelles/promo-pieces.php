@@ -84,96 +84,9 @@
                     </script>
                 </div>
             </div>
-                        
-            <script type="text/javascript">    //<![CDATA[
-$(document).ready(function () {
-
-  $("body").attr("ontouchstart", "");
-  $("body").attr("onmouseover", "");
-
-  var $menuMobile = $(".menuMobile");
-  if ($(window).width() < 641) {
-    $menuMobile.css("left", -$menuMobile.outerWidth());
-  } else {
-    $menuMobile.hide();
-  }
-
-  $(".icoMenuMobile").click(function () {
-    $(this).toggleClass("open");
-
-    $menuMobile.animate({
-      left: parseInt($menuMobile.css('left'), 10) == 0 ?
-          -$menuMobile.outerWidth() :
-          0
-    });
-    $(".wrap").animate({
-      left: parseInt($menuMobile.css('left'), 10) == 0 ?
-        0 :
-        +$menuMobile.outerWidth()
-    });
-    $(".pied").animate({
-      left: parseInt($menuMobile.css('left'), 10) == 0 ?
-        0 :
-        +$menuMobile.outerWidth()
-    });
-  });
-
-  $(".menuCss5").find(".parent > a").click(function () {
-    var open = $(this).parent();
-    if (open.hasClass("expanded")) {
-      open.removeClass("expanded");
-      open.children("div").slideUp();
-    } else {
-      open.addClass("expanded");
-      open.children("div").slideDown("fast", function () {
-        $('html, body').animate({
-          scrollTop: open.offset().top
-        }, 1000);
-      });
-    }
-  });
-  //Faire afficher les filtres
-  $(".toggleFilters").bind("click", openFilters);
-  $(".viewResults a").bind("click", closeFilters);
-  function openFilters() {
-    $(".GpcMenuWrapper").slideDown();
-    $(".toggleFilters").addClass("selected").unbind("click").find(".openClose").bind("click", closeFilters);
-  }
-  function closeFilters() {
-    $(".GpcMenuWrapper").slideUp();
-    $(".toggleFilters").removeClass("selected");
-    setTimeout(function () {
-      $(".toggleFilters").bind("click", openFilters).find(".openClose").unbind("click")
-    }, 250)
-  }
-});
-
-var magicTimeout = "";
-
-$(window).resize(function () {
-  if (magicTimeout != null) {
-    clearTimeout(magicTimeout);
-    magicTimeout = null;
-  }
-  magicTimeout = setTimeout(function () {
-    var $menuMobile = $(".menuMobile");
-    if ($(window).width() < 641) {
-      $menuMobile.show();
-      if (parseInt($menuMobile.css("left")) < 0) {
-        $menuMobile.css("left", -$menuMobile.outerWidth())
-      } else {
-        if ($menuMobile.is(":visible")) {
-          $(".wrap").css("left", $menuMobile.outerWidth());
-          $(".pied").css("left", $menuMobile.outerWidth());
-        }
-      }
-    } else {
-      $menuMobile.hide();
-    }
-  }, 100);
-});
-    //]]>  </script>
-</div></div></div>
+        </div>
+    </div>
+</div>
 <img alt="" src="#" style="position:absolute;left:-10px;top:-10px;width:1px;height:1px;" />
 
 <script type="text/javascript">
