@@ -141,8 +141,7 @@
                                     if(!empty($_POST["hidVehiculeId"]))
                                         $VehiculeId = $_POST["hidVehiculeId"];
                                     
-                                    if(!empty($_POST["newOrUsed"]))
-                                        $NEW = $_POST["newOrUsed"];
+                                    $NEW = $_POST["newOrUsed"];
                                     
                                     $etatExt = $_POST['cboEtatExt'];
                                     $etatInt = $_POST['cboEtatInt'];
