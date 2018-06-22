@@ -136,7 +136,7 @@ class RD_Utils
         $filesToSearch[] = "mentions-legales.php";
         $filesToSearch[] = "nous-joindre.php";
         $filesToSearch[] = "obtenir-prix.php";
-        $filesToSearch[] = "page1.php";
+        //$filesToSearch[] = "page1.php";
         $filesToSearch[] = "plan-site.php";
         $filesToSearch[] = "postuler.php";
         $filesToSearch[] = "promotions-nouvelles.php";
