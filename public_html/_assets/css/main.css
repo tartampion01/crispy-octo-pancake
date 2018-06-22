@@ -3161,6 +3161,10 @@ form .produit .bref .left > .lePrix.isUsed-True{display:block;}
 
 @media all and (max-width: 640px) {
 
+    html { 
+        max-width: 640px;
+    }
+    
 .bx-viewport .carrousel { height: 510px !important; }
 
 .bxslider  { width: 100%;

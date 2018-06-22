@@ -3,6 +3,9 @@ $( document ).ready(function() {
     // je mets ça pour être certain qu'on à rien d'autre que 0 ou 1
     if( (_N != 1) && (_N != 0) && ( _N != 2 ) && ( _N != 3 ) && ( _N != 4 ))
         _N = 1;
+    
+    // To set the scrollTo after search events
+    maxwidth = $('html').css('max-width');
 
     // Bind click event on each filter link
     $('.filter-link').each(function(){
@@ -205,6 +208,14 @@ function fetchRecords(field, value, customCriteria, resetPage, newOrOld) { // ne
                         onPageClick: function (event, page) {
                             
                             fetchRecords(field, value, customCriteria, false, newOrOld);
+                            
+                            // Scroll page to top of search results
+                            var scrollTo = '.GpcMenuWrapper';
+                            if(maxwidth == '640px')
+                                scrollTo = '.GpcPagedResultCount';
+                            $('html, body').animate({
+                                scrollTop: $(scrollTo).offset().top
+                            }, 750);
                         }
                     }));
                     
@@ -258,9 +269,8 @@ function fetchRecords(field, value, customCriteria, resetPage, newOrOld) { // ne
                 $('.results-container').html(data.message);
             }
             
-            // Scroll page to top of search results
             /*$('html, body').animate({
-                scrollTop: $(".GpcMenuWrapper").offset().top
+                scrollTop: $(scrollTo).offset().top
             }, 750);*/
 
             // Hide loading spinner
@@ -300,3 +310,8 @@ function refreshPagination() {
     $('.pagination').removeData("twbs-pagination");
     $('.pagination').unbind("page");
 }
+
+$(window).on('resize', function() {
+    // To set the scrollTo after search events
+    maxwidth = $('html').css('max-width');
+});
