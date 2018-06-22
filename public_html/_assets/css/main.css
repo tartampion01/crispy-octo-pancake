@@ -4031,6 +4031,16 @@ max-height: 510px }
         border-bottom-width: 0em;
         border-bottom-style: solid;
     }
+    
+    .bxslider .bx-controls .bx-pager {
+        display: inline-block;
+    }
+    .bxslider .bx-controls .bx-pager .bx-pager-item {
+        display: inline-block;
+    }
+    .bxslider .bx-controls .bx-pager .bx-pager-item a {
+        margin: 0.5em 0.2em;
+    }
 
 @media all and (max-width: 660px) {
 }
