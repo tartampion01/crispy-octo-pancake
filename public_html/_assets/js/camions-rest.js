@@ -10,8 +10,6 @@ $( document ).ready(function() {
         $(this).on('click', function() {
             
             var selected = $(this).data('selected');
-            //$('.filter-link').removeClass('selected');
-            //$('.filter-link').data('selected', false);
 
             if(selected == true) {
                 $(this).data('selected', false);
@@ -233,14 +231,13 @@ function fetchRecords(field, value, customCriteria, resetPage, newOrOld) { // ne
 
                                 if(Object.keys(dataCount).length) {
 
-                                    //console.log(dataCount);
                                     // Update every filter links count
                                     $('.GpcMenuCategory').find('.filter-link[data-field="'+countField+'"]').each(function(index) {
 
                                         $(this).hide();
 
                                         for(i=0; i<dataCount.length; i++) {
-                                            //console.log($(this).attr('data-value') + ' = ' + $(this).attr('data-value'));
+                                            
                                             if (Object.values(dataCount[i]).indexOf($(this).attr('data-value').replace('%2B', '+')) > -1) {
 
                                                 $(this).find('.GpcMenuItemCount').html('(' + dataCount[i].count + ')');
@@ -281,14 +278,9 @@ function getSearchTerms() {
     var counter = 0;
     
     $('.GpcMenuCategory .filter-link.selected').each(function() {
-        //console.log($(this).parents('ul').attr('class'));
         
         var field = $(this).parents('ul').attr('class');
         var value = $(this).attr('data-value');
-        
-        /*where[counter].field = field;
-        where[counter].value = value;
-        console.log(where);*/
         
         var newElement = {};
         newElement.field = field;
