@@ -26,7 +26,7 @@
                                 <p>Nul ne passe autant de temps que vous sur la route. Les roues, la mécanique et la structure des camions International ont été soumises à des tests qui se sont étendus sur des millions de kilomètres. Soyez assurés que votre véhicule n'expérimentera aucune nouvelle expérience entre vos mains qui n'ait pas été déjà testée par les ingénieurs d’International. En tout temps, vous pourrez compter sur votre camion à 100 % pour vous mener, vous et votre charge, à bon port.</p>
                                 <p>Avec la qualité éprouvée des camions International et la force du Réseau Dynamique vous optez pour un véhicule fiable et un service professionnel et dévoué.</p>
                                 <p>"
-                                    <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_INTERNATIONAL)?>" target="_blank">Visitez le site officiel de International Trucks</a>
+                                    <a href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_INTERNATIONAL)?>" target="_blank">Visitez le site officiel de International Trucks</a>
                                 </p>
                             </span>
                         </div>

@@ -29,7 +29,7 @@
                                 <p>Avec la qualit&#233; &#233;prouv&#233;e des mini-excavatrices de Yanmar et la force du R&#233;seau Dynamique vous optez pour un v&#233;hicule fiable et un service professionnel et d&#233;vou&#233;.</p>
                                 <p>Venez en faire l&#39;essai maintenant!</p>
                                 <p>
-                                    <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="http://yanmar.com/" target="_blank">Visitez le site officiel de Yanmar</a></p>
+                                    <a href="http://yanmar.com/" target="_blank">Visitez le site officiel de Yanmar</a></p>
                             </span>
                         </div>
                     </div>

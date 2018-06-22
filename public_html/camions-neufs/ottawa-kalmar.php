@@ -28,7 +28,7 @@
                                 <p>Avec la qualité éprouvée des véhicules Ottawa Kalmar et la force du Réseau Dynamique vous optez pour un véhicule fiable et un service professionnel et dévoué.</p>
                                 <p>Pour toutes informations au sujet des camions Kalmar Ottawa, veuillez communiquer avec Steeve Brousseau au 418 580-9049.</p>
                                 <p>
-                                    <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="http://www.ottawatrucksna.com" target="_blank">Visitez le site officiel d'Ottawa Kalmar</a>
+                                    <a href="http://www.ottawatrucksna.com" target="_blank">Visitez le site officiel d'Ottawa Kalmar</a>
                                 </p>
                             </span>
                         </div>

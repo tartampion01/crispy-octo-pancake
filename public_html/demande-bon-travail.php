@@ -302,7 +302,7 @@
                                         <input name="tbTravaux1" id="tbTravaux1" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux1; ?>">
                                     </div>
                                     <div class="supPlainte">
-                                        <a class="" name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                        <a>x</a>
                                     </div>
                                 </div>
                                 <div class="plainte clear" style="display: none;">
@@ -310,7 +310,7 @@
                                         <input name="tbTravaux2" id="tbTravaux2" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux2; ?>">
                                     </div>
                                     <div class="supPlainte">
-                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                        <a>x</a>
                                     </div>
                                 </div>
                                 <div class="plainte clear" style="display: none;">
@@ -318,7 +318,7 @@
                                         <input name="tbTravaux3" id="tbTravaux3" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux3; ?>">
                                     </div>
                                     <div class="supPlainte">
-                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                        <a>x</a>
                                     </div>
                                 </div>
                                 <div class="plainte clear" style="display: none;">
@@ -326,7 +326,7 @@
                                         <input name="tbTravaux4" id="tbTravaux4" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux4; ?>">
                                     </div>
                                     <div class="supPlainte">
-                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                        <a>x</a>
                                     </div>
                                 </div>
                                 <div class="plainte clear" style="display: none;">
@@ -334,7 +334,7 @@
                                         <input name="tbTravaux5" id="tbTravaux5" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux5; ?>">
                                     </div>
                                     <div class="supPlainte">
-                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                        <a>x</a>
                                     </div>
                                 </div>
                                 <div class="plainte clear" style="display: none;">
@@ -342,7 +342,7 @@
                                         <input name="tbTravaux6" id="tbTravaux6" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux6; ?>">
                                     </div>
                                     <div class="supPlainte">
-                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                        <a>x</a>
                                     </div>
                                 </div>
                                 <div class="plainte clear" style="display: none;">
@@ -350,7 +350,7 @@
                                         <input name="tbTravaux7" id="tbTravaux7" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux7; ?>">
                                     </div>
                                     <div class="supPlainte">
-                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                        <a">x</a>
                                     </div>
                                 </div>
                                 <div class="plainte clear" style="display: none;">
@@ -358,13 +358,13 @@
                                         <input name="tbTravaux8" id="tbTravaux8" class="" placeholder="Description des travaux à faire" type="text" value="<?php echo $travaux8; ?>">
                                     </div>
                                     <div class="supPlainte">
-                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);">x</a>
+                                        <a>x</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="addPlainte">
                                 <p>
-                                    <a class="lienAjoutTravaux" name="hyperlien" onclick="javascript:RegisterClick(this);" target="_self">[+] Ajouter d&#39;autres travaux &#224; faire</a>
+                                    <a class="lienAjoutTravaux" target="_self">[+] Ajouter d&#39;autres travaux &#224; faire</a>
                                 </p>
                             </div>
 

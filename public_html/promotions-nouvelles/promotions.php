@@ -123,7 +123,7 @@
                             <div class="blocpromo">
                                 <div class="promoimage">
                                     <span>
-                                        <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" target="_blank">
+                                        <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" target="_blank">
                                             <img name="image" title="" src="/_assets/images/menu_images/promo-mai-juin-2018-p01.jpg" alt="Promo Mai-Juin 2018-01" style="height:300px;width:231px;" width="231px" height="300px">
                                         </a>
                                     </span>

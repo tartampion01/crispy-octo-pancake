@@ -126,7 +126,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
 if($section == 'camion-neufs' || $section == 'camions-occasion' || $section == 'remorques-neuves') {
 ?>
 <div class="menu-mobile-filters">
-    <a class="m toggleFilters" onclick="javascript:RegisterClick(this);" target="_self">
+    <a class="m toggleFilters" target="_self">
         <span class="txt">Filtrer les résultats</span>
         <span class="search">
             <div data-search="true">

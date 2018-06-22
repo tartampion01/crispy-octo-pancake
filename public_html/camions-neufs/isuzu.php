@@ -28,7 +28,7 @@
                                 <p>Enfin, avec 80 % de la flotte toujours effective sur la route depuis 1984, les camions Isuzu représentent un investissement puisqu'ils conservent une valeur de revente élevée sur le marché des camions d'occasion.</p>
                                 <p>Faites confiance aux camions Isuzu et à la force du Réseau Dynamique et optez pour un véhicule fiable et économique.</p>
                                 <p>
-                                    <a name="hyperlien" onclick="javascript:RegisterClick(this);" href="http://www.isuzutruck.ca/" target="_blank">Visitez le site officiel d'Isuzu</a>
+                                    <a href="http://www.isuzutruck.ca/" target="_blank">Visitez le site officiel d'Isuzu</a>
                                 </p>
                             </span>
                         </div>

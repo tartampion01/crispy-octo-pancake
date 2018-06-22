@@ -26,7 +26,7 @@
                                 <h2>Discrétion et faible consommation de carburant</h2>
                                 <p>Les moteurs des chargeurs Yanmar sont respectueux de l'environnement, de l'opérateur, de la communauté et de votre budget. Malgré une force motrice supérieure, les chargeuses V3 et V4 ont été conçues pour se faire discrètes et silencieuses. De plus, leur faible consommation de carburant contribuera à réduire vos coûts d'exploitation sur le chantier.</p>
                                 <p>Équipez-vous dès maintenant d'une chargeuse V3 ou V4 de Yanmar et profitez d'une productivité inégalée!</p>
-                                <p><a name="hyperlien" onclick="javascript:RegisterClick(this);" href="http://yanmar.com/" target="_blank">Visitez le site officiel de Yanmar</a></p>
+                                <p><a href="http://yanmar.com/" target="_blank">Visitez le site officiel de Yanmar</a></p>
                             </span>
                         </div>
                     </div>

@@ -26,7 +26,7 @@
                                 <h2>Maintenance facilitée</h2>
                                 <p>L'emplacement judicieux des trappes de contrôle permet un accès aisé aux différents organes moteurs du véhicule et aux points de contrôle. En fait, l'inspection et l'entretien n'ont jamais été si simples.</p>
                                 <p>Prenez le contrôle du chantier avec les transporteurs tout-terrain de Yanmar. Ne laissez plus aucun obstacle contraindre vos actions et limiter votre productivité.</p>
-                                <p><a name="hyperlien" onclick="javascript:RegisterClick(this);" href="http://yanmar.com/" target="_blank">Visitez le site officiel de Yanmar</a></p>
+                                <p><a href="http://yanmar.com/" target="_blank">Visitez le site officiel de Yanmar</a></p>
                             </span>
                         </div>
                     </div>
