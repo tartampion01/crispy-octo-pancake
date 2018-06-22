@@ -3344,7 +3344,8 @@ max-height: 510px }
       display: inline-block;
       vertical-align: middle;
       margin-right: 0.75em;
-      height: 0.92857em;
+      /*height: 0.92857em;*/
+      height: 1.1em;
       width: 0.92857em;
       background: url(../../../_assets/images/menu_images/loupe-blanche-mobile.png) left top no-repeat;
       background-size: 100%;
@@ -4025,7 +4026,11 @@ max-height: 510px }
         font: 700 1.8em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
         padding: 0.8em 3%;
     }
-}
+    .entete {
+        border-bottom-color: rgb(243, 113, 33);
+        border-bottom-width: 0em;
+        border-bottom-style: solid;
+    }
 
 @media all and (max-width: 660px) {
 }

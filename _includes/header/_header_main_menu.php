@@ -121,3 +121,26 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
         </div>
     </div>
 </div>
+
+<?php
+if($section == 'camion-neufs' || $section == 'camions-occasion' || $section == 'remorques-neuves') {
+?>
+<div class="menu-mobile-filters">
+    <a class="m toggleFilters" onclick="javascript:RegisterClick(this);" target="_self">
+        <span class="txt">Filtrer les résultats</span>
+        <span class="search">
+            <div data-search="true">
+                <!--<input id="" name="" type="text" class="GpcSearchInput" placeholder="Filtrer les résultats">
+                <img class="GpcSearchButton" name="libraryimage" title="" src="../../_assets/images/loupe-mobile.jpg" style="cursor: pointer;">-->
+                <form role="form" method="POST" action="../search.php">
+                    <input id="tbSearch" name="tbSearch" title="Rechercher" class="GpcSearchInput" placeholder="Filtrer les résultats" type="text">
+                    <img class="GpcSearchButton" name="libraryimage" title="" src="../../_assets/images/loupe-mobile.jpg" style="cursor: pointer;">
+                </form>
+            </div>
+        </span>
+        <span class="openClose"></span>
+    </a>
+</div>
+<?php
+}
+?>
