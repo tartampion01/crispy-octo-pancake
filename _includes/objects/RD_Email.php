@@ -77,17 +77,27 @@ Class RD_Email
         
         switch($TypeEmail)
         {
-            case TypeEmail::DemandeInformation:   //$emailto = "philtourigny@gmail.com";
+            case TypeEmail::DemandeInformation:   //$emailto = "ptourigny@servicesinfo.info";
                                                   $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Demande d'information";
+                                                  $this->camion = new RD_Camion(null);
+                                                  if( $NEW == 1 )
+                                                    $this->camion->load_new(urldecode(base64_decode($IdVehicule)));
+                                                  else
+                                                      $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
-            case TypeEmail::PlanifierEssaiRoutier://$emailto = "philtourigny@gmail.com";
+            case TypeEmail::PlanifierEssaiRoutier://$emailto = "ptourigny@servicesinfo.info";
                                                   $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Demande de planification d'un essai routier";
+                                                  $this->camion = new RD_Camion(null);
+                                                  if( $NEW == 1 )
+                                                    $this->camion->load_new(urldecode(base64_decode($IdVehicule)));
+                                                  else
+                                                      $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
-            case TypeEmail::ObtenirPrix:          //$emailto = "philtourigny@gmail.com";
+            case TypeEmail::ObtenirPrix:          //$emailto = "ptourigny@servicesinfo.info";
                                                   $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
                                                   $subject = "Obtenir un prix";
                                                   $this->camion = new RD_Camion(null);
@@ -96,17 +106,27 @@ Class RD_Email
                                                   else
                                                       $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
-            case TypeEmail::DemandFinancement:    //$emailto = "philtourigny@gmail.com";
+            case TypeEmail::DemandFinancement:    //$emailto = "ptourigny@servicesinfo.info";
                                                   $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Demande de financement";
+                                                  $this->camion = new RD_Camion(null);
+                                                  if( $NEW == 1 )
+                                                    $this->camion->load_new(urldecode(base64_decode($IdVehicule)));
+                                                  else
+                                                      $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
-            case TypeEmail::EvaluerEchange:       //$emailto = "philtourigny@gmail.com";
+            case TypeEmail::EvaluerEchange:       //$emailto = "ptourigny@servicesinfo.info";
                                                   $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Demande d'évaluation d'échange";
+                                                  $this->camion = new RD_Camion(null);
+                                                  if( $NEW == 1 )
+                                                    $this->camion->load_new(urldecode(base64_decode($IdVehicule)));
+                                                  else
+                                                      $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
-            case TypeEmail::InscriptionNextPart:  //$emailto = "philtourigny@gmail.com";
+            case TypeEmail::InscriptionNextPart:  //$emailto = "ptourigny@servicesinfo.info";
                                                   $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Inscription NextPart";
@@ -153,7 +173,7 @@ Class RD_Email
             $this->mail->addAddress($emailto);
         else{
             // Plusieurs adresses emial pour un client ex. Raph & Elo
-            foreach(explode(",",$email) as $emailaddress)
+            foreach(explode(",",$emailto) as $emailaddress)
                 $this->mail->addAddress($emailaddress);
         }
         
@@ -162,12 +182,15 @@ Class RD_Email
         {
             case TypeEmail::DemandeInformation:
                 $body .= "<table>";
+                $body .= "<tr><td><img src='http://www.reseaudynamique.com/_assets/images/logoReseauDynamique.png' width='249' height='69' border='0' alt='Logo' title='Logo' style='display:block'></p></td></tr>";
                 $body .= "<tr><td><b>Provient de </b></td><td><a href='";
                 if( $NEW == 1 )
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
                 else
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+                $body .= "<tr><td><b>Véhicule</b></td><td>". $this->camion->beauTitre . "</td></tr>";
+                $body .= "<tr><td><b>SKU</b></td><td>". $this->camion->noInventaire . "</td></tr>";
                 $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
                 $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
                 $body .= "<tr><td><b>Ville</b></td><td>" . $this->ville . "</td></tr>";
@@ -179,12 +202,15 @@ Class RD_Email
                 break;
             case TypeEmail::PlanifierEssaiRoutier:
                 $body .= "<table>";
+                $body .= "<tr><td><img src='http://www.reseaudynamique.com/_assets/images/logoReseauDynamique.png' width='249' height='69' border='0' alt='Logo' title='Logo' style='display:block'></p></td></tr>";
                 $body .= "<tr><td><b>Provient de </b></td><td><a href='";
                 if( $NEW == 1 )
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
                 else
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+                $body .= "<tr><td><b>Véhicule</b></td><td>". $this->camion->beauTitre . "</td></tr>";
+                $body .= "<tr><td><b>SKU</b></td><td>". $this->camion->noInventaire . "</td></tr>";
                 $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
                 $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
                 $body .= "<tr><td><b>Ville</b></td><td>" . $this->ville . "</td></tr>";
@@ -196,6 +222,7 @@ Class RD_Email
                 break;
             case TypeEmail::ObtenirPrix:
                 $body .= "<table>";
+                $body .= "<tr><td><img src='http://www.reseaudynamique.com/_assets/images/logoReseauDynamique.png' width='249' height='69' border='0' alt='Logo' title='Logo' style='display:block'></p></td></tr>";
                 $body .= "<tr><td><b>Provient de </b></td><td><a href='";
                 if( $NEW == 1 )
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
@@ -214,12 +241,15 @@ Class RD_Email
                 break;
             case TypeEmail::DemandFinancement:
                 $body .= "<table>";
+                $body .= "<tr><td><img src='http://www.reseaudynamique.com/_assets/images/logoReseauDynamique.png' width='249' height='69' border='0' alt='Logo' title='Logo' style='display:block'></p></td></tr>";
                 $body .= "<tr><td><b>Provient de </b></td><td><a href='";
                 if( $NEW == 1 )
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsNEW) . "?id=" . $this->idVehicule;
                 else
                     $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
                 $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+                $body .= "<tr><td><b>Véhicule</b></td><td>". $this->camion->beauTitre . "</td></tr>";
+                $body .= "<tr><td><b>SKU</b></td><td>". $this->camion->noInventaire . "</td></tr>";
                 $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
                 $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
                 $body .= "<tr><td><b>Adresse</b></td><td>" . $this->adresse . "</td></tr>";
@@ -258,11 +288,17 @@ Class RD_Email
         global $applicationConfig;
         $emailto = $toName = $subject = $body = "";
         
-        //$emailto = "philtourigny@gmail.com";
+        //$emailto = "ptourigny@servicesinfo.info";
         $emailto = "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
         $toName  = "";
         $subject = "Demande d'évaluation d'échange";
 
+        $this->camion = new RD_Camion(null);
+        if( $NEW == 1 )
+          $this->camion->load_new(urldecode(base64_decode($IdVehicule)));
+        else
+            $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
+        
         $this->prenom = $Prenom;
         $this->nom = $Nom;
         $this->ville = $Ville;
@@ -298,11 +334,12 @@ Class RD_Email
             $this->mail->addAddress($emailto);
         else{
             // Plusieurs adresses emial pour un client ex. Raph & Elo
-            foreach(explode(",",$email) as $emailaddress)
+            foreach(explode(",",$emailto) as $emailaddress)
                 $this->mail->addAddress($emailaddress);
-        }
-        
+        }        
+                
         $body .= "<table>";
+        $body .= "<tr><td><img src='http://www.reseaudynamique.com/_assets/images/logoReseauDynamique.png' width='249' height='69' border='0' alt='Logo' title='Logo' style='display:block'></p></td></tr>";
         $body .= "<tr><td><b>Provient de </b></td><td><a href='";
         
         if( $NEW == 1 )
@@ -311,6 +348,9 @@ Class RD_Email
             $body .= RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_detailsUSED) . "?id=" . $this->idVehicule;
         
         $body .= "'>" . urldecode(base64_decode($this->idVehicule)) . "</a></td></tr>";
+        
+        $body .= "<tr><td><b>Véhicule</b></td><td>". $this->camion->beauTitre . "</td></tr>";
+        $body .= "<tr><td><b>SKU</b></td><td>". $this->camion->noInventaire . "</td></tr>";
         $body .= "<tr><td><b>Prénom</b></td><td>". $this->prenom . "</td></tr>";
         $body .= "<tr><td><b>Nom</b></td><td>". $this->nom . "</td></tr>";
         $body .= "<tr><td><b>Ville</b></td><td>" . $this->ville . "</td></tr>";
@@ -402,10 +442,17 @@ Class RD_Email
         $this->mail->SMTPSecure = false;
         $this->mail->Port = $applicationConfig['smtp.server.port'];
         $this->mail->setFrom('mailer@reseaudynamique.com', 'reseaudynamique.com');
-        $this->mail->addAddress($emailto, $toName);
         $this->mail->addAddress($this->email);
         $this->mail->addReplyTo($this->email);
         $this->mail->Subject = $subject;
+        
+        if( strpos($emailto, ",") === false )
+            $this->mail->addAddress($emailto);
+        else{
+            // Plusieurs adresses emial pour un client ex. Raph & Elo
+            foreach(explode(",",$emailto) as $emailaddress)
+                $this->mail->addAddress($emailaddress);
+        }
         
         if( $file1 != '' ){
             $this->mail->addAttachment($file1temp, $file1);
@@ -636,7 +683,7 @@ Class RD_Email
             $this->mail->addAddress($emailto);
         else{
             // Plusieurs adresses emial pour un client ex. Raph & Elo
-            foreach(explode(",",$email) as $emailaddress)
+            foreach(explode(",",$emailto) as $emailaddress)
                 $this->mail->addAddress($emailaddress);
         }
                 
