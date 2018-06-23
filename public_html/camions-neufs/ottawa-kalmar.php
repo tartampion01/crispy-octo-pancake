@@ -98,7 +98,7 @@
                             <div data-value="24" class="limit-per-page GpcDisplayOption">24</div>
                             <div data-value="48" class="limit-per-page GpcDisplayOption">48</div>
                         </div>
-                        <div class="GpcPagedResultCount">
+                        <div class="GpcPagedResultCount" style="display: none;">
                             <span class="GpcCountPrefixText">Résultats</span>
                             <span class="GpcPagedResultCurrentCount">1 - 4</span>
                             <span class="GpcBetweenCountText">sur</span>
@@ -125,7 +125,7 @@
 
                         </div>
                         <div class="GpcFooter clear">
-                            <div class="GpcPagedResultCount">
+                            <div class="GpcPagedResultCount" style="display: none;">
                                 <span class="GpcCountPrefixText">Résultats</span>
                                 <span class="GpcPagedResultCurrentCount">1 - 4</span>
                                 <span  class="GpcBetweenCountText">sur</span>
@@ -204,7 +204,12 @@
     $( document ).ready(function() {
     
         // On page load, trigger corresponding menu item
-        $("li[data-value='Kalmar']").trigger('click');
+        if($("li[data-value='Kalmar']").length > 0) {
+            $("li[data-value='Kalmar']").trigger('click');
+        }
+        else {
+            $('.GpcPagedResultCount:first').html('Aucun résultat trouvé').show();
+        }
     });
     </script>
 </body>

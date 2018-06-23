@@ -48,7 +48,7 @@
                             <div data-value="24" class="limit-per-page GpcDisplayOption">24</div>
                             <div data-value="48" class="limit-per-page GpcDisplayOption">48</div>
                         </div>
-                        <div class="GpcPagedResultCount">
+                        <div class="GpcPagedResultCount" style="display: none;">
                             <span class="GpcCountPrefixText">Résultats</span>
                             <span class="GpcPagedResultCurrentCount">1 - 4</span>
                             <span class="GpcBetweenCountText">sur</span>
@@ -75,7 +75,7 @@
 
                         </div>
                         <div class="GpcFooter clear">
-                            <div class="GpcPagedResultCount">
+                            <div class="GpcPagedResultCount" style="display: none;">
                                 <span class="GpcCountPrefixText">Résultats</span>
                                 <span class="GpcPagedResultCurrentCount">1 - 4</span>
                                 <span  class="GpcBetweenCountText">sur</span>

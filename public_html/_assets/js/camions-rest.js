@@ -192,6 +192,7 @@ function fetchRecords(field, value, customCriteria, resetPage, newOrOld) { // ne
                         resultsRange = parseInt(limitPerPage * currentPage - limitPerPage + 1) + ' - ' + parseInt(limitPerPage * currentPage);
                     
                     $('.GpcPagedResultCurrentCount').html(resultsRange);
+                    $('.GpcPagedResultCount').show();
                     
                     // Set paginator control
                     $pagination = $('.pagination')
@@ -263,10 +264,12 @@ function fetchRecords(field, value, customCriteria, resetPage, newOrOld) { // ne
                 }
                 else {
                     $('.results-container').html('AUCUN PRODUIT');
+                    $('.GpcPagedResultCount').show();
                 }
             }
             else {
                 $('.results-container').html(data.message);
+                $('.GpcPagedResultCount').show();
             }
             
             /*$('html, body').animate({
