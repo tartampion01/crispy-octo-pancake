@@ -4322,6 +4322,15 @@ max-height: 510px }
         margin-top: 0;
         padding-top: 0;
     }
+    .showedZone h2 {
+        margin-top: 0px;
+    }
+    .bottom-info {
+        padding: 0 1em 1em 1em;
+    }
+    .bottom-info h2 {
+        font-size: 1.2em;
+    }
     
 }/* End media max-width 640px */
 

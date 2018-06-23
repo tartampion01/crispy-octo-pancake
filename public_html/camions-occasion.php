@@ -113,7 +113,7 @@
                     </div>
                 </div>
                 <div class="FacetedExplorerClear GpcClear"></div>
-                <div style="margin-top: 2em;">
+                <div class="bottom-info" style="margin-top: 2em;">
                     <p>Réseau Dynamique est la référence dans le domaine des camions lourds et des tracteurs terminaux d'occasion.</p>
                     <h2>Pourquoi choisir un camion d'occasion chez Réseau Dynamique?</h2>
                     <p>Avant d'être mis en vente, tous les véhicules d'occasion de Réseau Dynamique ont été inspectés minutieusement et réparés. Revendeur de camions de toutes classes, vous êtes assuré de trouver un camion de grande qualité répondant en tous points à vos besoins d'affaires.</p>

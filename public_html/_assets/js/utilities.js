@@ -8,6 +8,7 @@ $( document ).ready(function() {
     
     $('.information-supplementaire').on('click', function() {
         $('.showedZone').toggle();
+        $(this).toggleClass('open');
     });
     
     // Page détails - Images rotator
