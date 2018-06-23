@@ -209,6 +209,7 @@
         }
         else {
             $('.GpcPagedResultCount:first').html('Aucun résultat trouvé').show();
+            $('.orderBy, .menu-mobile-filters').hide();
         }
     });
     </script>

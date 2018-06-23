@@ -4317,6 +4317,12 @@ max-height: 510px }
     }
     
     .dropDownBonTravailDemandePieces  {  padding: 1.5%;  /*width: 78.5%;*/width: 97%   }
+    
+    .GpcFacetedResults {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
 }/* End media max-width 640px */
 
 @media all and (max-width: 660px) {
