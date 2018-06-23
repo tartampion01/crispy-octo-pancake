@@ -104,31 +104,12 @@
                         </div>
                         <div class="GpcResultPager">
                             <ul class="pagination" id="pagination"></ul>
-                            <!--
-                            <a disabled="disabled" class="GpcPagerFirst">&lt;&lt;</a>
-                            <a disabled="disabled" class="GpcPagerPrevious">Précédent</a>
-                            <a class="selected">1</a>
-                            <a class="selected">1</a>
-                            <a class="selected">1</a>
-                            <a disabled="disabled" class="GpcPagerNext">Suivant</a>
-                            <a disabled="disabled" class="GpcPagerLast">&gt;&gt;</a>
-                            -->
                         </div>
                         <div class="orderBy clear">
                             <div class="libelle">
                                 Classer par :
                             </div>
                             <div class="GpcResultOrderSelector">
-                                <!--
-                                <div class="GpcWrapFakeSelectBox">
-                                    <div class="GpcFakeSelectValue">Nom ascendant</div>
-                                    <div class="GpcFakeSelect">
-                                        <div class="GpcFakeSelectOption selected" data-value="{&quot;PropertyName&quot;:4096,&quot;IdentifierGuid&quot;:&quot;00000000-0000-0000-0000-000000000000&quot;,&quot;IsDesc&quot;:false,&quot;Text&quot;:&quot;Nom ascendant&quot;}">Nom ascendant</div>
-                                        <div class="GpcFakeSelectOption" data-value="{&quot;PropertyName&quot;:4096,&quot;IdentifierGuid&quot;:&quot;00000000-0000-0000-0000-000000000000&quot;,&quot;IsDesc&quot;:true,&quot;Text&quot;:&quot;Nom descendant&quot;}">Nom descendant</div>
-
-                                    </div>
-                                </div>
-                                -->
                                 <select name="SearchSorting" class="search-sorting" style="font-size: .8em; line-height: 3em; padding: .15em;">
                                     <option value="asc">Nom ascendant</option>
                                     <option value="desc">Nom descendant</option>
@@ -150,15 +131,6 @@
                             </div>
                             <div class="GpcResultPager">
                                 <ul class="pagination" id="pagination"></ul>
-                                <!--
-                                <a disabled="disabled" class="GpcPagerFirst">&lt;&lt;</a>
-                                <a disabled="disabled" class="GpcPagerPrevious">Précédent</a>
-                                <div style="display: inline-block">
-                                    <a class="selected actual-page">1</a>
-                                </div>
-                                <a disabled="disabled" class="GpcPagerNext">Suivant</a>
-                                <a disabled="disabled" class="GpcPagerLast">&gt;&gt;</a>
-                                -->
                             </div>
                         </div>
                     </div>
