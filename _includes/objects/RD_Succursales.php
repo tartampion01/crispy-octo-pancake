@@ -122,7 +122,7 @@ class RD_Succursales{
             // Les Camions Beaudoin
             case "TGVzIENhbWlvbnMgQmVhdWRvaW4=": $emails = "proyer@camionbeaudoin.com,jpepin@camionbeaudoin.com,gagnonb@camionbeaudoin.com"; break;
             // Centre du Camion Beaudoin
-            case "Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==": $emails = "flachapelle@camionbeaudouin.com"; break;
+            case "Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==": $emails = "flachapelle@camionbeaudoin.com"; break;
             // Charest International
             case "Q2hhcmVzdCBJbnRlcm5hdGlvbmFs": $emails = "stephanelambert@charestinter.ca"; break;
             // Garage Charest et Frères
@@ -158,7 +158,7 @@ class RD_Succursales{
             // Les Camions Beaudoin
             case "TGVzIENhbWlvbnMgQmVhdWRvaW4=": $emails = "mjulien@camionbeaudoin.com"; break;
             // Centre du Camion Beaudoin
-            case "Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==": $emails = "service@camionbeaudouin.com"; break;
+            case "Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==": $emails = "service@camionbeaudoin.com"; break;
             // Charest International
             //case "Q2hhcmVzdCBJbnRlcm5hdGlvbmFs": $emails = "service@charestinter.ca"; break;
             // Garage Charest et Frères
