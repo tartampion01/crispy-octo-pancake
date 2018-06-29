@@ -158,7 +158,8 @@ class RD_Succursales{
             // Les Camions Beaudoin
             case "TGVzIENhbWlvbnMgQmVhdWRvaW4=": $emails = "mjulien@camionbeaudoin.com"; break;
             // Centre du Camion Beaudoin
-            case "Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==": $emails = "service@camionbeaudoin.com"; break;
+            case "Q2VudHJlJTIwZHUlMjBDYW1pb24lMjBCZWF1ZG9pbg==": $emails = "service@camionbeaudoin.com"; break;
+            //case "Q2VudHJlJTIwZHUlMjBDYW1pb24lMjBCZWF1ZG9pbg==": $emails = "ptourigny@servicesinfo.info"; break;            
             // Charest International
             //case "Q2hhcmVzdCBJbnRlcm5hdGlvbmFs": $emails = "service@charestinter.ca"; break;
             // Garage Charest et Frères
@@ -175,7 +176,7 @@ class RD_Succursales{
             case "R2FyYWdlIFJvYmVydA==": $emails = "service@camionbeaudoin.com"; break;
             default:break;
         }
-
+        //echo $NomSuccursaleBase64;
         //$emails = "ptourigny@servicesinfo.ca,ptourigny@servicesinfo.ca";
         
         return $emails;
