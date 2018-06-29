@@ -77,7 +77,7 @@ Class RD_Email
         
         switch($TypeEmail)
         {
-            case TypeEmail::DemandeInformation:   //$emailto = "ptourigny@servicesinfo.info";
+            case TypeEmail::DemandeInformation:   //$emailto = "ptourigny@servicesinfo.info,philtourigny@gmail.com";
                                                   $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Demande d'information";
@@ -172,7 +172,7 @@ Class RD_Email
         if( strpos($emailto, ",") === false )
             $this->mail->addAddress($emailto);
         else{
-            // Plusieurs adresses emial pour un client ex. Raph & Elo
+            // Plusieurs adresses emial pour un client ex.
             foreach(explode(",",$emailto) as $emailaddress)
                 $this->mail->addAddress($emailaddress);
         }
@@ -333,7 +333,7 @@ Class RD_Email
         if( strpos($emailto, ",") === false )
             $this->mail->addAddress($emailto);
         else{
-            // Plusieurs adresses emial pour un client ex. Raph & Elo
+            // Plusieurs adresses emial pour un client
             foreach(explode(",",$emailto) as $emailaddress)
                 $this->mail->addAddress($emailaddress);
         }        
@@ -397,7 +397,7 @@ Class RD_Email
         }
 
         $noBonTravail = RD_Utils::getBonTravail($Succursale);
-        
+        //echo "bt=" . $noBonTravail;
         $subject = "Demande de Bon de travail # " . $noBonTravail . " pour " . urldecode(base64_decode($Succursale));
         
         $this->succursale = $Succursale;
@@ -445,14 +445,22 @@ Class RD_Email
         $this->mail->addAddress($this->email);
         $this->mail->addReplyTo($this->email);
         $this->mail->Subject = $subject;
-        
+                
         if( strpos($emailto, ",") === false )
             $this->mail->addAddress($emailto);
         else{
-            // Plusieurs adresses emial pour un client ex. Raph & Elo
-            foreach(explode(",",$emailto) as $emailaddress)
+            // Plusieurs adresses emial pour un client
+            foreach(explode(",",$emailto) as $emailaddress){
                 $this->mail->addAddress($emailaddress);
+                echo $emailaddress;
+            }
         }
+//        echo "emailto:" . $emailto;
+        
+//        echo $this->mail->Host;
+//        echo $this->mail->Username;
+//        echo $this->mail->Password;
+//        echo $this->mail->Port;
         
         if( $file1 != '' ){
             $this->mail->addAttachment($file1temp, $file1);
@@ -625,7 +633,7 @@ Class RD_Email
                             </tr>
                             </tbody>
                         </table>
-                        <p><strong><span lang="FR-CA">Note spéciale :&nbsp;</span></strong><span lang="FR-CA"></span></p>
+                        <p><strong><span lang="FR-CA">Note spéciale : ' . $this->commentaire . '</span></strong><span lang="FR-CA"></span></p>
                         <p><strong><span lang="FR-CA">Autorisation :</span></strong><span lang="FR-CA">&nbsp;Oui</span></p>
                         <p><span lang="FR-CA">J\'autorise par ceci le travail de réparation ci-dessus à être effectué avec les matériaux nécessaires. Vous ne serez pas jugé responsable de la perte ou des dommages au véhicule, ou aux articles laissés dans le véhicule, en cas de feu,
                          de vol, d\'accident ou de toute autre cause indépendante de votre volonté. J\'autorise par ceci vous et vos employés à opérer le véhicule ci-dessus décrit à des fin d\'essais routier et ou d\'inspections. Je reconnais que vous avez un lien légal sur le véhicule
@@ -638,6 +646,7 @@ Class RD_Email
             default:break;
         }
         
+        //print_r($this->mail);
         $this->mail->Body = $body;
         $this->mail->AltBody = "-alt-";
     }
@@ -682,7 +691,7 @@ Class RD_Email
         if( strpos($emailto, ",") === false )
             $this->mail->addAddress($emailto);
         else{
-            // Plusieurs adresses emial pour un client ex. Raph & Elo
+            // Plusieurs adresses emial pour un client
             foreach(explode(",",$emailto) as $emailaddress)
                 $this->mail->addAddress($emailaddress);
         }
@@ -764,6 +773,6 @@ Class RD_Email
     
     public function send()
     {
-        return $this->mail->send();        
+        return $this->mail->send();
     }
 }
