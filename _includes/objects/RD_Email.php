@@ -127,7 +127,7 @@ Class RD_Email
                                                       $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
             case TypeEmail::InscriptionNextPart:  //$emailto = "ptourigny@servicesinfo.info";
-                                                  $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
+                                                  $emailto= "pdesrosiers@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Inscription NextPart";
                                                   break;
