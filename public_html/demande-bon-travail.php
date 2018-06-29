@@ -128,11 +128,16 @@
                         }                        
 
                         if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-                            $succursale = $_POST['ddlSuccursales'];
-
+                            
+                            if (empty($_POST['ddlSuccursales'])){
+                                $succursale = $_POST['hidSuccursale'];
+                            }
+                            else{
+                                $succursale = $_POST['ddlSuccursales'];
+                            }
+//echo $succursale;                            
                             if (empty($_POST["tbNomCompagnie"])){
-                                $nomCompagnieErr = "Champ obligatoire";
+                                $nomCompagnieErr = "Champ obligatoire";                                
                                 $errorCount += 1;
                             }
                             else
@@ -248,7 +253,7 @@
                             if(!empty($_FILES["file3"]["name"])){
                                 uploadFile("file3");
                             }
-                            
+//echo $errorCount;
                             // ENVOI EMAIL
                             if(isset($_POST['btnSendMail']) && $errorCount == 0)
                             {
@@ -262,16 +267,20 @@
                             }
                             else
                             {
-                                echo RD_Utils::GetDropDownSuccursalesBonTravail($_POST["ddlSuccursales"]);
+                                echo RD_Utils::GetDropDownSuccursalesBonTravail($_POST["hidSuccursale"]);
                             }
                         }
                         else
                         {
                             if(isset($_REQUEST["succursale"]))
+                            {
                                 echo RD_Utils::GetDropDownSuccursalesBonTravail($_REQUEST["succursale"]);
+                                $succursale = $_REQUEST["succursale"];
+                            }
                         }
                         ?>
                         <div class="demandeBon" style="visibility: <?php echo $divVisibility; ?>">
+                            <input type="hidden" id="hidSuccursale" name="hidSuccursale" value="<?php echo $succursale; ?>">
                             <input name="tbNomCompagnie" id="tbNomCompagnie" placeholder="Nom de la compagnie *" type="text" class="" value="<?php echo $nomCompagnie;?>">
                             <span class="error"><?php echo $nomCompagnieErr;?></span>
 
