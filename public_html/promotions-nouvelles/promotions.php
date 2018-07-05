@@ -124,7 +124,7 @@
                                 <div class="promoimage">
                                     <span>
                                         <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" target="_blank">
-                                            <img name="image" title="" src="/_assets/images/menu_images/promo-mai-juin-2018-p01.jpg" alt="Promo Mai-Juin 2018-01" style="height:300px;width:231px;" width="231px" height="300px">
+                                            <img name="image" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018.jpg" alt="Promo Juillet-Aout 2018" style="height:300px;width:231px;" width="231px" height="300px">
                                         </a>
                                     </span>
                                 </div>

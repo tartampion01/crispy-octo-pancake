@@ -13,44 +13,38 @@
                         <span>
                             <div class="carrousel">
                                 <div class="">
-                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p01.jpg" alt="Promo Mai-Juin 2018-01" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018.jpg" alt="Promo Juillet-Aout 2018" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p02.jpg" alt="Promo Mai-Juin 2018-02" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018-2.jpg" alt="Promo Juillet-Aout 2018-2" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p03.jpg" alt="Promo Mai-Juin 2018-03" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018-3.jpg" alt="Promo Juillet-Aout 2018-3" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p04.jpg" alt="Promo Mai-Juin 2018-04" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018-4.jpg" alt="Promo Juillet-Aout 2018-4" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p05.jpg" alt="Promo Mai-Juin 2018-05" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018-5.jpg" alt="Promo Juillet-Aout 2018-5" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p06.jpg" alt="Promo Mai-Juin 2018-06" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018-6.jpg" alt="Promo Juillet-Aout 2018-6" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p07.jpg" alt="Promo Mai-Juin 2018-07" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018-7.jpg" alt="Promo Juillet-Aout 2018-7" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p08.jpg" alt="Promo Mai-Juin 2018-08" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018-8.jpg" alt="Promo Juillet-Aout 2018-8" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p09.jpg" alt="Promo Mai-Juin 2018-09" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018-9.jpg" alt="Promo Juillet-Aout 2018-9" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p10.jpg" alt="Promo Mai-Juin 2018-10" />
-                                </div>
-                                <div class="" style="display:none;">
-                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p11.jpg" alt="Promo Mai-Juin 2018-11" /></a>
-                                </div>
-                                <div class="" style="display:none;">
-                                    <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p12.jpg" alt="Promo Mai-Juin 2018-12" /></a>
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018-10.jpg" alt="Promo Juillet-Aout 2018-10" />
                                 </div>
                                 <div class="" style="display:none;">
                                     <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre)?>">
-                                        <img name="image" title="" src="../../_assets/images/promo/promo-mai-juin-2018-p13.jpg" alt="Promo Mai-Juin 2018-13" />
+                                        <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018-11.jpg" alt="Promo Juillet-Aout 2018-11" />
                                     </a>
                                 </div>
                             </div>
