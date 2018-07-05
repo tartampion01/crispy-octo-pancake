@@ -6,8 +6,8 @@
  * -------------------------- */
 @font-face {
   font-family:'FontAwesome';
-  src:url('http://reseaudynamique.com/_assets/fonts/fontawesome-webfont-eot-4-5-0.eot');
-  src:url('http://reseaudynamique.com/_assets/fonts/fontawesome-webfont-eot-4-5-0.eot') format('embedded-opentype'),url('http://reseaudynamique.com/_assets/fonts/fontawesome-webfont-woff2-4-5-0.woff2?v=4.5.0') format('woff2'),url('http://reseaudynamique.com/_assets/fonts/fontawesome-webfont-woff-4-5-0.woff?v=4.5.0') format('woff'),url('http://reseaudynamique.com/_assets/fonts/fontawesome-webfont-ttf-4-5-0.ttf?v=4.5.0') format('truetype'),url('http://reseaudynamique.com/_assets/fonts/fontawesome-webfont-svg-4-5-0.svg?v=4.5.0#fontawesomeregular') format('svg');
+  src:url('http://www.reseaudynamique.com/_assets/fonts/fontawesome-webfont-eot-4-5-0.eot');
+  src:url('http://www.reseaudynamique.com/_assets/fonts/fontawesome-webfont-eot-4-5-0.eot') format('embedded-opentype'),url('http://www.reseaudynamique.com/_assets/fonts/fontawesome-webfont-woff2-4-5-0.woff2?v=4.5.0') format('woff2'),url('http://reseaudynamique.com/_assets/fonts/fontawesome-webfont-woff-4-5-0.woff?v=4.5.0') format('woff'),url('http://reseaudynamique.com/_assets/fonts/fontawesome-webfont-ttf-4-5-0.ttf?v=4.5.0') format('truetype'),url('http://reseaudynamique.com/_assets/fonts/fontawesome-webfont-svg-4-5-0.svg?v=4.5.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
