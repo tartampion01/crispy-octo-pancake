@@ -132,7 +132,7 @@
                                     <h2><span>Promo pièces</span></h2>
                                 </div>
                                 <div class="promodate">
-                                    <span>Mai &amp; Juin 2018</span>
+                                    <span>Juillet &amp; Août 2018</span>
                                 </div>
                             </div>
                         </div>
