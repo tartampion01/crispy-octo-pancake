@@ -1,7 +1,7 @@
 *,
 .contenu-nous-joindre ::before,
 .contenu-nous-joindre ::after {
-  box-sizing: unset; // 1
+  box-sizing: unset;
 }
 
 .utilitaire {
@@ -800,6 +800,41 @@ margin-top: 36px;
 
 .contenu2 {
   width: 700px;
+}
+
+.fournisseurs{
+  font-size:0px;
+}
+
+.fournisseurs a{
+   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+   background-color:#024da1;
+   color:#fff;
+ cursor:pointer;
+   font-size:16px;
+   font-size:1rem;
+   display:inline-block;
+   height:30px;
+   line-height:30px;
+   margin-bottom:2%;
+   margin-right:2.5%;
+   text-align:center;
+   width:23%;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.fournisseurs a:hover{
+   opacity:0.7;
+}
+
+.fournisseurs a:nth-child(4n){
+  margin-right:0px;
 }
 
 .contenu h2 {
