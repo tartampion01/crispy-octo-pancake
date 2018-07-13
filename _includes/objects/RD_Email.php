@@ -452,7 +452,7 @@ Class RD_Email
             // Plusieurs adresses emial pour un client
             foreach(explode(",",$emailto) as $emailaddress){
                 $this->mail->addAddress($emailaddress);
-                echo $emailaddress;
+                //echo $emailaddress;
             }
         }
 //        echo "emailto:" . $emailto;
