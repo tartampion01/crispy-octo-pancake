@@ -56,7 +56,7 @@
                                     $emploi = RD_Emploi::getDetailEmploi($_REQUEST['emp']);
                                     
                                     ?><h1>Détails de l'emploi</h1>
-                                    <h3><?php echo $emploi->titre; ?></h3>
+                                    <h3><?php echo $emploi->titre;?></h3>
                                     <h5>Référence interne: <?php echo $emploi->referenceInterne;?></h5>
                                     
                                     <h4>Emplacement:</h4>
@@ -135,8 +135,9 @@
                                     <?php $counteEmp=0; foreach(RD_Emploi::getLinkEmploisCourants(0) as $emploi):?>
                                         <label>
                                             <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres) . '?emp=' . $emploi->lienEncode; ?>">
-                                                <?php echo $emploi->titre; $counteEmp+=1; ?>
+                                                <?php echo $emploi->titre;$counteEmp+=1;?>
                                             </a>
+                                                <?php echo "&nbsp;(".$emploi->succursale.")";?></br>
                                         </label>
                                         </br>
                                     <?php endforeach; if( $counteEmp == 0 ){
