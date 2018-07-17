@@ -1,8 +1,5 @@
-<?php
-$pageName = basename($_SERVER['SCRIPT_NAME']);
-?>
+<?php $pageName = basename($_SERVER['SCRIPT_NAME']);?>
 <!-- TOP MENU -->
-<div class="wrap">
 <div class="utilitaire clear">
     <div class="shrink">
         <div class="menuCss2">
@@ -14,7 +11,7 @@ $pageName = basename($_SERVER['SCRIPT_NAME']);
                     <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Apropos); ?>" class="rank1 <?php echo ((strpos($_SERVER['REQUEST_URI'], 'a-propos.php')) !== false ? 'selected' : '') ?>">À propos</a>
                 </li>
                 <li class="item14 rank2 <?php echo ((strpos($_SERVER['REQUEST_URI'], 'promotions.php')) !== false ? 'selected' : '') ?>" expansionmode="HoverExpansion">
-                    <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromotions); ?>" class="rank2 <?php echo ((strpos($_SERVER['REQUEST_URI'], 'promotions.php')) !== false ? 'selected' : '') ?>">Promotions et nouvelles</a>
+                    <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" class="rank2 <?php echo ((strpos($_SERVER['REQUEST_URI'], 'promotions.php')) !== false ? 'selected' : '') ?>">Promotions et nouvelles</a>
                 </li>
                 <li class="item12 rank3  <?php echo ((strpos($_SERVER['REQUEST_URI'], 'nous-joindre.php')) !== false ? 'selected' : '') ?>" expansionmode="HoverExpansion">
                     <a href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>" class="rank3 <?php echo ((strpos($_SERVER['REQUEST_URI'], 'nous-joindre.php')) !== false ? 'selected' : '') ?>">Nous joindre</a>
