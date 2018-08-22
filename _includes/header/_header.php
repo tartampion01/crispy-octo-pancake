@@ -29,7 +29,7 @@
     <script type="text/javascript" src="../../_assets/js/jquery-bxslider.js" ></script>
     <!--<script type='text/javascript' src='../../_assets/js/ajax.js'></script>-->
     <script type='text/javascript' src='../../_assets/js/utilities.js'></script>  
-    <script type="text/javascript" src="../_assets/js/object.values.polyfill.js"></script>
+    <script type="text/javascript" src="../../_assets/js/object.values.polyfill.js"></script>
     <script type='text/javascript' src='../../_assets/js/jquery.tmpl.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.twbsPagination.js'></script>
     
@@ -44,6 +44,7 @@
     <link rel='canonical' href='<?PHP echo $NOMPAGE ?>' />
     <meta content="<?PHP RD_Header::getMetaContent($NOMPAGE); ?>" name="description" />
     <meta  http-equiv="Content-type"  content="text/html;charset=UTF-8" />
+    <script src='https://www.google.com/recaptcha/api.js?render=<?PHP echo RD_Utils::getRecaptchaSiteKey() ?>'></script>
 </head>
 <?PHP
     // TOP MENU
