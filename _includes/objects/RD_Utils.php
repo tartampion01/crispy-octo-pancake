@@ -111,6 +111,25 @@ class RD_Utils
     
     }
     
+    static function validateRecaptcha_v3($captchaResponse){        
+        global $applicationConfig;
+        $secret = $applicationConfig['google.recaptcha_v3.privateKey'];
+        
+        $post = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response=' .$captchaResponse . '&remoteip=' . $_SERVER['REMOTE_ADDR']);
+        var_dump($post);
+        $return = json_decode($post);
+        
+        return $return;        
+    }
+    
+    static function getRecaptchaSiteKey()
+    {
+        global $applicationConfig;
+        $siteKey = $applicationConfig['google.recaptcha_v3.siteKey'];
+        
+        return $siteKey;
+    }
+    
     static function getBonTravail($succursale)
     {
         $conn = Database::getConn();
