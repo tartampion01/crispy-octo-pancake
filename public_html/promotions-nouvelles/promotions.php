@@ -10,7 +10,7 @@
                 <div class="contenu">
                     <div class="contenu2">
                         <?php
-                            $divVisibility = "visible";
+                            $divVisibility = "hidden";
 
                             $succursaleErr = $noFactureErr = $nomPrenomErr = $emailErr = "";
                             $succursale = $noFacture = $nomPrenom = $email = "";
@@ -124,7 +124,7 @@
                                 <div class="promoimage">
                                     <span>
                                         <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" target="_blank">
-                                            <img name="image" title="" src="../../_assets/images/promo/Promo Juillet-aout 2018.jpg" alt="Promo Juillet-Aout 2018" style="height:300px;width:231px;" width="231px" height="300px">
+                                            <img name="image" title="" src="../../_assets/images/promo/Promotion Septembre-Octobre 2018.jpg" alt="Promo Septembre-Octobre 2018" style="height:300px;width:231px;" width="231px" height="300px">
                                         </a>
                                     </span>
                                 </div>
@@ -132,7 +132,7 @@
                                     <h2><span>Promo pièces</span></h2>
                                 </div>
                                 <div class="promodate">
-                                    <span>Juillet &amp; Août 2018</span>
+                                    <span>Septembre &amp; Octobre 2018</span>
                                 </div>
                             </div>
                         </div>
