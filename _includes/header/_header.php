@@ -19,9 +19,9 @@
     <title><?PHP RD_Header::getPageTitle($NOMPAGE); ?></title>
     <meta content="<?PHP RD_Header::getMetaContent($NOMPAGE); ?>" name="description" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />    
-    <meta http-equiv="Content-type"  content="text/html;charset=UTF-8" />
-    <link rel='canonical' href='<?PHP echo $NOMPAGE ?>' />
-    
+    <meta http-equiv="Content-type"  content="text/html;charset=UTF-8" />    
+    <link rel='canonical' href='<?php echo 'http://www.'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>' />
+        
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120787761-1"></script>
     <script>
