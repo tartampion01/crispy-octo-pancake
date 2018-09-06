@@ -1,12 +1,13 @@
+<?php $includeRecaptchaV3 = 1; ?>
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-<script>
+<!--<script>
 grecaptcha.ready(function() {
     grecaptcha.execute('6LfOR2sUAAAAAKmw_YCd4Yq58p6dZKS8r6bTHCqX', {action: 'homepage'})
         .then(function(token) {
             document.getElementById('g-recaptcha-response').value=token;
     });
 });
-</script>
+</script>-->
 <script type="text/javascript">
   var onloadCallback = function() {
     //alert("grecaptcha is ready!");
@@ -244,11 +245,7 @@ grecaptcha.ready(function() {
                                     }
                                 }
                             }
-                            if(!RD_Utils::validateRecaptcha_v3($_POST['g-recaptcha-response'])){
-                                $errorCount += 1;
-                                $captchaErr = 'Veuillez remplir le <i>CAPTCHA</i> correctement.';
-                            }
-
+                            
                             $unite = RD_Utils::test_input($_POST['tbUnite']);
                             $km = RD_Utils::test_input($_POST['tbKm']);
                             $travaux1 = RD_Utils::test_input($_POST['tbTravaux1']);
@@ -270,20 +267,61 @@ grecaptcha.ready(function() {
                             if(!empty($_FILES["file3"]["name"])){
                                 uploadFile("file3");
                             }
+                            
+                            // CAPTCHA v3 -> no visual for user
+                            //$captchaResult = RD_Utils::validateRecaptcha_v3($_POST['g-recaptcha-response']);
+                            $captchaResult = 1;
+                            $erreurCaptcha = 0;
+                            if( isset($captchaResult))
+                            {
+//                                if( $captchaResult["success"] == 1 ) // returns boolean 0 == fail 1 == success
+//                                {
+                                    // Scal is 0.0 bot -> 1.0 human
+                                    //if( $captchaResult["score"] > 0.5 ){}
+//                                }
+//                                else // FAILURE
+//                                {
+//                                    $errorCount += 1;
+//                                    $erreurCaptcha = 1;
+//                                    $captchaErr = "Erreur avec la validation recaptcha v3";
+//                                }
+                            }
+                            else{
+                                $errorCount += 1;
+                                $erreurCaptcha = 1;
+                                $captchaErr = "Erreur avec la validation recaptcha v3";
+                            }
+                             
+                            // Si nous avons une erreur de recaptcha:
+                            // 1. affichage de téléphone de la succursale. 
+                            // 2. envoi mail @ weblog@servicesinfo.ca
+                            if( $erreurCaptcha == 1 )
+                            {
+                                $succ = new RD_Succursales();
+                                $succ->loadFromSuccursaleString($succursale);
+                                echo $captchaErr . "<br><b>Un problème est survenu lors de l'envoi de votre demande</b><br>" . "Veuillez communiquer directement avec la succursale<br> <b>" . $succ->nomLong . " au " . $succ->telephones[0] . "</b>";
+                                $divVisibility = "hidden";
+                                
+                                $RDemail = new RD_Email();
+                                $RDemail->load(TypeEmail::WebLog, print_r($_POST,true), print_r($captchaResult,true), $NOMPAGE, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+                                $RDemail->send();
+                            }
+                            
                             // ENVOI EMAIL
                             if(isset($_POST['btnSendMail']) && $errorCount == 0)
                             {
                                 $RDemail = new RD_Email();
                                 $RDemail->loadBonTravail(TypeEmail::BonTravail,$succursale,$nomCompagnie,$nomResponsable,$tel,$email,$vin,$unite,$km,$bonCommande,$noteSpeciale,$instructions,$prixMax,$travaux1,$travaux2,$travaux3,$travaux4,$travaux5,$travaux6,$travaux7,$travaux8, $filename1,$filename2,$filename3,$file1Temp,$file2Temp,$file3Temp); 
-//                                if($RDemail->send())
-//                                {
-//                                    $divVisibility = "hidden";
-//                                    ?><h2>Votre demande a bien été envoyée</h2><?php
-//                                }
+                                if($RDemail->send())
+                                {
+                                    $divVisibility = "hidden";
+                                    ?><h2>Votre demande a bien été envoyée</h2><?php
+                                }
                             }
                             else
                             {
-                                echo RD_Utils::GetDropDownSuccursalesBonTravail($_POST["hidSuccursale"]);
+                                if(!$erreurCaptcha)
+                                    echo RD_Utils::GetDropDownSuccursalesBonTravail($_POST["hidSuccursale"]);
                             }
                         }
                         else
@@ -438,8 +476,8 @@ grecaptcha.ready(function() {
 
                             
                         <!--<input type="submit" name="btnSendMail" id="btnSendMail" value="Soumettre" class="">-->
-                        <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-                        <button name="btnSendMail" id="btnSendMail">Soumettre</button>
+                        <!--<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">-->
+                        <button type="submit" name="btnSendMail" id="btnSendMail">Soumettre</button>
                         </div>
                         <script type="text/javascript">
                             document.getElementById('file1').addEventListener('change',prep1,false);

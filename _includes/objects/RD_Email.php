@@ -14,6 +14,7 @@ interface TypeEmail
     const DemandePieces = 8;
     const InscriptionAUTOMANN = 9;
     const PostulerEmploi = 10;
+    const WebLog = 11;
 }
 
 interface TypeVehicule
@@ -127,14 +128,17 @@ Class RD_Email
                                                       $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
             case TypeEmail::InscriptionNextPart:  //$emailto = "ptourigny@servicesinfo.info";
-                                                  $emailto= "pdesrosiers@inter-quebec.com";
+                                                  $emailto = "pdesrosiers@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Inscription NextPart";
                                                   break;
             case TypeEmail::InscriptionAUTOMANN:  //$emailto = "philtourigny@gmail.com";
-                                                  $emailto= "crouleau@inter-quebec.com";
+                                                  $emailto = "crouleau@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Inscription AUTOMANN";
+                                                  break;
+            case TypeEmail::WebLog:               $emailto = "weblog@servicesinfo.ca";
+                                                  $subject = "Problème sur une page RESEAUDYNAMIQUE.COM [" . $Ville . "]";
                                                   break;
         }
         
@@ -275,6 +279,11 @@ Class RD_Email
                 $body .= "# de facture: " . $this->nom . "<br />";
                 $body .= "Nom de votre succursale: " . $this->ville . "<br />";
                 $body .= "Courriel: " . $this->email;
+                break;
+            case TypeEmail::WebLog:
+                $body = "Problème sur la page : " . $this->ville . "<br />";
+                $body .= "<b>POST de la page</b><br />" . $this->prenom . "<br />";
+                $body .= "<b>RETOUR api google recaptcha v3</b><br />" . $this->nom . "<br />";                
                 break;
             default:break;
         }
@@ -443,6 +452,7 @@ Class RD_Email
         $this->mail->Port = $applicationConfig['smtp.server.port'];
         $this->mail->setFrom('mailer@reseaudynamique.com', 'reseaudynamique.com');
         $this->mail->addAddress($this->email);
+        $this->mail->addBCC('sallard@servicesinfo.ca');
         $this->mail->addReplyTo($this->email);
         $this->mail->Subject = $subject;
                 

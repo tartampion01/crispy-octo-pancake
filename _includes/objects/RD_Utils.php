@@ -116,8 +116,15 @@ class RD_Utils
         $secret = $applicationConfig['google.recaptcha_v3.privateKey'];
         
         $post = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response=' .$captchaResponse . '&remoteip=' . $_SERVER['REMOTE_ADDR']);
-        var_dump($post);
-        $return = json_decode($post);
+        //var_dump($post);
+        $return = json_decode($post, true);
+        //var_dump($return);
+        
+//        echo $return["success"] . "<br>";
+//        echo $return["challenge_ts"] . "<br>";
+//        echo $return["hostname"] . "<br>";
+//        echo $return["score"] . "<br>";
+//        echo $return["action"] . "<br>";
         
         return $return;        
     }
@@ -198,7 +205,7 @@ class RD_Utils
     
     public static function write_Gtag()
     {
-        $gTag = '<!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-569RKDC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->';
+        $gTag = '<!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-569RKDC"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->';
         
         echo $gTag;
     }

@@ -87,6 +87,7 @@ interface page
     const EXTERNAL_Doepker = 707;
     const EXTERNAL_OffreEmploi = 708;
     const EXTERNAL_INTERNATIONAL = 709;
+    const EXTERNAL_FB_reseaudynamique = 710;
 }
 
 class RD_PageLink
@@ -158,7 +159,8 @@ class RD_PageLink
             case page::InscriptionNextPartAbonnement:$_page = "confirmation-abonnement";break;
             case page::MentionsLegales:$_page = "mentions-legales";break;
             case page::DemandePieces:$_page = "demande-pieces";break;
-            case page::BonDeTravail:$_page = "demande-bon-travail";break;
+            //case page::BonDeTravail:$_page = "demande-bon-travail";break;
+            case page::BonDeTravail:$_page = "demande-bon-travail_v2";break;
             case page::Fournisseurs:$_page = "fournisseurs";break;
             case page::PlanSite:$_page = "plan-site";break;            
             case page::DemandeInformation: $_page = "demande-information";break;
@@ -176,6 +178,7 @@ class RD_PageLink
             case page::EXTERNAL_detailsNEW: $_page = "http://reseaudynamique.com/details_new.php";$_wholeURL = true;break;
             case page::EXTERNAL_detailsUSED: $_page = "http://reseaudynamique.com/details_used.php";$_wholeURL = true;break;
             case page::EXTERNAL_boutiqueEnLigne: $_page = "https://reseaudynamique.gxd.ca/";$_wholeURL = true;break;
+            case page::EXTERNAL_FB_reseaudynamique: $_page = "https://www.facebook.com/R%C3%A9seau-Dynamiquecom-200899577018785/?hc_ref=ARQCrWLVrVSWuF8TPj4oR9EBLDhdxfddEgNQwpsLuxMm27DpOxsG1BLS8PFSfxV-zuY&fref=nf&__tn__=kC-R";$_wholeURL = true;break;
             case page::EXTERNAL_DiMond: $_page = "http://www.di-mond.com/index2.html";$_wholeURL = true;break;
             case page::EXTERNAL_Doepker: $_page = "http://www.doepker.com/";$_wholeURL = true;break;
             case page::EXTERNAL_OffreEmploi: $_page = "http://reseaudynamique.com/carrieres.php";$_wholeURL = true;break;
@@ -368,6 +371,7 @@ class RD_Header{
             case "location-camions.php":$title = "Location de Camions Lourds | Réseau Dynamique";break;
             case "demande-pieces.php":$title = "Demande de pièces | Réseau dynamique";break;
             case "demande-bon-travail.php":$title = "Demande de bon de travail | Réseau dynamique";break;
+            case "demande-bon-travail_v2.php":$title = "Demande de bon de travail | Réseau dynamique";break;
             case "camions-occasion.php":$title = "Camions Lourds d'Occasion | Réseau Dynamique";break;
             case "demande-information.php":$title = "Demande d'information | Réseau Dynamique";break;
             case "planifier-essai-routier.php":$title = "Planifier un essai routier | Réseau Dynamique";break;

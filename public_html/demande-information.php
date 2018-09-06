@@ -77,7 +77,7 @@
                                     {
                                         $RDemail = new RD_Email();
                                         $RDemail->load(TypeEmail::DemandeInformation,$prenom,$nom,$ville,urlencode($email),$tel,$comm,'','','','','','','','','',$VehiculeId,TypeVehicule::CamionNeuf,$NEW);
-                                        if($RDemail->send()){
+                                        if($RDemail->send()){                                            
                                             $divVisibility = "hidden";
                                             ?><h2>Votre demande a bien été envoyée</h2><?php
                                         }

@@ -204,6 +204,28 @@ class RD_Succursales{
         $this->load($succEnum);
     }
     
+    public function loadFromSuccursaleString($succursale)
+    {
+        $succEnum = -1;
+        switch($succursale)
+        {
+            case "Q2FtaW9ucyBJbnRlci1BbmpvdQ==": $succEnum=nomSuccursale::Anjou;break;
+            case "SW50ZXItQm91Y2hlcnZpbGxl": $succEnum=nomSuccursale::Boucherville;break;
+            case "Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==": $succEnum=nomSuccursale::Drummondville;break;
+            case "Q2FtaW9ucyBJbnRlci1MYW5hdWRpw6hyZQ==": $succEnum=nomSuccursale::Joliette;break;
+            case "Q2FtaW9ucyBJbnRlcm5hdGlvbmFsIMOJbGl0ZQ==": $succEnum=nomSuccursale::Quebec;break;
+            case "TGUgQ2VudHJlIFJvdXRpZXIgMTk5NA==": $succEnum=nomSuccursale::RiviereDuLoup;break;
+            case "TGUgQ2VudHJlIGR1IENhbWlvbiAoQmVhdWNlKQ==": $succEnum=nomSuccursale::SaintGeorges;break;
+            case "TGVzIENhbWlvbnMgQmVhdWRvaW4=": $succEnum=nomSuccursale::SaintHyacinthe;break;
+            case "R2FyYWdlIFJvYmVydA==": $succEnum=nomSuccursale::Shawinigan;break;
+            case "TGUgQ2VudHJlIGR1IENhbWlvbiAoQW1pYW50ZSk=": $succEnum=nomSuccursale::ThetfordMines;break;
+            case "R2FyYWdlIENoYXJlc3QgZXQgRnLDqHJlcw==": $succEnum=nomSuccursale::TroisRivieres;break;
+            case "Q2hhcmVzdCBJbnRlcm5hdGlvbmFs": $succEnum=nomSuccursale::Victoriaville;break;
+            default:break;
+        }
+
+        $this->load($succEnum);
+    }
     /*
     
     Garage Robert
@@ -547,7 +569,7 @@ class RD_Succursales{
                 $this->remorquageInfo[] = "Téléphone : 819 472-9498";
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "";
-                $this->emailOffreEmploi = "rh@garagecharest.qc.ca";
+                $this->emailOffreEmploi = "pierrepoudrette@garagecharest.qc.ca";
                 $this->parametreDemandePiecesNomSuccursale = "Garage Charest et Frères";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d22040.283407664505!2d-72.54211346996249!3d46.32899089635898!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc7c5ff023d1761%3A0xf01c688e04d66dfb!2s2250+Rue+Royale%2C+Trois-Rivi%C3%A8res%2C+QC+G9A+4L5%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326570152";
                 break;
@@ -791,7 +813,7 @@ class RD_Succursales{
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
-                $this->emailOffreEmploi = "grobert-rh@cgocable.ca";
+                $this->emailOffreEmploi = "pierrepoudrette@garagecharest.qc.ca";
                 $this->parametreBonTravailNomSuccursale = "Garage Robert";
                 $this->parametreDemandePiecesNomSuccursale = "Garage Robert";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2741.5253671513356!2d-72.71138334836269!3d46.596619579028236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc64df0b295b3d9%3A0xf26322fa98abd028!2sGarage+Robert+Inc!5e0!3m2!1sfr!2sca!4v1487884811377";
