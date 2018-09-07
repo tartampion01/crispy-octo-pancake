@@ -1,12 +1,27 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
+<style>
+    promo{
+        font: 400 2.5714em/1.3em Montserrat,Arial,Helvetica,sans-serif;
+        margin: 1em 0 .4em;
+        color: #525252;
+        text-transform: uppercase;
+    }
+</style>    
 <body class="body"><?php RD_Utils::write_Gtag() ?>    
     <form role="form" method="POST" action="/promotions-nouvelles/<?php echo $NOMPAGE; ?>">
     <div class="">
         <div class="content search-result">
             <div class="shrink">
-                <div class="titrepage">
-                    <h1>PROMO PIÈCES</h1>
-                </div>
+                <table style="width: 970px;">
+                    <tr>
+                        <td align="left" style="padding-top: 10px">
+                            <promo>PROMO PIÈCES</promo>
+                        </td>
+                        <td align="right">
+                            <a href='promo-pieces-pdf.php' target="=_blank">Nouvelle fenêtre pour impression</a>
+                        </td>
+                    </tr>
+                </table>
                 <div class="contenu">
                 <div class="contenu2">
                     <div class="bxslider">
@@ -91,7 +106,6 @@
     </div>
 </div>
 <img alt="" src="#" style="position:absolute;left:-10px;top:-10px;width:1px;height:1px;" />
-
 </form>
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </body>
