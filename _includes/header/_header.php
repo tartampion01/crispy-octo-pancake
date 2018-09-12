@@ -11,31 +11,32 @@
     // REQUIRED BY ALL PAGES
     // COMMON INCLUDES --> DB / FUNCTIONS / OBJECTS
     require_once(dirname(__DIR__).'/commonIncludes.php');
-    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Origin: *");    
     header("Access-Control-Allow-Methods: PUT, GET, POST");
     header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 ?>
 <head>
+    <meta http-equiv="Cache-control" mas-age='604800' content="public">
     <title><?PHP RD_Header::getPageTitle($NOMPAGE); ?></title>
     <meta content="<?PHP RD_Header::getMetaContent($NOMPAGE); ?>" name="description" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />    
     <meta http-equiv="Content-type"  content="text/html;charset=UTF-8" />    
-    <link rel='canonical' href='<?php echo 'http://www.'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>' />
+    <link rel='canonical' href='<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>' />
         
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120787761-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3192388-2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){
           dataLayer.push(arguments);
       }
       gtag('js', new Date());
-      gtag('config', 'UA-120787761-1');
+      gtag('config', 'UA-3192388-2');
     </script>
 
     <script type='text/javascript' src='../../_assets/js/jquery-3.2.1.js'></script>
     <script type="text/javascript" src="../../_assets/js/jquery-bxslider.js" ></script>
-    <!--<script type='text/javascript' src='../../_assets/js/ajax.js'></script>-->
+
     <script type='text/javascript' src='../../_assets/js/utilities.js'></script>  
     <script type="text/javascript" src="../../_assets/js/object.values.polyfill.js"></script>
     <script type='text/javascript' src='../../_assets/js/jquery.tmpl.js'></script>

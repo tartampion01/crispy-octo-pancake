@@ -7,34 +7,46 @@
             <div class="shrink2 clear">
                 <div class="rotation">
                     <div class="leftArrow" itemid="previous-slide"></div>
-                        <div class="rightArrow" itemid="next-slide"></div>
-                            <div class="">
-                                <div class="jshowoff jshowoff-1">
-                                    <div>
-                                        <img name="image" title="" src="_assets/images/homeBanner/retour-lonestar.png" alt="Retour Lonestar">
-                                    </div>
-                                    <div>
-                                        <a name="hyperlien" href="/camions-neufs/isuzu">
-                                            <img name="image" title="" src="_assets/images/homeBanner/isuzu.jpg" alt="isuzu">
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <a name="hyperlien" href="/remorques-neuves">
-                                            <img name="image" title="" src="_assets/images/homeBanner/doepker.jpg" alt="doepker">
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <img name="image" title="" src="_assets/images/menu_images/promo-site-web.jpg" alt="promo site web" />
-                                    </div>
-                                </div>
+                    <div class="rightArrow" itemid="next-slide"></div>
+                    <div class="">
+                        <div class="jshowoff jshowoff-1">
+                            <div>
+                                <img src="_assets/images/homeBanner/BANIERE CV.jpg" alt="La nouvelle Série CV - Automne 2018"/>
                             </div>
+                            <div>
+                                <a name="hyperlien" href="http://reseaudynamique.com/camions-neufs/camions-lourds-neufs-international.php">
+                                    <img src="_assets/images/homeBanner/BANIERE HX.jpg" alt="Camions HX International"/>
+                                </a>
+                            </div>
+                            <div>
+                                <a name="hyperlien" href="http://reseaudynamique.com/promotions-nouvelles/promo-pieces.php">
+                                    <img src="_assets/images/homeBanner/BANIERE CIRCULAIRE RD.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <div>
+                                <a name="hyperlien" href="http://reseaudynamique.com/camions-neufs/camions-lourds-neufs-international.php">
+                                    <img src="_assets/images/homeBanner/BANIERE HV.jpg" alt="Camions HV International"/>
+                                </a>
+                            </div>
+                            <div>
+                                <a name="hyperlien" href="http://reseaudynamique.com/camions-neufs/camions-lourds-neufs-international.php">
+                                    <img name="image" title="" src="_assets/images/homeBanner/retour-lonestar.png" alt="Retour Lonestar">
+                                </a>
+                            </div>
+                            <div>
+                                <a name="hyperlien" href="/camions-neufs/isuzu.php">
+                                    <img name="image" title="" src="_assets/images/homeBanner/isuzu.jpg" alt="isuzu">
+                                </a>
+                            </div>                                    
+                        </div>
+                    </div>
                 </div>
             </div>
 	</div>
 	<div class="content accueil">
-            <div class="shrink">
+            <div class="shrink">               
                 <div class="vehiculeDisponible">
-                    <h2>V&#233;hicules disponibles</h2>
+                    <h1>V&#233;hicules disponibles</h1>
                 </div>
                     <!--<img name="image" title="" src="_assets/images/menu_images/promo-site-web.jpg" alt="promo site web" />-->
                 <div class="cat">

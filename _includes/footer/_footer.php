@@ -31,7 +31,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
     <div class="pied">
         <div class="shrink clear">
             <div class="left">
-                <a name="hyperlien" onclick="" href="/accueil" target="_self">
+                <a name="hyperlien" onclick="" href="/accueil.php" target="_self">
                     <img name="image" title="" src="../../_assets/images/menu_images/reseau-dynamique-pied.png" alt="Réseau dynamique">
                 </a>
             </div>
@@ -276,5 +276,5 @@ $(window).resize(function () {
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-120787761-1', 'auto');
+ga('create', 'UA-3192388-2', 'auto');
 </script>

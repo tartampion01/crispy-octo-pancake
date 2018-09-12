@@ -23,8 +23,8 @@
                     <a href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H); ?>" class="last rank5">Urgence routière 24h</a>
                 </li>
                 <li class="item7 rank6" expansionmode="HoverExpansion">                    
-                    <a href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_FB_reseaudynamique); ?>" class="rank6" target="_blank">                        
-                        <img src="../../_assets/images/menu_images/f-ogo_RGB_HEX-58.png" width="24" height="24" alt="fb"/>                        
+                    <a href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_FB_reseaudynamique); ?>" class="rank6" style="padding-top: 0px" target="_blank">                        
+                        <img src="../../_assets/images/menu_images/f-ogo_RGB_HEX-58.png" width="24" height="23" alt="fb"/>                        
                     </a>
                 </li>
             </ul>
