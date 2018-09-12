@@ -129,7 +129,7 @@
                                     </span>
                                 </div>
                                 <div class="promotitre">
-                                    <h2><span>Promo pièces</span></h2>
+                                    <h2><span>Promotions</span></h2>
                                 </div>
                                 <div class="promodate">
                                     <span>Septembre &amp; Octobre 2018</span>

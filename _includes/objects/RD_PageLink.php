@@ -73,7 +73,9 @@ interface page
     const PromotionsEtNouvellesNouvelles = 501;
     const PromotionsEtNouvellesConcours = 502;
     const PromotionsEtNouvellesPromoPieces = 503;
-    const PromotionsEtNouvellesPromoPieces_PDF = 504;
+    const PromotionsEtNouvellesPromoPieces2 = 504;
+    const PromotionsEtNouvellesPromoPieces_PDF = 505;
+    const PromotionsEtNouvellesPromoLanding = 506;
         
     const InscriptionNextPart = 600;
     const InscriptionNextPartAbonnement = 601;
@@ -155,7 +157,9 @@ class RD_PageLink
             case page::PromotionsEtNouvellesNouvelles:$_page = "nouvelles";break;
             case page::PromotionsEtNouvellesConcours:$_page = "concours";break;
             case page::PromotionsEtNouvellesPromoPieces:$_page = "promo-pieces";break;
+            case page::PromotionsEtNouvellesPromoPieces2:$_page = "promo-pieces-2";break;
             case page::PromotionsEtNouvellesPromoPieces_PDF:$_page = "promo-pieces-pdf";break;
+            case page::PromotionsEtNouvellesPromoLanding:$_page = "promo";break;            
             case page::UrgenceRoutiere24H:$_page = "urgence-routiere-24h";break;
             case page::InscriptionNextPart:$_page = "abonnement-nextpart";break;
             case page::InscriptionNextPartAbonnement:$_page = "confirmation-abonnement";break;
@@ -447,7 +451,8 @@ class RD_Header{
             case "obtenir-prix.php":$title = "Obtenir un prix | Réseau Dynamique";break;
             case "demande-financement.php":$title = "Demande de financement | Réseau Dynamique";break;
             case "evaluer-echange.php":$title = "Évaluer mon échange | Réseau Dynamique";break;
-            case "promotions.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";
+            case "promotions.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";break;
+            case "promo.php":$title = "Promotions courantes | Réseau Dynamique";break;
             //case "":$title = "";break;
             default:;
         }

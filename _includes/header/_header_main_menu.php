@@ -108,8 +108,8 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             <li class="item92 rank4" expansionmode="HoverExpansion">
                                 <a href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_nextPartLogin); ?>" class="rank4" target="_blank">Commande en ligne</a>
                             </li>
-                            <li class="item94 last rank5 <?php echo ($pageName == 'promo-pieces.php' ? 'selected' : ''); ?>" expansionmode="HoverExpansion">
-                                <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" class=" last rank5" target="_self">Promo pièces</a>
+                            <li class="item94 last rank5 <?php echo ($pageName == 'promo.php' ? 'selected' : ''); ?>" expansionmode="HoverExpansion">
+                                <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoLanding); ?>" class=" last rank5" target="_self">Promotions</a>
                             </li>
                         </ul>
                     </div>
