@@ -26,15 +26,16 @@ var gCsvData = [["46.021897","-73.410681","Joliette","\/_assets\/images\/menu_im
                 ["46.145500","-70.676728","Saint-Georges","\/_assets\/images\/menu_images\/centre-du-camion-beauce.jpg","Le Centre du Camion (Beauce)","8900, 25e Avenue","Saint-Georges (Québec)","G6A 1K5","Téléphone : 418 228-8005","Sans frais : 1 866 428-8005","Télécopieur: 418 228-3559","\/nous-joindre\/le-centre-camion-beauce.php","","","","","","","","","","",""],
                 ["47.820417","-69.503665","Rivière-du-Loup","\/_assets\/images\/menu_images\/centre-routier-1994.jpg","Le Centre Routier 1994","375,Temiscouata","Rivière-du-Loup (Québec)","G5R 3Z5","Téléphone : 418 862-7231","Télécopieur : 418 862-1938","","\/nous-joindre\/centre-routier-1994.php","","","","","","","","","","",""],
                 ["46.829077","-71.272618","Québec","\/_assets\/images\/menu_images\/camions-international-elite.jpg","Camions International Élite","265, Étienne-Dubreuil","Québec (Québec)","G1M 4A6","Téléphone : 418 687-9510","Sans frais : 877 687-9510","Télécopieur : 418 687-9518","\/nous-joindre\/camions-international-elite.php","","","","","","","","","","",""],
-                ["47.6903195","-70.2213648","Clermont","","F Martel & Fils Inc","24, Boulevard Notre-Dame","Clermont (Québec)","G4A 1C1","Téléphone : 418 439-4655","","","","","","","","","","","","","","Oui"],
-                ["48.8088803","-69.0306546","Forestville","","Garage Roger Foster & Fils inc.","215, Route 138","Forestville (Québec)","G0T 1E0","Téléphone : 418 587-4676","","","","","","","","","","","","","","Oui"],
-                ["48.8521597","-67.5035531","Matane","","Centre du Camion Bouffard inc.","695, Avenue du Phare Est","Matane (Québec)","G4W 1A9","Téléphone : 418 562-2624","","","","","","","","","","","","","","Oui"],
-                ["48.4861042","-68.496406","Rimouski","","L’As du Camion 2000 inc.","19, Boulevard Sainte-Anne","Rimouski (Québec)","G5M 1B9","Téléphone : 418 725-3333","","","","","","","","","","","","","","Oui"],
-                ["48.9978293","-64.3960435","Rivière-au-Renard","","Garage D.J.R. (1988) Ltée","27, Boulevard Renard Est","Gaspé (Québec)","G4X 5R1","Téléphone : 418 269-5230","","","","","","","","","","","","","","Oui"],
-                ["50.210894","-66.370955","Sept-îles","","Centre de Mécanique du Golfe inc.","336, Avenue Noel","Sept-îles (Québec)","G4R 1L7","Téléphone : 418 962-4057","","","","","","","","","","","","","","Oui"],
-                ["46.4621637","-71.0377632","Sainte-Marie-de-Beauce","","Domaine du Diésel EG inc.","460, Avenue 2 du Parc Industriel","Sainte-Marie (Québec)","G6E","Téléphone : 418 387-3036","","","","","","","","","","","","","","Oui"],
+                ["47.6903195","-70.2213648","Clermont","","F Martel & Fils Inc","24, Boulevard Notre-Dame","Clermont (Québec)","G4A 1C1","Téléphone : 418 439-4655","","","","","","","","","","","","","",""],
+                ["48.8088803","-69.0306546","Forestville","","Garage Roger Foster & Fils inc.","215, Route 138","Forestville (Québec)","G0T 1E0","Téléphone : 418 587-4676","","","","","","","","","","","","","",""],
+                ["48.8521597","-67.5035531","Matane","","Centre du Camion Bouffard inc.","695, Avenue du Phare Est","Matane (Québec)","G4W 1A9","Téléphone : 418 562-2624","","","","","","","","","","","","","",""],
+                ["48.4861042","-68.496406","Rimouski","","L’As du Camion 2000 inc.","19, Boulevard Sainte-Anne","Rimouski (Québec)","G5M 1B9","Téléphone : 418 725-3333","","","","","","","","","","","","","",""],
+                ["48.9978293","-64.3960435","Rivière-au-Renard","","Garage D.J.R. (1988) Ltée","27, Boulevard Renard Est","Gaspé (Québec)","G4X 5R1","Téléphone : 418 269-5230","","","","","","","","","","","","","",""],
+                ["50.210894","-66.370955","Sept-îles","","Centre de Mécanique du Golfe inc.","336, Avenue Noel","Sept-îles (Québec)","G4R 1L7","Téléphone : 418 962-4057","","","","","","","","","","","","","",""],
+                ["46.4621637","-71.0377632","Sainte-Marie-de-Beauce","","Domaine du Diésel EG inc.","460, Avenue 2 du Parc Industriel","Sainte-Marie (Québec)","G6E","Téléphone : 418 387-3036","","","","","","","","","","","","","",""],
+                ["45.420792","-72.779367","Granby","","Ressorts D'Autos Ménard Inc.","1151 Rue Principale","Granby (Québec)","J2J 0M3","Téléphone : 450 378-4740","","","","","","","","","","","","","",""],
                 ["46.596598","-72.708882","Shawinigan","","Garage Robert","9850, boul des hêtres","Shawinigan (Québec)","G9N 4Y3","Téléphone : 819 539-6417","","","\/nous-joindre\/garage-robert","","","","","","","","","","",""],
-                ["48.392792","-71.068553","Chicoutimi","","Potvin Centre du Camion","1973 Boulevard Talbot","Chicoutimi (Québec)","G7H 7Y5","Téléphone : 418 549-1210","","","","","","","","","","","","","","Oui"]];
+                ["48.392792","-71.068553","Chicoutimi","","Potvin Centre du Camion","1973 Boulevard Talbot","Chicoutimi (Québec)","G7H 7Y5","Téléphone : 418 549-1210","","","","","","","","","","","","","",""]];
 </script>
 <script type="text/javascript">
     var directionsToSize = 48;
@@ -312,7 +313,7 @@ var gCsvData = [["46.021897","-73.410681","Joliette","\/_assets\/images\/menu_im
             c[B] ? b && !b[v](c[0][j]()) && this.b[G]('<li class="no-stores">' + dict[language].nostores + '</li>') : this.b[G]('<li class="no-stores">' + dict[language].nostoresarea + '</li>');
             for (var b = function() {
                     a[A](this.store, d)
-                }, i = 0, k = h.min(10, c[B]); i < k; i++) {
+                }, i = 0, k = h.min(15, c[B]); i < k; i++) {
                 var y = c[i].getInfoPanelItem();
                 y.store = c[i];
                 e && c[i][D]() == e[D]() && $(y)[x]("highlighted");
@@ -904,11 +905,16 @@ function urldecode(str) {
         <div class="tel">T&#233;l : <span >418 587-4676</span></div>
     </div>
     <div class="concession">
+        <div class="titre"><h3><span>Granby</span></h3></div>
+        <div class="nom"><h4><span>Ressorts D'Autos Ménard Inc.</span></h4></div>
+        <div class="tel">T&#233;l : <span >(450) 378-4740</span></div>
+    </div>
+    
+    <div class="concession">
         <div class="titre"><h3><span>Matane</span></h3></div>
         <div class="nom"><h4><span>Centre du Camion Bouffard inc.</span></h4></div>
         <div class="tel">T&#233;l : <span >418 562-2624</span></div>
     </div>
-    
      <div class="concession">
         <div class="titre"><h3><span>Rimouski</span></h3></div>
         <div class="nom"><h4><span>L’As du Camion 2000 inc.</span></h4></div>
@@ -924,11 +930,13 @@ function urldecode(str) {
         <div class="nom"><h4><span>Centre de M&#233;canique du Golfe inc.</span></h4></div>
         <div class="tel">T&#233;l : <span >418 962-4057</span></div>
     </div>
-    <div class="concession">
+    
+    <div class="concession" style="margin-top: 0px">
         <div class="titre"><h3><span>Sainte-Marie-de-Beauce</span></h3></div>
         <div class="nom"><h4><span>Domaine du Di&#233;sel EG inc.</span></h4></div>
         <div class="tel">T&#233;l : <span >418 387-3036</span></div>
     </div>
+    
     </div>
 
 </div>
