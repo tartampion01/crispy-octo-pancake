@@ -159,8 +159,10 @@
                                 }
                             }?>
                     </div>
+                    <img src="_assets/images/menu_images/journee carriere.jpg" alt=""/>
                 </div>
             </div>
+            
         </div>
     </div>
     </form>
