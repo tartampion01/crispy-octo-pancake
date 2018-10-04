@@ -909,7 +909,11 @@ function urldecode(str) {
         <div class="nom"><h4><span>Ressorts D'Autos Ménard Inc.</span></h4></div>
         <div class="tel">T&#233;l : <span >(450) 378-4740</span></div>
     </div>
-    
+    <div class="concession">
+        <div class="titre"><h3><span>Matane</span></h3></div>
+        <div class="nom"><h4><span>Centre du Camion Bouffard inc.</span></h4></div>
+        <div class="tel">T&#233;l : <span >418 562-2624</span></div>
+    </div>
      <div class="concession">
         <div class="titre"><h3><span>Rimouski</span></h3></div>
         <div class="nom"><h4><span>L’As du Camion 2000 inc.</span></h4></div>
@@ -930,13 +934,7 @@ function urldecode(str) {
         <div class="nom"><h4><span>Domaine du Di&#233;sel EG inc.</span></h4></div>
         <div class="tel">T&#233;l : <span >418 387-3036</span></div>
     </div>
-    
-    <div class="concession" style="margin-top: 0px">
-        <div class="titre"><h3><span>Sainte-Marie-de-Beauce</span></h3></div>
-        <div class="nom"><h4><span>Domaine du Di&#233;sel EG inc.</span></h4></div>
-        <div class="tel">T&#233;l : <span >418 387-3036</span></div>
-    </div>
-    </div>
+</div>
 
 </div>
 </div>

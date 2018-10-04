@@ -14,6 +14,16 @@
                                 <img src="_assets/images/homeBanner/BANIERE CV.jpg" alt="La nouvelle Série CV - Automne 2018"/>
                             </div>
                             <div>
+                                <a name="hyperlien" href="http://www.sclq.ca/">
+                                    <img src="_assets/images/homeBanner/Salon CL.jpg" alt="Salon du Camion Lourd de Québec"/>
+                                </a>
+                            </div>
+                            <div>
+                                <a name="hyperlien" href="http://reseaudynamique.com/camions-neufs/camions-lourds-neufs-international.php">
+                                    <img src="_assets/images/homeBanner/banniere LT.jpg" alt="Camions LT International"/>
+                                </a>
+                            </div>
+                            <div>
                                 <a name="hyperlien" href="http://reseaudynamique.com/camions-neufs/camions-lourds-neufs-international.php">
                                     <img src="_assets/images/homeBanner/BANIERE HX.jpg" alt="Camions HX International"/>
                                 </a>

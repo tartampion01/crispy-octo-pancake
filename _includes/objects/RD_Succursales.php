@@ -162,7 +162,7 @@ class RD_Succursales{
             // Charest International
             //case "Q2hhcmVzdCBJbnRlcm5hdGlvbmFs": $emails = "service@charestinter.ca"; break;
             // Garage Charest et Frères
-            //case "R2FyYWdlIENoYXJlc3QgZXQgRnLDqHJlcw==": $emails = "service@garagecharest.qc.ca"; break;
+            case "R2FyYWdlIENoYXJlc3QgZXQgRnLDqHJlcw==": $emails = "helene.chauvette@garagecharest.qc.ca"; break;
             // Le Centre du Camion (Amiante)
             case "TGUgQ2VudHJlIGR1IENhbWlvbiAoQW1pYW50ZSk=": $emails = "services@centrecamionamiante.com"; break;
             // Le Centre Routier 1994
@@ -172,7 +172,7 @@ class RD_Succursales{
             // Camions International Élite
             case "Q2FtaW9ucyBJbnRlcm5hdGlvbmFsIMOJbGl0ZQ==": $emails = "service@inter-quebec.com"; break;
             // Garage Robert
-            case "R2FyYWdlIFJvYmVydA==": $emails = "service@camionbeaudoin.com"; break;
+            case "R2FyYWdlIFJvYmVydA==": $emails = "pierrepoudrette@garagecharest.qc.ca"; break;
             default:break;
         }
         //echo $NomSuccursaleBase64;
@@ -570,6 +570,7 @@ class RD_Succursales{
                 $this->remorquageTelephones[] = "";
                 $this->parametreBonTravailNomSuccursale = "";
                 $this->emailOffreEmploi = "pierrepoudrette@garagecharest.qc.ca";
+                $this->parametreBonTravailNomSuccursale = "Garage Charest et Frères";
                 $this->parametreDemandePiecesNomSuccursale = "Garage Charest et Frères";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d22040.283407664505!2d-72.54211346996249!3d46.32899089635898!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc7c5ff023d1761%3A0xf01c688e04d66dfb!2s2250+Rue+Royale%2C+Trois-Rivi%C3%A8res%2C+QC+G9A+4L5%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326570152";
                 break;
@@ -739,9 +740,10 @@ class RD_Succursales{
                 $this->heureOuvertureDimanche = "Fermé";
                 $this->contacts = new Contact();
                 $this->contacts->addItem(array("Steve Hallé", "Président Directeur Général","shalle@camionbeaudoin.com"));
-                $this->contacts->addItem(array("Patrick Gourgues", "Directeur des ventes","pgourgues@inter-quebec.com"));
+                //$this->contacts->addItem(array("Patrick Gourgues", "Directeur des ventes","pgourgues@inter-quebec.com"));
                 $this->contacts->addItem(array("Pierre Desrosiers", "Directeur des pièces","pdesrosiers@inter-quebec.com"));
                 $this->contacts->addItem(array("François Després", "Directeur du service","fdespres@inter-quebec.com"));
+                $this->contacts->addItem(array("Steeve Brousseau", "Directeur des ventes",""));
                 $this->imageBatisse = "../../_assets/images/batisse/batisse-camions-international-elite.jpg";
                 $this->imageBatisseALT= "Camions International Élite";
                 $this->servicesOfferts[] = "Service accéléré";

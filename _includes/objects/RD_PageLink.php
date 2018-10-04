@@ -74,8 +74,12 @@ interface page
     const PromotionsEtNouvellesConcours = 502;
     const PromotionsEtNouvellesPromoPieces = 503;
     const PromotionsEtNouvellesPromoPieces2 = 504;
-    const PromotionsEtNouvellesPromoPieces_PDF = 505;
-    const PromotionsEtNouvellesPromoLanding = 506;
+    const PromotionsEtNouvellesPromoPieces3 = 505;
+    const PromotionsEtNouvellesPromoPieces4 = 506;
+    const PromotionsEtNouvellesPromoPieces5 = 507;
+    const PromotionsEtNouvellesPromoPieces6 = 508;
+    const PromotionsEtNouvellesPromoPieces_PDF = 509;
+    const PromotionsEtNouvellesPromoLanding = 510;
         
     const InscriptionNextPart = 600;
     const InscriptionNextPartAbonnement = 601;
@@ -158,6 +162,10 @@ class RD_PageLink
             case page::PromotionsEtNouvellesConcours:$_page = "concours";break;
             case page::PromotionsEtNouvellesPromoPieces:$_page = "promo-pieces";break;
             case page::PromotionsEtNouvellesPromoPieces2:$_page = "promo-pieces-2";break;
+            case page::PromotionsEtNouvellesPromoPieces3:$_page = "promo-pieces-3";break;
+            case page::PromotionsEtNouvellesPromoPieces4:$_page = "promo-pieces-4";break;
+            case page::PromotionsEtNouvellesPromoPieces5:$_page = "promo-pieces-5";break;
+            case page::PromotionsEtNouvellesPromoPieces6:$_page = "promo-pieces-6";break;
             case page::PromotionsEtNouvellesPromoPieces_PDF:$_page = "promo-pieces-pdf";break;
             case page::PromotionsEtNouvellesPromoLanding:$_page = "promo";break;            
             case page::UrgenceRoutiere24H:$_page = "urgence-routiere-24h";break;
@@ -234,7 +242,12 @@ class RD_Header{
             case "financement.php":$metaContent = "Pour un camion neuf ou d&#39;occasion ou encore un lot de camions, vous trouverez satisfaction parmi notre gamme de produits de financement concurrentiels.";break;
             case "apres-vente.php":$metaContent = "Profitez d&#39;un service après-vente incomparable sur votre camion lourd avec Réseau Dynamique grâce à un réseau composé de 19 points de service au Québec.";break;
             case "promotions.php":$metaContent = "Profitez de promotions avantageuses à l&#39;achat d&#39;un ou plusieurs camions lourds International chez votre concessionnaire Réseau Dynamique.";break;
-            //case "promo-pieces.php":$metaContent = "";break;
+            case "promo-pieces.php":$metaContent = "Promotions courantes consultez la Circulaire Réseau Dynamique";break;            
+            case "promo-pieces-2.php":$metaContent = "Promotions courantes, Liquidation Réseau Dynamique";break;
+            case "promo-pieces-3.php":$metaContent = "Promotions courantes Outillage 2018 Réseau Dynamique";break;
+            case "promo-pieces-4.php":$metaContent = "Promotions courantes, consultez la Circulaire Réseau Dynamique";break;
+            case "promo-pieces-5.php":$metaContent = "Promotions courantes, consultez la Circulaire Réseau Dynamique";break;
+            case "promo-pieces-6.php":$metaContent = "Promotions courantes, consultez la Circulaire Réseau Dynamique";break;
             case "nouvelles.php":$metaContent = "Consultez les nouvelles et découvrez les événements à venir du Réseau Dynamique.";break;
             //case "concours.php":$metaContent = "";break;
             case "remorques-doepker.php":$metaContent = "Découvrez nos modèles haute performance de remorques agricoles, ponts plats, remorques-citernes, remorques pour bois d&#39;oeuvre et remorques à gravier Doepker.";break;
@@ -453,6 +466,13 @@ class RD_Header{
             case "evaluer-echange.php":$title = "Évaluer mon échange | Réseau Dynamique";break;
             case "promotions.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";break;
             case "promo.php":$title = "Promotions courantes | Réseau Dynamique";break;
+            case "promo-pieces.php":$title = "Promotions courantes | Circulaire | Réseau Dynamique";break;
+            case "promo-pieces-2.php":$title = "Promotions courantes | Liquidation | Réseau Dynamique";break;
+            case "promo-pieces-3.php":$title = "Promotions courantes | Outillage | Réseau Dynamique";break;
+            case "promo-pieces-4.php":$title = "Promotions courantes | 4 | Réseau Dynamique";break;
+            case "promo-pieces-5.php":$title = "Promotions courantes | 5 | Réseau Dynamique";break;
+            case "promo-pieces-6.php":$title = "Promotions courantes | 6 | Réseau Dynamique";break;
+            
             //case "":$title = "";break;
             default:;
         }
@@ -515,7 +535,14 @@ class RD_Header{
             case "obtenir-prix.php":$title = "Obtenir un prix | Réseau Dynamique";break;
             case "demande-financement.php":$title = "Demande de financement | Réseau Dynamique";break;
             case "evaluer-echange.php":$title = "Évaluer mon échange | Réseau Dynamique";break;
-            case "promotions.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";
+            case "promotions.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";break;
+            case "promo.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";break;
+            case "promo-pieces.php":$title = "Promotions courantes | Circulaire | Réseau Dynamique";break;
+            case "promo-pieces-2.php":$title = "Promotions courantes | Liquidation | Réseau Dynamique";break;
+            case "promo-pieces-3.php":$title = "Promotions courantes | Outillage | Réseau Dynamique";break;
+            case "promo-pieces-4.php":$title = "Promotions courantes | 4 | Réseau Dynamique";break;
+            case "promo-pieces-5.php":$title = "Promotions courantes | 5 | Réseau Dynamique";break;
+            case "promo-pieces-6.php":$title = "Promotions courantes | 6 | Réseau Dynamique";break;
             //case "":$title = "";break;
             default:;
         }

@@ -109,7 +109,7 @@
                                 <?php echo $telephone; ?></br>
                             <?php endforeach;?>
                         </p>
-                        <div class="btnBon" style="display:none;">
+                        <div class="btnBon" style="display:block;">
                             <h2><a class="buttonBon" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::BonDeTravail) . "?succursale=" . $suc->getSuccursaleBonTravail(); ?>" target="_self">Ouvrez un bon de travail</a></h2>
                         </div>
                         <div class="btnPieces" style="display:block;">
