@@ -16,25 +16,30 @@
                     <h1>Promotions</h1>
                 </div>
                 <div class="contenu">
-                    <table>
-                        <tr>
-                            <td>
-                                <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" target="_self">
-                                    <img name="image" style="width: 235px;height:305px;" title="" src="../../_assets/images/promo/Promotion Septembre-Octobre 2018.jpg" alt="Promotion Septembre-Octobre 2018" />
-                                    <br>
-                                    <span class="label">Circulaire Septembre-Octobre</span>
-                                </a>
-                            </td>
-                            <td style="width: 25px;"></td>
-                            <td>
-                                <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces2); ?>" target="_self">
-                                    <img name="image" style="width: 235px;height:305px;" title="" src="../../_assets/images/promo/LIQUIDATION 2018-DYNAMIQUE.jpg" alt="Promotion Septembre-Octobre 2018" />
-                                    <br>
-                                    <span class="label">LIQUIDATION 2018</span>
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="contenu2">
+                        <div class="contenu2">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <!-- W:470 H:610 -->
+                                        <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" target="_self">
+                                            <img name="image" style="width: 259px;height:335px;" title="" src="../../_assets/images/promo/Promotion Novembre Decembre 2018.jpg" alt="Promotion Novembre-Decembre 2018" />
+                                            <br>
+                                            <span class="label">Circulaire Novembre-Decembre</span>
+                                        </a>
+                                    </td>
+                                    <td style="width: 25px;"></td>
+                                    <td>
+                                        <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces2); ?>" target="_self">
+                                            <img name="image" style="width: 259px;height:335px;" title="" src="../../_assets/images/promo/LIQUIDATION 2018-DYNAMIQUE.jpg" alt="Promotion Novembre-Decembre 2018" />
+                                            <br>
+                                            <span class="label">LIQUIDATION 2018</span>
+                                        </a>
+                                    </td>                                    
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
