@@ -11,13 +11,8 @@
                     <div class="">
                         <div class="jshowoff jshowoff-1">
                             <div>
-                                <img src="_assets/images/homeBanner/BANIERE CV.jpg" alt="La nouvelle Série CV - Automne 2018"/>
-                            </div>
-                            <div>
-                                <a name="hyperlien" href="http://www.sclq.ca/">
-                                    <img src="_assets/images/homeBanner/Salon CL.jpg" alt="Salon du Camion Lourd de Québec"/>
-                                </a>
-                            </div>
+                                <img src="_assets/images/homeBanner/BANNIERE CV 2.jpg" alt="La nouvelle Série CV - Automne 2018"/>
+                            </div>                           
                             <div>
                                 <a name="hyperlien" href="http://reseaudynamique.com/camions-neufs/camions-lourds-neufs-international.php">
                                     <img src="_assets/images/homeBanner/banniere LT.jpg" alt="Camions LT International"/>
@@ -30,7 +25,7 @@
                             </div>
                             <div>
                                 <a name="hyperlien" href="http://reseaudynamique.com/promotions-nouvelles/promo-pieces.php">
-                                    <img src="_assets/images/homeBanner/BANIERE CIRCULAIRE RD.jpg" alt=""/>
+                                    <img src="_assets/images/homeBanner/BANIERE CIRCULAIRE RD NOV-DEC 2018.png" alt=""/>
                                 </a>
                             </div>
                             <div>
@@ -63,10 +58,10 @@
                     <span>
                         <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational)?>" target="_self">
                             <span class="image">
-                                <img name="image" title="" src="_assets/images/menu_images/cat-camion-international.jpg" alt="Camion International" />
+                                <img name="image" title="" src="_assets/images/menu_images/Navistar_LT_Utah-Web_JPG-edit.jpg" alt="Camion International" />
                             </span>
                             <span class="imageMobile">
-                                <img name="image" title="" src="_assets/images/menu_images/ban-camion-international.jpg" alt="Camion International" />
+                                <img name="image" title="" src="_assets/images/menu_images/Navistar_LT_Utah-Web_JPG-edit.jpg" alt="Camion International" />
                             </span>
                             <span class="orange">
                                 <span class="titre">Camion international</span>
@@ -79,10 +74,10 @@
                     <span>
                         <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsOttawaKalmar)?>" target="_self">
                             <span class="image">
-                                <img name="image" title="" src="_assets/images/menu_images/cat-tracteur-terminal-ottawa-kalmar.jpg" alt="Tracteur Terminal Ottawa Kalmar" />
+                                <img name="image" title="" src="_assets/images/menu_images/gal_Tall_Ground_level_Truck.jpg" alt="Tracteur Terminal Ottawa Kalmar" />
                             </span>
                             <span class="imageMobile">
-                                <img name="image" title="" src="_assets/images/menu_images/ban-tracteur-terminal.jpg" alt="Tracteur Terminal" />
+                                <img name="image" title="" src="_assets/images/menu_images/gal_Tall_Ground_level_Truck.jpg" alt="Tracteur Terminal" />
                             </span>
                             <span class="orange">
                                 <span class="titre">Tracteur de Terminal Ottawa Kalmar</span>
@@ -95,10 +90,10 @@
                     <span>
                         <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsIsuzu)?>" target="_self">
                             <span class="image">
-                                <img name="image" title="" src="_assets/images/menu_images/cat-camion-isuzu.jpg" alt="Camion Isuzu" />
+                                <img name="image" title="" src="_assets/images/menu_images/my18_home6.jpg" alt="Camion Isuzu" />
                             </span>
                             <span class="imageMobile">
-                                <img name="image" title="" src="_assets/images/menu_images/ban-camion-isuzu.jpg" alt="Camion Isuzu" />
+                                <img name="image" title="" src="_assets/images/menu_images/my18_home6.jpg" alt="Camion Isuzu" />
                             </span>
                             <span class="orange">
                                 <span class="titre">Camion Isuzu</span>

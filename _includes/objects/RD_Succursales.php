@@ -674,12 +674,12 @@ class RD_Succursales{
                 $this->codePostal = "G5R 3Z5";
                 $this->telephones[] = "Téléphone : 418 862-7231";
                 $this->telephones[] = "Télécopieur : 418 862-1938";
-                $this->heureOuvertureLundi = "7:30 - 00:30";
+                $this->heureOuvertureLundi = "7:30 - 22:00";
                 $this->heureOuvertureMardi = "7:30 - 00:30";
                 $this->heureOuvertureMercredi = "7:30 - 00:30";
                 $this->heureOuvertureJeudi = "7:30 - 00:30";
                 $this->heureOuvertureVendredi = "7:30 - 00:30";
-                $this->heureOuvertureSamedi = "7:30 - 16:30";
+                $this->heureOuvertureSamedi = "8:00 - 12:00";
                 $this->heureOuvertureDimanche = "Fermé";
                 $this->contacts = new Contact();
                 $this->contacts->addItem(array("Serge Boucher", "Directeur général et Directeur des ventes","sboucher@centreroutier.com"));
