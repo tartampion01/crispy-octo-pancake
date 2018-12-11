@@ -6,7 +6,7 @@
             <div class="shrink">
                 <div class="titrepage">
                     <h1>
-                        <span>DEMANDE DE PIÈCES</span>
+                        <span>DEMANDE DE PIÈCES</span><a></a>
                     </h1>
                 </div>
                 <div class="contenu">
