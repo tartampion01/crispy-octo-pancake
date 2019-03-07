@@ -84,6 +84,27 @@ class RD_Utils
         print_r($ddlDebut . $options . $ddlFin);
     }
     
+    public static function GetListBoxSuccursalesCarrieres()
+    {
+        $ddlDebut = "<select multiple size='12' name='ddlSuccursales[]' id='ddlSuccursales[]' class='dropDownBonTravailDemandePieces'>";
+        $options = "<option value='Anjou'>Anjou - Camions Inter-Anjou</option>";
+        $options .= "<option value='Boucherville'>Boucherville - Inter-Boucherville</option>";
+        $options .= "<option value='Drummondville'>Drummondville - Centre du Camion Beaudoin</option>";
+        $options .= "<option value='Joliette'>Joliette - Camions Inter-Lanaudière</option>";
+        $options .= "<option value='Québec'>Québec - Camions International Élite</option>";
+        $options .= "<option value='Rivière-du-Loup'>Rivière-du-Loup - Le Centre Routier 1994</option>";
+        $options .= "<option value='Saint-Hyacinthe'>St-Hyacinthe - Les Camions Beaudoin</option>";
+        $options .= "<option value='Saint-Georges'>St-Georges - Le Centre du Camion (Beauce)</option>";
+        $options .= "<option value='Shawinigan'>Shawinigan - Garage Robert</option>";
+        $options .= "<option value='Trois-Rivières'>Trois-Rivières - Garage Charest et Frères</option>";
+        $options .= "<option value='Thetford Mines'>Thetford Mines - Le Centre du Camion (Amiante)</option>";
+        $options .= "<option value='Victoriaville'>Victoriaville - Charest International</option>";
+        
+        $ddlFin = "</select>";
+
+        print_r($ddlDebut . $options . $ddlFin);
+    }
+    
     static function validateRecaptcha($captchaResponse){
         global $applicationConfig;
 
