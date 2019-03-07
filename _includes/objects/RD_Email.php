@@ -726,7 +726,7 @@ Class RD_Email
         $this->mail->AltBody = "-alt-";
     }   
     
-    public function loadPostulerEmploi($TypeEmail,$emploi,$Nom,$Prenom,$Ville,$Telephone,$Email,$Commentaire,$FileCVPrettyName,$FilePresPrettyName,$CVFile,$PresFile)
+    public function loadPostulerEmploi($TypeEmail,$emploi,$Nom,$Prenom,$Ville,$Telephone,$Email,$Commentaire,$FileCVPrettyName,$FilePresPrettyName,$CVFile,$PresFile,$succursalesChoisies)
     {
         global $applicationConfig;
         $emailto = $toName = $subject = $body = "";
@@ -744,7 +744,7 @@ Class RD_Email
             $emailto = "rh@camionbeaudoin.com";
             $toName  = "";
             $subject = "Candidature spontanée provenant de www.reseaudynamique.com";
-            $bodyHeader = '<h1>Candidature spontanée</h1>';
+            $bodyHeader = '<h1>Candidature spontanée</h1><h3>Intéressé par les succursales:</h3>' . $succursalesChoisies;
         }
         
         $this->email = urldecode($Email);
