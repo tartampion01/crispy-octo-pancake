@@ -16,7 +16,7 @@
                             $emploi;
                             
                             $prenomErr = $nomErr = $villeErr = $emailErr = $telErr = "";
-                            $prenom = $nom = $ville = $email = $tel = $comm = "";
+                            $prenom = $nom = $ville = $email = $tel = $comm = $succursalesChoisises = "";
                             $errorCount = 0;
                             
                             function uploadFile($ctrlName, $cv = 0)
@@ -114,6 +114,10 @@
 
                                 $comm = isset($_POST["tbCommentaire"]) ? RD_Utils::test_input($_POST["tbCommentaire"]) : "";
 
+                                // Liste succursales
+                                foreach ($_POST['ddlSuccursales'] as $selectedOption)
+                                    $succursalesChoisises .= $selectedOption ." ";
+                                
                                 if(!empty($_FILES["fileCV"]["name"])){
                                     uploadFile("fileCV", 1);
                                 }
@@ -126,7 +130,7 @@
                                 if(isset($_POST['btnSendMail']) && $errorCount == 0)
                                 {
                                     $RDemail = new RD_Email();
-                                    $RDemail->loadPostulerEmploi(TypeEmail::PostulerEmploi,$emploi,$nom,$prenom,$ville,$tel,$email,$comm,$nomFicherCV,$nomFichierPres,$nomFichierCV_TEMP,$nomFichierPres_TEMP);
+                                    $RDemail->loadPostulerEmploi(TypeEmail::PostulerEmploi,$emploi,$nom,$prenom,$ville,$tel,$email,$comm,$nomFicherCV,$nomFichierPres,$nomFichierCV_TEMP,$nomFichierPres_TEMP, $succursalesChoisises);
                                     
                                     if($RDemail->send()){
                                         $divVisibility = "hidden";
@@ -192,7 +196,11 @@
                             <label id="cvPresName" name="cvPresName"></label>
                             
                             <h5>Quelques mots sur vous :<br>
-                                <textarea name="tbCommentaire" name="tbCommentaire" rows="2" cols="50" style="width: 450px;height: 120px;"><?php echo $comm;?></textarea></h5>
+                                <textarea name="tbCommentaire" name="tbCommentaire" rows="2" cols="50" style="width: 450px;height: 120px;"><?php echo $comm;?></textarea>
+                            </h5>
+                            <h5>Succursales qui vous intéressent :<br>
+                            <?php echo RD_Utils::GetListBoxSuccursalesCarrieres(); ?>                            
+                            </h5>
                             <p>
                                 <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" class="">
                             </p>
