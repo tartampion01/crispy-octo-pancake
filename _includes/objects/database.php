@@ -8,7 +8,7 @@ class Database{
 //    private $password = "TT67xgw!**";
 //    public  $conn;
      
-    private $host     = "24.226.145.22";
+    private $host     = "192.168.21.63";
     private $db_name  = "reseaudynamique";
     private $username = "rdyn";
     private $password = "cb2007";
