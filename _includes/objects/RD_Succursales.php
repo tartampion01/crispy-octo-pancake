@@ -310,8 +310,9 @@ class RD_Succursales{
                 $this->heureOuvertureDimanche = "Fermé";
                 $this->contacts = new Contact();
                 $this->contacts->addItem(array("Roger Lachapelle", "Directeur Général","rlachapelle@camionbeaudoin.com"));
-                $this->contacts->addItem(array("Bruno Larivière", "Directeur du service","brunol@camionsinterlanaudiere.com"));
+                $this->contacts->addItem(array("Jean-Philippe Guévremont", "Directeur du service","jpguevremont@camionsinterlanaudiere.com"));
                 $this->contacts->addItem(array("Benoit Blier", "Aviseur Technique","benoitb@camionsinterlanaudiere.com"));
+                $this->contacts->addItem(array("Simon Dallaire", "Aviseur Technique","simond@camionsinterlanaudiere.com"));
                 $this->contacts->addItem(array("Éric Boudreau", "Directeur des pièces","ericb@camionsinterlanaudiere.com"));
                 $this->contacts->addItem(array("Pierre Harnois", "Représentant des pièces et service","pierreh@camionsinterlanaudiere.com"));                
                 $this->contacts->addItem(array("Guillaume Coutu", "Représentant des pièces et service","guillaumec@camionsinterlanaudiere.com"));
@@ -349,11 +350,11 @@ class RD_Succursales{
                 $this->codePostal = "H1J 1S8";
                 $this->telephones[] = "Téléphone : 514 353-9720";
                 $this->telephones[] = "Télécopieur : 514 353-3222";                
-                $this->heureOuvertureLundi = "7:00 - 00:30";
-                $this->heureOuvertureMardi = "7:00 - 00:30";
-                $this->heureOuvertureMercredi = "7:00 - 00:30";
-                $this->heureOuvertureJeudi = "7:00 - 00:30";
-                $this->heureOuvertureVendredi = "7:00 - 00:30";
+                $this->heureOuvertureLundi = "7:00 - minuit";
+                $this->heureOuvertureMardi = "7:00 - minuit";
+                $this->heureOuvertureMercredi = "7:00 - minuit";
+                $this->heureOuvertureJeudi = "7:00 - minuit";
+                $this->heureOuvertureVendredi = "7:00 - 22:00";
                 $this->heureOuvertureSamedi = "Fermé";
                 $this->heureOuvertureDimanche = "Fermé";
                 $this->contacts = new Contact();
@@ -673,7 +674,7 @@ class RD_Succursales{
                 $this->codePostal = "G5R 3Z5";
                 $this->telephones[] = "Téléphone : 418 862-7231";
                 $this->telephones[] = "Télécopieur : 418 862-1938";
-                $this->heureOuvertureLundi = "7:30 - 22:00";
+                $this->heureOuvertureLundi = "7:30 - 00:30";
                 $this->heureOuvertureMardi = "7:30 - 00:30";
                 $this->heureOuvertureMercredi = "7:30 - 00:30";
                 $this->heureOuvertureJeudi = "7:30 - 00:30";
