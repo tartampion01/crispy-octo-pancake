@@ -28,68 +28,83 @@
                         <span>
                             <div class="carrousel">
                                 <div class="">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-01.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-01.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-02.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-02.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-03.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-03.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-04.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-04.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-05.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-05.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-06.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-06.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-07.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-07.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-08.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-08.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-09.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-09.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-10.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-10.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-11.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-11.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-12.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-12.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-13.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-13.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-14.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-14.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-15.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-15.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-16.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-16.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-17.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-17.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-18.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-18.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-19.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-19.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-20.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-20.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-21.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-22.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-23.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-24.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
+                                </div>
+                                <div class="" style="display:none;">
+                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-25.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                 </div>
                                 <div class="" style="display:none;">
                                     <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre)?>">
-                                        <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Jan-Fev 2019/LD Promo Reseau Dynamique Jan Fev 2019-21.jpg" alt="Promo Reseau Dynamique Jan Fev 2019" />
+                                        <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/Mai-Juin 2019/Promo mai-juin 2019 - Reseau Dynamique-26.jpg" alt="Promo Reseau Dynamique Mai Juin 2019" />
                                     </a>
                                 </div>
                             </div>

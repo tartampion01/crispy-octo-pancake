@@ -23,9 +23,9 @@
                                     <td>
                                         <!-- W:470 H:610 -->
                                         <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" target="_self">
-                                            <img name="image" style="width: 259px;height:335px;" title="" src="../../_assets/images/promo/Promotion Janvier-Fevrier 2019.jpg" alt="Promotion Janvier-Février 2019" />
+                                            <img name="image" style="width: 259px;height:335px;" title="" src="../../_assets/images/promo/Mar-Avr 2019/Promo mars-avril 2019 - Reseau Dynamique-01" alt="Promotion Mars-Avril 2019" />
                                             <br>
-                                            <span class="label">Circulaire Janvier-Fevrier</span>
+                                            <span class="label">Circulaire Mars-Avril</span>
                                         </a>
                                     </td>
                                     <td style="width: 25px;"></td>
