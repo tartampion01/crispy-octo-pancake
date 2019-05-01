@@ -198,9 +198,9 @@
                             <h5>Quelques mots sur vous :<br>
                                 <textarea name="tbCommentaire" name="tbCommentaire" rows="2" cols="50" style="width: 450px;height: 120px;"><?php echo $comm;?></textarea>
                             </h5>
-                            <h5>Succursales qui vous intéressent :<br>
+                            <h5>Succursales qui vous intéressent :</h5>
+                            <label class="small">(Utilisez CTRL+click pour en sélectionner plusieurs)</label>
                             <?php echo RD_Utils::GetListBoxSuccursalesCarrieres(); ?>                            
-                            </h5>
                             <p>
                                 <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" class="">
                             </p>
