@@ -68,7 +68,7 @@ var gCsvData = [["46.021897","-73.410681","Joliette","\/_assets\/images\/menu_im
 };
 </script>
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDuaRF4lHcitMJRMRWN_Bm1qo1icwWetg&language=fr"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?php global $applicationConfig;echo $applicationConfig['google.map.apikey']; ?>&language=fr"></script>
 <script type="text/javascript" src="http://storelocator.googlecode.com/git/js/store-locator.compiled.js?language=fr"></script>
 <script type="text/javascript">//<![CDATA[
 /*
