@@ -464,7 +464,6 @@ class RD_Header{
             case "obtenir-prix.php":$title = "Obtenir un prix | Réseau Dynamique";break;
             case "demande-financement.php":$title = "Demande de financement | Réseau Dynamique";break;
             case "evaluer-echange.php":$title = "Évaluer mon échange | Réseau Dynamique";break;
-            case "promotions.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";break;
             case "promo.php":$title = "Promotions courantes | Réseau Dynamique";break;
             case "promo-pieces.php":$title = "Promotions courantes | Circulaire | Réseau Dynamique";break;
             case "promo-pieces-2.php":$title = "Promotions courantes | Liquidation | Réseau Dynamique";break;
@@ -535,7 +534,6 @@ class RD_Header{
             case "obtenir-prix.php":$title = "Obtenir un prix | Réseau Dynamique";break;
             case "demande-financement.php":$title = "Demande de financement | Réseau Dynamique";break;
             case "evaluer-echange.php":$title = "Évaluer mon échange | Réseau Dynamique";break;
-            case "promotions.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";break;
             case "promo.php":$title = "Promotions sur Camions Lourds | Réseau Dynamique";break;
             case "promo-pieces.php":$title = "Promotions courantes | Circulaire | Réseau Dynamique";break;
             case "promo-pieces-2.php":$title = "Promotions courantes | Liquidation | Réseau Dynamique";break;
