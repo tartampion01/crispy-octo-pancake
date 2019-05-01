@@ -14,6 +14,9 @@
     header("Access-Control-Allow-Origin: *");    
     header("Access-Control-Allow-Methods: PUT, GET, POST");
     header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Cache-Control: post-check=0, pre-check=0", false);
+    header("Pragma: no-cache");
 ?>
 <head>
     <!-- Google Tag Manager -->
@@ -24,14 +27,13 @@
     })(window,document,'script','dataLayer','GTM-PS9XTZC');</script>
     <!-- End Google Tag Manager -->
     
-    <meta http-equiv="Cache-control" mas-age='604800' content="public">
     <title><?PHP RD_Header::getPageTitle($NOMPAGE); ?></title>
     <meta content="<?PHP RD_Header::getMetaContent($NOMPAGE); ?>" name="description" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />    
     <meta http-equiv="Content-type"  content="text/html;charset=UTF-8" />    
     <link rel='canonical' href='<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>' />
         
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <!-- Global Site Tag (gtag.js) - Googlemas-age Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3192388-2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
