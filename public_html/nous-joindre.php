@@ -919,21 +919,17 @@ function urldecode(str) {
         <div class="nom"><h4><span>L’As du Camion 2000 inc.</span></h4></div>
         <div class="tel">T&#233;l : <span >418 725-3333</span></div>
     </div>
-     <div class="concession">
-        <div class="titre"><h3><span>Rivi&#232;re-au-Renard</span></h3></div>
-        <div class="nom"><h4><span>Garage D.J.R. (1988) Lt&#233;e</span></h4></div>
-        <div class="tel">T&#233;l : <span >418 269-5230</span></div>
-    </div>
-     <div class="concession">
-        <div class="titre"><h3><span>Sept-&#238;les</span></h3></div>
-        <div class="nom"><h4><span>Centre de M&#233;canique du Golfe inc.</span></h4></div>
-        <div class="tel">T&#233;l : <span >418 962-4057</span></div>
-    </div>
     <div class="concession">
         <div class="titre"><h3><span>Sainte-Marie-de-Beauce</span></h3></div>
         <div class="nom"><h4><span>Domaine du Di&#233;sel EG inc.</span></h4></div>
         <div class="tel">T&#233;l : <span >418 387-3036</span></div>
     </div>
+    <div class="concession">
+        <div class="titre"><h3><span>Sept-&#238;les</span></h3></div>
+        <div class="nom"><h4><span>Centre de M&#233;canique du Golfe inc.</span></h4></div>
+        <div class="tel">T&#233;l : <span >418 962-4057</span></div>
+    </div>
+    
 </div>
 
 </div>
