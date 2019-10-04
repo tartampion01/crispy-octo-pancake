@@ -1527,7 +1527,7 @@ overflow:hidden!important;
 }
 .gm-style .gm-style-iw{
 padding-right:15px;
-top:initial!important;
+/*top:initial!important;*/
 bottom:0px;
 min-height:200px;
 }
