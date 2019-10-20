@@ -28,12 +28,13 @@
                             <div class="blocHeuresDouverture contenu">
                                 <div class="titre">
                                     <h2>Heures d'ouverture</h2>
-                                    <p>Veuillez prendre note qu'à compter du 8 mai prochain les heures d'ouverture de notre département de service seront modifiées comme&nbsp;ceci&nbsp;:&nbsp;</p>
+                                    <!--<p>Veuillez prendre note qu'à compter du 8 mai prochain les heures d'ouverture de notre département de service seront modifiées comme&nbsp;ceci&nbsp;:&nbsp;</p>-->
                                 </div>
                                 <div class="heures">
                                     <table style="width: 100%;" mappingtype="Page" editorselectedelement="true" cellspacing="0" cellpadding="0" border="0">
                                     <tbody>
                                         <tr></tr>
+                                        <!--
                                         <tr>
                                             <td colspan="2">Du Lundi 7h30 jusqu'au vendredi à minuit<br></td>
                                         </tr>
@@ -49,6 +50,11 @@
                                                 <p>Cependant, pour la période incluse entre le 17 juillet et le 25 août, les heures d'ouverture seront les suivantes :</p>
                                             </td>
                                         </tr>
+                                        -->
+                                        <tr>
+                                            <td colspan="2"><b>Ouvert 24h la semaine</b></td>
+                                        </tr>
+                                        
                                         <tr>
                                             <td>Lundi :</td>
                                             <td><?php echo $suc->heureOuvertureLundi; ?></td>
