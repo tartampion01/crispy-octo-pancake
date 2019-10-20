@@ -25,7 +25,7 @@
                             </div>
                             <div>
                                 <a name="hyperlien" href="http://reseaudynamique.com/promotions-nouvelles/promo-pieces.php">
-                                    <img src="_assets/images/homeBanner/BANIERE CIRCULAIRE RD MAI-JUIN 2019.png" alt=""/>
+                                    <img src="_assets/images/homeBanner/BANIERE CIRCULAIRE RD SEP-OCT 2019.png" alt="" width="1125" height="400"/>
                                 </a>
                             </div>
                             <div>

@@ -6,6 +6,11 @@
             <div class="shrink">
                 <div class="titrepage">
                     <h1>Nous joindre</h1>
+                    
+                    
+                    
+                    
+                    
                 </div>
                 <div class="contenu">
                     <div class="contenu2 contenu3">
@@ -810,7 +815,7 @@ function urldecode(str) {
                     </div>
 
 <div class="contenu contenu-nous-joindre" data-staticClassNames="contenu">
-    <div class="" data-staticClassNames=" ">
+    <div class="">
         <h2>Concessionnaires</h2>
     </div>
     <div class="concession">
