@@ -15,10 +15,10 @@
                 <table style="width: 970px;">
                     <tr>
                         <td align="left" style="padding-top: 10px">
-                            <promo>LIQUIDATION</promo>
+                            <promo>BLITZ</promo>
                         </td>
                         <td align="right">
-                            <a href='../_assets/images/promo/LIQUIDATION 2018-DYNAMIQUE.pdf' target="=_blank">Nouvelle fenêtre pour impression</a>
+                            <a href='../_assets/images/promo/Blitz/27 au 31 mai 2019 - DO4422 & DO61G.pdf' target="=_blank">Nouvelle fenêtre pour impression</a>
                         </td>
                     </tr>
                 </table>
@@ -27,9 +27,7 @@
                     <div class="bxslider">
                         <span>
                             <div class="carrousel">
-                                <div class="">
-                                    <img name="image" style="width: 471px;height:610px;" title="" src="../../_assets/images/promo/LIQUIDATION 2018-DYNAMIQUE.jpg" alt="Promotion Septembre-Octobre 2018" />
-                                </div>                                
+                                <img name="image" style="width: 471px;height:610px;" title="" src="../_assets/images/promo/Blitz/27 au 31 mai 2019 - DO4422 & DO61G.jpg" alt="Promotion Septembre-Octobre 2018" />
                             </div>
                         </span>
                     </div>
@@ -40,10 +38,10 @@
                         newCarrousel = $('.bxslider .carrousel').bxSlider({
                           useCSS: false,
                           auto: false,
-                          autoStart: true,
+                          autoStart: false,
                           mode: "fade",
                           pager: true,
-                          controls: true,
+                          controls: false,
                           responsive: true,
                     //      prevSelector: $(".flecheGauche"),
                     //      nextSelector: $(".flecheDroite"),

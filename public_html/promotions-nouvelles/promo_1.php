@@ -23,9 +23,9 @@
                                     <td>
                                         <!-- W:470 H:610 -->
                                         <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" target="_self">
-                                            <img name="image" style="width: 259px;height:335px;" title="" src="../../_assets/images/promo/Mar-Avr 2019/Promo mars-avril 2019 - Reseau Dynamique-01" alt="Promotion Mars-Avril 2019" />
+                                            <img name="image" style="width: 259px;height:335px;" title="" src="../../_assets/images/promo/Jui Aou 2019/HD Promo Juillet-Aout 2019 - Reseau Dynamique-01.jpg" alt="Promotion Juillet Aout 2019" />
                                             <br>
-                                            <span class="label">Circulaire Mars-Avril</span>
+                                            <span class="label">Circulaire Juillet Aout</span>
                                         </a>
                                     </td>
                                     <td style="width: 25px;"></td>
@@ -35,7 +35,24 @@
                                             <br>
                                             <span class="label">LIQUIDATION 2018</span>
                                         </a>-->
-                                    </td>                                    
+                                    </td>
+                                    <td>
+                                        <!-- W:470 H:610 -->
+                                        <!--<a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces2); ?>" target="_self">
+                                            <img name="image" style="width: 259px;height:335px;" title="" src="../../_assets/images/promo/Blitz/Blitz - Small.jpg" alt="Blitz" />
+                                            <br>
+                                            <span class="label">BLITZ</span>
+                                        </a>
+                                        -->
+                                    </td>
+                                    <td style="width: 25px;"></td>
+                                    <td>
+<!--                                        <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces2); ?>" target="_self">
+                                            <img name="image" style="width: 259px;height:335px;" title="" src="../../_assets/images/promo/LIQUIDATION 2018-DYNAMIQUE.jpg" alt="Promotion Novembre-Decembre 2018" />
+                                            <br>
+                                            <span class="label">LIQUIDATION 2018</span>
+                                        </a>-->
+                                    </td> 
                                 </tr>
                             </table>
                         </div>
