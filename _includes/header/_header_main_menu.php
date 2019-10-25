@@ -1,5 +1,5 @@
 <?php
-/*$pageName = basename($_SERVER['SCRIPT_NAME']);
+$pageName = basename($_SERVER['SCRIPT_NAME']);
 $section = '';
 
 if(strpos($_SERVER['REQUEST_URI'], 'camions-neufs/') !== false) {
@@ -22,7 +22,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'pieces-services/') !== false || strpos($
 }
 elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
     $section = 'carrieres';
-}*/
+}
 ?>
 <!-- MAIN MENU -->
 <!--
