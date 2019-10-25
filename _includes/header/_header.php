@@ -51,11 +51,12 @@
     <script type="text/javascript" src="../../_assets/js/object.values.polyfill.js"></script>
     <script type='text/javascript' src='../../_assets/js/jquery.tmpl.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.twbsPagination.js'></script>
+    <!--** integration js
     <script type='text/javascript' src='../../_assets/js/jquery-1.12.4.min.js'></script>  
     <script type="text/javascript" src="../../_assets/js/jquery.min.js"></script>
     <script type='text/javascript' src='../../_assets/js/modernizr.custom.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.dlmenu.js'></script>
-    <script type='text/javascript' src='../../_assets/js/slick.js'></script>
+    <script type='text/javascript' src='../../_assets/js/slick.js'></script>-->
     
     <!-- Bootstrap CDN includes --> <!--css-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
@@ -64,10 +65,11 @@
     <link rel="stylesheet" type="text/css" href="../../_assets/css/HighLightSelector.css" media="All" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/font-awesome.css" />
+    <!--** integration css
     <link rel="stylesheet" type="text/css" href="../../_assets/css/grid.css" />
-    <link rel="stylesheet" type="text/css" href="../../_assets/css/wx3.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/slick.css" />
-    <link rel="stylesheet" type="text/css" href="../../_assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/slick-theme.css" />-->
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/wx3.css" />
 
     
     <!-- A CHANGER LORS DE L'IMPLANTATION DU RECAPTCHA v3 sur tout le site -->
@@ -78,7 +80,7 @@
 </head>
 <?PHP
     // TOP MENU
-    //require_once(dirname(__DIR__).'/header/_header_top_menu.php'); A enlever plus tard FXGL 25-10-2019**
+    require_once(dirname(__DIR__).'/header/_header_top_menu.php');
     // SUB HEADER LOGO + RECHERCHE
     require_once(dirname(__DIR__).'/header/_header_logo_search.php');
     // SUB Header MENU PRINCIPAL
