@@ -88,7 +88,7 @@
                     </div>
                     <div class="col-1-2 mobile-col-1-2">
                         <div class="col-1-1 mobile-col-1-1">
-                            <a href="https://www.facebook.com" target="_blank"><img class="facebook_top" src="_assets/images/wx3/facebook_footer.png" alt="facebook" /></a>
+                            <a href="https://www.facebook.com/Réseau-Dynamiquecom-200899577018785/" target="_blank"><img class="facebook_top" src="_assets/images/wx3/facebook_footer.png" alt="facebook" /></a>
                             <a href="#">
                                 <img class="tel_top" src="_assets/images/wx3/logo-tel.png" alt="phone" />
                                 <p class="urgence_top">Urgence Routière</p>
