@@ -149,13 +149,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                 <div class="menudestop grid grid-pad">
                     <ul>
                         <li>
-                            <a href="filter.html">Camions</a>
+                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">Camions</a>
                             <ul class="hidden">
                                 <li>
-                                    <a href="filter.html">International</a>
+                                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">International</a>
                                     <ul class="hidden">
                                         <li>
-                                            <a href="#">série CV</a>
+                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">série CV</a>
                                             <ul class="hidden">
                                                 <li>
                                                     <img src="Resources/images/CV-navigation.jpg" alt="" />
@@ -166,13 +166,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/cv-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="filter.html">Inventaire</a>
+                                                        <a style="margin-top:9px;" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">série HV</a>
+                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">série HV</a>
                                             <ul class="hidden">
                                                 <li>
                                                     <img src="Resources/images/HV-navigation.jpg" alt="" />
@@ -183,13 +183,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/hv-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="filter.html">Inventaire</a>
+                                                        <a style="margin-top:9px;" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">série HX</a>
+                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">série HX</a>
                                             <ul class="hidden">
                                                 <li>
                                                     <img src="Resources/images/hx-navigation.jpg" alt="" />
@@ -200,13 +200,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/hx-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="filter.html">Inventaire</a>
+                                                        <a style="margin-top:9px;" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">série LT</a>
+                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">série LT</a>
                                             <ul class="hidden">
                                                 <li>
                                                     <img src="Resources/images/lt-navigation.png" alt="" />
@@ -217,13 +217,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/lt-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="filter.html">Inventaire</a>
+                                                        <a style="margin-top:9px;" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">série MV</a>
+                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">série MV</a>
                                             <ul class="hidden">
                                                 <li>
                                                     <img src="Resources/images/MV-navigation.jpg" alt="" />
@@ -234,7 +234,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="filter.html">Inventaire</a>
+                                                        <a style="margin-top:9px;" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
@@ -242,78 +242,70 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="filter.html">Isuzu</a>
+                                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">Isuzu</a>
                                 </li>
                                 <li>
-                                    <a href="filter.html">Occasion</a>
+                                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">Occasion</a>
                                 </li>
                                 <li>
-                                    <a href="filter.html">Inventaire</a>
+                                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">Inventaire</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">pièces</a>
+                            <a href="<?php echo RD_PageLink::getHref(folder::pieces-services,page::pieces-accessoires); ?>">pièces</a>
                             <ul class="hidden">
-                                <li><a href="filter.html">Nouveauté</a></li>
-                                <li><a href="filter.html">Occasion</a></li>
-                                <li><a href="filter.html">Boutique en ligne</a></li>
-                                <li><a href="filter.html">Inventaire</a></li>
+                                <li><a href="https://www.nexpart.com/login.php">Commande en ligne</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Service</a>
+                            <a href="<?php echo RD_PageLink::getHref(folder::pieces-services,page::service-routier); ?>">Service</a>
                             <ul class="hidden">
-                                <li><a href="#">Routier</a></li>
-                                <li><a href="#">Après-Vente</a></li>
+                                <li><a href="<?php echo RD_PageLink::getHref(folder::pieces-services,page::service-routier); ?>">Routier</a></li>
+                                <li><a href="<?php echo RD_PageLink::getHref(folder::pieces-services,page::apres-vente); ?>">Après-Vente</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Financement</a>
+                            <a href="<?php echo RD_PageLink::getHref(folder::pieces-services,page::financement); ?>">Financement</a>
                             <ul class="hidden">
-                                <li><a href="#">Long terme</a></li>
-                                <li><a href="#">Court terme</a></li>
-                                <li><a href="#">Calculateur</a></li>
-                                <li><a href="#">Commande en ligne</a></li>
+                                <!--<li><a href="#">Calculateur</a></li> SOUS CLASSE BESOIN ** FXGL  -->
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Location</a>
+                            <a href="location-camions.php">Location</a>
                             <ul class="hidden">
-                                <li><a href="#">Court terme</a></li>
-                                <li><a href="#">Long terme</a></li>
-                                <li><a href="#">Avec entretien</a></li>
-                                <li><a href="#">Sans entretien</a></li>
+                                <li><a href="location-camions.php">Court terme</a></li>
+                                <li><a href="location-camions.php">Long terme</a></li>
+                                <li><a href="location-camions.php">Avec entretien</a></li>
+                                <li><a href="location-camions.php">Sans entretien</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Carrière</a>
+                            <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres); ?>">Carrière</a>
                             <ul class="hidden">
-                                <li><a href="#">Emploi disponible</a></li>
-                                <li><a href="#">Canditature spontanée</a></li>
+                                <li><a href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres); ?>">Emploi disponible</a></li>
+                                <li><a href="postuler.php">Canditature spontanée</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Circulaire</a>
+                            <a href="<?php echo RD_PageLink::getHref(folder::promotions-nouvelles,page::promo.php); ?>">Circulaire</a>
                             <ul class="hidden">
-                                <li><a href="#">Promotion</a></li>
-                                <li style="min-width:230px;"><a href="#">Circulaire complet</a></li>
+                                <li><a href="<?php echo RD_PageLink::getHref(folder::promotions-nouvelles,page::promo.php); ?>">Promotion</a></li>
+                                <li style="min-width:230px;"><a href="<?php echo RD_PageLink::getHref(folder::promotions-nouvelles,page::promo-pieces.php); ?>">Circulaire complet</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">À Propos</a>
+                            <a href="a-propos.php">À Propos</a>
                             <ul class="hidden" style="min-width:210px;">
-                                <li><a href="#">Notre entreprise</a></li>
-                                <li><a href="#">Notre réseaux</a></li>
-                                <li><a href="filter.html">Occasion</a></li>
-                                <li><a href="filter.html">Inventaire</a></li>
+                                <li><a href="a-propos.php">Notre entreprise</a></li>
+                                <li><a href="a-propos.php">Notre réseaux</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Nous Joindre</a>
+                            <a href="nous-joindre.php">Nous Joindre</a>
                             <ul class="hidden">
-                                <li><a href="#map">Concessionaire</a></li>
-                                <li style="min-width:230px;"><a href="#map">Point de service</a></li>
+                                <li><a href="nous-joindre.php">Concessionaire</a></li>
+                                <li style="min-width:230px;"><a href="nous-joindre.php">Point de service</a></li>
                             </ul>
                         </li>
                     </ul>
