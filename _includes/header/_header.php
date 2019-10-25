@@ -43,7 +43,7 @@
       gtag('js', new Date());
       gtag('config', 'UA-3192388-2');
     </script>
-
+    <!--javascript-->
     <script type='text/javascript' src='../../_assets/js/jquery-3.2.1.js'></script>
     <script type="text/javascript" src="../../_assets/js/jquery-bxslider.js" ></script>
 
@@ -51,15 +51,24 @@
     <script type="text/javascript" src="../../_assets/js/object.values.polyfill.js"></script>
     <script type='text/javascript' src='../../_assets/js/jquery.tmpl.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.twbsPagination.js'></script>
+    <script type='text/javascript' src='../../_assets/js/jquery-1.12.4.min.js'></script>  
+    <script type="text/javascript" src="../../_assets/js/jquery.min.js"></script>
+    <script type='text/javascript' src='../../_assets/js/modernizr.custom.js'></script>
+    <script type='text/javascript' src='../../_assets/js/jquery.dlmenu.js'></script>
+    <script type='text/javascript' src='../../_assets/js/slick.js'></script>
     
-    <!-- Bootstrap CDN includes -->    
+    <!-- Bootstrap CDN includes --> <!--css-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/defaultGpcframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/HighLightSelector.css" media="All" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="../../_assets/css/wx3.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/wx3.css" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/slick-theme.css" />
+
     
     <!-- A CHANGER LORS DE L'IMPLANTATION DU RECAPTCHA v3 sur tout le site -->
     <?php if($NOMPAGE == "demande-bon-travail_v2.php")
