@@ -88,10 +88,10 @@
                     </div>
                     <div class="col-1-2 mobile-col-1-2">
                         <div class="col-1-1 mobile-col-1-1">
-                            <a href="https://www.facebook.com" target="_blank"><img class="floatright marginmedia" src="Resources/Images/facebook_footer.png" alt="facebook" /></a>
+                            <a href="https://www.facebook.com" target="_blank"><img class="facebook_top" src="Resources/Images/facebook_footer.png" alt="facebook" /></a>
                             <a href="#">
-                                <img class="floatright marginmedia" src="Resources/Images/logo-tel.png" alt="phone" />
-                                <p class="floatright bold marginmedia topdivision20 ">Urgence Routière</p>
+                                <img class="tel_top" src="Resources/Images/logo-tel.png" alt="phone" />
+                                <p class="urgence_top">Urgence Routière</p>
                             </a>
                         </div>
                     </div>

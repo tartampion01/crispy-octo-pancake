@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* header */
+.bghead {
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+}
+.bghead a {
+    color:black;
+}
+.marginmedia{
+    margin: 10px 10px 0px 0px;
+}
+
+.tel_top {float:right;margin: 10px 10px 0px 0px;}
+.urgence_top {float:right;font-weight:700;margin: 30px 10px 0px 0px;}
+.facebook_top {float:right;margin: 10px 10px 0px 0px;}
+
+/* */

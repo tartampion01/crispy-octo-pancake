@@ -1,5 +1,4 @@
-@charset "utf-8";
-/* CSS Document */
+
 * {
     margin: 0 auto;
     padding: 0px;
@@ -249,15 +248,7 @@ hr {
     position: relative;
     z-index: 10000;
 }
-.bghead {
-    background-color: white;
-    background-position: center;
-    background-size: cover;
-    height: auto;
-}
-.bghead a {
-    color:black;
-}
+
 /*menu*/
 .bgmenu {
     background-color: rgb(213,94,36);
