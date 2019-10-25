@@ -58,6 +58,7 @@
     <link rel="stylesheet" type="text/css" href="../../_assets/css/defaultGpcframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/HighLightSelector.css" media="All" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/wx3.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/font-awesome.css" />
     
     <!-- A CHANGER LORS DE L'IMPLANTATION DU RECAPTCHA v3 sur tout le site -->
