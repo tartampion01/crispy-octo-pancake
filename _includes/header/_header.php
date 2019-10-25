@@ -98,7 +98,7 @@
                 </div>
             </div>
 <?PHP
-    // TOP MENU
+    // TOP MENU --
     //require_once(dirname(__DIR__).'/header/_header_top_menu.php'); a enlever FX 25-10-2019
     // SUB HEADER LOGO + RECHERCHE
     //require_once(dirname(__DIR__).'/header/_header_logo_search.php'); a enlever FX 25-10-2019
