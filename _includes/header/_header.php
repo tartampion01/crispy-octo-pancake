@@ -65,10 +65,10 @@
     <link rel="stylesheet" type="text/css" href="../../_assets/css/HighLightSelector.css" media="All" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/font-awesome.css" />
-    <!--** integration css
+    
     <link rel="stylesheet" type="text/css" href="../../_assets/css/grid.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/slick.css" />
-    <link rel="stylesheet" type="text/css" href="../../_assets/css/slick-theme.css" />-->
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/wx3.css" />
 
     
@@ -78,11 +78,30 @@
     ?>
     <!--<script src='https://www.google.com/recaptcha/api.js?render=6LdryFoUAAAAADpVaDt5XQYrZIt7DTNXLVvXPJw7'></script>-->
 </head>
+            <!--header-->
+            <div class="bghead">
+                <div class="grid grid-pad">
+                    <div class="col-1-2 mobile-col-1-2">
+                        <a href="index.html">
+                            <img class="marginmedia" src="Resources/Images/logo-header.png" alt="logo depart" />
+                        </a>
+                    </div>
+                    <div class="col-1-2 mobile-col-1-2">
+                        <div class="col-1-1 mobile-col-1-1">
+                            <a href="https://www.facebook.com" target="_blank"><img class="floatright marginmedia" src="Resources/Images/facebook_footer.png" alt="facebook" /></a>
+                            <a href="#">
+                                <img class="floatright marginmedia" src="Resources/Images/logo-tel.png" alt="phone" />
+                                <p class="floatright bold marginmedia topdivision20 ">Urgence Routière</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 <?PHP
     // TOP MENU
-    require_once(dirname(__DIR__).'/header/_header_top_menu.php');
+    //require_once(dirname(__DIR__).'/header/_header_top_menu.php'); a enlever FX 25-10-2019
     // SUB HEADER LOGO + RECHERCHE
-    require_once(dirname(__DIR__).'/header/_header_logo_search.php');
+    //require_once(dirname(__DIR__).'/header/_header_logo_search.php'); a enlever FX 25-10-2019
     // SUB Header MENU PRINCIPAL
     require_once(dirname(__DIR__).'/header/_header_main_menu.php');
 ?>
