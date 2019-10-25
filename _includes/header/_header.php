@@ -43,7 +43,7 @@
       gtag('js', new Date());
       gtag('config', 'UA-3192388-2');
     </script>
-
+    <!--javascript-->
     <script type='text/javascript' src='../../_assets/js/jquery-3.2.1.js'></script>
     <script type="text/javascript" src="../../_assets/js/jquery-bxslider.js" ></script>
 
@@ -51,8 +51,17 @@
     <script type="text/javascript" src="../../_assets/js/object.values.polyfill.js"></script>
     <script type='text/javascript' src='../../_assets/js/jquery.tmpl.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.twbsPagination.js'></script>
+
+    <!--wx3data js include-->
+    <script type='text/javascript' src='../../_assets/js/modernizr.custom.js'></script>
+    <script type='text/javascript' src='../../_assets/js/jquery.dlmenu.js'></script>
+    <script type='text/javascript' src='../../_assets/js/slick.js'></script>
+
+    <!--** integration js
+    <script type='text/javascript' src='../../_assets/js/jquery-1.12.4.min.js'></script>  
+    <script type="text/javascript" src="../../_assets/js/jquery.min.js"></script>-->
     
-    <!-- Bootstrap CDN includes -->    
+    <!-- Bootstrap CDN includes --> <!--css-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/defaultGpcframe.css" />
@@ -60,17 +69,42 @@
     <link rel="stylesheet" type="text/css" href="../../_assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/font-awesome.css" />
     
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/wx3.css" />
+
+    
     <!-- A CHANGER LORS DE L'IMPLANTATION DU RECAPTCHA v3 sur tout le site -->
     <?php if($NOMPAGE == "demande-bon-travail_v2.php")
         //echo "<script src='https://www.google.com/recaptcha/api.js?render=" .  RD_Utils::getRecaptchaSiteKey() . "'></script>";
     ?>
     <!--<script src='https://www.google.com/recaptcha/api.js?render=6LdryFoUAAAAADpVaDt5XQYrZIt7DTNXLVvXPJw7'></script>-->
 </head>
+            <!--header-->
+            <div class="bghead">
+                <div class="grid grid-pad">
+                    <div class="col-1-2 mobile-col-1-2">
+                        <a href="accueil.php">
+                            <img class="marginmedia" src="_assets/images/wx3/logo-header.png" alt="logo depart" />
+                        </a>
+                    </div>
+                    <div class="col-1-2 mobile-col-1-2">
+                        <div class="col-1-1 mobile-col-1-1">
+                            <a href="https://www.facebook.com/Réseau-Dynamiquecom-200899577018785/" target="_blank"><img class="facebook_top" src="_assets/images/wx3/facebook_footer.png" alt="facebook" /></a>
+                            <a href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H); ?>">
+                                <img class="tel_top" src="_assets/images/wx3/logo-tel.png" alt="phone" />
+                                <p class="urgence_top">Urgence Routière</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 <?PHP
-    // TOP MENU
-    require_once(dirname(__DIR__).'/header/_header_top_menu.php');
+    // TOP MENU --
+    //require_once(dirname(__DIR__).'/header/_header_top_menu.php'); a enlever FX 25-10-2019
     // SUB HEADER LOGO + RECHERCHE
-    require_once(dirname(__DIR__).'/header/_header_logo_search.php');
+    //require_once(dirname(__DIR__).'/header/_header_logo_search.php'); a enlever FX 25-10-2019
     // SUB Header MENU PRINCIPAL
     require_once(dirname(__DIR__).'/header/_header_main_menu.php');
 ?>

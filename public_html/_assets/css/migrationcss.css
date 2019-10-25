@@ -1,0 +1,1348 @@
+
+* {
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+    font-family: Calibri;
+}
+
+table {position:relative;}
+
+a img {border:none;}
+img {max-width:100%;height:auto;} /*responsive*/
+
+
+#menu {position:absolute;top:50px;left:0px;}
+
+
+.bgimg {
+    background-image: url(../../Resources/Images/pagefiltre-fermer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 5440px;
+    width: 100%;
+}
+
+h2{
+    font-size:20px;
+}
+
+/*classe commune*/
+
+.titlesection {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.col-11{
+    width:11.11%;
+}
+.center{
+    text-align:center;
+}
+.verticalcenter{
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.white {
+    color: white;
+}
+.gray{
+    color:gray;
+}
+.orange {
+    color: rgb(213,94,36);
+}
+.containernavbar{
+    max-width:1920px;
+    margin:0 auto;
+    height:50px
+}
+.floatright{
+    float:right;
+}
+.floatleft{
+    float:left;
+}
+.left{
+    text-align:left;
+}
+.marginmedia{
+    margin: 10px 10px 0px 0px;
+}
+.justify {
+    text-align: justify
+}
+.bold{
+    font-weight:700;
+}
+.nobold{
+    font-weight:400;
+}
+.regular{
+    font-weight:400;
+}
+.fontsize15{
+    font-size:15px;
+}
+.fontsize18{
+    font-size:18px;
+}
+.fontsize20{
+    font-size:20px;
+}
+.fontsize25{
+    font-size:25px;
+}
+.fontsize30 {
+    font-size: 30px;
+}
+.fontsize35 {
+    font-size: 35px;
+}
+.fontsize40 {
+    font-size: 40px;
+}
+.lineheight10 {
+    line-height:10px;
+}
+.lineheight15 {
+    line-height: 15px;
+}
+.lineheight20 {
+    line-height: 20px;
+}
+.lineheight25 {
+    line-height: 25px;
+}
+.lineheight30 {
+    line-height: 30px;
+}
+.topdivision10 {
+    margin-top: 10px;
+}
+.topdivision15 {
+    margin-top:15px;
+}
+.topdivision20 {
+    margin-top: 20px;
+}
+.topdivision{
+    margin-top:25px;
+}
+.topdivision30{
+    margin-top:30px;
+}
+.topdivision40 {
+    margin-top:40px;
+}
+.topdivision50 {
+    margin-top:50px;
+}
+.topdivision100 {
+    margin-top: 100px;
+}
+.topdivision150 {
+    margin-top: 150px;
+}
+.topdivision200 {
+    margin-top: 200px;
+}
+.capitalize{
+    text-transform:capitalize;
+}
+.smallcases{
+    text-transform:lowercase;
+}
+.uppercases {
+    text-transform: uppercase;
+}
+.heightmenu{
+    height: 50px;
+}
+.minwidth135{
+    min-width:350px;
+}
+.nodeco{
+    text-decoration:none;
+}
+.image-box {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.paddingright{
+    padding-right:25px;
+}
+.paddingleft {
+    padding-left: 25px;
+}
+
+.padding {
+    padding:10px;
+}
+.nopadding{
+    padding:0px;
+}
+hr {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.border {
+    border: 1px solid red;
+}
+.inline{
+    display: inline-block;
+}
+.buttonwebsite {
+    padding: 10px;
+    background-color: none;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px rgb(213,94,36);
+    text-transform: uppercase;
+}
+
+ .buttonwebsite:hover {
+        background-color: rgb(213,94,36);
+        -webkit-box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
+        box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
+        text-decoration: none;
+        color: white;
+        cursor:pointer;
+    }
+.banner {
+    background-image: url(../../Resources/Images/mapping.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 150px;
+    background-repeat: no-repeat;
+}
+/*map*/
+
+/*header*/
+.mobiletel{
+    display:none;
+}
+.fixedheader {
+    margin-top: 170px;
+}
+.rightheader a{
+    color:black;
+}
+.sticky {
+    position: fixed;
+    top: 0px;
+    z-index: 10000;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+}
+.fullheader {
+    position: relative;
+    z-index: 10000;
+}
+
+/*menu*/
+.bgmenu {
+    background-color: rgb(213,94,36);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50px;
+}
+.bgovfiltre {
+    background-color: rgb(175, 175, 175);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40px;
+}
+.bgfiltre {
+    background-color: dimgray;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50px;
+}
+/* Mobile menu*/
+.mobilenav {
+    display: none;
+}
+    /*Footer*/
+.bgmap {
+    background-image: url(../../Resources/Images/background-map.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.container-footer{
+    margin-left:auto;
+    margin-right:auto;
+    width:auto;
+}
+.item-footer{
+    min-width:100px;
+    display:inline;
+    float:left;
+    margin-left:auto;
+    margin-right:auto;
+    margin:50px 0px 20px 0px;
+    text-align:center;
+    height:200px;
+    width:11.1%
+}
+.item-footer h3{
+    padding-bottom:20px;
+}
+.item-footer h3 a{
+    color:black;
+    text-decoration:none;
+    font-weight:400;
+}
+.item-footer h3 a:hover{
+    text-decoration:underline;
+    font-weight:700;
+}
+.item-footer p{
+    padding-bottom:10px;
+}
+.item-footer p a{
+    color:white;
+    text-decoration:none;
+}
+.item-footer p:hover{
+    font-weight:700;
+}
+
+.topfooter {
+    background-color: rgb(213,94,36);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.blacklinefooter {
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+/*Page accueil*/
+.logo {
+    text-align: center;
+    height: auto;
+}
+.logo .item {
+        float: left;
+        height: 200px;
+        margin-top:20px;
+    }
+.logo a {
+    text-decoration: none;
+}
+.logo a h3 {
+    color: rgb(213,94,36);
+    text-transform:uppercase;
+    padding-top:20px;  
+}
+.image-box img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+
+.image-box:hover img {
+    transform: scale(1.1);
+}
+/*social medias*/
+.mediascss {
+    padding: 25px;
+    margin-top:25px;
+}
+
+/*Page Details*/
+
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33%;
+    padding: 5px 5px 0px 5px;
+}
+
+    /* Style the images inside the grid */
+    .column img {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+        .column img:hover {
+            opacity: 1;
+        }
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container */
+.container {
+    position: relative;
+    display: block;
+}
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.containertable {
+    display: table;
+    width: 100%;
+}
+.tablecell {
+    display: table-cell;  
+}
+.tablecell img{
+    vertical-align:middle;
+}
+.topnavdetail a {
+        text-decoration: none;
+        color: black;
+    }
+.topnavdetail a:hover{
+    text-decoration:underline;
+}
+.subnavdescription {
+    float: left;
+    margin: 0px 20px 20px 0px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.subnavdescription a:hover{
+    color:rgb(213,94,36);
+    text-decoration:none;
+    }
+    .rightbutton {
+        margin: 0px 20px 20px 0px;
+        float: right;
+    }
+.logoleft {
+    padding-left: 20px;
+}
+.verticalline {
+    border-left:1px solid black;
+    padding-left:25px;
+}
+/* colum row page détail */
+.column1 {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    text-transform: uppercase;
+    height: 50px;
+}
+
+.column2 {
+    float: left;
+    width: 10%;
+    height: 50px;
+}
+
+.column3 {
+    float: left;
+    width: 60%;
+    padding: 10px;
+    border-left: 1px solid black;
+    padding-left: 25px;
+    text-transform: uppercase;
+    min-height: 50px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*Page filter*/
+.fixedheaderfilter {
+    margin-top: 330px;
+}
+.rectangle {
+    height: 10px;
+    width: auto;
+    background-color: rgb(213,94,36);
+}
+.container-filter{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.filter-item {
+    width: 33%;
+    float: left;
+    display: inline;
+    padding: 50px 20px 50px 20px;
+}
+.filter-item a {
+    color:black;
+    text-decoration:none;
+}
+.resultsearch{
+    padding:10px;
+    float:left;
+}
+
+.pagination {
+    display: inline-block;
+    float:right;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+    }
+.pagination button {
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        margin-left:5px;
+        margin-right:5px;
+    }
+.pagination a.active {
+            background-color: rgb(213,94,36);
+            color: white;
+        }
+.pagination a:hover:not(.active) {
+            background-color: rgb(213,94,36);
+        }
+/* font face */
+@font-face {
+    font-family: Arial, sans-serif;
+    src: url('../../Resources/Fonts/   .eot');
+    src: url('../../Resources/Fonts/   .eot?#iefix') format('embedded-opentype'), url('../../Resources/Fonts/   .woff') format('woff'), url('../../Resources/Fonts/   .ttf') format('truetype'), url('../../Resources/Fonts/    .svg#   ') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Chrome / Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+}
+
+
+@media (max-width: 1000px) {
+    /* Rules for tablets and smaller viewports */
+    .banner {
+        background-image: url(../../Resources/Images/mapping.jpg);
+        background-position: center center;
+        background-size: cover;
+        height: 100px;
+        background-repeat: no-repeat;
+    }
+    .column {
+        float: left;
+        width: 50%;
+        padding: 5px 5px 0px 5px;
+
+    }
+    
+    .filter-item {
+        width: 50%;
+        float: left;
+        display: inline;
+        padding: 50px 20px 50px 20px;
+    }
+   
+    .item-footer {
+        min-width: 100px;
+        display: inline;
+        float: left;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 50px 0px 20px 0px;
+        text-align: center;
+        height: 150px;
+        width: 20%
+    }
+    .mobiletel {
+        display: block;
+        margin-top:12px;
+    }
+    .rightbutton {
+        float: none;
+        margin: 20px 0px 0px 0px;
+        width:100%;
+    }
+    .buttonwebsite {
+        padding: 5px;
+        background-color: none;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        border: solid 1px rgb(213,94,36);
+        text-transform: uppercase;
+    }
+
+    .buttonwebsite:hover {
+        background-color: rgb(213,94,36);
+        -webkit-box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
+        box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
+        text-decoration: none;
+        color: white;
+    }
+    .subnavdescription a:hover {
+        color: rgb(213,94,36);
+        text-decoration: none;
+    }
+
+    .mobilenav {
+        display: block;
+    }
+
+        /* Common styles of menus */
+
+        .mobilenav .dl-menuwrapper {
+            width: 100%;
+            max-width: 300px;
+            float: left;
+            position: relative;
+            -webkit-perspective: 1000px;
+            perspective: 1000px;
+            -webkit-perspective-origin: 50% 200%;
+            perspective-origin: 50% 200%;
+        }
+
+            .mobilenav .dl-menuwrapper:first-child {
+                margin-right: 100px;
+            }
+
+            .mobilenav .dl-menuwrapper button {
+                background-color: rgb(213,94,36);
+                border: none;
+                width: 48px;
+                height: 50px;
+                text-indent: -900em;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+                outline: none;
+                margin-top: -5px;
+            }
+
+                .mobilenav .dl-menuwrapper button:hover,
+                .mobilenav .dl-menuwrapper button.dl-active,
+                .mobilenav .dl-menuwrapper ul {
+                    background-color: #2A2A2A;
+                }
+
+                .mobilenav .dl-menuwrapper button:after {
+                    content: '';
+                    position: absolute;
+                    width: 68%;
+                    height: 5px;
+                    background: #fff;
+                    top: 12px;
+                    left: 16%;
+                    box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
+                }
+
+            .mobilenav .dl-menuwrapper ul {
+                padding: 0;
+                list-style: none;
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+            }
+
+            .mobilenav .dl-menuwrapper li {
+                position: relative;
+                top: 0px;
+            }
+
+                .mobilenav .dl-menuwrapper li a {
+                    display: block;
+                    position: relative;
+                    padding: 15px 20px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 300;
+                    color: #fff;
+                    outline: none;
+                    text-decoration: none;
+                }
+
+        .mobilenav .no-touch .dl-menuwrapper li a:hover {
+            background: rgba(255,248,213,0.1);
+        }
+
+        .mobilenav .dl-menuwrapper li.dl-back > a {
+            padding-left: 30px;
+            background-color: rgb(213,94,36);
+        }
+
+        .mobilenav .dl-menuwrapper li.dl-back:after,
+        .mobilenav .dl-menuwrapper li > a:not(:only-child):after {
+            position: absolute;
+            top: 0;
+            line-height: 50px;
+            font-family: 'icomoon';
+            speak: none;
+            -webkit-font-smoothing: antialiased;
+            content: "\e000";
+        }
+
+        .mobilenav .dl-menuwrapper li.dl-back:after {
+            left: 10px;
+            color: rgba(212,204,198,0.3);
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .mobilenav .dl-menuwrapper li > a:after {
+            right: 10px;
+            color: rgba(0,0,0,0.15);
+        }
+
+        .mobilenav .dl-menuwrapper .dl-menu {
+            margin: 0px;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            pointer-events: none;
+            -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+            .mobilenav .dl-menuwrapper .dl-menu.dl-menu-toggle {
+                transition: all 0.3s ease;
+            }
+
+            .mobilenav .dl-menuwrapper .dl-menu.dl-menuopen {
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+
+        /* Hide the inner submenus */
+        .mobilenav .dl-menuwrapper li .dl-submenu {
+            display: none;
+        }
+
+        /* 
+When a submenu is openend, we will hide all li siblings.
+For that we give a class to the parent menu called "dl-subview".
+We also hide the submenu link. 
+The opened submenu will get the class "dl-subviewopen".
+All this is done for any sub-level being entered.
+*/
+        .mobilenav .dl-menu.dl-subview li,
+        .mobilenav .dl-menu.dl-subview li.dl-subviewopen > a,
+        .mobilenav .dl-menu.dl-subview li.dl-subview > a {
+            display: none;
+        }
+
+            .mobilenav .dl-menu.dl-subview li.dl-subview,
+            .mobilenav .dl-menu.dl-subview li.dl-subview .dl-submenu,
+            .mobilenav .dl-menu.dl-subview li.dl-subviewopen,
+            .mobilenav .dl-menu.dl-subview li.dl-subviewopen > .dl-submenu,
+            .mobilenav .dl-menu.dl-subview li.dl-subviewopen > .dl-submenu > li {
+                display: block;
+            }
+
+        /* Dynamically added submenu outside of the menu context */
+        .mobilenav .dl-menuwrapper > .dl-submenu {
+            position: absolute;
+            width: 100%;
+            top: 50px;
+            left: 0;
+            margin: 0;
+        }
+
+        /* Animation classes for moving out and in */
+
+        .mobilenav .dl-menu.dl-animate-out-4 {
+            -webkit-animation: MenuAnimOut4 0.4s ease;
+            animation: MenuAnimOut4 0.4s ease;
+        }
+
+
+
+    @-webkit-keyframes MenuAnimOut4 {
+        0% {
+        }
+
+        100% {
+            -webkit-transform: translateZ(-300px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes MenuAnimOut4 {
+        0% {
+        }
+
+        100% {
+            -webkit-transform: translateZ(-300px);
+            transform: translateZ(-300px);
+            opacity: 0;
+        }
+    }
+
+    .mobilenav .dl-menu.dl-animate-in-4 {
+        -webkit-animation: MenuAnimIn4 0.4s ease;
+        animation: MenuAnimIn4 0.4s ease;
+    }
+
+    @-webkit-keyframes MenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(-300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes MenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(-300px);
+            transform: translateZ(-300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+    .mobilenav .dl-menuwrapper > .dl-submenu.dl-animate-in-4 {
+        -webkit-animation: SubMenuAnimIn4 0.4s ease;
+        animation: SubMenuAnimIn4 0.4s ease;
+    }
+
+    @-webkit-keyframes SubMenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes SubMenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+
+    .mobilenav .dl-menuwrapper > .dl-submenu.dl-animate-out-4 {
+        -webkit-animation: SubMenuAnimOut4 0.4s ease;
+        animation: SubMenuAnimOut4 0.4s ease;
+    }
+
+    @-webkit-keyframes SubMenuAnimOut4 {
+        0% {
+            -webkit-transform: translateZ(0px);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translateZ(300px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes SubMenuAnimOut4 {
+        0% {
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+            opacity: 0;
+        }
+    }
+
+    /* No JS Fallback */
+    .mobilenav .no-js .dl-menuwrapper .dl-menu {
+        position: relative;
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    .mobilenav .no-js .dl-menuwrapper li .dl-submenu {
+        display: block;
+    }
+
+    .mobilenav .no-js .dl-menuwrapper li.dl-back {
+        display: none;
+    }
+
+    .mobilenav .no-js .dl-menuwrapper li > a:not(:only-child) {
+        background: rgba(0,0,0,0.1);
+    }
+
+        .mobilenav .no-js .dl-menuwrapper li > a:not(:only-child):after {
+            content: '';
+        }
+
+    /* Colors for demos */
+
+
+    /* Demo 4 */
+    .demo-4 .dl-menuwrapper button {
+        background: #90b912;
+    }
+
+        .demo-4 .dl-menuwrapper button:hover,
+        .demo-4 .dl-menuwrapper button.dl-active,
+        .demo-4 .dl-menuwrapper ul {
+            background: #79a002;
+        }
+}
+
+@media handeled, (max-width: 769px) {
+    /* Rules for smartphones only */
+    .banner {
+        background-image: url(../../Resources/Images/mapping.jpg);
+        background-position: center center;
+        background-size: cover;
+        height: 50px;
+        background-repeat: no-repeat;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+        padding: 5px 5px 0px 5px;
+    }
+    
+    .verticalline {
+        border-left: none;
+        padding-left: 25px;
+    }
+    .mobilefixedheader {
+        margin-top: 300px;
+    }
+    .filter-item {
+        width: 100%;
+        float: left;
+        display: inline;
+        padding: 50px 20px 50px 20px;
+    }
+    .mobiletel {
+        display: block;
+        margin-top: 12px;
+    }
+    .mediascss {
+        padding: 0px;
+        margin-top:0px;
+    }
+    .item-footer {
+        min-width: 100px;
+        display: inline;
+        float: left;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 50px 0px 20px 0px;
+        text-align: center;
+        height: 150px;
+        width: 33.3%
+    }
+.buttonwebsite {
+        padding: 5px;
+        background-color: none;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        border: solid 1px rgb(213,94,36);
+        text-transform: uppercase;
+    }
+
+.buttonwebsite:hover {
+            background-color: rgb(213,94,36);
+            -webkit-box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
+            box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
+            text-decoration: none;
+            color: white;
+        }
+    .subnavdescription a:hover {
+        color: rgb(213,94,36);
+        text-decoration: none;
+    }
+    .rightbutton {
+        float: none;
+        width: 100%;
+        margin: 20px 0px 0px 0px;
+    }
+ .mobilenav {
+        display:block;
+    }
+  
+    /* Common styles of menus */
+
+.mobilenav .dl-menuwrapper {
+
+        width: 100%;
+        max-width: 300px;
+        float: left;
+        position: relative;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+        -webkit-perspective-origin: 50% 200%;
+        perspective-origin: 50% 200%;
+    }
+
+.mobilenav .dl-menuwrapper:first-child {
+        margin-right: 100px;
+    }
+    .mobilenav .dl-menuwrapper button {
+        background-color: rgb(213,94,36);
+        border: none;
+        width: 48px;
+        height: 50px;
+        text-indent: -900em;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        margin-top: -5px;
+    }
+
+        .mobilenav .dl-menuwrapper button:hover,
+        .mobilenav .dl-menuwrapper button.dl-active,
+        .mobilenav .dl-menuwrapper ul {
+            background-color: #2A2A2A;        
+        }
+
+    .mobilenav .dl-menuwrapper button:after {
+        content: '';
+        position: absolute;
+        width: 68%;
+        height: 5px;
+        background: #fff;
+        top: 12px;
+        left: 16%;
+        box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
+    }
+
+    .mobilenav .dl-menuwrapper ul {
+        padding: 0;
+        list-style: none;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+
+    .mobilenav .dl-menuwrapper li {
+        position: relative;
+        top:0px;
+    }
+
+        .mobilenav .dl-menuwrapper li a {
+            display: block;
+            position: relative;
+            padding: 15px 20px;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 300;
+            color: #fff;
+            outline: none;
+            text-decoration:none;
+        }
+
+    .mobilenav .no-touch .dl-menuwrapper li a:hover {
+        background: rgba(255,248,213,0.1);
+    }
+
+    .mobilenav .dl-menuwrapper li.dl-back > a {
+        padding-left: 30px;
+        background-color: rgb(213,94,36);
+    }
+
+    .mobilenav .dl-menuwrapper li.dl-back:after,
+    .mobilenav .dl-menuwrapper li > a:not(:only-child):after {
+        position: absolute;
+        top: 0;
+        line-height: 50px;
+        font-family: 'icomoon';
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        content: "\e000";
+    }
+
+    .mobilenav .dl-menuwrapper li.dl-back:after {
+        left: 10px;
+        color: rgba(212,204,198,0.3);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .mobilenav .dl-menuwrapper li > a:after {
+        right: 10px;
+        color: rgba(0,0,0,0.15);
+    }
+
+    .mobilenav .dl-menuwrapper .dl-menu {
+        margin: 0px;
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+        .mobilenav .dl-menuwrapper .dl-menu.dl-menu-toggle {
+            transition: all 0.3s ease;
+        }
+
+        .mobilenav .dl-menuwrapper .dl-menu.dl-menuopen {
+            opacity: 1;
+            pointer-events: auto;
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+
+    /* Hide the inner submenus */
+    .mobilenav .dl-menuwrapper li .dl-submenu {
+        display: none;
+    }
+
+    /* 
+When a submenu is openend, we will hide all li siblings.
+For that we give a class to the parent menu called "dl-subview".
+We also hide the submenu link. 
+The opened submenu will get the class "dl-subviewopen".
+All this is done for any sub-level being entered.
+*/
+    .mobilenav .dl-menu.dl-subview li,
+    .mobilenav .dl-menu.dl-subview li.dl-subviewopen > a,
+    .mobilenav .dl-menu.dl-subview li.dl-subview > a {
+        display: none;
+    }
+
+        .mobilenav .dl-menu.dl-subview li.dl-subview,
+        .mobilenav .dl-menu.dl-subview li.dl-subview .dl-submenu,
+        .mobilenav .dl-menu.dl-subview li.dl-subviewopen,
+        .mobilenav .dl-menu.dl-subview li.dl-subviewopen > .dl-submenu,
+        .mobilenav .dl-menu.dl-subview li.dl-subviewopen > .dl-submenu > li {
+            display: block;
+        }
+
+    /* Dynamically added submenu outside of the menu context */
+    .mobilenav .dl-menuwrapper > .dl-submenu {
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        margin: 0;
+    }
+
+    /* Animation classes for moving out and in */
+
+    .mobilenav .dl-menu.dl-animate-out-4 {
+        -webkit-animation: MenuAnimOut4 0.4s ease;
+        animation: MenuAnimOut4 0.4s ease;
+    }
+ 
+
+
+    @-webkit-keyframes MenuAnimOut4 {
+        0% {
+        }
+
+        100% {
+            -webkit-transform: translateZ(-300px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes MenuAnimOut4 {
+        0% {
+        }
+
+        100% {
+            -webkit-transform: translateZ(-300px);
+            transform: translateZ(-300px);
+            opacity: 0;
+        }
+    }
+
+    .mobilenav .dl-menu.dl-animate-in-4 {
+        -webkit-animation: MenuAnimIn4 0.4s ease;
+        animation: MenuAnimIn4 0.4s ease;
+    }
+
+    @-webkit-keyframes MenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(-300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes MenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(-300px);
+            transform: translateZ(-300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+    .mobilenav .dl-menuwrapper > .dl-submenu.dl-animate-in-4 {
+        -webkit-animation: SubMenuAnimIn4 0.4s ease;
+        animation: SubMenuAnimIn4 0.4s ease;
+    }
+
+    @-webkit-keyframes SubMenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes SubMenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+
+    .mobilenav .dl-menuwrapper > .dl-submenu.dl-animate-out-4 {
+        -webkit-animation: SubMenuAnimOut4 0.4s ease;
+        animation: SubMenuAnimOut4 0.4s ease;
+    }
+
+    @-webkit-keyframes SubMenuAnimOut4 {
+        0% {
+            -webkit-transform: translateZ(0px);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translateZ(300px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes SubMenuAnimOut4 {
+        0% {
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+            opacity: 0;
+        }
+    }
+
+    /* No JS Fallback */
+    .mobilenav .no-js .dl-menuwrapper .dl-menu {
+        position: relative;
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    .mobilenav .no-js .dl-menuwrapper li .dl-submenu {
+        display: block;
+    }
+
+    .mobilenav .no-js .dl-menuwrapper li.dl-back {
+        display: none;
+    }
+
+    .mobilenav .no-js .dl-menuwrapper li > a:not(:only-child) {
+        background: rgba(0,0,0,0.1);
+    }
+
+        .mobilenav .no-js .dl-menuwrapper li > a:not(:only-child):after {
+            content: '';
+        }
+
+    /* Colors for demos */
+
+
+    /* Demo 4 */
+    .demo-4 .dl-menuwrapper button {
+        background: #90b912;
+    }
+
+        .demo-4 .dl-menuwrapper button:hover,
+        .demo-4 .dl-menuwrapper button.dl-active,
+        .demo-4 .dl-menuwrapper ul {
+            background: #79a002;
+        }
+
+
+}
