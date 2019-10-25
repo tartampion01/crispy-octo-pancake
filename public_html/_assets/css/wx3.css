@@ -18,34 +18,7 @@ img {max-width:100%;height:auto;} /*responsive*/
 
 
 #menu {position:absolute;top:50px;left:0px;}
-#logo {}
-#tel {}
 
-#langue a {}
-#facebook {}
-
-.diapo {
-    width: 100%;
-    margin: 0px auto;
-}
-
-/*
-#diapo {top:0px;left:0px;z-index:10; height:auto;}
-.slides_container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    display: none;
-    padding:0px;
-    margin:0px;
-}
-#diapo .slide {width:100%;height:100%;display:block;}
-
-
-#diapo .next {left:1924px;}
-*/
-/*Test*/
 
 .bgimg {
     background-image: url(../../Resources/Images/pagefiltre-fermer.jpg);
