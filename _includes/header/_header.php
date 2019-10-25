@@ -51,12 +51,15 @@
     <script type="text/javascript" src="../../_assets/js/object.values.polyfill.js"></script>
     <script type='text/javascript' src='../../_assets/js/jquery.tmpl.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.twbsPagination.js'></script>
-    <!--** integration js
-    <script type='text/javascript' src='../../_assets/js/jquery-1.12.4.min.js'></script>  
-    <script type="text/javascript" src="../../_assets/js/jquery.min.js"></script>
+
+    <!--wx3data js include-->
     <script type='text/javascript' src='../../_assets/js/modernizr.custom.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.dlmenu.js'></script>
-    <script type='text/javascript' src='../../_assets/js/slick.js'></script>-->
+    <script type='text/javascript' src='../../_assets/js/slick.js'></script>
+
+    <!--** integration js
+    <script type='text/javascript' src='../../_assets/js/jquery-1.12.4.min.js'></script>  
+    <script type="text/javascript" src="../../_assets/js/jquery.min.js"></script>-->
     
     <!-- Bootstrap CDN includes --> <!--css-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
