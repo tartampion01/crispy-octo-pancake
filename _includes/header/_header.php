@@ -83,14 +83,14 @@
                 <div class="grid grid-pad">
                     <div class="col-1-2 mobile-col-1-2">
                         <a href="index.html">
-                            <img class="marginmedia" src="Resources/Images/logo-header.png" alt="logo depart" />
+                            <img class="marginmedia" src="_assets/images/wx3/logo-header.png" alt="logo depart" />
                         </a>
                     </div>
                     <div class="col-1-2 mobile-col-1-2">
                         <div class="col-1-1 mobile-col-1-1">
-                            <a href="https://www.facebook.com" target="_blank"><img class="facebook_top" src="Resources/Images/facebook_footer.png" alt="facebook" /></a>
+                            <a href="https://www.facebook.com" target="_blank"><img class="facebook_top" src="_assets/images/wx3/facebook_footer.png" alt="facebook" /></a>
                             <a href="#">
-                                <img class="tel_top" src="Resources/Images/logo-tel.png" alt="phone" />
+                                <img class="tel_top" src="_assets/images/wx3/logo-tel.png" alt="phone" />
                                 <p class="urgence_top">Urgence Routière</p>
                             </a>
                         </div>
