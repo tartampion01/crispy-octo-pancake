@@ -78,7 +78,7 @@
 </head>
 <?PHP
     // TOP MENU
-    require_once(dirname(__DIR__).'/header/_header_top_menu.php');
+    //require_once(dirname(__DIR__).'/header/_header_top_menu.php'); A enlever plus tard FXGL 25-10-2019**
     // SUB HEADER LOGO + RECHERCHE
     require_once(dirname(__DIR__).'/header/_header_logo_search.php');
     // SUB Header MENU PRINCIPAL
