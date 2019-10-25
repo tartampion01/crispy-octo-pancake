@@ -7,3 +7,5 @@ nbproject/private/private.xml
 /page1.php
 /public_html/_uploads/emplois/
 team-extension.log
+.vscode/
+public_html/apphost.config
