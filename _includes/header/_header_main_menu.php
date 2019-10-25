@@ -123,7 +123,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
     </div>
 </div>-->
 <?php
-//if($section == 'camion-neufs' || $section == 'camions-occasion' || $section == 'remorques-neuves') {
+if($section == 'camion-neufs' || $section == 'camions-occasion' || $section == 'remorques-neuves') {
 ?>
 <!--Mobile menu-->
 <!--
