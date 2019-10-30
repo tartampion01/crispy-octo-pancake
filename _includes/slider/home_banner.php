@@ -2,8 +2,10 @@
 <script type="text/javascript">
 $(document).ready(function () {
     $('.diapo').slick({
-        speed: 300,
-        mobileFirst: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        spee:300,
+        mobileFirst: true
     });  
 }); 
 </script>
