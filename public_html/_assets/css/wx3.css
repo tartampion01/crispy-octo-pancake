@@ -148,3 +148,21 @@
     font-weight: 900;
     text-align: center;
 }
+/*Page accueil*/
+.logo {
+    text-align: center;
+    height: auto;
+}
+.logo .item {
+        float: left;
+        height: 200px;
+        margin-top:20px;
+    }
+.logo a {
+    text-decoration: none;
+}
+.logo a h3 {
+    color: rgb(213,94,36);
+    text-transform:uppercase;
+    padding-top:20px;  
+}
