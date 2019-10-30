@@ -44,6 +44,7 @@
       gtag('config', 'UA-3192388-2');
     </script>
     <!--javascript-->
+    
     <script type='text/javascript' src='../../_assets/js/jquery-3.2.1.js'></script>
     <script type="text/javascript" src="../../_assets/js/jquery-bxslider.js" ></script>
 
@@ -51,7 +52,7 @@
     <script type="text/javascript" src="../../_assets/js/object.values.polyfill.js"></script>
     <script type='text/javascript' src='../../_assets/js/jquery.tmpl.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.twbsPagination.js'></script>
-
+    
     <!--wx3data js include-->
     <script type='text/javascript' src='../../_assets/js/modernizr.custom.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.dlmenu.js'></script>
