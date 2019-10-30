@@ -29,7 +29,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                 <div class="menudestop grid grid-pad">
                     <ul>
                         <li>
-                            <a href="filter.html">Camions</a>
+                            <a href="camions-neufs/inventaire-camion-neufs.php">Camions</a>
                             <ul class="hidden">
                                 <li>
                                     <a href="filter.html">International</a>
@@ -38,7 +38,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                             <a href="#">série CV</a>
                                             <ul class="hidden">
                                                 <li>
-                                                    <img src="Resources/images/CV-navigation.jpg" alt="" />
+                                                    <img src="../../_assets/images/wx3/CV-navigation.jpg" alt="" />
                                                     <h4 class="col-1-3 mobile-col-1-3">
                                                         <a href="https://www.internationaltrucks.com/configurator/cv" target="_blank">Configurer<br />votre véhicule</a>
                                                     </h4>
@@ -55,7 +55,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                             <a href="#">série HV</a>
                                             <ul class="hidden">
                                                 <li>
-                                                    <img src="Resources/images/HV-navigation.jpg" alt="" />
+                                                    <img src="../../_assets/images/wx3/HV-navigation.jpg" alt="" />
                                                     <h4 class="col-1-3 mobile-col-1-3">
                                                         <a href="https://www.internationaltrucks.com/configurator/hv" target="_blank">Configurer<br />votre véhicule</a>
                                                     </h4>
@@ -72,7 +72,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                             <a href="#">série HX</a>
                                             <ul class="hidden">
                                                 <li>
-                                                    <img src="Resources/images/hx-navigation.jpg" alt="" />
+                                                    <img src="../../_assets/images/wx3/hx-navigation.jpg" alt="" />
                                                     <h4 class="col-1-3 mobile-col-1-3">
                                                         <a href="https://www.internationaltrucks.com/configurator/hx" target="_blank">Configurer<br />votre véhicule</a>
                                                     </h4>
@@ -89,7 +89,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                             <a href="#">série LT</a>
                                             <ul class="hidden">
                                                 <li>
-                                                    <img src="Resources/images/lt-navigation.png" alt="" />
+                                                    <img src="../../_assets/images/wx3/lt-navigation.png" alt="" />
                                                     <h4 class="col-1-3 mobile-col-1-3">
                                                         <a href="https://www.internationaltrucks.com/configurator/lt" target="_blank">Configurer<br />votre véhicule</a>
                                                     </h4>
@@ -106,7 +106,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                             <a href="#">série MV</a>
                                             <ul class="hidden">
                                                 <li>
-                                                    <img src="Resources/images/MV-navigation.jpg" alt="" />
+                                                    <img src="../../_assets/images/wx3/MV-navigation.jpg" alt="" />
                                                     <h4 class="col-1-3 mobile-col-1-3">
                                                         <a href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer<br />votre véhicule</a>
                                                     </h4>
