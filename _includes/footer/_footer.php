@@ -27,7 +27,6 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
     $section = 'carrieres';
 }
 ?>
-<div class="push"></div></div>
      <!--Footer-->
      <footer>
         <div class="topfooter">
@@ -91,13 +90,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
         </div>
         <div class="blacklinefooter">
             <div class="grid grid-pad">
-                <div class="col-1-2 mobile-col-1-2 topdivision20" style="">
+                <div class="col-1-2 mobile-col-1-2 fbfooter" style="">
                     <a href="https://www.facebook.com" target="_blank">
                         <img class="" src="../../_assets/images/wx3/facebook_footer.png" alt="facebook" />
                     </a>
                 </div>
-                <div class="col-1-2 mobile-col-1-2 topdivision20">
-                    <img class="floatright" src="../../_assets/images/wx3/logo_footer.png" alt="instagram" />
+                <div class="col-1-2 mobile-col-1-2 ">
+                    <img class="logofooter" src="../../_assets/images/wx3/logo_footer.png" alt="logo" />
                 </div>
             </div>
         </div>
