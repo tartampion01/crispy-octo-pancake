@@ -41,22 +41,22 @@
             <div class="col-1-1 mobile-col-1-1">
                 <div class="col-1-2 mobile-col-1-2 image-box">
                     <a href="filter.html">
-                        <img src="Resources/Images/img-international.jpg" alt="" />
+                        <img src="_assets/images/wx3/img-international.jpg" alt="" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box">
                     <a href="filter.html">
-                        <img src="Resources/Images/img-remorque.jpg" alt="" />
+                        <img src="_assets/images/wx3/img-remorque.jpg" alt="" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box" style="margin: -5px 0px 0px 0px;">
                     <a href="filter.html">
-                        <img src="Resources/Images/img-isuzu.jpg" alt="" />
+                        <img src="_assets/images/wx3/img-isuzu.jpg" alt="" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box" style="margin: -5px 0px 0px 0px;">
                     <a href="filter.html">
-                        <img src="Resources/Images/img-inventaire.jpg" alt="" />
+                        <img src="_assets/images/wx3/img-inventaire.jpg" alt="" />
                     </a>
                 </div>
             </div>
