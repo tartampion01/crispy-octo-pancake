@@ -1,32 +1,34 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-<script type='text/javascript' src='../../_assets/js/jquery.jshowoff.js'></script>
+<!--<script type='text/javascript' src='../../_assets/js/jquery.jshowoff.js'></script>  ** enlever FXGL diapo avant 10-30-19 -->
 <body class="body home-page"><?php RD_Utils::write_Gtag() ?>
-    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">   
+    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
+    <!--diapo-->
+    <?php// require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/home_banner.php'); ?>  
     <div class="" data-staticClassNames="wrap">        
 	</div>
     <!--Logo section-->
     <section class="grid grid-pad">
         <div class="col-1-1 logo mobile-col-1-1">
             <div class="col-1-4 mobile-col-1-2 item">
-                <img class="" src="Resources/Images/logo-1.png" alt="" />
+                <img class="" src="_assets/images/wx3/logo-1.png" alt="" />
                 <a class="" href="">
                     <h3>Configurer<br />votre véhicule</h3>
                 </a>
             </div>
             <div class="col-1-4 mobile-col-1-2 item">
-                <img src="Resources/Images/logo-2.png" alt="" />
+                <img src="_assets/images/wx3/logo-2.png" alt="" />
                 <a href="">
                     <h3>Pièces</h3>
                 </a>
             </div>
             <div class="col-1-4 mobile-col-1-2 item">
-                <img src="Resources/Images/logo-3.png" alt="" />
+                <img src="_assets/images/wx3/logo-3.png" alt="" />
                 <a href="">
                     <h3 class="topdivision15">Inventaire</h3>
                 </a>
             </div>
             <div class="col-1-4 mobile-col-1-2 item">
-                <img src="Resources/Images/logo-4.png" alt="" />
+                <img src="_assets/images/wx3/logo-4.png" alt="" />
                 <a href="">
                     <h3>Demande<br />De Prix</h3>
                 </a>
@@ -61,53 +63,9 @@
         </div>
     </section>
 	<!--multi-item build your own truck-->
-    <section class="grid">
-        <div class="grid-pad topdivision50">
-            <h2 class="titlesection">Construit ton camion</h2>
-        </div>
 
-        <section class="realization">
-            <div class="image-box">
-                <a href="https://www.internationaltrucks.com/configurator/mv" title="">
-                    <img src="Resources/Images/mvserie.png" alt="">
-                    <h3 class="bold center">MV Séries</h3>
-                </a>
-            </div>
+    <?php// require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_build_truck.php'); ?>  
 
-            <div class="image-box">
-                <a href="https://www.internationaltrucks.com/configurator/hx" title="">
-                    <img src="Resources/Images/hxserie.png" alt="">
-                    <h3 class="bold center">HX Séries</h3>
-                </a>
-            </div>
-            <div class="image-box">
-                <a href="https://www.internationaltrucks.com/configurator/lt" title="">
-                    <img src="Resources/Images/ltserie.png" alt="">
-                    <h3 class="bold center">LT Séries</h3>
-                </a>
-            </div>
-
-            <div class="image-box">
-                <a href="https://www.internationaltrucks.com/shopping-tools/build-your-own" title="">
-                    <img src="Resources/Images/mvserie.png" alt="">
-                    <h3 class="bold center">BBQ Labonté</h3>
-                </a>
-            </div>
-            <div class="image-box">
-                <a href="https://www.internationaltrucks.com/shopping-tools/build-your-own" title="">
-                    <img src="Resources/Images/hxserie.png" alt="">
-                    <h3 class="bold center">Municipalité de Saint-Germain-de-Grantham</h3>
-                </a>
-            </div>
-            <div class="image-box">
-                <a href="https://www.internationaltrucks.com/shopping-tools/build-your-own" title="">
-                    <img src="Resources/Images/ltserie.png" alt="">
-                    <h3 class="bold center">PMR Halte gourmande</h3>
-                </a>
-            </div>
-
-        </section>
-    </section>
     <!--3 services -->
     <div class="services">
         <div class="shrink">
@@ -132,67 +90,7 @@
         </div>
 	</div>
     <!--multi-item special product-->
-    <section class="grid">
-        <div class="grid-pad">
-            <h2 class="titlesection">Nos Spéciaux</h2>
-        </div>
-        <section class="realization">
-            <div class="">
-                <a href="./Fleuristebergeron.html" title="">
-                    <div class="rectangle"></div>
-                    <img src="Resources/Images/promo.jpg" alt="">
-                    <hr style="margin-top:5px;" />
-                    <h2 class="uppercases">circulaire</h2>
-                </a>
-            </div>
-            <div class="image-box">
-                <a href="./Fleuristebergeron.html" title="">
-                    <div class="rectangle"></div>
-                    <img src="Resources/Images/hxserie.png" alt="">
-                    <h2 class="uppercases">Titre de camion</h2>
-                    <hr />
-                    <p style="text-align:justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                </a>
-            </div>
-            <div class="image-box">
-                <a href="./Fleuristebergeron.html" title="">
-                    <div class="rectangle"></div>
-                    <img src="Resources/Images/ltserie.png" alt="">
-                    <h2 class="uppercases">Titre de camion</h2>
-                    <hr />
-                    <p style="text-align:justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                </a>
-            </div>
-            <div class="image-box">
-                <a href="./Fleuristebergeron.html" title="">
-                    <div class="rectangle"></div>
-                    <img src="Resources/Images/hxserie.png" alt="">
-                    <h2 class="uppercases">Titre de camion</h2>
-                    <hr />
-                    <p style="text-align:justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                </a>
-            </div>
-            <div class="image-box">
-                <a href="./Fleuristebergeron.html" title="">
-                    <div class="rectangle"></div>
-                    <img src="Resources/Images/mvserie.png" alt="">
-                    <h2 class="uppercases">Titre de camion</h2>
-                    <hr />
-                    <p style="text-align:justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                </a>
-            </div>
-            <div class="image-box">
-                <a href="./Fleuristebergeron.html" title="">
-                    <div class="rectangle"></div>
-                    <img src="Resources/Images/mvserie.png" alt="">
-                    <h2 class="uppercases">Titre de camion</h2>
-                    <hr />
-                    <p style="text-align:justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                </a>
-            </div>
-        </section>
-
-    </section>
+    <?php// require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
     <div id="" class="push"></div>
     </div>
     <!--Map-->

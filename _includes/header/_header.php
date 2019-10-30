@@ -114,12 +114,7 @@
                     // instead of a settings object
                 ]
             });
-
-            $('.diapo').slick({
-                mobileFirst: true,
-            });          
-
-            
+                       
             $('#dl-menu').dlmenu({
                 animationClasses: { classin: 'dl-animate-in-4', classout: 'dl-animate-out-4' }
             });
