@@ -93,11 +93,11 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
             <div class="grid grid-pad">
                 <div class="col-1-2 mobile-col-1-2 topdivision20" style="">
                     <a href="https://www.facebook.com" target="_blank">
-                        <img class="" src="Resources/Images/facebook_footer.png" alt="facebook" />
+                        <img class="" src="../../_assets/images/wx3/facebook_footer.png" alt="facebook" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 topdivision20">
-                    <img class="floatright" src="Resources/Images/logo_footer.png" alt="instagram" />
+                    <img class="floatright" src="../../_assets/images/wx3/logo_footer.png" alt="instagram" />
                 </div>
             </div>
         </div>
