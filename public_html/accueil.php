@@ -91,8 +91,6 @@
 	</div>
     <!--multi-item special product-->
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
-    <div id="" class="push"></div>
-    </div>
     <!--Map-->
     <div>
         <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1KQIM62X8067jYvP56CJLimUsJORkPfoH" width="100%" height="400"></iframe>
