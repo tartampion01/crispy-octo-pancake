@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('.diapo').slick({
         autoplay: true,
         autoplaySpeed: 5000,
-        spee:300,
+        speed:300,
         mobileFirst: true
     });  
 }); 
