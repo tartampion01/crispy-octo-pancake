@@ -236,18 +236,18 @@
     padding-top:20px;  
 }
     /*section image*/
-.image-box img {
-    max-width: 100%;
-    transition: all 0.3s;
-    display: block;
-    width: 100%;
-    height: auto;
-    transform: scale(1);
-}
+    .image-box img {
+        max-width: 100%;
+        transition: all 0.3s;
+        display: block;
+        width: 100%;
+        height: auto;
+        transform: scale(1);
+    }
     
-.image-box:hover img {
-    transform: scale(1.1);
-}
+    .image-box:hover img {
+        transform: scale(1.1);
+    }
 
 
 
