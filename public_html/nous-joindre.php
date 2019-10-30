@@ -3,17 +3,17 @@
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="">
         <div class="content">
-            <div class="shrink">
+            <div class="grid grid-pad">
                 <div class="titrepage">
                     <h1>Nous joindre</h1>
                 </div>
                 <div class="contenu">
-                    <div class="contenu2 contenu3">
+                    <div class="">
                         <p>Les concessionnaires de camions lourds et de v&#233;hicules utilitaires de R&#233;seau Dynamique mettent &#224; votre disposition un large inventaire de v&#233;hicules ainsi que des conseils et services professionnels. La performance de nos v&#233;hicules, notre service apr&#232;s-vente et la force de notre r&#233;seau panqu&#233;b&#233;cois deviendront rapidement des atouts indispensables pour votre entreprise.</p>
                         <p mappingtype="Page">Visitez d&#232;s maintenant l&#39;une de nos 12&#160;succursales!</p>
                     </div>
                     <div id="c5_c22_c23_c30" class="wrapper_map" data-staticClassNames="wrapper_map">
-				  
+                  
 <script type="text/javascript">
 var gCsvData = [["46.021897","-73.410681","Joliette","\/_assets\/images\/menu_images\/camions-inter-lanaudiere.jpg","Camions Inter-Lanaudière","791, Samuel Racine","Joliette (Québec)","J6E 0E8","Téléphone : 450 760-9996","Services : 450 760-3510","Télécopieur : 450 760-3585","\/nous-joindre\/inter-lanaudiere.php","","","","","","","","","","",""],
                 ["45.610968","-73.565181","Anjou","\/_assets\/images\/menu_images\/camions-inter-anjou.jpg","Camions Inter-Anjou","8300, rue Edison","Anjou (Québec)","H1J 1S8","Téléphone : 514 353-9720","Télécopieur : 514 353-3222","","\/nous-joindre\/camions-inter-anjou.php","","","","","","","","","","",""],
