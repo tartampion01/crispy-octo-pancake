@@ -1384,23 +1384,17 @@ margin-top: 36px;
   }
 
 .services {
+  padding-top: 40px;
   height: 266px;
-  background: url(../../../_assets/images/menu_images/degrade-pied-accueil.jpg) bottom repeat-x;
 }
 
-  .services .shrink {
-    padding-top: 40px;
-  }
-
   .services .item {
-    width: auto;
-    height: auto;
-    float: left;
-    margin-right: 20px;
+    display: inline-block;
   }
 
     .services .item a {
       position: relative;
+      text-align: left;
       display: block;
       width: 303px;
       height: 185px;
@@ -1418,15 +1412,15 @@ margin-top: 36px;
     }
 
     .services .item.succursales a {
-      background: url(../../../_assets/images/menu_images/accueil-succursales.jpg) left top no-repeat;
+      background: url(../../../_assets/images/menu_images/accueil-succursales.jpg) center top no-repeat;
     }
 
     .services .item.pieces a {
-      background: url(../../../_assets/images/menu_images/accueil-pieces.jpg) left top no-repeat;
+      background: url(../../../_assets/images/menu_images/accueil-pieces.jpg) center top no-repeat;
     }
 
     .services .item.urgence a {
-      background: url(../../../_assets/images/menu_images/accueil-urgence.jpg) left top no-repeat;
+      background: url(../../../_assets/images/menu_images/accueil-urgence.jpg) center top no-repeat;
     }
 
   .services span.titre {
