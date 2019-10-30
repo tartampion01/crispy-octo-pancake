@@ -28,23 +28,80 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
 }
 ?>
 <div class="push"></div></div>
-    <div class="pied">
-        <div class="shrink clear">
-            <div class="left">
-                <a name="hyperlien" onclick="" href="/accueil.php" target="_self">
-                    <img name="image" title="" src="../../_assets/images/menu_images/reseau-dynamique-pied.png" alt="Réseau dynamique">
-                </a>
-            </div>
-            <div class="right" data-staticclassnames="right" itemid="">
-                <p>Réseau Dynamique, 2018</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                <p>
-                    <a name="hyperlien" onclick="" href="<?php echo RD_PageLink::getHref(folder::Root,page::MentionsLegales); ?>" target="_self">Mentions légales</a>&nbsp;| 
-                    <a name="hyperlien" onclick="" href="<?php echo RD_PageLink::getHref(folder::Root,page::PlanSite); ?>" target="_self">Plan du site</a>
-                </p>
+     <!--Footer-->
+     <footer>
+        <div class="topfooter">
+            <div class="grid grid-pad">
+                <div class="container-footer">
+                    <div class="item-footer">
+                        <h3><a href="filter.html">Camions</a></h3>
+                        <p><a href="filter.html">International</a></p>
+                        <p><a href="filter.html">Isuzu</a></p>
+                        <p><a href="filter.html">Occasion</a></p>
+                        <p><a href="filter.html">Inventaire</a></p>
+                    </div>
+                    <div class="item-footer">
+                        <h3><a href="filter.html">Pièce</a></h3>
+                        <p><a href="filter.html">Pièce</a></p>
+                        <p><a href="filter.html">Accessoire</a></p>
+                        <p><a href="filter.html">Boutique en ligne</a></p>
+                        <p><a href="filter.html">Nouveauté</a></p>
+                    </div>
+                    <div class="item-footer">
+                        <h3><a href="#">Service</a></h3>
+                        <p><a href="#">Routier</a></p>
+                        <p><a href="#">Après-vente</a></p>
+                    </div>
+                    <div class="item-footer">
+                        <h3><a href="#">Financement</a></h3>
+                        <p><a href="#">Long terme</a></p>
+                        <p><a href="#">Calculateur</a></p>
+                        <p><a href="#">Commande en ligne</a></p>
+                    </div>
+                    <div class="item-footer">
+                        <h3><a href="">Location</a></h3>
+                        <p><a href="#">Court terme</a></p>
+                        <p><a href="#">Long terme</a></p>
+                        <p><a href="#">Avec entretien</a></p>
+                        <p><a href="#">Sans entretien</a></p>
+                    </div>
+                    <div class="item-footer">
+                        <h3><a href="#">Nous Joindre</a></h3>
+                        <p><a href="#map">Concessionaires</a></p>
+                        <p><a href="#map">Point de service</a></p>
+                    </div>
+                    <div class="item-footer">
+                        <h3><a href="#">Carrière</a></h3>
+                        <p><a href="#">Emploi disponible</a></p>
+                        <p><a href="#">Candidature spontané</a></p>
+                    </div>
+                    <div class="item-footer">
+                        <h3><a href="#">Circulaire</a></h3>
+                        <p><a href="#">Promotion</a></p>
+                    </div>
+                    <div class="item-footer">
+                        <h3><a href="#">À Propos</a></h3>
+                        <p><a href="#">Notre entreprise</a></p>
+                        <p><a href="#">Notre réseau</a></p>
+                        <p><a href="filter.html">Occasion</a></p>
+                        <p><a href="filter.html">Inventaire</a></p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="blacklinefooter">
+            <div class="grid grid-pad">
+                <div class="col-1-2 mobile-col-1-2 topdivision20" style="">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img class="" src="Resources/Images/facebook_footer.png" alt="facebook" />
+                    </a>
+                </div>
+                <div class="col-1-2 mobile-col-1-2 topdivision20">
+                    <img class="floatright" src="Resources/Images/logo_footer.png" alt="instagram" />
+                </div>
+            </div>
+        </div>
+    </footer>
 <div id="" class="menuMobile">
     <div id="" class="bgblack">
         <div id="" class="recherche">
