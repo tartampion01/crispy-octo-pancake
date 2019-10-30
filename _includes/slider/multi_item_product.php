@@ -1,4 +1,4 @@
-<section class="grid">
+<section class="grid ">
         <div class="grid-pad">
             <h2 class="titlesection">Nos Spéciaux</h2>
         </div>

@@ -485,7 +485,7 @@ hr {
 .fixedheaderfilter {
     margin-top: 330px;
 }
-.rectangle {
+.multiproduct .rectangle {
     height: 10px;
     width: auto;
     background-color: rgb(213,94,36);
