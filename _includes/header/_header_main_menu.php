@@ -38,14 +38,14 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
   padding-top: 60px;
 }
 #logo_sticky img {height:40px;width:40px;padding-top:5px;}
-.cachette {visibility: visible;background-color:#f00;}
+.addlogo {visibility:hidden;}
 
 </style>
             <!--Menu-->
             <nav class="bgnav hide-on-mobile" id="navbar">
                 <div class="menudestop grid grid-pad">
                     <ul>
-                   <li id="logo_sticky"><a href="#"><img src="/../_assets/images/wx3/logo-inter.png" alt="Réseau Dynamique" /></a></li>
+                   <li id="logo_sticky" class="addlogo"><a href="<?php echo RD_PageLink::getHref(folder::Root,page::Accueil); ?>" target="_self"><img src="/../_assets/images/wx3/logo-inter.png" alt="Réseau Dynamique" /></a></li>
                         <li>
                             <a href="camions-neufs/inventaire-camion-neufs.php">Camions</a>
                             <ul class="hidden">
@@ -237,9 +237,9 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
   if (window.pageYOffset >= sticky) {
-    logo_sticky.classList.add("cachette")
+    logo_sticky.classList.remove("addlogo")
   } else {
-    logo_sticky.classList.remove("cachette");
+    logo_sticky.classList.add("addlogo");
   }
 }
 </script>
