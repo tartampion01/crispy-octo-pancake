@@ -1,9 +1,10 @@
 
 <script type="text/javascript">
+$(document).ready(function () {
 $('.diapo').slick({
                 mobileFirst: true,
             });  
-
+        }); 
 </script>
 
 <!--Diapo-->

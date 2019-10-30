@@ -3,7 +3,7 @@
 <body class="body home-page"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <!--diapo-->
-    <?php// require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/home_banner.php'); ?>  
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/home_banner.php'); ?>  
     <div class="" data-staticClassNames="wrap">        
 	</div>
     <!--Logo section-->
