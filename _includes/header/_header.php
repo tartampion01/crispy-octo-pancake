@@ -74,6 +74,68 @@
     <link rel="stylesheet" type="text/css" href="../../_assets/css/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_assets/css/wx3.css" />
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.realization').slick({
+                dots: false,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: true,
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+
+            $('.diapo').slick({
+                mobileFirst: true,
+            });          
+
+            
+            $('#dl-menu').dlmenu({
+                animationClasses: { classin: 'dl-animate-in-4', classout: 'dl-animate-out-4' }
+            });
+
+
+        });
+
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        };      
+    </script>
     
     <!-- A CHANGER LORS DE L'IMPLANTATION DU RECAPTCHA v3 sur tout le site -->
     <?php if($NOMPAGE == "demande-bon-travail_v2.php")
