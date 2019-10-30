@@ -26,7 +26,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
 ?>
 <style>
 #navbar {
-  overflow: hidden;
+  /*overflow: hidden;*/
   z-index:100000;
 }
 .sticky {
@@ -34,15 +34,18 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
   top: 0;
   width: 100%;
 }
-
 .sticky + .content {
   padding-top: 60px;
 }
+#logo_sticky img {height:40px;width:40px;padding-top:5px;}
+.cachette {visibility: visible;background-color:#f00;}
+
 </style>
             <!--Menu-->
             <nav class="bgnav hide-on-mobile" id="navbar">
                 <div class="menudestop grid grid-pad">
                     <ul>
+                   <li id="logo_sticky"><a href="#"><img src="/../_assets/images/wx3/logo-inter.png" alt="Réseau Dynamique" /></a></li>
                         <li>
                             <a href="camions-neufs/inventaire-camion-neufs.php">Camions</a>
                             <ul class="hidden">
@@ -232,6 +235,11 @@ function myFunction() {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
+  }
+  if (window.pageYOffset >= sticky) {
+    logo_sticky.classList.add("cachette")
+  } else {
+    logo_sticky.classList.remove("cachette");
   }
 }
 </script>
