@@ -64,7 +64,7 @@
     </section>
 	<!--multi-item build your own truck-->
 
-    <?php// require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_build_truck.php'); ?>  
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_build_truck.php'); ?>  
 
     <!--3 services -->
     <div class="services">
@@ -90,7 +90,7 @@
         </div>
 	</div>
     <!--multi-item special product-->
-    <?php// require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
     <div id="" class="push"></div>
     </div>
     <!--Map-->
