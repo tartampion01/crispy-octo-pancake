@@ -1,19 +1,8 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <script type='text/javascript' src='../../_assets/js/jquery.jshowoff.js'></script>
 <body class="body home-page"><?php RD_Utils::write_Gtag() ?>
-    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <!--Diapo-->
-    <div class="" data-staticClassNames="wrap">
-        <section id="diapo">
-            <div class="diapo fixedheader">
-                <!-- Fixing diapo slick  *class*** diapo fixedheader col-1-1 mobile-col-1-1  *** -->
-                <div class="slides_container"><img src="_assets/images/wx3/diapo/diapo1.jpg" alt="" /></div>
-                <div class="slides_container"><img src="_assets/images/wx3/diapo/diapo2.jpg" alt="" /></div>
-                <div class="slides_container"><img src="_assets/images/wx3/diapo/diapo3.jpg" alt="" /></div>
-                <div class="slides_container"><img src="_assets/images/wx3/diapo/diapo4.jpg" alt="" /></div>
-                <div class="slides_container"><img src="_assets/images/wx3/diapo/diapo5.png" alt="" /></div>
-            </div>
-        </section>
+    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">   
+    <div class="" data-staticClassNames="wrap">        
 	</div>
     <!--Logo section-->
     <section class="grid grid-pad">
