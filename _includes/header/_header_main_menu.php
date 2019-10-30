@@ -24,8 +24,23 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
     $section = 'carrieres';
 }
 ?>
+<style>
+#navbar {
+  overflow: hidden;
+  z-index:100000;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+</style>
             <!--Menu-->
-            <nav class="bgnav hide-on-mobile">
+            <nav class="bgnav hide-on-mobile" id="navbar">
                 <div class="menudestop grid grid-pad">
                     <ul>
                         <li>
@@ -206,3 +221,17 @@ if($section == 'camion-neufs' || $section == 'camions-occasion' || $section == '
 <?php
 }
 ?>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
