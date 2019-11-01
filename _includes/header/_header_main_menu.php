@@ -37,8 +37,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
 .sticky + .content {
   padding-top: 60px;
 }
+
 #logo_sticky img {height:40px;width:40px;padding-top:5px;}
+#logo_sticky img:hover {transform: scale(1.1);transition: all .1s ease-in-out;}
+#facebook_sticky img {height:40px;width:40px;padding-top:5px;}
+#urgence_sticky img {height:40px;width:40px;padding-top:5px;}
 .addlogo {visibility:hidden;}
+.FU_right {position:relative;right:40px}
 
 </style>
             <!--Menu-->
@@ -214,8 +219,17 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                 <li style="min-width:230px;"><a href="#map">Point de service</a></li>
                             </ul>
                         </li>
-                    </ul>
-                </div>
+                        </ul>
+                        <ul class="FU_right">
+                    <li>   
+                    <a id="urgence_sticky" class="addlogo" href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H); ?>"><img src="/../_assets/images/wx3/logo-tel.png" alt="Urgence Routière" /></a>
+                    </li>
+                    <li>
+                    <a id="facebook_sticky" class="addlogo" href="https://www.facebook.com/Réseau-Dynamiquecom-200899577018785/" target="_blank"><img src="/../_assets/images/wx3/facebook_footer.png" alt="facebook Réseau Dynamique" /></a>
+                    </li>
+            </ul>
+                   </div>   
+          
             </nav>
 <?php
 if($section == 'camion-neufs' || $section == 'camions-occasion' || $section == 'remorques-neuves') {
@@ -240,6 +254,16 @@ function myFunction() {
     logo_sticky.classList.remove("addlogo")
   } else {
     logo_sticky.classList.add("addlogo");
+  }
+  if (window.pageYOffset >= sticky) {
+    facebook_sticky.classList.remove("addlogo")
+  } else {
+    facebook_sticky.classList.add("addlogo");
+  }
+  if (window.pageYOffset >= sticky) {
+    urgence_sticky.classList.remove("addlogo")
+  } else {
+    urgence_sticky.classList.add("addlogo");
   }
 }
 </script>
