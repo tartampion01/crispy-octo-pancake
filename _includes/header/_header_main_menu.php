@@ -24,28 +24,6 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
     $section = 'carrieres';
 }
 ?>
-<style>
-#navbar {
-  /*overflow: hidden;*/
-  z-index:100000;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.sticky + .content {
-  padding-top: 60px;
-}
-
-#logo_sticky img {height:40px;width:40px;padding-top:5px;}
-#logo_sticky img:hover {transform: scale(1.1);transition: all .1s ease-in-out;}
-#facebook_sticky img {height:40px;width:40px;padding-top:5px;}
-#urgence_sticky img {height:40px;width:40px;padding-top:5px;}
-.addlogo {visibility:hidden;}
-.FU_right {position:relative;right:40px}
-
-</style>
             <!--Menu-->
             <nav class="bgnav hide-on-mobile" id="navbar">
                 <div class="menudestop grid grid-pad">
