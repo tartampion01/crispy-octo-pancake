@@ -175,7 +175,8 @@
   #facebook_sticky img {height:40px;width:40px;padding-top:5px;}
   #urgence_sticky img {height:40px;width:40px;padding-top:5px;}
   .addlogo {visibility:hidden;}
-  .FU_right {position:relative;right:40px}
+  .FU_right {position:relative;right:40px;}
+  
 /*Footer*/
     .bgmap {
         background-image: url(../../Resources/Images/background-map.jpg);
