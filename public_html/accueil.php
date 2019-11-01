@@ -69,7 +69,7 @@
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_build_truck.php'); ?>  
 
     <!--3 services -->
-    <div class="services">
+    <div class="services bg3service">
         <div class="grid grid-pad">
             <div class="col-1-3 center">
                 <div class="item succursales">
