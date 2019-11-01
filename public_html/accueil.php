@@ -69,14 +69,14 @@
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_build_truck.php'); ?>  
 
     <!--3 services -->
-    <div class="services bg3service">
-        <div class="grid grid-pad">
+    <div class="services">
+        <div class="grid">
             <div class="col-1-3 center">
                 <div class="item succursales">
                     <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre) ?>" target="_self">
                         <span class="titre">Localisez<br/>
                         <strong>nos succursales</strong></span>
-                        <img name="image" title="" src="_assets/images/menu_images/accueil-succursales-mobile.jpg" alt="Localisez nos succursales" />
+                        <img name="image" width="" title="" src="_assets/images/menu_images/accueil-succursales-mobile.jpg" alt="Localisez nos succursales" />
                     </a>
                 </div>
             </div>
