@@ -1,4 +1,5 @@
 <?php
+
     if( isset($_GET["id"])){
         require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php');        
     }
@@ -7,6 +8,7 @@
     
 $camion = new RD_Camion(null);
 $camion->load_new(base64_decode(urldecode($_GET["id"])));
+
 ?>
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
 <body class="body"><?php RD_Utils::write_Gtag() ?>
