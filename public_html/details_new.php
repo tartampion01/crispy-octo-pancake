@@ -1,23 +1,6 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
-<script>
-    $(document).ready(function () {
-        var firstimg = document.getElementById("firstimg").src;
-        var expandImg = document.getElementById("expandedImg");
-        var imgText = document.getElementById("imgtext");
-        expandImg.src = firstimg;
-        imgText.innerHTML = imgs.alt;
-        expandImg.parentElement.style.display = "block";
-    });
 
-    function myFunction(imgs) {
-        var expandImg = document.getElementById("expandedImg");
-        var imgText = document.getElementById("imgtext");
-        expandImg.src = imgs.src;
-        imgText.innerHTML = imgs.alt;
-        expandImg.parentElement.style.display = "block";
-    }
-</script>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
         <div class="content produit">
@@ -216,31 +199,31 @@
                                 <div class="col-1-1">
                                     <div class="rowphoto topdivision50">
                                         <div class="columnphoto">
-                                            <img id="firstimg" src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+                                            <img id="firstimg" src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/MV-navigation.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+                                            <img src="_assets/images/wx3/MV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/lt-navigation.png" alt="" style="width:100%" onclick="myFunction(this);">
+                                            <img src="_assets/images/wx3/lt-navigation.png" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/hx-navigation.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+                                            <img src="_assets/images/wx3/hx-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+                                            <img src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/MV-navigation.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+                                            <img src="_assets/images/wx3/MV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/lt-navigation.png" alt="" style="width:100%" onclick="myFunction(this);">
+                                            <img src="_assets/images/wx3/lt-navigation.png" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/hx-navigation.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+                                            <img src="_assets/images/wx3/hx-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+                                            <img src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                     </div>
                                 </div>
