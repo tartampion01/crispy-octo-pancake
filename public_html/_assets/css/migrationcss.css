@@ -373,39 +373,38 @@ hr {
 
 /*Page Details*/
 
-
 /* The grid: Four equal columns that floats next to each other */
-.column {
+.columnphoto {
     float: left;
     width: 33%;
     padding: 5px 5px 0px 5px;
 }
 
     /* Style the images inside the grid */
-    .column img {
+    .columnphoto img {
         opacity: 0.8;
         cursor: pointer;
     }
 
-        .column img:hover {
+        .columnphoto img:hover {
             opacity: 1;
         }
 
 /* Clear floats after the columns */
-.row:after {
+.rowphoto:after {
     content: "";
     display: table;
     clear: both;
 }
 
 /* The expanding image container */
-.container {
+.containerphoto {
     position: relative;
     display: block;
 }
 
 /* Expanding image text */
-#imgtext {
+#imgtextphoto {
     position: absolute;
     bottom: 15px;
     color: white;
