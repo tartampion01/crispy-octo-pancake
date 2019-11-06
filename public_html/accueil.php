@@ -12,13 +12,13 @@
         <div class="col-1-1 logo mobile-col-1-1">
             <div class="col-1-4 mobile-col-1-2 item">
                 <img class="" src="_assets/images/wx3/logo-1.png" alt="" />
-                <a class="" href="">
+                <a class="" href="https://www.internationaltrucks.com/shopping-tools/build-your-own">
                     <h3>Configurer<br />votre véhicule</h3>
                 </a>
             </div>
             <div class="col-1-4 mobile-col-1-2 item">
                 <img src="_assets/images/wx3/logo-2.png" alt="" />
-                <a href="">
+                <a href="https://www.nexpart.com/login.php">
                     <h3>Pièces</h3>
                 </a>
             </div>
@@ -42,22 +42,22 @@
         <div class="grid">
             <div class="col-1-1 mobile-col-1-1">
                 <div class="col-1-2 mobile-col-1-2 image-box">
-                    <a href="filter.html">
+                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">
                         <img src="_assets/images/wx3/img-international.jpg" alt="" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box">
-                    <a href="filter.html">
+                    <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>">
                         <img src="_assets/images/wx3/img-remorque.jpg" alt="" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box" style="margin: -5px 0px 0px 0px;">
-                    <a href="filter.html">
+                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsIsuzu); ?>">
                         <img src="_assets/images/wx3/img-isuzu.jpg" alt="" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box" style="margin: -5px 0px 0px 0px;">
-                    <a href="filter.html">
+                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsOttawaKalmar); ?>">
                         <img src="_assets/images/wx3/img-inventaire.jpg" alt="" />
                     </a>
                 </div>
