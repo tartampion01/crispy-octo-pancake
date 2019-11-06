@@ -77,24 +77,24 @@
                                     <div class="col-1-1 mobile-col-1-1">
                                         <img class="logoleft" src="_assets/images/wx3/marquelogo.png" alt="" />
                                         <div class="topdivision15">
-                                            <h3 class="inline paddingright mobile-col-1-1">Marque :</h3>
-                                            <p class="inline mobile-col-1-1">Placer un ID pour la BD</p>
+                                            <h3 class="infotitle mobile-col-1-1">Marque :</h3>
+                                            <p class="infotext mobile-col-1-1">Placer un ID pour la BD</p>
                                         </div>
                                     </div>
                                     <!--modele-->
                                     <div class="col-1-1 topdivision15 mobile-col-1-1">
                                         <img class="logoleft" src="_assets/images/wx3/modeledetails.png" alt="" />
                                         <div>
-                                            <h3 class="inline paddingright mobile-col-1-1">Modèle  :</h3>
-                                            <p class="inline mobile-col-1-1"> Placer un ID pour la BD</p>
+                                            <h3 class="infotitle mobile-col-1-1">Modèle  :</h3>
+                                            <p class="infotext mobile-col-1-1"> Placer un ID pour la BD</p>
                                         </div>
                                     </div>
                                     <!--no serie-->
                                     <div class="col-1-1 topdivision15 mobile-col-1-1">
                                         <img class="logoleft" src="_assets/images/wx3/noseriedetails.png" alt="" />
                                         <div>
-                                            <h3 class="inline paddingright mobile-col-1-1">No série  :</h3>
-                                            <p class="inline mobile-col-1-1"> Placer un ID pour la BD</p>
+                                            <h3 class="infotitle mobile-col-1-1">No série  :</h3>
+                                            <p class="infotext mobile-col-1-1"> Placer un ID pour la BD</p>
                                         </div>
                                     </div>
                                 </div>
@@ -103,30 +103,30 @@
                                     <div class="col-1-1 mobile-col-1-1">
                                         <img class="logoleft" src="_assets/images/wx3/noinventairedetails.png" alt="" />
                                         <div class="topdivision15">
-                                            <h3 class="inline paddingright mobile-col-1-1">No d'inventaire  :</h3>
-                                            <p class="inline mobile-col-1-1">Placer un ID pour la BD</p>
+                                            <h3 class="infotitle mobile-col-1-1">No d'inventaire  :</h3>
+                                            <p class="infotext mobile-col-1-1">Placer un ID pour la BD</p>
                                         </div>
                                     </div>
                                     <!--annee-->
                                     <div class="col-1-1 topdivision15 mobile-col-1-1">
                                         <img class="logoleft" src="_assets/images/wx3/anneedetails.png" alt="" />
                                         <div>
-                                            <h3 class="inline paddingright mobile-col-1-1">Année  :</h3>
-                                            <p class="inline mobile-col-1-1">Placer un ID pour la BD</p>
+                                            <h3 class="infotitle mobile-col-1-1">Année  :</h3>
+                                            <p class="infotext mobile-col-1-1">Placer un ID pour la BD</p>
                                         </div>
                                     </div>
                                     <!--kilometrage-->
                                     <div class="col-1-1 topdivision15 mobile-col-1-1">
                                         <img class="logoleft" src="_assets/images/wx3/kmdetails.png" alt="" />
                                         <div>
-                                            <h3 class="inline paddingright mobile-col-1-1">Kilométrage  :</h3>
-                                            <p class="inline mobile-col-1-1">Placer un ID pour la BD</p>
+                                            <h3 class="infotitle mobile-col-1-1">Kilométrage  :</h3>
+                                            <p class="infotext mobile-col-1-1">Placer un ID pour la BD</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!--section 3-->
-                            <div class="col-1-1 mobile-col-1-1">
+                            <div class="col-1-1 mobile-col-1-1 margesection">
                                 <h2 class="uppercases topdivision50">Caractéristique</h2>
                                 <div class="col-1-1 topdivision">
                                     <!--Empattement-->

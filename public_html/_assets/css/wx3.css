@@ -309,6 +309,17 @@
     padding-right: 20px;
     margin-top: 20px;
 }
+.infotitle{
+    padding-right: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    padding-top: 15px;
+    display: inline;
+}
+.infotext{
+    padding-top: 15px;
+    display: inline;
+}
 
 .topnavdetail a {
     text-decoration: none;
