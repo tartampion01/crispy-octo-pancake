@@ -3,12 +3,12 @@
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="">
         <div class="content search-result">
-            <div class="shrink">
-                <div class="titrepage">
+            <div class="grid grid-pad">
+                <div class="titrepage col-1-1">
                     <h1>SERVICE APRÈS-VENTE POUR CAMION LOURD</h1>
                 </div>
                 <div class="contenu">
-                    <div class="contenu2">
+                    <div class="contenu2 col-1-1">
                         <p>Profitez d'un service après-vente incomparable avec Réseau Dynamique. Vous accéderez à un réseau composé de <strong>19 points de service</strong> répartis sur le territoire québécois maintenus par des professionnels reconnus pour la mécanique de camion lourd.</p>
                         <h2>Mécanique de camion lourd</h2>
                         <p>Que vous vous présentiez pour un entretien mécanique, un examen annuel ou une réparation, les mécaniciens procéderont avec exactitude et rapidité afin de protéger votre investissement.</p>

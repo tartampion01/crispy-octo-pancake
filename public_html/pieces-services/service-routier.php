@@ -3,12 +3,12 @@
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="">
         <div class="content search-result">
-            <div class="shrink">
-                <div class="titrepage">
+            <div class="grid grid-pad">
+                <div class="col-1-1">
                     <h1>SERVICE ROUTIER</h1>
                 </div>
                 <div class="contenu">
-                    <div class="contenu2">
+                    <div class="col-1-1">
                         <p>Un problème sur la route avec votre camion ? Économisez temps et coûts de remorquage pour tout souci de mécanique mineur grâce au service routier de Réseau Dynamique.</p>
                         <h2>Service mobile pour camions lourds</h2>
                         <p>Tous nos véhicules de dépannage sont bien équipés pour répondre à vos urgences routières partout au Québec, que ce soit en termes d'outils spécialisés, de pièces ou de technologies pour effectuer plusieurs types de réparations routières. Un service routier 24h est offert dans certaines des succursales Réseau Dynamique afin de vous assister en cas de problème de jour comme de nuit.</p>
