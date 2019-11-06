@@ -23,9 +23,9 @@
                                     <td>
                                         <!-- W:470 H:610 -->
                                         <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>" target="_self">
-                                            <img name="image" style="width: 259px;height:335px;" title="" src="../../_assets/images/promo/Sep-Oct 2019/Promo septembre-octobre 2019 - Reseau Dynamique-01" alt="Promotion Septembre Octobre 2019" />
+                                            <img name="image" style="width: 259px;height:335px;" title="" src="../../_assets/images/promo/Nov-Dec 2019/Promo novembre-decembre 2019 - Reseau Dynamique-01" alt="Promotion Novembre decembre 2019" />
                                             <br>
-                                            <span class="label">Circulaire Septembre Octobre</span>
+                                            <span class="label">Circulaire Novembre Décembre</span>
                                         </a>
                                     </td>
                                     <td style="width: 25px;"></td>
