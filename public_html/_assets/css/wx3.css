@@ -292,7 +292,28 @@
         transform: scale(1.1);
     }
 
-    /*3 section*/
+/*Page Details*/
+.topnavdetail a {
+    text-decoration: none;
+    color: black;
+}
+.topnavdetail a:hover{
+text-decoration:underline;
+}
+.subnavdescription {
+    float: left;
+    margin: 0px 20px 20px 0px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.subnavdescription a:hover{
+    color:rgb(213,94,36);
+    text-decoration:none;
+    }
+    .rightbutton {
+        margin: 0px 20px 20px 0px;
+        float: right;
+    }
 
 
 

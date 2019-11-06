@@ -1,7 +1,7 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <?php
-    $camion = new RD_Camion(null);
-    $camion->load_new(base64_decode(urldecode($_GET["id"])));
+    //$camion = new RD_Camion(null);
+    //$camion->load_new(base64_decode(urldecode($_GET["id"])));
 ?>
 <script type="text/javascript">
     function switchMe(ceci)

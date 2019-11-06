@@ -1,30 +1,43 @@
-<?php
-
-    if( isset($_GET["id"])){
-        require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php');        
-    }
-    else
-        header("Location: accueil.php");
-    
-$camion = new RD_Camion(null);
-$camion->load_new(base64_decode(urldecode($_GET["id"])));
-
-?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
         <div class="content produit">
-            <div class="shrink">
-                <div class="titrepage">
-                    <h1>
-                        <!-- Titre camion/ remorque = Marque modele & empattement -->
-                        <span>
-                            <?php 
-                                echo $camion->beauTitre;
-                            ?>
-                        </span>
-                    </h1>
-                </div>
+            <div class="grid grid-pad">
+                <section class="grid grid-pad">
+                    <div class="col-1-1">
+                        <div class="topdivision50 topnavdetail col-1-1">
+                        <h2 class="subnavdescription mobile-col-1-2" style="margin-top:5px;">
+                            Titre  de camion
+                        </h2>
+                        <div class="btnPrint">
+                            <a name="hyperlien" onclick="window.print();" href="javascript:void(0);" target="_self"></a>
+                        </div>
+
+                        <a class="orange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
+                            Obtenir un prix
+                        </a>
+                        <a class="orange" name="orange" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeFinancement) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">
+                            Demande de financement
+                        </a>
+                        <hr class="hide-on-mobile" />
+                    <div class="topdivision20 topnavdetail mobile-col-1-1">
+                        <h3 class="subnavdescription nobold fontsize15">
+                            <a href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeInformation) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">Demande d'information</a>
+                        </h3>
+                        <h3 class="subnavdescription nobold fontsize15">
+                            <a href="<?php echo RD_PageLink::getHref(folder::Root, page::PlanifierEssaiRoutier) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">Planifier un essai routier</a>
+                        </h3>
+                        <h3 class="subnavdescription nobold fontsize15">
+                            <a href="<?php echo RD_PageLink::getHref(folder::Root, page::NousJoindre); ?>">Trouver un concessionnaire</a>
+                        </h3>
+                        <h3 class="subnavdescription nobold fontsize15">
+                            <a href="<?php echo RD_PageLink::getHref(folder::Root, page::EvaluerEchange) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">Évaluer mon échange</a>
+                        </h3>
+                    </div>
+                </section>
+            </div>
+        </div>
                 <div class="contenu">
                     <div class="left">
                         <div class="toggle toggle-product clear">
@@ -161,33 +174,7 @@ $camion->load_new(base64_decode(urldecode($_GET["id"])));
                             
                         </div>
                     </div>
-                    <div class="right">
-                        <div class="share">
-                            <div class="btnPrint">
-                                <a name="hyperlien" onclick="window.print();" href="javascript:void(0);" target="_self">Imprimer la fiche</a>
-                            </div>
-                        </div>
-                        <div class="options">
-                            <a class="demandeDinfo" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeInformation) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
-                                Demande d'information
-                            </a>
-                            <a class="essaiRoutier" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::PlanifierEssaiRoutier) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
-                                Planifier un essai routier
-                            </a>
-                            <a class="trouverConcessionnaire" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::NousJoindre); ?>" target="_self">
-                                Trouver un concessionnaire
-                            </a>
-                            <a class="orange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
-                                Obtenir un prix
-                            </a>
-                            <a class="orange" name="orange" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeFinancement) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">
-                                Demande de financement
-                            </a>
-                            <a class="orange" name="orange" href="<?php echo RD_PageLink::getHref(folder::Root, page::EvaluerEchange) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">
-                                Évaluer mon échange
-                            </a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
 	</div>
