@@ -143,7 +143,7 @@
             <div class="bghead">
                 <div class="grid grid-pad">
                     <div class="col-1-2 mobile-col-1-2">
-                        <a href="accueil.php">
+                        <a href="/accueil.php">
                             <img class="marginmedia" src="/../_assets/images/wx3/logo-header.png" alt="Réseau Dynamique" />
                         </a>
                     </div>

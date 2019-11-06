@@ -40,14 +40,14 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                         <p><a href="filter.html">Inventaire</a></p>
                     </div>
                     <div class="item-footer">
-                        <h3><a href="filter.html">Pièce</a></h3>
-                        <p><a href="filter.html">Pièce</a></p>
+                        <h3><a href="filter.html">Pièces</a></h3>
+                        <p><a href="filter.html">Pièces</a></p>
                         <p><a href="filter.html">Accessoire</a></p>
                         <p><a href="filter.html">Boutique en ligne</a></p>
                         <p><a href="filter.html">Nouveauté</a></p>
                     </div>
                     <div class="item-footer">
-                        <h3><a href="#">Service</a></h3>
+                        <h3><a href="#">Services</a></h3>
                         <p><a href="#">Routier</a></p>
                         <p><a href="#">Après-vente</a></p>
                     </div>
@@ -89,14 +89,28 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
             </div>
         </div>
         <div class="blacklinefooter">
-            <div class="grid grid-pad">
-                <div class="col-1-2 mobile-col-1-2 fbfooter" style="">
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img class="" src="../../_assets/images/wx3/facebook_footer.png" alt="facebook" />
-                    </a>
-                </div>
-                <div class="col-1-2 mobile-col-1-2 ">
-                    <img class="logofooter" src="../../_assets/images/wx3/logo_footer.png" alt="logo" />
+            <div class="grid grid-pad"> 
+                <div class="blackfootertop">
+                    <div class="col-1-5 mobile-col-1-5">
+                        <a href="/accueil.php">
+                          <img class="" src="../../_assets/images/wx3/logo_footer.png" alt="Réseau Dynamique" />
+                        </a>
+                    </div>
+                    <div class="col-1-5 mobile-col-1-5">
+                        <p></p>
+                    </div>
+                    <div class="col-1-5 mobile-col-1-5">
+                       <p class="footercenter">Réseau Dynamique, 2018</p>
+                    </div>
+                    <div class="col-1-5 mobile-col-1-5">
+                    <p  class="footerright"></p>
+                    </div>
+                    <div class="col-1-5 mobile-col-1-5">
+                    <p class="footerright">
+                        <a name="hyperlien" onclick="" href="/mentions-legales.php" target="_self">Mentions légales</a>&nbsp;| 
+                        <a name="hyperlien" onclick="" href="/plan-site.php" target="_self">Plan du site</a>
+                    </p>
+                    </div>
                 </div>
             </div>
         </div>

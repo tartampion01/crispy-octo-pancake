@@ -238,20 +238,26 @@
         background-repeat: no-repeat;
         height: 100%;
     }
-    .fbfooter{
-        margin-top:20px;
-    }
-    .logofooter{
-        margin-top: 20px;
-        float: right;
-    }
 
+
+    .blackfootertop {
+        padding-top: 20px;
+        color: #fff;
+    }
+    .blackfootertop a {
+        color: rgb(213,94,36);
+    }
+.footerright {text-align: right;
+}
+.footercenter {text-align: center;
+}
     /*section multiple product*/
     .rectangle {
         height: 10px;
         width: auto;
         background-color: rgb(213,94,36);
     }
+
 /*Page accueil*/
     /*section logo*/
 .logo {
