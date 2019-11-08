@@ -1,13 +1,13 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="grid grid-pad">
         <div class="content search-result">
-            <div class="shrink">
+            <div class="">
                 <div class="titrepage">
                     <h1>SKID STEER ET CHARGEUR À CHENILLES YANMAR</h1>
                 </div>
-                <div class="contenu contenu2">
+                <div class="contenu contenu2 col-1-1">
                     <div class="toggle">
                         <div class="btnToggle">
                             <a name="hyperlien" onclick="toggleInformationSupplementaire('divToggle');" class="information-supplementaire" href="javascript:void(0);">Informations supplémentaires</a>

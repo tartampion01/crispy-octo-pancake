@@ -5,7 +5,7 @@
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
         <div class="content search-result">
-            <div class="shrink">
+            <div class="grid grid-pad">
                 <div class="titrepage">
                     <h1>Remorques Doepker</h1>
                 </div>

@@ -1,13 +1,13 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="grid grid-pad">
         <div class="content search-result">
-            <div class="shrink">
+            <div class="">
                 <div class="titrepage">
                     <h1>Transporteurs tout-terrain Yanmar</h1>
                 </div>
-                <div class="contenu contenu2">
+                <div class="contenu contenu2 col-1-1">
                     <div class="more-info">
                         <p>Ils sont capables de surmonter presque n'importe quelle difficulté et de vous mener là où vous le souhaitez qu'importe la résistance du chemin emprunté. 
                             Les modèles de transporteurs tout-terrain de Yanmar mènent à terme chacune de vos missions.</p>
