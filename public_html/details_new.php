@@ -10,7 +10,7 @@
                     <div class="col-1-1">
                         <div class="topdivision topnavdetail col-1-1">
                             <h2 class="title mobile-col-1-2" style="margin-top:5px;">
-                                Titre  de camion
+                                INTERNATIONAL - HV513 SFA - 6 X 4 <!--Titre  de camion-->
                             </h2>        
                             <a name="hyperlien" onclick="window.print();" href="javascript:void(0);" target="_self"><img class="" style="display:inline-block; float:right; padding:5px;" src="_assets/images/wx3/printbtn.png" alt="print logo" /></a>
                             <a class="orange rightbutton buttonwebsite" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
@@ -43,7 +43,7 @@
                         <div class="col-7-12 mobile-col-1-1 paddingright">
                             <!--section 1-->
                             <div class="col-1-1 mobile-col-1-1">
-                                <h2 class="uppercases mobile-col-1-1">Description :</h2>
+                                <h2 class="mobile-col-1-1">Description :</h2>
                                 <p class="mobile-col-1-1 Descriptionp">
                                     "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                                     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
@@ -54,14 +54,14 @@
                             </div>
                             <!--section 2-->
                             <div class="col-1-1 mobile-col-1-1 margesection">
-                                <h2 class="col-1-1 uppercases">Information :</h2>
+                                <h2 class="col-1-1">Spécifications :</h2>
                                 <div class="col-1-2 topdivision mobile-col-1-2">
                                     <!--marque-->
                                     <div class="col-1-1 mobile-col-1-1">
                                         <img class="logoleft" src="_assets/images/wx3/marquelogo.png" alt="" />
                                         <div class="topdivision15">
                                             <h3 class="infotitle mobile-col-1-1">Marque :</h3>
-                                            <p class="infotext mobile-col-1-1">Placer un ID pour la BD</p>
+                                            <p class="infotext mobile-col-1-1">International<?php echo $camion->marque ?></p>
                                         </div>
                                     </div>
                                     <!--modele-->
@@ -69,7 +69,7 @@
                                         <img class="logoleft" src="_assets/images/wx3/modeledetails.png" alt="" />
                                         <div>
                                             <h3 class="infotitle mobile-col-1-1">Modèle  :</h3>
-                                            <p class="infotext mobile-col-1-1"> Placer un ID pour la BD</p>
+                                            <p class="infotext mobile-col-1-1"> HV513 SFA <?php echo $camion->modele ?></p>
                                         </div>
                                     </div>
                                     <!--no serie-->
@@ -77,7 +77,7 @@
                                         <img class="logoleft" src="_assets/images/wx3/noseriedetails.png" alt="" />
                                         <div>
                                             <h3 class="infotitle mobile-col-1-1">No série  :</h3>
-                                            <p class="infotext mobile-col-1-1"> Placer un ID pour la BD</p>
+                                            <p class="infotext mobile-col-1-1">KH434695<?php echo $camion->noSerie ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -87,7 +87,7 @@
                                         <img class="logoleft" src="_assets/images/wx3/noinventairedetails.png" alt="" />
                                         <div class="topdivision15">
                                             <h3 class="infotitle mobile-col-1-1">No d'inventaire  :</h3>
-                                            <p class="infotext mobile-col-1-1">Placer un ID pour la BD</p>
+                                            <p class="infotext mobile-col-1-1">3814<?php echo $camion->noInventaire ?></p>
                                         </div>
                                     </div>
                                     <!--annee-->
@@ -95,11 +95,11 @@
                                         <img class="logoleft" src="_assets/images/wx3/anneedetails.png" alt="" />
                                         <div>
                                             <h3 class="infotitle mobile-col-1-1">Année  :</h3>
-                                            <p class="infotext mobile-col-1-1">Placer un ID pour la BD</p>
+                                            <p class="infotext mobile-col-1-1">2019<?php echo $camion->annee ?></p>
                                         </div>
                                     </div>
                                     <!--kilometrage-->
-                                    <div class="col-1-1 topdivision15 mobile-col-1-1">
+                                    <div class="col-1-1 topdivision15 mobile-col-1-1" style="display:none;">
                                         <img class="logoleft" src="_assets/images/wx3/kmdetails.png" alt="" />
                                         <div>
                                             <h3 class="infotitle mobile-col-1-1">Kilométrage  :</h3>
@@ -110,11 +110,11 @@
                             </div>
                             <!--section 3-->
                             <div class="col-1-1 mobile-col-1-1 margesection">
-                                <h2 class="uppercases topdivision50">Caractéristique</h2>
+                                <h2 class="mobile-col-1-1">Caractéristique</h2>
                                 <div class="col-1-1 topdivision">
                                     <!--Empattement-->
-                                    <div class="rowdetails">
-                                        <div class="column1details">
+                                    <div class="rowdetails" id="fld_empattement">
+                                        <div class="infotitle column1details">
                                             Empattement
                                         </div>
                                         <div class="column2details">
@@ -124,9 +124,45 @@
                                             283
                                         </div>
                                     </div>
+                                    <!--Essieu avant-->
+                                    <div class="rowdetails" id="fld_essieu_avant">
+                                        <div class="infotitle column1details">
+                                            Essieu avant
+                                        </div>
+                                        <div class="column2details">
+
+                                        </div>
+                                        <div class="column3details">
+                                            283
+                                        </div>
+                                    </div>
+                                    <!--Essieu arriere-->
+                                    <div class="rowdetails" id="fld_essieu_arriere">
+                                        <div class="infotitle column1details">
+                                            Essieu arrière
+                                        </div>
+                                        <div class="column2details">
+
+                                        </div>
+                                        <div class="column3details">
+                                            283
+                                        </div>
+                                    </div>
+                                    <!--Suspension arrière-->
+                                    <div class="rowdetails" id="fld_rearsuspension">
+                                        <div class="infotitle column1details">
+                                            Suspension arrière
+                                        </div>
+                                       <div class="column2details">
+                                           
+                                       </div>
+                                       <div class="column3details">
+                                           allison 3000 rds
+                                       </div>
+                                    </div>
                                     <!--Transmission-->
-                                    <div class="rowdetails">
-                                        <div class="column1details">
+                                    <div class="rowdetails" id="fld_transmission">
+                                        <div class="infotitle column1details">
                                            Transmission
                                         </div>
                                        <div class="column2details">
@@ -137,20 +173,32 @@
                                        </div>
                                     </div>
                                     <!--Moteur-->
-                                    <div class="rowdetails">
-                                        <div class="column1details">
+                                    <div class="rowdetails" id="fld_moteur">
+                                        <div class="infotitle column1details">
                                             Moteur
                                         </div>
                                         <div class="column2details">
 
                                         </div>
                                         <div class="column3details">
-                                            maxxforce 9
+                                            A26
+                                        </div>
+                                    </div>
+                                    <!--HP-->
+                                    <div class="rowdetails" id="fld_hp">
+                                        <div class="infotitle column1details">
+                                            HP
+                                        </div>
+                                        <div class="column2details">
+
+                                        </div>
+                                        <div class="column3details">
+                                            475
                                         </div>
                                     </div>
                                     <!--Ratio essieu arrière-->
-                                    <div class="rowdetails">
-                                        <div class="column1details">
+                                    <div class="rowdetails" id="fld_ratio_ar">
+                                        <div class="infotitle column1details">
                                             Ratio essieu arrière
                                         </div>
                                         <div class="column2details">
@@ -160,9 +208,33 @@
                                             5.29
                                         </div>
                                     </div>
+                                    <!--Dimension pneu-->
+                                    <div class="rowdetails" id="fld_pneu_ar_dim" id="fld_pneu_av_dim">
+                                        <div class="infotitle column1details">
+                                            Dimension pneu
+                                        </div>
+                                        <div class="column2details">
+
+                                        </div>
+                                        <div class="column3details">
+                                            5.29
+                                        </div>
+                                    </div>
+                                    <!--Wheel-->
+                                    <div class="rowdetails" id="fld_wheel">
+                                        <div class="infotitle column1details">
+                                            Roue
+                                        </div>
+                                        <div class="column2details">
+
+                                        </div>
+                                        <div class="column3details">
+                                            5.29
+                                        </div>
+                                    </div>
                                     <!--freins-->
-                                    <div class="rowdetails">
-                                        <div class="column1details">
+                                    <div class="rowdetails" id="fld_freins">
+                                        <div class="infotitle column1details">
                                             freins
                                         </div>
                                         <div class="column2details">
@@ -172,9 +244,21 @@
                                             air
                                         </div>
                                     </div>
+                                    <!--color-->
+                                    <div class="rowdetails" id="fld_color">
+                                        <div class="infotitle column1details">
+                                            Couleur
+                                        </div>
+                                        <div class="column2details">
+                                            
+                                        </div>
+                                        <div class="column3details">
+                                        9219 neige
+                                        </div>
+                                    </div>
                                     <!--équipement-->
-                                    <div class="rowdetails">
-                                        <div class="column1details">
+                                    <div class="rowdetails" id="fld_equipements">
+                                        <div class="infotitle column1details">
                                             Équipement
                                         </div>
                                         <div class="column2details">
@@ -196,34 +280,34 @@
                                         <div id="imgtext"></div>
                                     </div>
                                 </div>
-                                <div class="col-1-1">
+                                <div class="col-1-1"> <?php echo $camion->pictures[0]; ?>
                                     <div class="rowphoto topdivision50">
                                         <div class="columnphoto">
-                                            <img id="firstimg" src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                            <img class="imgdetailsleft" id="firstimg" src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/MV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                            <img class="imgdetailscenter" src="_assets/images/wx3/MV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/lt-navigation.png" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                            <img class="imgdetailsright" src="_assets/images/wx3/lt-navigation.png" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/hx-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                            <img class="imgdetailsleft" src="_assets/images/wx3/hx-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                            <img class="imgdetailscenter" src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/MV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                            <img class="imgdetailsright" src="_assets/images/wx3/MV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/lt-navigation.png" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                            <img class="imgdetailsleft" src="_assets/images/wx3/lt-navigation.png" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/hx-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                            <img class="imgdetailscenter" src="_assets/images/wx3/hx-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                            <img class="imgdetailsright" src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                     </div>
                                 </div>
@@ -257,7 +341,7 @@
                                         <div class="forBroker">
                                             <span class="icon"><img class="" name="image" title="" src="/_assets/images/menu_images/icon-marque.png" alt="Marque"></span>
                                             <span class="forBroker marque">Marque :&nbsp;</span>
-                                            <span class="ProductBrokerType_String"><?php echo $camion->marque ?></span>
+                                            <span class="ProductBrokerType_String"></span>
                                         </div>
                                         <div class="forBroker">
                                             <span class="icon"><img name="image" title="" src="/_assets/images/menu_images/icon-modele.png" alt="Modèle"></span>

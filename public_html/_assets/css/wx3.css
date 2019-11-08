@@ -14,6 +14,9 @@
 .topdivision{
     margin-top:25px;
 }
+.orange{
+    color: rgb(213,94,36);
+}
 /* header */
 .bghead {
     background-color: white;
@@ -400,8 +403,8 @@ text-decoration:underline;
 /* The grid: Four equal columns that floats next to each other */
 .columnphoto {
     float: left;
-    width: 31%;
-    padding: 5px 5px 0px 5px;
+    width: 33%;
+    paddi ng: 5px 5px 0px 5px;
 }
 
     /* Style the images inside the grid */
@@ -413,6 +416,18 @@ text-decoration:underline;
         .columnphoto img:hover {
             opacity: 1;
         }
+/*palcement photo*/
+.imgdetailsleft{
+    padding-top: 4px;
+}
+.imgdetailscenter{
+    padding-top: 4px;
+    padding-left: 4px;
+}
+.imgdetailsright{
+    padding-top: 4px;
+    padding-left: 8px;
+}
 
 /* Clear floats after the columns */
 .rowphoto:after {
