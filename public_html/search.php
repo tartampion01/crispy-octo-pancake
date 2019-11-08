@@ -7,13 +7,13 @@
         }
     </style>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
-        <div class="content">
-            <div class="shrink">
+    <div class="wrap">
+        <div class="grid grid-pad">
+            <div class="content">
                 <div class="titrepage">
                     <h1>RÉSULTATS DE RECHERCHE</h1>
                 </div>
-                <div class="contenu">
+                <div class="contenu col-1-1">
                     <?php 
                         if( isset($_POST['tbSearch']))
                         {

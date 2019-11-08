@@ -3,12 +3,12 @@
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>" enctype="multipart/form-data">
     <div class="">
         <div class="content">
-            <div class="shrink">
+            <div class="grid grid-pad">
                 <div class="titrepage">
                     <h1>Postuler en ligne</h1>
                 </div>
                 <div class="contenu">
-                    <div class="contenu2">
+                    <div class="contenu2 col-1-1">
                         <?php 
                             $divVisibility = "visible";
                             $nomFichierPres = $nomFichierPres_TEMP = "";

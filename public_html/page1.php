@@ -2,12 +2,12 @@
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/page1.php">
     <div class="content search-result" style="height: 80%">
-        <div class="shrink">
+        <div class="grid grid-pad">
             <div class="titrePage">
                 <h1><span>Inventaire complet</span></h1>
             </div>
             
-            <div class="contenu contenu2">
+            <div class="contenu contenu2 col-1-1">
                 <div>
                     International compte le plus grand réseau de concessionnaires de camions lourds, moyens et services sévères en Amérique du Nord. Réseau Dynamique, fier membre de la famille International, offre une large sélection de camions lourds adaptés aux différents types d'industries et d'usages.
                 </div>

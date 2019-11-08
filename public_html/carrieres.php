@@ -1,13 +1,13 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="grid grid-pad">
         <div class="content">
-            <div class="shrink">
+            <div class="">
                 <div class="titrepage">                    
                 </div>
                 <div class="contenu">
-                    <div class="contenu2">
+                    <div class="contenu2 col-1-1">
                         <?php 
                             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 if( isset($_POST['ddlSuccursales']))

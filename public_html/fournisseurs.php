@@ -1,14 +1,14 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="grid grid-pad">
         <div class="content">
-            <div class="shrink">
+            <div class="">
                 <div class="titrepage">
                     <h1>Fournisseurs</h1>
                 </div>
                 <div class="contenu">
-                    <div class="contenu2">
+                    <div class="contenu2 col-1-1">
                         <div class="fournisseurs">
                             <a id="lien" href="http://www.accuridewheelendsolutions.com/products/accuride-wheels-product-search/" target="_blank">ACCURIDE Roues</a>
                             <a id="lien" href="http://www.alcoa.com/alcoawheels/north_america/en/wheels.asp" target="_blank">Alcoa Roues</a>Liste de fournisseurs

@@ -1,14 +1,14 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">    
-        <div class="">
+        <div class="grid grid-pad">
             <div class="content">
-                <div class="shrink">
+                <div class="">
                     <div class="titrepage">
                         <h1>Les experts, un seul réseau</h1>
                     </div>
                     <div class="contenu">
-                        <div class="contenu2">
+                        <div class="contenu2 col-1-1">
                             <p>La force du R&#233;seau Dynamique r&#233;side dans son offre globale &#233;tendue &#224; la grandeur du Qu&#233;bec. Sp&#233;cialiste &#233;tabli dans la vente de camions neufs et usagés, R&#233;seau Dynamique est concessionnaire de la tr&#232;s r&#233;put&#233;e marque de camions International.</p>
                             <h2>Plus important r&#233;seau de concessionnaires International au Qu&#233;bec</h2>
                             <p>Plus de 32 000 transporteurs, propri&#233;taires de flottes de camions, centres de r&#233;paration, services gouvernementaux et entreprises de livraison ont choisi le plus important r&#233;seau de concessionnaires de camions International au Qu&#233;bec pour l’achat de leurs v&#233;hicules lourds, neufs ou usag&#233;s, pour la r&#233;paration de leurs camions de toutes marques et pour l’achat de leurs pi&#232;ces.</p>

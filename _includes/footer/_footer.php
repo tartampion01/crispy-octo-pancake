@@ -100,7 +100,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                         <p></p>
                     </div>
                     <div class="col-1-5 mobile-col-1-5">
-                       <p class="footercenter">Réseau Dynamique, 2020</p>
+                       <p class="footercenter">&copy; Réseau Dynamique, 2020</p>
                     </div>
                     <div class="col-1-5 mobile-col-1-5">
                     <p  class="footerright"></p>
