@@ -214,6 +214,169 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                    </div>   
           
             </nav>
+            <!--Mobile Menu-->
+            <div class="bgnav mobilenav">
+                <div class="grid grid-pad column">
+                    <div id="dl-menu" class="dl-menuwrapper">
+                        <button class="dl-trigger">Open Menu</button>
+                        <ul class="dl-menu">
+                            <li>
+                                <a href="#">Camions</a>
+                                <ul class="dl-submenu">
+                                    <li>
+                                        <a href="#">International</a>
+                                        <ul class="dl-submenu">
+                                            <li>
+                                                <a href="#">série CV</a>
+                                                <ul class="dl-submenu">
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer votre véhicule</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="filter.html">Inventaire</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">série HV</a>
+                                                <ul class="dl-submenu">
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer votre véhicule</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="filter.html">Inventaire</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">série HX</a>
+                                                <ul class="dl-submenu">
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer votre véhicule</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="filter.html">Inventaire</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">série LT</a>
+                                                <ul class="dl-submenu">
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer votre véhicule</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="filter.html">Inventaire</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">série MV</a>
+                                                <ul class="dl-submenu">
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer votre véhicule</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="filter.html">Inventaire</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Isuzu</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Occasion</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Inventaire</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Pièces</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="#">Nouveauté</a></li>
+                                    <li><a href="#">Occasion</a></li>
+                                    <li><a href="#">Boutique en ligne</a></li>
+                                    <li><a href="#">Inventaire</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Service</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="#">Routier</a></li>
+                                    <li><a href="#">Après-Vente</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Financement</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="#">Long Terme</a></li>
+                                    <li><a href="#">Court Terme</a></li>
+                                    <li><a href="#">Calculateur</a></li>
+                                    <li><a href="#">Commande en ligne</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Location</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="#">Long Terme</a></li>
+                                    <li><a href="#">Court Terme</a></li>
+                                    <li><a href="#">Avec Entretien</a></li>
+                                    <li><a href="#">Sans Entretien</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Carrière</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="#">Emploi disponible</a></li>
+                                    <li><a href="#">Candidature Spontanée</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Circulaire</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="#">Promotion</a></li>
+                                    <li><a href="#">Circulaire Complet</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">À Propos</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="#">Notre Entreprise</a></li>
+                                    <li><a href="#">Notre Réseaux</a></li>
+                                    <li><a href="#">Occasion</a></li>
+                                    <li><a href="#">Iventaire</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Nous Joindre</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="#">Concessionaire</a></li>
+                                    <li><a href="#">Point de service</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /dl-menuwrapper -->
+                </div>
+            </div>
 <?php
 if($section == 'camion-neufs' || $section == 'camions-occasion' || $section == 'remorques-neuves') {
 ?>

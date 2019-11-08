@@ -9,14 +9,14 @@
                 <section class="">
                     <div class="col-1-1">
                         <div class="topdivision topnavdetail col-1-1">
-                            <h2 class="title mobile-col-1-2" style="margin-top:5px;">
+                            <h2 class="title mobile-col-1-1" style="margin-top:5px;">
                                 INTERNATIONAL - HV513 SFA - 6 X 4 <!--Titre  de camion-->
                             </h2>        
                             <a name="hyperlien" onclick="window.print();" href="javascript:void(0);" target="_self"><img class="" style="display:inline-block; float:right; padding:5px;" src="_assets/images/wx3/printbtn.png" alt="print logo" /></a>
-                            <a class="orange rightbutton buttonwebsite" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
+                            <a class="orange rightbutton buttonwebsite mobile-col-1-1" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
                                 Obtenir un prix
                             </a>                         
-                            <a class="orange rightbutton buttonwebsite" name="orange" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeFinancement) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">
+                            <a class="orange rightbutton buttonwebsite mobile-col-1-1" name="orange" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeFinancement) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">
                                 Demande de financement
                             </a>
                             <hr class="hide-on-mobile" style="margin-top:50px;" />
@@ -44,7 +44,7 @@
                             <!--section 1-->
                             <div class="col-1-1 mobile-col-1-1">
                                 <h2 class="mobile-col-1-1">Description :</h2>
-                                <p class="mobile-col-1-1 Descriptionp">
+                                <p class="col-1-1 mobile-col-1-1 Descriptionp">
                                     "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                                     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
                                     consectetur.  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
@@ -60,24 +60,24 @@
                                     <div class="col-1-1 mobile-col-1-1">
                                         <img class="logoleft" src="_assets/images/wx3/marquelogo.png" alt="" />
                                         <div class="topdivision15">
-                                            <h3 class="infotitle mobile-col-1-1">Marque :</h3>
-                                            <p class="infotext mobile-col-1-1">International<?php echo $camion->marque ?></p>
+                                            <h3 class="infotitle">Marque :</h3>
+                                            <p class="infotext">International<?php echo $camion->marque ?></p>
                                         </div>
                                     </div>
                                     <!--modele-->
                                     <div class="col-1-1 topdivision15 mobile-col-1-1">
                                         <img class="logoleft" src="_assets/images/wx3/modeledetails.png" alt="" />
                                         <div>
-                                            <h3 class="infotitle mobile-col-1-1">Modèle  :</h3>
-                                            <p class="infotext mobile-col-1-1"> HV513 SFA <?php echo $camion->modele ?></p>
+                                            <h3 class="infotitle">Modèle  :</h3>
+                                            <p class="infotext"> HV513 SFA <?php echo $camion->modele ?></p>
                                         </div>
                                     </div>
                                     <!--no serie-->
                                     <div class="col-1-1 topdivision15 mobile-col-1-1">
                                         <img class="logoleft" src="_assets/images/wx3/noseriedetails.png" alt="" />
                                         <div>
-                                            <h3 class="infotitle mobile-col-1-1">No série  :</h3>
-                                            <p class="infotext mobile-col-1-1">KH434695<?php echo $camion->noSerie ?></p>
+                                            <h3 class="infotitle">No série  :</h3>
+                                            <p class="infotext">KH434695<?php echo $camion->noSerie ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -86,24 +86,24 @@
                                     <div class="col-1-1 mobile-col-1-1">
                                         <img class="logoleft" src="_assets/images/wx3/noinventairedetails.png" alt="" />
                                         <div class="topdivision15">
-                                            <h3 class="infotitle mobile-col-1-1">No d'inventaire  :</h3>
-                                            <p class="infotext mobile-col-1-1">3814<?php echo $camion->noInventaire ?></p>
+                                            <h3 class="infotitle">No d'inventaire  :</h3>
+                                            <p class="infotext">3814<?php echo $camion->noInventaire ?></p>
                                         </div>
                                     </div>
                                     <!--annee-->
                                     <div class="col-1-1 topdivision15 mobile-col-1-1">
                                         <img class="logoleft" src="_assets/images/wx3/anneedetails.png" alt="" />
                                         <div>
-                                            <h3 class="infotitle mobile-col-1-1">Année  :</h3>
-                                            <p class="infotext mobile-col-1-1">2019<?php echo $camion->annee ?></p>
+                                            <h3 class="infotitle">Année  :</h3>
+                                            <p class="infotext">2019<?php echo $camion->annee ?></p>
                                         </div>
                                     </div>
                                     <!--kilometrage-->
                                     <div class="col-1-1 topdivision15 mobile-col-1-1" style="display:none;">
                                         <img class="logoleft" src="_assets/images/wx3/kmdetails.png" alt="" />
                                         <div>
-                                            <h3 class="infotitle mobile-col-1-1">Kilométrage  :</h3>
-                                            <p class="infotext mobile-col-1-1">Placer un ID pour la BD</p>
+                                            <h3 class="infotitle">Kilométrage  :</h3>
+                                            <p class="infotext">Placer un ID pour la BD</p>
                                         </div>
                                     </div>
                                 </div>
@@ -315,10 +315,10 @@
                         </div>
                     </div>
                 </section>
-                <!--multi-item special product-->
-                <div class="margesection"></div>
-                <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
             </div>
+            <!--multi-item special product-->
+            <div class="margesection"></div>
+            <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
             <!--
             <div class="contenu">
                     <div class="left">
