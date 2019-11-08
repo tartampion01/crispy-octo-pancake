@@ -176,28 +176,7 @@ $(document).ready(function () {
 
 var magicTimeout = "";
 
-$(window).resize(function () {
-  if (magicTimeout != null) {
-    clearTimeout(magicTimeout);
-    magicTimeout = null;
-  }
-  magicTimeout = setTimeout(function () {
-    var $menuMobile = $(".menuMobile");
-    if ($(window).width() < 641) {
-      $menuMobile.show();
-      if (parseInt($menuMobile.css("left")) < 0) {
-        $menuMobile.css("left", -$menuMobile.outerWidth())
-      } else {
-        if ($menuMobile.is(":visible")) {
-          $(".wrap").css("left", $menuMobile.outerWidth());
-          $(".pied").css("left", $menuMobile.outerWidth());
-        }
-      }
-    } else {
-      $menuMobile.hide();
-    }
-  }, 100);
-});
+
     //]]>  </script><img alt="" src="#" style="position:absolute;left:-10px;top:-10px;width:1px;height:1px;" />
 
 	

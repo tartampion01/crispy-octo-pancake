@@ -5,6 +5,29 @@
     } else {
         $menuMobile.hide();
     }
+
+    $(window).resize(function () {
+  if (magicTimeout != null) {
+    clearTimeout(magicTimeout);
+    magicTimeout = null;
+  }
+  magicTimeout = setTimeout(function () {
+    var $menuMobile = $(".menuMobile");
+    if ($(window).width() < 641) {
+      $menuMobile.show();
+      if (parseInt($menuMobile.css("left")) < 0) {
+        $menuMobile.css("left", -$menuMobile.outerWidth())
+      } else {
+        if ($menuMobile.is(":visible")) {
+          $(".wrap").css("left", $menuMobile.outerWidth());
+          $(".pied").css("left", $menuMobile.outerWidth());
+        }
+      }
+    } else {
+      $menuMobile.hide();
+    }
+  }, 100);
+});
 </script>
 
 
