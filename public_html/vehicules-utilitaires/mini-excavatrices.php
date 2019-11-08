@@ -1,13 +1,13 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="grid grid-pad">
         <div class="content search-result">
-            <div class="shrink">
+            <div class="">
                 <div class="titrepage">
                     <h1>Mini-excavatrices Yanmar</h1>
                 </div>
-                <div class="contenu contenu2">
+                <div class="contenu contenu2 col-1-1">
                     <div class="more-info">
                         Les mini-excavatrices de Yanmar sont synonymes de puissance, durabilité et efficacité. Créée en 1971, la première pelle Yanmar a ouvert la voie à une toute nouvelle gamme de technologies. Pionnier dans la création de mini excavatrices, Yanmar a toujours pris les devants dans l'industrie grâce à une innovation en continu.
                     </div>	

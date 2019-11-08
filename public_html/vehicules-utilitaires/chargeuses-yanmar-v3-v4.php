@@ -1,13 +1,13 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="grid grid-pad">
         <div class="content search-result">
-            <div class="shrink">
+            <div class="">
                 <div class="titrepage">
                     <h1>CHARGEUSE YANMAR V3 ET V4</h1>
                 </div>
-                <div class="contenu contenu2">
+                <div class="contenu contenu2 col-1-1">
                     <div class="more-info">
                         <p>Les chargeuses V3 et V4 deviendront vos meilleures alliées pour vos besoins de chargement, terrassement et manutention qu'importe le chantier. Grâce à leur petit gabarit leur 
                             conférant polyvalence et manœuvrabilité, les chargeuses sont idéales pour les travaux à l'extérieur et à l'intérieur.</div>	

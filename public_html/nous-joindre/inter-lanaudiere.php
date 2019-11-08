@@ -2,9 +2,9 @@
 <?php $suc = new RD_Succursales(); $suc->load(nomSuccursale::Joliette); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="grid grid-pad">
         <div class="content">
-            <div class="shrink">
+            <div class="">
                 <div class="left">
                     <div class="titrepage">
                         <h1><span><?php echo $suc->nomLong; ?></span></h1>
