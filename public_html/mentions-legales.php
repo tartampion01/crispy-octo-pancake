@@ -1,14 +1,14 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="grid grid-pad">
         <div class="content">
-            <div class="shrink">
+            <div class="">
                 <div class="titrepage">
                     <h1>MENTIONS LÉGALES</h1>
                 </div>
                 <div class="contenu">
-                    <div class="contenu2">
+                    <div class="contenu2 col-1-1">
                         <h2>Condition d'utilisation</h2>
                         <p>NOUS VOUS PRIONS DE LIRE ATTENTIVEMENT LES CONDITIONS D’UTILISATION DÉCRITES CI-DESSOUS.</p>
                         <p>Bienvenue sur le www.reseaudynamique.com  En accédant et en naviguant sur le site Web de Réseau Dynamique (« Réseau Dynamique » ou « nous »), vous acceptez les modalités et conditions d'utilisation qui suivent (les « Conditions d’utilisation »). Si telle n'est pas votre intention, nous vous invitons à quitter le site.</p>
