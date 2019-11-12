@@ -247,7 +247,6 @@ form {
 body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  min-width: 970px;
   color: #000;
   position: relative;
 }
@@ -452,7 +451,7 @@ a {
     }
 
       .menuCss1 ul li a {
-        font: 700 1.1428em/1.1em 'Montserrat', Arial, Helvetica, sans-serif;
+        font: 700 1.1428em/1.1em 'calibri', Arial, Helvetica, sans-serif;
         text-transform: uppercase;
         width: 100%;
         box-sizing: border-box;
@@ -648,7 +647,7 @@ a {
   }
 
     .banner .rotation .banniere .texte .gros {
-      font: 700 2.2857em/1.1em 'Montserrat', Arial, Helvetica, sans-serif;
+      font: 700 2.2857em/1.1em 'calibri', Arial, Helvetica, sans-serif;
       border-top: 1px #cfcfcf solid;
       border-bottom: 1px #cfcfcf solid;
       padding: 9px 0px 12px 22%;
@@ -659,7 +658,7 @@ a {
       }
 
     .banner .rotation .banniere .texte .petit {
-      font: 400 0.9em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+      font: 400 0.9em/1.3em 'calibri', Arial, Helvetica, sans-serif;
       letter-spacing: -0.05em;
       padding-top: 17px;
       padding-left: 22%;
@@ -717,7 +716,7 @@ a {
 
   .btnToggle a {
     background: rgb(0, 145, 214);
-    font: 700 1.8em/3em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 700 1.8em/3em 'calibri', Arial, Helvetica, sans-serif;
     padding: 0px 22px;
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -786,7 +785,7 @@ margin-top: 36px;
 }
 
   .content h1 {
-    font: 400 2.5714em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 2.5714em/1.3em 'calibri', Arial, Helvetica, sans-serif;
     margin: 1em 0px 0.4em 0px;
     color: #525252;
     text-transform: uppercase;
@@ -838,7 +837,7 @@ margin-top: 36px;
 }
 
 .contenu h2 {
-  font: 700 2.1428em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+  font: 700 2.1428em/1.2em 'calibri', Arial, Helvetica, sans-serif;
   color: #f37121;
   margin: 0.9em 0px 0.3em 0px;
 }
@@ -860,19 +859,19 @@ margin-top: 36px;
       }
 
 .contenu h3 {
-  font: 400 1.857em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+  font: 400 1.857em/1.2em 'calibri', Arial, Helvetica, sans-serif;
   color: #231f20;
   margin: 0.9em 0px 0.1em 0px;
 }
 
 .contenu h4 {
-  font: 400 1.428em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+  font: 400 1.428em/1.2em 'calibri', Arial, Helvetica, sans-serif;
   color: #231f20;
   margin: 0.9em 0px 0.1em 0px;
 }
 
 .contenu h5 {
-  font: 400 1.1428em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+  font: 400 1.1428em/1.2em 'calibri', Arial, Helvetica, sans-serif;
   color: #231f20;
   margin: 0.9em 0px 0.1em 0px;
 }
@@ -1045,7 +1044,7 @@ margin-top: 36px;
       display: block;
       margin-top: 0.8em;
       color: #024da1;
-      font: 400 1.428em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+      font: 400 1.428em/1.3em 'calibri', Arial, Helvetica, sans-serif;
     }
 
     .itemProduit a:hover .titre {
@@ -1053,7 +1052,7 @@ margin-top: 36px;
     }
 
 .produit .toggle {
-  font: 700 1.2857em/3em 'Montserrat', Arial, Helvetica, sans-serif;
+  font: 700 1.2857em/3em 'calibri', Arial, Helvetica, sans-serif;
   color: #525252;
   background: url(../../../_assets/images/menu_images/bg-border-bottom.jpg) bottom repeat-x;
 }
@@ -1111,7 +1110,7 @@ margin-top: 36px;
     width: 51%;
     padding-top: 2px;
     float: left;
-    font: 400 1.1428em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 1.1428em/1.3em 'calibri', Arial, Helvetica, sans-serif;
   }
 
     .produit .bref .left > .forBroker {
@@ -1162,7 +1161,7 @@ margin-top: 36px;
 
 .produit .info .caracteristiques > .forBroker {
   border-bottom: 1px #cfcfcf solid;
-  font: 400 1.1428em/1.8125em 'Montserrat', Arial, Helvetica, sans-serif;
+  font: 400 1.1428em/1.8125em 'calibri', Arial, Helvetica, sans-serif;
   text-align: right;
 }
 
@@ -1217,7 +1216,7 @@ margin-top: 36px;
   .produit .options a {
     display: block;
     color: #231f20;
-    font: 400 1.1428em/2.6em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 1.1428em/2.6em 'calibri', Arial, Helvetica, sans-serif;
     padding: 0px 3.125%;
     box-sizing: border-box;
     background: url(../../../_assets/images/menu_images/btn-blanc-fleche.png) 97% 0.8em no-repeat;
@@ -1252,7 +1251,7 @@ margin-top: 36px;
 }
 
 .content .gpcTitle h1 {
-  font: 400 1.7142em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+  font: 400 1.7142em/1.3em 'calibri', Arial, Helvetica, sans-serif;
 }
 
 .libelle {
@@ -1278,7 +1277,7 @@ margin-top: 36px;
 }
 
   .vehiculeDisponible h2 {
-    font: 400 1.857em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 1.857em/1.2em 'calibri', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     color: #231f20;
     text-align: center;
@@ -1345,7 +1344,7 @@ margin-top: 36px;
 
     .cat .orange .titre {
       text-align: left;
-      font: 400 1.428em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+      font: 400 1.428em/1.3em 'calibri', Arial, Helvetica, sans-serif;
       text-transform: uppercase;
       position: absolute;
       left: 0px;
@@ -1360,7 +1359,7 @@ margin-top: 36px;
       position: absolute;
       right: 0px;
       bottom: 0px;
-      font: 400 1em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+      font: 400 1em/1.2em 'calibri', Arial, Helvetica, sans-serif;
       background: url(../../../_assets/images/menu_images/cat-sprite.png) left top no-repeat;
       box-sizing: content-box;
     }
@@ -1427,7 +1426,7 @@ margin-top: 36px;
     border-left: 16px #f37121 solid;
     text-transform: uppercase;
     padding-left: 7px;
-    font: 400 1.1428em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 1.1428em/1.3em 'calibri', Arial, Helvetica, sans-serif;
     color: #fff;
     position: absolute;
     z-index-left:0px;
@@ -1435,7 +1434,7 @@ margin-top: 36px;
   }
 
     .services span.titre strong {
-      font: 700 1.25em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+      font: 700 1.25em/1.3em 'calibri', Arial, Helvetica, sans-serif;
     }
 
 .wrapper_map {
@@ -1531,7 +1530,7 @@ min-height:200px;
 }
 
 .mapPanel .store .city {
-  font: 400 1.4285em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+  font: 400 1.4285em/1.3em 'calibri', Arial, Helvetica, sans-serif;
   margin-bottom: 5px;
   color: #000;
 }
@@ -1588,7 +1587,7 @@ min-height:200px;
 }
 
 .mapCanvas .store .titre {
-  font: 400 1.4285em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+  font: 400 1.4285em/1.3em 'calibri', Arial, Helvetica, sans-serif;
   margin: 10px 0px;
 }
 
@@ -1701,7 +1700,7 @@ DIV.store .web .title {
     display: inline;
     color: #fff;
     padding-top: 0px;
-    font: 400 1.8571em/1.1em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 1.8571em/1.1em 'calibri', Arial, Helvetica, sans-serif;
   }
 
   .location-search INPUT {
@@ -1998,7 +1997,7 @@ UL.store-list {
   }
 
     .concession .titre h3 {
-      font: 400 1.428em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+      font: 400 1.428em/1.2em 'calibri', Arial, Helvetica, sans-serif;
       color: #231f20;
       margin: 0px;
     }
@@ -2042,7 +2041,7 @@ UL.store-list {
   }
 
 .blocHeuresDouverture .heures th {
-  font: 400 1.1428em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+  font: 400 1.1428em/1.3em 'calibri', Arial, Helvetica, sans-serif;
   color: #231f20;
   border-bottom: 2px #cfcfcf solid;
   text-align: left;
@@ -2227,7 +2226,7 @@ UL.store-list {
   font-size: 1.3em;
   padding: 0px 6.5% 0px 6.5%;
   position: relative;
-  font: 400 1.2857em/2.1em 'Montserrat', Arial, Helvetica, sans-serif;
+  font: 400 1.2857em/2.1em 'calibri', Arial, Helvetica, sans-serif;
 }
 
   .GpcMenu li a.GpcMenuCategoryTitle:hover {
@@ -2561,7 +2560,7 @@ li[disabled] > a, a[disabled] {
     font-weight: 400;
     color: #f37121;
     margin: 0px 0px 0.5em 0px;
-    font: 400 1.428em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 1.428em/1.2em 'calibri', Arial, Helvetica, sans-serif;
   }
 
 .customField {
@@ -3350,7 +3349,7 @@ max-height: 510px }
   }
 
   .content h1 {
-    font: 400 1.8em/1.1em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 1.8em/1.1em 'calibri', Arial, Helvetica, sans-serif;
     margin: 0px 0px 0.4em 0px;
     color: #525252;
     text-transform: uppercase;
@@ -3366,25 +3365,25 @@ max-height: 510px }
   }
 
   .contenu h2 {
-    font: 700 1.857em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 700 1.857em/1.2em 'calibri', Arial, Helvetica, sans-serif;
     color: #f37121;
     margin: 0.9em 0px 0.3em 0px;
   }
 
   .contenu h3 {
-    font: 400 1.428em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 1.428em/1.2em 'calibri', Arial, Helvetica, sans-serif;
     color: #231f20;
     margin: 0.9em 0px 0.1em 0px;
   }
 
   .contenu h4 {
-    font: 400 1.1428em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 1.1428em/1.2em 'calibri', Arial, Helvetica, sans-serif;
     color: #231f20;
     margin: 0.9em 0px 0.1em 0px;
   }
 
   .contenu h5 {
-    font: 400 1em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 1em/1.2em 'calibri', Arial, Helvetica, sans-serif;
     color: #231f20;
     margin: 0.9em 0px 0.1em 0px;
   }
@@ -3441,7 +3440,7 @@ max-height: 510px }
 
     .itemProduit a .titre {
       margin-top: 0.2em;
-      font: 400 1.1428em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+      font: 400 1.1428em/1.3em 'calibri', Arial, Helvetica, sans-serif;
     }
 
   .produit .toggle {
@@ -3547,7 +3546,7 @@ max-height: 510px }
     .produit .options a {
       display: block;
       color: #231f20;
-      font: 400 1.1428em/2.6em 'Montserrat', Arial, Helvetica, sans-serif;
+      font: 400 1.1428em/2.6em 'calibri', Arial, Helvetica, sans-serif;
       padding: 0px 3.125%;
       box-sizing: border-box;
       background: url(../../../_assets/images/menu_images/btn-blanc-fleche-mobile.png) 97% 0.8em no-repeat;
@@ -3585,7 +3584,7 @@ max-height: 510px }
   }
 
   .content .gpcTitle h1 {
-    font: 400 2em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 2em/1.3em 'calibri', Arial, Helvetica, sans-serif;
   }
 
   .orderBy {
@@ -3795,7 +3794,7 @@ max-height: 510px }
 
   .GpcMenu li a {
     padding: 0px 3%;
-    font: 400 1.2857em/2.4em 'Montserrat', Arial, Helvetica, sans-serif;
+    font: 400 1.2857em/2.4em 'calibri', Arial, Helvetica, sans-serif;
   }
 
   .GpcMenu li ul {
@@ -3989,7 +3988,7 @@ max-height: 510px }
 
     .cat .orange .titre {
       text-align: center;
-      font: 400 1.428em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+      font: 400 1.428em/1.3em 'calibri', Arial, Helvetica, sans-serif;
       position: static;
       left: auto;
       padding-left: 0px;
@@ -4101,7 +4100,7 @@ max-height: 510px }
     }
 
       .concession .titre h3 {
-        font: 400 1.428em/1.2em 'Montserrat', Arial, Helvetica, sans-serif;
+        font: 400 1.428em/1.2em 'calibri', Arial, Helvetica, sans-serif;
         color: #231f20;
         margin: 0px;
       }
@@ -4208,7 +4207,7 @@ max-height: 510px }
       width: 92%;
       padding: 0px 4%;
       height: 2em;
-      font: 400 1em/2.14em 'Montserrat', Arial, Helvetica, sans-serif;
+      font: 400 1em/2.14em 'calibri', Arial, Helvetica, sans-serif;
       color: #4c4c4c;
       position: absolute;
       left: 0px;
@@ -4245,7 +4244,7 @@ max-height: 510px }
       .menuCss5 ul li a {
         display: block;
         border-top: 2px solid #1c1c1c;
-        font: 400 1em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+        font: 400 1em/1.3em 'calibri', Arial, Helvetica, sans-serif;
         color: #FFF;
         text-decoration: none;
         padding: 5.5% 3.953% 5.5% 3.953%;
@@ -4282,7 +4281,7 @@ max-height: 510px }
 
       .menuCss5 ul li div ul li a {
         border-top: 2px solid #2a2a2a;
-        font: 400 1em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+        font: 400 1em/1.3em 'calibri', Arial, Helvetica, sans-serif;
         padding-left: 13.2411%;
       }
       
@@ -4291,7 +4290,7 @@ max-height: 510px }
         width: 92%;
         padding: 0px 4%;
         height: 2em;
-        font: 400 1em/2.14em 'Montserrat', Arial, Helvetica, sans-serif;
+        font: 400 1em/2.14em 'calibri', Arial, Helvetica, sans-serif;
         color: #4c4c4c;
         position: absolute;
         left: 0px;
@@ -4319,7 +4318,7 @@ max-height: 510px }
     }
     
     .btnToggle a {
-        font: 700 1.8em/1.3em 'Montserrat', Arial, Helvetica, sans-serif;
+        font: 700 1.8em/1.3em 'calibri', Arial, Helvetica, sans-serif;
         padding: 0.8em 3%;
     }
     .entete {

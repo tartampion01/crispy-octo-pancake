@@ -34,6 +34,10 @@
 .tel_top {float:right;margin: 10px 10px 0px 0px;}
 .urgence_top {float:right;font-weight:700;margin: 20px 10px 0px 0px;}
 .facebook_top {float:right;margin: 10px 10px 0px 0px;}
+/* Mobile menu*/
+.mobilenav {
+    display: none;
+}
 
 /* total menu*/
 .bgnav {
@@ -88,7 +92,7 @@
 
     /*style de la sous liste*/
 
-    .menudestop li li a {
+.menudestop li li a {
         width: auto;
         min-width: 140px;
         padding: 0 20px;
@@ -103,7 +107,7 @@
     font-weight: 400;
 }
     /*Hover state for dropdown links*/
-    .menudestop li:hover ul a:hover {
+.menudestop li:hover ul a:hover {
         background: #f5f5f5;
         color: #000;
     }
@@ -125,7 +129,7 @@
     color: #000;
 }
 
-    .menudestop li li:hover ul a:hover {
+.menudestop li li:hover ul a:hover {
         background-color: #f5f5f5;
         color: rgb(213,94,36);
     }
@@ -138,18 +142,18 @@
     background-color: #f5f5f5;
 }
 
-    .menudestop li li li:hover ul a {
+.menudestop li li li:hover ul a {
         text-align: center;
         color: rgb(213,94,36);
     }
 
-    .menudestop li li li:hover ul img {
+.menudestop li li li:hover ul img {
         width: 100%;
         padding: 0px;
         margin: 0px;
     }
 
-    .menudestop li li li:hover ul h4 {
+.menudestop li li li:hover ul h4 {
         display: inline;
         margin: -5px 0px 0px 0px;
         text-align: center;
@@ -185,18 +189,18 @@
   .FU_right {position:relative;right:40px;}
 
 /*Footer*/
-    .bgmap {
+.bgmap {
         background-image: url(../../Resources/Images/background-map.jpg);
         background-position:center;
         background-repeat:no-repeat;
         background-size:cover;
     }
-    .container-footer{
+.container-footer{
         margin-left:auto;
         margin-right:auto;
         width:auto;
     }
-    .item-footer{
+.item-footer{
         min-width:100px;
         display:inline;
         line-height: 1.25px;
@@ -208,37 +212,37 @@
         height:200px;
         width:11.1%
     }
-    .item-footer h3{
+.item-footer h3{
         padding-bottom:20px;
     }
-    .item-footer h3 a{
+.item-footer h3 a{
         color:black;
         text-decoration:none;
         font-weight:400;
     }
-    .item-footer h3 a:hover{
+.item-footer h3 a:hover{
         text-decoration:underline;
         font-weight:700;
     }
-    .item-footer p{
+.item-footer p{
         padding-bottom:10px;
     }
-    .item-footer p a{
+.item-footer p a{
         color:white;
         text-decoration:none;
     }
-    .item-footer p:hover{
+.item-footer p:hover{
         font-weight:700;
     }
     
-    .topfooter {
+.topfooter {
         background-color: rgb(213,94,36);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         height: 100%;
     }
-    .blacklinefooter {
+.blacklinefooter {
         background-color: black;
         background-position: center;
         background-size: cover;
@@ -247,11 +251,11 @@
     }
 
 
-    .blackfootertop {
+.blackfootertop {
         padding-top: 20px;
         color: #fff;
     }
-    .blackfootertop a {
+.blackfootertop a {
         color: rgb(213,94,36);
     }
 .footerright {text-align: right;
@@ -259,7 +263,7 @@
 .footercenter {text-align: center;
 }
     /*section multiple product*/
-    .rectangle {
+.rectangle {
         height: 10px;
         width: auto;
         background-color: rgb(213,94,36);
@@ -286,13 +290,13 @@
 }
     /*section image*/
 
-    .image-box {
+.image-box {
         position: relative;
         margin: auto;
         overflow: hidden;
     }
 
-    .image-box img {
+.image-box img {
         max-width: 100%;
         transition: all 0.3s;
         display: block;
@@ -301,7 +305,7 @@
         transform: scale(1);
     }
     
-    .image-box:hover img {
+.image-box:hover img {
         transform: scale(1.1);
     }
 
@@ -449,7 +453,786 @@ text-decoration:underline;
     color: white;
     font-size: 20px;
 }
+@media (max-width: 1000px) {
+    .column {
+        float: left;
+        width: 50%;
+        padding: 5px 5px 0px 5px;
 
+    }
+    
+    .filter-item {
+        width: 50%;
+        float: left;
+        display: inline;
+        padding: 50px 20px 50px 20px;
+    }
+   
+    .item-footer {
+        min-width: 100px;
+        display: inline;
+        float: left;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 50px 0px 20px 0px;
+        text-align: center;
+        height: 150px;
+        width: 20%
+    }
+    .mobiletel {
+        display: block;
+        margin-top:12px;
+    }
+    .mediascss {
+        padding: 0px;
+        margin-top:0px;
+    }
+    .rightbutton {
+        float: none;
+        width:100%;
+    }
+    .buttonwebsite {
+        padding: 5px;
+        background-color: none;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        border: solid 1px rgb(213,94,36);
+        text-transform: uppercase;
+    }
+
+    .buttonwebsite:hover {
+        background-color: rgb(213,94,36);
+        -webkit-box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
+        box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
+        text-decoration: none;
+        color: white;
+    }
+    .subnavdescription a:hover {
+        color: rgb(213,94,36);
+        text-decoration: none;
+    }
+    /*menu mobile*/
+    .mobilenav {
+        display: block;
+    }
+
+        /* Common styles of menus */
+
+        .mobilenav .dl-menuwrapper {
+            width: 100%;
+            max-width: 300px;
+            float: left;
+            position: relative;
+            -webkit-perspective: 1000px;
+            perspective: 1000px;
+            -webkit-perspective-origin: 50% 200%;
+            perspective-origin: 50% 200%;
+        }
+
+            .mobilenav .dl-menuwrapper:first-child {
+                margin-right: 100px;
+            }
+
+            .mobilenav .dl-menuwrapper button {
+                background-color: #2A2A2A;
+                border: none;
+                width: 48px;
+                height: 32px;
+                text-indent: -900em;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+                outline: none;
+                margin-top: -5px;
+            }
+
+                .mobilenav .dl-menuwrapper button:hover,
+                .mobilenav .dl-menuwrapper button.dl-active,
+                .mobilenav .dl-menuwrapper ul {                 
+                    background-color: rgb(213,94,36);
+                }
+
+                .mobilenav .dl-menuwrapper button:after {
+                    content: '';
+                    position: absolute;
+                    width: 68%;
+                    height: 5px;
+                    background: #fff;
+                    top: 12px;
+                    left: 16%;
+                    box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
+                }
+
+            .mobilenav .dl-menuwrapper ul {
+                padding: 0;
+                list-style: none;
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+            }
+
+            .mobilenav .dl-menuwrapper li {
+                position: relative;
+                top: 0px;
+            }
+
+                .mobilenav .dl-menuwrapper li a {
+                    display: block;
+                    position: relative;
+                    padding: 15px 20px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 300;
+                    color: #fff;
+                    outline: none;
+                    text-decoration: none;
+                }
+
+        .mobilenav .no-touch .dl-menuwrapper li a:hover {
+            background: rgba(255,248,213,0.1);
+        }
+
+        .mobilenav .dl-menuwrapper li.dl-back > a {
+            padding-left: 30px;
+            background-color: #2A2A2A;
+        }
+
+        .mobilenav .dl-menuwrapper li.dl-back:after,
+        .mobilenav .dl-menuwrapper li > a:not(:only-child):after {
+            position: absolute;
+            top: 0;
+            line-height: 50px;
+            font-family: 'icomoon';
+            speak: none;
+            -webkit-font-smoothing: antialiased;
+            content: "\e000";
+        }
+
+        .mobilenav .dl-menuwrapper li.dl-back:after {
+            left: 10px;
+            color: rgba(212,204,198,0.3);
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .mobilenav .dl-menuwrapper li > a:after {
+            right: 10px;
+            color: rgba(0,0,0,0.15);
+        }
+
+        .mobilenav .dl-menuwrapper .dl-menu {
+            margin: 0px;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            pointer-events: none;
+            -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+            .mobilenav .dl-menuwrapper .dl-menu.dl-menu-toggle {
+                transition: all 0.3s ease;
+            }
+
+            .mobilenav .dl-menuwrapper .dl-menu.dl-menuopen {
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+
+        /* Hide the inner submenus */
+        .mobilenav .dl-menuwrapper li .dl-submenu {
+            display: none;
+        }
+
+        /* 
+When a submenu is openend, we will hide all li siblings.
+For that we give a class to the parent menu called "dl-subview".
+We also hide the submenu link. 
+The opened submenu will get the class "dl-subviewopen".
+All this is done for any sub-level being entered.
+*/
+        .mobilenav .dl-menu.dl-subview li,
+        .mobilenav .dl-menu.dl-subview li.dl-subviewopen > a,
+        .mobilenav .dl-menu.dl-subview li.dl-subview > a {
+            display: none;
+        }
+
+            .mobilenav .dl-menu.dl-subview li.dl-subview,
+            .mobilenav .dl-menu.dl-subview li.dl-subview .dl-submenu,
+            .mobilenav .dl-menu.dl-subview li.dl-subviewopen,
+            .mobilenav .dl-menu.dl-subview li.dl-subviewopen > .dl-submenu,
+            .mobilenav .dl-menu.dl-subview li.dl-subviewopen > .dl-submenu > li {
+                display: block;
+            }
+
+        /* Dynamically added submenu outside of the menu context */
+        .mobilenav .dl-menuwrapper > .dl-submenu {
+            position: absolute;
+            width: 100%;
+            top: 50px;
+            left: 0;
+            margin: 0;
+        }
+
+        /* Animation classes for moving out and in */
+
+        .mobilenav .dl-menu.dl-animate-out-4 {
+            -webkit-animation: MenuAnimOut4 0.4s ease;
+            animation: MenuAnimOut4 0.4s ease;
+        }
+
+
+
+    @-webkit-keyframes MenuAnimOut4 {
+        0% {
+        }
+
+        100% {
+            -webkit-transform: translateZ(-300px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes MenuAnimOut4 {
+        0% {
+        }
+
+        100% {
+            -webkit-transform: translateZ(-300px);
+            transform: translateZ(-300px);
+            opacity: 0;
+        }
+    }
+
+    .mobilenav .dl-menu.dl-animate-in-4 {
+        -webkit-animation: MenuAnimIn4 0.4s ease;
+        animation: MenuAnimIn4 0.4s ease;
+    }
+
+    @-webkit-keyframes MenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(-300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes MenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(-300px);
+            transform: translateZ(-300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+    .mobilenav .dl-menuwrapper > .dl-submenu.dl-animate-in-4 {
+        -webkit-animation: SubMenuAnimIn4 0.4s ease;
+        animation: SubMenuAnimIn4 0.4s ease;
+    }
+
+    @-webkit-keyframes SubMenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes SubMenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+
+    .mobilenav .dl-menuwrapper > .dl-submenu.dl-animate-out-4 {
+        -webkit-animation: SubMenuAnimOut4 0.4s ease;
+        animation: SubMenuAnimOut4 0.4s ease;
+    }
+
+    @-webkit-keyframes SubMenuAnimOut4 {
+        0% {
+            -webkit-transform: translateZ(0px);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translateZ(300px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes SubMenuAnimOut4 {
+        0% {
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+            opacity: 0;
+        }
+    }
+
+    /* No JS Fallback */
+    .mobilenav .no-js .dl-menuwrapper .dl-menu {
+        position: relative;
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    .mobilenav .no-js .dl-menuwrapper li .dl-submenu {
+        display: block;
+    }
+
+    .mobilenav .no-js .dl-menuwrapper li.dl-back {
+        display: none;
+    }
+
+    .mobilenav .no-js .dl-menuwrapper li > a:not(:only-child) {
+        background: rgba(0,0,0,0.1);
+    }
+
+        .mobilenav .no-js .dl-menuwrapper li > a:not(:only-child):after {
+            content: '';
+        }
+
+    /* Colors for demos */
+
+
+    /* Demo 4 */
+    .demo-4 .dl-menuwrapper button {
+        background: #90b912;
+    }
+
+        .demo-4 .dl-menuwrapper button:hover,
+        .demo-4 .dl-menuwrapper button.dl-active,
+        .demo-4 .dl-menuwrapper ul {
+            background: #79a002;
+        }
+    /*page details*/
+
+
+}
+@media handeled, (max-width: 769px) {   
+    .column {
+        float: left;
+        width: 50%;
+        padding: 5px 5px 0px 5px;
+    }
+    
+    .verticalline {
+        border-left: none;
+        padding-left: 25px;
+    }
+    .mobilefixedheader {
+        margin-top: 300px;
+    }
+    .filter-item {
+        width: 100%;
+        float: left;
+        display: inline;
+        padding: 50px 20px 50px 20px;
+    }
+    .mobiletel {
+        display: block;
+        margin-top: 12px;
+    }
+    .mediascss {
+        padding: 0px;
+        margin-top:0px;
+    }
+    .item-footer {
+        min-width: 100px;
+        display: inline;
+        float: left;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 50px 0px 20px 0px;
+        text-align: center;
+        height: 150px;
+        width: 33.3%
+    }
+.buttonwebsite {
+        padding: 5px;
+        background-color: none;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        border: solid 1px rgb(213,94,36);
+        text-transform: uppercase;
+    }
+
+.buttonwebsite:hover {
+            background-color: rgb(213,94,36);
+            -webkit-box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
+            box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
+            text-decoration: none;
+            color: white;
+        }
+    .subnavdescription a:hover {
+        color: rgb(213,94,36);
+        text-decoration: none;
+    }
+    .rightbutton {
+        float: none;
+        width:100%;
+    }
+    /*menu mobile*/
+    .mobilenav {
+        display:block;
+    }
+  
+    /* Common styles of menus */
+
+.mobilenav .dl-menuwrapper {
+
+        width: 100%;
+        max-width: 300px;
+        float: left;
+        position: relative;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+        -webkit-perspective-origin: 50% 200%;
+        perspective-origin: 50% 200%;
+    }
+
+.mobilenav .dl-menuwrapper:first-child {
+        margin-right: 100px;
+    }
+    .mobilenav .dl-menuwrapper button {
+        background-color: #2A2A2A;
+        border: none;
+        width: 48px;
+        height: 32px;
+        text-indent: -900em;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        margin-top: -5px;
+    }
+
+        .mobilenav .dl-menuwrapper button:hover,
+        .mobilenav .dl-menuwrapper button.dl-active,
+        .mobilenav .dl-menuwrapper ul {
+            background-color: rgb(213,94,36);        
+        }
+
+    .mobilenav .dl-menuwrapper button:after {
+        content: '';
+        position: absolute;
+        width: 68%;
+        height: 5px;
+        background: #fff;
+        top: 12px;
+        left: 16%;
+        box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
+    }
+
+    .mobilenav .dl-menuwrapper ul {
+        padding: 0;
+        list-style: none;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+
+    .mobilenav .dl-menuwrapper li {
+        position: relative;
+        top:0px;
+    }
+
+        .mobilenav .dl-menuwrapper li a {
+            display: block;
+            position: relative;
+            padding: 15px 20px;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 300;
+            color: #fff;
+            outline: none;
+            text-decoration:none;
+        }
+
+    .mobilenav .no-touch .dl-menuwrapper li a:hover {
+        background: rgba(255,248,213,0.1);
+    }
+
+    .mobilenav .dl-menuwrapper li.dl-back > a {
+        padding-left: 30px;
+        background-color: rgb(213,94,36);
+    }
+
+    .mobilenav .dl-menuwrapper li.dl-back:after,
+    .mobilenav .dl-menuwrapper li > a:not(:only-child):after {
+        position: absolute;
+        top: 0;
+        line-height: 50px;
+        font-family: 'icomoon';
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        content: "\e000";
+    }
+
+    .mobilenav .dl-menuwrapper li.dl-back:after {
+        left: 10px;
+        color: rgba(212,204,198,0.3);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .mobilenav .dl-menuwrapper li > a:after {
+        right: 10px;
+        color: rgba(0,0,0,0.15);
+    }
+
+    .mobilenav .dl-menuwrapper .dl-menu {
+        margin: 0px;
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+        .mobilenav .dl-menuwrapper .dl-menu.dl-menu-toggle {
+            transition: all 0.3s ease;
+        }
+
+        .mobilenav .dl-menuwrapper .dl-menu.dl-menuopen {
+            opacity: 1;
+            pointer-events: auto;
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+
+    /* Hide the inner submenus */
+    .mobilenav .dl-menuwrapper li .dl-submenu {
+        display: none;
+    }
+
+    /* 
+When a submenu is openend, we will hide all li siblings.
+For that we give a class to the parent menu called "dl-subview".
+We also hide the submenu link. 
+The opened submenu will get the class "dl-subviewopen".
+All this is done for any sub-level being entered.
+*/
+    .mobilenav .dl-menu.dl-subview li,
+    .mobilenav .dl-menu.dl-subview li.dl-subviewopen > a,
+    .mobilenav .dl-menu.dl-subview li.dl-subview > a {
+        display: none;
+    }
+
+        .mobilenav .dl-menu.dl-subview li.dl-subview,
+        .mobilenav .dl-menu.dl-subview li.dl-subview .dl-submenu,
+        .mobilenav .dl-menu.dl-subview li.dl-subviewopen,
+        .mobilenav .dl-menu.dl-subview li.dl-subviewopen > .dl-submenu,
+        .mobilenav .dl-menu.dl-subview li.dl-subviewopen > .dl-submenu > li {
+            display: block;
+        }
+
+    /* Dynamically added submenu outside of the menu context */
+    .mobilenav .dl-menuwrapper > .dl-submenu {
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        margin: 0;
+    }
+
+    /* Animation classes for moving out and in */
+
+    .mobilenav .dl-menu.dl-animate-out-4 {
+        -webkit-animation: MenuAnimOut4 0.4s ease;
+        animation: MenuAnimOut4 0.4s ease;
+    }
+ 
+
+
+    @-webkit-keyframes MenuAnimOut4 {
+        0% {
+        }
+
+        100% {
+            -webkit-transform: translateZ(-300px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes MenuAnimOut4 {
+        0% {
+        }
+
+        100% {
+            -webkit-transform: translateZ(-300px);
+            transform: translateZ(-300px);
+            opacity: 0;
+        }
+    }
+
+    .mobilenav .dl-menu.dl-animate-in-4 {
+        -webkit-animation: MenuAnimIn4 0.4s ease;
+        animation: MenuAnimIn4 0.4s ease;
+    }
+
+    @-webkit-keyframes MenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(-300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes MenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(-300px);
+            transform: translateZ(-300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+    .mobilenav .dl-menuwrapper > .dl-submenu.dl-animate-in-4 {
+        -webkit-animation: SubMenuAnimIn4 0.4s ease;
+        animation: SubMenuAnimIn4 0.4s ease;
+    }
+
+    @-webkit-keyframes SubMenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes SubMenuAnimIn4 {
+        0% {
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+    }
+
+
+    .mobilenav .dl-menuwrapper > .dl-submenu.dl-animate-out-4 {
+        -webkit-animation: SubMenuAnimOut4 0.4s ease;
+        animation: SubMenuAnimOut4 0.4s ease;
+    }
+
+    @-webkit-keyframes SubMenuAnimOut4 {
+        0% {
+            -webkit-transform: translateZ(0px);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translateZ(300px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes SubMenuAnimOut4 {
+        0% {
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+            opacity: 0;
+        }
+    }
+
+    /* No JS Fallback */
+    .mobilenav .no-js .dl-menuwrapper .dl-menu {
+        position: relative;
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    .mobilenav .no-js .dl-menuwrapper li .dl-submenu {
+        display: block;
+    }
+
+    .mobilenav .no-js .dl-menuwrapper li.dl-back {
+        display: none;
+    }
+
+    .mobilenav .no-js .dl-menuwrapper li > a:not(:only-child) {
+        background: rgba(0,0,0,0.1);
+    }
+
+        .mobilenav .no-js .dl-menuwrapper li > a:not(:only-child):after {
+            content: '';
+        }
+
+    /* Colors for demos */
+
+
+    /* Demo 4 */
+    .demo-4 .dl-menuwrapper button {
+        background: #90b912;
+    }
+
+        .demo-4 .dl-menuwrapper button:hover,
+        .demo-4 .dl-menuwrapper button.dl-active,
+        .demo-4 .dl-menuwrapper ul {
+            background: #79a002;
+        }
+}
 
 
 

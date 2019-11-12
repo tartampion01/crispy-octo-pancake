@@ -103,10 +103,10 @@
     <!--multi-item special product-->
     <div class="margesection"></div>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
-    <!--Map-->
+    <!--Map
     <div>
         <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1KQIM62X8067jYvP56CJLimUsJORkPfoH" width="100%" height="400"></iframe>
-    </div>
+    </div>-->
     </form>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </body>
