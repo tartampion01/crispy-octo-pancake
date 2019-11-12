@@ -3,13 +3,13 @@
 <script src="../_assets/js/camions-rest.js" type="text/javascript"></script>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="grid grid-pad">
         <div class="content search-result">
-            <div class="shrink">
+            <div class="">
                 <div class="titrepage">
                     <h1>Camions neufs International</h1>
                 </div>
-                <div class="contenu contenu2">
+                <div class="contenu contenu2 ">
                     <div class="more-info">
                         International compte le plus grand réseau de concessionnaires de camions lourds, moyens et services sévères en Amérique du Nord. Réseau Dynamique, fier membre de la famille International, offre une large sélection de camions lourds adaptés aux différents types d'industries et d'usages.
                     </div>
