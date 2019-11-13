@@ -28,7 +28,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
             <nav class="bgnav hide-on-mobile" id="navbar">
                 <div class="menudestop grid grid-pad">
                     <ul>
-                   <li id="logo_sticky" class="addlogo"><a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>" target="_self"><img src="/../_assets/images/wx3/logo-inter.png" alt="Réseau Dynamique" /></a></li>
+                   <li id="logo_sticky" class="addlogo"><a href="<?php echo RD_PageLink::getHref(folder::Root,page::Accueil); ?>" target="_self"><img src="/../_assets/images/wx3/logo-inter.png" alt="Réseau Dynamique" /></a></li>
                         <li class="">
                             <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">Camions</a>
                             <ul class="hidden">
