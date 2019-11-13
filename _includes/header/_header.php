@@ -116,9 +116,9 @@
                 ]
             });
                        
-            $('#dl-menu').dlmenu({
+           $('#dl-menu').dlmenu({
                 animationClasses: { classin: 'dl-animate-in-4', classout: 'dl-animate-out-4' }
-            });
+           });
 
 
         });
