@@ -1291,7 +1291,7 @@ margin-top: 36px;
 }
 
   .formulaire input[type="text"], .formulaire select {
-    width: 100% !important;
+    width: 90% !important; /*changement de 100% a 90 pascal 13 nov*/
   }
 
 .cat {
