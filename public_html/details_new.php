@@ -1,16 +1,63 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        init();
+    });
+
+
+    function init(){
+        var vm = new Vue({
+            el: '#detail',
+            data: {
+                message: 'Hello Vue!',
+                item: {}
+            },
+            mounted: function() {
+                this.message = "Ho !";
+                try {
+
+                    this.readData();
+
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            },
+            methods: {
+                async readData() {
+
+                    let id = (window.location.search.match(new RegExp('[?&]' + 'id' + '=([^&]+)')) || [,null])[1];
+                    if (id) {
+
+                        // fetch('http://reseaudynamique.com/api/singleNewTruck_.php?id=NjIyNQ==')
+                        // .then(response => response.json())
+                        // .then(data => { this.item = data; });
+
+                        const response = await fetch(
+                            'http://reseaudynamique.com/api/singleNewTruck_.php?id=' + id)
+                        const data = await response.json()
+                        this.item = data;
+                        console.log(data);
+                    }
+                }
+            }
+        })
+    }
+       
+
+</script>
 
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-        <div class="content produit">
+        <div id="detail" class="content produit">
             <div class="grid grid-pad">
                 <!--top-->
                 <section class="">
                     <div class="col-1-1">
                         <div class="topdivision topnavdetail col-1-1">
                             <h2 class="title mobile-col-1-1" style="margin-top:5px;">
-                                INTERNATIONAL - HV513 SFA - 6 X 4 <!--Titre  de camion-->
+                                <span v-html="item.beauTitre"></span> <!--Titre  de camion-->
                             </h2>        
                             <a name="hyperlien" onclick="window.print();" href="javascript:void(0);" target="_self"><img class="" style="display:inline-block; float:right; padding:5px;" src="_assets/images/wx3/printbtn.png" alt="print logo" /></a>
                             <a class="orange rightbutton buttonwebsite mobile-col-1-1" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
@@ -57,53 +104,53 @@
                                 <h2 class="col-1-1">Spécifications :</h2>
                                 <div class="col-1-2 topdivision mobile-col-1-2">
                                     <!--marque-->
-                                    <div class="col-1-1 mobile-col-1-1">
+                                    <div class="col-1-1 mobile-col-1-1" v-if="item.marque">
                                         <img class="logoleft" src="_assets/images/wx3/marquelogo.png" alt="" />
                                         <div class="topdivision15">
                                             <h3 class="infotitle">Marque :</h3>
-                                            <p class="infotext">International<?php echo $camion->marque ?></p>
+                                            <p class="infotext">{{ item.marque }}</p>
                                         </div>
                                     </div>
                                     <!--modele-->
-                                    <div class="col-1-1 topdivision15 mobile-col-1-1">
+                                    <div class="col-1-1 topdivision15 mobile-col-1-1" v-if="item.modele">
                                         <img class="logoleft" src="_assets/images/wx3/modeledetails.png" alt="" />
                                         <div>
                                             <h3 class="infotitle">Modèle  :</h3>
-                                            <p class="infotext"> HV513 SFA <?php echo $camion->modele ?></p>
+                                            <p class="infotext">{{ item.modele }}</p>
                                         </div>
                                     </div>
                                     <!--no serie-->
-                                    <div class="col-1-1 topdivision15 mobile-col-1-1">
+                                    <div class="col-1-1 topdivision15 mobile-col-1-1" v-if="item.noSerie">
                                         <img class="logoleft" src="_assets/images/wx3/noseriedetails.png" alt="" />
                                         <div>
                                             <h3 class="infotitle">No série  :</h3>
-                                            <p class="infotext">KH434695<?php echo $camion->noSerie ?></p>
+                                            <p class="infotext">{{ item.noSerie }}</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-1-2 topdivision mobile-col-1-2">
                                     <!--no inventaire-->
-                                    <div class="col-1-1 mobile-col-1-1">
+                                    <div class="col-1-1 mobile-col-1-1" v-if="item.noInventaire">
                                         <img class="logoleft" src="_assets/images/wx3/noinventairedetails.png" alt="" />
                                         <div class="topdivision15">
                                             <h3 class="infotitle">No d'inventaire  :</h3>
-                                            <p class="infotext">3814<?php echo $camion->noInventaire ?></p>
+                                            <p class="infotext">{{ item.noInventaire }}</p>
                                         </div>
                                     </div>
                                     <!--annee-->
-                                    <div class="col-1-1 topdivision15 mobile-col-1-1">
+                                    <div class="col-1-1 topdivision15 mobile-col-1-1" v-if="item.annee">
                                         <img class="logoleft" src="_assets/images/wx3/anneedetails.png" alt="" />
                                         <div>
                                             <h3 class="infotitle">Année  :</h3>
-                                            <p class="infotext">2019<?php echo $camion->annee ?></p>
+                                            <p class="infotext">{{ item.annee }}</p>
                                         </div>
                                     </div>
                                     <!--kilometrage-->
-                                    <div class="col-1-1 topdivision15 mobile-col-1-1" style="display:none;">
+                                    <div class="col-1-1 topdivision15 mobile-col-1-1" v-if="item.intMillage">
                                         <img class="logoleft" src="_assets/images/wx3/kmdetails.png" alt="" />
                                         <div>
                                             <h3 class="infotitle">Kilométrage  :</h3>
-                                            <p class="infotext">Placer un ID pour la BD</p>
+                                            <p class="infotext">{{ item.intMillage }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +160,7 @@
                                 <h2 class="mobile-col-1-1">Caractéristique</h2>
                                 <div class="col-1-1 topdivision">
                                     <!--Empattement-->
-                                    <div class="rowdetails" id="fld_empattement">
+                                    <div class="rowdetails" id="fld_empattement" v-if="item.empattement">
                                         <div class="infotitle column1details">
                                             Empattement
                                         </div>
@@ -121,11 +168,11 @@
 
                                         </div>
                                         <div class="column3details">
-                                            283
+                                            {{ item.empattement }}
                                         </div>
                                     </div>
                                     <!--Essieu avant-->
-                                    <div class="rowdetails" id="fld_essieu_avant">
+                                    <div class="rowdetails" id="fld_essieu_avant" v-if="item.essieu_avant">
                                         <div class="infotitle column1details">
                                             Essieu avant
                                         </div>
@@ -133,11 +180,11 @@
 
                                         </div>
                                         <div class="column3details">
-                                            283
+                                            {{ item.essieu_avant }}
                                         </div>
                                     </div>
                                     <!--Essieu arriere-->
-                                    <div class="rowdetails" id="fld_essieu_arriere">
+                                    <div class="rowdetails" id="fld_essieu_arriere" v-if="item.essieu_arriere">
                                         <div class="infotitle column1details">
                                             Essieu arrière
                                         </div>
@@ -145,11 +192,11 @@
 
                                         </div>
                                         <div class="column3details">
-                                            283
+                                            {{ item.essieu_arriere }}
                                         </div>
                                     </div>
                                     <!--Suspension arrière-->
-                                    <div class="rowdetails" id="fld_rearsuspension">
+                                    <div class="rowdetails" id="fld_rearsuspension" v-if="item.rearsuspension">
                                         <div class="infotitle column1details">
                                             Suspension arrière
                                         </div>
@@ -157,11 +204,11 @@
                                            
                                        </div>
                                        <div class="column3details">
-                                           allison 3000 rds
+                                            {{ item.rearsuspension }}
                                        </div>
                                     </div>
                                     <!--Transmission-->
-                                    <div class="rowdetails" id="fld_transmission">
+                                    <div class="rowdetails" id="fld_transmission" v-if="item.transmission">
                                         <div class="infotitle column1details">
                                            Transmission
                                         </div>
@@ -169,11 +216,11 @@
                                            <img class="hide-on-mobile" src="_assets/images/wx3/tansmissiondetails.png" alt="" />
                                        </div>
                                        <div class="column3details">
-                                           allison 3000 rds
+                                            {{ item.transmission }}
                                        </div>
                                     </div>
                                     <!--Moteur-->
-                                    <div class="rowdetails" id="fld_moteur">
+                                    <div class="rowdetails" id="fld_moteur" v-if="item.moteur">
                                         <div class="infotitle column1details">
                                             Moteur
                                         </div>
@@ -181,11 +228,11 @@
 
                                         </div>
                                         <div class="column3details">
-                                            A26
+                                            {{ item.moteur }}
                                         </div>
                                     </div>
                                     <!--HP-->
-                                    <div class="rowdetails" id="fld_hp">
+                                    <div class="rowdetails" id="fld_hp" v-if="item.hp">
                                         <div class="infotitle column1details">
                                             HP
                                         </div>
@@ -193,11 +240,11 @@
 
                                         </div>
                                         <div class="column3details">
-                                            475
+                                            {{ item.hp }}
                                         </div>
                                     </div>
                                     <!--Ratio essieu arrière-->
-                                    <div class="rowdetails" id="fld_ratio_ar">
+                                    <div class="rowdetails" id="fld_ratio_ar" v-if="item.ratio_ar">
                                         <div class="infotitle column1details">
                                             Ratio essieu arrière
                                         </div>
@@ -205,11 +252,11 @@
 
                                         </div>
                                         <div class="column3details">
-                                            5.29
+                                            {{ item.ratio_ar }}
                                         </div>
                                     </div>
                                     <!--Dimension pneu-->
-                                    <div class="rowdetails" id="fld_pneu_ar_dim" id="fld_pneu_av_dim">
+                                    <div class="rowdetails" id="fld_pneu_ar_dim" id="fld_pneu_av_dim" v-if="item.pneu_ar_dim" v-if="item.pneu_av_dim">
                                         <div class="infotitle column1details">
                                             Dimension pneu
                                         </div>
@@ -217,11 +264,11 @@
 
                                         </div>
                                         <div class="column3details">
-                                            5.29
+                                            {{ item.pneu_ar_dim }}  {{ item.pneu_av_dim }}
                                         </div>
                                     </div>
                                     <!--Wheel-->
-                                    <div class="rowdetails" id="fld_wheel">
+                                    <div class="rowdetails" id="fld_wheel" v-if="item.wheel">
                                         <div class="infotitle column1details">
                                             Roue
                                         </div>
@@ -229,11 +276,11 @@
 
                                         </div>
                                         <div class="column3details">
-                                            5.29
+                                            {{ item.wheel }} 
                                         </div>
                                     </div>
                                     <!--freins-->
-                                    <div class="rowdetails" id="fld_freins">
+                                    <div class="rowdetails" id="fld_freins" v-if="item.freins">
                                         <div class="infotitle column1details">
                                             freins
                                         </div>
@@ -241,11 +288,11 @@
                                             <img class="hide-on-mobile" src="_assets/images/wx3/freinsdetails.png" alt="" />
                                         </div>
                                         <div class="column3details">
-                                            air
+                                            {{ item.freins }} 
                                         </div>
                                     </div>
                                     <!--color-->
-                                    <div class="rowdetails" id="fld_color">
+                                    <div class="rowdetails" id="fld_color" v-if="item.color">
                                         <div class="infotitle column1details">
                                             Couleur
                                         </div>
@@ -253,11 +300,11 @@
                                             
                                         </div>
                                         <div class="column3details">
-                                        9219 neige
+                                            {{ item.color }} 
                                         </div>
                                     </div>
                                     <!--équipement-->
-                                    <div class="rowdetails" id="fld_equipements">
+                                    <div class="rowdetails" id="fld_equipements" v-if="item.equipment">
                                         <div class="infotitle column1details">
                                             Équipement
                                         </div>
@@ -265,7 +312,7 @@
                                             <img class="hide-on-mobile" src="_assets/images/wx3/equipementdetails.png" alt="" />
                                         </div>
                                         <div class="column3details">
-                                            BOITE, TRANSIT, 28', N/S : 1441217 REEFER, CARRIER, SUPRA, N/S: 000000PFV91371233 MTE CHARGE, MAXON, GPTLR-44, N/S: 0613253624  Bte 28' , Reefer & Mte-Chg & rampe
+                                            {{ item.equipment }} 
                                         </div>
                                     </div>
                                 </div>
@@ -282,7 +329,7 @@
                                 </div>
                                 <div class="col-1-1"> <?php echo $camion->pictures[0]; ?>
                                     <div class="rowphoto topdivision50">
-                                        <div class="columnphoto">
+                                        <div class="columnphoto">                                           
                                             <img class="imgdetailsleft" id="firstimg" src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">

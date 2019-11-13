@@ -57,6 +57,7 @@
     <script type='text/javascript' src='../../_assets/js/modernizr.custom.js'></script>
     <script type='text/javascript' src='../../_assets/js/jquery.dlmenu.js'></script>
     <script type='text/javascript' src='../../_assets/js/slick.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <!--** integration js
     <script type='text/javascript' src='../../_assets/js/jquery-1.12.4.min.js'></script>  
@@ -119,7 +120,6 @@
            $('#dl-menu').dlmenu({
                 animationClasses: { classin: 'dl-animate-in-4', classout: 'dl-animate-out-4' }
            });
-
 
         });
 
