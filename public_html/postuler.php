@@ -156,8 +156,8 @@
                                 }
                             }
                         ?>                        
-                        <div class="formulaire" style="visibility: <?php echo $divVisibility; ?>">
-                        <div class="col-1-2 mobile-1-1">
+                        <div class="" style="visibility: <?php echo $divVisibility; ?>">
+                        <div class="col-1-2 mobile-1-1 formulaire">
                             <h4>Vos informations</h4>
                             <input type="hidden" id="hidLienEncode" name="hidLienEncode" value="<?php echo $emploi->lienEncode; ?>" />
                             <p><font size="1">Les champs marqués d'un astérisque (*) sont obligatoires.</font></p>
@@ -201,7 +201,7 @@
                                 <textarea name="tbCommentaire" name="tbCommentaire" rows="2" cols="50" style="width: 450px;height: 120px;"><?php echo $comm;?></textarea>
                             </h5>
                             <h5>Succursales qui vous intéressent :</h5>
-                            <label class="small">(Utilisez CTRL+click pour en sélectionner plusieurs)</label>
+                            <label class="small">(Utilisez CTRL+click pour en sélectionner plusieurs)</label><br />
                             <?php echo RD_Utils::GetListBoxSuccursalesCarrieres(); ?>                            
                             <p>
                                 <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" class="">
