@@ -132,12 +132,12 @@
             }
         }; 
         $(document).ready(function () {
-        var firstimg = document.getElementById("firstimg").src;
-        var expandImg = document.getElementById("expandedImg");
-        var imgText = document.getElementById("imgtext");
-        expandImg.src = firstimg;
-        imgText.innerHTML = imgs.alt;
-        expandImg.parentElement.style.display = "block";
+            var firstimg = document.getElementById("firstimg").src;
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = firstimg;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
         });
 
         function imagesdetails(imgs) {

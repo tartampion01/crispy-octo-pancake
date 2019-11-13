@@ -3,9 +3,8 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
-        init();
+        init();      
     });
-
 
     function init(){
         var vm = new Vue({
@@ -29,11 +28,6 @@
 
                     let id = (window.location.search.match(new RegExp('[?&]' + 'id' + '=([^&]+)')) || [,null])[1];
                     if (id) {
-
-                        // fetch('http://reseaudynamique.com/api/singleNewTruck_.php?id=NjIyNQ==')
-                        // .then(response => response.json())
-                        // .then(data => { this.item = data; });
-
                         const response = await fetch(
                             'http://reseaudynamique.com/api/singleNewTruck_.php?id=' + id)
                         const data = await response.json()
@@ -49,7 +43,7 @@
 </script>
 
 <body class="body"><?php RD_Utils::write_Gtag() ?>
-    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
+<form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
         <div id="detail" class="content produit">
             <div class="grid grid-pad">
                 <!--top-->
@@ -365,7 +359,7 @@
             </div>
             <!--multi-item special product-->
             <div class="margesection"></div>
-            <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
+            
             <!--
             <div class="contenu">
                     <div class="left">
@@ -506,8 +500,9 @@
                     
                 </div>
             </div>-->
-	</div>
-</form>
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
+	    </div>
+    </form>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </body>
 </html>
