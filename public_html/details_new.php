@@ -356,10 +356,7 @@
                         </div>
                     </div>
                 </section>
-            </div>
-            <!--multi-item special product-->
-            <div class="margesection"></div>
-            
+            </div>                      
             <!--
             <div class="contenu">
                     <div class="left">
@@ -502,6 +499,8 @@
             </div>-->
 	    </div>
     </form>
+    <!--multi-item special product-->
+    <div class="margesection"></div>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </body>
