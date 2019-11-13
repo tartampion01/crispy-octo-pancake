@@ -1,14 +1,14 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="grid grid-pad">
         <div class="content search-result">
-            <div class="shrink">
+            <div class="">
                 <div class="titrepage">
                     <h1>PIÈCES ET ACCESSOIRES</h1>
                 </div>
                 <div class="contenu">
-                    <div class="contenu2">
+                    <div class="contenu2 col-1-1">
                         <p>Votre camion est aussi important pour nous que pour vous. Ainsi, chaque fois que vous vous rendez dans l'un des points de service de Réseau Dynamique vous êtes reçus par des spécialistes hautement formés ayant à cœur le succès de vos affaires.</p>
                         <h2>Service d'entretien et de réparation</h2>
                         <p>Que ce soit pour un entretien, une réparation, la carrosserie ou l'esthétique, les départements de pièces et accessoires ont l'expertise et l'équipement technologique pour les camions International et toutes autres marques de camions lourds et tracteurs de terminal.</p>

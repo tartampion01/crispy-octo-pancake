@@ -385,6 +385,7 @@ if($section == 'camion-neufs' || $section == 'camions-occasion' || $section == '
 }
 ?>
 <script>
+    //menu sticky bande noir avec le logo hiden et visible + facebook et urgence routiere
 window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("navbar");

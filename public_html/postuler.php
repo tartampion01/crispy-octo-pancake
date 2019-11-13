@@ -157,6 +157,7 @@
                             }
                         ?>                        
                         <div class="formulaire" style="visibility: <?php echo $divVisibility; ?>">
+                        <div class="col-1-2 mobile-1-1">
                             <h4>Vos informations</h4>
                             <input type="hidden" id="hidLienEncode" name="hidLienEncode" value="<?php echo $emploi->lienEncode; ?>" />
                             <p><font size="1">Les champs marqués d'un astérisque (*) sont obligatoires.</font></p>
@@ -194,7 +195,8 @@
                                 Lettre de présentation
                             </label>&nbsp;
                             <label id="cvPresName" name="cvPresName"></label>
-                            
+                            </div>
+                            <div class="col-1-2 mobile-1-1">
                             <h5>Quelques mots sur vous :<br>
                                 <textarea name="tbCommentaire" name="tbCommentaire" rows="2" cols="50" style="width: 450px;height: 120px;"><?php echo $comm;?></textarea>
                             </h5>
@@ -204,6 +206,7 @@
                             <p>
                                 <input type="submit" name="btnSendMail" id="btnSendMail" value="Envoyer" class="">
                             </p>
+                            </div>
                         </div>
                         <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres); ?>">Retour aux offres</a>
                     </div>

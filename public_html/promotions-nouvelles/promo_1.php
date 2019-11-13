@@ -11,7 +11,7 @@
     <form role="form" method="POST" action="/promotions-nouvelles/<?php echo $NOMPAGE; ?>">
     <div class="">
         <div class="content search-result">
-            <div class="shrink">
+            <div class="">
                 <div class="titrepage">
                     <h1>Promotions</h1>
                 </div>

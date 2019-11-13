@@ -9,15 +9,15 @@
 </style>    
 <body class="body"><?php RD_Utils::write_Gtag() ?>    
     <form role="form" method="POST" action="/promotions-nouvelles/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="wrap">
         <div class="content search-result">
-            <div class="shrink">
+            <div class="grid grid-pad">
                 <div class="titrepage">
                     <h1>Promotions</h1>
                 </div>
                 <div class="contenu">
                     <div class="contenu2">
-                        <div class="contenu2">
+                        <div class="contenu2 col-1-1">
                             <table>
                                 <tr>
                                     <td>
