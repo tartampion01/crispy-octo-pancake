@@ -1,14 +1,14 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="grid grid-pad">
         <div class="content">
-            <div class="shrink">
+            <div class="">
                 <div class="titrepage">
                     <h1>LOCATION DE CAMIONS LOURDS</h1>
                 </div>
                 <div class="contenu">
-                    <div class="contenu2">
+                    <div class="contenu2 col-1-1">
                         <p>Réseau Dynamique offre un service de location de véhicules variés, neufs et usagés louables à court ou à long terme par l'intermédiaire de la Fiducie Location Pinard. En plus de vous conseiller dans le choix d'un camion lourd International ou Ottawa Kalmar, les 6 points de services répartis sur le territoire québécois mettent à votre disposition de nombreux services afin de vous aider à perpétrer vos activités en flux continu.</p>
                         <h2>Location court terme</h2>
                         <p>Le service de location court terme de Réseau Dynamique répond aux besoins ponctuels d’une clientèle diversifiée. Toute entreprise est susceptible d’affronter des situations inattendues pouvant nécessiter l’ajout temporaire de véhicules : achalandage accru, surplus de travail, besoins saisonniers ou véhicules en panne ne constituent que quelques exemples.</p>
