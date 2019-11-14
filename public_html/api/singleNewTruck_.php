@@ -1,5 +1,6 @@
 <?php
 header('Content-Type: application/json');
+header("Access-Control-Allow-Origin: *");
 
     if( isset($_GET["id"])){
         require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/commonIncludes.php');
