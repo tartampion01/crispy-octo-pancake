@@ -478,7 +478,7 @@ text-decoration:underline;
     color: white;
     font-size: 20px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .column {
         float: left;
         width: 50%;
