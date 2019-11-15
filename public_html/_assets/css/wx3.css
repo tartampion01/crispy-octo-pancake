@@ -210,7 +210,7 @@
         margin:50px 0px 20px 0px;
         text-align:center;
         height:200px;
-        width:11.1%
+        width:14.2%;
     }
 .item-footer h3{
         padding-bottom:20px;
@@ -268,7 +268,12 @@
         width: auto;
         background-color: rgb(213,94,36);
     }
-
+.titlesection{
+    margin-top: 50px;
+}
+.sectionservices {
+    margin-top: 50px;
+}
 /*Page accueil*/
     /*section logo*/
 .logo {
@@ -311,7 +316,7 @@
 
     /*3 services*/
 .bg3serviceleft {
-    background-image: url(../../_assets/images/batisse/batisse-centre-du-camion-beaudoin.jpg);
+    background-image: url(../../_assets/images/menu_images/accueil-succursales.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -325,11 +330,21 @@
     min-height: 300px;
 }
 .bg3servicerigth{
-    background-image: url(../../_assets/images/batisse/batisse-centre-du-camion-beaudoin.jpg);
+    background-image: url(../../_assets/images/menu_images/accueil-urgence.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 300px;
+}
+.titleservice{
+    padding: 200px 0px 0px 20px;
+    text-decoration: none;
+    color: rgb(213,94,36);
+    font-weight: 700;
+}
+.titleservice:hover{
+    color: #fff;
+    text-decoration: none;
 }
 /*Page Details*/
 
@@ -502,7 +517,7 @@ text-decoration:underline;
         margin: 50px 0px 20px 0px;
         text-align: center;
         height: 150px;
-        width: 20%
+        width: 25%
     }
     .mobiletel {
         display: block;

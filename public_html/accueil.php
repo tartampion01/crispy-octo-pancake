@@ -69,27 +69,26 @@
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_build_truck.php'); ?>  
 
     <!--new 3 services-->
-    <section>
-        <div class="grid">
+    <section class="grid">
+        <div class="col-1-1 sectionservices">
             <div class="col-1-3 mobile-col-1-1">
                 <div class="bg3serviceleft">
-                    <a class="grid-pad" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre) ?>" target="_self">
-                        <h2>Localisez</h2>
-                        <p>Nos Succursales</p>
+                    <a style="text-decoration:none;" class="grid-pad" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre) ?>" target="_self">
+                        <h2 class="titleservice">Localisez une succursales</h2>
                     </a>
                 </div>
             </div>
             <div class="col-1-3 mobile-col-1-1">
                 <div class="bg3servicecenter">  
-                    <a class="grid-pad" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires) ?>" target="_self">
-                        <h2>Service de pièces</h2>
+                    <a style="text-decoration:none;" class="grid-pad" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires) ?>" target="_self">
+                        <h2 class="titleservice">Service de pièces</h2>
                     </a>
                 </div>
             </div>
             <div class="col-1-3 mobile-col-1-1">
                 <div class="bg3servicerigth">
-                    <a class="grid-pad" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H) ?>" target="_self">
-                        <h2>Urgence routière 24h</h2>
+                    <a style="text-decoration:none;" class="grid-pad" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H) ?>" target="_self">
+                        <h2 class="titleservice">Urgence routière 24h</h2>
                     </a>
                 </div>
             </div>
