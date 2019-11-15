@@ -131,22 +131,6 @@
                 x.style.display = "block";
             }
         }; 
-        $(document).ready(function () {
-            var firstimg = document.getElementById("firstimg").src;
-            var expandImg = document.getElementById("expandedImg");
-            var imgText = document.getElementById("imgtext");
-            expandImg.src = firstimg;
-            imgText.innerHTML = imgs.alt;
-            expandImg.parentElement.style.display = "block";
-        });
-
-        function imagesdetails(imgs) {
-            var expandImg = document.getElementById("expandedImg");
-            var imgText = document.getElementById("imgtext");
-            expandImg.src = imgs.src;
-            imgText.innerHTML = imgs.alt;
-            expandImg.parentElement.style.display = "block";
-        }     
     </script>
     
     <!-- A CHANGER LORS DE L'IMPLANTATION DU RECAPTCHA v3 sur tout le site -->

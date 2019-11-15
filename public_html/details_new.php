@@ -10,6 +10,7 @@
         var vm = new Vue({
             el: '#detail',
             data: {
+                MainPicture: {src:null, alt:""},
                 item: {}
             },
             mounted: function() {
@@ -22,6 +23,10 @@
                 }
             },
             methods: {
+                setPicture(index){
+
+                    this.MainPicture = {src:this.item.pictures[index],alt:"photo camion"}
+                },                
                 async readData() {
 
                     let api = 'http://reseaudynamique.com/api/singleUsedTruck_.php';
@@ -35,14 +40,18 @@
                         const response = await fetch(api + '?id=' + id)
                         const data = await response.json()
                         this.item = data;
-                        console.log(data);
+                        
+                        this.setPicture(0);
                     }
                 }
             }
         })
+    
+    
+    
+    
+    
     }
-       
-
 </script>
 
 <body class="body"><?php RD_Utils::write_Gtag() ?>
@@ -88,13 +97,10 @@
                             <!--section 1-->
                             <div class="col-1-1 mobile-col-1-1">
                                 <h2 class="mobile-col-1-1">Description :</h2>
-                                <p class="col-1-1 mobile-col-1-1 Descriptionp">
+                                <p v-if="item.marque" class="col-1-1 mobile-col-1-1 Descriptionp">
                                     "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                                     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                                    consectetur.  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-                                    dolor sit amet, consectetur. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                                    eos qui ratione voluptatem sequi nesciunt
-                                </p>
+                                    consectetur. </p>
                             </div>
                             <!--section 2-->
                             <div class="col-1-1 mobile-col-1-1 margesection">
@@ -319,39 +325,20 @@
                         <div class="col-5-12 paddingleft mobile-col-1-1">
                             <div class="col-1-1">
                                 <div class="col-1-1">
-                                    <div class="containerphoto">
-                                        <img id="expandedImg" style="width:100%">
-                                        <div id="imgtext"></div>
+                                    <div>
+                                        <img :src="MainPicture.src" :alt="MainPicture.alt" style="width:100%">
                                     </div>
                                 </div>
-                                <!-- <div class="col-1-1"> <?php echo $camion->pictures[0]; ?> -->
-                                    <div class="rowphoto topdivision50" v-if="item.pictures">
-                                        <div class="columnphoto">                                           
-                                            <img class="imgdetailsleft" id="firstimg" v-bind:src="item.pictures[0]" alt="" style="width:100%" onclick="imagesdetails(this);">
-                                        </div>
-                                        <div class="columnphoto">
-                                            <img class="imgdetailscenter" :src="item.pictures[1]" alt="" style="width:100%" onclick="imagesdetails(this);">
-                                        </div>
-                                        <div class="columnphoto">
-                                            <img class="imgdetailsright" :src="item.pictures[2]" alt="" style="width:100%" onclick="imagesdetails(this);">
-                                        </div>
-                                        <div class="columnphoto">
-                                            <img class="imgdetailsleft" src="_assets/images/wx3/hx-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
-                                        </div>
-                                        <div class="columnphoto">
-                                            <img class="imgdetailscenter" src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
-                                        </div>
-                                        <div class="columnphoto">
-                                            <img class="imgdetailsright" src="_assets/images/wx3/MV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
-                                        </div>
-                                        <div class="columnphoto">
-                                            <img class="imgdetailsleft" src="_assets/images/wx3/lt-navigation.png" alt="" style="width:100%" onclick="imagesdetails(this);">
-                                        </div>
-                                        <div class="columnphoto">
-                                            <img class="imgdetailscenter" src="_assets/images/wx3/hx-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
-                                        </div>
-                                        <div class="columnphoto">
-                                            <img class="imgdetailsright" src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                    <div v-if="item.pictures" v-for="(imgsrc,index) in item.pictures" >
+
+                                        <!-- className = truck_dt_ImageMain ???
+                                        className = truck_dt_thumb_Panel
+                                        className = truck_dt_thumb_Image
+
+                                        className = truck_lst_thumb_??? -->
+
+                                        <div style="width:33%; float:left;overflow:hidden;" class="image-box" >                                           
+                                            <img  :src="imgsrc" alt="" style=" object-fit:cover; height:150px; width:100%; margin: 2px 2px 0 2px;" class="" @click="setPicture(index);">
                                         </div>
                                     </div>
                                 </div>
