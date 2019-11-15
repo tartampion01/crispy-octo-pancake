@@ -311,7 +311,7 @@
 
     /*3 services*/
 .bg3serviceleft {
-    background-image: url(../../_assets/images/batisse/batisse-centre-du-camion-beaudoin.jpg);
+    background-image: url(../../_assets/images/menu_images/accueil-succursales.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -325,11 +325,21 @@
     min-height: 300px;
 }
 .bg3servicerigth{
-    background-image: url(../../_assets/images/batisse/batisse-centre-du-camion-beaudoin.jpg);
+    background-image: url(../../_assets/images/menu_images/accueil-urgence.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 300px;
+}
+.titleservice{
+    padding: 200px 0px 0px 20px;
+    text-decoration: none;
+    color: rgb(213,94,36);
+    font-weight: 700;
+}
+.titleservice:hover{
+    color: #fff;
+    text-decoration: none;
 }
 /*Page Details*/
 
