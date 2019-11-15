@@ -158,7 +158,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceRoutier); ?>">Services</a>
                             <ul class="hidden">
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceRoutier); ?>">Routier</a></li>
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceApresVente); ?>">Après-Vente</a></li>
@@ -167,17 +167,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             </ul>
                         </li>
                         <li>
-                            <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>">véhicule Utilitaire</a> 
+                            <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>">Véhicule Utilitaire</a> 
                             <ul class="hidden">
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>">Mini-excavatrices</a></li>
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesTransporteursToutTerrain); ?>">Transporteurs tout-terrain</a></li>
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesSkidSteerEtChargeurAChenilles); ?>">Skid Steer et chargeur à chenilles</a></li>
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesChargeuseV3EtV4); ?>">Chargeuse V3 et V4</a></li>
                             </ul>                           
-                        </li>
-                        <li>
-                            
-                            
                         </li>
                         <li>
                             <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoLanding); ?>">Circulaire</a>
@@ -195,8 +191,8 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                 <li>
                                     <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres); ?>">Carrière</a>
                                     <ul class="hidden">
-                                        <li style="min-width:230px;"><a href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres); ?>">Emploi disponible</a></li>
-                                        <li style="min-width:230px;"><a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Postuler) ?>">Canditature spontanée</a></li>
+                                        <li><a style="min-width:230px;" href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres); ?>">Emploi disponible</a></li>
+                                        <li><a style="min-width:230px;" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Postuler) ?>">Canditature spontanée</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -210,13 +206,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                         </li>
                         </ul>
                         <ul class="FU_right">
-                    <li>   
-                    <a id="urgence_sticky" class="addlogo" href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H); ?>"><img src="/../_assets/images/wx3/logo-tel.png" alt="Urgence Routière" /></a>
-                    </li>
-                    <li>
-                    <a id="facebook_sticky" class="addlogo" href="https://www.facebook.com/Réseau-Dynamiquecom-200899577018785/" target="_blank"><img src="/../_assets/images/wx3/facebook_footer.png" alt="facebook Réseau Dynamique" /></a>
-                    </li>
-            </ul>
+                            <li>   
+                                <a id="urgence_sticky" class="addlogo" href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H); ?>"><img src="/../_assets/images/wx3/logo-tel.png" alt="Urgence Routière" /></a>
+                            </li>
+                            <li>
+                                <a id="facebook_sticky" class="addlogo" href="https://www.facebook.com/Réseau-Dynamiquecom-200899577018785/" target="_blank"><img src="/../_assets/images/wx3/facebook_footer.png" alt="facebook Réseau Dynamique" /></a>
+                            </li>
+                        </ul>
                    </div>   
           
             </nav>
@@ -305,7 +301,24 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                         </ul>
                                     </li>
                                     <li>
+                                        <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>">Remorque</a>
+                                        <ul class="dl-submenu">
+                                            <li style="min-width:250px;">
+                                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>">Inventaire complet</a>                                           
+                                            </li>
+                                            <li style="min-width:250px;">
+                                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDiMond); ?>">Remorques Di-Mond</a>                                           
+                                            </li>
+                                            <li style="min-width:250px;">
+                                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDoepker); ?>">Remorques Doepker</a>                                           
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
                                         <a href="#">Isuzu</a>
+                                    </li>
+                                    <li class="">
+                                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsOttawaKalmar); ?>">Ottawa Kalmar</a>
                                     </li>
                                     <li>
                                         <a href="#">Occasion</a>
@@ -318,43 +331,27 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             <li>
                                 <a href="#">Pièces</a>
                                 <ul class="dl-submenu">
-                                    <li><a href="#">Nouveauté</a></li>
-                                    <li><a href="#">Occasion</a></li>
-                                    <li><a href="#">Boutique en ligne</a></li>
-                                    <li><a href="#">Inventaire</a></li>
+                                    <li><a href="https://www.nexpart.com/login.php">commande en ligne</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_boutiqueEnLigne); ?>">Boutique en ligne</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">Service</a>
+                                <a href="#">Services</a>
                                 <ul class="dl-submenu">
-                                    <li><a href="#">Routier</a></li>
-                                    <li><a href="#">Après-Vente</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceRoutier); ?>">Routier</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceApresVente); ?>">Après-Vente</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesFinancement); ?>">Financement</a> </li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::Root,page::LocationsDeCamions); ?>">Location</a></li>
                                 </ul>
-                            </li>
+                            </li>                       
                             <li>
-                                <a href="#">Financement</a>
+                                <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>">Véhicule Utilitaire</a> 
                                 <ul class="dl-submenu">
-                                    <li><a href="#">Long Terme</a></li>
-                                    <li><a href="#">Court Terme</a></li>
-                                    <li><a href="#">Calculateur</a></li>
-                                    <li><a href="#">Commande en ligne</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Location</a>
-                                <ul class="dl-submenu">
-                                    <li><a href="#">Long Terme</a></li>
-                                    <li><a href="#">Court Terme</a></li>
-                                    <li><a href="#">Avec Entretien</a></li>
-                                    <li><a href="#">Sans Entretien</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Carrière</a>
-                                <ul class="dl-submenu">
-                                    <li><a href="#">Emploi disponible</a></li>
-                                    <li><a href="#">Candidature Spontanée</a></li>
-                                </ul>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>">Mini-excavatrices</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesTransporteursToutTerrain); ?>">Transporteurs tout-terrain</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesSkidSteerEtChargeurAChenilles); ?>">Skid Steer et chargeur à chenilles</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesChargeuseV3EtV4); ?>">Chargeuse V3 et V4</a></li>
+                                </ul>                           
                             </li>
                             <li>
                                 <a href="#">Circulaire</a>
@@ -366,11 +363,17 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             <li>
                                 <a href="#">À Propos</a>
                                 <ul class="dl-submenu">
-                                    <li><a href="#">Notre Entreprise</a></li>
-                                    <li><a href="#">Notre Réseaux</a></li>
-                                    <li><a href="#">Occasion</a></li>
-                                    <li><a href="#">Iventaire</a></li>
-                                </ul>
+                                    <li>
+                                        <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Apropos); ?>">Notre Entreprise</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres); ?>">Carrière</a>
+                                        <ul class="dl-submenu">
+                                            <li style="min-width:230px;"><a href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres); ?>">Emploi disponible</a></li>
+                                            <li style="min-width:230px;"><a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Postuler) ?>">Canditature spontanée</a></li>
+                                        </ul>
+                                    </li>
+                                    </ul>
                             </li>
                             <li>
                                 <a href="#">Nous Joindre</a>

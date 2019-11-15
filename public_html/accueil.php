@@ -7,7 +7,6 @@
     <div class="" data-staticClassNames="wrap">        
 	</div>
     <!--Logo section-->
-    <div class="margesection"></div>
     <section class="grid grid-pad">
         <div class="col-1-1 logo mobile-col-1-1">
             <div class="col-1-4 mobile-col-1-2 item">
@@ -30,14 +29,13 @@
             </div>
             <div class="col-1-4 mobile-col-1-2 item">
                 <img src="_assets/images/wx3/logo-4.png" alt="" />
-                <a href="">
+                <a href="<?php echo RD_PageLink::getHref(folder::Root,page::ObtenirPrix); ?>">
                     <h3>Demande<br />De Prix</h3>
                 </a>
             </div>
         </div>
     </section>
     <!--Full image-->
-    <div class="margesection"></div>
     <section class="topdivision50">
         <div class="grid">
             <div class="col-1-1 mobile-col-1-1">
@@ -65,7 +63,6 @@
         </div>
     </section>
     <!--multi-item build your own truck-->
-    <div class="margesection"></div>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_build_truck.php'); ?>  
 
     <!--new 3 services-->
@@ -95,41 +92,7 @@
         </div>
     </section>
 
-
-    <!--old 3 services 
-    <div class="services">
-        <div class="grid">
-            <div class="col-1-3 center">
-                <div class="item succursales">
-                    <a >
-                        <span class="titre">Localisez<br/>
-                        <strong>nos succursales</strong></span>
-                        <img name="image" width="" title="" src="_assets/images/menu_images/accueil-succursales-mobile.jpg" alt="Localisez nos succursales" />
-                    </a>
-                </div>
-            </div>
-            <div class="col-1-3 center">
-                <div class="item pieces">
-                    <a >
-                        <span class="titre">Profitez de notre<br/>
-                        <strong>Service de pi&#232;ces</strong></span>
-                        <img name="image" title="" src="_assets/images/menu_images/accueil-pieces-mobile.jpg" alt="Profitez de notre Service de pièces" />
-                    </a>
-                </div>
-            </div>
-            <div class="col-1-3 center">
-                <div class="item urgence">
-                    <a >
-                        <span class="titre">Des ennuis?<br/>
-                        <strong >Urgence routi&#232;re 24h</strong></span>
-                        <img name="image" title="" src="_assets/images/menu_images/accueil-urgence-mobile.jpg" alt="Des ennuis? Urgence routière 24h" />
-                    </a>
-                </div>
-            </div>
-        </div>
-	</div>-->
     <!--multi-item special product-->
-    <div class="margesection"></div>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
     <!--Map
     <div>

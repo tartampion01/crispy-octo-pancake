@@ -117,3 +117,175 @@
     </a>
 </div>-->
 
+menu mobile new
+
+<!--Mobile Menu-->
+<div class="bgnav mobilenav">
+                <div class="grid grid-pad column">
+                    <div id="dl-menu" class="dl-menuwrapper">
+                        <button class="dl-trigger">Open Menu</button>
+                        <ul class="dl-menu">
+                            <li>
+                                <a href="#">Camions</a>
+                                <ul class="dl-submenu">
+                                    <li>
+                                        <a href="#">International</a>
+                                        <ul class="dl-submenu">
+                                            <li>
+                                                <a href="#">série CV</a>
+                                                <ul class="dl-submenu">
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer votre véhicule</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="filter.html">Inventaire</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">série HV</a>
+                                                <ul class="dl-submenu">
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer votre véhicule</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="filter.html">Inventaire</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">série HX</a>
+                                                <ul class="dl-submenu">
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer votre véhicule</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="filter.html">Inventaire</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">série LT</a>
+                                                <ul class="dl-submenu">
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer votre véhicule</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="filter.html">Inventaire</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">série MV</a>
+                                                <ul class="dl-submenu">
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer votre véhicule</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="filter.html">Inventaire</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>">Remorque</a>
+                                        <ul class="dl-submenu">
+                                            <li style="min-width:250px;">
+                                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>">Inventaire complet</a>                                           
+                                            </li>
+                                            <li style="min-width:250px;">
+                                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDiMond); ?>">Remorques Di-Mond</a>                                           
+                                            </li>
+                                            <li style="min-width:250px;">
+                                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDoepker); ?>">Remorques Doepker</a>                                           
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Isuzu</a>
+                                    </li>
+                                    <li class="">
+                                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsOttawaKalmar); ?>">Ottawa Kalmar</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Occasion</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Inventaire</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Pièces</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="https://www.nexpart.com/login.php">commande en ligne</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_boutiqueEnLigne); ?>">Boutique en ligne</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Services</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceRoutier); ?>">Routier</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceApresVente); ?>">Après-Vente</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesFinancement); ?>">Financement</a> </li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::Root,page::LocationsDeCamions); ?>">Location</a></li>
+                                </ul>
+                            </li>                       
+                            <li>
+                                <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>">Véhicule Utilitaire</a> 
+                                <ul class="dl-submenu">
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>">Mini-excavatrices</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesTransporteursToutTerrain); ?>">Transporteurs tout-terrain</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesSkidSteerEtChargeurAChenilles); ?>">Skid Steer et chargeur à chenilles</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesChargeuseV3EtV4); ?>">Chargeuse V3 et V4</a></li>
+                                </ul>                           
+                            </li>
+                            <li>
+                                <a href="#">Circulaire</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="#">Promotion</a></li>
+                                    <li><a href="#">Circulaire Complet</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">À Propos</a>
+                                <ul class="dl-submenu">
+                                    <li>
+                                        <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Apropos); ?>">Notre Entreprise</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres); ?>">Carrière</a>
+                                        <ul class="dl-submenu">
+                                            <li style="min-width:230px;"><a href="<?php echo RD_PageLink::getHref(folder::Root,page::Carrieres); ?>">Emploi disponible</a></li>
+                                            <li style="min-width:230px;"><a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Postuler) ?>">Canditature spontanée</a></li>
+                                        </ul>
+                                    </li>
+                                    </ul>
+                            </li>
+                            <li>
+                                <a href="#">Nous Joindre</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="#">Concessionaire</a></li>
+                                    <li><a href="#">Point de service</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /dl-menuwrapper -->
+                </div>
+            </div>
