@@ -25,7 +25,7 @@
             methods: {
                 setPicture(index){
 
-                    this.MainPicture = {src:this.item.pictures[index],alt:"photo camion"}
+                    this.MainPicture = {src:this.item.pictures[index],alt:"Reseau dynamique photo camion"}
                 },                
                 async readData() {
 
@@ -326,12 +326,13 @@
                             <div class="col-1-1">
                                 <div class="col-1-1">
                                     <div>
-                                        <img :src="MainPicture.src" :alt="MainPicture.alt" style="width:100%">
+                                        <img :src="MainPicture.src"  :alt="MainPicture.alt" style="width:100%">
                                     </div>
                                 </div>
                                     <div v-if="item.pictures" v-for="(imgsrc,index) in item.pictures" >
 
-                                        <!-- className = truck_dt_ImageMain ???
+                                        <!-- 
+                                        className = truck_dt_ImageMain ???
                                         className = truck_dt_thumb_Panel
                                         className = truck_dt_thumb_Image
 
