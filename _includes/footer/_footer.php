@@ -35,34 +35,30 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                     <div class="item-footer">
                         <h3><a href="filter.html">Camions</a></h3>
                         <p><a href="filter.html">International</a></p>
+                        <p><a href="filter.html">Remorque</a></p>
                         <p><a href="filter.html">Isuzu</a></p>
-                        <p><a href="filter.html">Occasion</a></p>
+                        <p><a href="filter.html">Ottawa Kalmar</a></p>
+                        <p><a href="filter.html">Occasion</a></p> 
                         <p><a href="filter.html">Inventaire</a></p>
                     </div>
                     <div class="item-footer">
                         <h3><a href="filter.html">Pièces</a></h3>
-                        <p><a href="filter.html">Pièces</a></p>
-                        <p><a href="filter.html">Accessoire</a></p>
+                        <p><a href="filter.html">commande en ligne</a></p>
                         <p><a href="filter.html">Boutique en ligne</a></p>
-                        <p><a href="filter.html">Nouveauté</a></p>
                     </div>
                     <div class="item-footer">
                         <h3><a href="#">Services</a></h3>
                         <p><a href="#">Routier</a></p>
                         <p><a href="#">Après-vente</a></p>
+                        <p><a href="#">Financement</a></p>
+                        <p><a href="#">Location</a></p>
                     </div>
                     <div class="item-footer">
-                        <h3><a href="#">Financement</a></h3>
-                        <p><a href="#">Long terme</a></p>
-                        <p><a href="#">Calculateur</a></p>
-                        <p><a href="#">Commande en ligne</a></p>
-                    </div>
-                    <div class="item-footer">
-                        <h3><a href="">Location</a></h3>
-                        <p><a href="#">Court terme</a></p>
-                        <p><a href="#">Long terme</a></p>
-                        <p><a href="#">Avec entretien</a></p>
-                        <p><a href="#">Sans entretien</a></p>
+                        <h3><a href="">Véhicule Utilitaire</a></h3>
+                        <p><a href="#">Mini-excavatrices</a></p>
+                        <p><a href="#">Transporteurs tout-terrain</a></p>
+                        <p><a href="#">Skid Steer et chargeur à chenilles</a></p>
+                        <p><a href="#">Chargeuse V3 et V4</a></p>
                     </div>
                     <div class="item-footer">
                         <h3><a href="#">Nous Joindre</a></h3>
@@ -70,20 +66,14 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                         <p><a href="#map">Point de service</a></p>
                     </div>
                     <div class="item-footer">
-                        <h3><a href="#">Carrière</a></h3>
-                        <p><a href="#">Emploi disponible</a></p>
-                        <p><a href="#">Candidature spontané</a></p>
-                    </div>
-                    <div class="item-footer">
                         <h3><a href="#">Circulaire</a></h3>
                         <p><a href="#">Promotion</a></p>
+                        <p><a href="#">Circulaire complet</a></p>
                     </div>
                     <div class="item-footer">
                         <h3><a href="#">À Propos</a></h3>
                         <p><a href="#">Notre entreprise</a></p>
-                        <p><a href="#">Notre réseau</a></p>
-                        <p><a href="filter.html">Occasion</a></p>
-                        <p><a href="filter.html">Inventaire</a></p>
+                        <p><a href="#">carrière</a></p>
                     </div>
                 </div>
             </div>

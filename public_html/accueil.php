@@ -70,7 +70,7 @@
 
     <!--new 3 services-->
     <section class="grid">
-        <div class="col-1-1">
+        <div class="col-1-1 sectionservices">
             <div class="col-1-3 mobile-col-1-1">
                 <div class="bg3serviceleft">
                     <a style="text-decoration:none;" class="grid-pad" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre) ?>" target="_self">
