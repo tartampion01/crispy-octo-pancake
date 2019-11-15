@@ -176,10 +176,6 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             </ul>                           
                         </li>
                         <li>
-                            
-                            
-                        </li>
-                        <li>
                             <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoLanding); ?>">Circulaire</a>
                             <ul >
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoLanding); ?>">Promotion</a></li>
@@ -210,13 +206,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                         </li>
                         </ul>
                         <ul class="FU_right">
-                    <li>   
-                    <a id="urgence_sticky" class="addlogo" href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H); ?>"><img src="/../_assets/images/wx3/logo-tel.png" alt="Urgence Routière" /></a>
-                    </li>
-                    <li>
-                    <a id="facebook_sticky" class="addlogo" href="https://www.facebook.com/Réseau-Dynamiquecom-200899577018785/" target="_blank"><img src="/../_assets/images/wx3/facebook_footer.png" alt="facebook Réseau Dynamique" /></a>
-                    </li>
-            </ul>
+                            <li>   
+                                <a id="urgence_sticky" class="addlogo" href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H); ?>"><img src="/../_assets/images/wx3/logo-tel.png" alt="Urgence Routière" /></a>
+                            </li>
+                            <li>
+                                <a id="facebook_sticky" class="addlogo" href="https://www.facebook.com/Réseau-Dynamiquecom-200899577018785/" target="_blank"><img src="/../_assets/images/wx3/facebook_footer.png" alt="facebook Réseau Dynamique" /></a>
+                            </li>
+                        </ul>
                    </div>   
           
             </nav>
