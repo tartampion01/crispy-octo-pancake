@@ -68,12 +68,41 @@
     <div class="margesection"></div>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_build_truck.php'); ?>  
 
-    <!--3 services -->
+    <!--new 3 services-->
+    <section>
+        <div class="grid">
+            <div class="col-1-3 mobile-col-1-1">
+                <div class="bg3serviceleft">
+                    <a class="grid-pad" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre) ?>" target="_self">
+                        <h2>Localisez</h2>
+                        <p>Nos Succursales</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-1-3 mobile-col-1-1">
+                <div class="bg3servicecenter">  
+                    <a class="grid-pad" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires) ?>" target="_self">
+                        <h2>Service de pièces</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="col-1-3 mobile-col-1-1">
+                <div class="bg3servicerigth">
+                    <a class="grid-pad" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H) ?>" target="_self">
+                        <h2>Urgence routière 24h</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--old 3 services 
     <div class="services">
         <div class="grid">
             <div class="col-1-3 center">
                 <div class="item succursales">
-                    <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre) ?>" target="_self">
+                    <a >
                         <span class="titre">Localisez<br/>
                         <strong>nos succursales</strong></span>
                         <img name="image" width="" title="" src="_assets/images/menu_images/accueil-succursales-mobile.jpg" alt="Localisez nos succursales" />
@@ -82,7 +111,7 @@
             </div>
             <div class="col-1-3 center">
                 <div class="item pieces">
-                    <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires) ?>" target="_self">
+                    <a >
                         <span class="titre">Profitez de notre<br/>
                         <strong>Service de pi&#232;ces</strong></span>
                         <img name="image" title="" src="_assets/images/menu_images/accueil-pieces-mobile.jpg" alt="Profitez de notre Service de pièces" />
@@ -91,7 +120,7 @@
             </div>
             <div class="col-1-3 center">
                 <div class="item urgence">
-                    <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H) ?>" target="_self">
+                    <a >
                         <span class="titre">Des ennuis?<br/>
                         <strong >Urgence routi&#232;re 24h</strong></span>
                         <img name="image" title="" src="_assets/images/menu_images/accueil-urgence-mobile.jpg" alt="Des ennuis? Urgence routière 24h" />
@@ -99,7 +128,7 @@
                 </div>
             </div>
         </div>
-	</div>
+	</div>-->
     <!--multi-item special product-->
     <div class="margesection"></div>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  

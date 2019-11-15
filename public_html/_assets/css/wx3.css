@@ -309,6 +309,28 @@
         transform: scale(1.1);
     }
 
+    /*3 services*/
+.bg3serviceleft {
+    background-image: url(../../_assets/images/batisse/batisse-centre-du-camion-beaudoin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 300px;
+}
+.bg3servicecenter{
+    background-image: url(../../_assets/images/menu_images/accueil-pieces.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 300px;
+}
+.bg3servicerigth{
+    background-image: url(../../_assets/images/batisse/batisse-centre-du-camion-beaudoin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 300px;
+}
 /*Page Details*/
 
 .Descriptionp{ 
