@@ -7,7 +7,6 @@
     <div class="" data-staticClassNames="wrap">        
 	</div>
     <!--Logo section-->
-    <div class="margesection"></div>
     <section class="grid grid-pad">
         <div class="col-1-1 logo mobile-col-1-1">
             <div class="col-1-4 mobile-col-1-2 item">
@@ -37,7 +36,6 @@
         </div>
     </section>
     <!--Full image-->
-    <div class="margesection"></div>
     <section class="topdivision50">
         <div class="grid">
             <div class="col-1-1 mobile-col-1-1">
@@ -65,7 +63,6 @@
         </div>
     </section>
     <!--multi-item build your own truck-->
-    <div class="margesection"></div>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_build_truck.php'); ?>  
 
     <!--new 3 services-->
@@ -96,7 +93,6 @@
     </section>
 
     <!--multi-item special product-->
-    <div class="margesection"></div>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
     <!--Map
     <div>
