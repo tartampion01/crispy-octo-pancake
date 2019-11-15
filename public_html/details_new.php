@@ -10,11 +10,9 @@
         var vm = new Vue({
             el: '#detail',
             data: {
-                message: 'Hello Vue!',
                 item: {}
             },
             mounted: function() {
-                this.message = "Ho !";
                 try {
 
                     this.readData();
@@ -26,10 +24,15 @@
             methods: {
                 async readData() {
 
+                    let api = 'http://reseaudynamique.com/api/singleUsedTruck_.php';
+                    let isNew = (window.location.search.match(new RegExp('[?&]' + 'new' + '=([^&]+)')) || [,null])[1];
+                    if(isNew){
+                        api = 'http://reseaudynamique.com/api/singleNewTruck_.php';
+                    }
+
                     let id = (window.location.search.match(new RegExp('[?&]' + 'id' + '=([^&]+)')) || [,null])[1];
                     if (id) {
-                        const response = await fetch(
-                            'http://reseaudynamique.com/api/singleNewTruck_.php?id=' + id)
+                        const response = await fetch(api + '?id=' + id)
                         const data = await response.json()
                         this.item = data;
                         console.log(data);
@@ -321,16 +324,16 @@
                                         <div id="imgtext"></div>
                                     </div>
                                 </div>
-                                <div class="col-1-1"> <?php echo $camion->pictures[0]; ?>
-                                    <div class="rowphoto topdivision50">
+                                <!-- <div class="col-1-1"> <?php echo $camion->pictures[0]; ?> -->
+                                    <div class="rowphoto topdivision50" v-if="item.pictures">
                                         <div class="columnphoto">                                           
-                                            <img class="imgdetailsleft" id="firstimg" src="_assets/images/wx3/CV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                            <img class="imgdetailsleft" id="firstimg" v-bind:src="item.pictures[0]" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img class="imgdetailscenter" src="_assets/images/wx3/MV-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                            <img class="imgdetailscenter" :src="item.pictures[1]" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
-                                            <img class="imgdetailsright" src="_assets/images/wx3/lt-navigation.png" alt="" style="width:100%" onclick="imagesdetails(this);">
+                                            <img class="imgdetailsright" :src="item.pictures[2]" alt="" style="width:100%" onclick="imagesdetails(this);">
                                         </div>
                                         <div class="columnphoto">
                                             <img class="imgdetailsleft" src="_assets/images/wx3/hx-navigation.jpg" alt="" style="width:100%" onclick="imagesdetails(this);">
