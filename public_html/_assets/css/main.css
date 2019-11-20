@@ -3186,14 +3186,14 @@ form .produit .bref .left > .lePrix.isUsed-True{display:block;}
     font-size: 1em;
   }
   h2{
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
   }
   h3{
-    font-size: 14px;
+    font-size: 18px;
   }
   p{
-    font-size: 12px;
+    font-size: 16px;
     line-height: normal;
     margin-bottom: 0;
   }
@@ -3210,6 +3210,8 @@ form .produit .bref .left > .lePrix.isUsed-True{display:block;}
     }
     
 .bx-viewport .carrousel { height: 510px !important; }
+
+/*2iem site*/
 
 .bxslider  { width: 100%;
 margin:0;}
