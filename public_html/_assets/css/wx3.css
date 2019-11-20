@@ -199,6 +199,7 @@
         margin-left:auto;
         margin-right:auto;
         width:auto;
+        height: auto;
     }
 .item-footer{
         min-width:100px;
@@ -225,7 +226,8 @@
         font-weight:700;
     }
 .item-footer p{
-        padding-bottom:10px;
+        padding-bottom:-10px;
+        line-height: normal;
     }
 .item-footer p a{
         color:white;
@@ -510,17 +512,6 @@ text-decoration:underline;
         padding: 50px 20px 50px 20px;
     }
    
-    .item-footer {
-        min-width: 100px;
-        display: inline;
-        float: left;
-        margin-left: auto;
-        margin-right: auto;
-        margin: 50px 0px 20px 0px;
-        text-align: center;
-        height: 150px;
-        width: 25%
-    }
     .mobiletel {
         display: block;
         margin-top:12px;
@@ -532,6 +523,8 @@ text-decoration:underline;
     .rightbutton {
         float: none;
         width:100%;
+        margin: 5px 0px;
+        padding: 0px;
     }
     .buttonwebsite {
         padding: 5px;
@@ -894,11 +887,15 @@ All this is done for any sub-level being entered.
     .column3details {
         float: left;
         width: 40%;
-        padding: 10px;
         border-left: none;
-        padding-left: 50px;
         text-transform: uppercase;
         min-height: 50px;
+    }
+    .column1details {
+        float: left;
+        width: 40%;
+        text-transform: uppercase;
+        height: 50px;
     }
     .verticalline {
         border-left: none;
@@ -1285,9 +1282,3 @@ All this is done for any sub-level being entered.
     .demo-4 .dl-menuwrapper ul {
         background: #79a002;
     }
-
-
-
-
-
-

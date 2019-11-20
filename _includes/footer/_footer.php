@@ -39,7 +39,6 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                         <p><a href="filter.html">Isuzu</a></p>
                         <p><a href="filter.html">Ottawa Kalmar</a></p>
                         <p><a href="filter.html">Occasion</a></p> 
-                        <p><a href="filter.html">Inventaire</a></p>
                     </div>
                     <div class="item-footer">
                         <h3><a href="filter.html">Pièces</a></h3>
