@@ -37,11 +37,17 @@
 
                     let id = (window.location.search.match(new RegExp('[?&]' + 'id' + '=([^&]+)')) || [,null])[1];
                     if (id) {
+                        // Show loading spinner
+                        $('.loading-overlay').show();
+
                         const response = await fetch(api + '?id=' + id)
                         const data = await response.json()
                         this.item = data;
                         
                         this.setPicture(0);
+
+                        // Hide loading spinner
+                        $('.loading-overlay').hide();
                     }
                 }
             }
@@ -488,6 +494,8 @@
     </form>
     <!--multi-item special product-->
     <div class="margesection"></div>
+    <div class="loading-overlay">Loading&#8230;</div>
+
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 </body>
