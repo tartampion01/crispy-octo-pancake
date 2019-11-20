@@ -11,6 +11,7 @@
             el: '#detail',
             data: {
                 MainPicture: {src:null, alt:""},
+                errorMessage: "",
                 item: {}
             },
             mounted: function() {
@@ -19,7 +20,8 @@
                     this.readData();
 
                 } catch (error) {
-                    console.error('Error:', error);
+                    console.error(error);
+                    this.errorMessage = error.toString();
                 }
             },
             methods: {
@@ -40,11 +42,18 @@
                         // Show loading spinner
                         $('.loading-overlay').show();
 
-                        const response = await fetch(api + '?id=' + id)
-                        const data = await response.json()
-                        this.item = data;
-                        
-                        this.setPicture(0);
+                        try {
+
+                            const response = await fetch(api + '?id=' + id)
+                            const data = await response.json()
+                            this.item = data;
+                            
+                            this.setPicture(0);
+
+                        } catch (error) {
+                            console.error(error);
+                            this.errorMessage = error.toString();
+                        }
 
                         // Hide loading spinner
                         $('.loading-overlay').hide();
@@ -351,6 +360,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div v-if="errorMessage" ><h2>ERREUR</h2>{{errorMessage}}</div>
                     </div>
                 </section>
             </div>                      
