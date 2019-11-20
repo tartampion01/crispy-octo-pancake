@@ -1,69 +1,5 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
-<script type="text/javascript">
-
-    $(document).ready(function () {
-        init();      
-    });
-
-    function init(){
-        var vm = new Vue({
-            el: '#detail',
-            data: {
-                MainPicture: {src:null, alt:""},
-                errorMessage: "",
-                item: {}
-            },
-            mounted: function() {
-                try {
-
-                    this.readData();
-
-                } catch (error) {
-                    console.error(error);
-                    this.errorMessage = error.toString();
-                }
-            },
-            methods: {
-                setPicture(index){
-
-                    this.MainPicture = {src:this.item.pictures[index],alt:"Reseau dynamique photo camion"}
-                },                
-                async readData() {
-
-                    let api = 'http://reseaudynamique.com/api/singleUsedTruck_.php';
-                    let isNew = (window.location.search.match(new RegExp('[?&]' + 'new' + '=([^&]+)')) || [,null])[1];
-                    if(isNew){
-                        api = 'http://reseaudynamique.com/api/singleNewTruck_.php';
-                    }
-
-                    let id = (window.location.search.match(new RegExp('[?&]' + 'id' + '=([^&]+)')) || [,null])[1];
-                    if (id) {
-                        // Show loading spinner
-                        $('.loading-overlay').show();
-
-                        try {
-
-                            const response = await fetch(api + '?id=' + id)
-                            const data = await response.json()
-                            this.item = data;
-                            
-                            this.setPicture(0);
-
-                        } catch (error) {
-                            console.error(error);
-                            this.errorMessage = error.toString();
-                        }
-
-                        // Hide loading spinner
-                        $('.loading-overlay').hide();
-                    }
-                }
-            }
-        })
-    
-    }
-</script>
 
 <body class="body"><?php RD_Utils::write_Gtag() ?>
 <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
@@ -509,5 +445,71 @@
 
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
+
+
+    <script type="text/javascript">
+
+$(document).ready(function () {
+    init();      
+});
+
+function init(){
+    var vm = new Vue({
+        el: '#detail',
+        data: {
+            MainPicture: {src:null, alt:""},
+            errorMessage: "",
+            item: {}
+        },
+        mounted: function() {
+            try {
+
+                this.readData();
+
+            } catch (error) {
+                console.error(error);
+                this.errorMessage = error.toString();
+            }
+        },
+        methods: {
+            setPicture(index){
+
+                this.MainPicture = {src:this.item.pictures[index],alt:"Reseau dynamique photo camion"}
+            },                
+            async readData() {
+
+                let api = 'http://reseaudynamique.com/api/singleUsedTruck_.php';
+                let isNew = (window.location.search.match(new RegExp('[?&]' + 'new' + '=([^&]+)')) || [,null])[1];
+                if(isNew){
+                    api = 'http://reseaudynamique.com/api/singleNewTruck_.php';
+                }
+
+                let id = (window.location.search.match(new RegExp('[?&]' + 'id' + '=([^&]+)')) || [,null])[1];
+                if (id) {
+                    // Show loading spinner
+                    $('.loading-overlay').show();
+
+                    try {
+
+                        const response = await fetch(api + '?id=' + id)
+                        const data = await response.json()
+                        this.item = data;
+                        
+                        this.setPicture(0);
+
+                    } catch (error) {
+                        console.error(error);
+                        this.errorMessage = error.toString();
+                    }
+
+                    // Hide loading spinner
+                    $('.loading-overlay').hide();
+                }
+            }
+        }
+    })
+
+}
+</script>
 </body>
 </html>
