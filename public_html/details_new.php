@@ -62,16 +62,12 @@
             }
         })
     
-    
-    
-    
-    
     }
 </script>
 
 <body class="body"><?php RD_Utils::write_Gtag() ?>
 <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-        <div id="detail" class="content produit">
+        <div id="detail" class="produit">
             <div class="grid grid-pad">
                 <!--top-->
                 <section class="">
@@ -81,12 +77,12 @@
                                 <span v-html="item.beauTitre"></span> <!--Titre  de camion-->
                             </h2>        
                             <a name="hyperlien" onclick="window.print();" href="javascript:void(0);" target="_self"><img class="" style="display:inline-block; float:right; padding:5px;" src="_assets/images/wx3/printbtn.png" alt="print logo" /></a>
-                            <a class="orange rightbutton buttonwebsite mobile-col-1-1" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
+                            <button class="rightbutton buttonwebsite mobile-col-1-1" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
                                 Obtenir un prix
-                            </a>                         
-                            <a class="orange rightbutton buttonwebsite mobile-col-1-1" name="orange" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeFinancement) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">
+                            </button>                       
+                            <button class="rightbutton buttonwebsite mobile-col-1-1" name="orange" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeFinancement) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">
                                 Demande de financement
-                            </a>
+                            </button>
                             <hr class="hide-on-mobile" style="margin-top:50px;" />
                         <div class="col-1-1 topnavdetail mobile-col-1-1">
                             <h3 class="subnavdescription">
@@ -182,7 +178,7 @@
                                         <div class="infotitle column1details">
                                             Empattement
                                         </div>
-                                        <div class="column2details">
+                                        <div class="column2details hide-on-mobile">
 
                                         </div>
                                         <div class="column3details">
@@ -194,7 +190,7 @@
                                         <div class="infotitle column1details">
                                             Essieu avant
                                         </div>
-                                        <div class="column2details">
+                                        <div class="column2details hide-on-mobile">
 
                                         </div>
                                         <div class="column3details">
@@ -206,7 +202,7 @@
                                         <div class="infotitle column1details">
                                             Essieu arrière
                                         </div>
-                                        <div class="column2details">
+                                        <div class="column2details hide-on-mobile">
 
                                         </div>
                                         <div class="column3details">
@@ -218,7 +214,7 @@
                                         <div class="infotitle column1details">
                                             Suspension arrière
                                         </div>
-                                       <div class="column2details">
+                                       <div class="column2details hide-on-mobile">
                                            
                                        </div>
                                        <div class="column3details">
@@ -230,7 +226,7 @@
                                         <div class="infotitle column1details">
                                            Transmission
                                         </div>
-                                       <div class="column2details">
+                                       <div class="column2details hide-on-mobile">
                                            <img class="hide-on-mobile" src="_assets/images/wx3/tansmissiondetails.png" alt="" />
                                        </div>
                                        <div class="column3details">
@@ -242,7 +238,7 @@
                                         <div class="infotitle column1details">
                                             Moteur
                                         </div>
-                                        <div class="column2details">
+                                        <div class="column2details hide-on-mobile">
 
                                         </div>
                                         <div class="column3details">
@@ -254,7 +250,7 @@
                                         <div class="infotitle column1details">
                                             HP
                                         </div>
-                                        <div class="column2details">
+                                        <div class="column2details hide-on-mobile">
 
                                         </div>
                                         <div class="column3details">
@@ -266,7 +262,7 @@
                                         <div class="infotitle column1details">
                                             Ratio essieu arrière
                                         </div>
-                                        <div class="column2details">
+                                        <div class="column2details hide-on-mobile">
 
                                         </div>
                                         <div class="column3details">
@@ -278,7 +274,7 @@
                                         <div class="infotitle column1details">
                                             Dimension pneu
                                         </div>
-                                        <div class="column2details">
+                                        <div class="column2details hide-on-mobile">
 
                                         </div>
                                         <div class="column3details">
@@ -290,7 +286,7 @@
                                         <div class="infotitle column1details">
                                             Roue
                                         </div>
-                                        <div class="column2details">
+                                        <div class="column2details hide-on-mobile">
 
                                         </div>
                                         <div class="column3details">
@@ -302,7 +298,7 @@
                                         <div class="infotitle column1details">
                                             freins
                                         </div>
-                                        <div class="column2details">
+                                        <div class="column2details hide-on-mobile">
                                             <img class="hide-on-mobile" src="_assets/images/wx3/freinsdetails.png" alt="" />
                                         </div>
                                         <div class="column3details">
@@ -314,7 +310,7 @@
                                         <div class="infotitle column1details">
                                             Couleur
                                         </div>
-                                        <div class="column2details">
+                                        <div class="column2details hide-on-mobile">
                                             
                                         </div>
                                         <div class="column3details">
@@ -326,7 +322,7 @@
                                         <div class="infotitle column1details">
                                             Équipement
                                         </div>
-                                        <div class="column2details">
+                                        <div class="column2details hide-on-mobile">
                                             <img class="hide-on-mobile" src="_assets/images/wx3/equipementdetails.png" alt="" />
                                         </div>
                                         <div class="column3details">

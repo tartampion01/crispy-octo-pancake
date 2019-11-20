@@ -29,7 +29,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
 ?>
      <!--Footer-->
      <footer>
-        <div class="topfooter">
+        <div class="topfooter hide-on-mobile">
             <div class="grid grid-pad">
                 <div class="container-footer">
                     <div class="item-footer">
@@ -83,7 +83,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                 <div class="blackfootertop">
                     <div class="col-1-5 mobile-col-1-5">
                         <a href="/accueil.php">
-                          <img class="" src="../../_assets/images/wx3/logo_footer.png" alt="Réseau Dynamique" />
+                          <img src="../../_assets/images/wx3/logo_footer.png" alt="Réseau Dynamique" />
                         </a>
                     </div>
                     <div class="col-1-5 mobile-col-1-5">

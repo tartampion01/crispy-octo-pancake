@@ -401,6 +401,8 @@ text-decoration:underline;
         border-radius: 4px;
         border: solid 1px rgb(213,94,36);
         text-transform: uppercase;
+        color: #000;
+        font-weight: 400;
     }
     
 .buttonwebsite:hover {
@@ -577,7 +579,7 @@ text-decoration:underline;
             .mobilenav .dl-menuwrapper button {
                 background-color: #2A2A2A;
                 border: none;
-                width: 48px;
+                width: 32px;
                 height: 32px;
                 text-indent: -900em;
                 overflow: hidden;
@@ -889,7 +891,15 @@ All this is done for any sub-level being entered.
         width: 50%;
         padding: 5px 5px 0px 5px;
     }
-    
+    .column3details {
+        float: left;
+        width: 40%;
+        padding: 10px;
+        border-left: none;
+        padding-left: 50px;
+        text-transform: uppercase;
+        min-height: 50px;
+    }
     .verticalline {
         border-left: none;
         padding-left: 25px;
@@ -946,81 +956,83 @@ All this is done for any sub-level being entered.
         float: none;
         width:100%;
     }
-    /*menu mobile*/
-    .mobilenav {
-        display:block;
-    }
-  
+   /*menu mobile*/
+   .mobilenav {
+    display: block;
+    height: 50px;
+}
+
     /* Common styles of menus */
 
-.mobilenav .dl-menuwrapper {
-
+    .mobilenav .dl-menuwrapper {
         width: 100%;
         max-width: 300px;
         float: left;
-        position: relative;
+        position: absolute;
         -webkit-perspective: 1000px;
         perspective: 1000px;
         -webkit-perspective-origin: 50% 200%;
         perspective-origin: 50% 200%;
+        z-index: 10000;
     }
 
-.mobilenav .dl-menuwrapper:first-child {
-        margin-right: 100px;
-    }
-    .mobilenav .dl-menuwrapper button {
-        background-color: #2A2A2A;
-        border: none;
-        width: 48px;
-        height: 32px;
-        text-indent: -900em;
-        overflow: hidden;
-        position: relative;
-        cursor: pointer;
-        outline: none;
-        margin-top: -5px;
-    }
-
-        .mobilenav .dl-menuwrapper button:hover,
-        .mobilenav .dl-menuwrapper button.dl-active,
-        .mobilenav .dl-menuwrapper ul {
-            background-color: rgb(213,94,36);        
+        .mobilenav .dl-menuwrapper:first-child {
+            margin-right: 100px;
         }
 
-    .mobilenav .dl-menuwrapper button:after {
-        content: '';
-        position: absolute;
-        width: 68%;
-        height: 5px;
-        background: #fff;
-        top: 12px;
-        left: 16%;
-        box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
-    }
-
-    .mobilenav .dl-menuwrapper ul {
-        padding: 0;
-        list-style: none;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-    }
-
-    .mobilenav .dl-menuwrapper li {
-        position: relative;
-        top:0px;
-    }
-
-        .mobilenav .dl-menuwrapper li a {
-            display: block;
+        .mobilenav .dl-menuwrapper button {
+            background-color: #2A2A2A;
+            border: none;
+            width: 32px;
+            height: 32px;
+            text-indent: -900em;
+            overflow: hidden;
             position: relative;
-            padding: 15px 20px;
-            font-size: 16px;
-            line-height: 20px;
-            font-weight: 300;
-            color: #fff;
+            cursor: pointer;
             outline: none;
-            text-decoration:none;
+            margin-top: -5px;
         }
+
+            .mobilenav .dl-menuwrapper button:hover,
+            .mobilenav .dl-menuwrapper button.dl-active,
+            .mobilenav .dl-menuwrapper ul {                 
+                background-color: rgb(213,94,36);
+            }
+
+            .mobilenav .dl-menuwrapper button:after {
+                content: '';
+                position: absolute;
+                width: 68%;
+                height: 5px;
+                background: #fff;
+                top: 12px;
+                left: 16%;
+                box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
+            }
+
+        .mobilenav .dl-menuwrapper ul {
+            padding: 0;
+            list-style: none;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .mobilenav .dl-menuwrapper li {
+            position: relative;
+            top: 0px;
+        }
+
+            .mobilenav .dl-menuwrapper li a {
+                display: block;
+                position: relative;
+                padding: 15px 20px;
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 300;
+                color: #fff;
+                outline: none;
+                text-decoration: none;
+            }
 
     .mobilenav .no-touch .dl-menuwrapper li a:hover {
         background: rgba(255,248,213,0.1);
@@ -1028,7 +1040,7 @@ All this is done for any sub-level being entered.
 
     .mobilenav .dl-menuwrapper li.dl-back > a {
         padding-left: 30px;
-        background-color: rgb(213,94,36);
+        background-color: #2A2A2A;
     }
 
     .mobilenav .dl-menuwrapper li.dl-back:after,
@@ -1118,163 +1130,161 @@ All this is done for any sub-level being entered.
         -webkit-animation: MenuAnimOut4 0.4s ease;
         animation: MenuAnimOut4 0.4s ease;
     }
- 
 
 
-    @-webkit-keyframes MenuAnimOut4 {
-        0% {
-        }
 
-        100% {
-            -webkit-transform: translateZ(-300px);
-            opacity: 0;
-        }
+@-webkit-keyframes MenuAnimOut4 {
+    0% {
     }
 
-    @keyframes MenuAnimOut4 {
-        0% {
-        }
-
-        100% {
-            -webkit-transform: translateZ(-300px);
-            transform: translateZ(-300px);
-            opacity: 0;
-        }
+    100% {
+        -webkit-transform: translateZ(-300px);
+        opacity: 0;
     }
-
-    .mobilenav .dl-menu.dl-animate-in-4 {
-        -webkit-animation: MenuAnimIn4 0.4s ease;
-        animation: MenuAnimIn4 0.4s ease;
-    }
-
-    @-webkit-keyframes MenuAnimIn4 {
-        0% {
-            -webkit-transform: translateZ(-300px);
-            opacity: 0;
-        }
-
-        100% {
-            -webkit-transform: translateZ(0px);
-            opacity: 1;
-        }
-    }
-
-    @keyframes MenuAnimIn4 {
-        0% {
-            -webkit-transform: translateZ(-300px);
-            transform: translateZ(-300px);
-            opacity: 0;
-        }
-
-        100% {
-            -webkit-transform: translateZ(0px);
-            transform: translateZ(0px);
-            opacity: 1;
-        }
-    }
-
-    .mobilenav .dl-menuwrapper > .dl-submenu.dl-animate-in-4 {
-        -webkit-animation: SubMenuAnimIn4 0.4s ease;
-        animation: SubMenuAnimIn4 0.4s ease;
-    }
-
-    @-webkit-keyframes SubMenuAnimIn4 {
-        0% {
-            -webkit-transform: translateZ(300px);
-            opacity: 0;
-        }
-
-        100% {
-            -webkit-transform: translateZ(0px);
-            opacity: 1;
-        }
-    }
-
-    @keyframes SubMenuAnimIn4 {
-        0% {
-            -webkit-transform: translateZ(300px);
-            transform: translateZ(300px);
-            opacity: 0;
-        }
-
-        100% {
-            -webkit-transform: translateZ(0px);
-            transform: translateZ(0px);
-            opacity: 1;
-        }
-    }
-
-
-    .mobilenav .dl-menuwrapper > .dl-submenu.dl-animate-out-4 {
-        -webkit-animation: SubMenuAnimOut4 0.4s ease;
-        animation: SubMenuAnimOut4 0.4s ease;
-    }
-
-    @-webkit-keyframes SubMenuAnimOut4 {
-        0% {
-            -webkit-transform: translateZ(0px);
-            opacity: 1;
-        }
-
-        100% {
-            -webkit-transform: translateZ(300px);
-            opacity: 0;
-        }
-    }
-
-    @keyframes SubMenuAnimOut4 {
-        0% {
-            -webkit-transform: translateZ(0px);
-            transform: translateZ(0px);
-            opacity: 1;
-        }
-
-        100% {
-            -webkit-transform: translateZ(300px);
-            transform: translateZ(300px);
-            opacity: 0;
-        }
-    }
-
-    /* No JS Fallback */
-    .mobilenav .no-js .dl-menuwrapper .dl-menu {
-        position: relative;
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-
-    .mobilenav .no-js .dl-menuwrapper li .dl-submenu {
-        display: block;
-    }
-
-    .mobilenav .no-js .dl-menuwrapper li.dl-back {
-        display: none;
-    }
-
-    .mobilenav .no-js .dl-menuwrapper li > a:not(:only-child) {
-        background: rgba(0,0,0,0.1);
-    }
-
-        .mobilenav .no-js .dl-menuwrapper li > a:not(:only-child):after {
-            content: '';
-        }
-
-    /* Colors for demos */
-
-
-    /* Demo 4 */
-    .demo-4 .dl-menuwrapper button {
-        background: #90b912;
-    }
-
-        .demo-4 .dl-menuwrapper button:hover,
-        .demo-4 .dl-menuwrapper button.dl-active,
-        .demo-4 .dl-menuwrapper ul {
-            background: #79a002;
-        }
 }
 
+@keyframes MenuAnimOut4 {
+    0% {
+    }
+
+    100% {
+        -webkit-transform: translateZ(-300px);
+        transform: translateZ(-300px);
+        opacity: 0;
+    }
+}
+
+.mobilenav .dl-menu.dl-animate-in-4 {
+    -webkit-animation: MenuAnimIn4 0.4s ease;
+    animation: MenuAnimIn4 0.4s ease;
+}
+
+@-webkit-keyframes MenuAnimIn4 {
+    0% {
+        -webkit-transform: translateZ(-300px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes MenuAnimIn4 {
+    0% {
+        -webkit-transform: translateZ(-300px);
+        transform: translateZ(-300px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0px);
+        transform: translateZ(0px);
+        opacity: 1;
+    }
+}
+
+.mobilenav .dl-menuwrapper > .dl-submenu.dl-animate-in-4 {
+    -webkit-animation: SubMenuAnimIn4 0.4s ease;
+    animation: SubMenuAnimIn4 0.4s ease;
+}
+
+@-webkit-keyframes SubMenuAnimIn4 {
+    0% {
+        -webkit-transform: translateZ(300px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes SubMenuAnimIn4 {
+    0% {
+        -webkit-transform: translateZ(300px);
+        transform: translateZ(300px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0px);
+        transform: translateZ(0px);
+        opacity: 1;
+    }
+}
+
+
+.mobilenav .dl-menuwrapper > .dl-submenu.dl-animate-out-4 {
+    -webkit-animation: SubMenuAnimOut4 0.4s ease;
+    animation: SubMenuAnimOut4 0.4s ease;
+}
+
+@-webkit-keyframes SubMenuAnimOut4 {
+    0% {
+        -webkit-transform: translateZ(0px);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateZ(300px);
+        opacity: 0;
+    }
+}
+
+@keyframes SubMenuAnimOut4 {
+    0% {
+        -webkit-transform: translateZ(0px);
+        transform: translateZ(0px);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateZ(300px);
+        transform: translateZ(300px);
+        opacity: 0;
+    }
+}
+
+/* No JS Fallback */
+.mobilenav .no-js .dl-menuwrapper .dl-menu {
+    position: relative;
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}
+
+.mobilenav .no-js .dl-menuwrapper li .dl-submenu {
+    display: block;
+}
+
+.mobilenav .no-js .dl-menuwrapper li.dl-back {
+    display: none;
+}
+
+.mobilenav .no-js .dl-menuwrapper li > a:not(:only-child) {
+    background: rgba(0,0,0,0.1);
+}
+
+    .mobilenav .no-js .dl-menuwrapper li > a:not(:only-child):after {
+        content: '';
+    }
+
+/* Colors for demos */
+
+
+/* Demo 4 */
+.demo-4 .dl-menuwrapper button {
+    background: #90b912;
+}
+
+    .demo-4 .dl-menuwrapper button:hover,
+    .demo-4 .dl-menuwrapper button.dl-active,
+    .demo-4 .dl-menuwrapper ul {
+        background: #79a002;
+    }
 
 
 
