@@ -29,7 +29,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
 ?>
      <!--Footer-->
      <footer>
-        <div class="topfooter">
+        <div class="topfooter hide-on-mobile">
             <div class="grid grid-pad">
                 <div class="container-footer">
                     <div class="item-footer">
