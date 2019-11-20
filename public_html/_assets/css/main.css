@@ -3197,7 +3197,9 @@ form .produit .bref .left > .lePrix.isUsed-True{display:block;}
     line-height: normal;
     margin-bottom: 0;
   }
-
+  html {
+    font: Arial, Helvetica, sans-serif;
+  }
 
 }
 
