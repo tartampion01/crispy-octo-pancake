@@ -47,16 +47,12 @@
             }
         })
     
-    
-    
-    
-    
     }
 </script>
 
 <body class="body"><?php RD_Utils::write_Gtag() ?>
 <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-        <div id="detail" class="content produit">
+        <div id="detail" class="produit">
             <div class="grid grid-pad">
                 <!--top-->
                 <section class="">
