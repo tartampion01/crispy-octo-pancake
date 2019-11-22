@@ -64,7 +64,7 @@
                                     <div class="ResultContent">
                                         <div class="ResultContentProductName">
                                             <h2>
-                                                <span v-html="record.beauTitre"></span> <!--Titre  de camion-->
+                                                Titre du camion <!--Titre  de camion-->
                                             </h2>
                                         </div>
                                         <div class="customField">

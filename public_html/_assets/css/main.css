@@ -2557,14 +2557,15 @@ li[disabled] > a, a[disabled] {
 }
 
   .defaultFacet .ResultContentProductName h2 {
-    font-weight: 400;
+    font-weight: 700;
     color: #f37121;
     margin: 0px 0px 0.5em 0px;
-    font: 400 1.428em/1.2em 'calibri', Arial, Helvetica, sans-serif;
+    font: 400 2em/1.4em 'calibri', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
   }
 
 .customField {
-  font: 400 0.857em/1.2em Arial, Helvetica, sans-serif;
+  font: 400 1.4em/1.8em 'calibri',Arial, Helvetica, sans-serif;
 }
 /* IMAGE */
 
