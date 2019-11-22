@@ -497,6 +497,26 @@ text-decoration:underline;
     color: white;
     font-size: 20px;
 }
+
+/*page filter*/
+.multiproduct .rectangle {
+    height: 10px;
+    width: auto;
+    background-color: rgb(213,94,36);
+}
+.container-filter{
+    margin-left:auto;
+    margin-right:auto;
+}
+.filter-item {
+    padding: 50px 20px 50px 20px;
+    float: left;
+    display: inline;  
+}
+.filter-item a {
+    color:black;
+    text-decoration:none;
+}
 @media (max-width: 1024px) {
     .column {
         float: left;

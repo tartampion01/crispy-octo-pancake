@@ -2188,7 +2188,7 @@ UL.store-list {
 .GpcFacetedResults {
   padding-top: 10px;
   float: right;
-  width: 75%;
+  width: 100%;
   padding-bottom: 2em;
   border-top: 1px #cfcfcf solid;
 }
@@ -2572,6 +2572,14 @@ li[disabled] > a, a[disabled] {
   max-width: 100%;
   width: 100%;
 }
+.ResultImage {
+  width: 100%;
+  overflow: hidden;
+}
+.imagespec{
+  object-fit:cover; 
+  height: 350px;
+}
 
 .FacetedResultTemplate:hover .ResultImage img {
   opacity: 0.5;
@@ -2609,7 +2617,6 @@ li[disabled] > a, a[disabled] {
   overflow: hidden;
   background: #000;
   position: relative;
-  max-height: 12em;
 }
 
 .bx-controls, .GpcImageViewerHorizontal .GpcCarouselNext, .GpcImageViewerHorizontal .GpcCarouselPrevious, .GpcImageViewerHorizontal .lightbox-container-image-data-box, .GpcImageViewerHorizontal .lightbox-nav, .GpcImageViewerHorizontal .lightbox-video {
@@ -3173,11 +3180,26 @@ form .produit .bref .left > .lePrix.isUsed-True{display:block;}
     padding: 2em 0px 7em 10px;
     background: url(../../../_assets/images/menu_images/background-truck.jpg) right bottom no-repeat;
   }
+  .imagespec{
+    object-fit:cover; 
+    height: 450px;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .imagespec{
+    object-fit:cover; 
+    height: 300px;
+  }
 }
 
 @media all and (max-width: 1024px) {
   .banner .rotation .banniere .texte .gros {
     font-size: 2em;
+  }
+  .imagespec{
+    object-fit:cover; 
+    height: 250px;
   }
 }
 
@@ -3199,6 +3221,10 @@ form .produit .bref .left > .lePrix.isUsed-True{display:block;}
   }
   html {
     font: Arial, Helvetica, sans-serif;
+  }
+  .imagespec{
+    object-fit:cover; 
+    height: 150px;
   }
 
 }

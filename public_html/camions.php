@@ -5,14 +5,24 @@
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="">
         <div class="content camions-occasions">
-            <div class="shrink">
+            <div class=" grid grid-pad">
+                <div class="bottom-info grid" style="margin-top: 2em; ">
+                    <div class="grid-pad">
+                        <h3 class="orange" style="text-align:center; margin-bottom:40px; text-transform:uppercase; font-weight:700; ">Réseau Dynamique est la référence dans le domaine des camions lourds et des tracteurs terminaux d'occasion !</h3>
+                        <h2>Pourquoi choisir un camion d'occasion chez Réseau Dynamique?</h2>
+                        <p>Avant d'être mis en vente, tous les véhicules d'occasion de Réseau Dynamique ont été inspectés minutieusement et réparés. Revendeur de camions de toutes classes, vous êtes assuré de trouver un camion de grande qualité répondant en tous points à vos besoins d'affaires.</p>
+                        <p>Détaillant de camions neufs de marque International, Réseau Dynamique offre des garanties prolongées du manufacturier sur les composants majeurs de ses véhicules. Les services d'experts des mécaniciens accrédités International offrent également la reconstruction complète des composants majeurs.</p>
+                        <h2>Le service après-vente : la force d'un réseau</h2>
+                        <p>Avec Réseau Dynamique, vous faites un choix sensé pour le présent et le futur. Les&nbsp;<a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>" target="_self">19 centres de pièces et services du Réseau</a> dispersés sur le territoire québécois assurent aux clients de Réseau Dynamique un service après-vente inégalable. Remettez l'entretien de votre camion ou de votre flotte entre les mains de techniciens formés directement par les fabricants.</p>
+                        <p>Disponibles en un seul endroit au Centre-du-Québec, venez faire l'essai de nos camions d'occasion.</p>
+                    </div>
+                </div>
+                <div class="FacetedExplorerClear GpcClear"></div>
                 <div class="titrepage">
-                    <h1>Camions</h1>
+                    <h1>Inventaire Complet</h1>
                 </div>
                 <br />
                 <div class="FacetedExplorer">
-
-
                     <!-- Results Content -->
                     <div  class="GpcFacetedResults defaultFacet">
 
@@ -47,28 +57,48 @@
 
                             <div v-for="(record,index) in item.records" class="FacetedResultTemplate DefaultResultContainer">
                                 <a href="../details_new.php?id=Mjc3Ng==">
-                                    <div class="ResultImage">                
-                                        <img :src="record.pictures[0]" title="" alt="">
+                                    <div class="rectangle"></div>
+                                    <div class="ResultImage">
+                                        <img :src="record.pictures[0]" class="imagespec" title="" alt="">                
                                     </div>
                                     <div class="ResultContent">
                                         <div class="ResultContentProductName">
                                             <h2>
-                                                <span class="ProductBrokerType_String">{{record.marque}}</span>
-                                                <span>&nbsp;</span>
-                                                <span class="ProductBrokerType_String">{{record.Model}}</span>
-                                                <span>&nbsp;</span>
-                                                <span>
-                                                    <span class="ProductBrokerType_String">6 x 4</span>
-                                                </span>
+                                                <span v-html="record.beauTitre"></span> <!--Titre  de camion-->
                                             </h2>
                                         </div>
                                         <div class="customField">
                                             <div class="forBroker label zoneForBroker">
-                                                <span class="forBroker label spanForBroker">No d'inventaire : </span>
-                                                <span class="ProductBrokerType_String">{{record.stock}}</span>
+                                                <span class="forBroker label spanForBroker">No série  : </span>
+                                                <span class="ProductBrokerType_String">{{ record.noSerie }}</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="customField">
+                                            <div class="forBroker label zoneForBroker">
+                                                <span class="forBroker label spanForBroker">Modèle  : </span>
+                                                <span class="ProductBrokerType_String">{{ record.modele }}</span>
                                             </div>
                                         </div>
                                         <div class="customField">
+                                            <div class="forBroker label zoneForBroker">
+                                                <span class="forBroker label spanForBroker">No d'inventaire : </span>
+                                                <span class="ProductBrokerType_String">{{ record.noInventaire }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="customField">
+                                            <div class="forBroker">
+                                                <span class="forBroker">Couleur : </span>
+                                                <span class="ProductBrokerType_String">{{record.color}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="customField">
+                                            <div class="forBroker">
+                                                <span class="forBroker">Kilométrage  :</span>
+                                                <span class="ProductBrokerType_String">{{ record.intMillage }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="customField" v-if="record.engine">
                                             <div class="forBroker">
                                                 <span class="forBroker">Moteur : </span>
                                                 <span class="ProductBrokerType_String">{{record.engine}}</span>
@@ -99,21 +129,14 @@
                     </div>
                 </div>
                 <div class="FacetedExplorerClear GpcClear"></div>
-                <div class="bottom-info" style="margin-top: 2em;">
-                    <p>Réseau Dynamique est la référence dans le domaine des camions lourds et des tracteurs terminaux d'occasion.</p>
-                    <h2>Pourquoi choisir un camion d'occasion chez Réseau Dynamique?</h2>
-                    <p>Avant d'être mis en vente, tous les véhicules d'occasion de Réseau Dynamique ont été inspectés minutieusement et réparés. Revendeur de camions de toutes classes, vous êtes assuré de trouver un camion de grande qualité répondant en tous points à vos besoins d'affaires.</p>
-                    <p>Détaillant de camions neufs de marque International, Réseau Dynamique offre des garanties prolongées du manufacturier sur les composants majeurs de ses véhicules. Les services d'experts des mécaniciens accrédités International offrent également la reconstruction complète des composants majeurs.</p>
-                    <h2>Le service après-vente : la force d'un réseau</h2>
-                    <p>Avec Réseau Dynamique, vous faites un choix sensé pour le présent et le futur. Les&nbsp;<a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>" target="_self">19 centres de pièces et services du Réseau</a> dispersés sur le territoire québécois assurent aux clients de Réseau Dynamique un service après-vente inégalable. Remettez l'entretien de votre camion ou de votre flotte entre les mains de techniciens formés directement par les fabricants.</p>
-                    <p>Disponibles en un seul endroit au Centre-du-Québec, venez faire l'essai de nos camions d'occasion.</p>
-                </div>
-            </div>
-            <div class="FacetedExplorerClear GpcClear"></div>
+                
             
         </div>
     </div>
     </form>
+    <!--multi-item special product-->
+    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?> 
+    <!--footer-->
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>    
     
     <div class="loading-overlay">Loading&#8230;</div>
