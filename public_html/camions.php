@@ -56,46 +56,32 @@
                         <div id="list" class="GpcResultItemWrapper results-container">
 
                             <div v-for="(record,index) in item.records" class="FacetedResultTemplate DefaultResultContainer">
-                                <a href="../details_new.php?id=Mjc3Ng==">
+                                <a :href="getHref(record.id)">
                                     <div class="rectangle"></div>
                                     <div class="ResultImage">
                                         <img :src="record.pictures[0]" class="imagespec" title="" alt="">                
                                     </div>
                                     <div class="ResultContent">
                                         <div class="ResultContentProductName">
-                                            <h2>
-                                                Titre du camion <!--Titre  de camion-->
-                                            </h2>
+                                            <h2>{{ record.marque }}<br />{{ record.Model }}  <!--Titre  de camion--></h2>
                                         </div>
                                         <div class="customField">
                                             <div class="forBroker label zoneForBroker">
                                                 <span class="forBroker label spanForBroker">No série  : </span>
-                                                <span class="ProductBrokerType_String">{{ record.noSerie }}</span>
+                                                <span class="ProductBrokerType_String">{{ record.serial }}</span>
                                             </div>
                                         </div>
                                         <hr>
                                         <div class="customField">
                                             <div class="forBroker label zoneForBroker">
                                                 <span class="forBroker label spanForBroker">Modèle  : </span>
-                                                <span class="ProductBrokerType_String">{{ record.modele }}</span>
+                                                <span class="ProductBrokerType_String">{{ record.Model }}</span>
                                             </div>
                                         </div>
                                         <div class="customField">
                                             <div class="forBroker label zoneForBroker">
                                                 <span class="forBroker label spanForBroker">No d'inventaire : </span>
-                                                <span class="ProductBrokerType_String">{{ record.noInventaire }}</span>
-                                            </div>
-                                        </div>
-                                        <div class="customField">
-                                            <div class="forBroker">
-                                                <span class="forBroker">Couleur : </span>
-                                                <span class="ProductBrokerType_String">{{record.color}}</span>
-                                            </div>
-                                        </div>
-                                        <div class="customField">
-                                            <div class="forBroker">
-                                                <span class="forBroker">Kilométrage  :</span>
-                                                <span class="ProductBrokerType_String">{{ record.intMillage }}</span>
+                                                <span class="ProductBrokerType_String">{{ record.stock }}</span>
                                             </div>
                                         </div>
                                         <div class="customField" v-if="record.engine">
@@ -130,7 +116,6 @@
                 </div>
                 <div class="FacetedExplorerClear GpcClear"></div>
                 
-            
         </div>
     </div>
     </form>
@@ -153,6 +138,7 @@ function init(){
     var vm = new Vue({
         el: '#list',
         data: {
+            isNew:0,
             errorMessage: "",
             item: {}
         },
@@ -173,14 +159,38 @@ function init(){
                 let n = 0;
                 let isNew = (window.location.search.match(new RegExp('[?&]' + 'new' + '=([^&]+)')) || [,null])[1];
                 if(isNew){
+                    this.isNew = 1;
                     n = 1;
+                }
+
+                let marque = "";
+                let m = (window.location.search.match(new RegExp('[?&]' + 'marque' + '=([^&]+)')) || [,null])[1];
+                if(m){
+                    switch (m.trim().toLowerCase()) {
+                        case "international": 
+                            marque = "International";
+                            break;
+                        case "kalmar": 
+                            marque = "Kalmar";
+                            break;
+                        case "isuzu": 
+                            marque = "Isuzu";
+                            break;
+                        default:
+                            break;
+                    }
                 }
 
                 // Show loading spinner
                 $('.loading-overlay').show();
 
                 try {
-                    let params = '{"customCriteria":"","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[{"field":"marque","value":"International"},{"field":"modele","value":"Prostar"}]}';
+                    
+                    let params = '{"field":"","value":"","customCriteria":" (marque=\\\"international\\\" AND DisplayOnWebSite=1) or (marque=\\\"isuzu\\\" AND DisplayOnWebSite=1) or marque=\\\"kalmar\\\" AND ","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[]}'; //,{"field":"modele","value":"Prostar"}
+
+                    if(marque){
+                        params = '{"customCriteria":"","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[{"field":"marque","value":"' + marque + '"}]}'; //,{"field":"modele","value":"Prostar"}
+                    }
 
                     const response = await fetch(api + '?n=' + n + '&params=' + encodeURI(params) );
                     const data = await response.json()
@@ -193,6 +203,13 @@ function init(){
 
                 // Hide loading spinner
                 $('.loading-overlay').hide();
+            },
+            getHref(id){
+                let url = "/details_new.php?"
+                if(this.isNew == 1){
+                    url = url + "new=1&"
+                }
+                return url + "id=" + encodeURI(btoa(id));
             }
         }
     })
