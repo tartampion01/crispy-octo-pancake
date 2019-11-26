@@ -153,8 +153,8 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                         <li>
                             <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires); ?>">pièces</a>
                             <ul class="hidden">
-                                <li><a href="https://www.nexpart.com/login.php">commande en ligne</a></li>
-                                <li><a href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_boutiqueEnLigne); ?>">Boutique en ligne</a></li>
+                                <li><a href="https://www.nexpart.com/login.php" target="_blank">commande en ligne</a></li>
+                                <li><a href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_boutiqueEnLigne); ?>" target='_blank' >Boutique en ligne</a></li>
                             </ul>
                         </li>
                         <li>
