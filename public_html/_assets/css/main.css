@@ -158,7 +158,7 @@ button, input {
   }
 
     button, input[type="button"], input[type="reset"], input[type="submit"]:hover {
-      background: #000;
+      background: #2A2A2A;
     }
 
   input[type="checkbox"], input[type="radio"] {
@@ -286,8 +286,9 @@ a {
 }
 
   .btnOrange:hover {
-    background: #fba976;
+    background: #2a2a2a;
     color: #fff;
+text-decoration: none;
   }
 
   .btnOrange:visited {
@@ -715,7 +716,8 @@ a {
 }
 
   .btnToggle a {
-    background: rgb(0, 145, 214);
+    /*background: rgb(0, 145, 214);*/
+    background: rgb(231, 139, 64);
     font: 700 1.8em/3em 'calibri', Arial, Helvetica, sans-serif;
     padding: 0px 22px;
     color: rgb(255, 255, 255);
@@ -727,11 +729,18 @@ a {
   }
 
     .btnToggle a:hover {
+      /*
       background: rgb(4, 137, 200);
+      */
+      background: rgb(238, 124, 30);
+    
     }
 
     .btnToggle a::before {
+      /*
       background: rgb(9, 125, 180);
+     */
+     background: rgb(238, 124, 30);
       top: 0px;
       width: 70px;
       height: 100%;
@@ -855,7 +864,7 @@ margin-top: 36px;
     }
 
       .contenu h2 a.buttonBon:hover, .contenu h2 a.buttonPieces:hover {
-        background-color: #F5975E;
+        background-color: #2A2A2A;text-decoration: none;
       }
 
 .contenu h3 {
@@ -2023,13 +2032,17 @@ UL.store-list {
       color: #fff;
       font-size: 0.857em;
       line-height: 2em;
+      background: #f37121;
+      /*
       background: #024da1;
+      */
       display: inline-block;
       padding: 0px 6%;
     }
 
       .concession .voir a:hover {
-        background: #0091d6;
+        background: #2A2A2A;
+        text-decoration: none;
       }
 
 .blocPhoto {

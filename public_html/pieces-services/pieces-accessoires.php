@@ -21,7 +21,7 @@
                             <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">votre succursale </a>
                              et un des techniciens du département des pièces de Réseau Dynamique vous aidera à trouver ce dont vous avez besoin.</p>
                         <p>
-                            <a class="btnOrange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_fleetrite); ?>">Nos pièces Fleetrite</a>
+                            <a class="btnOrange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_fleetrite); ?>" target='_blank' >Nos pièces Fleetrite</a>
                             <a class="btnOrange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Nextpart,page::InscriptionNextPart); ?>">S'inscrire à NextPart</a>
                             <a class="btnOrange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">Contactez votre succursale</a>
                         </p>
