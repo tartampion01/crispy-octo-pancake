@@ -157,8 +157,10 @@
         display: inline;
         margin: -5px 0px 0px 0px;
         text-align: center;
+        
     }
-
+   
+ 
 .menudestop li li li:hover h4 a {
     margin-right: 0px;
     font-size: 14px;
@@ -167,6 +169,7 @@
     padding-bottom: 0px;
     font-weight: 900;
     text-align: center;
+  
 }
 /* menu sticky */
 #navbar {
@@ -396,7 +399,7 @@ text-decoration:underline;
         margin: 0px 20px 20px 0px;
         float: right;
     }
-.buttonwebsite {
+/*.buttonwebsite {
         padding: 10px;
         background-color: lightgray;
         -webkit-border-radius: 4px;
@@ -406,7 +409,7 @@ text-decoration:underline;
         color: #000;
         font-weight: 400;
     }
-    
+   
 .buttonwebsite:hover {
             background-color: rgb(213,94,36);
             -webkit-box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
@@ -414,7 +417,22 @@ text-decoration:underline;
             text-decoration: none;
             color: white;
             cursor:pointer;
+}*/
+.buttonwebsite {
+        padding: 11px;
+        background-color: rgb(213,94,36);
+      
+        text-transform: uppercase;
+        color: #fff;
+        
+    }
+   
+.buttonwebsite:hover {
+            background-color: rgb(5, 5, 5);
+          
+            cursor:pointer;
 }
+
 .logoleft{
     padding: 10px 0px;
 }
@@ -452,7 +470,6 @@ text-decoration:underline;
 .columnphoto {
     float: left;
     width: 33%;
-    paddi ng: 5px 5px 0px 5px;
 }
 
     /* Style the images inside the grid */
@@ -1376,8 +1393,8 @@ All this is done for any sub-level being entered.
     background: #90b912;
 }
 
-    .demo-4 .dl-menuwrapper button:hover,
-    .demo-4 .dl-menuwrapper button.dl-active,
-    .demo-4 .dl-menuwrapper ul {
-        background: #79a002;
-    }
+.demo-4 .dl-menuwrapper button:hover,
+.demo-4 .dl-menuwrapper button.dl-active,
+.demo-4 .dl-menuwrapper ul {
+    background: #79a002;
+}
