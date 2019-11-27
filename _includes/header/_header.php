@@ -31,6 +31,7 @@
     <meta content="<?PHP RD_Header::getMetaContent($NOMPAGE); ?>" name="description" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />    
     <meta http-equiv="Content-type"  content="text/html;charset=UTF-8" />    
+    <meta name="format-detection" content="telephone=no">
     <link rel='canonical' href='<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>' />
         
     <!-- Global Site Tag (gtag.js) - Googlemas-age Analytics -->
