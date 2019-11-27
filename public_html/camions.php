@@ -44,7 +44,7 @@ var _N = 0;
     float: right;
     padding-top: 5px;
     padding-bottom: 5px;
-}
+  } 
 
 .pagination a {
     color: black;
@@ -52,6 +52,9 @@ var _N = 0;
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
+    position:relative;
+     top:10px;
+
 }
 
 .pagination button {

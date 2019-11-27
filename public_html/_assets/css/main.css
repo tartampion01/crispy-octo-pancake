@@ -2384,7 +2384,7 @@ UL.store-list {
   }
 
   .GpcResultPager a:hover, .GpcResultPager a.selected, .GpcDisplayOption:hover, .GpcDisplayOption.selected {
-    background-color: #0091d6;
+    background-color: rgb(213, 94, 36);
     color: #fff;
   }
 
