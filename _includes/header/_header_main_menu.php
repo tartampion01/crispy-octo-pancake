@@ -30,7 +30,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                     <ul>
                    <li id="logo_sticky" class="addlogo"><a href="<?php echo RD_PageLink::getHref(folder::Root,page::Accueil); ?>" target="_self"><img src="/../_assets/images/wx3/logo-inter.png" alt="Réseau Dynamique" /></a></li>
                         <li class="">
-                            <a href="/camions.php?new=1">Camions</a>
+                            <a href="">Camions</a>
                             <ul class="hidden">
                                 <li class="">
                                     <a href="/camions.php?new=1&marque=international">International</a>
@@ -151,14 +151,15 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             </ul>
                         </li>
                         <li>
-                            <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires); ?>">pièces</a>
+                            <a href="">pièces</a>
                             <ul class="hidden">
+                                <li><a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires); ?>" target="_blank">Pièces et Accessoires</a></li>
                                 <li><a href="https://www.nexpart.com/login.php" target="_blank">commande en ligne</a></li>
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_boutiqueEnLigne); ?>" target='_blank' >Boutique en ligne</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceRoutier); ?>">Services</a>
+                            <a href="">Services</a>
                             <ul class="hidden">
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceRoutier); ?>">Routier</a></li>
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesServiceApresVente); ?>">Après-Vente</a></li>
@@ -167,7 +168,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             </ul>
                         </li>
                         <li>
-                            <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>">Véhicule Utilitaire</a> 
+                            <a href="">Véhicule Utilitaire</a> 
                             <ul class="hidden">
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>">Mini-excavatrices</a></li>
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesTransporteursToutTerrain); ?>">Transporteurs tout-terrain</a></li>
@@ -176,14 +177,14 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             </ul>                           
                         </li>
                         <li>
-                            <a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoLanding); ?>">Circulaire</a>
+                            <a href="">Circulaire</a>
                             <ul >
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoLanding); ?>">Promotion</a></li>
                                 <li style="min-width:230px;"><a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>">Circulaire complet</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Apropos); ?>">À Propos</a>
+                            <a href="">À Propos</a>
                             <ul class="hidden">
                                 <li>
                                     <a href="<?php echo RD_PageLink::getHref(folder::Root,page::Apropos); ?>">Notre Entreprise</a>
@@ -198,7 +199,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             </ul>
                         </li>
                         <li>
-                            <a href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">Nous Joindre</a>
+                            <a href="">Nous Joindre</a>
                             <ul class="hidden">
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">Concessionaire</a></li>
                                 <li style="min-width:230px;"><a href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">Point de service</a></li>
@@ -331,6 +332,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             <li>
                                 <a href="#">Pièces</a>
                                 <ul class="dl-submenu">
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires); ?>" target="_blank">Pièces et Accessoires</a></li>
                                     <li><a href="https://www.nexpart.com/login.php">commande en ligne</a></li>
                                     <li><a href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_boutiqueEnLigne); ?>">Boutique en ligne</a></li>
                                 </ul>

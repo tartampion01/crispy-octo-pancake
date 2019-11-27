@@ -10,26 +10,26 @@
     <section class="grid grid-pad">
         <div class="col-1-1 logo mobile-col-1-1">
             <div class="col-1-4 mobile-col-1-2 item">
-                <img class="" src="_assets/images/wx3/logo-1.png" alt="" />
                 <a class="" href="https://www.internationaltrucks.com/shopping-tools/build-your-own">
+                    <img class="" src="_assets/images/wx3/logo-1.png" alt="" />
                     <h3>Configurer<br />votre véhicule</h3>
                 </a>
             </div>
             <div class="col-1-4 mobile-col-1-2 item">
-                <img src="_assets/images/wx3/logo-2.png" alt="" />
                 <a href="https://www.nexpart.com/login.php">
+                    <img src="_assets/images/wx3/logo-2.png" alt="" />
                     <h3>Pièces</h3>
                 </a>
             </div>
             <div class="col-1-4 mobile-col-1-2 item">
-                <img src="_assets/images/wx3/logo-3.png" alt="" />
-                <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">
+                <a href="/camions.php?new=1">
+                    <img src="_assets/images/wx3/logo-3.png" alt="" />
                     <h3 class="topdivision15">Inventaire</h3>
                 </a>
             </div>
             <div class="col-1-4 mobile-col-1-2 item">
-                <img src="_assets/images/wx3/logo-4.png" alt="" />
                 <a href="<?php echo RD_PageLink::getHref(folder::Root,page::ObtenirPrix); ?>">
+                    <img src="_assets/images/wx3/logo-4.png" alt="" />
                     <h3>Demande<br />De Prix</h3>
                 </a>
             </div>
@@ -40,22 +40,22 @@
         <div class="grid">
             <div class="col-1-1 mobile-col-1-1">
                 <div class="col-1-2 mobile-col-1-2 image-box">
-                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">
+                    <a href="/camions.php?new=1&marque=international">
                         <img src="_assets/images/wx3/img-international.jpg" alt="" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box">
-                    <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>">
+                    <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDoepker); ?>">
                         <img src="_assets/images/wx3/img-remorque.jpg" alt="" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box" style="margin: -5px 0px 0px 0px;">
-                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsIsuzu); ?>">
+                    <a href="/camions.php?new=1&marque=isuzu"">
                         <img src="_assets/images/wx3/img-isuzu.jpg" alt="" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box" style="margin: -5px 0px 0px 0px;">
-                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsOttawaKalmar); ?>">
+                    <a href="/camions.php?new=1&marque=kalmar">
                         <img src="_assets/images/wx3/img-inventaire.jpg" alt="" />
                     </a>
                 </div>
