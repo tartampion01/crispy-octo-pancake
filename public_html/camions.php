@@ -3,80 +3,12 @@
 var _N = 0;
 </script>
 <script src="_assets/js/camions-rest.js" type="text/javascript"></script>
-<style>
-.bgfiltre {
-    background-color: dimgray;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50px;
-}
-
-.filterZone h1 {
-    margin: 0;
-}
-
-.container-filter {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.filter-item {
-    width: 30%;
-    float: left;
-    display: inline;
-    padding: 50px 20px 50px 20px;
-}
-
-.filter-item a {
-    color: black;
-    text-decoration: none;
-}
-
-.resultsearch {
-    padding: 10px;
-    float: left;
-}
-
-.pagination {
-    display: inline-block;
-    float: right;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-}
-
-.pagination button {
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.pagination a.active {
-    background-color: rgb(213, 94, 36);
-    color: white;
-}
-
-.pagination a:hover:not(.active) {
-    background-color: rgb(213, 94, 36);
-}
-</style>
 
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
         <div class="">
             <div class="content camions-occasions">
-                <div class="grid grid-pad">
+                <div class="grid>
                     <div class="bottom-info grid" style="margin-top: 2em; ">
                         <div class="grid-pad">
                             <h3 class="orange"
@@ -110,8 +42,8 @@ var _N = 0;
                         <h1>Inventaire Complet</h1>
                     </div> -->
 
-                    <div class="filterZone">
-                        <div id="zoneCriteria" class="grid hide-on-mobile" style="height:75px;width:100%;">
+                    <div class="filterZone grid">
+                        <div id="zoneCriteria" class="grid-pad  hide-on-mobile" style="height:75px;width:100%;">
                             <h1>Outils de recherche : </h1> <!-- class="" style="padding-top:5px;" -->
                             <span style="color:rgb(213,94,36); float:left; display:inline-block;"
                                 onclick="$(this).remove()">
@@ -120,7 +52,7 @@ var _N = 0;
                         </div>
                         <!--Menu filtre-->
                         <nav class="bgfiltre hide-on-mobile">
-                            <div class="menudestop grid grid-pad">
+                            <div class="menudestop grid-pad">
                                 <ul>
                                     <li>
                                         <a href="#">Marque</a>
@@ -314,15 +246,15 @@ var _N = 0;
                     </div>
 
                     <br />
-                    <div class="FacetedExplorer">
+                    <div class="FacetedExplorer grid-pad">
                         <!-- Results Content -->
                         <div class="GpcFacetedResults defaultFacet">
 
-                            <div class="GpcPagerCountSelector">
-                                <span class="GpcItemsPerPageText">Afficher par page</span>
-                                <div data-value="12" class="limit-per-page GpcDisplayOption selected">12</div>
-                                <div data-value="24" class="limit-per-page GpcDisplayOption">24</div>
-                                <div data-value="48" class="limit-per-page GpcDisplayOption">48</div>
+                            <div class="GpcPagerCountSelector col-1-1 grid-pad">
+                                <div data-value="48" class="limit-per-page GpcDisplayOption" style="float:right;">48</div>
+                                <div data-value="24" class="limit-per-page GpcDisplayOption" style="float:right;">24</div>
+                                <div data-value="12" class="limit-per-page GpcDisplayOption selected" style="float:right;">12</div>
+                                <span class="GpcItemsPerPageText" style="float:right;">Afficher par page</span>
                             </div>
                             <div class="GpcPagedResultCount" style="display: none;">
                                 <span class="GpcCountPrefixText">Résultats</span>
@@ -330,50 +262,51 @@ var _N = 0;
                                 <span class="GpcBetweenCountText">sur</span>
                                 <span class="GpcPagedResultTotalCount">4</span>
                             </div>
-                            <div class="GpcResultPager">
+                            <div class="GpcResultPager col-1-1">
                                 <ul class="pagination" id="pagination"></ul>
                             </div>
-                            <div class="orderBy clear">
-                                <div class="libelle">
-                                    Classer par :
-                                </div>
-                                <div class="GpcResultOrderSelector">
+                            <div class="orderBy clear col-1-1">
+                                <div class="GpcResultOrderSelector" style="float:right;">
                                     <select name="SearchSorting" class="search-sorting"
                                         style="font-size: .8em; line-height: 3em; padding: .15em;">
                                         <option value="asc">Nom ascendant</option>
                                         <option value="desc">Nom descendant</option>
                                     </select>
                                 </div>
+                                <div class="libelle" style="float:right;">
+                                    Classer par :
+                                </div>
                             </div>
 
-                            <div id="list" style="float:left;" class=""> <!-- GpcResultItemWrapper results-container -->
+                            <div id="list" style="" class=""> <!-- GpcResultItemWrapper results-container -->
 
                                 <div class="grid">
                                     <div v-for="(record,index) in item.records" class="container-filter">
                                         <!--item -->
-                                        <div class="filter-item">
+                                        <div class="filter-item col-1-3">
                                             <a :href="getHref(record.id)">
                                                 <div class="rectangle"></div>
                                                 <div class="image-box">
-                                                    <img class="col-1-1 mobile-col-1-1 imagespec"
+                                                    <img 
                                                         :src="record.pictures[0]"
                                                         :title="record.marque + ' - ' + record.Model"
-                                                        :alt="record.marque + ' - ' + record.Model" />
+                                                        :alt="record.marque + ' - ' + record.Model"
+                                                        class="imagespec col-1-1"
+                                                    />
                                                 </div>
 
-                                                <div class="col-1-1 topdivision40">
-                                                    <h2>{{ record.marque }} - {{ record.Model }}</h2>
+                                                <div class="topdivision40" style="margin-top:15px;">
+                                                    <h2 style="font-weight:700;">{{ record.marque }} - {{ record.Model }}</h2>
                                                 </div>
                                             </a>
 
-                                            <p class="inline">
-                                                <h4 class="inline topdivision20 nobold">numéro série :
-                                                    {{ record.serial }}</h4>
-                                            </p>
-                                            <hr class="col-1-1" />
+                                            <div class="inline col-1-1 borderdown" style="margin-top:30px;">
+                                                <h4 class="inline topdivision20 nobold col-1-2">numéro série :</h4>
+                                                <p class="resultatbdfilter">{{ record.serial }}</span>
+                                            </div>
                                             <!--correction width-->
-                                            <div class="col-1-1 topdivision30 mobile-col-1-1">
-                                                <h3 class="mobile-col-1-1">
+                                            <div class=" col-1-1 topdivision30 mobile-col-1-1" style="margin-top:40px;">
+                                                <h3 class="mobile-col-1-1" style="font-weight:700;">
                                                     Description :
                                                 </h3>
                                                 <p class="mobile-col-1-1 justify">
@@ -383,12 +316,18 @@ var _N = 0;
                                                     error sit.
                                                 </p>
                                                 <div class="col-1-1 topdivision15 mobile-col-1-1">
-                                                    <p class="uppercases inline floatleft">Modèle : {{ record.Model }}
-                                                    </p>
-                                                    <p class="uppercases inline floatleft">No d'inventaire :
-                                                        {{ record.stock }}</p>
-                                                    <p class="bold uppercases inline floatright">Moteur :
-                                                        {{record.engine}}</p>
+                                                    <div class="uppercases inline floatleft col-1-1">
+                                                        <h4 class="col-1-2">Modèle :</h4> 
+                                                        <p class="resultatbdfilter">{{ record.Model }}</p>
+                                                    </div>
+                                                    <div class="uppercases inline floatleft col-1-1">
+                                                        <h4 class="col-1-2">No d'inventaire :</h4> 
+                                                        <p class="resultatbdfilter">{{ record.stock }}</p>
+                                                    </div>
+                                                    <div class="uppercases inline floatleft col-1-1">
+                                                        <h4 class="col-1-2">Moteur :</h4> 
+                                                        <p class="resultatbdfilter"> {{record.engine}}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

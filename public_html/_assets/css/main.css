@@ -2371,7 +2371,7 @@ UL.store-list {
   }
 
   .GpcResultPager a:hover, .GpcResultPager a.selected, .GpcDisplayOption:hover, .GpcDisplayOption.selected {
-    background-color: #0091d6;
+    background-color: rgb(213,94,36);
     color: #fff;
   }
 
@@ -2576,10 +2576,6 @@ li[disabled] > a, a[disabled] {
 .ResultImage {
   width: 100%;
   overflow: hidden;
-}
-.imagespec{
-  object-fit:cover; 
-  height: 350px;
 }
 
 .FacetedResultTemplate:hover .ResultImage img {
