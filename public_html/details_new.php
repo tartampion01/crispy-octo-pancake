@@ -2,7 +2,7 @@
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
 
 <body class="body"><?php RD_Utils::write_Gtag() ?>
-<form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
+<form role="form" method="POST" ><!-- <?php echo $NOMPAGE; ?> -->
         <div id="detail" class="produit">
             <div class="grid grid-pad">
                 <!--top-->
@@ -15,10 +15,13 @@
                             <a name="hyperlien" onclick="window.print();" href="javascript:void(0);" target="_self"><img class="" style="display:inline-block; float:right; padding:5px;" src="_assets/images/wx3/printbtn.png" alt="print logo" /></a>
                             <button class="rightbutton buttonwebsite mobile-col-1-1" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
                                 Obtenir un prix
-                            </button>                       
-                            <button class="rightbutton buttonwebsite mobile-col-1-1" name="orange" href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeFinancement) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">
+                            </button>
+                                                   
+                            <button class="rightbutton buttonwebsite mobile-col-1-1" name="orange" :href="getUrlFinancement(item.id)" target="_self">
                                 Demande de financement
                             </button>
+                            <!-- <a :href="getUrlFinancement(item.id)" target="_self">Demande de financement</a> -->
+
                             <hr class="hide-on-mobile" style="margin-top:50px;" />
                         <div class="col-1-1 topnavdetail mobile-col-1-1">
                             <h3 class="subnavdescription">
@@ -458,6 +461,7 @@ function init(){
         el: '#detail',
         data: {
             MainPicture: {src:null, alt:""},
+            isNew : 0,
             errorMessage: "",
             item: {}
         },
@@ -475,13 +479,17 @@ function init(){
             setPicture(index){
 
                 this.MainPicture = {src:this.item.pictures[index],alt:"Reseau dynamique photo camion"}
-            },                
+            },
+            getUrlFinancement(id) {
+                    return "/demande-financement.php?id=" + encodeURI(btoa(id)) + "&n=" + encodeURI(btoa(this.isNew)) ;
+                },                
             async readData() {
 
                 let api = 'http://reseaudynamique.com/api/singleUsedTruck_.php';
                 let isNew = (window.location.search.match(new RegExp('[?&]' + 'new' + '=([^&]+)')) || [,null])[1];
                 if(isNew){
                     api = 'http://reseaudynamique.com/api/singleNewTruck_.php';
+                    this.isNew = 1;
                 }
 
                 let id = (window.location.search.match(new RegExp('[?&]' + 'id' + '=([^&]+)')) || [,null])[1];
