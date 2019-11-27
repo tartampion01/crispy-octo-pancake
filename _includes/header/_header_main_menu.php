@@ -30,10 +30,10 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                     <ul>
                    <li id="logo_sticky" class="addlogo"><a href="<?php echo RD_PageLink::getHref(folder::Root,page::Accueil); ?>" target="_self"><img src="/../_assets/images/wx3/logo-inter.png" alt="Réseau Dynamique" /></a></li>
                         <li class="">
-                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">Camions</a>
+                            <a href="/camions.php?new=1">Camions</a>
                             <ul class="hidden">
                                 <li class="">
-                                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>">International</a>
+                                    <a href="/camions.php?new=1&marque=international">International</a>
                                     <ul class="hidden">
                                         <li class="">
                                             <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>">série CV</a>
@@ -137,16 +137,16 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                     </ul>
                                 </li>
                                 <li class="">
-                                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsIsuzu); ?>">Isuzu</a>
+                                    <a href="/camions.php?new=1&marque=isuzu">Isuzu</a>
                                 </li>
                                 <li class="">
-                                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsOttawaKalmar); ?>">Ottawa Kalmar</a>
+                                    <a href="/camions.php?new=1&marque=kalmar">Ottawa Kalmar</a>
                                 </li>
                                 <li class="">
-                                    <a href="<?php echo RD_PageLink::getHref(folder::Root,page::CamionsOccasion) ?>">Occasion</a>
+                                    <a href="/camions.php">Occasion</a><!--  <?php echo RD_PageLink::getHref(folder::Root,page::CamionsOccasion) ?> -->
                                 </li>
                                 <li>
-                                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>">Inventaire</a>
+                                    <a href="/camions.php?new=1">Inventaire</a>
                                 </li>
                             </ul>
                         </li>
