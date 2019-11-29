@@ -10,24 +10,24 @@
     <section class="grid grid-pad">
         <div class="col-1-1 logo mobile-col-1-1">
             <div class="col-1-4 mobile-col-1-2 item">
-                <a class="" href="https://www.internationaltrucks.com/shopping-tools/build-your-own">
+                <a class="" href="https://www.internationaltrucks.com/shopping-tools/build-your-own" target="_blank">
                     <img class="" src="_assets/images/wx3/logo-1.png" alt="" />
                     <h3>Configurer<br />votre véhicule</h3>
                 </a>
             </div>
             <div class="col-1-4 mobile-col-1-2 item">
-                <a href="https://www.nexpart.com/login.php">
+                <a href="https://www.nexpart.com/login.php" target="_blank">
                     <img src="_assets/images/wx3/logo-2.png" alt="" />
                     <h3>Pièces</h3>
                 </a>
             </div>
-            <div class="col-1-4 mobile-col-1-2 item">
+            <div class="col-1-4 mobile-col-1-2 item" target="_blank">
                 <a href="/camions.php?new=1">
                     <img src="_assets/images/wx3/logo-3.png" alt="" />
                     <h3 class="topdivision15">Inventaire</h3>
                 </a>
             </div>
-            <div class="col-1-4 mobile-col-1-2 item">
+            <div class="col-1-4 mobile-col-1-2 item" target="_blank">
                 <a href="<?php echo RD_PageLink::getHref(folder::Root,page::ObtenirPrix); ?>">
                     <img src="_assets/images/wx3/logo-4.png" alt="" />
                     <h3>Demande<br />De Prix</h3>

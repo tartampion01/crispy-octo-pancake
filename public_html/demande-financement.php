@@ -2,8 +2,8 @@
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="">
-        <div class="content">
-            <div class="shrink">
+        <div class="content wrap">
+            <div class="grid grid-pad">
                 <div class="titrepage">
                     <h1>
                         <span>DEMANDE DE FINANCEMENT</span>
