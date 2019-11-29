@@ -3,6 +3,80 @@
 var _N = 0;
 </script>
 <script src="_assets/js/camions-rest.js" type="text/javascript"></script>
+<<<<<<< HEAD
+=======
+<style>
+.bgfiltre {
+    background-color: dimgray;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50px;
+}
+
+.filterZone h1 {
+    margin: 0;
+}
+
+.container-filter {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filter-item {
+    width: 30%;
+    float: left;
+    display: inline;
+    padding: 50px 20px 50px 20px;
+}
+
+.filter-item a {
+    color: black;
+    text-decoration: none;
+}
+
+.resultsearch {
+    padding: 10px;
+    float: left;
+}
+
+.pagination {
+    display: inline-block;
+    float: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  } 
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    position:relative;
+     top:10px;
+
+}
+
+.pagination button {
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pagination a.active {
+    background-color: rgb(213, 94, 36);
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: rgb(213, 94, 36);
+}
+</style>
+>>>>>>> 73a3c9940b0cc91096b03b66142f111857f9d395
 
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">

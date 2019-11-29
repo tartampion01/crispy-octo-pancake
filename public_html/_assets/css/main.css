@@ -290,12 +290,12 @@ a {
     color: #fff;
 text-decoration: none;
   }
-
+/*
   .btnOrange:visited {
     background-color: rgb(243, 113, 33);
     color: #fff;
   }
-
+*/
 .leftArrow {
   width: 40px;
   height: 40px;
@@ -717,7 +717,7 @@ text-decoration: none;
 
   .btnToggle a {
     /*background: rgb(0, 145, 214);*/
-    background: rgb(231, 139, 64);
+    background: #777;
     font: 700 1.8em/3em 'calibri', Arial, Helvetica, sans-serif;
     padding: 0px 22px;
     color: rgb(255, 255, 255);
@@ -732,7 +732,7 @@ text-decoration: none;
       /*
       background: rgb(4, 137, 200);
       */
-      background: rgb(238, 124, 30);
+      background: dimgray;
     
     }
 
@@ -740,7 +740,7 @@ text-decoration: none;
       /*
       background: rgb(9, 125, 180);
      */
-     background: rgb(238, 124, 30);
+     background: dimgray;
       top: 0px;
       width: 70px;
       height: 100%;
@@ -2384,7 +2384,11 @@ UL.store-list {
   }
 
   .GpcResultPager a:hover, .GpcResultPager a.selected, .GpcDisplayOption:hover, .GpcDisplayOption.selected {
+<<<<<<< HEAD
     background-color: rgb(213,94,36);
+=======
+    background-color: rgb(213, 94, 36);
+>>>>>>> 73a3c9940b0cc91096b03b66142f111857f9d395
     color: #fff;
   }
 
