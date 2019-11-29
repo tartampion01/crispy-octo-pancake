@@ -16,11 +16,9 @@
                             <button class="rightbutton buttonwebsite mobile-col-1-1" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
                                 Obtenir un prix
                             </button>
-                                                   
-                            <button class="rightbutton buttonwebsite mobile-col-1-1" name="orange" :href="getUrlFinancement(item.id)" target="_self">
-                                Demande de financement
-                            </button>
-                            <!-- <a :href="getUrlFinancement(item.id)" target="_self">Demande de financement</a> -->
+                            <a :href="getUrlFinancement(item.id)" target="_self">
+                                <button type="button" class="rightbutton buttonwebsite mobile-col-1-1" name="orange" >Demande de financement</button>
+                            </a>                       
 
                             <hr class="hide-on-mobile" style="margin-top:50px;" />
                         <div class="col-1-1 topnavdetail mobile-col-1-1">
