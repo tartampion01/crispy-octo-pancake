@@ -36,7 +36,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                     <a href="/camions.php?new=1&marque=international">International</a>
                                     <ul class="hidden">
                                         <li class="">
-                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>">série CV</a>
+                                            <a href="/camions.php?new=1&marque=international">série CV</a>
                                             <ul class="hidden">
                                                 <li class="">
                                                     <img src="../../_assets/images/wx3/CV-navigation.jpg" alt="" />
@@ -47,13 +47,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/cv-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>">Inventaire</a>
+                                                        <a style="margin-top:9px;" href="/camions.php?new=1&marque=international">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>">série HV</a>
+                                            <a href="/camions.php?new=1&marque=international">série HV</a>
                                             <ul class="hidden">
                                                 <li>
                                                     <img src="../../_assets/images/wx3/HV-navigation.jpg" alt="" />
@@ -64,13 +64,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/hv-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>">Inventaire</a>
+                                                        <a style="margin-top:9px;" href="/camions.php?new=1&marque=international">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>">série HX</a>
+                                            <a href="/camions.php?new=1&marque=international">série HX</a>
                                             <ul class="hidden">
                                                 <li>
                                                     <img src="../../_assets/images/wx3/hx-navigation.jpg" alt="" />
@@ -81,13 +81,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/hx-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>">Inventaire</a>
+                                                        <a style="margin-top:9px;" href="/camions.php?new=1&marque=international">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>">série LT</a>
+                                            <a href="/camions.php?new=1&marque=international">série LT</a>
                                             <ul class="hidden">
                                                 <li>
                                                     <img src="../../_assets/images/wx3/lt-navigation.png" alt="" />
@@ -98,13 +98,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/lt-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>">Inventaire</a>
+                                                        <a style="margin-top:9px;" href="/camions.php?new=1&marque=international">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>">série MV</a>
+                                            <a href="/camions.php?new=1&marque=international">série MV</a>
                                             <ul class="hidden">
                                                 <li>
                                                     <img src="../../_assets/images/wx3/MV-navigation.jpg" alt="" />
@@ -115,7 +115,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>">Inventaire</a>
+                                                        <a style="margin-top:9px;" href="/camions.php?new=1&marque=international">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
