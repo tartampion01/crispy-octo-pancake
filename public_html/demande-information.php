@@ -1,9 +1,9 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form name="form" role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="wrap">
         <div class="content">
-            <div class="shrink">
+            <div class="grid grid-pad">
                 <div class="titrepage">
                     <h1>
                         <span>Demande d'information</span>

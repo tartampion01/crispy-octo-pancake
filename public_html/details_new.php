@@ -13,9 +13,9 @@
                                 <span v-html="item.beauTitre"></span> <!--Titre  de camion-->
                             </h2>        
                             <a name="hyperlien" onclick="window.print();" href="javascript:void(0);" target="_self"><img class="" style="display:inline-block; float:right; padding:5px;" src="_assets/images/wx3/printbtn.png" alt="print logo" /></a>
-                            <button class="rightbutton buttonwebsite mobile-col-1-1" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root, page::ObtenirPrix) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>" target="_self">
-                                Obtenir un prix
-                            </button>
+                            <a :href="getUrlObtenirPrix(item.id)" target="_self">
+                                <button type="button" class="rightbutton buttonwebsite mobile-col-1-1" name="orange">Obtenir un prix</button>
+                            </a>                            
                             <a :href="getUrlFinancement(item.id)" target="_self">
                                 <button type="button" class="rightbutton buttonwebsite mobile-col-1-1" name="orange" >Demande de financement</button>
                             </a>                       
@@ -23,16 +23,16 @@
                             <hr class="hide-on-mobile" style="margin-top:50px;" />
                         <div class="col-1-1 topnavdetail mobile-col-1-1">
                             <h3 class="subnavdescription">
-                                <a href="<?php echo RD_PageLink::getHref(folder::Root, page::DemandeInformation) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">Demande d'information</a>
+                                <a :href="getUrlDemandeInformation(item.id)" target="_self">Demande d'information</a>
                             </h3>
                             <h3 class="subnavdescription">
-                                <a href="<?php echo RD_PageLink::getHref(folder::Root, page::PlanifierEssaiRoutier) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">Planifier un essai routier</a>
+                                <a :href="getUrlPlanifierEssaiRoutier(item.id)" target="_self">Planifier un essai routier</a>
                             </h3>
                             <h3 class="subnavdescription ">
-                                <a href="<?php echo RD_PageLink::getHref(folder::Root, page::NousJoindre); ?>">Trouver un concessionnaire</a>
+                                <a href="/nous-joindre.php">Trouver un concessionnaire</a>
                             </h3>
                             <h3 class="subnavdescription">
-                                <a href="<?php echo RD_PageLink::getHref(folder::Root, page::EvaluerEchange) . "?id=" . $camion->id_encode . "&n=" . base64_encode(1); ?>">Évaluer mon échange</a>
+                                <a :href="getUrlEvaluerEchange(item.id)" target="_self">Évaluer mon échange</a>
                             </h3>
                         </div>
                     </div>
@@ -480,6 +480,18 @@ function init(){
             },
             getUrlFinancement(id) {
                     return "/demande-financement.php?id=" + encodeURI(btoa(id)) + "&n=" + encodeURI(btoa(this.isNew)) ;
+                },
+            getUrlObtenirPrix(id) {
+                    return "/obtenir-prix.php?id=" + encodeURI(btoa(id)) + "&n=" + encodeURI(btoa(this.isNew)) ;
+                },
+            getUrlPlanifierEssaiRoutier(id) {
+                    return "/planifier-essai-routier.php?id=" + encodeURI(btoa(id)) + "&n=" + encodeURI(btoa(this.isNew)) ;
+                },
+            getUrlDemandeInformation(id) {
+                    return "/demande-information.php?id=" + encodeURI(btoa(id)) + "&n=" + encodeURI(btoa(this.isNew)) ;
+                },
+            getUrlEvaluerEchange(id) {
+                    return "/evaluer-echange.php?id=" + encodeURI(btoa(id)) + "&n=" + encodeURI(btoa(this.isNew)) ;
                 },                
             async readData() {
 
