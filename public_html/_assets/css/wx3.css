@@ -526,7 +526,7 @@ text-decoration:underline;
     font-weight: 700;
 }
 
- .bgfiltre {
+.bgfiltre {
     background-color: dimgray;
     background-position: center;
     background-size: cover;
@@ -573,10 +573,11 @@ text-decoration:underline;
 .pagination a {
     color: black;
     float: left;
-    margin-top: 11px;
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
+    position:relative;
+     top:10px;
 }
 
 .pagination button {
