@@ -9,47 +9,17 @@ var _N = 0;
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
         <div class="">
             <div class="content camions-occasions">
-                <div class="grid>
-                    <div class="bottom-info grid" style="margin-top: 2em; ">
-                        <div class="grid-pad">
-                            <h3 class="orange"
-                                style="text-align:center; margin-bottom:40px; text-transform:uppercase; font-weight:700; ">
-                                Réseau Dynamique est la référence dans le domaine des camions lourds et des tracteurs
-                                terminaux d'occasion&#8239;!</h3>
-                            <h2>Pourquoi choisir un camion d'occasion chez Réseau Dynamique?</h2>
-                            <p>Avant d'être mis en vente, tous les véhicules d'occasion de Réseau Dynamique ont été
-                                inspectés minutieusement et réparés. Revendeur de camions de toutes classes, vous êtes
-                                assuré de trouver un camion de grande qualité répondant en tous points à vos besoins
-                                d'affaires.</p>
-                            <p>Détaillant de camions neufs de marque International, Réseau Dynamique offre des garanties
-                                prolongées du manufacturier sur les composants majeurs de ses véhicules. Les services
-                                d'experts des mécaniciens accrédités International offrent également la reconstruction
-                                complète des composants majeurs.</p>
-                            <h2>Le service après-vente : la force d'un réseau</h2>
-                            <p>Avec Réseau Dynamique, vous faites un choix sensé pour le présent et le futur.
-                                Les&nbsp;<a name="hyperlien"
-                                    href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>"
-                                    target="_self">19 centres de pièces et services du Réseau</a> dispersés sur le
-                                territoire québécois assurent aux clients de Réseau Dynamique un service après-vente
-                                inégalable. Remettez l'entretien de votre camion ou de votre flotte entre les mains de
-                                techniciens formés directement par les fabricants.</p>
-                            <p>Disponibles en un seul endroit au Centre-du-Québec, venez faire l'essai de nos camions
-                                d'occasion.</p>
-                        </div>
-                    </div>
-                    <div class="FacetedExplorerClear GpcClear"></div>
-
+                <div class="grid">
                     <!-- <div class="titrepage">
                         <h1>Inventaire Complet</h1>
                     </div> -->
-
                     <div class="filterZone grid">
                         <div id="zoneCriteria" class="grid-pad  hide-on-mobile" style="height:75px;width:100%;">
-                            <h1>Outils de recherche : </h1> <!-- class="" style="padding-top:5px;" -->
+                            <h1>Outils de recherche : </h1> <!-- class="" style="padding-top:5px;" 
                             <span style="color:rgb(213,94,36); float:left; display:inline-block;"
                                 onclick="$(this).remove()">
                                 AISIN A460 <sup>x</sup>
-                            </span>
+                            </span>-->
                         </div>
                         <!--Menu filtre-->
                         <nav class="bgfiltre hide-on-mobile">
@@ -59,69 +29,7 @@ var _N = 0;
                                         <a href="#">Marque</a>
                                         <ul class="hidden">
                                             <li>
-                                                <a href="#">International</a>
-                                                <ul class="hidden">
-                                                    <li>
-                                                        <a href="#">série CV</a>
-                                                        <ul class="hidden">
-                                                            <li>
-                                                                <img src="Resources/images/CV-navigation.jpg" alt="" />
-                                                                <p class="col-1-1 padding orange center">
-                                                                    LE CV EST RÉSILIENT POUR TOUTES LES SAISONS POUR
-                                                                    VOTRE ENTREPRISE EN CROISSANCE !
-                                                                </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">série HV</a>
-                                                        <ul class="hidden">
-                                                            <li>
-                                                                <img src="Resources/images/HV-navigation.jpg" alt="" />
-                                                                <p class="col-1-1 padding orange center">
-                                                                    LE HV EST RÉSILIENT POUR TOUTES LES SAISONS POUR
-                                                                    VOTRE ENTREPRISE EN CROISSANCE !
-                                                                </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">série HX</a>
-                                                        <ul class="hidden">
-                                                            <li>
-                                                                <img src="Resources/images/hx-navigation.jpg" alt="" />
-                                                                <p class="col-1-1 padding orange center">
-                                                                    LE HX EST RÉSILIENT POUR TOUTES LES SAISONS POUR
-                                                                    VOTRE ENTREPRISE EN CROISSANCE !
-                                                                </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">série LT</a>
-                                                        <ul class="hidden">
-                                                            <li>
-                                                                <img src="Resources/images/lt-navigation.png" alt="" />
-                                                                <p class="col-1-1 padding orange center">
-                                                                    LE LT EST RÉSILIENT POUR TOUTES LES SAISONS POUR
-                                                                    VOTRE ENTREPRISE EN CROISSANCE !
-                                                                </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">série MV</a>
-                                                        <ul class="hidden">
-                                                            <li>
-                                                                <img src="Resources/images/MV-navigation.jpg" alt="" />
-                                                                <p class="col-1-1 padding orange center">
-                                                                    LE MV EST RÉSILIENT POUR TOUTES LES SAISONS POUR
-                                                                    VOTRE ENTREPRISE EN CROISSANCE !
-                                                                </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
+                                                <a href="#">International</a>                                               
                                             </li>
                                             <li>
                                                 <a href="#">Isuzu</a>
@@ -129,107 +37,45 @@ var _N = 0;
                                             <li>
                                                 <a href="#">Kalmar</a>
                                             </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Modele</a>
-                                        <ul class="hidden">
                                             <li>
-                                                <a href="#">International</a>
-                                                <ul class="hidden">
-                                                    <li>
-                                                        <a href="#">série CV</a>
-                                                        <ul class="hidden">
-                                                            <li>
-                                                                <img src="Resources/images/CV-navigation.jpg" alt="" />
-                                                                <p class="col-1-1 padding orange center">
-                                                                    LE CV EST RÉSILIENT POUR TOUTES LES SAISONS POUR
-                                                                    VOTRE ENTREPRISE EN CROISSANCE !
-                                                                </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">série HV</a>
-                                                        <ul class="hidden">
-                                                            <li>
-                                                                <img src="Resources/images/HV-navigation.jpg" alt="" />
-                                                                <p class="col-1-1 padding orange center">
-                                                                    LE HV EST RÉSILIENT POUR TOUTES LES SAISONS POUR
-                                                                    VOTRE ENTREPRISE EN CROISSANCE !
-                                                                </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">série HX</a>
-                                                        <ul class="hidden">
-                                                            <li>
-                                                                <img src="Resources/images/hx-navigation.jpg" alt="" />
-                                                                <p class="col-1-1 padding orange center">
-                                                                    LE HX EST RÉSILIENT POUR TOUTES LES SAISONS POUR
-                                                                    VOTRE ENTREPRISE EN CROISSANCE !
-                                                                </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">série LT</a>
-                                                        <ul class="hidden">
-                                                            <li>
-                                                                <img src="Resources/images/lt-navigation.png" alt="" />
-                                                                <p class="col-1-1 padding orange center">
-                                                                    LE LT EST RÉSILIENT POUR TOUTES LES SAISONS POUR
-                                                                    VOTRE ENTREPRISE EN CROISSANCE !
-                                                                </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">série MV</a>
-                                                        <ul class="hidden">
-                                                            <li>
-                                                                <img src="Resources/images/MV-navigation.jpg" alt="" />
-                                                                <p class="col-1-1 padding orange center">
-                                                                    LE MV EST RÉSILIENT POUR TOUTES LES SAISONS POUR
-                                                                    VOTRE ENTREPRISE EN CROISSANCE !
-                                                                </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
+                                                <a href="#">doepker</a>
                                             </li>
                                             <li>
-                                                <a href="#">Isuzu</a>
+                                                <a href="#">Hino</a>
                                             </li>
                                             <li>
-                                                <a href="#">Kalmar</a>
+                                                <a href="#">Transit</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Westernstar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Freightliner</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Peterbilt</a>
                                             </li>
                                         </ul>
                                     </li>
+                                    
                                     <li>
                                         <a href="#">Transmission</a>
                                         <ul class="hidden">
-                                            <li><a href="#" onclick="addFilterCriteria()">AISIN A460</a></li>
-                                            <li><a href="#">AISIN A465</a></li>
-                                            <li><a href="#">ALLISON</a></li>
-                                            <li><a href="#">EATON ENDURANT</a></li>
-                                            <li><a href="#">FULLER</a></li>
+                                            <li><a href="#">Automatique</a></li>
+                                            <li><a href="#">Manuel</a></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <a href="#">Moteur</a>
                                         <ul class="hidden">
-                                            <li><a href="#">6HK1-TC</a></li>
-                                            <li><a href="#">4JJ1-TC</a></li>
-                                            <li><a href="#">A26</a></li>
-                                            <li><a href="#">B6.7</a></li>
-                                            <li><a href="#">GMPT-V8</a></li>
-                                            <li><a href="#">L9</a></li>
-                                            <li><a href="#">N13</a></li>
-                                            <li><a href="#">X15</a></li>
+                                            <li><a href="#">International</a></li>
+                                            <li><a href="#">Cummins</a></li>
+                                            <li><a href="#">Detroit</a></li>
+                                            <li><a href="#">Paccar</a></li>
+                                            <li><a href="#">Isuzu</a></li>
                                         </ul>
                                     </li>
+                                    <!--
                                     <li>
                                         <a href="#">Prix</a>
                                         <ul class="hidden" style="min-width:230px;">
@@ -240,7 +86,7 @@ var _N = 0;
                                             <li><a href="#">400 000&#8239;$ à 500 000&#8239;$</a></li>
                                             <li><a href="#">Plus de 500 000&#8239;$</a></li>
                                         </ul>
-                                    </li>
+                                    </li>-->
                                 </ul>
                             </div>
                         </nav>

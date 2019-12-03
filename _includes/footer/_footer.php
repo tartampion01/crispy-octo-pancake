@@ -29,54 +29,6 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
 ?>
      <!--Footer-->
      <footer>
-        <div class="topfooter hide-on-mobile">
-            <div class="grid grid-pad">
-                <div class="container-footer">
-                    <div class="item-footer">
-                        <h3><a href="filter.html">Camions</a></h3>
-                        <p><a href="filter.html">International</a></p>
-                        <p><a href="filter.html">Remorque</a></p>
-                        <p><a href="filter.html">Isuzu</a></p>
-                        <p><a href="filter.html">Ottawa Kalmar</a></p>
-                        <p><a href="filter.html">Occasion</a></p> 
-                    </div>
-                    <div class="item-footer">
-                        <h3><a href="filter.html">Pièces</a></h3>
-                        <p><a href="filter.html">commande en ligne</a></p>
-                        <p><a href="filter.html">Boutique en ligne</a></p>
-                    </div>
-                    <div class="item-footer">
-                        <h3><a href="#">Services</a></h3>
-                        <p><a href="#">Routier</a></p>
-                        <p><a href="#">Après-vente</a></p>
-                        <p><a href="#">Financement</a></p>
-                        <p><a href="#">Location</a></p>
-                    </div>
-                    <div class="item-footer">
-                        <h3><a href="">Véhicule Utilitaire</a></h3>
-                        <p><a href="#">Mini-excavatrices</a></p>
-                        <p><a href="#">Transporteurs tout-terrain</a></p>
-                        <p><a href="#">Skid Steer et chargeur à chenilles</a></p>
-                        <p><a href="#">Chargeuse V3 et V4</a></p>
-                    </div>
-                    <div class="item-footer">
-                        <h3><a href="#">Nous Joindre</a></h3>
-                        <p><a href="#map">Concessionaires</a></p>
-                        <p><a href="#map">Point de service</a></p>
-                    </div>
-                    <div class="item-footer">
-                        <h3><a href="#">Circulaire</a></h3>
-                        <p><a href="#">Promotion</a></p>
-                        <p><a href="#">Circulaire complet</a></p>
-                    </div>
-                    <div class="item-footer">
-                        <h3><a href="#">À Propos</a></h3>
-                        <p><a href="#">Notre entreprise</a></p>
-                        <p><a href="#">carrière</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="blacklinefooter">
             <div class="grid grid-pad"> 
                 <div class="blackfootertop">
