@@ -19,5 +19,6 @@ $(document).ready(function () {
         <div class="slides_container"><img src="../../_assets/images/wx3/diapo/diapo3.jpg" alt="" /></div>
         <div class="slides_container"><img src="../../_assets/images/wx3/diapo/diapo4.jpg" alt="" /></div>
         <div class="slides_container"><img src="../../_assets/images/wx3/diapo/diapo5.png" alt="" /></div>
+        <div class="slides_container"><img src="../../_assets/images/wx3/diapo/diapo6.png" alt="" /></div>
     </div>
 </section>
