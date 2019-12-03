@@ -115,9 +115,6 @@
                                         <div class="infotitle column1details">
                                             Empattement
                                         </div>
-                                        <div class="column2details hide-on-mobile">
-
-                                        </div>
                                         <div class="column3details">
                                             {{ item.empattement }}
                                         </div>
@@ -126,9 +123,6 @@
                                     <div class="rowdetails" id="fld_essieu_avant" v-if="item.essieu_avant">
                                         <div class="infotitle column1details">
                                             Essieu avant
-                                        </div>
-                                        <div class="column2details hide-on-mobile">
-
                                         </div>
                                         <div class="column3details">
                                             {{ item.essieu_avant }}
@@ -139,9 +133,6 @@
                                         <div class="infotitle column1details">
                                             Essieu arrière
                                         </div>
-                                        <div class="column2details hide-on-mobile">
-
-                                        </div>
                                         <div class="column3details">
                                             {{ item.essieu_arriere }}
                                         </div>
@@ -151,9 +142,6 @@
                                         <div class="infotitle column1details">
                                             Suspension arrière
                                         </div>
-                                       <div class="column2details hide-on-mobile">
-                                           
-                                       </div>
                                        <div class="column3details">
                                             {{ item.rearsuspension }}
                                        </div>
@@ -163,9 +151,6 @@
                                         <div class="infotitle column1details">
                                            Transmission
                                         </div>
-                                       <div class="column2details hide-on-mobile">
-                                           <img class="hide-on-mobile" src="_assets/images/wx3/tansmissiondetails.png" alt="" />
-                                       </div>
                                        <div class="column3details">
                                             {{ item.transmission }}
                                        </div>
@@ -174,9 +159,6 @@
                                     <div class="rowdetails" id="fld_moteur" v-if="item.moteur">
                                         <div class="infotitle column1details">
                                             Moteur
-                                        </div>
-                                        <div class="column2details hide-on-mobile">
-
                                         </div>
                                         <div class="column3details">
                                             {{ item.moteur }}
@@ -187,9 +169,6 @@
                                         <div class="infotitle column1details">
                                             HP
                                         </div>
-                                        <div class="column2details hide-on-mobile">
-
-                                        </div>
                                         <div class="column3details">
                                             {{ item.hp }}
                                         </div>
@@ -198,9 +177,6 @@
                                     <div class="rowdetails" id="fld_ratio_ar" v-if="item.ratio_ar">
                                         <div class="infotitle column1details">
                                             Ratio essieu arrière
-                                        </div>
-                                        <div class="column2details hide-on-mobile">
-
                                         </div>
                                         <div class="column3details">
                                             {{ item.ratio_ar }}
@@ -211,9 +187,6 @@
                                         <div class="infotitle column1details">
                                             Dimension pneu
                                         </div>
-                                        <div class="column2details hide-on-mobile">
-
-                                        </div>
                                         <div class="column3details">
                                             {{ item.pneu_ar_dim }}  {{ item.pneu_av_dim }}
                                         </div>
@@ -222,9 +195,6 @@
                                     <div class="rowdetails" id="fld_wheel" v-if="item.wheel">
                                         <div class="infotitle column1details">
                                             Roue
-                                        </div>
-                                        <div class="column2details hide-on-mobile">
-
                                         </div>
                                         <div class="column3details">
                                             {{ item.wheel }} 
@@ -235,9 +205,6 @@
                                         <div class="infotitle column1details">
                                             freins
                                         </div>
-                                        <div class="column2details hide-on-mobile">
-                                            <img class="hide-on-mobile" src="_assets/images/wx3/freinsdetails.png" alt="" />
-                                        </div>
                                         <div class="column3details">
                                             {{ item.freins }} 
                                         </div>
@@ -247,9 +214,6 @@
                                         <div class="infotitle column1details">
                                             Couleur
                                         </div>
-                                        <div class="column2details hide-on-mobile">
-                                            
-                                        </div>
                                         <div class="column3details">
                                             {{ item.color }} 
                                         </div>
@@ -258,9 +222,6 @@
                                     <div class="rowdetails" id="fld_equipements" v-if="item.equipment">
                                         <div class="infotitle column1details">
                                             Équipement
-                                        </div>
-                                        <div class="column2details hide-on-mobile">
-                                            <img class="hide-on-mobile" src="_assets/images/wx3/equipementdetails.png" alt="" />
                                         </div>
                                         <div class="column3details">
                                             {{ item.equipment }} 

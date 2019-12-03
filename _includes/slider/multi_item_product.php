@@ -3,14 +3,6 @@
             <h2 class="titlesection">Nos Spéciaux</h2>
         </div>
         <section class="realization">
-            <div class="">
-                <a href="./Fleuristebergeron.html" title="">
-                    <div class="rectangle"></div>
-                    <img src="../../_assets/images/wx3/promo.jpg" alt="">
-                    <hr style="margin-top:5px;" />
-                    <h2 class="uppercases">circulaire</h2>
-                </a>
-            </div>
             <div class="image-box">
                 <a href="./Fleuristebergeron.html" title="">
                     <div class="rectangle"></div>
@@ -18,6 +10,14 @@
                     <h2 class="uppercases">Titre de camion</h2>
                     <hr />
                     <p style="text-align:justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                </a>
+            </div>
+            <div class="">
+                <a href="./Fleuristebergeron.html" title="">
+                    <div class="rectangle"></div>
+                    <img src="../../_assets/images/wx3/promo.jpg" alt="">
+                    <hr style="margin-top:5px;" />
+                    <h2 class="uppercases">circulaire</h2>
                 </a>
             </div>
             <div class="image-box">

@@ -141,15 +141,13 @@ var _N = 0;
                                                         class="imagespec col-1-1"
                                                     />
                                                 </div>
-
                                                 <div class="topdivision40" style="margin-top:15px;">
                                                     <h2 style="font-weight:700;">{{ record.marque }} - {{ record.Model }}</h2>
                                                 </div>
                                             </a>
-
                                             <div class="inline col-1-1 borderdown" style="margin-top:30px;">
                                                 <h4 class="inline topdivision20 nobold col-1-2">numéro série :</h4>
-                                                <p class="resultatbdfilter">{{ record.serial }}</span>
+                                                <p class="resultatbdfilter">N/A{{ record.serial }}</span>
                                             </div>
                                             <!--correction width-->
                                             <div class=" col-1-1 topdivision30 mobile-col-1-1" style="margin-top:40px;">
@@ -169,11 +167,11 @@ var _N = 0;
                                                     </div>
                                                     <div class="uppercases inline floatleft col-1-1">
                                                         <h4 class="col-1-2">No d'inventaire :</h4> 
-                                                        <p class="resultatbdfilter">{{ record.stock }}</p>
+                                                        <p class="resultatbdfilter">N/A{{ record.stock }}</p>
                                                     </div>
                                                     <div class="uppercases inline floatleft col-1-1">
                                                         <h4 class="col-1-2">Moteur :</h4> 
-                                                        <p class="resultatbdfilter"> {{record.engine}}</p>
+                                                        <p class="resultatbdfilter">{{record.engine}}</p>
                                                     </div>
                                                 </div>
                                             </div>
