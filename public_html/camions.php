@@ -10,9 +10,6 @@ var _N = 0;
         <div class="">
             <div class="content camions-occasions">
                 <div class="grid">
-                    <!-- <div class="titrepage">
-                        <h1>Inventaire Complet</h1>
-                    </div> -->
                     <div class="filterZone grid">
                         <div id="zoneCriteria" class="grid-pad  hide-on-mobile" style="height:75px;width:100%;">
                             <h1>Outils de recherche : </h1> <!-- class="" style="padding-top:5px;" 
@@ -75,18 +72,6 @@ var _N = 0;
                                             <li><a href="#">Isuzu</a></li>
                                         </ul>
                                     </li>
-                                    <!--
-                                    <li>
-                                        <a href="#">Prix</a>
-                                        <ul class="hidden" style="min-width:230px;">
-                                            <li><a href="#">0&#8239;$ à 100 000&#8239;$</a></li>
-                                            <li><a href="#">100 000&#8239;$ à 200 000&#8239;$</a></li>
-                                            <li><a href="#">200 000&#8239;$ à 300 000&#8239;$</a></li>
-                                            <li><a href="#">300 000&#8239;$ à 400 000&#8239;$</a></li>
-                                            <li><a href="#">400 000&#8239;$ à 500 000&#8239;$</a></li>
-                                            <li><a href="#">Plus de 500 000&#8239;$</a></li>
-                                        </ul>
-                                    </li>-->
                                 </ul>
                             </div>
                         </nav>
@@ -125,7 +110,7 @@ var _N = 0;
                                 </div>
                             </div>
 
-                            <div id="list" style="" class=""> <!-- GpcResultItemWrapper results-container -->
+                            <div id="list" style="" class="">
 
                                 <div class="grid">
                                     <div v-for="(record,index) in item.records" class="container-filter">
@@ -151,19 +136,10 @@ var _N = 0;
                                             </div>
                                             <!--correction width-->
                                             <div class=" col-1-1 topdivision30 mobile-col-1-1" style="margin-top:40px;">
-                                                <h3 class="mobile-col-1-1" style="font-weight:700;">
-                                                    Description :
-                                                </h3>
-                                                <p class="mobile-col-1-1 justify">
-                                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                    accusantium doloremque laudantium. Sed ut perspiciatis unde omnis
-                                                    iste natus
-                                                    error sit.
-                                                </p>
                                                 <div class="col-1-1 topdivision15 mobile-col-1-1">
                                                     <div class="uppercases inline floatleft col-1-1">
                                                         <h4 class="col-1-2">Modèle :</h4> 
-                                                        <p class="resultatbdfilter">{{ record.Model }}</p>
+                                                        <p class="resultatbdfilter">{{ record.Model | NA }}</p>
                                                     </div>
                                                     <div class="uppercases inline floatleft col-1-1">
                                                         <h4 class="col-1-2">No d'inventaire :</h4> 
@@ -178,52 +154,6 @@ var _N = 0;
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- <div v-for="(record,index) in item.records"
-                                    class="FacetedResultTemplate DefaultResultContainer">
-                                    <a :href="getHref(record.id)">
-                                        <div class="rectangle"></div>
-                                        <div class="ResultImage">
-                                            <img :src="record.pictures[0]" class="imagespec" title="" alt="">
-                                        </div>
-                                        <div class="ResultContent">
-                                            <div class="ResultContentProductName">
-                                                <h2>{{ record.marque }}<br />{{ record.Model }}
-                                                </h2>
-                                            </div>
-                                            <div class="customField">
-                                                <div class="forBroker label zoneForBroker">
-                                                    <span class="forBroker label spanForBroker">No série : </span>
-                                                    <span class="ProductBrokerType_String">{{ record.serial }}</span>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <div class="customField">
-                                                <div class="forBroker label zoneForBroker">
-                                                    <span class="forBroker label spanForBroker">Modèle : </span>
-                                                    <span class="ProductBrokerType_String">{{ record.Model }}</span>
-                                                </div>
-                                            </div>
-                                            <div class="customField">
-                                                <div class="forBroker label zoneForBroker">
-                                                    <span class="forBroker label spanForBroker">No d'inventaire :
-                                                    </span>
-                                                    <span class="ProductBrokerType_String">{{ record.stock }}</span>
-                                                </div>
-                                            </div>
-                                            <div class="customField" v-if="record.engine">
-                                                <div class="forBroker">
-                                                    <span class="forBroker">Moteur : </span>
-                                                    <span class="ProductBrokerType_String">{{record.engine}}</span>
-                                                </div>
-                                            </div>
-                                            <div class="inPromo">
-                                                <span class="ProductBrokerType_Boolean">False</span>
-                                            </div>
-                                            <div class="imgPlus"></div>
-                                        </div>
-                                    </a>
-                                </div> -->
 
                             </div>
 
@@ -275,7 +205,11 @@ var _N = 0;
 
     <script type="text/javascript">
     $(document).ready(function() {
-        //fetchRecords('', '', '', true, 0);  
+
+        Vue.filter('NA', function(value){
+            if(value){ return value;} else { return 'N/A'; } 
+            });
+
         init();
     });
 
@@ -346,6 +280,7 @@ var _N = 0;
 
                         const response = await fetch(api + '?n=' + n + '&params=' + encodeURI(params));
                         const data = await response.json()
+                        // data.records[0].serial = "klsdj dslkf sd;fkjsd;lfj a;sdfj sd;fj sda;lf jsad;lfjds;lfk jsad;lkf sad;lkfj sdlk;f jsad;f jsda;fasd;sdf ";
                         this.item = data;
 
                     } catch (error) {
