@@ -131,8 +131,8 @@ var _N = 0;
                                                 </div>
                                             </a>
                                             <div class="inline col-1-1 borderdown" style="margin-top:30px;">
-                                                <h4 class="inline topdivision20 nobold col-1-2">numéro série :</h4>
-                                                <p class="resultatbdfilter">N/A{{ record.serial }}</span>
+                                                <h4 class="inline topdivision20 nobold col-1-2">Numéro série :</h4>
+                                                <p class="resultatbdfilter">{{ record.serial | NA }}</span>
                                             </div>
                                             <!--correction width-->
                                             <div class=" col-1-1 topdivision30 mobile-col-1-1" style="margin-top:40px;">
@@ -143,11 +143,11 @@ var _N = 0;
                                                     </div>
                                                     <div class="uppercases inline floatleft col-1-1">
                                                         <h4 class="col-1-2">No d'inventaire :</h4> 
-                                                        <p class="resultatbdfilter">N/A{{ record.stock }}</p>
+                                                        <p class="resultatbdfilter">N/A{{ record.stock | NA }}</p>
                                                     </div>
                                                     <div class="uppercases inline floatleft col-1-1">
                                                         <h4 class="col-1-2">Moteur :</h4> 
-                                                        <p class="resultatbdfilter">{{record.engine}}</p>
+                                                        <p class="resultatbdfilter">{{record.engine | NA }}</p>
                                                     </div>
                                                 </div>
                                             </div>
