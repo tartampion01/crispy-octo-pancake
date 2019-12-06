@@ -261,7 +261,7 @@ a {
   }
 
 .wrap {
-  min-height: 503px; /* 100% */
+  min-height: 800px; /* 100% */
   min-width: 320px;
   height: auto !important;
   height: 100%;

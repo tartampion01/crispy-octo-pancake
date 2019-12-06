@@ -6,6 +6,7 @@
         color: #525252;
         text-transform: uppercase;
     }
+ 
 </style>    
 <body class="body"><?php RD_Utils::write_Gtag() ?>    
     <form role="form" method="POST" action="/promotions-nouvelles/<?php echo $NOMPAGE; ?>">
