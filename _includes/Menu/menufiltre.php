@@ -61,9 +61,6 @@ $pageName = basename($_SERVER['SCRIPT_NAME']);
 
                     let api = '/menufiltertest.json';
 
-                    // Show loading spinner
-                    $('.loading-overlay').show();
-
                     try {
 
                         const response = await fetch(api);
@@ -76,8 +73,6 @@ $pageName = basename($_SERVER['SCRIPT_NAME']);
                         this.errorMessage = error.toString();
                     }
 
-                    // Hide loading spinner
-                    $('.loading-overlay').hide();
                 },
                 selected(code) {
                     console.log(code);                   
