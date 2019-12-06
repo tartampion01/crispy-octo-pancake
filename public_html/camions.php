@@ -11,72 +11,16 @@ var _N = 0;
             <div class="content camions-occasions">
                 <div class="grid">
                     <div class="filterZone grid">
-                        <div id="zoneCriteria" class="grid-pad  hide-on-mobile" style="height:75px;width:100%;">
+                        <div id="zoneCriteria" class="grid-pad hide-on-mobile" style="height:75px;width:100%;">
                             <h1>Outils de recherche : </h1> <!-- class="" style="padding-top:5px;" 
                             <span style="color:rgb(213,94,36); float:left; display:inline-block;"
                                 onclick="$(this).remove()">
                                 AISIN A460 <sup>x</sup>
                             </span>-->
                         </div>
-                        <!--Menu filtre-->
-                        <nav class="bgfiltre hide-on-mobile">
-                            <div class="menudestop grid-pad">
-                                <ul>
-                                    <li>
-                                        <a href="#">Marque</a>
-                                        <ul class="hidden">
-                                            <li>
-                                                <a href="#">International</a>                                               
-                                            </li>
-                                            <li>
-                                                <a href="#">Isuzu</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Kalmar</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">doepker</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Hino</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Transit</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Westernstar</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Freightliner</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Peterbilt</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li>
-                                        <a href="#">Transmission</a>
-                                        <ul class="hidden">
-                                            <li><a href="#">Automatique</a></li>
-                                            <li><a href="#">Manuel</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Moteur</a>
-                                        <ul class="hidden">
-                                            <li><a href="#">International</a></li>
-                                            <li><a href="#">Cummins</a></li>
-                                            <li><a href="#">Detroit</a></li>
-                                            <li><a href="#">Paccar</a></li>
-                                            <li><a href="#">Isuzu</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
                     </div>
-
+                    <!--Menu filtre-->
+                    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/Menu/menufiltre.php'); ?>
                     <br />
                     <div class="FacetedExplorer grid-pad">
                         <!-- Results Content -->
