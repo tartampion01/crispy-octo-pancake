@@ -3,7 +3,7 @@ $pageName = basename($_SERVER['SCRIPT_NAME']);
 ?>
 <nav id="menufiltre" class="bgfiltre">
     <div class="menudestop grid-pad">
-        <ul>
+        <ul> 
             <li>
                 <a href="#">{{menu.Brand.title}}</a>
                 <ul class="hidden">
