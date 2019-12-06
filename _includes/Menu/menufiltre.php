@@ -5,25 +5,25 @@ $pageName = basename($_SERVER['SCRIPT_NAME']);
     <div class="menudestop grid-pad">
         <ul>
             <li>
-                {{menu.Brand.title}}
-                <ul class="hidden" v-for="(item,index) in menu.Brand.items">
-                    <li>
+                <a href="#">{{menu.Brand.title}}</a>
+                <ul class="hidden">
+                    <li v-for="(item,index) in menu.Brand.items">
                         <a @click="selected(item.code)">{{item.title}}</a>
                     </li>
                 </ul>
             </li>
             <li>
-                {{menu.Transmission.title}}
-                <ul class="hidden" v-for="(item,index) in menu.Transmission.items">
-                    <li>
+                <a href="#">{{menu.Transmission.title}}</a>
+                <ul class="hidden" >
+                    <li v-for="(item,index) in menu.Transmission.items">
                         <a @click="selected(item.code)">{{item.title}}</a>
                     </li>
                 </ul>
             </li>
             <li>
-                {{menu.Engine.title}}
-                <ul class="hidden" v-for="(item,index) in menu.Engine.items">
-                    <li>
+                <a href="#">{{menu.Engine.title}}</a>
+                <ul class="hidden" >
+                    <li v-for="(item,index) in menu.Engine.items">
                         <a @click="selected(item.code)">{{item.title}}</a>
                     </li>
                 </ul>
