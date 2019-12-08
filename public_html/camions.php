@@ -12,7 +12,8 @@ var _N = 0;
                 <div class="grid">
                     <div class="filterZone grid">
                         <div id="zoneCriteria" class="grid-pad hide-on-mobile" style="height:75px;width:100%;">
-                            <h1>Outils de recherche : </h1> <!-- class="" style="padding-top:5px;" 
+                            <h1>Outils de recherche : </h1>
+                            <!-- class="" style="padding-top:5px;" 
                             <span style="color:rgb(213,94,36); float:left; display:inline-block;"
                                 onclick="$(this).remove()">
                                 AISIN A460 <sup>x</sup>
@@ -27,9 +28,12 @@ var _N = 0;
                         <div class="GpcFacetedResults defaultFacet">
 
                             <div class="GpcPagerCountSelector col-1-1 grid-pad">
-                                <div data-value="48" class="limit-per-page GpcDisplayOption" style="float:right;">48</div>
-                                <div data-value="24" class="limit-per-page GpcDisplayOption" style="float:right;">24</div>
-                                <div data-value="12" class="limit-per-page GpcDisplayOption selected" style="float:right;">12</div>
+                                <div data-value="48" class="limit-per-page GpcDisplayOption" style="float:right;">48
+                                </div>
+                                <div data-value="24" class="limit-per-page GpcDisplayOption" style="float:right;">24
+                                </div>
+                                <div data-value="12" class="limit-per-page GpcDisplayOption selected"
+                                    style="float:right;">12</div>
                                 <span class="GpcItemsPerPageText" style="float:right;">Afficher par page</span>
                             </div>
                             <div class="GpcPagedResultCount" style="display: none;">
@@ -63,15 +67,15 @@ var _N = 0;
                                             <a :href="getHref(record.id)">
                                                 <div class="rectangle"></div>
                                                 <div class="image-box">
-                                                    <img 
-                                                        :src="record.pictures[0]"
+                                                    <!--  src="http://raisindynamique.reseaudynamique.com/api/pictures.php" -->
+                                                    <img :src="getSrc(record.picture_id)"
                                                         :title="record.marque + ' - ' + record.Model"
                                                         :alt="record.marque + ' - ' + record.Model"
-                                                        class="imagespec col-1-1"
-                                                    />
+                                                        class="imagespec col-1-1" />
                                                 </div>
                                                 <div class="topdivision40" style="margin-top:15px;">
-                                                    <h2 style="font-weight:700;">{{ record.marque }} - {{ record.Model }}</h2>
+                                                    <h2 style="font-weight:700;">{{ record.marque }} -
+                                                        {{ record.Model }}</h2>
                                                 </div>
                                             </a>
                                             <div class="inline col-1-1 borderdown" style="margin-top:30px;">
@@ -82,15 +86,15 @@ var _N = 0;
                                             <div class=" col-1-1 topdivision30 mobile-col-1-1" style="margin-top:40px;">
                                                 <div class="col-1-1 topdivision15 mobile-col-1-1">
                                                     <div class="uppercases inline floatleft col-1-1">
-                                                        <h4 class="col-1-2">Modèle :</h4> 
+                                                        <h4 class="col-1-2">Modèle :</h4>
                                                         <p class="resultatbdfilter">{{ record.Model | NA }}</p>
                                                     </div>
                                                     <div class="uppercases inline floatleft col-1-1">
-                                                        <h4 class="col-1-2">No d'inventaire :</h4> 
+                                                        <h4 class="col-1-2">No d'inventaire :</h4>
                                                         <p class="resultatbdfilter">N/A{{ record.stock | NA }}</p>
                                                     </div>
                                                     <div class="uppercases inline floatleft col-1-1">
-                                                        <h4 class="col-1-2">Moteur :</h4> 
+                                                        <h4 class="col-1-2">Moteur :</h4>
                                                         <p class="resultatbdfilter">{{record.engine | NA }}</p>
                                                     </div>
                                                 </div>
@@ -113,24 +117,25 @@ var _N = 0;
                                 </div>
                             </div> -->
 
-                    <!--resultat section-->
-                    <div class="GpcFooter clear" > <!-- recuperer le style... -->
-                        <div>
-                            <div class="resultsearch">
-                                Resultat 1-12 sur 100
+                            <!--resultat section-->
+                            <div class="GpcFooter clear">
+                                <!-- recuperer le style... -->
+                                <div>
+                                    <div class="resultsearch">
+                                        Resultat 1-12 sur 100
+                                    </div>
+                                    <div class="pagination">
+                                        <button class="buttonwebsite">Precedent</button>
+                                        <a href="#">1</a>
+                                        <a href="#" class="active">2</a>
+                                        <a href="#">3</a>
+                                        <a href="#">4</a>
+                                        <button class="buttonwebsite">Suivant</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="pagination">
-                                <button class="buttonwebsite">Precedent</button>
-                                <a href="#">1</a>
-                                <a href="#" class="active">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
-                                <button class="buttonwebsite">Suivant</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
+
+
                         </div>
                     </div>
 
@@ -150,9 +155,13 @@ var _N = 0;
     <script type="text/javascript">
     $(document).ready(function() {
 
-        Vue.filter('NA', function(value){
-            if(value){ return value;} else { return 'N/A'; } 
-            });
+        Vue.filter('NA', function(value) {
+            if (value) {
+                return value;
+            } else {
+                return 'N/A';
+            }
+        });
 
         init();
     });
@@ -178,7 +187,8 @@ var _N = 0;
             methods: {
                 async readData() {
 
-                    let api = 'http://reseaudynamique.com/api/read.php';
+                    //let api = 'http://reseaudynamique.com/api/read.php';
+                    let api = 'http://raisindynamique.reseaudynamique.com/api/camions.php';
                     let n = 0;
                     let isNew = (window.location.search.match(new RegExp('[?&]' + 'new' + '=([^&]+)')) || [,
                         null
@@ -195,13 +205,13 @@ var _N = 0;
                     if (m) {
                         switch (m.trim().toLowerCase()) {
                             case "international":
-                                marque = "International";
+                                marque = "B_Inte";// "International";
                                 break;
                             case "kalmar":
-                                marque = "Kalmar";
+                                marque = "B_Kalm";// "Kalmar";
                                 break;
                             case "isuzu":
-                                marque = "Isuzu";
+                                marque = "B_Isuz" ;//  "Isuzu";
                                 break;
                             default:
                                 break;
@@ -213,13 +223,12 @@ var _N = 0;
 
                     try {
 
-                        let params =
-                            '{"field":"","value":"","customCriteria":" (marque=\\\"international\\\" AND DisplayOnWebSite=1) or (marque=\\\"isuzu\\\" AND DisplayOnWebSite=1) or marque=\\\"kalmar\\\" AND ","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[]}'; //,{"field":"modele","value":"Prostar"}
+                        let params = "";
+                        //let params = '{"field":"","value":"","customCriteria":" (marque=\\\"international\\\" AND DisplayOnWebSite=1) or (marque=\\\"isuzu\\\" AND DisplayOnWebSite=1) or marque=\\\"kalmar\\\" AND ","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[]}'; //,{"field":"modele","value":"Prostar"}
 
                         if (marque) {
-                            params =
-                                '{"customCriteria":"","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[{"field":"marque","value":"' +
-                                marque + '"}]}'; //,{"field":"modele","value":"Prostar"}
+                            //params = '{"customCriteria":"","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[{"field":"marque","value":"' + marque + '"}]}'; //,{"field":"modele","value":"Prostar"}
+                            params = marque;
                         }
 
                         const response = await fetch(api + '?n=' + n + '&params=' + encodeURI(params));
@@ -241,6 +250,18 @@ var _N = 0;
                         url = url + "new=1&"
                     }
                     return url + "id=" + encodeURI(btoa(id));
+                },
+                getSrc(id) {
+                    if (id) {
+                        let url = "http://raisindynamique.reseaudynamique.com/api/pictures.php?"
+                        if (this.isNew == 1) {
+                            url = url + "n=1&"
+                        }
+                        return url + "id=" + id; //encodeURI(btoa(id))
+
+                    } else {
+                        return "../../_assets/images/camions/noimage.png";
+                    }
                 }
             }
         })
