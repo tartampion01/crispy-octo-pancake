@@ -3198,29 +3198,23 @@ form .produit .bref .left > .lePrix.isUsed-True{display:block;}
 @media all and (min-width: 2000px) {
   .content {
     padding: 2em 0px 7em 10px;
-    background: url(../../../_assets/images/menu_images/background-truck.jpg) right bottom no-repeat;
   }
   .imagespec{
     object-fit:cover; 
     height: 450px;
   }
+  
 }
 
 @media all and (max-width: 1300px) {
-  .imagespec{
-    object-fit:cover; 
-    height: 300px;
-  }
+  
 }
 
 @media all and (max-width: 1024px) {
   .banner .rotation .banniere .texte .gros {
     font-size: 2em;
   }
-  .imagespec{
-    object-fit:cover; 
-    height: 250px;
-  }
+  
 }
 
 @media all and (max-width: 768px) {
@@ -3242,10 +3236,7 @@ form .produit .bref .left > .lePrix.isUsed-True{display:block;}
   html {
     font: Arial, Helvetica, sans-serif;
   }
-  .imagespec{
-    object-fit:cover; 
-    height: 150px;
-  }
+  
 
 }
 

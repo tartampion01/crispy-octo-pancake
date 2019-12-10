@@ -26,38 +26,7 @@ var _N = 0;
                     <div class="FacetedExplorer grid-pad">
                         <!-- Results Content -->
                         <div class="GpcFacetedResults defaultFacet">
-
-                            <div class="GpcPagerCountSelector col-1-1 grid-pad">
-                                <div data-value="48" class="limit-per-page GpcDisplayOption" style="float:right;">48
-                                </div>
-                                <div data-value="24" class="limit-per-page GpcDisplayOption" style="float:right;">24
-                                </div>
-                                <div data-value="12" class="limit-per-page GpcDisplayOption selected"
-                                    style="float:right;">12</div>
-                                <span class="GpcItemsPerPageText" style="float:right;">Afficher par page</span>
-                            </div>
-                            <div class="GpcPagedResultCount" style="display: none;">
-                                <span class="GpcCountPrefixText">Résultats</span>
-                                <span class="GpcPagedResultCurrentCount">1 - 4</span>
-                                <span class="GpcBetweenCountText">sur</span>
-                                <span class="GpcPagedResultTotalCount">4</span>
-                            </div>
-                            <div class="GpcResultPager col-1-1">
-                                <ul class="pagination" id="pagination"></ul>
-                            </div>
-                            <div class="orderBy clear col-1-1">
-                                <div class="GpcResultOrderSelector" style="float:right;">
-                                    <select name="SearchSorting" class="search-sorting"
-                                        style="font-size: .8em; line-height: 3em; padding: .15em;">
-                                        <option value="asc">Nom ascendant</option>
-                                        <option value="desc">Nom descendant</option>
-                                    </select>
-                                </div>
-                                <div class="libelle" style="float:right;">
-                                    Classer par :
-                                </div>
-                            </div>
-
+                            
                             <div id="list" style="" class="">
 
                                 <div class="grid">
@@ -66,12 +35,12 @@ var _N = 0;
                                         <div class="filter-item col-1-3">
                                             <a :href="getHref(record.id)">
                                                 <div class="rectangle"></div>
-                                                <div class="image-box">
+                                                <div class="bgtrucks image-box">
                                                     <!--  src="http://raisindynamique.reseaudynamique.com/api/pictures.php" -->
                                                     <img :src="getSrc(record.picture_id)"
                                                         :title="record.marque + ' - ' + record.Model"
                                                         :alt="record.marque + ' - ' + record.Model"
-                                                        class="imagespec col-1-1" />
+                                                        class="col-1-1" />
                                                 </div>
                                                 <div class="topdivision40" style="margin-top:15px;">
                                                     <h2 style="font-weight:700;">{{ record.marque }} -

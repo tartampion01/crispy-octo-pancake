@@ -510,6 +510,14 @@ text-decoration:underline;
 }
 
 /*page filter*/
+.bgtrucks{
+    background: url(../../../_assets/images/menu_images/background-trucks.jpg);
+    background-position: center center;
+    background-repeat:  no-repeat;
+    object-fit:cover; 
+    height: 350px;
+}
+
 .multiproduct .rectangle {
     height: 10px;
     width: auto;
@@ -598,17 +606,55 @@ text-decoration:underline;
     border-bottom: solid #000 1px;
 }
 
-@media (max-width: 1200px) {
+@media all and (min-width: 2000px) {
+    .bgtrucks{
+        background: url(../../../_assets/images/menu_images/background-trucks.jpg);
+        background-position: center center;
+        background-repeat:  no-repeat;
+        object-fit:cover; 
+        height: 450px;
+    }
+    .filter-item img{
+        object-fit:cover; 
+        height: 450px;
+    }
+}
+
+@media (max-width: 1300px) {
     .filter-item {
         width: 50%;
         float: left;
         padding: 50px 20px 50px 20px;
     }
+    .bgtrucks{
+        background: url(../../../_assets/images/menu_images/background-trucks.jpg);
+        background-position: center center;
+        background-repeat:  no-repeat;
+        object-fit:cover; 
+        height: 350px;
+    }
+    .filter-item img{
+        object-fit:cover; 
+        height: 350px;
+    }
 }
 
-
-
 @media (max-width: 1024px) {
+    .bgtrucks{
+        background: url(../../../_assets/images/menu_images/background-trucks.jpg);
+        background-position: center center;
+        background-repeat:  no-repeat;
+        object-fit:cover; 
+        height: 250px;
+    }
+    .imagespec{
+        object-fit:cover; 
+        height: 250px;
+      }
+    .filter-item img{
+        object-fit:cover; 
+        height: 250px;
+    }
     .column {
         float: left;
         width: 50%;
@@ -989,7 +1035,18 @@ All this is done for any sub-level being entered.
 
 
 }
-@media handeled, (max-width: 769px) {   
+@media handeled, (max-width: 769px) { 
+    .bgtrucks{
+        background: url(../../../_assets/images/menu_images/background-trucks.jpg);
+        background-position: center center;
+        background-repeat:  no-repeat;
+        object-fit:cover; 
+        height: 350px;
+    }
+    .filter-item img{
+        object-fit:cover; 
+        height: 350px;
+    }
     .column {
         float: left;
         width: 50%;
