@@ -253,12 +253,9 @@ var _N = 0;
                 },
                 getSrc(id) {
                     if (id) {
-                        let url = "http://raisindynamique.reseaudynamique.com/api/pictures.php?"
-                        if (this.isNew == 1) {
-                            url = url + "n=1&"
-                        }
-                        return url + "id=" + id; //encodeURI(btoa(id))
-
+                        let url = "http://raisindynamique.reseaudynamique.com/api/pictures.php?";
+                        url = url + "n=" + this.isNew + "&id=" + id; //encodeURI(btoa(id))
+                        return url;
                     } else {
                         return "../../_assets/images/camions/noimage.png";
                     }
