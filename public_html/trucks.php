@@ -21,7 +21,7 @@ var _N = 0;
                         </div>
                     </div>
                     <!--Menu filtre-->
-                    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/Menu/menufiltre.php'); ?>
+                    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/Menu/menuFilter.php'); ?>
                     <br />
                     <div class="FacetedExplorer grid-pad">
                         <!-- Results Content -->
@@ -157,7 +157,7 @@ var _N = 0;
                 async readData() {
 
                     //let api = 'http://reseaudynamique.com/api/read.php';
-                    let api = 'http://raisindynamique.reseaudynamique.com/api/camions.php';
+                    let api = 'http://raisindynamique.reseaudynamique.com/api/trucks.php';
                     let n = 0;
                     let isNew = (window.location.search.match(new RegExp('[?&]' + 'new' + '=([^&]+)')) || [,
                         null
