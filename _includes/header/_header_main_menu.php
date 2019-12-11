@@ -239,7 +239,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
                                                     </li>
                                                     <li>
-                                                        <a href="filter.html">Inventaire</a>
+                                                        <a href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -253,7 +253,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
                                                     </li>
                                                     <li>
-                                                        <a href="filter.html">Inventaire</a>
+                                                        <a href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -267,7 +267,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
                                                     </li>
                                                     <li>
-                                                        <a href="filter.html">Inventaire</a>
+                                                        <a href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -281,7 +281,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
                                                     </li>
                                                     <li>
-                                                        <a href="filter.html">Inventaire</a>
+                                                        <a href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -295,37 +295,26 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                         <a href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
                                                     </li>
                                                     <li>
-                                                        <a href="filter.html">Inventaire</a>
+                                                        <a href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>">Remorque</a>
-                                        <ul class="dl-submenu">
-                                            <li style="min-width:250px;">
-                                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>">Inventaire complet</a>                                           
-                                            </li>
-                                            <li style="min-width:250px;">
-                                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDiMond); ?>">Remorques Di-Mond</a>                                           
-                                            </li>
-                                            <li style="min-width:250px;">
-                                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDoepker); ?>">Remorques Doepker</a>                                           
-                                            </li>
-                                        </ul>
+                                        <a href="/trucks.php?n=1&params=B_Doep">Remorque</a>                                        
                                     </li>
                                     <li>
-                                        <a href="#">Isuzu</a>
+                                        <a href="/trucks.php?n=1&params=B_Isuz">Isuzu</a>
                                     </li>
                                     <li class="">
-                                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsOttawaKalmar); ?>">Ottawa Kalmar</a>
+                                    <a href="/trucks.php?n=1&params=B_kalm">Ottawa Kalmar</a>
                                     </li>
                                     <li>
-                                        <a href="#">Occasion</a>
+                                        <a href="/trucks.php">Occasion</a>
                                     </li>
                                     <li>
-                                        <a href="#">Inventaire</a>
+                                        <a href="/trucks.php?n=1">Inventaire</a>
                                     </li>
                                 </ul>
                             </li>
@@ -358,8 +347,8 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             <li>
                                 <a href="#">Circulaire</a>
                                 <ul class="dl-submenu">
-                                    <li><a href="#">Promotion</a></li>
-                                    <li><a href="#">Circulaire Complet</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoLanding); ?>">Promotion</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>">Circulaire Complet</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -380,8 +369,8 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             <li>
                                 <a href="#">Nous Joindre</a>
                                 <ul class="dl-submenu">
-                                    <li><a href="#">Concessionaire</a></li>
-                                    <li><a href="#">Point de service</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">Concessionaire</a></li>
+                                    <li><a href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">Point de service</a></li>
                                 </ul>
                             </li>
                         </ul>

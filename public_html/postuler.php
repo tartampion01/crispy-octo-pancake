@@ -198,7 +198,7 @@
                             </div>
                             <div class="col-1-2 mobile-1-1">
                             <h5>Quelques mots sur vous :<br>
-                                <textarea name="tbCommentaire" name="tbCommentaire" rows="2" cols="50" style="width: 450px;height: 120px;"><?php echo $comm;?></textarea>
+                                <textarea class="mobile-col-1-1" name="tbCommentaire" name="tbCommentaire" rows="2" cols="50"><?php echo $comm;?></textarea>
                             </h5>
                             <h5>Succursales qui vous intéressent :</h5>
                             <label class="small">(Utilisez CTRL+click pour en sélectionner plusieurs)</label><br />

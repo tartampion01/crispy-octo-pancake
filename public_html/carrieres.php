@@ -159,7 +159,7 @@
                                 }
                             }?>
                     </div>
-                    <img src="_assets/images/menu_images/journee carriere.jpg" alt=""/>
+                    <img class="mobile-col-1-1" src="_assets/images/menu_images/journee carriere.jpg" alt=""/>
                 </div>
             </div>
             

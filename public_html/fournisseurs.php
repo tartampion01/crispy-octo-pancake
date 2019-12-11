@@ -11,7 +11,7 @@
                     <div class="contenu2 col-1-1">
                         <div class="fournisseurs">
                             <a id="lien" href="http://www.accuridewheelendsolutions.com/products/accuride-wheels-product-search/" target="_blank">ACCURIDE Roues</a>
-                            <a id="lien" href="http://www.alcoa.com/alcoawheels/north_america/en/wheels.asp" target="_blank">Alcoa Roues</a>Liste de fournisseurs
+                            <a id="lien" href="http://www.alcoa.com/alcoawheels/north_america/en/wheels.asp" target="_blank">Alcoa Roues</a>
                             <a id="lien" href="http://www.americanchrome.com/products" target="_blank">AMERICAN CHROME</a>
                             <a id="lien" href="http://www.ancra.com/index.php/products/truck" target="_blank">ANCRA</a>
                             <a id="lien" href="http://www.bendix.com/fr/" target="_blank">BENDIX</a>
