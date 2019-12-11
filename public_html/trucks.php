@@ -158,51 +158,24 @@ var _N = 0;
 
                     //let api = 'http://reseaudynamique.com/api/read.php';
                     let api = 'http://raisindynamique.reseaudynamique.com/api/trucks.php';
-                    let n = 0;
-                    let isNew = (window.location.search.match(new RegExp('[?&]' + 'new' + '=([^&]+)')) || [,
-                        null
-                    ])[1];
-                    if (isNew) {
-                        this.isNew = 1;
-                        n = 1;
-                    }
 
-                    let marque = "";
-                    let m = (window.location.search.match(new RegExp('[?&]' + 'marque' + '=([^&]+)')) || [,
-                        null
-                    ])[1];
-                    if (m) {
-                        switch (m.trim().toLowerCase()) {
-                            case "international":
-                                marque = "B_Inte";// "International";
-                                break;
-                            case "kalmar":
-                                marque = "B_Kalm";// "Kalmar";
-                                break;
-                            case "isuzu":
-                                marque = "B_Isuz" ;//  "Isuzu";
-                                break;
-                            default:
-                                break;
-                        }
-                    }
+                    let isNew = (window.location.search.match(new RegExp('[?&]' + 'n' + '=([^&]+)')) || [,null])[1];
+                    if (isNew && isNew == 1) { this.isNew = 1; }
+
+                    let params = (window.location.search.match(new RegExp('[?&]' + 'params' + '=([^&]+)')) || [,null])[1];
+
 
                     // Show loading spinner
                     $('.loading-overlay').show();
 
                     try {
 
-                        let params = "";
                         //let params = '{"field":"","value":"","customCriteria":" (marque=\\\"international\\\" AND DisplayOnWebSite=1) or (marque=\\\"isuzu\\\" AND DisplayOnWebSite=1) or marque=\\\"kalmar\\\" AND ","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[]}'; //,{"field":"modele","value":"Prostar"}
+                        //params = '{"customCriteria":"","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[{"field":"marque","value":"' + marque + '"}]}'; //,{"field":"modele","value":"Prostar"}
 
-                        if (marque) {
-                            //params = '{"customCriteria":"","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[{"field":"marque","value":"' + marque + '"}]}'; //,{"field":"modele","value":"Prostar"}
-                            params = marque;
-                        }
-
-                        const response = await fetch(api + '?n=' + n + '&params=' + encodeURI(params));
+                        const response = await fetch(api + '?n=' + this.isNew + '&params=' + encodeURI(params));
                         const data = await response.json()
-                        // data.records[0].serial = "klsdj dslkf sd;fkjsd;lfj a;sdfj sd;fj sda;lf jsad;lfjds;lfk jsad;lkf sad;lkfj sdlk;f jsad;f jsda;fasd;sdf ";
+
                         this.item = data;
 
                     } catch (error) {

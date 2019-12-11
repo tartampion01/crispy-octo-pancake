@@ -22,7 +22,7 @@
                 </a>
             </div>
             <div class="col-1-4 mobile-col-1-2 item" target="_blank">
-                <a href="/camions.php?new=1">
+                <a href="/trucks.php?n=1">
                     <img src="_assets/images/wx3/logo-3.png" alt="" />
                     <h3 class="topdivision15">Inventaire</h3>
                 </a>
@@ -40,22 +40,22 @@
         <div class="grid">
             <div class="col-1-1 mobile-col-1-1">
                 <div class="col-1-2 mobile-col-1-2 image-box">
-                    <a href="/camions.php?new=1&marque=international">
+                    <a href="/trucks.php?n=1&params=B_Inte">
                         <img src="_assets/images/wx3/img-international.jpg" alt="" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box">
-                    <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDoepker); ?>">
+                    <a href="/trucks.php?n=1&params=B_Doep">
                         <img src="_assets/images/wx3/img-remorque.jpg" alt="" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box" style="margin: -5px 0px 0px 0px;">
-                    <a href="/camions.php?new=1&marque=isuzu"">
+                    <a href="/trucks.php?n=1&params=B_isuz">
                         <img src="_assets/images/wx3/img-isuzu.jpg" alt="" />
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box" style="margin: -5px 0px 0px 0px;">
-                    <a href="/camions.php?new=1&marque=kalmar">
+                    <a href="/trucks.php?n=1&params=B_Kalm">
                         <img src="_assets/images/wx3/img-inventaire.jpg" alt="" />
                     </a>
                 </div>
