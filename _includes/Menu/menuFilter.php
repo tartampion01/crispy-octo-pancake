@@ -3,37 +3,38 @@ $pageName = basename($_SERVER['SCRIPT_NAME']);
 ?>
 <section id="menufiltre">
 <div class="filterZone grid" >
-    <div id="zoneCriteria" class="grid-pad hide-on-mobile" style="height:30px;width:100%;" >
+    <h1 class="titlefilterzone grid-pad">Outils de recherche : </h1>
+    <div id="zoneCriteria" class="grid-pad" style="height:30px;width:100%;" >
         <!-- class="" style="padding-top:5px;" -->
         <div>
-            <span style="color:black; float:left; display:inline-block;" >
+            <span class="titlefilter">
                 {{menu.Brand.title}}&nbsp;:&nbsp;
             </span>
         </div>
         <div v-for="(item,index) in menu.Brand.items">
-            <span v-if="item.selected == 1"  style="color:rgb(213,94,36); float:left; display:inline-block;"
+            <span v-if="item.selected == 1" class="itemfilter"
                 @click="changeSelection(item.code,0)"><!-- onclick="$(this).remove()"-->
                 {{item.title}} <sup>x</sup>
             </span>
         </div>
         <div>
-            <span style="color:black; float:left; display:inline-block;" >
+            <span class="titlefilter">
                 {{menu.Transmission.title}}&nbsp;:&nbsp;
             </span>
         </div>
         <div v-for="(item,index) in menu.Transmission.items">
-            <span v-if="item.selected == 1"  style="color:rgb(213,94,36); float:left; display:inline-block;"
+            <span v-if="item.selected == 1" class="itemfilter"
                 @click="changeSelection(item.code,0)" >
                 {{item.title}} <sup>x</sup>
             </span>
         </div>
         <div>
-            <span style="color:black; float:left; display:inline-block;" >
+            <span class="titlefilter">
                 {{menu.Engine.title}}&nbsp;:&nbsp;
             </span>
         </div>
         <div v-for="(item,index) in menu.Engine.items">
-            <span v-if="item.selected == 1"  style="color:rgb(213,94,36); float:left; display:inline-block;"
+            <span v-if="item.selected == 1" class="itemfilter"
                 @click="changeSelection(item.code,0)" >
                 {{item.title}} <sup>x</sup>
             </span>

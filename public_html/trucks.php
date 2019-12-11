@@ -10,16 +10,6 @@ var _N = 0;
         <div class="">
             <div class="content camions-occasions">
                 <div class="grid">
-                    <div class="filterZone grid">
-                        <div id="zoneCriteria" class="grid-pad hide-on-mobile" style="height:75px;width:100%;">
-                            <h1>Outils de recherche : </h1>
-                            <!-- class="" style="padding-top:5px;" 
-                            <span style="color:rgb(213,94,36); float:left; display:inline-block;"
-                                onclick="$(this).remove()">
-                                AISIN A460 <sup>x</sup>
-                            </span>-->
-                        </div>
-                    </div>
                     <!--Menu filtre-->
                     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/Menu/menuFilter.php'); ?>
                     <br />
@@ -28,7 +18,6 @@ var _N = 0;
                         <div class="GpcFacetedResults defaultFacet">
                             
                             <div id="list" style="" class="">
-
                                 <div class="grid">
                                     <div v-for="(record,index) in item.records" class="container-filter">
                                         <!--item -->

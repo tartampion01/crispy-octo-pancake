@@ -604,6 +604,35 @@ text-decoration:underline;
 .borderdown{
     border-bottom: solid #000 1px;
 }
+#zoneCriteria .titlefilter{
+    color:black; 
+    float:left; 
+    display:inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#zoneCriteria .itemfilter{
+    color:rgb(213,94,36); 
+    float:left; 
+    display:inline-block;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-top: 4px;
+    font-size: 14px;
+}
+#zoneCriteria .itemfilter sup{
+    color:red; 
+    font-weight: 700;
+    font-size: 14px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+.titlefilterzone{
+    font-size: 18px;
+    height: 40px;
+    width: 100%;
+}
 
 @media all and (min-width: 2000px) {
     .bgtrucks{
