@@ -2,8 +2,7 @@
 $pageName = basename($_SERVER['SCRIPT_NAME']);
 ?>
 <section id="menufiltre">
-<div class="filterZone grid" >
-    <h1 class="titlefilterzone grid-pad">Outils de recherche : </h1>
+<div class="filterZone grid">
     <div id="zoneCriteria" class="grid-pad" style="height:30px;width:100%;" >
         <!-- class="" style="padding-top:5px;" -->
         <div>

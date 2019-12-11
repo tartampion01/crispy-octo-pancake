@@ -618,7 +618,7 @@ text-decoration:underline;
     display:inline-block;
     font-weight: 700;
     padding-left: 10px;
-    padding-top: 4px;
+    padding-top: 2px;
     font-size: 14px;
 }
 #zoneCriteria .itemfilter sup{
@@ -630,8 +630,8 @@ text-decoration:underline;
 }
 .titlefilterzone{
     font-size: 18px;
-    height: 40px;
     width: 100%;
+    margin: 0 !important; 
 }
 
 @media all and (min-width: 2000px) {
