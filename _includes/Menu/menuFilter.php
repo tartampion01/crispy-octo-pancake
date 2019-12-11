@@ -59,7 +59,7 @@ $pageName = basename($_SERVER['SCRIPT_NAME']);
             methods: {
                 async readData() {
 
-                    let api = '/menufiltertest.json';
+                    let api = '/api/filters.php';
 
                     try {
 

@@ -1,3 +1,7 @@
+<?php 
+    // required headers
+    header("Content-type: application/json");
+?>
 {
     "Brand": {
         "title": "Marque",
