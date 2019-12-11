@@ -1,14 +1,52 @@
 <?php
 $pageName = basename($_SERVER['SCRIPT_NAME']);
 ?>
-<nav id="menufiltre" class="bgfiltre">
+<section id="menufiltre">
+<div class="filterZone grid" >
+    <div id="zoneCriteria" class="grid-pad hide-on-mobile" style="height:30px;width:100%;" >
+        <!-- class="" style="padding-top:5px;" -->
+        <div>
+            <span style="color:black; float:left; display:inline-block;" >
+                {{menu.Brand.title}}&nbsp;:&nbsp;
+            </span>
+        </div>
+        <div v-for="(item,index) in menu.Brand.items">
+            <span v-if="item.selected == 1"  style="color:rgb(213,94,36); float:left; display:inline-block;"
+                @click="changeSelection(item.code,0)"><!-- onclick="$(this).remove()"-->
+                {{item.title}} <sup>x</sup>
+            </span>
+        </div>
+        <div>
+            <span style="color:black; float:left; display:inline-block;" >
+                {{menu.Transmission.title}}&nbsp;:&nbsp;
+            </span>
+        </div>
+        <div v-for="(item,index) in menu.Transmission.items">
+            <span v-if="item.selected == 1"  style="color:rgb(213,94,36); float:left; display:inline-block;"
+                @click="changeSelection(item.code,0)" >
+                {{item.title}} <sup>x</sup>
+            </span>
+        </div>
+        <div>
+            <span style="color:black; float:left; display:inline-block;" >
+                {{menu.Engine.title}}&nbsp;:&nbsp;
+            </span>
+        </div>
+        <div v-for="(item,index) in menu.Engine.items">
+            <span v-if="item.selected == 1"  style="color:rgb(213,94,36); float:left; display:inline-block;"
+                @click="changeSelection(item.code,0)" >
+                {{item.title}} <sup>x</sup>
+            </span>
+        </div>
+    </div>
+<nav  class="bgfiltre">
     <div class="menudestop grid-pad">
         <ul> 
             <li>
                 <a href="#">{{menu.Brand.title}}</a>
                 <ul class="hidden">
                     <li v-for="(item,index) in menu.Brand.items">
-                        <a @click="selected(item.code)">{{item.title}}</a>
+                        <a @click="changeSelection(item.code,1)">{{item.title}}</a>
                     </li>
                 </ul>
             </li>
@@ -16,7 +54,7 @@ $pageName = basename($_SERVER['SCRIPT_NAME']);
                 <a href="#">{{menu.Transmission.title}}</a>
                 <ul class="hidden" >
                     <li v-for="(item,index) in menu.Transmission.items">
-                        <a @click="selected(item.code)">{{item.title}}</a>
+                        <a @click="changeSelection(item.code,1)">{{item.title}}</a>
                     </li>
                 </ul>
             </li>
@@ -24,13 +62,14 @@ $pageName = basename($_SERVER['SCRIPT_NAME']);
                 <a href="#">{{menu.Engine.title}}</a>
                 <ul class="hidden" >
                     <li v-for="(item,index) in menu.Engine.items">
-                        <a @click="selected(item.code)">{{item.title}}</a>
+                        <a @click="changeSelection(item.code,1)">{{item.title}}</a>
                     </li>
                 </ul>
             </li>
         </ul>
     </div>
 </nav>
+</section>
 
 
 <script type="text/javascript">
@@ -74,8 +113,26 @@ $pageName = basename($_SERVER['SCRIPT_NAME']);
                     }
 
                 },
-                selected(code) {
-                    console.log(code);                   
+                changeSelection(code, selection ) {
+                    if(code){
+                        switch (code.substring(0,1)) {
+                        case "B":
+                            this.menu.Brand.items.forEach(function(e){
+                                if(e.code == code){ e.selected = selection; }
+                            })
+                            break;
+                        case "T":
+                            this.menu.Transmission.items.forEach(function(e){
+                                if(e.code == code){ e.selected = selection; }
+                            })
+                            break;
+                        case "E":
+                            this.menu.Engine.items.forEach(function(e){
+                                if(e.code == code){ e.selected = selection;}
+                            })
+                            break;
+                        }
+                    }
                 }
             }
         })
