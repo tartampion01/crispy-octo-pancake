@@ -1,12 +1,12 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-<script type='text/javascript'>
-var _N = 0;
-</script>
-<script src="_assets/js/camions-rest.js" type="text/javascript"></script>
+
+<script type='text/javascript' src='/_assets/js/App.js'></script>  
+
+<!-- <script src="_assets/js/camions-rest.js" type="text/javascript"></script> -->
 
 
-<body class="body"><?php RD_Utils::write_Gtag() ?>
-    <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
+<body class="body">
+    <form role="form" method="POST" >
         <div class="">
             <div class="content camions-occasions">
                 <div class="grid">
@@ -25,7 +25,6 @@ var _N = 0;
                                             <a :href="getHref(record.id)">
                                                 <div class="rectangle"></div>
                                                 <div class="bgtrucks image-box">
-                                                    <!--  src="http://raisindynamique.reseaudynamique.com/api/pictures.php" -->
                                                     <img :src="getSrc(record.picture_id)"
                                                         :title="record.marque + ' - ' + record.Model"
                                                         :alt="record.marque + ' - ' + record.Model"
@@ -111,33 +110,27 @@ var _N = 0;
 
     <div class="loading-overlay">Loading&#8230;</div>
 
-
     <script type="text/javascript">
+
     $(document).ready(function() {
-
-        Vue.filter('NA', function(value) {
-            if (value) {
-                return value;
-            } else {
-                return 'N/A';
-            }
-        });
-
-        init();
+        trucksInit();
     });
 
-    function init() {
+    function trucksInit() {
         var vm = new Vue({
             el: '#list',
             data: {
                 isNew: 0,
+                params: "",
                 errorMessage: "",
                 item: {}
             },
             mounted: function() {
                 try {
 
-                    this.readData();
+                    this.paramInit();
+                    this.dataRead();
+                    $App.$on("truck_selection_changed", this.paramChanged );
 
                 } catch (error) {
                     console.error(error);
@@ -145,27 +138,31 @@ var _N = 0;
                 }
             },
             methods: {
-                async readData() {
-
-                    //let api = 'http://reseaudynamique.com/api/read.php';
-                    let api = 'http://raisindynamique.reseaudynamique.com/api/trucks.php';
+                paramInit(){
 
                     let isNew = (window.location.search.match(new RegExp('[?&]' + 'n' + '=([^&]+)')) || [,null])[1];
                     if (isNew && isNew == 1) { this.isNew = 1; }
 
-                    let params = (window.location.search.match(new RegExp('[?&]' + 'params' + '=([^&]+)')) || [,null])[1];
+                    this.params = (window.location.search.match(new RegExp('[?&]' + 'params' + '=([^&]+)')) || [,null])[1];
+                        //let params = '{"field":"","value":"","customCriteria":" (marque=\\\"international\\\" AND DisplayOnWebSite=1) or (marque=\\\"isuzu\\\" AND DisplayOnWebSite=1) or marque=\\\"kalmar\\\" AND ","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[]}'; //,{"field":"modele","value":"Prostar"}
+                        //params = '{"customCriteria":"","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[{"field":"marque","value":"' + marque + '"}]}'; //,{"field":"modele","value":"Prostar"}
 
+                },
+                paramChanged(params){
+                    this.params = params;
+                    this.dataRead();
+                },
+                async dataRead() {
+
+                    let api = 'http://raisindynamique.reseaudynamique.com/api/trucks.php';
 
                     // Show loading spinner
                     $('.loading-overlay').show();
 
                     try {
 
-                        //let params = '{"field":"","value":"","customCriteria":" (marque=\\\"international\\\" AND DisplayOnWebSite=1) or (marque=\\\"isuzu\\\" AND DisplayOnWebSite=1) or marque=\\\"kalmar\\\" AND ","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[]}'; //,{"field":"modele","value":"Prostar"}
-                        //params = '{"customCriteria":"","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[{"field":"marque","value":"' + marque + '"}]}'; //,{"field":"modele","value":"Prostar"}
-
-                        const response = await fetch(api + '?n=' + this.isNew + '&params=' + encodeURI(params));
-                        const data = await response.json()
+                        let response = await fetch(api + '?n=' + this.isNew + '&params=' + encodeURI(this.params));
+                        let data = await response.json()
 
                         this.item = data;
 

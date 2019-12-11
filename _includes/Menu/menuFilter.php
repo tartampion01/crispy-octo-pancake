@@ -90,6 +90,7 @@ $pageName = basename($_SERVER['SCRIPT_NAME']);
                 try {
 
                     this.readData();
+                   
 
                 } catch (error) {
                     console.error(error);
@@ -129,11 +130,27 @@ $pageName = basename($_SERVER['SCRIPT_NAME']);
                             break;
                         case "E":
                             this.menu.Engine.items.forEach(function(e){
-                                if(e.code == code){ e.selected = selection;}
+                                if(e.code == code){ e.selected = selection; }
                             })
                             break;
                         }
+                        let params = this.getSelectedCode();
+                        $App.$emit("truck_selection_changed", params);
                     }
+                },
+                getSelectedCode(){
+                    let codes = "";
+                    this.menu.Brand.items.forEach(function(e){
+                        if(e.selected == 1){ codes = codes + "," + e.code; }
+                    });
+                    this.menu.Transmission.items.forEach(function(e){
+                        if(e.selected == 1){ codes = codes + "," + e.code; }
+                    });
+                    this.menu.Engine.items.forEach(function(e){
+                        if(e.selected == 1){ codes = codes + "," + e.code; }
+                    });
+                    if(codes){ return codes.substring(1); }
+                    else { return codes;}
                 }
             }
         })
