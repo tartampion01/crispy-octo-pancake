@@ -10,6 +10,7 @@
         <div class="">
             <div class="content camions-occasions">
                 <div class="grid">
+                    <h1 class="titlefilterzone grid-pad">Outils de recherche : </h1>
                     <!--Menu filtre-->
                     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/Menu/menuFilter.php'); ?>
                     <br />
@@ -31,8 +32,7 @@
                                                         class="col-1-1" />
                                                 </div>
                                                 <div class="topdivision40" style="margin-top:15px;">
-                                                    <h2 style="font-weight:700;">{{ record.marque }} -
-                                                        {{ record.Model }}</h2>
+                                                    <h2 style="font-weight:700;">{{ record.marque }} - {{ record.Model }}</h2>
                                                 </div>
                                             </a>
                                             <div class="inline col-1-1 borderdown mobile-col-1-1" style="margin-top:30px;">

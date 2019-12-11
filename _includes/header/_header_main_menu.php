@@ -41,13 +41,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                 <li class="">
                                                     <img src="../../_assets/images/wx3/CV-navigation.jpg" alt="" />
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a href="https://www.internationaltrucks.com/configurator/cv" target="_blank">Configurer<br />votre véhicule</a>
+                                                        <a style="margin-top:13px;" href="https://www.internationaltrucks.com/configurator/cv" target="_blank">Configurer<br />votre véhicule</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3" style="border-left:solid 2px black;border-right:solid 2px black;">
-                                                        <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/cv-series" target="_blank">Explorer</a>
+                                                        <a style="margin-top:20px;" href="https://www.internationaltrucks.com/trucks/cv-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
+                                                        <a style="margin-top:20px;" href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
@@ -58,13 +58,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                 <li>
                                                     <img src="../../_assets/images/wx3/HV-navigation.jpg" alt="" />
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a href="https://www.internationaltrucks.com/configurator/hv" target="_blank">Configurer<br />votre véhicule</a>
+                                                        <a style="margin-top:13px;" href="https://www.internationaltrucks.com/configurator/hv" target="_blank">Configurer<br />votre véhicule</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3" style="border-left:solid 2px black;border-right:solid 2px black;">
-                                                        <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/hv-series" target="_blank">Explorer</a>
+                                                        <a style="margin-top:20px;" href="https://www.internationaltrucks.com/trucks/hv-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
+                                                        <a style="margin-top:20px;" href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
@@ -75,13 +75,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                 <li>
                                                     <img src="../../_assets/images/wx3/hx-navigation.jpg" alt="" />
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a href="https://www.internationaltrucks.com/configurator/hx" target="_blank">Configurer<br />votre véhicule</a>
+                                                        <a style="margin-top:13px;" href="https://www.internationaltrucks.com/configurator/hx" target="_blank">Configurer<br />votre véhicule</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3" style="border-left:solid 2px black;border-right:solid 2px black;">
-                                                        <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/hx-series" target="_blank">Explorer</a>
+                                                        <a style="margin-top:20px;" href="https://www.internationaltrucks.com/trucks/hx-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
+                                                        <a style="margin-top:20px;" href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
@@ -92,13 +92,13 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                 <li>
                                                     <img src="../../_assets/images/wx3/lt-navigation.png" alt="" />
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a href="https://www.internationaltrucks.com/configurator/lt" target="_blank">Configurer<br />votre véhicule</a>
+                                                        <a style="margin-top:13px;" href="https://www.internationaltrucks.com/configurator/lt" target="_blank">Configurer<br />votre véhicule</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3" style="border-left:solid 2px black;border-right:solid 2px black;">
-                                                        <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/lt-series" target="_blank">Explorer</a>
+                                                        <a style="margin-top:20px;" href="https://www.internationaltrucks.com/trucks/lt-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
+                                                        <a style="margin-top:20px;" href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>
@@ -109,13 +109,47 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                                 <li>
                                                     <img src="../../_assets/images/wx3/MV-navigation.jpg" alt="" />
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer<br />votre véhicule</a>
+                                                        <a style="margin-top:13px;" href="https://www.internationaltrucks.com/configurator/mv" target="_blank">Configurer<br />votre véhicule</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3" style="border-left:solid 2px black;border-right:solid 2px black;">
-                                                        <a style="margin-top:9px;" href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
+                                                        <a style="margin-top:20px;" href="https://www.internationaltrucks.com/trucks/mv-series" target="_blank">Explorer</a>
                                                     </h4>
                                                     <h4 class="col-1-3 mobile-col-1-3">
-                                                        <a style="margin-top:9px;" href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
+                                                        <a style="margin-top:20px;" href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
+                                                    </h4>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/trucks.php?n=1&params=B_Inte">série RH</a>
+                                            <ul class="hidden">
+                                                <li>
+                                                    <img src="../../_assets/images/wx3/RH.jpg" alt="" />
+                                                    <h4 class="col-1-3 mobile-col-1-3">
+                                                        <a style="margin-top:13px;" href="https://www.internationaltrucks.com/configurator/rh" target="_blank">Configurer<br />votre véhicule</a>
+                                                    </h4>
+                                                    <h4 class="col-1-3 mobile-col-1-3" style="border-left:solid 2px black;border-right:solid 2px black;">
+                                                        <a style="margin-top:20px;" href="https://www.internationaltrucks.com/trucks/rh-series" target="_blank">Explorer</a>
+                                                    </h4>
+                                                    <h4 class="col-1-3 mobile-col-1-3">
+                                                        <a style="margin-top:20px;" href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
+                                                    </h4>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/trucks.php?n=1&params=B_Inte">Longstar</a>
+                                            <ul class="hidden">
+                                                <li>
+                                                    <img src="../../_assets/images/wx3/Lonestar.jpg" alt="" />
+                                                    <h4 class="col-1-3 mobile-col-1-3">
+                                                        <a style="margin-top:13px;" href="https://www.internationaltrucks.com/configurator/lonestar" target="_blank">Configurer<br />votre véhicule</a>
+                                                    </h4>
+                                                    <h4 class="col-1-3 mobile-col-1-3" style="border-left:solid 2px black;border-right:solid 2px black;">
+                                                        <a style="margin-top:20px;" href="https://www.internationaltrucks.com/trucks/lonestar" target="_blank">Explorer</a>
+                                                    </h4>
+                                                    <h4 class="col-1-3 mobile-col-1-3">
+                                                        <a style="margin-top:20px;" href="/trucks.php?n=1&params=B_Inte">Inventaire</a>
                                                     </h4>
                                                 </li>
                                             </ul>

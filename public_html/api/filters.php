@@ -6,7 +6,7 @@
     "Brand": {
         "title": "Marque",
         "items": [
-            {"code": "B_Inte", "title": "International", "availability": 0, "selected": 1 }, 
+            {"code": "B_Inte", "title": "International", "availability": 0, "selected": 0 }, 
             {"code": "B_Isuz", "title": "Isuzu", "availability": 0, "selected": 0 },  
             {"code": "B_kalm", "title": "kalmar", "availability": 0, "selected": 0 }, 
             {"code": "B_Doep", "title": "Doepker", "availability": 0, "selected": 0 }, 
@@ -20,15 +20,15 @@
     "Transmission": {
         "title": "Transmission",
         "items": [
-            {"code": "T_Auto", "title": "Automatic", "availability": 0, "selected": 0 }, 
-            {"code": "T_Manu", "title": "Manual", "availability": 0, "selected": 0 }
+            {"code": "T_Auto", "title": "Automatique", "availability": 0, "selected": 0 }, 
+            {"code": "T_Manu", "title": "Manuelle", "availability": 0, "selected": 0 }
         ]
     },
     "Engine": { 
         "title": "Moteur",
         "items": [
             {"code": "E_Inte", "title": "International", "availability": 0, "selected": 0 },
-            {"code": "E_Cumm", "title": "Cummins", "availability": 0, "selected": 1 },
+            {"code": "E_Cumm", "title": "Cummins", "availability": 0, "selected": 0 },
             {"code": "E_Detr", "title": "Detroit", "availability": 0, "selected": 0 },
             {"code": "E_Pacc", "title": "Paccar", "availability": 0, "selected": 0 },
             {"code": "E_Isuz", "title": "Isuzu", "availability": 0, "selected": 0 }
