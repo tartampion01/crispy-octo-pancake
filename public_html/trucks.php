@@ -47,23 +47,23 @@ var _N = 0;
                                                         {{ record.Model }}</h2>
                                                 </div>
                                             </a>
-                                            <div class="inline col-1-1 borderdown" style="margin-top:30px;">
-                                                <h4 class="inline topdivision20 nobold col-1-2">Numéro série :</h4>
+                                            <div class="inline col-1-1 borderdown mobile-col-1-1" style="margin-top:30px;">
+                                                <h4 class="inline topdivision20 nobold col-1-2 mobile-col-1-2">Numéro série :</h4>
                                                 <p class="resultatbdfilter">{{ record.serial | NA }}</span>
                                             </div>
                                             <!--correction width-->
                                             <div class=" col-1-1 topdivision30 mobile-col-1-1" style="margin-top:40px;">
                                                 <div class="col-1-1 topdivision15 mobile-col-1-1">
-                                                    <div class="uppercases inline floatleft col-1-1">
-                                                        <h4 class="col-1-2">Modèle :</h4>
+                                                    <div class="uppercases inline floatleft col-1-1 mobile-col-1-1">
+                                                        <h4 class="col-1-2 mobile-col-1-2">Modèle :</h4>
                                                         <p class="resultatbdfilter">{{ record.Model | NA }}</p>
                                                     </div>
-                                                    <div class="uppercases inline floatleft col-1-1">
-                                                        <h4 class="col-1-2">No d'inventaire :</h4>
-                                                        <p class="resultatbdfilter">N/A{{ record.stock | NA }}</p>
+                                                    <div class="uppercases inline floatleft col-1-1 mobile-col-1-1">
+                                                        <h4 class="col-1-2 mobile-col-1-2">No d'inventaire :</h4>
+                                                        <p class="resultatbdfilter">{{ record.stock | NA }}</p>
                                                     </div>
-                                                    <div class="uppercases inline floatleft col-1-1">
-                                                        <h4 class="col-1-2">Moteur :</h4>
+                                                    <div class="uppercases inline floatleft col-1-1 mobile-col-1-1">
+                                                        <h4 class="col-1-2 mobile-col-1-2">Moteur :</h4>
                                                         <p class="resultatbdfilter">{{record.engine | NA }}</p>
                                                     </div>
                                                 </div>
@@ -90,16 +90,18 @@ var _N = 0;
                             <div class="GpcFooter clear">
                                 <!-- recuperer le style... -->
                                 <div>
-                                    <div class="resultsearch">
+                                    <div class="resultsearch mobile-col-1-1">
                                         Resultat 1-12 sur 100
                                     </div>
-                                    <div class="pagination">
-                                        <button class="buttonwebsite">Precedent</button>
-                                        <a href="#">1</a>
-                                        <a href="#" class="active">2</a>
-                                        <a href="#">3</a>
-                                        <a href="#">4</a>
-                                        <button class="buttonwebsite">Suivant</button>
+                                    <div class="pagination mobile-col-1-1">
+                                        <button class="buttonwebsite mobile-col-1-1">Precedent</button>
+                                        <div class="mobilepagination mobile-col-1-1">
+                                            <a href="#">1</a>
+                                            <a href="#" class="active">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                        </div>                                       
+                                        <button class="buttonwebsite mobile-col-1-1">Suivant</button>
                                     </div>
                                 </div>
                             </div>

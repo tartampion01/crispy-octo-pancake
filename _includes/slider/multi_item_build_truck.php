@@ -30,7 +30,7 @@
 
             <div class="image-box">
                 <a href="https://www.internationaltrucks.com/configurator/cv" target="_blank" title="">
-                    <img src="../../_assets/images/wx3/CV.png" alt="">
+                    <img src="../../_assets/images/wx3/cv.png" alt="">
                     <h3 class="bold center">CV Séries </h3>
                 </a>
             </div>

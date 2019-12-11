@@ -281,6 +281,7 @@ a {
   line-height: 2.5em;
   padding-right: 3%;
   padding-left: 3%;
+  margin: 1%;
   display: inline-block;
   background-color: rgb(243, 113, 33);
 }
