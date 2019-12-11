@@ -308,8 +308,8 @@ function init(){
             async readData() {
 
                 let api = 'http://reseaudynamique.com/api/singleUsedTruck_.php';
-                let isNew = (window.location.search.match(new RegExp('[?&]' + 'new' + '=([^&]+)')) || [,null])[1];
-                if(isNew){
+                let isNew = (window.location.search.match(new RegExp('[?&]' + 'n' + '=([^&]+)')) || [,null])[1];
+                if(isNew && isNew == 1){
                     api = 'http://reseaudynamique.com/api/singleNewTruck_.php';
                     this.isNew = 1;
                 }

@@ -187,9 +187,9 @@ var _N = 0;
                     $('.loading-overlay').hide();
                 },
                 getHref(id) {
-                    let url = "/details_new.php?"
+                    let url = "/truck_detail.php?"
                     if (this.isNew == 1) {
-                        url = url + "new=1&"
+                        url = url + "n=1&"
                     }
                     return url + "id=" + encodeURI(btoa(id));
                 },

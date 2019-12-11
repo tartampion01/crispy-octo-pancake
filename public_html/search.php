@@ -32,7 +32,7 @@
                             $resultsNew = mysqli_query($conn, $sql);
                             if(mysqli_num_rows($resultsNew) > 0){
                                 while($row = mysqli_fetch_assoc($resultsNew)) {
-                                    $lien = "<a href='" . RD_PageLink::getHref(folder::Root,page::Details_New) . "?id=" . base64_encode($row["id"]) . "'>";
+                                    $lien = "<a href='/truck_detail.php?n=1&id=" . base64_encode($row["id"]) . "'>";
                                     $marque = $row['marque'] != "" ? $row['marque'] : "";
                                     $modele = $row['Model'] != "" ? "&nbsp;-&nbsp;" . $row['Model'] : "";
                                     $config = $row['config'] != "-" ? "&nbsp;-&nbsp;" . $row['config'] : "";
@@ -52,7 +52,7 @@
                             $resultsUsed = mysqli_query($conn, $sql);
                             if(mysqli_num_rows($resultsUsed) > 0){
                                 while($row = mysqli_fetch_assoc($resultsUsed)) {
-                                    $lien = "<a href='" . RD_PageLink::getHref(folder::Root,page::Details_Used) . "?id=" . base64_encode($row["id"]) . "'>";
+                                    $lien = "<a href='/truck_detail.php?n=0&id=" . base64_encode($row["id"]) . "'>";
                                     $marque = $row['marque'] != "" ? $row['marque'] : "";
                                     $modele = $row['modele'] != "" ? "&nbsp;-&nbsp;" . $row['modele'] : "";
                                     $config = $row['config'] != "-" ? "&nbsp;-&nbsp;" . $row['config'] : "";
