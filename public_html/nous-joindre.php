@@ -810,8 +810,8 @@ function urldecode(str) {
                     </div>
 
 <div class="contenu contenu-nous-joindre" data-staticClassNames="contenu">
-    <div class="" data-staticClassNames=" ">
-        <h2>Concessionnaires</h2>
+    <div  data-staticClassNames=" " >
+        <h2 class="">Concessionnaires</h2>
     </div>
     <div class="concession">
         <div class="titre"><h3><span>Joliette</span></h3></div>
