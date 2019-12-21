@@ -22,6 +22,17 @@ $filters = array();
 $brand = "";
 $trans = "";
 $engine = "";
+$limit = 12;
+$offset = 0;
+
+// Paging
+if(isset($_GET['p'])){
+    $page = $_GET['p'];
+    if (ctype_digit($page)) {
+        $offset = intval($page) * $limit ;
+        if( $offset < 0) { $offset = 0;  }
+    }
+}
 
 if(isset($_GET['params'])){
     $params = $_GET['params'];
@@ -110,15 +121,22 @@ $conn = Database::getConn();
 if( $newTruck ){
     $sql = "SELECT P.id AS picture_id, I.* FROM inventory I "
     ." LEFT JOIN ( SELECT id, product_id FROM inv_pictures WHERE intorder = 0 ) P ON P.product_id = I.id  "
-    ." WHERE I.DisplayOnWebSite = 1 $brand $engine $trans LIMIT 12";
+    ." WHERE I.DisplayOnWebSite = 1 $brand $engine $trans LIMIT $limit OFFSET $offset";
+
+    $sqlCnt = "SELECT COUNT(I.id) AS cnt FROM inventory I "
+    ." WHERE I.DisplayOnWebSite = 1 $brand $engine $trans ";
 
     //select P.id as picture_id, I.* from inventory I left join ( select id, product_id, base64_picture from inv_pictures where intorder = 0 ) P ON P.product_id = I.id WHERE I.DisplayOnWebSite = 1 and I.marque like '%Inter%'  limit 12;
+    //SELECT COUNT(I.id) AS cnt FROM inventory I WHERE I.DisplayOnWebSite = 1
 
 }
 else {
     $sql = "SELECT P.id AS picture_id, I.* FROM trucks I "
     ." LEFT JOIN ( SELECT id, product_id FROM pictures WHERE intorder = 0 ) P ON P.product_id = I.id  "
-    ." WHERE 1 = 1 $brand $engine $trans LIMIT 12";
+    ." WHERE 1 = 1 $brand $engine $trans LIMIT $limit OFFSET $offset";
+
+    $sqlCnt = "SELECT COUNT(I.id) AS cnt FROM trucks I "
+    ." WHERE 1 = 1 $brand $engine $trans ";
 }
 
 
@@ -127,13 +145,17 @@ $results["records"]=array();
 //$results["sql"] = $sql;
 
 
+$qryCnt = mysqli_query($conn, $sqlCnt);
+$rowCnt = mysqli_fetch_assoc($qryCnt);
+$total = $rowCnt["cnt"];
+$results["total"] = $total;
+$results["first"] = min($offset, $total) + 1;
+$results["max"] = $limit;
 
+if($total > 0){
 
-$qry = mysqli_query($conn, $sql);
-$cnt = mysqli_num_rows($qry);
-$results["countRows"] = $cnt;
-
-if($cnt > 0){
+    $qry = mysqli_query($conn, $sql);
+    $results["count"] = mysqli_num_rows($qry);
 
     $pictures = array();
     // Pas d'images dans db on met ceci
