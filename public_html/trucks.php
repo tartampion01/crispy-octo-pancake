@@ -66,15 +66,15 @@
                                 <!-- recuperer le style... -->
                                 <div>
                                     <div class="resultsearch mobile-col-1-1">
-                                        Resultat {{item.first}}-{{item.first+item.count}} sur {{item.total}}
+                                        Resultat {{pagingMsg}}
                                     </div>
-                                    <div class="pagination mobile-col-1-1">
+                                    <div v-if="item.total > item.count " class="pagination mobile-col-1-1">
                                         <button type="button" class="buttonwebsite mobile-col-1-1" @click="prev()">Precedent</button>
                                         <div class="mobilepagination mobile-col-1-1">
-                                            <a href="#">1</a>
-                                            <a href="#" class="active">2</a>
-                                            <a href="#">3</a>
-                                            <a href="#">4</a>
+                                            <a >1</a>
+                                            <a class="active">2</a>
+                                            <a >3</a>
+                                            <a >4</a>
                                         </div>                                       
                                         <button type="button" class="buttonwebsite mobile-col-1-1" @click="next()" >Suivant</button>
                                     </div>
@@ -127,7 +127,8 @@
                 params: "",
                 errorMessage: "",
                 item: {},
-                page:0
+                page: 0,
+                pagingMsg: ""
             },
             mounted: function() {
                 try {
@@ -170,6 +171,7 @@
                         let data = await response.json()
 
                         this.item = data;
+                        this.pagingMsg = data.first  + " - " + Math.max(data.first + data.count - 1, 0) + " sur " + data.total;
 
                     } catch (error) {
                         console.error(error);
@@ -197,7 +199,11 @@
                 },
                 next(){
                     this.page = this.page + 1;
-                    this.dataRead();
+                    if( ( this.page * this.item.max ) >= this.item.total ){
+                        this.page = this.page - 1;
+                    } else { 
+                        this.dataRead();
+                    }
                 },
                 prev(){
                     this.page = Math.max(this.page - 1, 0);
