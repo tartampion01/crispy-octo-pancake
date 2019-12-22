@@ -151,11 +151,12 @@ $total = $rowCnt["cnt"];
 $results["total"] = $total;
 $results["first"] = min($offset, $total) + 1;
 $results["max"] = $limit;
+$results["count"] = 0;
 
 if($total > 0){
 
     $qry = mysqli_query($conn, $sql);
-    $results["count"] = mysqli_num_rows($qry) ?? 0;
+    $results["count"] = mysqli_num_rows($qry);
 
     $pictures = array();
     // Pas d'images dans db on met ceci
