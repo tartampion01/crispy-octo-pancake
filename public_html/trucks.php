@@ -60,6 +60,27 @@
                                     </div>
                                 </div>
 
+
+                            <!--resultat section-->
+                            <div class="GpcFooter clear">
+                                <!-- recuperer le style... -->
+                                <div>
+                                    <div class="resultsearch mobile-col-1-1">
+                                        Resultat {{item.first}}-{{item.first+item.count}} sur {{item.total}}
+                                    </div>
+                                    <div class="pagination mobile-col-1-1">
+                                        <button type="button" class="buttonwebsite mobile-col-1-1" @click="prev()">Precedent</button>
+                                        <div class="mobilepagination mobile-col-1-1">
+                                            <a href="#">1</a>
+                                            <a href="#" class="active">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                        </div>                                       
+                                        <button type="button" class="buttonwebsite mobile-col-1-1" @click="next()" >Suivant</button>
+                                    </div>
+                                </div>
+                            </div>
+
                             </div>
 
                             <!-- <div class="GpcFooter clear">
@@ -74,25 +95,7 @@
                                 </div>
                             </div> -->
 
-                            <!--resultat section-->
-                            <div class="GpcFooter clear">
-                                <!-- recuperer le style... -->
-                                <div>
-                                    <div class="resultsearch mobile-col-1-1">
-                                        Resultat 1-12 sur 100
-                                    </div>
-                                    <div class="pagination mobile-col-1-1">
-                                        <button class="buttonwebsite mobile-col-1-1">Precedent</button>
-                                        <div class="mobilepagination mobile-col-1-1">
-                                            <a href="#">1</a>
-                                            <a href="#" class="active">2</a>
-                                            <a href="#">3</a>
-                                            <a href="#">4</a>
-                                        </div>                                       
-                                        <button class="buttonwebsite mobile-col-1-1">Suivant</button>
-                                    </div>
-                                </div>
-                            </div>
+
 
 
                         </div>
@@ -123,7 +126,8 @@
                 isNew: 0,
                 params: "",
                 errorMessage: "",
-                item: {}
+                item: {},
+                page:0
             },
             mounted: function() {
                 try {
@@ -150,6 +154,7 @@
                 },
                 paramChanged(params){
                     this.params = params;
+                    this.page = 0;
                     this.dataRead();
                 },
                 async dataRead() {
@@ -161,7 +166,7 @@
 
                     try {
 
-                        let response = await fetch(api + '?n=' + this.isNew + '&params=' + encodeURI(this.params));
+                        let response = await fetch(api + '?n=' + this.isNew + '&p='+ this.page + '&params=' + encodeURI(this.params));
                         let data = await response.json()
 
                         this.item = data;
@@ -189,6 +194,14 @@
                     } else {
                         return "../../_assets/images/camions/noimage.png";
                     }
+                },
+                next(){
+                    this.page = this.page + 1;
+                    this.dataRead();
+                },
+                prev(){
+                    this.page = Math.max(this.page - 1, 0);
+                    this.dataRead();
                 }
             }
         })

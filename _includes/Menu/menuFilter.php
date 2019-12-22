@@ -1,7 +1,6 @@
 <section id="menufiltre">
 <div class="filterZone grid">
-    <div id="zoneCriteria" class="grid-pad" style="height:30px;width:100%;" >
-        <!-- class="" style="padding-top:5px;" -->
+    <div id="zoneCriteria" v-if="menu.Brand && menu.Transmission && menu.Engine" class="grid-pad" style="height:30px;width:100%;" >
         <div v-if="isAnySelected('B')">
             <span class="titlefilter" v-text="menu.Brand.title"></span>
         </div>
@@ -28,7 +27,7 @@
         </div>
     </div>
 <nav  class="bgfiltre">
-    <div class="menudestop grid-pad">
+    <div v-if="menu.Brand && menu.Transmission && menu.Engine" class="menudestop grid-pad">
         <ul> 
             <li>
                 <a href="#" v-text="menu.Brand.title"></a>
@@ -109,58 +108,69 @@
                     if(this.params){
                         let codes = this.params.replace(";",",").split(",");
                         codes.forEach(param => {
-                            let items = [];
+                            let subItems = [];
                             switch (param.substring(0,1)) {
-                                case "B": items = this.menu.Brand.items; break;
-                                case "T": items = this.menu.Transmission.items; break;
-                                case "E": items = this.menu.Engine.items; break;
+                                case "B": if(this.menu.Brand){ subItems = this.menu.Brand.items; } break;
+                                case "T": if(this.menu.Transmission){subItems = this.menu.Transmission.items;} break;
+                                case "E": if(this.menu.Engine){subItems = this.menu.Engine.items;} break;
                             }
-                            items.some(function(e){
+                            subItems.some(function(e) {
                                 if(e.code == param){ e.selected = 1; return true; }
-                            });
+                            })
                         });
                     }
                 },
                 changeSelection(code, selection ) {
                     if(code){
-                        let items = [];
+
+                        let subItems = [];
                         switch (code.substring(0,1)) {
-                        case "B": items = this.menu.Brand.items; break;
-                        case "T": items = this.menu.Transmission.items; break;
-                        case "E": items = this.menu.Engine.items; break;
+                            case "B": if(this.menu.Brand){ subItems = this.menu.Brand.items; } break;
+                            case "T": if(this.menu.Transmission){subItems = this.menu.Transmission.items;} break;
+                            case "E": if(this.menu.Engine){subItems = this.menu.Engine.items;} break;
                         }
-                        items.some(function(e){
-                                if(e.code == code){ e.selected = selection; return true; }
-                            })
+                        subItems.some(function(e) {
+                            if(e.code == code){ e.selected = selection; return true; }
+                        })
+                            
                         let params = this.getSelectedCode();
                         $App.$emit("truck_selection_changed", params);
                     }
                 },
                 getSelectedCode(){
                     let codes = "";
-                    this.menu.Brand.items.forEach(function(e){
+                    if(this.menu.Brand){
+                        this.menu.Brand.items.forEach(function(e){
                         if(e.selected == 1){ codes = codes + "," + e.code; }
-                    });
-                    this.menu.Transmission.items.forEach(function(e){
+                        });
+                    }
+                    if(this.menu.Transmission){
+                        this.menu.Transmission.items.forEach(function(e){
                         if(e.selected == 1){ codes = codes + "," + e.code; }
-                    });
-                    this.menu.Engine.items.forEach(function(e){
+                        });
+                    }
+                    if(this.menu.Engine){
+                        this.menu.Engine.items.forEach(function(e){
                         if(e.selected == 1){ codes = codes + "," + e.code; }
-                    });
+                        });
+                    }
+                    
                     if(codes){ return codes.substring(1); }
                     else { return codes;}
                 },
                 isAnySelected(e){
                     let selected = false;
-                    let items = [];
+
+                    let subItems = [];
                     switch (e) {
-                        case "B": items = this.menu.Brand.items; break;
-                        case "T": items = this.menu.Transmission.items; break;
-                        case "E": items = this.menu.Engine.items; break;
-                        }
-                    items.some(function(e) {
+                        case "B": if(this.menu.Brand){ subItems = this.menu.Brand.items; } break;
+                        case "T": if(this.menu.Transmission){subItems = this.menu.Transmission.items;} break;
+                        case "E": if(this.menu.Engine){subItems = this.menu.Engine.items;} break;
+                    }
+                    subItems.some(function(e) {
                         if(e.selected == 1){ selected = true; return true; }
-                        })
+                    })
+                        
                     return selected;
                 }
             }

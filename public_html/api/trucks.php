@@ -155,7 +155,7 @@ $results["max"] = $limit;
 if($total > 0){
 
     $qry = mysqli_query($conn, $sql);
-    $results["count"] = mysqli_num_rows($qry);
+    $results["count"] = mysqli_num_rows($qry) ?? 0;
 
     $pictures = array();
     // Pas d'images dans db on met ceci
