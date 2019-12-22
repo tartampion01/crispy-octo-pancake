@@ -149,13 +149,15 @@ $qryCnt = mysqli_query($conn, $sqlCnt);
 $rowCnt = mysqli_fetch_assoc($qryCnt);
 $total = $rowCnt["cnt"];
 $results["total"] = $total;
-$results["first"] = min($offset, $total) + 1;
+$results["first"] = 0;
 $results["max"] = $limit;
 $results["count"] = 0;
 
 if($total > 0){
 
     $qry = mysqli_query($conn, $sql);
+
+    $results["first"] = min($offset, $total) + 1;
     $results["count"] = mysqli_num_rows($qry);
 
     $pictures = array();
