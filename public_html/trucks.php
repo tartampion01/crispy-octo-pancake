@@ -14,11 +14,14 @@
                     <!--Menu filtre-->
                     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/Menu/menuFilter.php'); ?>
                     <br />
-                    <div class="FacetedExplorer grid-pad">
+                    <div class="grid-pad">
                         <!-- Results Content -->
-                        <div class="GpcFacetedResults defaultFacet">
+                        <!-- class="FacetedExplorer grid-pad" -->
+                        <!-- <div class="GpcFacetedResults defaultFacet"></div> -->
+                        <!-- <div class="FacetedExplorerClear GpcClear"></div> -->
                             
                             <div id="list" style="" class="">
+
                                 <div class="grid">
                                     <div v-for="(record,index) in item.records" class="container-filter">
                                         <!--item -->
@@ -60,48 +63,24 @@
                                     </div>
                                 </div>
 
-
-                            <!--resultat section-->
-                            <div class="GpcFooter clear">
+                                <!--resultat section -->
                                 <!-- recuperer le style... -->
-                                <div>
-                                    <div class="resultsearch mobile-col-1-1">
-                                        Resultat {{pagingMsg}}
-                                    </div>
-                                    <div v-if="item.total > item.count " class="pagination mobile-col-1-1">
-                                        <button type="button" class="buttonwebsite mobile-col-1-1" @click="prev()">Precedent</button>
-                                        <div class="mobilepagination mobile-col-1-1">
-                                            <a >1</a>
-                                            <a class="active">2</a>
-                                            <a >3</a>
-                                            <a >4</a>
-                                        </div>                                       
-                                        <button type="button" class="buttonwebsite mobile-col-1-1" @click="next()" >Suivant</button>
+                                <div v-if="paging" class="grid" style="border-top: 1px #cfcfcf solid; border-bottom: 1px #cfcfcf solid; " >
+                                    <div class="resultsearch mobile-col-1-1">Resultat {{paging.message}}</div>
+                                    <div v-if="paging.available" class="pagination mobile-col-1-1">
+                                        <button type="button" class="buttonwebsite mobile-col-1-1" @click="paging.prev()">Precedent</button>
+                                        <div v-for="page in paging.pages" class="mobilepagination mobile-col-1-1">
+                                            <a v-bind:class="{ active: page.current }" @click="paging.move(page.index)" >{{page.title}}</a>
+                                        </div>                                                                                
+                                        <button type="button" class="buttonwebsite mobile-col-1-1" @click="paging.next()" >Suivant</button>
                                     </div>
                                 </div>
+
+
                             </div>
-
-                            </div>
-
-                            <!-- <div class="GpcFooter clear">
-                                <div class="GpcPagedResultCount" style="display: none;">
-                                    <span class="GpcCountPrefixText">Résultats</span>
-                                    <span class="GpcPagedResultCurrentCount">1 - 4</span>
-                                    <span class="GpcBetweenCountText">sur</span>
-                                    <span class="GpcPagedResultTotalCount">4</span>
-                                </div>
-                                <div class="GpcResultPager">
-                                    <ul class="pagination" id="pagination"></ul>
-                                </div>
-                            </div> -->
-
-
-
 
                         </div>
-                    </div>
-
-                    <div class="FacetedExplorerClear GpcClear"></div>
+                    
 
                 </div>
             </div>
@@ -127,13 +106,12 @@
                 params: "",
                 errorMessage: "",
                 item: {},
-                page: 0,
-                pagingMsg: ""
+                paging: null
             },
             mounted: function() {
                 try {
-
                     this.paramInit();
+                    this.pagingInit();
                     this.dataRead();
                     $App.$on("truck_selection_changed", this.paramChanged );
 
@@ -144,7 +122,6 @@
             },
             methods: {
                 paramInit(){
-
                     let isNew = (window.location.search.match(new RegExp('[?&]' + 'n' + '=([^&]+)')) || [,null])[1];
                     if (isNew && isNew == 1) { this.isNew = 1; }
 
@@ -152,10 +129,63 @@
                         //let params = '{"field":"","value":"","customCriteria":" (marque=\\\"international\\\" AND DisplayOnWebSite=1) or (marque=\\\"isuzu\\\" AND DisplayOnWebSite=1) or marque=\\\"kalmar\\\" AND ","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[]}'; //,{"field":"modele","value":"Prostar"}
                         //params = '{"customCriteria":"","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[{"field":"marque","value":"' + marque + '"}]}'; //,{"field":"modele","value":"Prostar"}
 
+                    },
+                pagingInit(){
+
+                    this.paging = {
+                        available: true, 
+                        current: 0,
+                        size: 0,
+                        message: "",
+                        pages: [], 
+                        indexFirst: 0,
+                        indexCount: 0,
+                        indexAll: 0,
+                        changed: function(paging){},
+                        reset: function() { 
+                            this.current = this.size = this.indexFirst = this.indexCount = this.indexAll = 0;
+                            this.message = "";
+                            this.pages = [];
+                        },
+                        set: function(data){
+                            this.size = data.max;
+                            this.indexFirst = data.first;
+                            this.indexCount = data.count;
+                            this.indexAll = data.total;
+                            this.message = data.first  + " - " + Math.max(data.first + data.count - 1, 0) + " sur " + data.total;
+                            this.available = ( data.total > data.count );
+                            if(this.available){
+                                this.pages = [];
+                                let q = Math.floor(this.indexAll / this.size);
+                                for (let i = 1; i <= q ; i++) {
+                                    this.pages.push( { index: i, title:i.toString(), current: ( i == this.current) } );
+                                }
+                            }
+                        },
+                        next: function(){ 
+                            let result = true;
+                            this.current++;
+                            if( ( this.current * this.size ) >= this.indexAll ){
+                                this.current--;
+                                result = false;
+                            } else { 
+                                this.changed(this);
+                            }
+                            return result;
+                            },
+                        prev: function(){ this.current = Math.max(this.current - 1, 0); this.changed(this); return true; },
+                        move: function(index){ this.current = index; this.changed(this); return true; }
+                        };
+                        this.paging.changed = this.pagingChanged;
                 },
                 paramChanged(params){
                     this.params = params;
-                    this.page = 0;
+
+                    if(this.paging){ this.paging.reset(); }
+
+                    this.dataRead();
+                },
+                pagingChanged(paging){
                     this.dataRead();
                 },
                 async dataRead() {
@@ -166,12 +196,15 @@
                     $('.loading-overlay').show();
 
                     try {
+                        let page = 0;
+                        if(this.paging){page = this.paging.current;}
 
-                        let response = await fetch(api + '?n=' + this.isNew + '&p='+ this.page + '&params=' + encodeURI(this.params));
+                        let response = await fetch(api + '?n=' + this.isNew + '&p='+ page + '&params=' + encodeURI(this.params));
                         let data = await response.json()
 
                         this.item = data;
-                        this.pagingMsg = data.first  + " - " + Math.max(data.first + data.count - 1, 0) + " sur " + data.total;
+
+                        if(this.paging){ this.paging.set(data); }
 
                     } catch (error) {
                         console.error(error);
@@ -196,18 +229,6 @@
                     } else {
                         return "../../_assets/images/camions/noimage.png";
                     }
-                },
-                next(){
-                    this.page = this.page + 1;
-                    if( ( this.page * this.item.max ) >= this.item.total ){
-                        this.page = this.page - 1;
-                    } else { 
-                        this.dataRead();
-                    }
-                },
-                prev(){
-                    this.page = Math.max(this.page - 1, 0);
-                    this.dataRead();
                 }
             }
         })
