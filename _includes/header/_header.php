@@ -138,7 +138,7 @@
     </script>
     
     <!-- A CHANGER LORS DE L'IMPLANTATION DU RECAPTCHA v3 sur tout le site -->
-    <?php if($NOMPAGE == "demande-bon-travail_v2.php")
+    <?php if($NOMPAGE == "demande-bon-travail.php")
         //echo "<script src='https://www.google.com/recaptcha/api.js?render=" .  RD_Utils::getRecaptchaSiteKey() . "'></script>";
     ?>
     <!--<script src='https://www.google.com/recaptcha/api.js?render=6LdryFoUAAAAADpVaDt5XQYrZIt7DTNXLVvXPJw7'></script>-->

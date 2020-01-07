@@ -1,7 +1,26 @@
+<?php $includeRecaptchaV3 = 1; ?>
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
+<!--<script>
+grecaptcha.ready(function() {
+    grecaptcha.execute('6LfOR2sUAAAAAKmw_YCd4Yq58p6dZKS8r6bTHCqX', {action: 'homepage'})
+        .then(function(token) {
+            document.getElementById('g-recaptcha-response').value=token;
+    });
+});
+</script>-->
+<script type="text/javascript">
+  var onloadCallback = function() {
+    //alert("grecaptcha is ready!");
+  };
+</script>
+<script>
+    function onSubmit(token) {
+        document.getElementById("frmBonTravail").submit();
+    }
+</script>
 <script type='text/javascript'>
     var ID_TRAVAUX = 1;
-    
+
     function setOption(id, value)
     {
         var selectBox = document.getElementById(id),
@@ -56,7 +75,7 @@
     }
 </script>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
-    <form method="POST" action="/<?php echo $NOMPAGE; ?>" enctype="multipart/form-data">
+    <form method="POST" id="frmBonTravail" action="/<?php echo $NOMPAGE; ?>" enctype="multipart/form-data">
     <div class="">
         <div class="content">
             <div class="shrink">
@@ -226,12 +245,7 @@
                                     }
                                 }
                             }
-
-                            if(!RD_Utils::validateRecaptcha($_POST['g-recaptcha-response'])){
-                                $errorCount += 1;
-                                $captchaErr = 'Veuillez remplir le <i>CAPTCHA</i> correctement.';
-                            }
-
+                            
                             $unite = RD_Utils::test_input($_POST['tbUnite']);
                             $km = RD_Utils::test_input($_POST['tbKm']);
                             $travaux1 = RD_Utils::test_input($_POST['tbTravaux1']);
@@ -253,7 +267,46 @@
                             if(!empty($_FILES["file3"]["name"])){
                                 uploadFile("file3");
                             }
-//echo $errorCount;
+                            
+                            // CAPTCHA v3 -> no visual for user
+                            //$captchaResult = RD_Utils::validateRecaptcha_v3($_POST['g-recaptcha-response']);
+                            $captchaResult = 1;
+                            $erreurCaptcha = 0;
+                            if( isset($captchaResult))
+                            {
+//                                if( $captchaResult["success"] == 1 ) // returns boolean 0 == fail 1 == success
+//                                {
+                                    // Scal is 0.0 bot -> 1.0 human
+                                    //if( $captchaResult["score"] > 0.5 ){}
+//                                }
+//                                else // FAILURE
+//                                {
+//                                    $errorCount += 1;
+//                                    $erreurCaptcha = 1;
+//                                    $captchaErr = "Erreur avec la validation recaptcha v3";
+//                                }
+                            }
+                            else{
+                                $errorCount += 1;
+                                $erreurCaptcha = 1;
+                                $captchaErr = "Erreur avec la validation recaptcha v3";
+                            }
+                             
+                            // Si nous avons une erreur de recaptcha:
+                            // 1. affichage de téléphone de la succursale. 
+                            // 2. envoi mail @ weblog@servicesinfo.ca
+                            if( $erreurCaptcha == 1 )
+                            {
+                                $succ = new RD_Succursales();
+                                $succ->loadFromSuccursaleString($succursale);
+                                echo $captchaErr . "<br><b>Un problème est survenu lors de l'envoi de votre demande</b><br>" . "Veuillez communiquer directement avec la succursale<br> <b>" . $succ->nomLong . " au " . $succ->telephones[0] . "</b>";
+                                $divVisibility = "hidden";
+                                
+                                $RDemail = new RD_Email();
+                                $RDemail->load(TypeEmail::WebLog, print_r($_POST,true), print_r($captchaResult,true), $NOMPAGE, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+                                $RDemail->send();
+                            }
+                            
                             // ENVOI EMAIL
                             if(isset($_POST['btnSendMail']) && $errorCount == 0)
                             {
@@ -267,7 +320,8 @@
                             }
                             else
                             {
-                                echo RD_Utils::GetDropDownSuccursalesBonTravail($_POST["hidSuccursale"]);
+                                if(!$erreurCaptcha)
+                                    echo RD_Utils::GetDropDownSuccursalesBonTravail($_POST["hidSuccursale"]);
                             }
                         }
                         else
@@ -420,10 +474,10 @@
                                 <span class="error"><?php echo $instructionsErr;?></span>
                             <p class="hideDrummond">À cause de l'espace limité de stationnement nous ne pouvons remiser un véhicule pendant des périodes prolongées. Veuillez noter qu'à compter du sixième jour suivant la fin des réparations, des frais de $20.00 par jour de remisage seront exigés jusqu'à ce que le véhicule soit récupéré.</p>
 
-                            <div class="g-recaptcha" data-sitekey="<?php echo $applicationConfig['google.recaptcha.siteKey']; ?>"></div>
-                            <span class="error"><?php echo $captchaErr;?></span>
-                        <input type="hidden" name="" itemid="">
-                        <input type="submit" name="btnSendMail" id="btnSendMail" value="Soumettre" class="">
+                            
+                        <!--<input type="submit" name="btnSendMail" id="btnSendMail" value="Soumettre" class="">-->
+                        <!--<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">-->
+                        <button type="submit" name="btnSendMail" id="btnSendMail">Soumettre</button>
                         </div>
                         <script type="text/javascript">
                             document.getElementById('file1').addEventListener('change',prep1,false);
@@ -518,6 +572,5 @@
     </div>    
     </form>    
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
-    <script src="https://www.google.com/recaptcha/api.js?hl=fr-CA" async defer></script>
 </body>
 </html>
