@@ -1,6 +1,6 @@
 <section id="menufiltre">
 <div class="filterZone grid">
-    <div id="zoneCriteria" v-if="menu.Brand && menu.Transmission && menu.Engine" class="grid-pad" style="height:30px;width:100%;" >
+    <div id="zoneCriteria" v-if="menu.Brand && menu.Transmission && menu.Engine" class="grid-pad" >
         <div v-if="isAnySelected('B')">
             <span class="titlefilter" v-text="menu.Brand.title"></span>
         </div>
