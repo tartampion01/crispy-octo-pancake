@@ -38,43 +38,18 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/camions-neufs/inventaire-camion-neufs.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://www.reseaudynamique.com/trucks.php?n=0</loc>
+  <lastmod>2020-01-01T16:55:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/camions-neufs/camions-lourds-neufs-international.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://www.reseaudynamique.com/trucks.php?n=1</loc>
+  <lastmod>2020-01-01T16:55:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/camions-neufs/ottawa-kalmar.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.reseaudynamique.com/camions-neufs/isuzu.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.reseaudynamique.com/camions-occasion.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.reseaudynamique.com/remorques-neuves/inventaire-remorques.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.reseaudynamique.com/remorques-neuves/remorques-di-mond.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.reseaudynamique.com/remorques-neuves/remorques-doepker.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://www.reseaudynamique.com/trucks.php?n=1&params=B_Doep</loc>
+  <lastmod>2020-01-01T16:55:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
