@@ -72,7 +72,7 @@
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    /*cursor: none;*/
+    /**/cursor:alias;
 }
 /*effet de sur vole premier menu*/
 .menudestop li a:hover {
@@ -187,9 +187,9 @@
     padding-top: 60px;
   }
   #logo_sticky img {height:40px;width:40px;padding-top:5px;}
-  #logo_sticky img:hover {transform: scale(1.1);transition: all .1s ease-in-out;}
-  #facebook_sticky img {height:40px;width:40px;padding-top:5px;}
-  #urgence_sticky img {height:40px;width:40px;padding-top:5px;}
+  #logo_sticky img:hover {transform: scale(1.1);transition: all .1s ease-in-out;cursor: pointer;}
+  #facebook_sticky img {height:40px;width:40px;padding-top:5px;cursor: pointer;}
+  #urgence_sticky img {height:40px;width:40px;padding-top:5px;cursor: pointer;}
   .addlogo {visibility:hidden;}
   .FU_right {position:relative;right:40px;}
 
@@ -566,38 +566,44 @@ text-decoration:underline;
     float: left;
 }
 
+
+
+/* pagination trucks */
 .pagination {
     display: inline-block;
     float: right;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
 
+
+    /*padding-top: 5px;
+    padding-bottom: 5px;*/
+    
+}
 .pagination a {
     color: black;
     float: left;
-    padding: 8px 16px;
+    padding: 13px 16px;
     text-decoration: none;
     transition: background-color .3s;
     position:relative;
-    top:5px;
+    top:6px;
+    cursor: pointer;
+    margin-right: 6px;
 }
-
 .pagination button {
     float: left;
-    padding: 8px 16px;
     text-decoration: none;
-    margin: 5px;
+    margin:6px 6px 6px 0;
 }
-
 .pagination a.active {
     background-color: rgb(213, 94, 36);
     color: white;
 }
-
 .pagination a:hover:not(.active) {
     background-color: rgb(213, 94, 36);
 }
+/* *************************** */
+
+
 .resultatbdfilter{
     float: right;
     font-weight: 700;
@@ -605,6 +611,7 @@ text-decoration:underline;
 .borderdown{
     border-bottom: solid #000 1px;
 }
+#zoneCriteria {min-height:30px;width:100%;}
 #zoneCriteria .titlefilter{
     color:rgb(73, 73, 73); 
     float:left; 
@@ -612,6 +619,7 @@ text-decoration:underline;
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
+    margin: 6px;
 }
 #zoneCriteria .itemfilter{
     color:rgb(213,94,36); 
@@ -620,7 +628,9 @@ text-decoration:underline;
     font-weight: 700;
     padding-left: 10px;
     padding-top: 2px;
-    font-size: 12px;
+    font-size: 13px;
+
+    border: 3px solid rgb(213,94,36);
 }
 #zoneCriteria .itemfilter sup{
     color:red; 
@@ -632,7 +642,8 @@ text-decoration:underline;
 .titlefilterzone{
     font-size: 18px;
     width: 100%;
-    margin: 0 !important; 
+    margin: 0px !important; 
+
 }
 
 @media all and (min-width: 2000px) {

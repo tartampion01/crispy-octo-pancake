@@ -1,9 +1,9 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="grid grid-pad">
+    <div class="wrap">
         <div class="content search-result">
-            <div class="">
+            <div class="grid grid-pad ">
                 <div class="titrepage">
                     <h1>Mini-excavatrices Yanmar</h1>
                 </div>
