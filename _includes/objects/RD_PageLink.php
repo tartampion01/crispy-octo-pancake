@@ -173,8 +173,7 @@ class RD_PageLink
             case page::InscriptionNextPartAbonnement:$_page = "confirmation-abonnement";break;
             case page::MentionsLegales:$_page = "mentions-legales";break;
             case page::DemandePieces:$_page = "demande-pieces";break;
-            //case page::BonDeTravail:$_page = "demande-bon-travail";break;
-            case page::BonDeTravail:$_page = "demande-bon-travail_v2";break;
+            case page::BonDeTravail:$_page = "demande-bon-travail";break;
             case page::Fournisseurs:$_page = "fournisseurs";break;
             case page::PlanSite:$_page = "plan-site";break;            
             case page::DemandeInformation: $_page = "demande-information";break;
@@ -457,7 +456,6 @@ class RD_Header{
             case "location-camions.php":$title = "Location de Camions Lourds | Réseau Dynamique";break;
             case "demande-pieces.php":$title = "Demande de pièces | Réseau dynamique";break;
             case "demande-bon-travail.php":$title = "Demande de bon de travail | Réseau dynamique";break;
-            case "demande-bon-travail_v2.php":$title = "Demande de bon de travail | Réseau dynamique";break;
             case "camions-occasion.php":$title = "Camions Lourds d'Occasion | Réseau Dynamique";break;
             case "demande-information.php":$title = "Demande d'information | Réseau Dynamique";break;
             case "planifier-essai-routier.php":$title = "Planifier un essai routier | Réseau Dynamique";break;
