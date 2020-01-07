@@ -174,7 +174,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                     <a href="/trucks.php?n=1&params=B_Isuz">Isuzu</a>
                                 </li>
                                 <li class="">
-                                    <a href="/trucks.php?n=1&params=B_kalm">Ottawa Kalmar</a>
+                                    <a href="/trucks.php?n=1&params=B_Kalm">Ottawa Kalmar</a>
                                 </li>
                                 <li class="">
                                     <a href="/trucks.php">Occasion</a><!--  <?php echo RD_PageLink::getHref(folder::Root,page::CamionsOccasion) ?> -->
@@ -342,7 +342,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                         <a href="/trucks.php?n=1&params=B_Isuz">Isuzu</a>
                                     </li>
                                     <li class="">
-                                    <a href="/trucks.php?n=1&params=B_kalm">Ottawa Kalmar</a>
+                                    <a href="/trucks.php?n=1&params=B_Kalm">Ottawa Kalmar</a>
                                     </li>
                                     <li>
                                         <a href="/trucks.php">Occasion</a>

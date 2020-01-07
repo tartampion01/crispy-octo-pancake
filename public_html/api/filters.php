@@ -8,7 +8,7 @@
         "items": [
             {"code": "B_Inte", "title": "International", "availability": 0, "selected": 0 }, 
             {"code": "B_Isuz", "title": "Isuzu", "availability": 0, "selected": 0 },  
-            {"code": "B_kalm", "title": "kalmar", "availability": 0, "selected": 0 }, 
+            {"code": "B_Kalm", "title": "kalmar", "availability": 0, "selected": 0 }, 
             {"code": "B_Doep", "title": "Doepker", "availability": 0, "selected": 0 }, 
             {"code": "B_Hino", "title": "Hino", "availability": 0, "selected": 0 }, 
             {"code": "B_Tran", "title": "Transit", "availability": 0, "selected": 0 }, 

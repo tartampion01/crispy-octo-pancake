@@ -50,7 +50,7 @@
                     </a>
                 </div>
                 <div class="col-1-2 mobile-col-1-2 image-box" style="margin: -5px 0px 0px 0px;">
-                    <a href="/trucks.php?n=1&params=B_isuz">
+                    <a href="/trucks.php?n=1&params=B_Isuz">
                         <img src="_assets/images/wx3/img-isuzu.jpg" alt="" />
                     </a>
                 </div>
