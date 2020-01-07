@@ -72,7 +72,7 @@
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    cursor: none;
+    /*cursor: none;*/
 }
 /*effet de sur vole premier menu*/
 .menudestop li a:hover {
