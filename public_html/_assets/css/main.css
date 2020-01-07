@@ -12,7 +12,7 @@ body {
   margin: 0;
   color: #000000;
 }
-
+/* allo */
 container
 {
     background-color: #fff;
@@ -2385,11 +2385,7 @@ UL.store-list {
   }
 
   .GpcResultPager a:hover, .GpcResultPager a.selected, .GpcDisplayOption:hover, .GpcDisplayOption.selected {
-<<<<<<< HEAD
-    background-color: rgb(213,94,36);
-=======
     background-color: rgb(213, 94, 36);
->>>>>>> 73a3c9940b0cc91096b03b66142f111857f9d395
     color: #fff;
   }
 
