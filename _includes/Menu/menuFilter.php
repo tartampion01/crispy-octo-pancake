@@ -1,7 +1,7 @@
 <section id="menufiltre">
 <div class="filterZone grid">
-    <div id="zoneCriteria" v-if="menu.Brand && menu.Transmission && menu.Engine" class="grid-pad" >
-        <div v-if="isAnySelected('B')">
+    <div id="zoneCriteria" v-if="menu.Brand && menu.Transmission && menu.Engine" class="grid-pad">
+    <div v-if="isAnySelected('B')">
             <span class="titlefilter" v-text="menu.Brand.title"></span>
         </div>
         <div v-for="(item,index) in menu.Brand.items">
