@@ -1,7 +1,5 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 
-<script type='text/javascript' src='/_assets/js/App.js'></script>  
-
 <!-- <script src="_assets/js/camions-rest.js" type="text/javascript"></script> -->
 
 

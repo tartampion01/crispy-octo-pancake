@@ -60,6 +60,8 @@
     <script type='text/javascript' src='../../_assets/js/slick.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
+    <script type='text/javascript' src='/_assets/js/App.js'></script>  
+
     <!--** integration js
     <script type='text/javascript' src='../../_assets/js/jquery-1.12.4.min.js'></script>  
     <script type="text/javascript" src="../../_assets/js/jquery.min.js"></script>-->
