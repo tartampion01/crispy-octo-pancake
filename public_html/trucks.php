@@ -2,7 +2,6 @@
 
 <!-- <script src="_assets/js/camions-rest.js" type="text/javascript"></script> -->
 
-
 <body class="body">
     <form role="form" method="POST" >
         <div class="">
@@ -63,7 +62,7 @@
 
                                 <!--resultat section -->
                                 <!-- recuperer le style... -->
-                                <div v-if="paging" class="grid" style="border-top: 1px #cfcfcf solid; border-bottom: 1px #cfcfcf solid; " >
+                                <div v-if="paging" class="grid horizonRuler">
                                     <div class="resultsearch mobile-col-1-1">Resultat {{paging.message}}</div>
                                     <div v-if="paging.available" class="pagination mobile-col-1-1">
                                         <button type="button" class="buttonwebsite mobile-col-1-1" @click="paging.prev()">Precedent</button>
