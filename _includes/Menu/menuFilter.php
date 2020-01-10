@@ -129,8 +129,9 @@
                             case "T": if(this.menu.Transmission){subItems = this.menu.Transmission.items;} break;
                             case "E": if(this.menu.Engine){subItems = this.menu.Engine.items;} break;
                         }
-                        subItems.some(function(e) {
-                            if(e.code == code){ e.selected = selection; return true; }
+                        subItems.forEach(function(e) {
+                            if(e.code == code){ e.selected = selection; }
+                            else { e.selected = false; }
                         })
                             
                         let params = this.getSelectedCode();
