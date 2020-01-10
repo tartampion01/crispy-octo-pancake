@@ -57,10 +57,7 @@
                         <h3>9. Pour nous joindre</h3>
                         <p>Pour toute question relativement aux présentes Conditions d’utilisation et politique de confidentialité, veuillez nous écrire à : 
                             <a name="hyperlien" href="mailto:dpaquet@inter-quebec.com"><font>dpaquet@inter-quebec.com</font></a></p>
-                        <p>
-                            <font size="1">Dernière mise à jour le 29 août 2014<br></font>
-                            <font size="1">© 2011 Réseau Dynamique.&nbsp; TOUS DROITS RÉSERVÉS.</font>
-                        </p>
+                        
                     </div>
                 </div>
             </div>
