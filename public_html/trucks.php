@@ -3,6 +3,7 @@
 <!-- <script src="_assets/js/camions-rest.js" type="text/javascript"></script> -->
 
 <body class="body">
+
     <form role="form" method="POST" >
         <div class="">
             <div class="content camions-occasions">
@@ -37,7 +38,7 @@
                                             </a>
                                             <div class="inline col-1-1 borderdown mobile-col-1-1" style="margin-top:30px;">
                                                 <h4 class="inline topdivision20 nobold col-1-2 mobile-col-1-2">Numéro série :</h4>
-                                                <p class="resultatbdfilter">{{ record.serial | NA }}</span>
+                                                <p class="resultatbdfilter">{{ record.serial | NA }}</p>
                                             </div>
                                             <!--correction width-->
                                             <div class=" col-1-1 topdivision30 mobile-col-1-1" style="margin-top:40px;">
@@ -82,8 +83,12 @@
                 </div>
             </div>
     </form>
-    <!--multi-item special product-->
+    <!-- promo main -->
+    <?php 
+     // require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/promo/promo_main.php'); 
+    ?>
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>
+
     <!--footer-->
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
 
@@ -233,7 +238,5 @@
     }
     </script>
 
-
-</body>
-
+    </body>
 </html>
