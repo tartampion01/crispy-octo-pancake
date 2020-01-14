@@ -1,93 +1,78 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 
-<!-- <script src="_assets/js/camions-rest.js" type="text/javascript"></script> -->
-
 <body class="body">
 
-    <form role="form" method="POST" >
-        <div class="">
-            <div class="content camions-occasions">
-                <div class="grid">
-                    <h1 class="titlefilterzone grid-pad">Outils de recherche : </h1>
-                    <!--Menu filtre-->
-                    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/Menu/menuFilter.php'); ?>
-                    <br />
-                    <div class="grid-pad">
-                        <!-- Results Content -->
-                        <!-- class="FacetedExplorer grid-pad" -->
-                        <!-- <div class="GpcFacetedResults defaultFacet"></div> -->
-                        <!-- <div class="FacetedExplorerClear GpcClear"></div> -->
-                            
-                            <div id="list" style="" class="">
+<!-- class="camions-occasions" -->
+    <div >
+        <div class="grid">
+            <h1 class="titlefilterzone grid-pad">Outils de recherche : </h1>
+            <!--Menu filtre-->
+            <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/Menu/menuFilter.php'); ?>
+            <br />
+            <div class="grid-pad">
+                <div id="list" style="" class="">
 
-                                <div class="grid">
-                                    <div v-for="(record,index) in item.records" class="container-filter">
-                                        <!--item -->
-                                        <div class="filter-item col-1-3">
-                                            <a :href="getHref(record.id)">
-                                                <div class="rectangle"></div>
-                                                <div class="bgtrucks image-box">
-                                                    <img :src="getSrc(record.picture_id)"
-                                                        :title="record.marque + ' - ' + record.Model"
-                                                        :alt="record.marque + ' - ' + record.Model"
-                                                        class="col-1-1" />
-                                                </div>
-                                                <div class="topdivision40" style="margin-top:15px;">
-                                                    <h2 style="font-weight:700;">{{ record.marque }} - {{ record.Model }}</h2>
-                                                </div>
-                                            </a>
-                                            <div class="inline col-1-1 borderdown mobile-col-1-1" style="margin-top:30px;">
-                                                <h4 class="inline topdivision20 nobold col-1-2 mobile-col-1-2">Numéro série :</h4>
-                                                <p class="resultatbdfilter">{{ record.serial | NA }}</p>
-                                            </div>
-                                            <!--correction width-->
-                                            <div class=" col-1-1 topdivision30 mobile-col-1-1" style="margin-top:40px;">
-                                                <div class="col-1-1 topdivision15 mobile-col-1-1">
-                                                    <div class="uppercases inline floatleft col-1-1 mobile-col-1-1">
-                                                        <h4 class="col-1-2 mobile-col-1-2">Modèle :</h4>
-                                                        <p class="resultatbdfilter">{{ record.Model | NA }}</p>
-                                                    </div>
-                                                    <div class="uppercases inline floatleft col-1-1 mobile-col-1-1">
-                                                        <h4 class="col-1-2 mobile-col-1-2">No d'inventaire :</h4>
-                                                        <p class="resultatbdfilter">{{ record.stock | NA }}</p>
-                                                    </div>
-                                                    <div class="uppercases inline floatleft col-1-1 mobile-col-1-1">
-                                                        <h4 class="col-1-2 mobile-col-1-2">Moteur :</h4>
-                                                        <p class="resultatbdfilter">{{record.engine | NA }}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                    <div class="grid">
+                        <div v-for="(record,index) in item.records" class="container-filter">
+                            <!--item -->
+                            <div class="filter-item col-1-3">
+                                <a :href="getHref(record.id)">
+                                    <div class="rectangle"></div>
+                                    <div class="bgtrucks image-box">
+                                        <img :src="getSrc(record.picture_id)"
+                                            :title="record.marque + ' - ' + record.Model"
+                                            :alt="record.marque + ' - ' + record.Model"
+                                            class="col-1-1" />
+                                    </div>
+                                    <div class="topdivision40" style="margin-top:15px;">
+                                        <h2 style="font-weight:700;">{{ record.marque }} - {{ record.Model }}</h2>
+                                    </div>
+                                </a>
+                                <div class="inline col-1-1 borderdown mobile-col-1-1" style="margin-top:30px;">
+                                    <h4 class="inline topdivision20 nobold col-1-2 mobile-col-1-2">Numéro série :</h4>
+                                    <p class="resultatbdfilter">{{ record.serial | NA }}</p>
+                                </div>
+
+                                <div class=" col-1-1 topdivision30 mobile-col-1-1" style="margin-top:40px;">
+                                    <div class="col-1-1 topdivision15 mobile-col-1-1">
+                                        <div class="uppercases inline floatleft col-1-1 mobile-col-1-1">
+                                            <h4 class="col-1-2 mobile-col-1-2">Modèle :</h4>
+                                            <p class="resultatbdfilter">{{ record.Model | NA }}</p>
+                                        </div>
+                                        <div class="uppercases inline floatleft col-1-1 mobile-col-1-1">
+                                            <h4 class="col-1-2 mobile-col-1-2">No d'inventaire :</h4>
+                                            <p class="resultatbdfilter">{{ record.stock | NA }}</p>
+                                        </div>
+                                        <div class="uppercases inline floatleft col-1-1 mobile-col-1-1">
+                                            <h4 class="col-1-2 mobile-col-1-2">Moteur :</h4>
+                                            <p class="resultatbdfilter">{{record.engine | NA }}</p>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!--resultat section -->
-                                <!-- recuperer le style... -->
-                                <div v-if="paging" class="grid horizonRuler">
-                                    <div class="resultsearch mobile-col-1-1">Resultat {{paging.message}}</div>
-                                    <div v-if="paging.available" class="pagination mobile-col-1-1">
-                                        <button type="button" class="buttonwebsite mobile-col-1-1" @click="paging.prev()">Precedent</button>
-                                        <div v-for="page in paging.pages" class="mobilepagination mobile-col-1-1">
-                                            <a v-bind:class="{ active: page.current }" @click="paging.move(page.index)" >{{page.title}}</a>
-                                        </div>                                                                                
-                                        <button type="button" class="buttonwebsite mobile-col-1-1" @click="paging.next()" >Suivant</button>
-                                    </div>
-                                </div>
-
-
                             </div>
-
                         </div>
-                    
+                    </div>
 
+                    <!--resultat section -->
+                    <div v-if="paging" class="grid horizonRuler">
+                        <div class="resultsearch mobile-col-1-1">Resultat {{paging.message}}</div>
+                        <div v-if="paging.available" class="pagination mobile-col-1-1">
+                            <button type="button" class="buttonwebsite mobile-col-1-1" @click="paging.prev()">Precedent</button>
+                            <div v-for="page in paging.pages" class="mobilepagination mobile-col-1-1">
+                                <a v-bind:class="{ active: page.current }" @click="paging.move(page.index)" >{{page.title}}</a>
+                            </div>                                                                                
+                            <button type="button" class="buttonwebsite mobile-col-1-1" @click="paging.next()" >Suivant</button>
+                        </div>
                 </div>
             </div>
-    </form>
+        </div>
+    </div>
+
     <!-- promo main -->
     <?php 
-     // require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/promo/promo_main.php'); 
-    ?>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>
+     require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/Promo/promo_main.php'); 
+     // require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); 
+     ?>
 
     <!--footer-->
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
@@ -128,8 +113,6 @@
                     if (isNew && isNew == 1) { this.isNew = 1; }
 
                     this.params = (window.location.search.match(new RegExp('[?&]' + 'params' + '=([^&]+)')) || [,null])[1];
-                        //let params = '{"field":"","value":"","customCriteria":" (marque=\\\"international\\\" AND DisplayOnWebSite=1) or (marque=\\\"isuzu\\\" AND DisplayOnWebSite=1) or marque=\\\"kalmar\\\" AND ","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[]}'; //,{"field":"modele","value":"Prostar"}
-                        //params = '{"customCriteria":"","sortBy":"asc","currentPage":1,"limitPerPage":"12","arrayFilters":[{"field":"marque","value":"' + marque + '"}]}'; //,{"field":"modele","value":"Prostar"}
 
                     },
                 pagingInit(){

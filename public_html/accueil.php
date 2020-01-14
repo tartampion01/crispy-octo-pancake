@@ -92,8 +92,12 @@
         </div>
     </section>
 
-    <!--multi-item special product-->
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); ?>  
+    <!-- promo main -->
+    <?php 
+     require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/Promo/promo_main.php'); 
+     // require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); 
+     ?>
+    
     <!--Map
     <div>
         <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1KQIM62X8067jYvP56CJLimUsJORkPfoH" width="100%" height="400"></iframe>

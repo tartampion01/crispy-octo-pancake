@@ -1,6 +1,32 @@
 @charset "utf-8";
 /* CSS Document */
 /*commune*/
+
+
+.realization {
+    padding: 25px 0px;
+}
+
+    .realization a   {
+        text-decoration: none;
+        color: #000;
+    }
+    .realization a p{
+        text-align: center;
+        padding-top: 15px;
+        text-decoration: none;
+        color: #000;
+        
+    }
+.realization a p:hover {text-decoration:none;color:#000;}
+
+
+.realization .slick-slide {
+        margin: 0px 20px;
+    }
+
+
+
 .center{
     text-align: center;
     padding: 0 auto;
@@ -302,7 +328,24 @@
 }
 
 
+
+
 /*section promo*/
+
+.promo_cnt {
+    padding: 25px 0px;
+    margin-bottom: 50px;
+}
+
+.promo_cnt a   {
+        text-decoration: none;
+        color: #000;
+    }
+
+.promo_cnt .slick-slide {
+        margin: 0px 20px;
+    }
+
 .promo_box {
         position: relative;
       }
@@ -702,9 +745,11 @@ color:#f00;
     padding-top: 5px;
 }
 .titlefilterzone{
-    font-size: 18px;
     width: 100%;
     margin: 0px !important; 
+    font: 400 1.8em 'calibri', Arial, Helvetica, sans-serif;
+    color: #525252;
+    text-transform: uppercase;
 }
 .horizonRuler {
     border-top: 1px #cfcfcf solid; border-bottom: 1px #cfcfcf solid; 
@@ -1620,3 +1665,4 @@ All this is done for any sub-level being entered.
 .demo-4 .dl-menuwrapper ul {
     background: #79a002;
 }
+
