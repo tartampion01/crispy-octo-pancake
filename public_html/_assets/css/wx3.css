@@ -300,13 +300,52 @@
     text-transform:uppercase;
     padding-top:20px;  
 }
-    /*section image*/
+
+
+/*section image*/
+.promo_box {
+        position: relative;
+      }
+.promo_top_orange {
+    height: 10px;
+    width: auto;
+    background-color: rgb(213,94,36);
+}
+.promo_img {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+  }
+  .promo_img img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+.promo_img:hover img {
+    transform: scale(1.1);
+}
+.promo_box_triangle {
+    position: absolute;
+    background: rgb(213,94,36);
+    background: linear-gradient(315deg, rgba(213,94,36,1) 5%,  rgba(213,94,36,0) 25%);
+}
+.promo_ {
+    background-position: center center;
+    background-repeat:  no-repeat;
+    object-fit:cover; 
+    height: 480px;
+}
 
 .image-box {
         position: relative;
         margin: auto;
         overflow: hidden;
     }
+
+.rel {position: relative;}
 
 .image-box img {
         max-width: 100%;
@@ -319,7 +358,44 @@
     
 .image-box:hover img {
         transform: scale(1.1);
+}
+.priceColor {
+    background: rgb(213,94,36);
+    background: linear-gradient(315deg, rgba(213,94,36,1) 5%,  rgba(213,94,36,0) 25%);
     }
+.price {
+      /* height:200px ;
+       position: absolute;
+       bottom: 0;*/
+       color: #f00;
+       font-size: 16px;
+       font-weight: 700;
+ 
+
+/*
+       transform: rotate(-115deg);
+       */
+       /* Safari 
+       -webkit-transform: rotate(-90deg);*/
+       /* Firefox 
+       -moz-transform: rotate(-90deg);*/
+       /* IE 
+       -ms-transform: rotate(-90deg);*/
+       /* Opera 
+       -o-transform: rotate(-90deg);*/
+       /* Internet Explorer
+       filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); */
+      }
+      .text-block {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
 
     /*3 services*/
 .bg3serviceleft {
