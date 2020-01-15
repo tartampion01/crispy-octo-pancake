@@ -19,43 +19,42 @@
                                     </ul>
                                 </li>
                                 <li class="rank1 parent">
-                                    <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>" class="rank1">Camions neufs</a>
+                                    <a href="#" class="rank1">Camions neufs</a>
                                     <div class="itemChildDiv5">
                                         <ul class="itemChild5">
                                             <li class="first rank0">
-                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInternational); ?>" class="rank1">Camions International</a>
+                                            <a href="../../trucks.php?n=1&params=B_Inte" class="rank1">Camions International</a>
                                             </li>
                                             <li class="rank1">
-                                            <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>" class="rank1">Remorques neuves</a>
+                                            <a href="../../trucks.php?n=1&params=B_Doep" class="rank1">Remorques</a>
                                             </li>
                                             <li class="rank2">
-                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsIsuzu); ?>" class=" last rank3">Camions Isuzu</a>
+                                            <a href="../../trucks.php?n=1&params=B_Isuz" class=" last rank3">Camions Isuzu</a>
                                             </li>
                                             <li class=" rank3">
-                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsOttawaKalmar); ?>" class="rank2">Camions Ottawa Kalmar</a>
+                                            <a href="../../trucks.php?n=1&params=B_Kalm" class="rank2">Camions Ottawa Kalmar</a>
                                             </li>
                                             <li class="rank4">
-                                            <a href="<?php echo RD_PageLink::getHref(folder::Root,page::CamionsOccasion); ?>" class="first rank0">Camions d'occasion</a>
+                                            <a href="../../trucks.php" class="first rank0">Camions d'occasion</a>
                                             </li>
                                             <li class="last rank5">
-                                            <a href="<?php echo RD_PageLink::getHref(folder::CamionsNeufs,page::CamionsInventaireComplet); ?>" class="first rank0">Inventaire complet</a>
+                                            <a href="../../trucks.php?n=1" class="first rank0">Inventaire complet</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </li>
                                 <li class="rank2 parent">
-                                    <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesFinancement); ?>" class="rank1">Pièces</a>
-                                    <div class="itemChildDiv5">
+                                <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires); ?>" class="first rank0">Pièces et accessoires</a>                                    <div class="itemChildDiv5">
                                         <ul class="itemChild5">
                                             <li class="first rank0">
-                                                <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires); ?>" class="first rank0">Pièces et accessoires</a>
+                                                
                                             </li>
                                            
                                         </ul>
                                     </div>
                                 </li>
                                 <li class="rank3 parent">
-                                    <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesFinancement); ?>" class="rank1">Services</a>
+                                    <a href="#" class="rank1">Services</a>
                                     <div class="itemChildDiv5">
                                         <ul class="itemChild5">
                                         
@@ -75,7 +74,7 @@
                                     </div>
                                 </li>
                                 <li class="rank4 parent">
-                                    <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>" class="rank1">Véhicules utilitaires</a>
+                                    <a href="#" class="rank1">Véhicules utilitaires</a>
                                     <div class="itemChildDiv5">
                                         <ul class="itemChild5">
                                             <li class="first rank0">
