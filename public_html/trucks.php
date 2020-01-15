@@ -7,7 +7,7 @@
         <div class="grid">
             <h1 class="titlefilterzone grid-pad">Outils de recherche : </h1>
             <!--Menu filtre-->
-            <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/Menu/menuFilter.php'); ?>
+            <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/menu/menuFilter.php'); ?>
             <br />
             <div class="grid-pad">
                 <div id="list" style="" class="">
@@ -70,7 +70,7 @@
 
     <!-- promo main -->
     <?php 
-     require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/Promo/promo_main.php'); 
+     require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/promo/promo_main.php'); 
      // require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); 
      ?>
 
