@@ -1,7 +1,4 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-
-<body class="body">
-
 <!-- class="camions-occasions" -->
     <div >
         <div class="grid">
@@ -219,7 +216,4 @@
         })
 
     }
-    </script>
-
-    </body>
-</html>
+</script>

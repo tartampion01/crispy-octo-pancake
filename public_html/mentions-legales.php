@@ -1,5 +1,5 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-<body class="body"><?php RD_Utils::write_Gtag() ?>
+<?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="grid grid-pad">
         <div class="content">
@@ -64,7 +64,4 @@
         </div>
     </div>
     </form>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
-    
-</body>
-</html>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>

@@ -145,6 +145,9 @@
     ?>
     <!--<script src='https://www.google.com/recaptcha/api.js?render=6LdryFoUAAAAADpVaDt5XQYrZIt7DTNXLVvXPJw7'></script>-->
 </head>
+
+<body>
+    
             <!--header-->
             <div class="bghead">
                 <div class="grid grid-pad">

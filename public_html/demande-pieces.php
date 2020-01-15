@@ -1,5 +1,5 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-<body class="body"><?php RD_Utils::write_Gtag() ?>
+<?php RD_Utils::write_Gtag() ?>
     <form name="form" role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <div class="">
         <div class="content">
@@ -128,6 +128,4 @@
     </div>    
     <script src="https://www.google.com/recaptcha/api.js?hl=fr-CA" async defer></script>
     </form>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
-</body>
-</html>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>

@@ -1,7 +1,4 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
-<html  xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
-
-<body class="body">
     <div id="detail" class="produit">
         <div class="grid grid-pad">
             <!--top-->
@@ -344,5 +341,3 @@ function init(){
 
 }
 </script>
-</body>
-</html>

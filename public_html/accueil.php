@@ -1,6 +1,6 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <!--<script type='text/javascript' src='../../_assets/js/jquery.jshowoff.js'></script>  ** enlever FXGL diapo avant 10-30-19 -->
-<body class="body home-page"><?php RD_Utils::write_Gtag() ?>
+<?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
     <!--diapo-->
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/home_banner.php'); ?>  
@@ -103,6 +103,4 @@
         <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1KQIM62X8067jYvP56CJLimUsJORkPfoH" width="100%" height="400"></iframe>
     </div>-->
     </form>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
-</body>
-</html>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>

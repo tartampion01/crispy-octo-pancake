@@ -56,3 +56,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
             </div>
         </div>
     </footer>
+
+    
+    </body>
+</html>

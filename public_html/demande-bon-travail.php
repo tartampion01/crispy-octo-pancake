@@ -74,7 +74,7 @@ grecaptcha.ready(function() {
         }
     }
 </script>
-<body class="body"><?php RD_Utils::write_Gtag() ?>
+<?php RD_Utils::write_Gtag() ?>
     <form method="POST" id="frmBonTravail" action="/<?php echo $NOMPAGE; ?>" enctype="multipart/form-data">
     <div class="">
         <div class="content">
@@ -571,6 +571,4 @@ grecaptcha.ready(function() {
         </div>
     </div>    
     </form>    
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
-</body>
-</html>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>

@@ -7,7 +7,7 @@
         text-transform: uppercase;
     }
 </style>    
-<body class="body"><?php RD_Utils::write_Gtag() ?>    
+<?php RD_Utils::write_Gtag() ?>    
     <form role="form" method="POST" action="/promotions-nouvelles/<?php echo $NOMPAGE; ?>">
     <div class="wrap">
         <div class="content search-result">
@@ -57,5 +57,3 @@
 <img alt="" src="#" style="position:absolute;left:-10px;top:-10px;width:1px;height:1px;" />
 </form>
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
-</body>
-</html>

@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-/*commune*/
+/* commune */
 
 
 .realization {
@@ -29,7 +29,7 @@
 
 .center{
     text-align: center;
-    padding: 0 auto;
+    padding: 0;
 }
 .justify{
     text-align: justify;
@@ -73,7 +73,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-/*mettre en place le menu sans bullet et en avant*/
+/* mettre en place le menu sans bullet et en avant */
 .menudestop ul {
     list-style-type: none;
     margin: 0px;
@@ -81,12 +81,12 @@
     position: absolute;
     font-size: 18px;
 }
-/*mettre les elements en ligne*/
+/* mettre les elements en ligne */
 .menudestop li {
     display: inline-block;
     float: left;
 }
-/*style pour mon menu*/
+/* style pour mon menu */
 .menudestop ul li a {
     display: block;
     margin-right: 20px;
@@ -98,34 +98,33 @@
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    /**/cursor:default;
+    cursor:default;
 }
-/*effet de sur vole premier menu*/
+/* effet de sur vole premier menu */
 .menudestop li a:hover {
     color: rgb(213,94,36);
 }
-/*cacher les sous listes*/
+/* cacher les sous listes */
 .menudestop li ul {
     display: none;
     z-index: 10000;
 }
 
-/*comment placer la sous liste*/
+/* comment placer la sous liste */
 .menudestop li li {
     display: block;
     float: none;
     height: 100%;
 }
 
-    /*style de la sous liste*/
-
+/* style de la sous liste */
 .menudestop li li a {
         width: auto;
         min-width: 140px;
         padding: 0 10px;
         cursor: pointer;
     }
-/*Style for dropdown links*/
+/* Style for dropdown links */
 .menudestop li:hover ul a {
     background: rgb(213,94,36);
     color: #fff;
@@ -134,24 +133,23 @@
     text-decoration: none;
     font-weight: 400;
 }
-    /*Hover state for dropdown links*/
+/* Hover state for dropdown links */
 .menudestop li:hover ul a:hover {
         background: #f5f5f5;
         color: #000;
     }
 
-/*montre la sous liste par le survole*/
-
+/* montre la sous liste par le survole */
 .menudestop ul li a:hover + .hidden, .hidden:hover {
     display: block;
 }
-/*position du deuxieme sous menu*/
+/* position du deuxieme sous menu */
 .menudestop ul ul ul {
     margin: 0px 0px 0px 158px;
     position: absolute;
     top: 0px;
 }
-/*style de la box deuxieme sous menu*/
+/* style de la box deuxieme sous menu */
 .menudestop li li:hover ul a {
     background-color: #f5f5f5;
     color: #000;
@@ -161,7 +159,7 @@
         background-color: #f5f5f5;
         color: rgb(213,94,36);
     }
-/*troisieme sous menu*/
+/* troisieme sous menu */
 .menudestop li li li:hover ul {
     margin: 0px 0px 0px 140px;
     position: absolute;
@@ -201,7 +199,6 @@
 }
 /* menu sticky */
 #navbar {
-    /*overflow: hidden;*/
     z-index:100000;
   }
   .sticky {
@@ -219,7 +216,7 @@
   .addlogo {visibility:hidden;}
   .FU_right {position:relative;right:40px;}
 
-/*Footer*/
+/* Footer */
 .bgmap {
         background-image: url(../../Resources/Images/background-map.jpg);
         background-position:center;
@@ -256,7 +253,7 @@
     color: white;
     }
 .item-footer p{
-        padding-bottom:-10px;
+       /* padding-bottom:-10px; */
         line-height: normal;
     }
 .item-footer p a{
@@ -264,7 +261,6 @@
         text-decoration:none;
     }
 .item-footer p a:hover{
-        /*font-weight:700;*/
         color: rgb(5, 5, 5);
     }
     
@@ -295,7 +291,7 @@
 }
 .footercenter {text-align: center;
 }
-    /*section multiple product*/
+/* section multiple product */
 .rectangle {
         height: 10px;
         width: auto;
@@ -307,8 +303,8 @@
 .sectionservices {
     margin-top: 50px;
 }
-/*Page accueil*/
-    /*section logo*/
+/* Page accueil */
+/* section logo */
 .logo {
     text-align: center;
     height: auto;
@@ -327,21 +323,15 @@
     padding-top:20px;  
 }
 
-
-
-
-/*section promo*/
-
+/* section promo */
 .promo_cnt {
     padding: 25px 0px;
     margin-bottom: 50px;
 }
-
-.promo_cnt a   {
+.promo_cnt a {
         text-decoration: none;
         color: #000;
     }
-
 .promo_cnt .slick-slide {
         margin: 0px 20px;
     }
@@ -359,12 +349,11 @@
     margin: auto;
     overflow: hidden;
   }
-  .promo_img img {
+.promo_img img {
     max-width: 100%;
     transition: all 0.3s;
     display: block;
     width: 100%;
-    /*height: auto;*/
     transform: scale(1);
 }
 .promo_img:hover img {
@@ -395,7 +384,7 @@
   }
  .promo_fit {object-fit:cover;height:350px;}
 
-/* ************************************** */
+/* autre reali */
 
 .image-box {
         position: relative;
@@ -415,9 +404,7 @@
         transform: scale(1.1);
 }
      
-
-
-    /*3 services*/
+/* 3 services */
 .bg3serviceleft {
     background-image: url(../../_assets/images/menu_images/accueil-succursales.jpg);
     background-size: cover;
@@ -449,7 +436,7 @@
     color: #fff;
     text-decoration: none;
 }
-/*Page Details*/
+/* Page Details */
 
 .Descriptionp{ 
     text-align: justify;
@@ -497,36 +484,16 @@ text-decoration:underline;
         margin: 0px 20px 20px 0px;
         float: right;
     }
-/*.buttonwebsite {
-        padding: 10px;
-        background-color: lightgray;
-        -webkit-border-radius: 4px;
-        border-radius: 4px;
-        border: solid 1px rgb(213,94,36);
-        text-transform: uppercase;
-        color: #000;
-        font-weight: 400;
-    }
-   
-.buttonwebsite:hover {
-            background-color: rgb(213,94,36);
-            -webkit-box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
-            box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
-            text-decoration: none;
-            color: white;
-            cursor:pointer;
-}*/
+
 .buttonwebsite {
         padding: 11px;
         background-color: rgb(213,94,36);  
         text-transform: uppercase;
-        color: #fff;
-        
+        color: #fff;   
     }
    
 .buttonwebsite:hover {
             background-color: rgb(5, 5, 5);
-          
             cursor:pointer;
 }
 
@@ -556,7 +523,7 @@ text-decoration:underline;
     display: table;
     clear: both;
 }
-/*photo */
+/* photo */
 /* The grid: Four equal columns that floats next to each other */
 .columnphoto {
     float: left;
@@ -572,7 +539,7 @@ text-decoration:underline;
         .columnphoto img:hover {
             opacity: 1;
         }
-/*palcement photo*/
+/* palcement photo */
 .imgdetailsleft{
     padding-top: 4px;
 }
@@ -606,7 +573,7 @@ text-decoration:underline;
     font-size: 20px;
 }
 
-/*page filter*/
+/* page filter */
 .bgtrucks{
     background: url(../../../_assets/images/menu_images/background-trucks.jpg);
     background-position: center center;
@@ -642,12 +609,10 @@ text-decoration:underline;
     margin-left: auto;
     margin-right: auto;
 }
-
 .filter-item {
     float: left;
     padding: 30px 10px 30px 10px;
 }
-
 .filter-item a {
     color: black;
     text-decoration: none;
@@ -656,13 +621,10 @@ text-decoration:underline;
     object-fit:cover; 
     height: 350px;
 }
-
 .resultsearch {
     padding: 5px;
     float: left;
 }
-
-
 
 /* pagination trucks */
 .pagination {
@@ -863,7 +825,7 @@ color:#f00;
     }
     .buttonwebsite {
         padding: 5px;
-        background-color: none;
+        /*background-color: none;*/
         -webkit-border-radius: 4px;
         border-radius: 4px;
         border: solid 1px rgb(213,94,36);
@@ -882,7 +844,7 @@ color:#f00;
         color: rgb(213,94,36);
         text-decoration: none;
     }
-    /*menu mobile*/
+    /* menu mobile */
     .mobilenav {
         display: block;
     }
@@ -1210,11 +1172,11 @@ All this is done for any sub-level being entered.
         .demo-4 .dl-menuwrapper ul {
             background: #79a002;
         }
-    /*page details*/
+    /* page details */
 
 
 }
-@media handeled, (max-width: 769px) { 
+@media handheld, (max-width: 769px) { 
     .fournisseurs a{
         -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -1244,7 +1206,7 @@ All this is done for any sub-level being entered.
     }
     .buttonwebsite {
         padding: 5px;
-        background-color: none;
+        /* background-color: none; */
         -webkit-border-radius: 4px;
         border-radius: 4px;
         border: solid 1px rgb(213,94,36);
@@ -1314,7 +1276,7 @@ All this is done for any sub-level being entered.
     }
 .buttonwebsite {
         padding: 5px;
-        background-color: none;
+       /* background-color: none; */
         -webkit-border-radius: 4px;
         border-radius: 4px;
         border: solid 1px rgb(213,94,36);
@@ -1336,7 +1298,7 @@ All this is done for any sub-level being entered.
         float: none;
         width:100%;
     }
-   /*menu mobile*/
+   /* menu mobile */
    .mobilenav {
     display: block;
     height: 50px;
@@ -1474,7 +1436,7 @@ All this is done for any sub-level being entered.
         display: none;
     }
 
-    /* 
+/* 
 When a submenu is openend, we will hide all li siblings.
 For that we give a class to the parent menu called "dl-subview".
 We also hide the submenu link. 
@@ -1663,6 +1625,4 @@ All this is done for any sub-level being entered.
 .demo-4 .dl-menuwrapper button:hover,
 .demo-4 .dl-menuwrapper button.dl-active,
 .demo-4 .dl-menuwrapper ul {
-    background: #79a002;
-}
-
+    background: #79a002;}
