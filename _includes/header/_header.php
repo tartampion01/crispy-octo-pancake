@@ -61,10 +61,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <script type='text/javascript' src='/_assets/js/App.js'></script>  
-
-    <!--** integration js
-    <script type='text/javascript' src='../../_assets/js/jquery-1.12.4.min.js'></script>  
-    <script type="text/javascript" src="../../_assets/js/jquery.min.js"></script>-->
     
     <!-- Bootstrap CDN includes --> <!--css-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
@@ -143,7 +139,6 @@
     <?php if($NOMPAGE == "demande-bon-travail.php")
         //echo "<script src='https://www.google.com/recaptcha/api.js?render=" .  RD_Utils::getRecaptchaSiteKey() . "'></script>";
     ?>
-    <!--<script src='https://www.google.com/recaptcha/api.js?render=6LdryFoUAAAAADpVaDt5XQYrZIt7DTNXLVvXPJw7'></script>-->
 </head>
 
 <body>
@@ -168,10 +163,6 @@
                 </div>
             </div>
 <?PHP
-    // TOP MENU --
-    //require_once(dirname(__DIR__).'/header/_header_top_menu.php'); a enlever FX 25-10-2019
-    // SUB HEADER LOGO + RECHERCHE
-    //require_once(dirname(__DIR__).'/header/_header_logo_search.php'); a enlever FX 25-10-2019
     // SUB Header MENU PRINCIPAL
     require_once(dirname(__DIR__).'/header/_header_main_menu.php');
 ?>
