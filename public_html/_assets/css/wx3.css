@@ -67,7 +67,7 @@
 
 /* total menu*/
 .bgnav {
-    height: 50px;
+    height: 53px;
     background-color: #2A2A2A;
     background-position: center;
     background-size: cover;
@@ -90,7 +90,7 @@
 .menudestop ul li a {
     display: block;
     margin-right: 20px;
-    height: 50px;
+    height: 53px;
     text-align: left;
     line-height: 50px;
     font-family: Calibri;
@@ -209,10 +209,10 @@
   .sticky + .content {
     padding-top: 60px;
   }
-  #logo_sticky img {height:40px;width:40px;padding-top:5px;}
+  #logo_sticky img {height:40px;width:40px;padding-top:0px;}
   #logo_sticky img:hover {transform: scale(1.1);transition: all .1s ease-in-out;cursor: pointer;}
-  #facebook_sticky img {height:40px;width:40px;padding-top:5px;cursor: pointer;}
-  #urgence_sticky img {height:40px;width:40px;padding-top:5px;cursor: pointer;}
+  #facebook_sticky img {height:40px;width:40px;padding-top:0px;cursor: pointer;}
+  #urgence_sticky img {height:40px;width:40px;padding-top:0px;cursor: pointer;}
   .addlogo {visibility:hidden;}
   .FU_right {position:relative;right:40px;}
 
@@ -628,7 +628,7 @@ text-decoration:underline;
 
 /* pagination trucks */
 .pagination {
-    display: inline-block;
+   /* display: inline; */
     float: right;  
 }
 .pagination a {
@@ -756,11 +756,11 @@ color:#f00;
 @media (max-width: 1024px) {
     .fournisseurs a{
         -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-       box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         background-color:#024da1;
         color:#fff;
-      cursor:pointer;
+        cursor:pointer;
         font-size:16px;
         font-size:1rem;
         display:inline-block;
@@ -784,9 +784,7 @@ color:#f00;
         object-fit:cover; 
         height: 250px;
     }
-    .mobilepagination{
-        padding-bottom: 20px;
-    }
+   
     .imagespec{
         object-fit:cover; 
         height: 250px;
@@ -823,9 +821,10 @@ color:#f00;
         margin: 5px 0px;
         padding: 0px;
     }
+    /*
     .buttonwebsite {
         padding: 5px;
-        /*background-color: none;*/
+       
         -webkit-border-radius: 4px;
         border-radius: 4px;
         border: solid 1px rgb(213,94,36);
@@ -840,6 +839,7 @@ color:#f00;
         text-decoration: none;
         color: white;
     }
+    */
     .subnavdescription a:hover {
         color: rgb(213,94,36);
         text-decoration: none;
@@ -1179,11 +1179,11 @@ All this is done for any sub-level being entered.
 @media handheld, (max-width: 769px) { 
     .fournisseurs a{
         -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-       box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         background-color:#024da1;
         color:#fff;
-      cursor:pointer;
+        cursor:pointer;
         font-size:14px;
         display:inline-block;
         height:30px;
@@ -1201,25 +1201,15 @@ All this is done for any sub-level being entered.
     h4 {
         font-size: 18px;
     }
-    .mobilepagination{
-        padding-bottom: 20px;
-    }
-    .buttonwebsite {
-        padding: 5px;
-        /* background-color: none; */
-        -webkit-border-radius: 4px;
-        border-radius: 4px;
-        border: solid 1px rgb(213,94,36);
-        text-transform: uppercase;
-        font-size: 14px;
-    }
+ .pagination {display:block;}
+
     .bgtrucks{
         background: url(../../../_assets/images/menu_images/background-trucks.jpg);
         background-position: center center;
         background-repeat:  no-repeat;
         object-fit:cover; 
         height: 350px;
-    }
+    } 
     .filter-item img{
         object-fit:cover; 
         height: 350px;
@@ -1274,9 +1264,9 @@ All this is done for any sub-level being entered.
         height: 150px;
         width: 33.3%
     }
+/*
 .buttonwebsite {
         padding: 5px;
-       /* background-color: none; */
         -webkit-border-radius: 4px;
         border-radius: 4px;
         border: solid 1px rgb(213,94,36);
@@ -1289,7 +1279,8 @@ All this is done for any sub-level being entered.
             box-shadow: 0px 1px 2px 2px rgba(000,000,000,0.5);
             text-decoration: none;
             color: white;
-        }
+    }
+*/
     .subnavdescription a:hover {
         color: rgb(213,94,36);
         text-decoration: none;

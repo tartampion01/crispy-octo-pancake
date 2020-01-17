@@ -1,9 +1,9 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/nextpart/<?php echo $NOMPAGE; ?>">
-    <div class="grid grid-pad">
-        <div class="content">
-            <div class="">
+    <div class="wrap">
+        <div class="grid grid-pad">
+            <div class="content">
                 <div class="titrepage">
                     <h1>INSCRIPTION À NEXTPART</h1>
                 </div>
