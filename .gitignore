@@ -9,3 +9,5 @@ nbproject/private/private.xml
 team-extension.log
 .vscode/
 public_html/apphost.config
+.vs/
+apphost.config
