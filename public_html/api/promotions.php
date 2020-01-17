@@ -3,7 +3,7 @@
     header("Content-type: application/json");
 ?>
 [
-    { "Brochure" : {"title":"le circulaire", "imgSource": "../../_assets/images/wx3/promo.jpg", "url":"http://localhost:8080/promotions-nouvelles/promo-pieces.php"} },
+    { "Brochure" : {"title":"le circulaire", "imgSource": "../../_assets/images/wx3/promo.jpg", "url":"/promotions-nouvelles/promo-pieces.php"} },
     { "Truck": { "id" : "6391", "title":"International - LT", "picture_id":"8243", "Price" : "55 000$" } },
     { "Truck": { "id" : "6392", "title":"International - MV607 SBA","picture_id":"8244", "Price" : "45 000$" } },
     { "Truck": { "id" : "6392", "title":"International - MV607 SBA","picture_id":"8244", "Price" : "35 000$" } }
