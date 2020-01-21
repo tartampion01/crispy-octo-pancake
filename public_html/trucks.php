@@ -52,13 +52,13 @@
 
                     <!--resultat section -->
                     <div v-if="paging" class="grid horizonRuler">
-                        <div class="resultsearch mobile-col-1-1">Resultat {{paging.message}}</div>
-                        <div v-if="paging.available" class="pagination mobile-col-1-1">
-                            <button type="button" class="buttonwebsite mobile-col-1-1" @click="paging.prev()">Precedent</button>
-                            <div v-for="page in paging.pages" class="mobilepagination mobile-col-1-1">
-                                <a v-bind:class="{ active: page.current }" @click="paging.move(page.index)" >{{page.title}}</a>
+                        <div class="resultsearch mobile-col-1-1">Résultat {{paging.message}}</div>
+                        <div v-if="paging.available" class="pagination">
+                            <button type="button" class="buttonwebsite" @click="paging.prev()">Précédent</button>
+                            <div v-for="page in paging.pages" class="">
+                                <a v-bind:class="{ active: page.current }" @click="paging.move(page.index)">{{page.title}}</a>
                             </div>                                                                                
-                            <button type="button" class="buttonwebsite mobile-col-1-1" @click="paging.next()" >Suivant</button>
+                            <button type="button" class="buttonwebsite" @click="paging.next()">Suivant</button>
                         </div>
                 </div>
             </div>
@@ -71,8 +71,7 @@
      // require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); 
      ?>
 
-    <!--footer-->
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
+ 
 
     <div class="loading-overlay">Loading&#8230;</div>
 
@@ -217,3 +216,6 @@
 
     }
 </script>
+
+   <!--footer-->
+   <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
