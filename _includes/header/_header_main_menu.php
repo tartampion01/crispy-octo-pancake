@@ -242,10 +242,10 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                         </ul>
                         <ul class="FU_right">
                             <li>   
-                                <a id="urgence_sticky" class="addlogo" href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H); ?>"><img src="/../_assets/images/wx3/logo-tel.png" alt="Urgence Routière" /></a>
+                                <a id="urgence_sticky" class="addlogo" href="<?php echo RD_PageLink::getHref(folder::Root,page::UrgenceRoutiere24H); ?>"><img src="/../_assets/images/wx3/icon-tel.png" alt="Urgence Routière" /></a>
                             </li>
                             <li>
-                                <a id="facebook_sticky" class="addlogo" href="https://www.facebook.com/Réseau-Dynamiquecom-200899577018785/" target="_blank"><img src="/../_assets/images/wx3/facebook_footer.png" alt="facebook Réseau Dynamique" /></a>
+                                <a id="facebook_sticky" class="addlogo" href="https://www.facebook.com/Réseau-Dynamiquecom-200899577018785/" target="_blank"><img src="/../_assets/images/wx3/facebook.png" alt="facebook Réseau Dynamique" /></a>
                             </li>
                         </ul>
                    </div>   
