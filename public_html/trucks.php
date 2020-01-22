@@ -68,7 +68,6 @@
     <!-- promo main -->
     <?php 
      require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/promo/promo_main.php'); 
-     // require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/slider/multi_item_product.php'); 
      ?>
 
  
