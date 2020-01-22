@@ -79,7 +79,7 @@ Class RD_Email
         switch($TypeEmail)
         {
             case TypeEmail::DemandeInformation:   //$emailto = "ptourigny@servicesinfo.info,philtourigny@gmail.com";
-                                                  $emailto= "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
+                                                  $emailto= "dpaquet@inter-quebec.com,fdjamai@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Demande d'information";
                                                   $this->camion = new RD_Camion(null);
@@ -298,7 +298,7 @@ Class RD_Email
         $emailto = $toName = $subject = $body = "";
         
         //$emailto = "ptourigny@servicesinfo.info";
-        $emailto = "dpaquet@inter-quebec.com,lgerbermuir@inter-quebec.com";
+        $emailto = "dpaquet@inter-quebec.com,fdjamai@inter-quebec.com";
         $toName  = "";
         $subject = "Demande d'évaluation d'échange";
 

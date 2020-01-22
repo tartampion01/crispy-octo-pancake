@@ -161,7 +161,7 @@ class RD_PageLink
             case page::PromotionsEtNouvellesNouvelles:$_page = "nouvelles";break;
             case page::PromotionsEtNouvellesConcours:$_page = "concours";break;
             case page::PromotionsEtNouvellesPromoPieces:$_page = "promo-pieces";break;
-            case page::PromotionsEtNouvellesPromoPieces2:$_page = "promo-pieces-2";break;
+            case page::PromotionsEtNouvellesPromoPieces2:$_page = "promo-pieces-blitz";break;
             case page::PromotionsEtNouvellesPromoPieces3:$_page = "promo-pieces-3";break;
             case page::PromotionsEtNouvellesPromoPieces4:$_page = "promo-pieces-4";break;
             case page::PromotionsEtNouvellesPromoPieces5:$_page = "promo-pieces-5";break;
@@ -226,7 +226,7 @@ class RD_Header{
             case "camions-inter-anjou.php":$metaContent = "Inter-Anjou à Anjou offre un vaste choix de camions International en plus d&#39;offrir l&#39;entretien et la réparation de votre camion lourd.";break;
             case "inter-boucherville.php":$metaContent = "Rendez-vous à la succursale Inter-Boucherville pour un vaste choix de camions International et l&#39;entretien ou la réparation de votre camion lourd.";break;
             case "centre-camion-beaudoin.php":$metaContent = "Rendez-vous à la succursale Centre du Camion Beaudoin ou pour un vaste choix de camions International et l&#39;entretien ou la réparation de votre camion lourd.";break;
-            case "charest-international.php":$metaContent = "Rendez-vous à la succursale Charest International pour un vaste choix de camions International et l&#39;entretien ou la réparation de votre camion lourd.";break;
+            case "charest-international.php":$metaContent = "Remorquage de Camions Lourds 24 heures sur 24. Rendez-vous à la succursale Charest International pour un vaste choix de camions International et l&#39;entretien ou la réparation de votre camion lourd. Appelez le 819-758-8271 pour le service de remorquage.";break;
             case "garage-charest-freres.php":$metaContent = "Garage Charest et Frères à Trois-Rivières offre un vaste choix de camions International en plus d&#39;offrir l&#39;entretien et la réparation de votre camion lourd.";break;
             case "le-centre-camion-amiante.php":$metaContent = "Le Centre du Camion à Thetford Mines offre un vaste choix de camions International en plus d&#39;offrir l&#39;entretien et la réparation de votre camion lourd.";break;
             case "le-centre-camion-beauce.php":$metaContent = "Le Centre du Camion de St-Georges offre un vaste choix de camions International en plus d&#39;offrir l&#39;entretien et la réparation de votre camion lourd.";break;
@@ -276,11 +276,11 @@ class RD_Header{
     }
     
     /*
-     * public static function getMetaContent($pageName)
+     * public static function getMetaContent($pageName)     
      */  
     public static function getMetaKeywords($pageName)
     {   
-        $commonMetaKeywords = "Réseau Dynamique, camions international, camions, camions lourds, location camion, camoins, camoin, camions inter, location camion, location remorque, remorque, vehicule lourd, vehicule lourd a vendre, concessionaire international, truck inter, truck international, inter anjou, inter boucherville, centre du camion beaudoin, les camions beaudoin, garage charest et freres, charest international, inter lanaudiere, garage robert, centre du camion amiante";
+        $commonMetaKeywords = "Réseau Dynamique, camions international, camions, camions lourds, location camion, camoins, camoin, camions inter, location camion, location remorque, remorque, vehicule lourd, vehicule lourd a vendre, concessionaire international, truck inter, truck international, inter anjou, inter boucherville, centre du camion beaudoin, les camions beaudoin, garage charest et freres, charest international, remorquage, remorquage camion lourd, inter lanaudiere, garage robert, centre du camion amiante";
         $metaKeywords = "";
         switch($pageName){
             case "a-propos.php":$metaKeywords = "";break;
@@ -425,7 +425,7 @@ class RD_Header{
             case "camions-inter-anjou.php":$title = "Camions International Anjou | Inter-Anjou";break;
             case "inter-boucherville.php":$title = "Camions International Boucherville | Inter-Boucherville";break;
             case "centre-camion-beaudoin.php":$title = "Camions International Drummondville | Centre du Camion Beaudoin";break;
-            case "charest-international.php":$title = "Camions International Victoriaville | Charest International";break;
+            case "charest-international.php":$title = "Camions International Victoriaville | Remorquage de Camions Lourds";break;
             case "garage-charest-freres.php":$title = "Camions International Trois-Rivières | Garage Charest et Frères";break;
             case "le-centre-camion-amiante.php":$title = "Camions International Thetford Mines | Le Centre du camion";break;
             case "le-centre-camion-beauce.php":$title = "Camions International St-Georges | Le Centre du Camion";break;

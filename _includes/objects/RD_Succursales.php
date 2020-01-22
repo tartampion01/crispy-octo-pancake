@@ -226,10 +226,7 @@ class RD_Succursales{
 
         $this->load($succEnum);
     }
-    /*
-    
-    Garage Robert
-     */
+   
     public function load($succursale){
         
         switch($succursale)
@@ -311,12 +308,12 @@ class RD_Succursales{
                 $this->contacts = new Contact();
                 $this->contacts->addItem(array("Roger Lachapelle", "Directeur Général","rlachapelle@camionbeaudoin.com"));
                 $this->contacts->addItem(array("Jean-Philippe Guévremont", "Directeur du service","jpguevremont@camionsinterlanaudiere.com"));
-                $this->contacts->addItem(array("Benoit Blier", "Aviseur Technique","benoitb@camionsinterlanaudiere.com"));
+                $this->contacts->addItem(array("Benoit Blier", "Directeur du Service","benoitb@camionsinterlanaudiere.com"));
                 $this->contacts->addItem(array("Simon Dallaire", "Aviseur Technique","simond@camionsinterlanaudiere.com"));
+                $this->contacts->addItem(array("Bruno Demers", "Aviseur Technique","brunod@camionsinterlanaudiere.com"));
                 $this->contacts->addItem(array("Éric Boudreau", "Directeur des pièces","ericb@camionsinterlanaudiere.com"));
                 $this->contacts->addItem(array("Pierre Harnois", "Représentant des pièces et service","pierreh@camionsinterlanaudiere.com"));                
-                $this->contacts->addItem(array("Guillaume Coutu", "Représentant des pièces et service","guillaumec@camionsinterlanaudiere.com"));
-                $this->contacts->addItem(array("Alex Calvé", "Représentant vente camion neuf, usagé et location","alexc@camionsinterlanaudiere.com"));
+                $this->contacts->addItem(array("Ghislain Piché", "Représentant des pièces et service","ghislainp@camionsinterlanaudiere.com"));                
                 $this->imageBatisse = "../../_assets/images/batisse/batisse-camions-inter-lanaudiere.jpg";
                 $this->imageBatisseALT= "Camions Inter-Lanaudière";
                 $this->servicesOfferts[] = "Heures de service prolongées";
@@ -394,14 +391,14 @@ class RD_Succursales{
                 $this->province = "Québec";
                 $this->codePostal = "J4B 6Z5";
                 $this->telephones[] = "Téléphone : 450 655-5050";
-                $this->telephones[] = "Montréal : 514 523-5860";
+                $this->telephones[] = "Sans frais : 1-844-960-5050";
                 $this->telephones[] = "Télécopieur : 450 655-5649";
-                $this->heureOuvertureLundi = "7:00 - 12:45 a.m.";
-                $this->heureOuvertureMardi = "7:00 - 12:45 a.m.";
-                $this->heureOuvertureMercredi = "7:00 - 12:45 a.m.";
-                $this->heureOuvertureJeudi = " 	7:00 - 12:45 a.m.";
+                $this->heureOuvertureLundi = "7:00 - 12:00 a.m.";
+                $this->heureOuvertureMardi = "7:00 - 12:00 a.m.";
+                $this->heureOuvertureMercredi = "7:00 - 12:00 a.m.";
+                $this->heureOuvertureJeudi = " 	7:00 - 12:00 a.m.";
                 $this->heureOuvertureVendredi = "7:00 - 19:00";
-                $this->heureOuvertureSamedi = "7:00 - 17:00";
+                $this->heureOuvertureSamedi = "Fermé";
                 $this->heureOuvertureDimanche = "Fermé";
                 $this->contacts = new Contact();
                 $this->contacts->addItem(array("Nathalie Hallé", "Présidente","nathalie.halle@camionsinteranjou.com"));
@@ -409,7 +406,7 @@ class RD_Succursales{
                 $this->contacts->addItem(array("Pascal Adam Richard", "Directeur du service","pascaladam.richard@inter-boucherville.com"));
                 $this->contacts->addItem(array("Sylvain Lalumière", "Directeur technique","sylvain.lalumiere@camionsinteranjou.com"));
                 $this->contacts->addItem(array("Alain Bourgault", "Représentant pièces et service","514-918-5150","alain.bourgault@inter-boucherville.com"));
-                $this->contacts->addItem(array("Michel Bélisle", "Représentant pièces et service","514-404-6622" ,"michel.belisle@inter-boucherville.com"));
+                $this->contacts->addItem(array("François Goudreau", "Représentant pièces et service","514-966-6454" ,"francois.goudreau@inter-boucherville.com"));
                 $this->imageBatisse = "../../_assets/images/batisse/batisse-inter-boucherville.jpg";
                 $this->imageBatisseALT= "Inter-Boucherville";
                 $this->servicesOfferts[] = "Service accéléré";
@@ -507,6 +504,7 @@ class RD_Succursales{
                 $this->imageBatisseALT= "Charest International";
                 $this->servicesOfferts[] = "Service accéléré";
                 $this->servicesOfferts[] = "Heures de service prolongées";
+                $this->servicesOfferts[] = "Remorquage de camions lourds 24/7";
                 $this->servicesOfferts[] = "Alignement";
                 $this->servicesOfferts[] = "Atelier de carrosserie";
                 $this->servicesOfferts[] = "Refrigération";
@@ -518,7 +516,7 @@ class RD_Succursales{
                 $this->servicesOfferts[] = "Air climatisé";
                 $this->servicesOfferts[] = "Réparation de remorque";
                 $this->servicesOfferts[] = "Service routier";
-                $this->serviceRoutierTitre = "Service de remorquage 24/7";
+                $this->serviceRoutierTitre = "Service de <a href='remorquage/charest-international.php'>remorquage</a> 24/7";
                 $this->serviceRoutierTelephone[] = "Remorquage en tout temps au Canada.";
                 $this->serviceRoutierTelephone[] = "Téléphone : 819 758-8271";
                 $this->remorquageTitre = "";
@@ -731,12 +729,12 @@ class RD_Succursales{
                 $this->telephones[] = "Téléphone : 418 687-9510";
                 $this->telephones[] = "Sans frais : 877 687-9510";
                 $this->telephones[] = "Télécopieur : 418 687-9518";
-                $this->heureOuvertureLundi = "7h30 à minuit";
-                $this->heureOuvertureMardi = "7h30 à minuit";
-                $this->heureOuvertureMercredi = "7h30 à minuit";
-                $this->heureOuvertureJeudi = "7h30 à minuit";
-                $this->heureOuvertureVendredi = "7h30 à minuit";
-                $this->heureOuvertureSamedi = "Fermé";
+                $this->heureOuvertureLundi = "Ouverture à 7h30";
+                $this->heureOuvertureMardi = "24h";
+                $this->heureOuvertureMercredi = "24h";
+                $this->heureOuvertureJeudi = "24h";
+                $this->heureOuvertureVendredi = "24h";
+                $this->heureOuvertureSamedi = "0h00 à 7h30";
                 $this->heureOuvertureDimanche = "Fermé";
                 $this->contacts = new Contact();
                 $this->contacts->addItem(array("Steve Hallé", "Président Directeur Général","shalle@camionbeaudoin.com"));                
