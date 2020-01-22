@@ -11,8 +11,13 @@
                     <div class="">
                         <div class="jshowoff jshowoff-1">
                             <div>
+                                <a name="hyperlien" href="https://www.internationaltrucks.com/engines/international-a26">
+                                    <img src="_assets/images/homeBanner/A26.png" alt="Découvrez le nouveau moteur A26"/>
+                                </a>
+                            </div>
+                            <div>
                                 <img src="_assets/images/homeBanner/BANNIERE CV 2.jpg" alt="La nouvelle Série CV - Automne 2018"/>
-                            </div>                           
+                            </div>
                             <div>
                                 <a name="hyperlien" href="http://reseaudynamique.com/camions-neufs/camions-lourds-neufs-international.php">
                                     <img src="_assets/images/homeBanner/banniere LT.jpg" alt="Camions LT International"/>
@@ -25,7 +30,7 @@
                             </div>
                             <div>
                                 <a name="hyperlien" href="http://reseaudynamique.com/promotions-nouvelles/promo-pieces.php">
-                                    <img src="_assets/images/homeBanner/BANNIERE CIRCULAIRE RD NOV-DEC 2019.png" alt="" width="1125" height="400"/>
+                                    <img src="_assets/images/homeBanner/BANIERE CIRCULAIRE RD JAN-FEV 2020.png" alt="" width="1125" height="400"/>
                                 </a>
                             </div>
                             <div>
