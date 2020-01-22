@@ -52,7 +52,7 @@
                             <div class="col-1-2 topdivision mobile-col-1-2">
                                 <!--marque-->
                                 <div class="col-1-1 mobile-col-1-1" v-if="item.marque">
-                                    <img class="logoleft" src="_assets/images/wx3/marquelogo.png" alt="" />
+                                    <img class="logoleft" src="_assets/images/camions/icons/marque.png" alt="" />
                                     <div class="topdivision15">
                                         <h3 class="infotitle">Marque :</h3>
                                         <p class="infotext">{{ item.marque }}</p>
@@ -60,7 +60,7 @@
                                 </div>
                                 <!--modele-->
                                 <div class="col-1-1 topdivision15 mobile-col-1-1" v-if="item.modele">
-                                    <img class="logoleft" src="_assets/images/wx3/modeledetails.png" alt="" />
+                                    <img class="logoleft" src="_assets/images/camions/icons/modele.png" alt="" />
                                     <div>
                                         <h3 class="infotitle">Modèle  :</h3>
                                         <p class="infotext">{{ item.modele }}</p>
@@ -68,7 +68,7 @@
                                 </div>
                                 <!--no serie-->
                                 <div class="col-1-1 topdivision15 mobile-col-1-1" v-if="item.noSerie">
-                                    <img class="logoleft" src="_assets/images/wx3/noseriedetails.png" alt="" />
+                                    <img class="logoleft" src="_assets/images/camions/icons/noserie.png" alt="" />
                                     <div>
                                         <h3 class="infotitle">No série  :</h3>
                                         <p class="infotext">{{ item.noSerie }}</p>
@@ -78,7 +78,7 @@
                             <div class="col-1-2 topdivision mobile-col-1-2">
                                 <!--no inventaire-->
                                 <div class="col-1-1 mobile-col-1-1" v-if="item.noInventaire">
-                                    <img class="logoleft" src="_assets/images/wx3/noinventairedetails.png" alt="" />
+                                    <img class="logoleft" src="_assets/images/camions/icons/noinventaire.png" alt="" />
                                     <div class="topdivision15">
                                         <h3 class="infotitle">No d'inventaire  :</h3>
                                         <p class="infotext">{{ item.noInventaire }}</p>
@@ -86,7 +86,7 @@
                                 </div>
                                 <!--annee-->
                                 <div class="col-1-1 topdivision15 mobile-col-1-1" v-if="item.annee">
-                                    <img class="logoleft" src="_assets/images/wx3/anneedetails.png" alt="" />
+                                    <img class="logoleft" src="_assets/images/camions/icons/annee.png" alt="" />
                                     <div>
                                         <h3 class="infotitle">Année  :</h3>
                                         <p class="infotext">{{ item.annee }}</p>
@@ -94,7 +94,7 @@
                                 </div>
                                 <!--kilometrage-->
                                 <div class="col-1-1 topdivision15 mobile-col-1-1" v-if="item.intMillage">
-                                    <img class="logoleft" src="_assets/images/wx3/kmdetails.png" alt="" />
+                                    <img class="logoleft" src="_assets/images/camions/icons/km.png" alt="" />
                                     <div>
                                         <h3 class="infotitle">Kilométrage  :</h3>
                                         <p class="infotext">{{ item.intMillage }}</p>
