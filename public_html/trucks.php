@@ -170,7 +170,8 @@
                 },
                 async dataRead() {
 
-                    let api = 'http://raisindynamique.reseaudynamique.com/api/trucks.php';
+                    let api = '/api/trucks.php';
+                    //let api = 'http://raisindynamique.reseaudynamique.com/api/trucks.php';
 
                     // Show loading spinner
                     $('.loading-overlay').show();
@@ -203,7 +204,9 @@
                 },
                 getSrc(id) {
                     if (id) {
-                        let url = "http://raisindynamique.reseaudynamique.com/api/pictures.php?";
+                        let url = "/api/pictures.php?";
+                        //let url = "http://raisindynamique.reseaudynamique.com/api/pictures.php?";
+
                         url = url + "n=" + this.isNew + "&id=" + id; //encodeURI(btoa(id))
                         return url;
                     } else {

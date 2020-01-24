@@ -32,21 +32,21 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
         <div class="blacklinefooter">
             <div class="grid grid-pad"> 
                 <div class="blackfootertop">
-                    <div class="col-1-5 mobile-col-1-5">
+                    <div class="col-1-5 mobile-col-1-3">
                         <a href="/accueil.php">
                           <img src="../../_assets/images/wx3/logo_footer.png" alt="Réseau Dynamique" />
                         </a>
                     </div>
-                    <div class="col-1-5 mobile-col-1-5">
+                    <div class="col-1-5 ">
                         <p></p>
                     </div>
-                    <div class="col-1-5 mobile-col-1-5">
+                    <div class="col-1-5 mobile-col-1-3">
                        <p class="footercenter">&copy; Réseau Dynamique, 2020</p>
                     </div>
-                    <div class="col-1-5 mobile-col-1-5">
+                    <div class="col-1-5 ">
                     <p  class="footerright"></p>
                     </div>
-                    <div class="col-1-5 mobile-col-1-5">
+                    <div class="col-1-5 mobile-col-1-3">
                     <p class="footerright">
                         <a name="hyperlien" onclick="" href="/mentions-legales.php" target="_self">Mentions légales</a>&nbsp;| 
                         <a name="hyperlien" onclick="" href="/plan-site.php" target="_self">Plan du site</a>

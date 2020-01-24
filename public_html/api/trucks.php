@@ -80,9 +80,9 @@ foreach ($filters as $code) {
             break;
         case "e_inte":
             if( $newTruck ){ 
-                $engine = "AND I.engine like '%International%'"; }
+                $engine = "AND I.engine like '%Inter%'"; }
             else { 
-                $engine = "AND I.moteur like '%International%'"; }
+                $engine = "AND I.moteur like '%Inter%'"; }
             break;
         case "e_cumm":
             if( $newTruck ){

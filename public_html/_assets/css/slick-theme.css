@@ -63,8 +63,9 @@
 
     .slick-prev:before,
     .slick-next:before {
-       /* font-family: 'slick'; */ 
-       font-family:'MS Gothic' ;
+      /*   font-family: 'slick';  */
+      font-family:'MS Gothic';
+      
        font-weight:bold;
         font-size: 120px;
         line-height: 1;
@@ -199,4 +200,14 @@
 {
     opacity: .75;
     color: black;
+}
+
+
+@media handheld, (max-width: 769px){
+.slick-prev,
+.slick-next
+{
+   display: none;
+   visibility: hidden;
+}
 }
