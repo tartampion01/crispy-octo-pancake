@@ -516,7 +516,7 @@ class RD_Succursales{
                 $this->servicesOfferts[] = "Air climatisé";
                 $this->servicesOfferts[] = "Réparation de remorque";
                 $this->servicesOfferts[] = "Service routier";
-                $this->serviceRoutierTitre = "Service de <a href='remorquage/charest-international.php'>remorquage</a> 24/7";
+                $this->serviceRoutierTitre = "Service de <a href='charest-international-remorquage.php'>remorquage</a> 24/7";
                 $this->serviceRoutierTelephone[] = "Remorquage en tout temps au Canada.";
                 $this->serviceRoutierTelephone[] = "Téléphone : 819 758-8271";
                 $this->remorquageTitre = "";
