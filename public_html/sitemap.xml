@@ -8,363 +8,408 @@
 
 
 <url>
-  <loc>http://www.reseaudynamique.com/</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/accueil.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/accueil.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/a-propos.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/urgence-routiere-24h.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/promotions-nouvelles/promo-pieces.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/trucks.php?n=1&amp;params=B_Inte</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/trucks.php?n=1&amp;params=B_Doep</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/urgence-routiere-24h.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/trucks.php?n=1&amp;params=B_Isuz</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/trucks.php?n=0</loc>
-  <lastmod>2020-01-01T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/trucks.php?n=1&amp;params=B_Kalm</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/trucks.php?n=1</loc>
-  <lastmod>2020-01-01T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/trucks.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/trucks.php?n=1&params=B_Doep</loc>
-  <lastmod>2020-01-01T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/trucks.php?n=1</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/vehicules-utilitaires/mini-excavatrices.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/pieces-services/pieces-accessoires.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/vehicules-utilitaires/transporteurs-tout-terrain.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/pieces-services/service-routier.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/vehicules-utilitaires/skid-steer-chargeur-chenilles.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/pieces-services/apres-vente.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/vehicules-utilitaires/chargeuses-yanmar-v3-v4.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/pieces-services/financement.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/location-camions.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/location-camions.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/pieces-services/financement.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/vehicules-utilitaires/mini-excavatrices.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/pieces-services/pieces-accessoires.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/vehicules-utilitaires/transporteurs-tout-terrain.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/pieces-services/service-routier.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/vehicules-utilitaires/skid-steer-chargeur-chenilles.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/pieces-services/apres-vente.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/vehicules-utilitaires/chargeuses-yanmar-v3-v4.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/carrieres.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/promotions-nouvelles/promo.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/camions-neufs/isuzu</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/promotions-nouvelles/promo-pieces.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/accueil</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/a-propos.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/mentions-legales.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/carrieres.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/plan-site.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/postuler.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/promotions-nouvelles/promotions.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/nous-joindre.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/promotions-nouvelles/nouvelles.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/obtenir-prix.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/promotions-nouvelles/concours.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/mentions-legales.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre/inter-lanaudiere.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/plan-site.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://reseaudynamique.com/nous-joindre/camions-inter-anjou.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre/camions-inter-anjou.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/nous-joindre/inter-boucherville.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre/inter-boucherville.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/nous-joindre/le-centre-camion-amiante.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre/les-camions-beaudoin.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/nous-joindre/centre-routier-1994.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre/centre-camion-beaudoin.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/nous-joindre/inter-lanaudiere.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre/charest-international.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/nous-joindre/charest-international.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre/garage-charest-freres.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/nous-joindre/le-centre-camion-beauce.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre/le-centre-camion-amiante.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/nous-joindre/centre-camion-beaudoin.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre/le-centre-camion-beauce.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/fournisseurs.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre/centre-routier-1994.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/nextpart/abonnement-nextpart.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre/camions-international-elite.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/nous-joindre/les-camions-beaudoin.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nous-joindre/garage-robert.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/nous-joindre/garage-charest-freres.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/fournisseurs.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/nous-joindre/camions-international-elite.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/nextpart/abonnement-nextpart.php</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/promotions-nouvelles/promo-pieces-pdf.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/carrieres.php?emp=MTc%3D</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/carrieres.php?emp=MTc%3D</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/carrieres.php?emp=MTk%3D</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/carrieres.php?emp=MjE%3D</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/carrieres.php?emp=MjE%3D</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/carrieres.php?emp=MjI%3D</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/carrieres.php?emp=MjI%3D</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/carrieres.php?emp=MjM%3D</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/postuler.php?emp=c3BvbnRhbmVl</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/carrieres.php?emp=MjQ%3D</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-bon-travail.php?succursale=Q2FtaW9ucyBJbnRlci1MYW5hdWRpw6hyZQ==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/carrieres.php?emp=MzA%3D</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://reseaudynamique.com/carrieres.php?emp=MjY%3D</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://reseaudynamique.com/postuler.php?emp=c3BvbnRhbmVl</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://reseaudynamique.com/nous-joindre/garage-robert.php</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://reseaudynamique.com/demande-bon-travail.php?succursale=Q2FtaW9ucyBJbnRlci1BbmpvdQ==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-pieces.php?succursale=Q2FtaW9ucyBJbnRlci1MYW5hdWRpw6hyZQ==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-pieces.php?succursale=Q2FtaW9ucyBJbnRlci1BbmpvdQ==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-bon-travail.php?succursale=Q2FtaW9ucyBJbnRlci1BbmpvdQ==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-bon-travail.php?succursale=SW50ZXItQm91Y2hlcnZpbGxl</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-pieces.php?succursale=Q2FtaW9ucyBJbnRlci1BbmpvdQ==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-pieces.php?succursale=SW50ZXItQm91Y2hlcnZpbGxl</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-bon-travail.php?succursale=SW50ZXItQm91Y2hlcnZpbGxl</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-bon-travail.php?succursale=TGUgQ2VudHJlIGR1IENhbWlvbiAoQW1pYW50ZSk=</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-pieces.php?succursale=SW50ZXItQm91Y2hlcnZpbGxl</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-pieces.php?succursale=TGUgQ2VudHJlIGR1IENhbWlvbiAoQW1pYW50ZSk=</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-bon-travail.php?succursale=TGVzIENhbWlvbnMgQmVhdWRvaW4=</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-bon-travail.php?succursale=TGUgQ2VudHJlIFJvdXRpZXIgMTk5NA==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-pieces.php?succursale=TGVzIENhbWlvbnMgQmVhdWRvaW4=</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-pieces.php?succursale=TGUgQ2VudHJlIFJvdXRpZXIgMTk5NA==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-bon-travail.php?succursale=Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-bon-travail.php?succursale=Q2FtaW9ucyBJbnRlci1MYW5hdWRpw6hyZQ==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-pieces.php?succursale=Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-pieces.php?succursale=Q2FtaW9ucyBJbnRlci1MYW5hdWRpw6hyZQ==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-bon-travail.php?succursale=</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-bon-travail.php?succursale=</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-pieces.php?succursale=Q2hhcmVzdCBJbnRlcm5hdGlvbmFs</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-pieces.php?succursale=Q2hhcmVzdCBJbnRlcm5hdGlvbmFs</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-pieces.php?succursale=R2FyYWdlIENoYXJlc3QgZXQgRnLDqHJlcw==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-bon-travail.php?succursale=TGUgQ2VudHJlIGR1IENhbWlvbiAoQmVhdWNlKQ==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-bon-travail.php?succursale=TGUgQ2VudHJlIGR1IENhbWlvbiAoQW1pYW50ZSk=</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-pieces.php?succursale=TGUgQ2VudHJlIGR1IENhbWlvbiAoQmVhdWNlKQ==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-pieces.php?succursale=TGUgQ2VudHJlIGR1IENhbWlvbiAoQW1pYW50ZSk=</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-bon-travail.php?succursale=Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-bon-travail.php?succursale=TGUgQ2VudHJlIGR1IENhbWlvbiAoQmVhdWNlKQ==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-pieces.php?succursale=Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-pieces.php?succursale=TGUgQ2VudHJlIGR1IENhbWlvbiAoQmVhdWNlKQ==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-bon-travail.php?succursale=TGVzIENhbWlvbnMgQmVhdWRvaW4=</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-bon-travail.php?succursale=TGUgQ2VudHJlIFJvdXRpZXIgMTk5NA==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-pieces.php?succursale=TGVzIENhbWlvbnMgQmVhdWRvaW4=</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-pieces.php?succursale=TGUgQ2VudHJlIFJvdXRpZXIgMTk5NA==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-bon-travail.php?succursale=R2FyYWdlIENoYXJlc3QgZXQgRnLDqHJlcw==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-bon-travail.php?succursale=Q2FtaW9ucyBJbnRlcm5hdGlvbmFsIMOJbGl0ZQ==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-pieces.php?succursale=R2FyYWdlIENoYXJlc3QgZXQgRnLDqHJlcw==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-pieces.php?succursale=Q2FtaW9ucyBJbnRlcm5hdGlvbmFsIMOJbGl0ZQ==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-bon-travail.php?succursale=Q2FtaW9ucyBJbnRlcm5hdGlvbmFsIMOJbGl0ZQ==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-bon-travail.php?succursale=R2FyYWdlIFJvYmVydA==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/demande-pieces.php?succursale=Q2FtaW9ucyBJbnRlcm5hdGlvbmFsIMOJbGl0ZQ==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/demande-pieces.php?succursale=R2FyYWdlIFJvYmVydA==</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/postuler.php?emp=MTc=</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/postuler.php?emp=MTc=</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/postuler.php?emp=MjE=</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/postuler.php?emp=MTk=</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/postuler.php?emp=MjI=</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/postuler.php?emp=MjE=</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/postuler.php?emp=MjM=</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.reseaudynamique.com/postuler.php?emp=MjI=</loc>
-  <lastmod>2018-09-06T16:55:08+00:00</lastmod>
+  <loc>http://reseaudynamique.com/postuler.php?emp=MjQ=</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://reseaudynamique.com/postuler.php?emp=MzA=</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://reseaudynamique.com/postuler.php?emp=MjY=</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://reseaudynamique.com/demande-bon-travail.php?succursale=R2FyYWdlIFJvYmVydA==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://reseaudynamique.com/demande-pieces.php?succursale=R2FyYWdlIFJvYmVydA==</loc>
+  <lastmod>2020-01-24T12:58:27+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 
