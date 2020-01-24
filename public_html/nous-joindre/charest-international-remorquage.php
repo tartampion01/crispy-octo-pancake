@@ -2,10 +2,10 @@
 <?php $suc = new RD_Succursales(); $suc->load(nomSuccursale::Victoriaville); ?>
 <body class="body"><?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
-        <div class="content">
-            <div class="shrink">
-                <div class="content">
+    <div class="wrap">
+        <div class="grid grid-pad">
+            <div class="content">
+                <div class="">
                     <h1>Service de Remorquage de Camions Lourds</h1>
                     <h2>24 heures sur 24</h2>
                     <h2>7 jours sur 7</h2>
