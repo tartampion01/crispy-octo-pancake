@@ -304,12 +304,13 @@ function init(){
                 },                
             async readData() {
 
-                //let api = '/api/singleUsedTruck_.php';
-                let api = 'http://raisindynamique.reseaudynamique.com/api/singleUsedTruck_.php';
+                let api = '/api/singleUsedTruck_.php';
+                //let api = 'http://raisindynamique.reseaudynamique.com/api/singleUsedTruck_.php';
+                
                 let isNew = (window.location.search.match(new RegExp('[?&]' + 'n' + '=([^&]+)')) || [,null])[1];
                 if(isNew && isNew == 1){
-                    //api = '/api/singleNewTruck_.php';
-                    api = 'http://raisindynamique.reseaudynamique.com/api/singleNewTruck_.php';
+                    api = '/api/singleNewTruck_.php';
+                    //api = 'http://raisindynamique.reseaudynamique.com/api/singleNewTruck_.php';
                     this.isNew = 1;
                 }
 
