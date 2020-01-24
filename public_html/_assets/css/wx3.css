@@ -1621,3 +1621,7 @@ All this is done for any sub-level being entered.
 }
 .marginmedia {margin:0;}
 }
+@media handheld, (max-width: 600px) { 
+    .marginmedia img {width: 75%;}
+    .mobileFix {width: 75%;}
+}

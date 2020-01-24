@@ -34,7 +34,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                 <div class="blackfootertop">
                     <div class="col-1-5 mobile-col-1-3">
                         <a href="/accueil.php">
-                          <img src="../../_assets/images/wx3/logo_footer.png" alt="Réseau Dynamique" />
+                          <img class="mobileFix" src="../../_assets/images/wx3/logo_footer.png" alt="Réseau Dynamique" />
                         </a>
                     </div>
                     <div class="col-1-5 ">
