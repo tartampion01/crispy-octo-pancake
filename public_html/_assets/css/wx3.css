@@ -1622,5 +1622,5 @@ All this is done for any sub-level being entered.
 .marginmedia {margin:0;}
 }
 @media handheld, (max-width: 320px) { 
-    .mobileFix {width:80%;}
+    .mobileFix {width:100%;}
 }
