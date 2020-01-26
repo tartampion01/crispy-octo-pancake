@@ -150,7 +150,8 @@ class RD_Camion{
         $this->essieuAvant = $r['frontaxle'];
         $this->essieuArriere = $r['rearaxle'];
         $this->suspensionArriere = $r['rearsuspension'];
-        $this->transmission = $r['transtype'];
+        $this->transoption = $r['transoption'];
+        $this->transmission = $r['transtype'] . ' ' . $r['transmission']. ' ';
         
         // ELSE ça reste string vide dans le cas des remorques
         if( $r['engine'] != "-")
@@ -169,6 +170,17 @@ class RD_Camion{
             $this->beauTitre .= "&nbsp;-&nbsp;" . $this->config;
         }
 
+        // Pour afficher le type de transmission et formatter pour affiche dans le nouveau site plus beau!
+        switch ($this->transoption)
+        {            
+            case "aut": $this->transmission .= "Automatique";
+                break;
+            case "man": $this->transmission .= "Manuelle";
+                break;
+            case "":
+                break;
+        }
+         
         $this->loadPicturesNew();
         
         return true;
