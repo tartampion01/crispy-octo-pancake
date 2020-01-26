@@ -170,7 +170,7 @@ class RD_Camion{
             $this->beauTitre .= "&nbsp;-&nbsp;" . $this->config;
         }
 
-        // Pour afficher le type de transmission et formatter pour afficher dans le nouveau site plus beau!
+        // Pour afficher le type de transmission dans le nouveau site plus beau!
         switch ($this->transoption)
         {            
             case "aut": $this->transmission .= "Automatique";
