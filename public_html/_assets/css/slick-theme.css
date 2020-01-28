@@ -2,7 +2,7 @@
 /* Slider */
 .slick-loading .slick-list
 {
-    background: #fff url('../../_assets/images/loading.gif') center center no-repeat;
+    background: #fff url('../../_assets/images/diapo/loading.gif') center center no-repeat;
 }
 
 .slick-list {padding:0px 0px;}/*ancien .slick-list {padding:0px 60px;} pascal*/
