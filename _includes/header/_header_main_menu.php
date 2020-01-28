@@ -236,7 +236,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             <a href="#">Nous Joindre</a>
                             <ul class="hidden">
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">Concessionaire</a></li>
-                                <li style="min-width:230px;"><a href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">Point de service</a></li>
+                                <li style="min-width:230px;"><a href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>#pointservice">Point de service</a></li>
                             </ul>
                         </li>
                         </ul>

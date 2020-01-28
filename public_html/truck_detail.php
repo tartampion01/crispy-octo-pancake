@@ -104,7 +104,7 @@
                         </div>
                         <!--section 3-->
                         <div class="col-1-1 mobile-col-1-1 margesection">
-                            <h2 class="mobile-col-1-1">Caractéristique</h2>
+                            <h2 class="mobile-col-1-1">Caractéristiques</h2>
                             <div class="col-1-1 topdivision">
                                 <!--Empattement-->
                                 <div class="rowdetails" id="fld_empattement" v-if="item.empattement">

@@ -887,7 +887,7 @@ function urldecode(str) {
         <div class="tel">T&#233;l : <span >819 539-6417</span></div>
         <div class="voir"><span><a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::NousJoindre,page::NousJoindreGarageRobert); ?>" target="_self">Voir la fiche</a></span></div>
     </div>
-    
+    <a name="pointservice"> </a> 
     <div><h2>Points de service</h2></div>
     <div class="concession">
         <div class="titre"><h3><span>Chicoutimi</span></h3></div>
