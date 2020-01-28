@@ -138,7 +138,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="/trucks.php?n=1&params=B_Inte">Longstar</a>
+                                            <a href="/trucks.php?n=1&params=B_Inte">Lonestar</a>
                                             <ul class="hidden">
                                                 <li>
                                                     <img src="../../_assets/images/wx3/Lonestar.jpg" alt="" />

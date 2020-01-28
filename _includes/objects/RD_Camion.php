@@ -150,7 +150,8 @@ class RD_Camion{
         $this->essieuAvant = $r['frontaxle'];
         $this->essieuArriere = $r['rearaxle'];
         $this->suspensionArriere = $r['rearsuspension'];
-        $this->transmission = $r['transtype'];
+        $this->transoption = $r['transoption'];
+        $this->transmission = $r['transtype'] . ' ' . $r['transmission'];
         
         // ELSE ça reste string vide dans le cas des remorques
         if( $r['engine'] != "-")
@@ -169,6 +170,17 @@ class RD_Camion{
             $this->beauTitre .= "&nbsp;-&nbsp;" . $this->config;
         }
 
+        // Pour afficher le type de transmission dans le nouveau site plus beau!
+        switch ($this->transoption)
+        {            
+            case "aut": $this->transmission .= " Automatique";
+                break;
+            case "man": $this->transmission .= " Manuelle";
+                break;
+            case "":
+                break;
+        }
+         
         $this->loadPicturesNew();
         
         return true;
@@ -215,9 +227,23 @@ class RD_Camion{
         $this->couleur_ex = $r['couleur_ex'];
         $this->equipements = $r['equipements'];
         $this->equipement2 = $r['equipement2'];
+        $this->transoption = $r['transoption'];
         $this->hp = ""; // pas présent camions usagés
         $this->config = $r['config'];
 
+        // Pour afficher le type de transmission et le moteur avec la marque dans le nouveau site plus beau!
+        switch ($this->transoption)
+        {            
+            case "aut": $this->transmission .= " Automatique";
+                break;
+            case "man": $this->transmission .= " Manuelle";
+                break;
+            case "":
+                break;
+        }
+        if( $r['marquemoteur'] != "" )
+            $this->moteur = $r['marquemoteur'] . ' ' . $r['moteur'];
+            
         $this->beauTitre = $this->marque . "&nbsp;-&nbsp;" . $this->modele;
         if( $this->config != "-" )
         {

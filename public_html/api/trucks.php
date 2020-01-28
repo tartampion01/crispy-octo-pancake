@@ -73,10 +73,10 @@ foreach ($filters as $code) {
             $brand = "AND I.marque like '%Peterbilt%'";
             break;
         case "t_auto":
-            $trans = "AND I.transmission like 'Auto%'";
+            $trans = "AND I.transoption like '%aut%'";
             break;
         case "t_manu":
-            $trans = "AND I.transmission like 'Manuel%'";
+            $trans = "AND I.transoption like '%man%'";
             break;
         case "e_inte":
             if( $newTruck ){ 
