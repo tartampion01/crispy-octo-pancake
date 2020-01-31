@@ -440,12 +440,12 @@ class RD_Succursales{
                 $this->telephones[] = "Téléphone : 450 774-7213";
                 $this->telephones[] = "Sans frais : 800 774-7213";
                 $this->telephones[] = "Télécopieur : 450 774-3307";
-                $this->heureOuvertureLundi = "7:30 - 00:30 a.m.";
-                $this->heureOuvertureMardi = "7:30 - 00:30 a.m.";
-                $this->heureOuvertureMercredi = "7:30 - 00:30 a.m.";
-                $this->heureOuvertureJeudi = " 	7:30 - 00:30 a.m.";
-                $this->heureOuvertureVendredi = "7:30 - 00:30 a.m.";
-                $this->heureOuvertureSamedi = "8:00 à MIDI";
+                $this->heureOuvertureLundi = "7:30 a.m. - 12:00 (minuit)";
+                $this->heureOuvertureMardi = "7:30 a.m. - 12:00 (minuit)";
+                $this->heureOuvertureMercredi = "7:30 a.m. - 12:00 (minuit)";
+                $this->heureOuvertureJeudi = " 	7:30 a.m. - 12:00 (minuit)";
+                $this->heureOuvertureVendredi = "7:30 a.m. - 12:00 (minuit)";
+                $this->heureOuvertureSamedi = "Fermé";
                 $this->heureOuvertureDimanche = "Fermé";
                 $this->contacts = new Contact();
                 $this->contacts->addItem(array("Roger Lachapelle", "Directeur général","rlachapelle@camionbeaudoin.com"));
