@@ -108,6 +108,12 @@ foreach ($filters as $code) {
             else {
                 $engine = "AND I.moteur like '%Isuzu%'"; }
             break;
+        case "e_hino":
+            if( $newTruck ){
+                $engine = "AND I.engine like '%Hino%'"; }
+            else {
+                $engine = "AND I.moteur like '%Hino%'"; }
+            break;
         
     }
 }

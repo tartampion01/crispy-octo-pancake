@@ -31,7 +31,8 @@
             {"code": "E_Cumm", "title": "Cummins", "availability": 0, "selected": 0 },
             {"code": "E_Detr", "title": "Detroit", "availability": 0, "selected": 0 },
             {"code": "E_Pacc", "title": "Paccar", "availability": 0, "selected": 0 },
-            {"code": "E_Isuz", "title": "Isuzu", "availability": 0, "selected": 0 }
+            {"code": "E_Isuz", "title": "Isuzu", "availability": 0, "selected": 0 },
+            {"code": "E_Hino", "title": "Hino", "availability": 0, "selected": 0 }
         ]
     }
 }
