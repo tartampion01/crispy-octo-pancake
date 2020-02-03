@@ -358,7 +358,7 @@ class RD_Succursales{
                 $this->contacts->addItem(array("Nathalie Hallé", "Présidente","nathalie.halle@camionsinteranjou.com"));
                 $this->contacts->addItem(array("Malek Toursal", "Directeur des ventes","malek.toursal@camionsinteranjou.com"));
                 $this->contacts->addItem(array("Sylvain Goulet", "Directeur des pièces","sylvain.goulet@camionsinteranjou.com"));
-                $this->contacts->addItem(array("Yves Harnois", "Directeur de Service","yves.harnois@camionsinteranjou.com"));
+                $this->contacts->addItem(array("Éric Morin", "Directeur de Service","eric.morin@camionsinteranjou.com"));
                 $this->contacts->addItem(array("Sylvain Lalumière", "Directeur Technique","sylvain.lalumiere@reseaudynamique.com"));
                 $this->imageBatisse = "../../_assets/images/batisse/batisse-camions-inter-anjou.jpg";
                 $this->imageBatisseALT= "Camions Inter-Anjou";
