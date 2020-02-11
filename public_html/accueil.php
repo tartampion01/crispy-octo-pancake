@@ -123,22 +123,7 @@
                         </a>
                     </span>
                 </div>
-                <div class="cat">
-                    <span>
-                        <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices)?>" target="_self">
-                            <span class="image">
-                                <img name="image" title="" src="_assets/images/menu_images/cat-yanmar.jpg" alt="Yanmar" />
-                            </span>
-                            <span class="imageMobile">
-                                <img name="image" title="" src="_assets/images/menu_images/ban-yanmar.jpg" alt="Yanmar" />
-                            </span>
-                            <span class="orange">
-                                <span class="titre">Yanmar</span>
-                                <span class="voir">Voir</span>
-                            </span>
-                        </a>
-                    </span>
-                </div>
+                
             </div>
 	</div>
         <div class="services">
