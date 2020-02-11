@@ -67,25 +67,7 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                         </ul>
                     </div>
                 </li>
-                <li class="item4 rank3 parent <?php echo ($section == 'vehicules-utilitaires' ? 'selected' : ''); ?>" expansionmode="ClickExpansion">
-                    <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>" class="rank3 MenuBarItemSubmenu" target="_self">Véhicules utilitaires</a>
-                    <div class="itemChildDiv9">
-                        <ul class="itemChild9">
-                            <li class="item37 first rank0 <?php echo ($pageName == 'mini-excavatrices.php' ? 'selected' : ''); ?>" expansionmode="HoverExpansion">
-                                <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>" class=" first rank0" target="_self">Mini-excavatrices</a>
-                            </li>
-                            <li class="item38 rank1 <?php echo ($pageName == 'transporteurs-tout-terrain.php' ? 'selected' : ''); ?>" expansionmode="HoverExpansion">
-                                <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesTransporteursToutTerrain); ?>" class="rank1" target="_self">Transporteurs tout-terrain</a>
-                            </li>
-                            <li class="item39 rank2 <?php echo ($pageName == 'skid-steer-chargeur-chenilles.php' ? 'selected' : ''); ?>" expansionmode="HoverExpansion">
-                                <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesSkidSteerEtChargeurAChenilles); ?>" class="rank2" target="_self">Skid Steer et chargeur à chenilles</a>
-                            </li>
-                            <li class="item40 last rank3 <?php echo ($pageName == 'chargeuses-yanmar-v3-v4.php' ? 'selected' : ''); ?>" expansionmode="HoverExpansion">
-                                <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesChargeuseV3EtV4); ?>" class=" last rank3" target="_self">Chargeuse V3 et V4</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+               
                 <li class="item5 rank4 <?php echo ($section == 'location-camions' ? 'selected' : ''); ?>" expansionmode="HoverExpansion">
                     <a href="<?php echo RD_PageLink::getHref(folder::Root,page::LocationsDeCamions); ?>" class="rank4" target="_self">Location de camions</a>
                 </li>
