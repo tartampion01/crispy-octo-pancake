@@ -82,37 +82,37 @@ foreach ($filters as $code) {
             if( $newTruck ){ 
                 $engine = "AND I.engine like '%Inter%'"; }
             else { 
-                $engine = "AND I.moteur like '%Inter%'"; }
+                $engine = "AND I.marquemoteur like '%Inter%'"; }
             break;
         case "e_cumm":
             if( $newTruck ){
                 $engine = "AND I.engine like '%Cummins%'"; }
             else {
-                $engine = "AND I.moteur like '%Cummins%'"; }
+                $engine = "AND I.marquemoteur like '%Cummins%'"; }
             break;
         case "e_detr":
             if( $newTruck ){
                 $engine = "AND I.engine like '%Detroit%'"; }
             else {
-                $engine = "AND I.moteur like '%Detroit%'"; }
+                $engine = "AND I.marquemoteur like '%Detroit%'"; }
             break;
         case "e_pacc":
             if( $newTruck ){
                 $engine = "AND I.engine like '%Paccar%'"; }
             else {
-                $engine = "AND I.moteur like '%Paccar%'";}
+                $engine = "AND I.marquemoteur like '%Paccar%'";}
             break;
         case "e_isuz":
             if( $newTruck ){
                 $engine = "AND I.engine like '%Isuzu%'"; }
             else {
-                $engine = "AND I.moteur like '%Isuzu%'"; }
+                $engine = "AND I.marquemoteur like '%Isuzu%'"; }
             break;
         case "e_hino":
             if( $newTruck ){
                 $engine = "AND I.engine like '%Hino%'"; }
             else {
-                $engine = "AND I.moteur like '%Hino%'"; }
+                $engine = "AND I.marquemoteur like '%Hino%'"; }
             break;
         
     }
