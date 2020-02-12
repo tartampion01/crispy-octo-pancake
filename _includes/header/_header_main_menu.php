@@ -202,15 +202,6 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Véhicule Utilitaire</a> 
-                            <ul class="hidden">
-                                <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>">Mini-excavatrices</a></li>
-                                <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesTransporteursToutTerrain); ?>">Transporteurs tout-terrain</a></li>
-                                <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesSkidSteerEtChargeurAChenilles); ?>">Skid Steer et chargeur à chenilles</a></li>
-                                <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesChargeuseV3EtV4); ?>">Chargeuse V3 et V4</a></li>
-                            </ul>                           
-                        </li>
-                        <li>
                             <a href="#">Circulaire</a>
                             <ul class="hidden">
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoLanding); ?>">Promotion</a></li>
@@ -369,15 +360,6 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                     <li><a href="<?php echo RD_PageLink::getHref(folder::Root,page::LocationsDeCamions); ?>">Location</a></li>
                                 </ul>
                             </li>                       
-                            <li>
-                                <a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>">Véhicule Utilitaire</a> 
-                                <ul class="dl-submenu">
-                                    <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesMiniExcavatrices); ?>">Mini-excavatrices</a></li>
-                                    <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesTransporteursToutTerrain); ?>">Transporteurs tout-terrain</a></li>
-                                    <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesSkidSteerEtChargeurAChenilles); ?>">Skid Steer et chargeur à chenilles</a></li>
-                                    <li><a href="<?php echo RD_PageLink::getHref(folder::VehiculesUtilitaires,page::VehiculesUtilitairesChargeuseV3EtV4); ?>">Chargeuse V3 et V4</a></li>
-                                </ul>                           
-                            </li>
                             <li>
                                 <a href="#">Circulaire</a>
                                 <ul class="dl-submenu">
