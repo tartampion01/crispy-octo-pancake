@@ -58,9 +58,6 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                             <li class="item74 first rank0 <?php echo ($pageName == 'inventaire-remorques.php' ? 'selected' : ''); ?>" expansionmode="HoverExpansion">
                                 <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>" class=" first rank0" target="_self">Inventaire complet</a>
                             </li>
-                            <li class="item87 rank1 <?php echo ($pageName == 'remorques-di-mond.php' ? 'selected' : ''); ?>" expansionmode="HoverExpansion">
-                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDiMond); ?>" class="rank1" target="_self">Remorques Di-Mond</a>
-                            </li>
                             <li class="item86 last rank2 <?php echo ($pageName == 'remorques-doepker.php' ? 'selected' : ''); ?>" expansionmode="HoverExpansion">
                                 <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDoepker); ?>" class=" last rank2" target="_self">Remorques Doepker</a>
                             </li>
