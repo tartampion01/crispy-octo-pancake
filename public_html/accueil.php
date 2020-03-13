@@ -30,7 +30,7 @@
                             </div>
                             <div>
                                 <a name="hyperlien" href="http://reseaudynamique.com/promotions-nouvelles/promo-pieces.php">
-                                    <img src="_assets/images/homeBanner/BANIERE CIRCULAIRE RD JAN-FEV 2020.png" alt="" width="1125" height="400"/>
+                                    <img src="_assets/images/homeBanner/BANIERE CIRCULAIRE RD MAR-AVR 2020.png" alt="" width="1125" height="400"/>
                                 </a>
                             </div>
                             <div>
@@ -123,7 +123,6 @@
                         </a>
                     </span>
                 </div>
-                
             </div>
 	</div>
         <div class="services">

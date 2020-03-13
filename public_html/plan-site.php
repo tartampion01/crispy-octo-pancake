@@ -43,9 +43,6 @@
                                             <li class="first rank0">
                                                 <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorqesNeuvesInventaireComplet); ?>" class="first rank0">Inventaire complet</a>
                                             </li>
-                                            <li class="rank1">
-                                                <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDiMond); ?>" class="rank1">Remorques Di-Mond</a>
-                                            </li>
                                             <li class="rank2">
                                                 <a href="<?php echo RD_PageLink::getHref(folder::RemorquesNeuves,page::RemorquesDoepker); ?>" class="rank2">Remorques Doepker</a>
                                             </li>
