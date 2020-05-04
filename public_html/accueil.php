@@ -68,7 +68,7 @@
     <!--youtube video-->
     <section>
         <div class="grid grid-pad">
-            <h1 class="">Le nouveau International CV515 2020 Classe 5</h1>
+            <h2 class="">Le nouveau International CV515 2020 Classe 5</h1>
          </div>
          <style>
             .hytPlayerWrap{
@@ -113,6 +113,9 @@
 
     <!--new 3 services-->
     <section class="grid">
+        <div class="grid-pad topdivision50">
+            <h2 class="titlesection">Nos meilleurs services</h2>
+        </div>
         <div class="col-1-1 sectionservices">
             <div class="col-1-3 mobile-col-1-1">
                 <div class="bg3serviceleft">

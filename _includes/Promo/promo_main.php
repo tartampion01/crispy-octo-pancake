@@ -1,6 +1,6 @@
 <section id="promoMain" class="grid ">
     <div class="grid-pad">
-        <h2 class="titlesection">Nos Promotions</h2>
+        <h2 class="titlesection">Nos promotions</h2>
     </div>
     <div id="slk_PromoMain" v-if="promotions.length > 0" class="promo_cnt">
         <div v-for="(promo,index) in promotions" class="promo_box">
