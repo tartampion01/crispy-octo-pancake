@@ -18,7 +18,7 @@ $(document).ready(function () {
         <div class="slides_container"><a href="/trucks.php?n=1&params=B_Inte"><img src="../../_assets/images/diapo/diapo3.jpg" alt="" /></a></div>
         <div class="slides_container"><a href="/trucks.php?n=1&params=B_Inte"><img src="../../_assets/images/diapo/diapo4.jpg" alt="" /></a></div>
         <div class="slides_container"><a href="/trucks.php?n=1&params=B_Inte"><img src="../../_assets/images/diapo/diapo5.png" alt="" /></a></div>
-        <div class="slides_container"><a href="/promotions-nouvelles/promo-pieces.php"><img src="../../_assets/images/diapo/diapo6.png" alt="" /></a></div>
+        <!-- <div class="slides_container"><a href="/promotions-nouvelles/promo-pieces.php"><img src="../../_assets/images/diapo/diapo6.png" alt="" /></a></div> -->
         <div class="slides_container"><a href="/trucks.php?n=1&params=B_Isuz"><img src="../../_assets/images/diapo/diapo7.jpg" alt="" /></a></div>
         <div class="slides_container"><a href="/trucks.php?n=1&params=B_Inte"><img src="../../_assets/images/diapo/diapo8.jpg" alt="" /></a></div>
     </div>

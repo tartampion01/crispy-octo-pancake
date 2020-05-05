@@ -17,12 +17,12 @@
                         <p>Chaque soin apporté sur votre véhicule est exécuté avec la plus grande minutie et seules des pièces de qualité conçues pour votre modèle de camion lourd ou tracteur de terminal seront utilisées. Les succursales Réseau Dynamique disposent d'un grand inventaire de pièces d'origine de grande qualité. Dans l'éventualité où votre pièce n'est pas en stock, elle sera commandée et vous la recevrez dans les plus brefs délais.</p>
                         <p><a class="btnOrange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::Fournisseurs); ?>">Nos fournisseurs</a></p>
                         <h2>Commande de pièces</h2>
-                        <p>Commandez rapidement vos pièces en ligne avec notre outil de commande NextPart ou composez le numéro de téléphone de 
+                        <p>Commandez rapidement vos pièces en composant le numéro de téléphone de  
                             <a name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">votre succursale </a>
-                             et un des techniciens du département des pièces de Réseau Dynamique vous aidera à trouver ce dont vous avez besoin.</p>
+                            et un des techniciens du département des pièces de Réseau Dynamique vous aidera à trouver ce dont vous avez besoin.</p>
                         <p>
                             <a class="btnOrange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::EXTERNAL,page::EXTERNAL_fleetrite); ?>" target='_blank' >Nos pièces Fleetrite</a>
-                            <a class="btnOrange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Nextpart,page::InscriptionNextPart); ?>">S'inscrire à NextPart</a>
+                            <!-- <a class="btnOrange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Nextpart,page::InscriptionNextPart); ?>">S'inscrire à NextPart</a> -->
                             <a class="btnOrange" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::NousJoindre); ?>">Contactez votre succursale</a>
                         </p>
                         <h2>Accessoires</h2>
