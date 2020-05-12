@@ -118,7 +118,8 @@
                 },
                 getSrc(id) {
                     if (id) {
-                        let url = "http://raisindynamique.reseaudynamique.com/api/pictures.php?";
+                        //let url = "http://raisindynamique.reseaudynamique.com/api/pictures.php?";
+                        let url = "/api/pictures.php?";
                         let isNew = 1;
                         url = url + "n=" + isNew + "&id=" + id; //encodeURI(btoa(id))
                         return url;
