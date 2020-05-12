@@ -201,13 +201,15 @@ elseif(strpos($_SERVER['REQUEST_URI'], 'carrieres.php') !== false) {
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::Root,page::LocationsDeCamions); ?>">Location</a></li>
                             </ul>
                         </li>
+                        <!-- 
                         <li>
                             <a href="#">Circulaire</a>
                             <ul class="hidden">
                                 <li><a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoLanding); ?>">Promotion</a></li>
                                 <li style="min-width:230px;"><a href="<?php echo RD_PageLink::getHref(folder::PromotionsNouvelles,page::PromotionsEtNouvellesPromoPieces); ?>">Circulaire complet</a></li>
                             </ul>
-                        </li>
+                        </li> 
+                        -->
                         <li>
                             <a href="#">À Propos</a>
                             <ul class="hidden">
