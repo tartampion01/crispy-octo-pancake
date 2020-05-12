@@ -16,7 +16,7 @@
                 </a>
             </div>
             <div class="col-1-4 mobile-col-1-2 item">
-                <a href="https://www.nexpart.com/login.php" target="_blank">
+                <a href="<?php echo RD_PageLink::getHref(folder::PiecesService,page::PiecesEtServicesPiecesEtAsccessoires) ?>" target="_self">
                     <img src="_assets/images/wx3/icon-part.png" alt="" />
                     <h3>Pièces</h3>
                 </a>
