@@ -682,7 +682,7 @@ class RD_Succursales{
                 $this->contacts = new Contact();
                 $this->contacts->addItem(array("Serge Boucher", "Directeur général et Directeur des ventes","sboucher@centreroutier.com"));
                 $this->contacts->addItem(array("Jean Fraser", "Directeur des pièces","jfraser@centreroutier.com"));
-                $this->contacts->addItem(array("Mathieu Madore", "Directeur du service","mmadore@centreroutier.com"));
+                $this->contacts->addItem(array("Diégo Michaud", "Directeur du service","dmichaud@centreroutier.com"));
                 $this->imageBatisse = "../../_assets/images/batisse/batisse-le-centre-routier-1994.jpg";
                 $this->imageBatisseALT= "Le Centre Routier 1994";
                 $this->servicesOfferts[] = "Service accéléré";
