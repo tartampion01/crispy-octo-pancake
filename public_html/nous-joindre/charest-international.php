@@ -1,10 +1,10 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/header/_header.php'); ?>
 <?php $suc = new RD_Succursales(); $suc->load(nomSuccursale::Victoriaville); ?>
-<body class="body"><?php RD_Utils::write_Gtag() ?>
+<?php RD_Utils::write_Gtag() ?>
     <form role="form" method="POST" action="/<?php echo $NOMPAGE; ?>">
-    <div class="">
+    <div class="grid grid-pad">
         <div class="content">
-            <div class="shrink">
+            <div class="">
                 <div class="left">
                     <div class="titrepage">
                         <h1><span><?php echo $suc->nomLong; ?></span></h1>
@@ -109,7 +109,7 @@
                                 <?php echo $telephone; ?></br>
                             <?php endforeach;?>
                         </p>
-                        <div class="btnBon" style="display:none;">
+                        <div class="btnBon" style="display:block;">
                             <h2><a class="buttonBon" name="hyperlien" href="<?php echo RD_PageLink::getHref(folder::Root,page::BonDeTravail) . "?succursale=" . $suc->getSuccursaleBonTravail(); ?>" target="_self">Ouvrez un bon de travail</a></h2>
                         </div>
                         <div class="btnPieces" style="display:block;">
@@ -121,7 +121,4 @@
         </div>
     </div>
     </form>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
-    
-</body>
-</html>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/../_includes/footer/_footer.php'); ?>
