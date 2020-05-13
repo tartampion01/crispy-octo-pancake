@@ -160,7 +160,7 @@ class RD_Succursales{
             // Centre du Camion Beaudoin
             case "Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==": $emails = "service@camionbeaudoin.com"; break;
             // Charest International
-            //case "Q2hhcmVzdCBJbnRlcm5hdGlvbmFs": $emails = "service@charestinter.ca"; break;
+            case "Q2hhcmVzdCBJbnRlcm5hdGlvbmFs": $emails = "servicevicto@charestinter.qc.ca"; break;
             // Garage Charest et Frères
             case "R2FyYWdlIENoYXJlc3QgZXQgRnLDqHJlcw==": $emails = "helene.chauvette@garagecharest.qc.ca"; break;
             // Le Centre du Camion (Amiante)
@@ -347,18 +347,18 @@ class RD_Succursales{
                 $this->codePostal = "H1J 1S8";
                 $this->telephones[] = "Téléphone : 514 353-9720";
                 $this->telephones[] = "Télécopieur : 514 353-3222";                
-                $this->heureOuvertureLundi = "7:00 - minuit";
-                $this->heureOuvertureMardi = "7:00 - minuit";
-                $this->heureOuvertureMercredi = "7:00 - minuit";
-                $this->heureOuvertureJeudi = "7:00 - minuit";
-                $this->heureOuvertureVendredi = "7:00 - 22:00";
+                $this->heureOuvertureLundi = "6:00 - 21:00";
+                $this->heureOuvertureMardi = "6:00 - 21:00";
+                $this->heureOuvertureMercredi = "6:00 - 21:00";
+                $this->heureOuvertureJeudi = "6:00 - 21:00";
+                $this->heureOuvertureVendredi = "6:00 - 18:00";
                 $this->heureOuvertureSamedi = "Fermé";
                 $this->heureOuvertureDimanche = "Fermé";
                 $this->contacts = new Contact();
                 $this->contacts->addItem(array("Nathalie Hallé", "Présidente","nathalie.halle@camionsinteranjou.com"));
                 $this->contacts->addItem(array("Malek Toursal", "Directeur des ventes","malek.toursal@camionsinteranjou.com"));
                 $this->contacts->addItem(array("Sylvain Goulet", "Directeur des pièces","sylvain.goulet@camionsinteranjou.com"));
-                $this->contacts->addItem(array("Yves Harnois", "Directeur de Service","yves.harnois@camionsinteranjou.com"));
+                $this->contacts->addItem(array("Éric Morin", "Directeur de Service","eric.morin@camionsinteranjou.com"));
                 $this->contacts->addItem(array("Sylvain Lalumière", "Directeur Technique","sylvain.lalumiere@reseaudynamique.com"));
                 $this->imageBatisse = "../../_assets/images/batisse/batisse-camions-inter-anjou.jpg";
                 $this->imageBatisseALT= "Camions Inter-Anjou";
@@ -516,14 +516,14 @@ class RD_Succursales{
                 $this->servicesOfferts[] = "Air climatisé";
                 $this->servicesOfferts[] = "Réparation de remorque";
                 $this->servicesOfferts[] = "Service routier";
-                $this->serviceRoutierTitre = "Service de <a href='charest-international-remorquage.php'>remorquage</a> 24/7";
+                $this->serviceRoutierTitre = "Service de <a href='remorquage/charest-international.php'>remorquage</a> 24/7";
                 $this->serviceRoutierTelephone[] = "Remorquage en tout temps au Canada.";
                 $this->serviceRoutierTelephone[] = "Téléphone : 819 758-8271";
                 $this->remorquageTitre = "";
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
                 $this->emailOffreEmploi = "rh@charestinter.qc.ca";
-                $this->parametreBonTravailNomSuccursale = "";
+                $this->parametreBonTravailNomSuccursale = "Charest International";
                 $this->parametreDemandePiecesNomSuccursale = "Charest International";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11072.196225602798!2d-71.966232!3d46.070062999999934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb80140b34d77f7%3A0x5ffda7dc99d7f478!2s275+Boulevard+Pierre-Roux+Est%2C+Victoriaville%2C+QC+G6T%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326486269";
                 break;
@@ -682,7 +682,7 @@ class RD_Succursales{
                 $this->contacts = new Contact();
                 $this->contacts->addItem(array("Serge Boucher", "Directeur général et Directeur des ventes","sboucher@centreroutier.com"));
                 $this->contacts->addItem(array("Jean Fraser", "Directeur des pièces","jfraser@centreroutier.com"));
-                $this->contacts->addItem(array("Mathieu Madore", "Directeur du service","mmadore@centreroutier.com"));
+                $this->contacts->addItem(array("Diégo Michaud", "Directeur du service","dmichaud@centreroutier.com"));
                 $this->imageBatisse = "../../_assets/images/batisse/batisse-le-centre-routier-1994.jpg";
                 $this->imageBatisseALT= "Le Centre Routier 1994";
                 $this->servicesOfferts[] = "Service accéléré";
