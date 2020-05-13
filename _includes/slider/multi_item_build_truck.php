@@ -1,6 +1,6 @@
 <section class="grid">
         <div class="grid-pad topdivision50">
-            <h2 class="titlesection">Construit ton camion</h2>
+            <h2 class="titlesection">Construis ton camion</h2>
         </div>
         <section class="realization">
             <div class="image-box">
