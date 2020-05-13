@@ -89,7 +89,7 @@ Class RD_Email
                                                       $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
             case TypeEmail::PlanifierEssaiRoutier://$emailto = "ptourigny@servicesinfo.info";
-                                                  $emailto= "dpaquet@inter-quebec.com";
+                                                  $emailto= "ventes@inter-quebec.com,sbrousseau@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Demande de planification d'un essai routier";
                                                   $this->camion = new RD_Camion(null);
@@ -99,7 +99,7 @@ Class RD_Email
                                                       $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
             case TypeEmail::ObtenirPrix:          //$emailto = "ptourigny@servicesinfo.info";
-                                                  $emailto= "dpaquet@inter-quebec.com";
+                                                  $emailto= "ventes@inter-quebec.com,sbrousseau@inter-quebec.com";
                                                   $subject = "Obtenir un prix";
                                                   $this->camion = new RD_Camion(null);
                                                   if( $NEW == 1 )
@@ -108,7 +108,7 @@ Class RD_Email
                                                       $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
             case TypeEmail::DemandFinancement:    //$emailto = "ptourigny@servicesinfo.info";
-                                                  $emailto= "dpaquet@inter-quebec.com";
+                                                  $emailto= "ventes@inter-quebec.com,sbrousseau@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Demande de financement";
                                                   $this->camion = new RD_Camion(null);
@@ -118,7 +118,7 @@ Class RD_Email
                                                       $this->camion->load_used(urldecode(base64_decode($IdVehicule)));
                                                   break;
             case TypeEmail::EvaluerEchange:       //$emailto = "ptourigny@servicesinfo.info";
-                                                  $emailto= "dpaquet@inter-quebec.com";
+                                                  $emailto= "ventes@inter-quebec.com,sbrousseau@inter-quebec.com";
                                                   $toName  = "";
                                                   $subject = "Demande d'évaluation d'échange";
                                                   $this->camion = new RD_Camion(null);

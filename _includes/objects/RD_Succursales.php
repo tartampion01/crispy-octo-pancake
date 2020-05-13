@@ -160,7 +160,7 @@ class RD_Succursales{
             // Centre du Camion Beaudoin
             case "Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg==": $emails = "service@camionbeaudoin.com"; break;
             // Charest International
-            //case "Q2hhcmVzdCBJbnRlcm5hdGlvbmFs": $emails = "service@charestinter.ca"; break;
+            case "Q2hhcmVzdCBJbnRlcm5hdGlvbmFs": $emails = "servicevicto@charestinter.qc.ca"; break;
             // Garage Charest et Frères
             case "R2FyYWdlIENoYXJlc3QgZXQgRnLDqHJlcw==": $emails = "helene.chauvette@garagecharest.qc.ca"; break;
             // Le Centre du Camion (Amiante)
@@ -523,7 +523,7 @@ class RD_Succursales{
                 $this->remorquageInfo[] = "";
                 $this->remorquageTelephones[] = "";
                 $this->emailOffreEmploi = "rh@charestinter.qc.ca";
-                $this->parametreBonTravailNomSuccursale = "";
+                $this->parametreBonTravailNomSuccursale = "Charest International";
                 $this->parametreDemandePiecesNomSuccursale = "Charest International";
                 $this->GoogleMapSRC = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11072.196225602798!2d-71.966232!3d46.070062999999934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb80140b34d77f7%3A0x5ffda7dc99d7f478!2s275+Boulevard+Pierre-Roux+Est%2C+Victoriaville%2C+QC+G6T%2C+Canada!5e0!3m2!1sfr!2sfr!4v1409326486269";
                 break;
