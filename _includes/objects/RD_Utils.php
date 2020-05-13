@@ -16,6 +16,7 @@ class RD_Utils
         $options = "<option value='Q2FtaW9ucyBJbnRlci1BbmpvdQ=='>Camions Inter-Anjou</option>";
         $options .= "<option value='Q2FtaW9ucyBJbnRlci1MYW5hdWRpw6hyZQ=='>Camions Inter-Lanaudière</option>";
         $options .= "<option value='Q2FtaW9ucyBJbnRlcm5hdGlvbmFsIMOJbGl0ZQ=='>Camions International Élite</option>";
+        $options .= "<option value='Q2hhcmVzdCBJbnRlcm5hdGlvbmFs'>Charest International</option>";
         $options .= "<option value='Q2VudHJlIGR1IENhbWlvbiBCZWF1ZG9pbg=='>Centre du Camion Beaudoin</option>";
         $options .= "<option value='R2FyYWdlIENoYXJlc3QgZXQgRnLDqHJlcw=='>Garage Charest et Frères</option>";
         $options .= "<option value='R2FyYWdlIFJvYmVydA=='>Garage Robert</option>";
