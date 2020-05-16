@@ -397,7 +397,7 @@ class RD_Succursales{
                 $this->heureOuvertureMardi = "7:00 - 12:00 a.m.";
                 $this->heureOuvertureMercredi = "7:00 - 12:00 a.m.";
                 $this->heureOuvertureJeudi = " 	7:00 - 12:00 a.m.";
-                $this->heureOuvertureVendredi = "7:00 - 19:00";
+                $this->heureOuvertureVendredi = "7:00 - 16:00";
                 $this->heureOuvertureSamedi = "Fermé";
                 $this->heureOuvertureDimanche = "Fermé";
                 $this->contacts = new Contact();
