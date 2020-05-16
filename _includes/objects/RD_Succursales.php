@@ -347,11 +347,11 @@ class RD_Succursales{
                 $this->codePostal = "H1J 1S8";
                 $this->telephones[] = "Téléphone : 514 353-9720";
                 $this->telephones[] = "Télécopieur : 514 353-3222";                
-                $this->heureOuvertureLundi = "7:00 - minuit";
-                $this->heureOuvertureMardi = "7:00 - minuit";
-                $this->heureOuvertureMercredi = "7:00 - minuit";
-                $this->heureOuvertureJeudi = "7:00 - minuit";
-                $this->heureOuvertureVendredi = "7:00 - 22:00";
+                $this->heureOuvertureLundi = "6:00 - 21:00";
+                $this->heureOuvertureMardi = "6:00 - 21:00";
+                $this->heureOuvertureMercredi = "6:00 - 21:00";
+                $this->heureOuvertureJeudi = "6:00 - 21:00";
+                $this->heureOuvertureVendredi = "6:00 - 18:00";
                 $this->heureOuvertureSamedi = "Fermé";
                 $this->heureOuvertureDimanche = "Fermé";
                 $this->contacts = new Contact();
@@ -397,7 +397,7 @@ class RD_Succursales{
                 $this->heureOuvertureMardi = "7:00 - 12:00 a.m.";
                 $this->heureOuvertureMercredi = "7:00 - 12:00 a.m.";
                 $this->heureOuvertureJeudi = " 	7:00 - 12:00 a.m.";
-                $this->heureOuvertureVendredi = "7:00 - 19:00";
+                $this->heureOuvertureVendredi = "7:00 - 16:00";
                 $this->heureOuvertureSamedi = "Fermé";
                 $this->heureOuvertureDimanche = "Fermé";
                 $this->contacts = new Contact();
